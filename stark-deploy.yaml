@@ -1,0 +1,74 @@
+# ==================================================================
+# STARK FACTORY — next-deploy-auto config (skill v1.3)
+# File name: stark-deploy.yaml   Location: project root (next to package.json)
+#
+# The agent prepared this form on 2026-11-03 (round 2). Fill only the blanks marked
+# REQUIRED FROM YOU, save, and say "config ready". The agent verifies it against your
+# code and your GCP project, shows a short deployment summary, and waits for your approval.
+# Values marked PROPOSED were filled by the agent from repo evidence; change them freely.
+#
+# RULES
+#  - Secret NAMES only. Never put a secret VALUE in this file. It is committed to git.
+#  - Public values (NEXT_PUBLIC_*) go here verbatim — they ship to the browser anyway.
+#  - Anything marked REQUIRED with no value = fill the value here. The agent never guesses.
+# ==================================================================
+
+version: 1
+
+app:
+  name: "cyph-sub-portal"       # PROPOSED (from the repo name). 2–19 chars, lowercase-hyphenated.
+                                #   Creates: service cyph-sub-portal-prod, runtime SA sa-cyph-sub-portal-runtime.
+  display_name: "CyPh Subscription Portal v1"   # PROPOSED. Banner label only.
+
+gcp:
+  project_id: "cyberize-nextjs-staging"   # Supplied by Tony 2026-11-03 (same project as the payment portal deploy).
+                                #   Candidate: your gcloud default is "cyberize-nextjs-staging" (ACTIVE; already hosts
+                                #   cyber-pharma-prod and cyph-mission-ctrl-prod). Type it here only if that is the target.
+  region: "us-east1"            # Schema default; both existing services in that project run here.
+  expected_account: "moose@cyberizegroup.com"   # PROPOSED: your current active gcloud login.
+                                #   Preflight stops if a different account is active. Clear it to be asked instead.
+  service_name: ""              # Optional. Blank = "cyph-sub-portal-prod". The "-prod" suffix is a naming
+                                #   convention only; it does not make this a production deployment.
+
+urls:
+  custom_domain: "cyph-payment.cyberizedev.com"   # Supplied by Tony 2026-11-03. DNS record + Cloud Run mapping not created yet (operator step after deploy).
+                                #   Filled -> NEXT_PUBLIC_APP_URL = https://{custom_domain}; one deploy.
+                                #   Blank  -> placeholder first deploy, then a second deploy once you pick the
+                                #   domain or the run.app URL. Filling this does NOT map DNS; that stays a
+                                #   separate operator step after deploy.
+  backend_url: ""               # Leave blank: the code never reads NEXT_PUBLIC_BACKEND_URL.
+
+access:
+  invoker: "public"             # Supplied by Tony 2026-11-03 (chat).
+                                #   This is network access to the URL, not app sign-in.
+                                #   public  -> anyone with the URL reaches the app; the app's own login still guards
+                                #              account pages. Public registration at "/" needs this.
+                                #   private -> every request gets 403 until you grant roles/run.invoker to someone.
+
+secrets:
+  mode: "helper"                # Unused while items is empty (no upload step runs).
+  env_file: ".env.local"        # Only the helper would read this, in YOUR terminal. The agent never opens it.
+  items: []
+  # Zero secrets, on evidence: SUPABASE_SECRET_KEY is read only in src/utils/supabase/admin.ts, and no file
+  # imports that module, so the deployed app never reads it. If you want it provisioned anyway, add:
+  # - env: SUPABASE_SECRET_KEY
+  #   secret: ""                # default name: cyph-sub-portal-supabase-secret-key
+  #   scope: runtime
+
+public_vars:
+  # Values ship to the browser. Type the PUBLIC values for the Supabase project the deployed app should use.
+  # The agent does not copy them from .env files. Never put the secret/service-role key here.
+  - env: NEXT_PUBLIC_SUPABASE_URL
+    value: "https://yrsuwikjnbmvpznrgydb.supabase.co"   # Supplied by Tony 2026-11-03 (same Supabase project as the payment portal).
+  - env: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+    value: "sb_publishable_8FvPLZTmChxMrPwv7q9-rw_NgjoDk1S"   # Supplied by Tony 2026-11-03. Publishable, browser-safe.
+  - env: NEXT_PUBLIC_SITE_URL
+    value: "https://cyph-payment.cyberizedev.com"   # Matches custom_domain. The code uses this only to decide Secure cookies
+                                #   (any https:// value turns them on). Set it to https://{custom_domain}
+                                #   if you fill custom_domain above.
+
+runtime:
+  memory: "1Gi"
+  max_instances: 1
+  min_instances: 0
+  dynamic_env_access: "auto"    # The agent found no process.env[...] dynamic reads, so auto resolves to off.
