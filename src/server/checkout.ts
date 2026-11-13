@@ -8,8 +8,9 @@ import { ownOrigin } from '@/lib/appIdentity';
 import { resolvePromotion, TERMS_VERSION } from '@/server/pricing';
 import { type DraftRow, holdNpi, loadDraft, quoteIsCurrent, setUnpaidProver } from '@/server/registration';
 import { assertStripeAccount, stripe, stripeCall, stripeNames } from '@/server/stripeClient';
+import { ENV_TAG, RUN_TAG } from '@/server/stripeMirror';
 
-export const RUN_TAG = 'apbm007a';
+const marker = (operationId: string) => ({ apbm_operation: operationId, apbm_run: RUN_TAG, apbm_db: ENV_TAG() });
 const CHECKOUT_LIFETIME_S = 31 * 60;   // Stripe's minimum is 30 minutes; one minute of margin
 
 export interface OperationRow {
@@ -102,7 +103,7 @@ async function ensureSession(draft: DraftRow, op: OperationRow, priceId: string)
   if (!customerId) {
     const customer = await stripeCall('customer create', () => s.customers.create({
       email: draft.owner_email!, name: `${draft.owner_first_name} ${draft.owner_last_name}`.trim(),
-      metadata: { apbm_operation: op.id, apbm_run: RUN_TAG },
+      metadata: marker(op.id),
     }, { idempotencyKey: `${op.id}:customer` }));
     customerId = customer.id;
     await updateOperation(op.id, { stripe_customer_id: customerId });
@@ -120,8 +121,8 @@ async function ensureSession(draft: DraftRow, op: OperationRow, priceId: string)
       adaptive_pricing: { enabled: false },
       line_items: [{ price: priceId, quantity: 1 }],
       ...(promotion ? { discounts: [{ promotion_code: promotion.promotionCodeId }] } : {}),
-      metadata: { apbm_operation: op.id, apbm_run: RUN_TAG },
-      subscription_data: { metadata: { apbm_operation: op.id, apbm_run: RUN_TAG } },
+      metadata: marker(op.id),
+      subscription_data: { metadata: marker(op.id) },
       success_url: `${ownOrigin()}/register/activation`, cancel_url: `${ownOrigin()}/register/review`,
       expires_at: expiresAt,
     }, { idempotencyKey: `${op.id}:session` }));

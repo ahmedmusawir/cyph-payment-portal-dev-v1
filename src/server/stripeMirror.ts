@@ -3,6 +3,14 @@
 import type Stripe from 'stripe';
 
 export const POLICY_VERSION = 'access-v1';
+
+// Ownership markers written by checkout on the customer, the session and the subscription at creation (F-Q1-01).
+// `apbm_db` names the database (Supabase project) the operation lives in, so an environment sharing the sandbox
+// can tell its own objects from another's. Objects created before the repair carry only `apbm_run`.
+export const RUN_TAG = 'apbm007a';
+export const ENV_TAG = (): string => {
+  try { return new URL(process.env.NEXT_PUBLIC_SUPABASE_URL || '').hostname.split('.')[0] || 'unknown'; } catch { return 'unknown'; }
+};
 type OurStatus = 'active' | 'trialing' | 'past_due' | 'canceled' | 'unpaid' | 'incomplete';
 const STATUS: Record<string, OurStatus> = {
   active: 'active', trialing: 'trialing', past_due: 'past_due', canceled: 'canceled', unpaid: 'unpaid',

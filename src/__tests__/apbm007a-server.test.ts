@@ -10,11 +10,11 @@ const tables: Record<string, Row[]> = {};
 const rpcCalls: { fn: string; args: Row }[] = [];
 let rpcImpl: (fn: string, args: Row) => unknown = () => null;
 function builder(table: string) {
-  const filters: [string, unknown][] = [];
+  const filters: [string, unknown, boolean?][] = [];
   let mode: 'select' | 'insert' | 'update' = 'select';
   let payload: Row | undefined;
   const rows = () => (tables[table] ??= []);
-  const match = () => rows().filter((r) => filters.every(([k, v]) => r[k] === v));
+  const match = () => rows().filter((r) => filters.every(([k, v, not]) => (not ? r[k] !== v : r[k] === v)));
   const run = () => {
     if (mode === 'insert') {
       const key = table === 'stripe_events' ? 'event_id' : 'id';
@@ -29,6 +29,7 @@ function builder(table: string) {
     update: (p: Row) => { mode = 'update'; payload = p; return api; },
     select: () => api, order: () => api, limit: () => api,
     eq: (k: string, v: unknown) => { filters.push([k, v]); return api; },
+    neq: (k: string, v: unknown) => { filters.push([k, v, true]); return api; },
     maybeSingle: async () => { const r = run(); return { data: Array.isArray(r.data) ? r.data[0] ?? null : r.data, error: r.error }; },
     single: async () => { const r = run(); return { data: Array.isArray(r.data) ? r.data[0] ?? null : r.data, error: r.error }; },
     then: (ok: (v: unknown) => unknown) => Promise.resolve(run()).then(ok),
@@ -166,15 +167,15 @@ describe('webhook: signature, ledger, idempotency (AC-012, AC-014)', () => {
     expect((await handleStripeWebhook(body, sign(body))).status).toBe(200);
     expect(tables.stripe_events[0].status).toBe('processed');
   });
-  it('a busy operation is not acknowledged, so the provider retries', async () => {
+  it('a busy operation is not acknowledged, so the provider retries (F-Q1-01)', async () => {
     tables.checkout_operations = [{ id: 'op1', stripe_checkout_session_id: 'cs_test_unit1' }];
     advanceOperation.mockResolvedValueOnce('busy');
-    const body = eventBody(); expect((await handleStripeWebhook(body, sign(body))).status).toBe(500);
+    const body = eventBody(); expect((await handleStripeWebhook(body, sign(body))).status).toBe(503);
+    expect(tables.stripe_events[0]).toMatchObject({ status: 'failed', error_code: 'busy' });
   });
-  it('logs an unsupported verified type as ignored, and an unmapped session as ignored with a visible reason', async () => {
+  it('logs an unsupported verified type as ignored with a reason (unmapped supported events: apbm007a-webhook-recovery.test.ts)', async () => {
     const other = eventBody({ type: 'charge.succeeded' }); expect((await handleStripeWebhook(other, sign(other))).body).toEqual({ result: 'ignored' });
-    const unmapped = eventBody({ id: 'evt_unit3' }); expect((await handleStripeWebhook(unmapped, sign(unmapped))).body).toEqual({ result: 'unmapped' });
-    expect(tables.stripe_events.find((e) => e.event_id === 'evt_unit3')).toMatchObject({ status: 'ignored', error_code: 'unmapped' });
+    expect(tables.stripe_events[0]).toMatchObject({ status: 'ignored', error_code: 'unsupported' });
     expect(advanceOperation).not.toHaveBeenCalled();
   });
 });

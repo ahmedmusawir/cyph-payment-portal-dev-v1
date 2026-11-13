@@ -7,6 +7,11 @@ import { createHash, timingSafeEqual } from 'node:crypto';
 import { admin } from '@/server/db';
 import { advanceOperation } from '@/server/provisioning';
 import { loadOperation } from '@/server/checkout';
+import { listUnfinishedEvents, recoverEvent } from '@/server/webhook';
+
+// F-Q1-01: Stripe events that are unfinished (or were finalised before the repair without completing) are listed and
+// recovered the same way, one exact event ID at a time. See recoverEvent in webhook.ts.
+export { listUnfinishedEvents, recoverEvent };
 
 export const operatorToken = (): string => createHash('sha256').update(`${process.env.SUPABASE_SECRET_KEY || ''}:apbm007a-operator-v1`).digest('hex');
 export function operatorAuthorized(header: string | null): boolean {
