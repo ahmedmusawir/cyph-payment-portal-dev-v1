@@ -6,80 +6,79 @@ import { useRouter } from "next/navigation";
 import { AlertCircle, ArrowLeft, ExternalLink, Loader2, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Alert, DemoNotice, Placeholder } from "../Alert";
+import { Alert, Placeholder } from "../Alert";
+import { BRAND } from "../brand";
 import { PageContainer, ViewSkeleton } from "../Loading";
 import { PageHeader, RoleLabel } from "../PageHeader";
-import { Pill } from "../Pill";
 import { Stepper } from "../Stepper";
-import { useOperationKey } from "../hooks";
-import { MISSING } from "./MissingContext";
-import {
-  ADDITIONAL_STORE_CENTS,
-  BASE_CENTS,
-  firstIncomplete,
-  formatCents,
-  isQuoteExpired,
-  isSubmitted,
-  registration,
-  useRegistration,
-} from "@/services/portal";
+import { useRegistrationDraft } from "./useRegistrationDraft";
+import { draftIsComplete, externalRedirect, formatUsd, portalApi, registrationSession, useRegistrationSession } from "@/services/portal";
+import type { RegistrationDraftView } from "@/types/portal/api";
 
+type Consents = { terms: boolean; recurring: boolean; price: boolean };
+const NO_CONSENT: Consents = { terms: false, recurring: false, price: false };
+type Problem = { title: string; body: string; link?: { href: string; label: string } };
 
-// C04 Review, code and consent. The CTA needs a current quote (same draft
-// revision, unexpired) and both consents; the service re-checks all of it.
+const CONSENT_LINKS = [
+  { id: "c1", key: "terms", label: "the terms agreement" },
+  { id: "c2", key: "recurring", label: "the recurring-payment authorization" },
+  { id: "c3", key: "price", label: "the price-change statement" },
+] as const;
+
+// C04 Review, code and consent. Every amount on this page comes from the server quote; the three
+// consents and a current quote are required, and the server re-checks all of it before opening
+// Stripe-hosted Checkout.
 export function ReviewView() {
   const router = useRouter();
-  const { state, hydrated, deps } = useRegistration();
+  const { loading, draft, error: loadError, setDraft, reload } = useRegistrationDraft();
+  const session = useRegistrationSession();
   const [quoteBusy, setQuoteBusy] = useState(false);
-  const [quoteError, setQuoteError] = useState(false);
+  const [quoteError, setQuoteError] = useState<string | null>(null);
   const [code, setCode] = useState("");
   const [codeBusy, setCodeBusy] = useState(false);
-  const [codeMsg, setCodeMsg] = useState<"none" | "invalid">("none");
-  const [consentErr, setConsentErr] = useState(false);
+  const [codeMsg, setCodeMsg] = useState<string | null>(null);
+  const [consents, setConsents] = useState<Consents>(NO_CONSENT);
+  const [consentErr, setConsentErr] = useState(0);
   const [leaving, setLeaving] = useState(false);
-  const [serviceError, setServiceError] = useState<string | null>(null);
-  const [, setTick] = useState(0);
+  const [problem, setProblem] = useState<Problem | null>(null);
+  const [now, setNow] = useState(() => Date.now());
   const consentRef = useRef<HTMLDivElement>(null);
-  const opKey = useOperationKey("reg_checkout");
   const requested = useRef<number | null>(null);
+  const codeSeeded = useRef(false);
 
-  const { draft, quote, checkout } = state;
+  const complete = draftIsComplete(draft);
 
-  // R-013: a checkout key is single-use. Once no checkout is open, the next attempt gets a new key.
+  // A new quote is a new price: the server clears earlier consent, so the boxes start again.
+  function accept(next: RegistrationDraftView) {
+    setDraft(next);
+    setConsents(NO_CONSENT);
+    setConsentErr(0);
+    setNow(Date.now());
+  }
+
+  // Deep link without a saved draft: back to the first step that needs filling.
   useEffect(() => {
-    if (checkout?.status !== "pending") opKey.renew();
-  }, [checkout?.status, checkout?.operationKey, opKey.renew]);
+    if (!loading && !loadError && !complete) router.replace("/register/owner");
+  }, [loading, loadError, complete, router]);
 
-  // Route guard and checkout state.
+  // Ask for a quote once per draft revision when none is current.
   useEffect(() => {
-    if (!hydrated) return;
-    if (checkout?.status === "paid") return router.replace("/demo/activation");
-    if (checkout?.status === "unknown" || checkout?.status === "expired") return router.replace("/demo/checkout-incomplete");
-    const gate = firstIncomplete(draft);
-    if (gate.step !== "review") {
-      const target =
-        gate.step === "pharmacy" ? `/demo/register/pharmacies?store=${(gate.index ?? 0) + 1}&notice=${MISSING}` : `/demo/register/${gate.step}?notice=${MISSING}`;
-      router.replace(target);
+    if (!complete || !draft) return;
+    if (!codeSeeded.current) {
+      codeSeeded.current = true;
+      setCode(draft.quote?.promotionCode ?? "");
     }
-  }, [hydrated, checkout?.status, draft, router]);
-
-  // Fetch a quote for the current revision (once per revision).
-  useEffect(() => {
-    if (!hydrated || leaving) return;
-    if (firstIncomplete(draft).step !== "review" || checkout) return;
-    if (quote && quote.draftRevision === draft.revision) return;
-    if (requested.current === draft.revision || quoteBusy || quoteError) return;
+    if (draft.quote && !draft.quote.expired) return;
+    if (requested.current === draft.revision) return;
     requested.current = draft.revision;
-    setQuoteBusy(true);
-    void registration.requestQuote().then((r) => {
-      setQuoteBusy(false);
-      setQuoteError(!r.ok);
-    });
-  }, [hydrated, draft, quote, quoteBusy, quoteError, checkout, leaving]);
+    void refresh(draft.quote?.promotionCode ?? undefined);
+    // refresh is stable in behaviour; re-running on every render would re-request.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [complete, draft]);
 
   // Re-evaluate expiry periodically.
   useEffect(() => {
-    const t = setInterval(() => setTick((n) => n + 1), 15000);
+    const t = setInterval(() => setNow(Date.now()), 15000);
     return () => clearInterval(t);
   }, []);
 
@@ -87,140 +86,140 @@ export function ReviewView() {
     if (consentErr) consentRef.current?.focus();
   }, [consentErr]);
 
-  useEffect(() => {
-    if (hydrated) setCode(draft.code ?? "");
-    // only on first hydration
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hydrated]);
+  if (loading) return <PageContainer width="6xl"><ViewSkeleton /></PageContainer>;
+  if (loadError) {
+    return (
+      <PageContainer>
+        <Alert tone="destructive" title="We couldn't load your registration" action={<Button type="button" variant="outline" onClick={reload}>Try again</Button>}>
+          {loadError} Nothing has been charged.
+        </Alert>
+      </PageContainer>
+    );
+  }
+  if (!complete || !draft) return <PageContainer width="6xl"><ViewSkeleton /></PageContainer>;
 
-  if (!hydrated || firstIncomplete(draft).step !== "review") return <PageContainer width="6xl"><ViewSkeleton /></PageContainer>;
-
-  const current = quote && quote.draftRevision === draft.revision ? quote : null;
-  const expired = current ? isQuoteExpired(current, deps) : false;
-  const ready = Boolean(current) && !expired && !quoteBusy && !codeBusy;
-  const consents = draft.consents;
-  const n = draft.requestedStoreCount;
+  const quote = draft.quote;
+  const expired = quote ? quote.expired || Date.parse(quote.expiresAt) <= now : false;
+  const ready = Boolean(quote) && !expired && !quoteBusy && !codeBusy;
+  const applied = quote?.promotionCode ?? null;
   const owner = draft.owner;
+  const pharmacy = draft.pharmacy;
   const ownerName = [owner.firstName, owner.lastName].filter(Boolean).join(" ");
-  // R4-N01: a payment already submitted on Stripe is not an open checkout; it can't be closed or paid again here.
-  const submitted = isSubmitted(state);
+  const unsaved = session.hydrated && (session.owner !== null || session.pharmacy !== null);
+  const allConsented = consents.terms && consents.recurring && consents.price;
 
-  async function refresh() {
-    setQuoteError(false);
+  async function refresh(withCode?: string) {
+    setQuoteError(null);
     setQuoteBusy(true);
-    const r = await registration.requestQuote();
+    let r = await portalApi.requestQuote(withCode);
+    if (!r.ok && r.code === "promotion_not_accepted" && withCode) {
+      // The earlier code no longer applies: show the price without it rather than no price at all.
+      setCodeMsg(`${r.message} The price shown is without it.`);
+      setCode("");
+      r = await portalApi.requestQuote();
+    }
     setQuoteBusy(false);
-    setQuoteError(!r.ok);
+    if (r.ok) accept(r.value);
+    else setQuoteError(r.message);
   }
 
   async function apply() {
+    if (!code.trim()) return;
     setCodeBusy(true);
-    setCodeMsg("none");
-    const r = await registration.applyCode({ draftId: draft.id, code });
+    setCodeMsg(null);
+    const r = await portalApi.requestQuote(code);
     setCodeBusy(false);
-    if (!r.ok) {
-      if (r.code === "quote_unavailable") setQuoteError(true);
-      else setCodeMsg("invalid");
-    }
+    if (r.ok) accept(r.value);
+    else setCodeMsg(r.message); // one generic answer for any code that can't be applied
   }
 
   async function remove() {
     setCodeBusy(true);
-    const r = await registration.removeCode();
+    setCodeMsg(null);
+    const r = await portalApi.requestQuote();
     setCodeBusy(false);
-    setCode("");
-    setCodeMsg("none");
-    if (!r.ok) setQuoteError(true);
+    if (r.ok) {
+      accept(r.value);
+      setCode("");
+    } else setCodeMsg(r.message);
   }
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
-    if (!ready || leaving || !current) return;
-    setServiceError(null);
-    if (!consents.termsAccepted || !consents.recurringChargeAccepted) {
-      setConsentErr(false);
-      requestAnimationFrame(() => setConsentErr(true));
+    if (!ready || leaving) return;
+    setProblem(null);
+    if (!allConsented) {
+      setConsentErr((n) => n + 1);
       return;
     }
-    setConsentErr(false);
+    setConsentErr(0);
     setLeaving(true);
-    const r = await registration.startCheckout({ draftId: draft.id, quoteId: current.id, consents, operationKey: opKey.current() });
+    // One key per attempt, kept for this tab: a retry or double click resumes the same checkout.
+    const r = await portalApi.startCheckout(registrationSession.operationKey(), {
+      termsAccepted: consents.terms,
+      recurringChargeAccepted: consents.recurring,
+      priceChangeAccepted: consents.price,
+    });
     if (r.ok) {
-      router.push("/demo/stripe");
+      externalRedirect(r.value); // Stripe-hosted Checkout
       return;
     }
     setLeaving(false);
-    if (r.code === "validation") setConsentErr(true);
-    else setServiceError(r.message);
+    if (r.code === "expired") {
+      setProblem({ title: "Your price needed refreshing", body: "The quote expired before checkout opened, so nothing was charged. Check the current price below and confirm again." });
+      void refresh(applied ?? undefined);
+    } else if (r.code === "invalid_input") setConsentErr((n) => n + 1);
+    else if (r.code === "operation_in_progress") setProblem({ title: "A payment is already in progress", body: r.message, link: { href: "/register/activation", label: "Check its status" } });
+    else if (r.code === "already_subscribed") setProblem({ title: "This account already has a subscription", body: r.message, link: { href: "/billing", label: "Open billing" } });
+    else if (r.code === "npi_unavailable") setProblem({ title: "This pharmacy can't be registered right now", body: r.message, link: { href: "/register/pharmacy", label: "Check the pharmacy details" } });
+    else setProblem({ title: "Checkout couldn't start", body: r.message });
   }
 
   const offReason = quoteBusy || codeBusy ? "Available once the quote loads." : quoteError ? "Payment is paused until the price loads." : expired ? "Refresh the quote to continue." : "Available once the quote loads.";
+  const missing = (k: keyof Consents) => consentErr > 0 && !consents[k];
+  const toggle = (k: keyof Consents) => (e: React.ChangeEvent<HTMLInputElement>) => setConsents({ ...consents, [k]: e.target.checked });
 
   return (
     <PageContainer width="6xl">
-      <DemoNotice />
       <div className="max-w-3xl">
         <Stepper current={4} />
       </div>
       <PageHeader eyebrow="Step 4 · Review & pay" title="Review and pay" lead="Check everything, then continue to Stripe's secure checkout. Nothing is charged on this page." />
 
-      {submitted ? (
-        <div className="mt-5" data-testid="review-submitted">
-          <Alert
-            tone="info"
-            title="You've already submitted a payment"
-            action={
-              <Button asChild>
-                <Link href={checkout?.status === "unknown" ? "/demo/checkout-incomplete" : "/demo/activation"}>See payment status</Link>
-              </Button>
-            }
-          >
-            Stripe is confirming it, so this page can&apos;t start another payment or close this one. Please don&apos;t pay again.
+      {unsaved ? (
+        <Alert tone="info" className="mt-5" title="You have changes that aren't saved yet" action={<Button asChild variant="outline"><Link href="/register/pharmacy">Finish editing</Link></Button>}>
+          This page shows your saved details. Edits are saved when you complete the pharmacy step.
+        </Alert>
+      ) : null}
+      {consentErr > 0 && !allConsented ? (
+        <div ref={consentRef} tabIndex={-1} role="alert" className="mt-5 border-l-[3px] border-destructive bg-destructive/10 p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" data-testid="consent-error">
+          <p className="font-semibold text-foreground">Three confirmations are needed before payment</p>
+          <ul className="mt-1 list-inside list-disc text-sm text-muted-foreground">
+            {CONSENT_LINKS.filter((c) => !consents[c.key]).map((c) => (
+              <li key={c.id}>
+                Tick{" "}
+                <a href={`#${c.id}`} className="portal-link" onClick={(e) => { e.preventDefault(); document.getElementById(c.id)?.focus(); }}>
+                  {c.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+      {problem ? (
+        <div className="mt-5" data-testid="checkout-problem">
+          <Alert tone="destructive" title={problem.title} action={problem.link ? <Button asChild variant="outline"><Link href={problem.link.href}>{problem.link.label}</Link></Button> : undefined}>
+            {problem.body}
           </Alert>
         </div>
-      ) : checkout?.status === "pending" ? (
-        <Alert
-          tone="info"
-          className="mt-5"
-          title="Your checkout on Stripe is still open"
-          action={
-            <>
-              <Button asChild>
-                <Link href="/demo/stripe">Back to checkout</Link>
-              </Button>
-              <Button type="button" variant="outline" onClick={() => void registration.resolveCheckout("back").then(() => registration.resumeSignup())}>
-                Edit my details instead
-              </Button>
-            </>
-          }
-        >
-          Finish on Stripe, or edit your details here (that closes the open checkout; nothing has been charged).
-        </Alert>
       ) : null}
-      {checkout?.status === "abandoned" || checkout?.status === "declined" ? (
-        <Alert tone="info" className="mt-5" title="Welcome back — your details are saved" action={<Button type="button" variant="outline" onClick={() => registration.resumeSignup()}>Get a fresh quote</Button>}>
-          {checkout.closedReason
-            ? "Your details changed after checkout opened, so we closed that checkout. Nothing was charged. Get a current quote and confirm again to continue."
-            : "Payment wasn't completed. Get a current quote and confirm again to continue."}
-        </Alert>
-      ) : null}
-      {consentErr ? (
-        <div ref={consentRef} tabIndex={-1} role="alert" className="mt-5 border-l-[3px] border-destructive bg-destructive/10 p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" data-testid="consent-error">
-          <p className="font-semibold text-foreground">Two confirmations are needed before payment</p>
-          <p className="text-sm text-muted-foreground">
-            Tick <a href="#c1" className="portal-link" onClick={(e) => { e.preventDefault(); document.getElementById("c1")?.focus(); }}>the terms agreement</a> and{" "}
-            <a href="#c2" className="portal-link" onClick={(e) => { e.preventDefault(); document.getElementById("c2")?.focus(); }}>the recurring-payment authorization</a> to continue.
-          </p>
-        </div>
-      ) : null}
-      {serviceError ? <Alert tone="destructive" className="mt-5" title="Checkout couldn't start">{serviceError}</Alert> : null}
 
       <form noValidate onSubmit={submit} className="mt-6 grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="min-w-0 space-y-5">
           <section aria-labelledby="own-h" className="border border-border bg-card p-4 sm:p-5">
             <div className="flex items-center justify-between gap-3">
               <h2 id="own-h" className="text-base font-semibold text-foreground">Billing owner</h2>
-              <Link href="/demo/register/owner" className="portal-link text-sm">Edit<span className="sr-only"> billing owner</span></Link>
+              <Link href="/register/owner" className="portal-link text-sm">Edit<span className="sr-only"> billing owner</span></Link>
             </div>
             <p className="mt-2 text-sm font-medium text-foreground">
               {ownerName} <RoleLabel>Owner</RoleLabel>
@@ -229,99 +228,69 @@ export function ReviewView() {
               <span className="break-all">{owner.email}</span> · <span className="whitespace-nowrap">{owner.mobile}</span>
             </p>
             <p className="mt-1 text-xs text-muted-foreground" data-testid="review-owner-declaration">
-              {owner.ownerDeclarationAccepted === true
-                ? "Owner declaration confirmed (your own statement; ownership isn't verified by email or payment)."
-                : "Owner declaration not confirmed — edit the owner step."}
+              Owner declaration confirmed (your own statement; ownership isn&apos;t verified by email or payment).
             </p>
-            {owner.legalBusinessName ? <p className="text-sm text-muted-foreground">Invoices to: {owner.legalBusinessName}</p> : null}
           </section>
 
-          {draft.pharmacies.slice(0, n).map((p, i) => {
-            const a = p.adminAssignment;
-            return (
-              <section key={p.id ?? i} aria-labelledby={`p${i}-h`} className="border border-border bg-card p-4 sm:p-5" data-testid="review-pharmacy">
-                <div className="flex items-center justify-between gap-3">
-                  <h2 id={`p${i}-h`} className="min-w-0 text-base font-semibold text-foreground">
-                    Pharmacy {i + 1} · {p.name}
-                  </h2>
-                  <Link href={`/demo/register/pharmacies?store=${i + 1}`} className="portal-link shrink-0 text-sm">
-                    Edit<span className="sr-only"> pharmacy {i + 1}</span>
-                  </Link>
-                </div>
-                <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
-                  <div className="min-w-0 sm:col-span-2"><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Address</dt><dd className="text-foreground">{p.street}, {p.city}, {p.state} {p.zip}</dd></div>
-                  <div><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">NCPDP</dt><dd className="tabular-nums text-foreground">{p.ncpdp}</dd></div>
-                  <div><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">NPI</dt><dd className="tabular-nums text-foreground">{p.npi}</dd></div>
-                  <div><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Software</dt><dd className="text-foreground">{p.software === "Other" ? p.softwareOther : p.software}</dd></div>
-                  <div className="min-w-0">
-                    <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Store admin</dt>
-                    <dd className="text-foreground">
-                      {a?.kind === "other" ? (
-                        <>
-                          {a.fullName} <RoleLabel>Store admin</RoleLabel> · <span className="break-all">{a.email}</span> · invitation sent after payment
-                        </>
-                      ) : (
-                        <>
-                          {ownerName} <RoleLabel>Owner · Store admin</RoleLabel>
-                        </>
-                      )}
-                    </dd>
-                  </div>
-                </dl>
-              </section>
-            );
-          })}
+          <section aria-labelledby="ph-h" className="border border-border bg-card p-4 sm:p-5" data-testid="review-pharmacy">
+            <div className="flex items-center justify-between gap-3">
+              <h2 id="ph-h" className="min-w-0 break-words text-base font-semibold text-foreground">Pharmacy · {pharmacy.name}</h2>
+              <Link href="/register/pharmacy" className="portal-link shrink-0 text-sm">
+                Edit<span className="sr-only"> pharmacy</span>
+              </Link>
+            </div>
+            <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
+              <div className="min-w-0 sm:col-span-2"><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Address</dt><dd className="break-words text-foreground">{pharmacy.street}, {pharmacy.city}, {pharmacy.state} {pharmacy.zip}</dd></div>
+              <div><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">NPI</dt><dd className="tabular-nums text-foreground">{pharmacy.npi}</dd></div>
+              <div><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">NCPDP</dt><dd className="tabular-nums text-foreground">{pharmacy.ncpdp || "Not provided"}</dd></div>
+              <div><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Software</dt><dd className="break-words text-foreground">{pharmacy.software}</dd></div>
+              <div className="min-w-0">
+                <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Store admin</dt>
+                <dd className="text-foreground">
+                  {ownerName} <RoleLabel>Owner · Store admin</RoleLabel>
+                </dd>
+              </div>
+            </dl>
+            <p className="mt-3 text-xs text-muted-foreground">One pharmacy per registration. Adding stores and naming a different store admin are not available yet.</p>
+          </section>
 
           <fieldset className="border border-border bg-card p-4 sm:p-5">
             <legend className="sr-only">Before you pay</legend>
             <p className="text-base font-semibold text-foreground" aria-hidden="true">Before you pay</p>
             <p className="text-xs text-muted-foreground">
-              Both boxes are separate and start unticked.{!current || expired ? " They unlock once a current price is shown, because you agree to that price." : ""}
+              The three boxes are separate and start unticked.{!ready ? " They unlock once a current price is shown, because you agree to that price." : ""}
             </p>
             <div className="mt-3 space-y-3">
               <label className="flex min-h-[44px] cursor-pointer items-start gap-3 text-sm text-foreground">
-                <input
-                  id="c1"
-                  type="checkbox"
-                  className="mt-0.5 h-5 w-5 shrink-0"
-                  checked={consents.termsAccepted}
-                  disabled={!ready}
-                  onChange={(e) => registration.setConsents({ termsAccepted: e.target.checked, recurringChargeAccepted: consents.recurringChargeAccepted })}
-                  aria-invalid={consentErr && !consents.termsAccepted ? true : undefined}
-                  aria-describedby={consentErr && !consents.termsAccepted ? "c1-err" : undefined}
-                />
+                <input id="c1" type="checkbox" className="mt-0.5 h-5 w-5 shrink-0" checked={consents.terms} disabled={!ready || leaving} onChange={toggle("terms")} aria-invalid={missing("terms") ? true : undefined} aria-describedby={missing("terms") ? "c1-err" : undefined} />
                 <span>
                   I agree to the Terms of Service <Placeholder>[LINK TBD]</Placeholder> and Privacy Policy <Placeholder>[LINK TBD]</Placeholder>.
                 </span>
               </label>
-              {consentErr && !consents.termsAccepted ? <ConsentError id="c1-err" /> : null}
+              {missing("terms") ? <ConsentError id="c1-err" /> : null}
               <label className="flex min-h-[44px] cursor-pointer items-start gap-3 text-sm text-foreground">
-                <input
-                  id="c2"
-                  type="checkbox"
-                  className="mt-0.5 h-5 w-5 shrink-0"
-                  checked={consents.recurringChargeAccepted}
-                  disabled={!ready}
-                  onChange={(e) => registration.setConsents({ termsAccepted: consents.termsAccepted, recurringChargeAccepted: e.target.checked })}
-                  aria-invalid={consentErr && !consents.recurringChargeAccepted ? true : undefined}
-                  aria-describedby={consentErr && !consents.recurringChargeAccepted ? "c2-err" : undefined}
-                />
+                <input id="c2" type="checkbox" className="mt-0.5 h-5 w-5 shrink-0" checked={consents.recurring} disabled={!ready || leaving} onChange={toggle("recurring")} aria-invalid={missing("recurring") ? true : undefined} aria-describedby={missing("recurring") ? "c2-err" : undefined} />
                 <span>
-                  I authorize Pharmacy Books to charge my card{" "}
-                  <span className="font-semibold tabular-nums" data-testid="recurring-inline">{current ? formatCents(current.newRecurringCents) : "[amount pending]"}</span> each month until I cancel. I can cancel from Account &amp; Billing; what happens after cancellation follows <Placeholder>[CANCELLATION TERMS TBD]</Placeholder>.
+                  I authorize {BRAND.name} to charge my card{" "}
+                  <span className="font-semibold tabular-nums" data-testid="recurring-inline">{quote && !expired ? formatUsd(quote.totalCents) : "the amount shown"}</span> today, and then the subscription price every month until I cancel. I can cancel from my billing page.
                 </span>
               </label>
-              {consentErr && !consents.recurringChargeAccepted ? <ConsentError id="c2-err" /> : null}
+              {missing("recurring") ? <ConsentError id="c2-err" /> : null}
+              <label className="flex min-h-[44px] cursor-pointer items-start gap-3 text-sm text-foreground">
+                <input id="c3" type="checkbox" className="mt-0.5 h-5 w-5 shrink-0" checked={consents.price} disabled={!ready || leaving} onChange={toggle("price")} aria-invalid={missing("price") ? true : undefined} aria-describedby={missing("price") ? "c3-err" : undefined} />
+                <span>
+                  I understand that my monthly price can change — for example when a discount ends or when stores are added later — and that the standard price is{" "}
+                  <span className="font-semibold tabular-nums">{quote && !expired ? `${formatUsd(quote.subtotalCents)} a month` : "shown in the order summary"}</span>.
+                </span>
+              </label>
+              {missing("price") ? <ConsentError id="c3-err" /> : null}
             </div>
           </fieldset>
         </div>
 
         <aside aria-labelledby="sum-h" className="min-w-0 lg:sticky lg:top-24 lg:self-start">
           <div className="space-y-4 border border-border bg-card p-4 sm:p-5">
-            <div className="flex items-center justify-between gap-2">
-              <h2 id="sum-h" className="text-base font-semibold text-foreground">Order summary</h2>
-              <Pill tone="info">Illustrative</Pill>
-            </div>
+            <h2 id="sum-h" className="text-base font-semibold text-foreground">Order summary</h2>
             <div aria-live="polite" data-testid="order-summary">
               {quoteBusy ? (
                 <div className="space-y-2" aria-busy="true">
@@ -332,30 +301,31 @@ export function ReviewView() {
                 </div>
               ) : quoteError ? (
                 <Alert tone="destructive" title="Price unavailable">
-                  We couldn&apos;t load your quote, so payment is paused. Nothing has been charged and your details are saved.{" "}
-                  <button type="button" className="portal-link" onClick={refresh}>Try again</button>
+                  {quoteError} Payment is paused; nothing has been charged and your details are saved.{" "}
+                  <button type="button" className="portal-link" onClick={() => void refresh(applied ?? undefined)}>Try again</button>
                 </Alert>
-              ) : current && expired ? (
-                <Alert tone="warning" title="Your quote expired" action={<Button type="button" variant="outline" onClick={refresh}>Refresh quote</Button>}>
+              ) : quote && expired ? (
+                <Alert tone="warning" title="Your quote expired" action={<Button type="button" variant="outline" onClick={() => void refresh(applied ?? undefined)}>Refresh quote</Button>}>
                   Prices are held for a limited time. Refresh to get a current quote; you&apos;ll re-confirm the amount before paying.
                 </Alert>
-              ) : current ? (
+              ) : quote ? (
                 <>
                   <dl className="space-y-2 text-sm">
-                    <div className="flex justify-between gap-3"><dt className="text-muted-foreground">Standard plan, 1 pharmacy</dt><dd className="tabular-nums text-foreground">{formatCents(BASE_CENTS)}</dd></div>
-                    {n > 1 ? (
-                      <div className="flex justify-between gap-3"><dt className="text-muted-foreground">Additional stores ({n - 1})</dt><dd className="tabular-nums text-foreground">{formatCents(ADDITIONAL_STORE_CENTS * (n - 1))}</dd></div>
-                    ) : null}
-                    {current.discountCents > 0 ? (
-                      <div className="flex justify-between gap-3"><dt className="text-muted-foreground">Code {draft.code}</dt><dd className="tabular-nums text-foreground">{formatCents(-current.discountCents)}</dd></div>
+                    <div className="flex justify-between gap-3"><dt className="text-muted-foreground">{BRAND.owedBook}, 1 pharmacy</dt><dd className="tabular-nums text-foreground" data-testid="subtotal">{formatUsd(quote.subtotalCents)}</dd></div>
+                    {quote.discountCents > 0 ? (
+                      <div className="flex justify-between gap-3"><dt className="min-w-0 break-all text-muted-foreground">APA member code {applied}</dt><dd className="tabular-nums text-foreground" data-testid="discount">{formatUsd(-quote.discountCents)}</dd></div>
                     ) : null}
                     <div className="flex items-baseline justify-between gap-3 border-t border-border pt-2">
                       <dt className="font-semibold text-foreground">Due today</dt>
-                      <dd className="text-2xl font-semibold tabular-nums text-foreground" data-testid="due-today">{formatCents(current.dueNowCents ?? 0)}</dd>
+                      <dd className="text-2xl font-semibold tabular-nums text-foreground" data-testid="due-today">{formatUsd(quote.totalCents)}</dd>
                     </div>
                   </dl>
-                  <p className="mt-2 text-xs text-muted-foreground">
-                    Then <span className="font-medium text-foreground" data-testid="recurring">{formatCents(current.newRecurringCents)}</span> every month. Tax calculated at checkout if it applies.
+                  <p className="mt-2 text-xs text-muted-foreground" data-testid="recurring">
+                    {quote.discountCents > 0 ? (
+                      <>Billed monthly. The standard price is <span className="font-medium text-foreground">{formatUsd(quote.subtotalCents)}</span> a month; Stripe&apos;s checkout page shows how long your code&apos;s discount applies before you pay.</>
+                    ) : (
+                      <>Then <span className="font-medium text-foreground">{formatUsd(quote.subtotalCents)}</span> every month.</>
+                    )}
                   </p>
                 </>
               ) : null}
@@ -363,7 +333,7 @@ export function ReviewView() {
 
             <div className="space-y-1.5">
               <label htmlFor="code" className="text-sm font-medium text-foreground">
-                Discount or APA member code <span className="font-normal text-muted-foreground">(optional)</span>
+                APA member code <span className="font-normal text-muted-foreground">(optional)</span>
               </label>
               <div className="flex gap-2">
                 <input
@@ -371,26 +341,27 @@ export function ReviewView() {
                   value={code}
                   onChange={(e) => {
                     setCode(e.target.value);
-                    setCodeMsg("none");
+                    setCodeMsg(null);
                   }}
-                  disabled={Boolean(draft.code) || codeBusy}
-                  aria-invalid={codeMsg === "invalid" ? true : undefined}
+                  disabled={Boolean(applied) || codeBusy || quoteBusy || leaving}
+                  aria-invalid={codeMsg ? true : undefined}
                   aria-describedby="code-msg"
+                  autoComplete="off"
                   className="flex h-11 min-w-0 flex-1 border border-input bg-background px-3 text-sm uppercase text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring aria-[invalid=true]:border-destructive disabled:opacity-60"
                 />
-                {draft.code ? (
-                  <Button type="button" variant="outline" onClick={remove} disabled={codeBusy}>Remove</Button>
+                {applied ? (
+                  <Button type="button" variant="outline" onClick={remove} disabled={codeBusy || quoteBusy || leaving}>Remove</Button>
                 ) : (
-                  <Button type="button" variant="outline" onClick={apply} disabled={codeBusy || !code.trim() || quoteBusy}>Apply</Button>
+                  <Button type="button" variant="outline" onClick={apply} disabled={codeBusy || !code.trim() || quoteBusy || leaving}>Apply</Button>
                 )}
               </div>
               <p id="code-msg" className="text-xs" aria-live="polite">
                 {codeBusy ? (
                   <span className="text-muted-foreground">Checking code…</span>
-                ) : draft.code && current?.discountCents ? (
-                  <span className="text-foreground">Code applied: {formatCents(-current.discountCents)} on today&apos;s payment. Demo code; this doesn&apos;t establish APA membership.</span>
-                ) : codeMsg === "invalid" ? (
-                  <span className="font-medium text-destructive">That code isn&apos;t valid. Check it or continue without one.</span>
+                ) : codeMsg ? (
+                  <span className="font-medium text-destructive">{codeMsg}</span>
+                ) : applied && quote && quote.discountCents > 0 ? (
+                  <span className="text-foreground">Code applied: {formatUsd(-quote.discountCents)} on today&apos;s payment.</span>
                 ) : (
                   <span className="text-muted-foreground">Applying a code refreshes the quote.</span>
                 )}
@@ -398,7 +369,7 @@ export function ReviewView() {
             </div>
 
             <div className="space-y-2">
-              <Button type="submit" className="w-full" disabled={!ready || leaving || checkout?.status === "pending" || submitted} aria-busy={leaving || undefined} data-testid="continue-payment">
+              <Button type="submit" className="w-full" disabled={!ready || leaving} aria-busy={leaving || undefined} data-testid="continue-payment">
                 {leaving ? (
                   <>
                     <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
@@ -414,12 +385,12 @@ export function ReviewView() {
               {!ready && !leaving ? <p className="text-xs text-muted-foreground">{offReason}</p> : null}
               <p className="flex gap-2 text-xs text-muted-foreground">
                 <Lock className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-                <span>You&apos;ll finish on Stripe&apos;s secure checkout page. Pharmacy Books never sees your card number. Your access link arrives by email once payment is confirmed.</span>
+                <span>You&apos;ll finish on Stripe&apos;s secure checkout page. {BRAND.name} never sees your card number. Your sign-in link arrives by email once payment is confirmed.</span>
               </p>
             </div>
           </div>
           <Button asChild variant="outline" className="mt-4">
-            <Link href={`/demo/register/pharmacies?store=${n}`}>
+            <Link href="/register/pharmacy">
               <ArrowLeft className="h-4 w-4" aria-hidden="true" />
               Back
             </Link>

@@ -8,7 +8,7 @@ import { PageContainer, ViewSkeleton } from "../Loading";
 import { RoleLabel } from "../PageHeader";
 import { Pill } from "../Pill";
 import { INVITATION_PILL, STORE_PILL, SUBSCRIPTION_PILL } from "./status";
-import { addStoreAvailability, formatCents, formatDate, PERSONA_PROFILE, useAccount } from "@/services/portal";
+import { addStoreAvailability, formatCents, formatDate, PERSONA_PROFILE, useAccount } from "@/services/portal/ffm";
 
 // C08 / C15 OwedBook reference (ACCOUNT side, protected). Only the panel is
 // designed; the frame stands in for OwedBook's existing shell. No SSO claim.

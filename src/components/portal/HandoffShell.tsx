@@ -13,7 +13,7 @@ export function HandoffShell({ children }: { children: React.ReactNode }) {
       <SkipLink />
       <header className="sticky top-0 z-30 border-b border-border bg-card">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5">
-          <Brand href="/demo/register/plan" />
+          <Brand href="/register/plan" />
           <ThemeToggler />
         </div>
       </header>

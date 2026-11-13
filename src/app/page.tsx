@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
 export const dynamic = "force-dynamic";
 
 const Home = () => {
-  redirect("/demo/register/plan");
+  redirect("/register/plan");
 };
 
 export default Home;

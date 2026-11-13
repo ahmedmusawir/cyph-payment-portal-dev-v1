@@ -1,19 +1,24 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { AlertCircle, ArrowLeft, Loader2 } from "lucide-react";
+import { AlertCircle, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import type { OwnerDraft } from "@/types/portal/contract";
-import { Alert, DemoNotice } from "../Alert";
+import { Alert } from "../Alert";
 import { ErrorSummary, summarize } from "../ErrorSummary";
 import { RequiredNote, TextField } from "../FormField";
 import { PageContainer, ViewSkeleton } from "../Loading";
 import { PageHeader } from "../PageHeader";
 import { Stepper } from "../Stepper";
-import { MissingContextNotice } from "./MissingContext";
-import { OWNER_DECLARATION, registration, useRegistration } from "@/services/portal";
+import { useRegistrationDraft } from "./useRegistrationDraft";
+import {
+  OWNER_DECLARATION,
+  ownerFromDraft,
+  registrationSession,
+  useRegistrationSession,
+  validateOwnerForm,
+  type OwnerForm,
+} from "@/services/portal";
 
 const FIELDS = [
   { key: "firstName", fieldId: "first", label: "First name" },
@@ -23,111 +28,57 @@ const FIELDS = [
   { key: "ownerDeclaration", fieldId: "owner-declaration", label: "Owner declaration" },
 ] as const;
 
-type Form = { firstName: string; lastName: string; email: string; mobile: string; ownerDeclarationAccepted: boolean; legalBusinessName: string };
-
-// C02 Owner details (+ C16 existing-email branch).
-export function OwnerView({ notice }: { notice: boolean }) {
+// C02 Owner details. Owner and pharmacy are saved to the server together when the pharmacy step
+// completes; until then what is typed here is kept for this tab only.
+export function OwnerView() {
   const router = useRouter();
-  const { state, hydrated } = useRegistration();
-  const [form, setForm] = useState<Form | null>(null);
+  const { loading, draft, error: loadError, reload } = useRegistrationDraft();
+  const session = useRegistrationSession();
+  const [form, setForm] = useState<OwnerForm | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [existing, setExisting] = useState(false);
-  const [saving, setSaving] = useState(false);
   const summaryRef = useRef<HTMLDivElement>(null);
-  const emailRef = useRef<HTMLInputElement>(null);
   const [focusSummary, setFocusSummary] = useState(0);
 
+  // Prefill once: unsaved input from this tab first, otherwise the saved draft.
   useEffect(() => {
-    if (hydrated && !form) {
-      const o = state.draft.owner;
-      setForm({
-        firstName: o.firstName ?? "",
-        lastName: o.lastName ?? "",
-        email: o.email ?? "",
-        mobile: o.mobile ?? "",
-        ownerDeclarationAccepted: o.ownerDeclarationAccepted === true,
-        legalBusinessName: o.legalBusinessName ?? "",
-      });
-    }
-  }, [hydrated, form, state.draft.owner]);
+    if (!loading && session.hydrated && !form) setForm(session.owner ?? ownerFromDraft(draft));
+  }, [loading, session.hydrated, session.owner, draft, form]);
 
   useEffect(() => {
     if (focusSummary) summaryRef.current?.focus();
   }, [focusSummary]);
 
-  if (!hydrated || !form) return <PageContainer><ViewSkeleton /></PageContainer>;
+  if (loading || !form) return <PageContainer><ViewSkeleton /></PageContainer>;
 
-  const set = (k: Exclude<keyof Form, "ownerDeclarationAccepted">) => (v: string) => setForm({ ...form, [k]: v });
+  const set = (k: Exclude<keyof OwnerForm, "ownerDeclarationAccepted">) => (v: string) => setForm({ ...form, [k]: v });
 
-  function toOwner(f: Form): Partial<OwnerDraft> {
-    return {
-      firstName: f.firstName,
-      lastName: f.lastName,
-      email: f.email,
-      mobile: f.mobile,
-      ownerDeclarationAccepted: f.ownerDeclarationAccepted,
-      legalBusinessName: f.legalBusinessName || undefined,
-    };
-  }
-
-  async function submit(e: React.FormEvent) {
+  function submit(e: React.FormEvent) {
     e.preventDefault();
-    if (saving || !form) return;
-    setSaving(true);
-    const result = await registration.saveOwner(toOwner(form));
-    setSaving(false);
-    if (result.ok) {
-      router.push("/demo/register/pharmacies?store=1");
+    if (!form) return;
+    const found = validateOwnerForm(form);
+    setErrors(found);
+    if (Object.keys(found).length) {
+      setFocusSummary((n) => n + 1);
       return;
     }
-    if (result.code === "conflict") {
-      setErrors({});
-      setExisting(true);
-      return;
-    }
-    setExisting(false);
-    setErrors(result.fieldErrors ?? {});
-    setFocusSummary((n) => n + 1);
+    registrationSession.keepOwner(form);
+    router.push("/register/pharmacy");
   }
 
   return (
     <PageContainer>
-      <DemoNotice />
-      <MissingContextNotice show={notice} />
       <Stepper current={2} />
       <PageHeader
         eyebrow="Step 2 · Owner"
         title="Tell us about you"
-        lead="You will be the billing owner for this account. We send your access link to this email after payment."
+        lead="You will be the billing owner for this account. We send your sign-in link to this email after payment."
       />
-      <ErrorSummary ref={summaryRef} items={summarize(errors, FIELDS)} />
-      {existing ? (
-        <Alert
-          tone="info"
-          className="mt-5"
-          title="This email may already have a Pharmacy Books account"
-          action={
-            <>
-              <Button asChild>
-                <Link href="/login">Sign in instead</Link>
-              </Button>
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => {
-                  setExisting(false);
-                  setForm({ ...form, email: "" });
-                  emailRef.current?.focus();
-                }}
-              >
-                Use a different email
-              </Button>
-            </>
-          }
-        >
-          If that&apos;s you, sign in and use <span className="font-medium text-foreground">Add a store</span> — you won&apos;t need a second subscription. Otherwise use a different work email. For security we don&apos;t show whose account it is.
+      {loadError ? (
+        <Alert tone="warning" className="mt-5" title="We couldn't check for a saved draft" action={<Button type="button" variant="outline" onClick={reload}>Try again</Button>}>
+          {loadError} You can still fill this in; nothing has been charged.
         </Alert>
       ) : null}
+      <ErrorSummary ref={summaryRef} items={summarize(errors, FIELDS)} />
 
       <form className="mt-6 space-y-6" noValidate onSubmit={submit}>
         <RequiredNote />
@@ -135,7 +86,6 @@ export function OwnerView({ notice }: { notice: boolean }) {
           <TextField id="first" label="First name" required autoComplete="given-name" value={form.firstName} onValue={set("firstName")} error={errors.firstName} />
           <TextField id="last" label="Last name" required autoComplete="family-name" value={form.lastName} onValue={set("lastName")} error={errors.lastName} />
           <TextField
-            ref={emailRef}
             id="email"
             type="email"
             inputMode="email"
@@ -146,19 +96,9 @@ export function OwnerView({ notice }: { notice: boolean }) {
             value={form.email}
             onValue={set("email")}
             error={errors.email}
-            help="Your sign-in and access link go here. Use an inbox you check daily."
+            help="Your sign-in link goes here. Use an inbox you check daily."
           />
           <TextField id="mobile" type="tel" inputMode="tel" autoComplete="tel" label="Mobile phone" required value={form.mobile} onValue={set("mobile")} error={errors.mobile} />
-          <TextField
-            id="legal"
-            label="Legal business name"
-            optionalNote="(for invoices, optional)"
-            autoComplete="organization"
-            shellClassName="sm:col-span-2"
-            value={form.legalBusinessName}
-            onValue={set("legalBusinessName")}
-            help="The name that should appear on receipts. Leave blank to use your pharmacy's name."
-          />
         </div>
         <fieldset className="min-w-0 border border-border bg-card p-4 sm:p-5" data-testid="owner-declaration-panel">
           <legend className="sr-only">Owner declaration (required)</legend>
@@ -193,25 +133,20 @@ export function OwnerView({ notice }: { notice: boolean }) {
             type="button"
             variant="outline"
             onClick={() => {
-              registration.keepOwner(toOwner(form));
-              router.push("/demo/register/plan");
+              registrationSession.keepOwner(form);
+              router.push("/register/plan");
             }}
           >
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             Back
           </Button>
-          <Button type="submit" className="px-6 sm:min-w-[12rem]" disabled={saving} aria-busy={saving || undefined}>
-            {saving ? (
-              <>
-                <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
-                Saving…
-              </>
-            ) : (
-              "Continue"
-            )}
+          <Button type="submit" className="px-6 sm:min-w-[12rem]">
+            Continue
           </Button>
         </div>
-        <p className="text-xs text-muted-foreground">Going back keeps what you&apos;ve entered. We save a draft as you go so you can return to it.</p>
+        <p className="text-xs text-muted-foreground">
+          Going back keeps what you&apos;ve entered in this browser tab. Your details are saved to your draft when you finish the pharmacy step.
+        </p>
       </form>
     </PageContainer>
   );

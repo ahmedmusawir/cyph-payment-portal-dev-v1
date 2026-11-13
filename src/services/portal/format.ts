@@ -27,3 +27,11 @@ export function formatTime(isoValue: string | null | undefined): string {
   const d = new Date(isoValue);
   return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
 }
+
+/** Integer cents → "$99.00" (negative: "−$9.90"). Display only; amounts always come from the server. */
+export function formatUsd(cents: number): string {
+  const sign = cents < 0 ? '−' : '';
+  const abs = Math.abs(cents);
+  const dollars = Math.floor(abs / 100).toLocaleString('en-US');
+  return `${sign}$${dollars}.${String(abs % 100).padStart(2, '0')}`;
+}

@@ -9,7 +9,7 @@ import { RoleLabel } from "../PageHeader";
 import { Crumbs } from "./AddStoreView";
 import { EmailPreview } from "../references/EmailPreview";
 import { INVITATION_PILL, STORE_PILL, StatusPill, SUBSCRIPTION_PILL } from "./status";
-import { ADDITIONAL_STORE_CENTS, formatCents, lastOperationPharmacy, maskEmail, useAccount } from "@/services/portal";
+import { ADDITIONAL_STORE_CENTS, formatCents, lastOperationPharmacy, maskEmail, useAccount } from "@/services/portal/ffm";
 
 // C11 Store added. Success copy only after a mock payment success; three
 // separate axes (subscription · store activation · store admin/invitation).

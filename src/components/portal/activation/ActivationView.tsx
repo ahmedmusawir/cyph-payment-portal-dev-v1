@@ -1,15 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { AlertTriangle, Check, Circle, Loader2, Mail, XCircle } from "lucide-react";
+import { AlertTriangle, Check, Circle, ExternalLink, Loader2, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
-import { Alert, DemoNotice, Placeholder } from "../Alert";
+import { Alert, Placeholder } from "../Alert";
+import { BRAND, owedBookHandoffHref } from "../brand";
 import { PageContainer, ViewSkeleton } from "../Loading";
 import { PageHeader } from "../PageHeader";
-import { checkoutHold, consistentActivation, formatCents, formatTime, paymentPhase, registration, useRegistration, type CheckoutScope } from "@/services/portal";
+import { AccessLinkView } from "./AccessLinkView";
+import { CheckoutIncompleteView } from "./CheckoutIncompleteView";
+import { portalApi, registrationSession } from "@/services/portal";
+import type { RegistrationStatusView } from "@/types/portal/api";
+
+const POLL_MS = 4000;
+const POLL_LIMIT_MS = 2 * 60 * 1000;
+const RESEND_LOCK_MS = 60 * 1000;
 
 type TrackState = "done" | "busy" | "warn" | "fail" | "idle";
 
@@ -22,7 +29,7 @@ function Track({ label, state, text }: { label: string; state: TrackState; text:
     idle: <Circle className="h-4 w-4" aria-hidden="true" />,
   }[state];
   const tone = { done: "border-success bg-success/10", busy: "border-info bg-info/10", warn: "border-warning bg-warning/10", fail: "border-destructive bg-destructive/10", idle: "border-border bg-muted" }[state];
-  const word = { done: "Done", busy: "In progress", warn: "Delayed", fail: "Failed", idle: "Not started" }[state];
+  const word = { done: "Done", busy: "In progress", warn: "Needs attention", fail: "Failed", idle: "Not started" }[state];
   return (
     <li className="flex min-w-0 items-start gap-3 py-3">
       <span className={`grid h-9 w-9 shrink-0 place-items-center border text-foreground ${tone}`}>{icon}</span>
@@ -30,164 +37,205 @@ function Track({ label, state, text }: { label: string; state: TrackState; text:
         <p className="text-sm font-semibold text-foreground">
           {label} <span className="sr-only">— {word}</span>
         </p>
-        <p className="text-sm text-muted-foreground">{text}</p>
+        <p className="break-words text-sm text-muted-foreground">{text}</p>
       </div>
     </li>
   );
 }
 
-/**
- * R-013: a submitted payment whose signup details were changed afterwards. It
- * can only confirm what it was quoted for, so offer to go back to exactly that.
- * Shared with C14 (payment unknown).
- */
-export function ScopeHold({ paidFor, reference }: { paidFor: CheckoutScope | undefined; reference: string }) {
-  if (!paidFor) {
-    return (
-      <Alert tone="warning" title="We can't match this payment to your current details">
-        Please don&apos;t pay again. Contact <Placeholder>[SUPPORT EMAIL]</Placeholder> with reference <span className="font-medium text-foreground">{reference}</span>.
-      </Alert>
-    );
-  }
-  const n = paidFor.storeCount;
-  const names = paidFor.pharmacies.map((p) => p.name).filter(Boolean).join(", ");
-  return (
-    <Alert
-      tone="warning"
-      title="Your details changed after you paid"
-      action={
-        <Button type="button" onClick={() => registration.restoreSubmittedScope()} data-testid="restore-scope">
-          Use the details I paid for
-        </Button>
-      }
-    >
-      This payment is for {n} {n === 1 ? "pharmacy" : "pharmacies"} ({names}), {formatCents(paidFor.dueNowCents)}. Changes made afterwards can&apos;t be added to it,
-      and you don&apos;t need to pay again. Use the details you paid for to continue; you can add pharmacies from your account once you&apos;re set up.
-    </Alert>
-  );
+/** The page keeps checking by itself only while something is still moving. */
+function isWaiting(s: RegistrationStatusView): boolean {
+  if (s.provisioning === "attention") return false;
+  return s.payment === "pending" || s.provisioning === "pending" || (s.provisioning === "ready" && (s.email === "pending" || s.email === "not_started"));
 }
 
-// C06 Activation: three independent tracks (payment · setup · email). No
-// automatic customer login; mock payment never creates a user (R-009).
+// C06 Activation / registration status: three independent tracks (payment · setup · sign-in email),
+// driven only by what the server reports. Stripe returns here after Checkout, so the first read asks
+// the server to confirm with Stripe once; after that the page polls quietly. An unconfirmed payment is
+// never described as failed and never invites a second payment.
 export function ActivationView() {
   const router = useRouter();
-  const { toast } = useToast();
-  const { state, hydrated } = useRegistration();
-  const [busy, setBusy] = useState<"refresh" | "resend" | null>(null);
+  const [status, setStatus] = useState<RegistrationStatusView | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [busy, setBusy] = useState<"check" | "resend" | "edit" | null>(null);
+  const [timedOut, setTimedOut] = useState(false);
+  const [tick, setTick] = useState(0);
+  const [resendMsg, setResendMsg] = useState<{ tone: "ok" | "warn"; text: string } | null>(null);
+  const [resendLocked, setResendLocked] = useState(false);
+  const [editError, setEditError] = useState<string | null>(null);
+  const pollStart = useRef<number | null>(null);   // set when polling starts; never read during render
+  const lockTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  if (!hydrated) return <PageContainer><ViewSkeleton /></PageContainer>;
+  const load = useCallback(async (reconcile: boolean) => {
+    const r = await portalApi.getStatus({ reconcile });
+    if (r.ok) {
+      setStatus(r.value);
+      setLoadError(null);
+    } else setLoadError(r.message);
+  }, []);
 
-  // REPAIR_005/006: the checkout record governs what this page may offer, before the
-  // activation record is read at all. A stale or missing activation flag never shows
-  // Refresh, "Try payment again" or "no payment" for a payment that is paid, unknown or closed.
-  const phase = paymentPhase(state);
-  const a = consistentActivation(state);
-  if (phase === "unknown") {
-    return (
-      <PageContainer>
-        <DemoNotice />
-        <div data-testid="activation-unknown">
-          <Alert tone="warning" title="We're still checking whether a payment went through">
-            Until Stripe confirms the outcome, nothing can be retried or confirmed here. Please don&apos;t pay again.{" "}
-            <Link href="/demo/checkout-incomplete" className="portal-link">See checkout status</Link>
-          </Alert>
-        </div>
-      </PageContainer>
-    );
-  }
-  if (phase === "not_charged") {
-    return (
-      <PageContainer>
-        <DemoNotice />
-        <div data-testid="activation-not-charged">
-          <Alert tone="info" title="Nothing was charged for this payment">
-            This payment was closed without a charge, so there&apos;s no activation to track for it. Your details are saved.{" "}
-            <Link href="/demo/checkout-incomplete" className="portal-link">Continue my signup</Link>
-          </Alert>
-        </div>
-      </PageContainer>
-    );
-  }
-  if (phase === "paid" && !a) {
-    // R5-F01: paid, but the activation record is missing or disagrees. Setup and email
-    // outcomes aren't known, so none is claimed and nothing can be retried or refreshed.
-    const scope = state.checkout?.scope;
-    return (
-      <PageContainer>
-        <DemoNotice />
-        <PageHeader eyebrow="Activation" title="Payment confirmed" />
-        <div className="mt-5" data-testid="activation-paid-status-unavailable">
-          <Alert tone="info" title="We can't show setup or access-email status here">
-            Stripe confirmed your payment{scope ? ` of ${formatCents(scope.dueNowCents)} (illustrative)` : ""}, so you don&apos;t need to pay again. Setup and access-email status aren&apos;t available on this page right now. If your access email hasn&apos;t arrived, contact <Placeholder>[SUPPORT EMAIL]</Placeholder> with reference <span className="font-medium text-foreground">demo_act_01</span>.
-          </Alert>
-        </div>
-      </PageContainer>
-    );
-  }
-  if (!a) {
-    // No checkout, or one still open on the stand-in: no payment has been submitted.
-    return (
-      <PageContainer>
-        <DemoNotice />
-        <Alert tone="info" title="There's no payment to track yet">
-          Activation starts after checkout. <Link href="/demo/register/review" className="portal-link">Go to review</Link>
-        </Alert>
-      </PageContainer>
-    );
-  }
+  // First read after returning from Stripe: one authoritative check.
+  useEffect(() => {
+    void load(true);
+  }, [load]);
 
-  const { draft } = state;
-  // R-013: the payment covers what its checkout was quoted for, not later edits.
-  // Without a recorded scope it can't be established, so no names or amount are shown (REPAIR_004 addendum 1).
-  const paidFor = state.checkout?.scope;
-  const names = paidFor ? (paidFor.pharmacies.map((p) => p.name).filter(Boolean) as string[]) : null;
-  // R3-F02: an invitation is claimed only for an admin the payment covered.
-  const nominated = paidFor?.pharmacies.find((p) => p.adminAssignment?.kind === "other");
-  const admin = nominated?.adminAssignment?.kind === "other" ? nominated.adminAssignment : null;
-  const amount = paidFor ? `${formatCents(paidFor.dueNowCents)} (illustrative)` : null;
-  const emailTo = a.ownerEmailMasked;
+  const waiting = status ? isWaiting(status) : false;
+  useEffect(() => {
+    if (!waiting || timedOut) return;
+    const t = setTimeout(() => {
+      pollStart.current ??= Date.now();
+      if (Date.now() - pollStart.current >= POLL_LIMIT_MS) {
+        setTimedOut(true);
+        return;
+      }
+      void load(false).then(() => setTick((n) => n + 1));
+    }, POLL_MS);
+    return () => clearTimeout(t);
+  }, [waiting, timedOut, tick, load]);
 
-  const pay: TrackState = a.paymentState === "confirmed" ? "done" : a.paymentState === "failed" ? "fail" : "busy";
-  const setup: TrackState = a.provisioningState === "ready" ? "done" : a.provisioningState === "attention" ? "warn" : a.provisioningState === "pending" ? "busy" : "idle";
-  const mail: TrackState = a.emailState === "sent" ? "done" : a.emailState === "failed" ? "fail" : a.emailState === "pending" ? "busy" : "idle";
+  // The checkout attempt is over once it expired unpaid or completed: the next one needs a new key.
+  const attemptOver = status ? status.payment === "expired" || status.draft === "complete" : false;
+  const complete = status?.draft === "complete";
+  useEffect(() => {
+    if (attemptOver) registrationSession.renewOperationKey();
+    if (complete) registrationSession.clearForms();
+  }, [attemptOver, complete]);
 
-  const heading =
-    a.paymentState === "failed"
-      ? "Payment didn't go through"
-      : a.paymentState !== "confirmed"
-        ? "Waiting for payment confirmation"
-        : a.provisioningState === "attention"
-          ? "Paid — setup is taking longer"
-          : a.provisioningState !== "ready"
-            ? "Payment confirmed. Setting up your pharmacies…"
-            : a.emailState === "failed"
-              ? "You're set up — the access email didn't send"
-              : "You're in. Check your email.";
+  useEffect(() => () => {
+    if (lockTimer.current) clearTimeout(lockTimer.current);
+  }, []);
 
-  const canRefresh = a.paymentState === "pending" || (a.paymentState === "confirmed" && a.provisioningState !== "ready");
-  // R-012: a payment still waiting for confirmation doesn't advance while prerequisites are unmet.
-  const hold = a.paymentState === "pending" ? checkoutHold(draft, state.checkout) : null;
-
-  async function refresh() {
-    setBusy("refresh");
-    await registration.refreshActivation();
+  async function checkAgain() {
+    pollStart.current = Date.now();
+    setTimedOut(false);
+    setBusy("check");
+    await load(true);
     setBusy(null);
   }
+
   async function resend() {
     setBusy("resend");
-    const r = await registration.resendAccessEmail();
+    setResendMsg(null);
+    const r = await portalApi.resendAccessEmail();
     setBusy(null);
-    if (r.ok) toast({ title: "Access email sent again", description: "Simulated — nothing was actually sent." });
+    if (r.ok) setResendMsg({ tone: "ok", text: "Request received. If the email can be sent, it's on its way — check your inbox." });
+    else if (r.code === "slow_down") setResendMsg({ tone: "warn", text: "Wait a minute before asking for another email." });
+    else {
+      setResendMsg({ tone: "warn", text: r.message });
+      return; // nothing was requested, so there is nothing to wait for
+    }
+    // One request a minute.
+    setResendLocked(true);
+    if (lockTimer.current) clearTimeout(lockTimer.current);
+    lockTimer.current = setTimeout(() => setResendLocked(false), RESEND_LOCK_MS);
   }
-  async function retryPayment() {
-    registration.resumeSignup();
-    router.push("/demo/register/review");
+
+  async function goBackAndEdit() {
+    if (!status) return;
+    const wasOpenOnStripe = status.checkoutResumable;
+    setBusy("edit");
+    setEditError(null);
+    const r = await portalApi.cancelCheckout();
+    if (r.ok) {
+      // A checkout that was open on Stripe is now closed for good; a later attempt is a new operation.
+      if (wasOpenOnStripe) registrationSession.renewOperationKey();
+      router.push("/register/review");
+      return;
+    }
+    setBusy(null);
+    setEditError(r.message);
+    void load(false);
   }
+
+  if (!status) {
+    if (loadError) {
+      return (
+        <PageContainer>
+          <Alert
+            tone="destructive"
+            title="We couldn't load your registration status"
+            action={<Button type="button" variant="outline" onClick={checkAgain} disabled={busy !== null}>Check again</Button>}
+          >
+            {loadError} If you have just paid, please don&apos;t pay again — nothing is lost.
+          </Alert>
+        </PageContainer>
+      );
+    }
+    return <PageContainer><ViewSkeleton label="Checking your registration…" /></PageContainer>;
+  }
+
+  if (status.draft === "none") {
+    return (
+      <PageContainer>
+        <div data-testid="activation-none">
+          <Alert tone="info" title="There's no registration in progress on this browser" action={<Button asChild variant="outline"><Link href="/register/plan">Start a subscription</Link></Button>}>
+            If you registered on another device or browser, check your email for your sign-in link, or <Link href="/login" className="portal-link">sign in</Link>.
+          </Alert>
+        </div>
+      </PageContainer>
+    );
+  }
+  if (status.payment === "none") {
+    return (
+      <PageContainer>
+        <div data-testid="activation-no-payment">
+          <Alert tone="info" title="There's no payment to track yet">
+            Activation starts after checkout. <Link href="/register/review" className="portal-link">Go to review</Link>
+          </Alert>
+        </div>
+      </PageContainer>
+    );
+  }
+  if (status.payment === "expired") return <CheckoutIncompleteView />;
+
+  const s = status;
+  const paid = s.payment === "confirmed";
+  const unknown = s.payment === "unknown";
+  const ready = s.provisioning === "ready";
+  const attention = s.provisioning === "attention";
+  const signInToFinish = attention && s.attention === "sign_in_to_finish";
+  const canEdit = s.checkoutResumable || s.payment === "pending";
+  const emailTo = s.ownerEmailMasked || "your email";
+  const support = <Placeholder>{BRAND.supportEmail}</Placeholder>;
+
+  const pay: TrackState = paid ? "done" : unknown ? "warn" : "busy";
+  const setup: TrackState = ready ? "done" : attention ? "warn" : s.provisioning === "pending" ? "busy" : "idle";
+  const mail: TrackState = s.email === "sent" || s.email === "not_needed" ? "done" : s.email === "failed" ? "fail" : s.email === "pending" ? "busy" : "idle";
+
+  const heading = signInToFinish
+    ? "Sign in to finish setup"
+    : attention
+      ? "Setup needs our attention"
+      : unknown
+        ? "We're confirming your payment"
+        : !paid
+          ? "Waiting for your payment"
+          : !ready
+            ? "Payment confirmed. Setting up your pharmacy…"
+            : s.email === "not_needed"
+              ? "You're all set"
+              : s.email === "failed"
+                ? "You're set up — the sign-in email didn't send"
+                : s.email === "sent"
+                  ? "You're in. Check your email."
+                  : "You're set up — your sign-in email is on its way";
+
+  const checkButton = (
+    <Button type="button" variant="outline" onClick={checkAgain} disabled={busy !== null} aria-busy={busy === "check" || undefined} data-testid="check-again">
+      {busy === "check" ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : null}
+      Check again
+    </Button>
+  );
+  const editButton = canEdit ? (
+    <Button type="button" variant="outline" onClick={goBackAndEdit} disabled={busy !== null} aria-busy={busy === "edit" || undefined} data-testid="go-back-edit">
+      {busy === "edit" ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : null}
+      Go back and edit
+    </Button>
+  ) : null;
 
   return (
     <PageContainer>
-      <DemoNotice />
-      <PageHeader eyebrow="Activation" title={heading} lead={a.paymentState === "confirmed" && a.provisioningState === "ready" && a.emailState === "sent" ? `Payment is confirmed and your pharmacies are set up. We sent your access link to ${emailTo}.` : undefined} />
+      <PageHeader eyebrow="Activation" title={heading} />
 
       <section aria-labelledby="tr-h" aria-live="polite" className="mt-6 border border-border bg-card p-4 sm:p-5" data-testid="activation-tracks">
         <h2 id="tr-h" className="text-base font-semibold text-foreground">Activation progress</h2>
@@ -195,136 +243,124 @@ export function ActivationView() {
           <Track
             label="Payment"
             state={pay}
-            text={pay === "done" ? (amount ? `Confirmed by Stripe · ${amount}` : "Confirmed by Stripe.") : pay === "fail" ? "Stripe reported the payment didn't complete." : "Waiting for Stripe's confirmation."}
+            text={paid ? "Confirmed by Stripe." : unknown ? "Not confirmed yet. We're checking with Stripe — do not pay again." : "Waiting for Stripe's confirmation."}
           />
           <Track
             label="Pharmacy setup"
             state={setup}
             text={
-              setup === "done"
-                ? names
-                  ? `${names.join(" and ")} ${names.length === 1 ? "is" : "are"} set up in OwedBook.`
-                  : "Your pharmacies are set up in OwedBook."
-                : setup === "warn"
-                  ? "Paid; setup is late. You don't need to pay again."
-                  : setup === "busy"
-                    ? names
-                      ? `Setting up ${names.join(" and ")}.`
-                      : "Setting up your pharmacies."
-                    : "Starts after payment is confirmed."
+              ready
+                ? "Your pharmacy is set up in OwedBook."
+                : signInToFinish
+                  ? "Waiting for you to sign in to the account that already uses this email."
+                  : attention
+                    ? "Setup didn't finish by itself. You don't need to do anything on this page."
+                    : s.provisioning === "pending"
+                      ? "Setting up your pharmacy."
+                      : "Starts after payment is confirmed."
             }
           />
           <Track
-            label="Access email"
+            label="Sign-in email"
             state={mail}
             text={
-              mail === "done"
-                ? `Sent to ${emailTo}${admin ? ` · a separate store invitation went to ${admin.fullName}` : ""}.`
-                : mail === "fail"
-                  ? "Couldn't be sent. Send it again below."
-                  : "Sent once setup finishes."
+              s.email === "sent"
+                ? `Sent to ${emailTo}.`
+                : s.email === "not_needed"
+                  ? "Not needed — you bought this while signed in."
+                  : s.email === "failed"
+                    ? "Couldn't be sent. Send it again below."
+                    : s.email === "pending"
+                      ? `Being sent to ${emailTo}.`
+                      : "Sent once setup finishes."
             }
           />
         </ol>
-        {canRefresh ? (
-          <div className="mt-3 flex flex-col gap-2 border-t border-border pt-3 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-xs text-muted-foreground">In the real app this page updates by itself. In this demo, refresh to play the next confirmation.</p>
-            <Button type="button" variant="outline" onClick={refresh} disabled={busy !== null || Boolean(hold)} aria-busy={busy === "refresh" || undefined} data-testid="activation-refresh">
-              {busy === "refresh" ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : null}
-              Refresh status
-            </Button>
-          </div>
+        {waiting && !timedOut ? (
+          <p className="mt-3 border-t border-border pt-3 text-xs text-muted-foreground" data-testid="auto-refresh-note">This page updates by itself every few seconds.</p>
         ) : null}
       </section>
 
       <div className="mt-5 space-y-5">
-        {hold === "scope_changed" ? (
-          <div data-testid="activation-hold">
-            <ScopeHold paidFor={paidFor} reference="demo_act_01" />
-          </div>
-        ) : hold ? (
-          <div data-testid="activation-hold">
-            <Alert tone="warning" title={hold === "owner_declaration" ? "Confirm the owner declaration to continue" : "Finish your signup details to continue"}>
-              Activation can&apos;t continue until {hold === "owner_declaration" ? "the pharmacy owner confirms the owner declaration" : "every signup step is complete"}.{" "}
-              <Link href="/demo/register/review" className="portal-link">Go to my details</Link>
-            </Alert>
-          </div>
-        ) : null}
-        {a.paymentState === "pending" ? (
-          // R4-N01: the payment is already submitted, so there's no checkout to resume (deviates from the approved render).
-          <Alert tone="info" title="Waiting for Stripe to confirm your payment">
-            This usually takes a moment. Your payment has been submitted, so please don&apos;t pay again.
+        {loadError ? (
+          <Alert tone="warning" title="We couldn't refresh the status just now" action={checkButton}>
+            {loadError} What you see below is the last status we received.
           </Alert>
         ) : null}
-        {a.paymentState === "confirmed" && !paidFor ? (
-          <div data-testid="history-unavailable">
-            <Alert tone="info" title="We can't show what this payment covered">
-              Your signup details changed after this payment, and its own record of them wasn&apos;t kept, so we can&apos;t show which pharmacies or what amount it covered. Your payment and setup aren&apos;t affected, and you don&apos;t need to pay again. For the details, contact <Placeholder>[SUPPORT EMAIL]</Placeholder> with reference <span className="font-medium text-foreground">demo_act_01</span>.
-            </Alert>
-          </div>
-        ) : null}
-        {a.provisioningState === "attention" ? (
-          <Alert tone="warning" title="Your payment went through; setup is taking longer than usual">
-            You don&apos;t need to pay again. We&apos;ll email your access link as soon as setup completes. If nothing arrives, contact <Placeholder>[SUPPORT EMAIL]</Placeholder> with reference <span className="font-medium text-foreground">demo_act_01</span>.
-          </Alert>
-        ) : null}
-        {a.emailState === "failed" ? (
-          <Alert tone="destructive" title="We couldn't send your access email">
-            Your payment and setup are fine — only the email failed. Send it again below. If it keeps failing, contact <Placeholder>[SUPPORT EMAIL]</Placeholder>.
-          </Alert>
-        ) : null}
-        {a.paymentState === "failed" ? (
-          <Alert
-            tone="destructive"
-            title="We haven't received a payment confirmation"
-            action={
-              <>
-                <Button type="button" onClick={retryPayment}>Try payment again</Button>
-                <Button type="button" variant="outline" onClick={retryPayment}>Review my details</Button>
-              </>
-            }
-          >
-            Stripe reported the payment didn&apos;t complete (reference <span className="font-medium text-foreground">demo_decline_01</span>). Nothing is set up yet and your details are saved.
-          </Alert>
-        ) : null}
-        {a.emailState === "sent" ? (
-          <div className="flex gap-3 border border-border bg-card p-4 sm:p-5">
-            <Mail className="mt-0.5 h-5 w-5 shrink-0 text-muted-foreground" aria-hidden="true" />
-            <div className="min-w-0">
-              <p className="font-semibold text-foreground">Open the email &ldquo;Set up your Pharmacy Books account&rdquo;</p>
-              <p className="mt-0.5 text-sm text-muted-foreground">
-                The link hands you to account setup. It works once and for a limited time <Placeholder>[LINK LIFETIME TBD]</Placeholder>. We don&apos;t sign you in from this page, and this demo never creates an account.
-              </p>
-              <div className="mt-3 flex flex-col gap-2 sm:flex-row">
-                <Button asChild variant="outline">
-                  <Link href="/demo/references/email?variant=owner">Preview the access email</Link>
-                </Button>
-                {admin ? (
-                  <Button asChild variant="outline">
-                    <Link href="/demo/references/email?variant=store_admin">Preview {admin.fullName}&apos;s invitation</Link>
-                  </Button>
-                ) : null}
-              </div>
-            </div>
+        {editError ? (
+          <div data-testid="edit-error">
+            <Alert tone="destructive" title="We couldn't go back to editing">{editError}</Alert>
           </div>
         ) : null}
 
-        {a.paymentState === "confirmed" && a.provisioningState === "ready" ? (
-          <section aria-labelledby="rs-h" className="border border-border bg-card p-4 sm:p-5">
-            <h2 id="rs-h" className="text-base font-semibold text-foreground">Didn&apos;t get it?</h2>
-            <p className="mt-1 text-sm text-muted-foreground">Give it a few minutes and check your spam folder. Still nothing? Send it again.</p>
-            <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center">
-              <Button type="button" variant={a.emailState === "failed" ? "default" : "outline"} onClick={resend} disabled={busy !== null} aria-busy={busy === "resend" || undefined} data-testid="resend">
-                {busy === "resend" ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : null}
-                Resend access email
+        {waiting && timedOut ? (
+          <div data-testid="still-working">
+            <Alert tone="info" title="Still working" action={checkButton}>
+              This is taking longer than usual. You can close this page — nothing is lost{paid ? ", and you don't need to pay again" : ""}. Come back to this page on this browser, or check again now.
+            </Alert>
+          </div>
+        ) : null}
+
+        {signInToFinish ? (
+          <div data-testid="activation-sign-in-to-finish">
+            <Alert
+              tone="info"
+              title="This email already has an account"
+              action={
+                <Button asChild>
+                  <Link href="/login">Sign in</Link>
+                </Button>
+              }
+            >
+              Check your inbox at <span className="break-all">{emailTo}</span> and sign in to finish setup. {paid ? "Your payment went through" : "We're still confirming your payment"}, so do not pay again.
+            </Alert>
+          </div>
+        ) : attention ? (
+          <div data-testid="activation-contact-support">
+            <Alert tone="warning" title={paid ? "Your payment went through; setup needs our attention" : "Setup needs our attention"}>
+              {paid ? "You don't need to pay again." : "We're still confirming your payment — do not pay again."} Contact {support} and we&apos;ll finish setting up your pharmacy.
+            </Alert>
+          </div>
+        ) : unknown ? (
+          <div data-testid="activation-unknown">
+            <Alert tone="warning" title="We're confirming your payment — do not pay again" action={<>{checkButton}{editButton}</>}>
+              We couldn&apos;t confirm the outcome with Stripe just now. Your registration is saved and nothing is lost. Check again in a moment; if it stays like this, contact {support}.
+            </Alert>
+          </div>
+        ) : !paid ? (
+          <div data-testid="activation-pending">
+            <Alert tone="info" title="Your payment hasn't been confirmed yet" action={editButton ?? undefined}>
+              If you&apos;ve just paid on Stripe&apos;s page, this usually takes a moment — please don&apos;t pay again.
+              {canEdit ? " If you left Stripe's page without paying, you can go back and edit your details; that closes the open checkout." : ""}
+            </Alert>
+          </div>
+        ) : null}
+
+        {(ready && (s.email === "sent" || s.email === "failed" || s.email === "pending" || s.email === "not_started")) || signInToFinish ? (
+          <AccessLinkView
+            emailMasked={emailTo}
+            delivery={s.email === "failed" ? "failed" : s.email === "sent" || signInToFinish ? "sent" : "pending"}
+            onResend={resend}
+            busy={busy === "resend"}
+            locked={resendLocked}
+            message={resendMsg}
+          />
+        ) : null}
+
+        {ready && s.email === "not_needed" ? (
+          <section aria-labelledby="go-h" className="border border-border bg-card p-4 sm:p-5" data-testid="activation-signed-in">
+            <h2 id="go-h" className="text-base font-semibold text-foreground">Your subscription is active</h2>
+            <p className="mt-1 text-sm text-muted-foreground">You&apos;re already signed in, so no sign-in email is needed.</p>
+            <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+              <Button asChild>
+                <Link href="/billing">Go to billing</Link>
               </Button>
-              {state.emailResentAt ? (
-                <p className="text-sm text-foreground" role="status">Sent again at {formatTime(state.emailResentAt)} (simulated). Check your inbox.</p>
-              ) : null}
+              <Button asChild variant="outline">
+                <a href={owedBookHandoffHref()}>
+                  Open {BRAND.owedBook} <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </Button>
             </div>
-            <p className="mt-3 text-xs text-muted-foreground">
-              Wrong email address? Contact <Placeholder>[SUPPORT EMAIL]</Placeholder>. For your security we don&apos;t change it from this page.
-            </p>
           </section>
         ) : null}
       </div>

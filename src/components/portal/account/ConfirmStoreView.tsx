@@ -13,7 +13,7 @@ import { Pill } from "../Pill";
 import { useOperationKey } from "../hooks";
 import { AccountGate } from "./AccountGate";
 import { Crumbs } from "./AddStoreView";
-import { formatCents, formatTime, isAddQuoteExpired, useAccount } from "@/services/portal";
+import { formatCents, formatTime, isAddQuoteExpired, useAccount } from "@/services/portal/ffm";
 
 // C10 Confirm your new price. One consent; a current quote (same draft
 // revision, unexpired) is required; one operation key per attempt so repeated

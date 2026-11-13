@@ -1,44 +1,33 @@
-// src/utils/supabase/server.ts
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
 import { cookies } from 'next/headers'
+import { authCookieName, isSecureOrigin } from '@/lib/appIdentity'
 
+type CookieToSet = { name: string; value: string; options: CookieOptions }
+
+/**
+ * Cookie-bound server client. APBM007A: per-app cookie name and the getAll/setAll adapter
+ * (AUTH_HANDOFF_CONTRACT §11). Host-only, SameSite=Lax, Secure on HTTPS.
+ */
 export const createClient = async () => {
-  const cookieStore = (await cookies()) as any
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || ""
-  const secure = siteUrl.startsWith("https://")
+  const cookieStore = await cookies()
+  const secure = isSecureOrigin()
 
   return createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
     {
+      cookieOptions: { name: authCookieName() },
       cookies: {
-        get(name: string) {
-          return cookieStore.get(name)?.value
+        getAll() {
+          return cookieStore.getAll()
         },
-        set(name: string, value: string, options: CookieOptions) {
+        setAll(cookiesToSet: CookieToSet[]) {
           try {
-            // Ensure proper cookie security settings for production
-            const cookieOptions = {
-              ...options,
-              secure,
-              sameSite: 'lax' as const,
-              httpOnly: false, // Supabase needs client access
-            }
-            cookieStore.set({ name, value, ...cookieOptions })
-          } catch (error) {
-            // The `set` method was called from a Server Component.
-          }
-        },
-        remove(name: string, options: CookieOptions) {
-          try {
-            const cookieOptions = {
-              ...options,
-              secure,
-              sameSite: 'lax' as const,
-            }
-            cookieStore.delete({ name, ...cookieOptions })
-          } catch (error) {
-            // The `delete` method was called from a Server Component.
+            cookiesToSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, { ...options, secure, sameSite: 'lax', httpOnly: false }) // Supabase needs client access
+            )
+          } catch {
+            // Called from a Server Component: the proxy refreshes the session instead.
           }
         },
       },
