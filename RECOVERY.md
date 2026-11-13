@@ -1,5 +1,11 @@
 # Recovery State — cyph-stripe-subscription-portal-v1
 
+## ▶ APBM007A E2 r02 — F-Q1-01 REPAIR + AMENDMENT A1 DELIVERED (updated 2026-11-13 13:50, Asia/Dhaka) — read this first
+- **Status:** webhook recovery repaired (portal, 8 paths, uncommitted on `apbm-007a`); Amendment A1 recorded in the OwedBook module. Portal 412/412, typecheck/lint/build clean. No schema change; no live effect except one read-only DEV query.
+- **Record:** module `EVIDENCE/E2/r02/REPAIR_F-Q1-01.md`; commit handoff `EVIDENCE/E2/r02/commit/COMMIT_HANDOFF.md` (lists, hashes, verifier).
+- **QA (Cody) paused.** Cody's 37 OwedBook files sit uncommitted in the working tree (backed up by Tony). Never edit, stage or move them.
+- **WAITING FOR TONY:** commit by the r02 lists (two commits per repo, verifier after each), then return checkouts to QA and rebind the candidate pair. No deployment before 007B.
+
 ## ▶ APBM007A E2 — ENGINEERING RETURN DELIVERED, webhook FAIL CLOSED (updated 2026-11-13 10:30, Asia/Dhaka) — read this first
 - **Status:** E2 code complete, DEV migrated (0053–0060), integrated proof done. B4 webhook FAIL (12 Nov) CLOSED 13 Nov: two signed events processed, mirror followed, OWNER_1's subscription left ACTIVE. Third defect fixed (undo idempotency key). Everything UNCOMMITTED on `apbm-007a` in both repos — Git is Tony's.
 - **Return:** module `EVIDENCE/E2/r01/ENGINEERING_HANDOFF.md`; ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_E2_ENGINEERING_r02.zip` (SHA-256 0e395674…fc45d75; also in Downloads; r01 kept).
