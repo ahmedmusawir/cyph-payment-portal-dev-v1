@@ -1,5 +1,10 @@
 # Recovery State — cyph-stripe-subscription-portal-v1
 
+## ▶ APBM007A CLOSEOUT PREPARED — Director merge/push pending (updated 2026-11-16, Asia/Dhaka) — read this first
+- **Status:** Gate Q PASS WITH KNOWN RISK (Friday) on OwedBook `c976968` / portal `54a56b5` (product `6ed09ff`). r06 U-1/U-2/U-3 committed and Director-accepted, not QA-certified. Q5 cleanup complete (`af1b4af` in OwedBook). Both checkouts clean on `qa/apbm-007a`: OwedBook `af1b4af`, portal `1a39132`.
+- **Record:** OwedBook module `CLOSEOUT_REPORT.md`; Git handoff `EVIDENCE/CLOSEOUT/commit/COMMIT_HANDOFF.md`.
+- **WAITING FOR TONY:** in each repository, the closeout records commit, then fast-forward `main`, merge `qa/apbm-007a` with `--no-ff`, push normally, and send back the printed SHAs. 007A becomes CLOSED once both are verified. No deployment.
+
 ## ▶ APBM007A FINAL UI REPAIR r06 — U-1 + U-2 + U-3 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
 - **Status:** OwedBook admin nav (route-driven), OwedBook billing details (from `owner_billing_overview`), and password show/hide in both apps; uncommitted on `qa/apbm-007a` (OwedBook `c976968`, portal `54a56b5`). Tests 309/309 and 468/468; typecheck, lint, both production builds and bundle scans clean; production-build browser walk 73/73 (fixture proof).
 - **Record:** OwedBook module `EVIDENCE/E2/r06/REPAIR_U-1_U-2_U-3.md`; commit handoff `EVIDENCE/E2/r06/commit/COMMIT_HANDOFF.md`; review ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_UI_REPAIR_REVIEW_r06.zip`.

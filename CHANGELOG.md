@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026-11-16 09:55 UTC — [CC] Claude Code
+- **Updated:** `RECOVERY.md`, `agent_docs/SESSIONS/session_2026-11-16.md`, `agent_docs/ACTIONS/APBM-007A-CYBER-PHARMA_POINTER.md`, `agent_docs/RESPONSES/response_2026-11-16_155500_apbm007a-closeout.md` (new) — APBM-007A closeout records: Gate Q PASS WITH KNOWN RISK, Q5 cleanup, carried risks and obligations, Director merge/push commands.
+- **Reason:** JARVIS final closeout instruction; documentation only, no product change. Status: closeout prepared; Director merge/push pending.
+
 ## 2026-10-30 05:23 UTC — [CC] Claude Code
 - **Updated:**
   - `…/QAM/HANDOFFS/COMMIT_BINDING_RECEIPT_001.md` (BOUND to `f27261734fd0a3ac96253aa6c55e3b9e911125a8`: helper output, committed path inventory, identities)
