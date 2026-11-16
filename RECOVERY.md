@@ -1,5 +1,12 @@
 # Recovery State — cyph-stripe-subscription-portal-v1
 
+## ▶ APBM007A FINAL UI REPAIR r06 — U-1 + U-2 + U-3 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
+- **Status:** OwedBook admin nav (route-driven), OwedBook billing details (from `owner_billing_overview`), and password show/hide in both apps; uncommitted on `qa/apbm-007a` (OwedBook `c976968`, portal `54a56b5`). Tests 309/309 and 468/468; typecheck, lint, both production builds and bundle scans clean; production-build browser walk 73/73 (fixture proof).
+- **Record:** OwedBook module `EVIDENCE/E2/r06/REPAIR_U-1_U-2_U-3.md`; commit handoff `EVIDENCE/E2/r06/commit/COMMIT_HANDOFF.md`; review ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_UI_REPAIR_REVIEW_r06.zip`.
+- **Director rulings recorded:** Mission Control out of 007A scope; placeholders accepted for local use, must be resolved before any external or staging exposure.
+- **QA work:** 9,805 OwedBook paths backed up to `~/APBM007A_QA_BACKUPS/u123_r06_20261116_150305/` and verified unchanged.
+- **WAITING FOR TONY:** commits by the r06 lists (portal product + records, OwedBook product + records), rebuild both apps; then Friday binds and Cody retests. No deployment.
+
 ## ▶ APBM007A Q4 REPAIR r05 — F-Q4-003 + F-Q4-002 + F-Q4-004 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
 - **Status:** provisioning concurrency (per-call lease, fenced writes, identity provenance), access-email claim, and stale-checkout settlement repaired in `provisioning.ts`, `checkout.ts`, `accessEmail.ts` plus tests, uncommitted on `qa/apbm-007a` (base `93add6f`). Portal 463/463; typecheck, lint, production build and bundle scan clean; real SCRATCH 6/6.
 - **Record:** OwedBook module `EVIDENCE/E2/r05/REPAIR_F-Q4-003_F-Q4-002_F-Q4-004.md`; commit handoff `EVIDENCE/E2/r05/commit/COMMIT_HANDOFF.md`; review ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_Q4_REPAIR_REVIEW_r05.zip`.
