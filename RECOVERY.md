@@ -1,5 +1,13 @@
 # Recovery State — cyph-stripe-subscription-portal-v1
 
+## ▶ APBM007A Q2 REPAIR r03 — F-Q2-001 + F-Q2-002 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
+- **Branch rule:** repairs stay on `qa/apbm-007a` (QAM §11, RRM §§7/9). Never ask for a switch back to `apbm-007a` or a worktree once QA has started.
+- **Status:** registration-to-review fix (`PharmacyStepView.tsx`) and both-field undo fix (`billing.ts`) plus three test files, uncommitted in this checkout on `qa/apbm-007a` (base `9d938f6`). Portal 429/429; typecheck, lint, production build and bundle scan clean; production-browser walk reached review with the server quote and stopped before checkout.
+- **Record:** OwedBook module `EVIDENCE/E2/r03/REPAIR_F-Q2.md`; commit handoff `EVIDENCE/E2/r03/commit/COMMIT_HANDOFF.md`; review ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_Q2_REPAIR_REVIEW_r03.zip` (copy in Downloads).
+- **QA work:** Cody's 5,011 uncommitted OwedBook paths backed up to `~/APBM007A_QA_BACKUPS/q2_r03_20261116_100605/` and verified unchanged. QA helper processes `Q2-a01/new-owner*.cjs` left running for QA. Friday's Q2 a01 FAIL stands.
+- **DEV effect left in place:** 1 synthetic draft (`eng.proof.r03@example.test`, NPI 1373398746) with its NPI hold. Do not delete without a Director disposition.
+- **WAITING FOR TONY:** three commits by the r03 lists (verifier after each), then Cody binds the pair and retests. No deployment before 007B.
+
 ## ▶ APBM007A E2 r02 — F-Q1-01 REPAIR + AMENDMENT A1 DELIVERED (updated 2026-11-13 13:50, Asia/Dhaka) — read this first
 - **Status:** webhook recovery repaired (portal, 8 paths, uncommitted on `apbm-007a`); Amendment A1 recorded in the OwedBook module. Portal 412/412, typecheck/lint/build clean. No schema change; no live effect except one read-only DEV query.
 - **Record:** module `EVIDENCE/E2/r02/REPAIR_F-Q1-01.md`; commit handoff `EVIDENCE/E2/r02/commit/COMMIT_HANDOFF.md` (lists, hashes, verifier).
