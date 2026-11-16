@@ -9,7 +9,7 @@ import { externalRedirect, portalApi } from "@/services/portal";
 import { LinkRequestForm } from "@/components/auth/LinkRequestForm";
 import { Alert } from "@/components/portal/Alert";
 import { BRAND } from "@/components/portal/brand";
-import { TextField } from "@/components/portal/FormField";
+import { PasswordField, TextField } from "@/components/portal/FormField";
 import { PageContainer } from "@/components/portal/Loading";
 
 const HANDOFF_RESUME = "/api/handoff/authorize?resume=1";
@@ -80,9 +80,8 @@ export function LoginPageContent({ sessionExpired, continueHandoff = false }: { 
           onValue={setEmail}
           aria-invalid={error ? true : undefined}
         />
-        <TextField
+        <PasswordField
           id="password"
-          type="password"
           autoComplete="current-password"
           label="Password"
           value={password}
