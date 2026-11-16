@@ -1,5 +1,11 @@
 # Recovery State — cyph-stripe-subscription-portal-v1
 
+## ▶ APBM007A Q4 REPAIR r04 — F-Q4-001 / AC-011 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
+- **Status:** checkout lost-answer recovery repaired in `src/server/checkout.ts` plus a new test file, uncommitted on `qa/apbm-007a` (base `357c274`). Portal 444/444, typecheck, lint, production build and bundle scan clean; rolled-back SCRATCH proof PASS.
+- **Record:** OwedBook module `EVIDENCE/E2/r04/REPAIR_F-Q4-001.md`; commit handoff `EVIDENCE/E2/r04/commit/COMMIT_HANDOFF.md`; review ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_Q4_REPAIR_REVIEW_r04.zip`.
+- **QA work:** Cody's 3,422 OwedBook paths backed up to `~/APBM007A_QA_BACKUPS/q4_r04_20261116_114741/` and verified unchanged.
+- **WAITING FOR TONY:** three commits by the r04 lists (verifier after each), then rebuild and restart the portal on the repaired candidate; then Friday binds and retests. No deployment before 007B.
+
 ## ▶ APBM007A Q2 REPAIR r03 — F-Q2-001 + F-Q2-002 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
 - **Branch rule:** repairs stay on `qa/apbm-007a` (QAM §11, RRM §§7/9). Never ask for a switch back to `apbm-007a` or a worktree once QA has started.
 - **Status:** registration-to-review fix (`PharmacyStepView.tsx`) and both-field undo fix (`billing.ts`) plus three test files, uncommitted in this checkout on `qa/apbm-007a` (base `9d938f6`). Portal 429/429; typecheck, lint, production build and bundle scan clean; production-browser walk reached review with the server quote and stopped before checkout.
