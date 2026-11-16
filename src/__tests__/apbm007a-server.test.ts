@@ -241,6 +241,83 @@ describe('owner billing (AC-027, RA-2, RA-4, RA-5)', () => {
     undoSetup({ cancel_at: 1797072000 }, { cancel_at: 1797072000 });
     await expect(undoCancellation(stripeOwner)).rejects.toMatchObject({ code: 'provider_unavailable' });
   });
+
+  // F-Q2-002 (RA-4 / AC-030). A mutable provider: an update changes the stored subscription and every call is
+  // recorded, so the tests see the state the provider is left in, not only the calls that were made.
+  const DATE = 1797072000;
+  const provider = (start: Row, opts: { flagClearsDate?: boolean; ignoreDate?: boolean; failOn?: (patch: Row, call: number) => boolean } = {}) => {
+    tables.subscriptions = [{ id: 's1', account_id: 'acc1', origin: 'stripe', stripe_customer_id: 'cus_1', stripe_subscription_id: 'sub_1' }];
+    const sub: Row = { id: 'sub_1', customer: 'cus_1', status: 'active', cancel_at_period_end: false, cancel_at: null, latest_invoice: null, items: { data: [] }, ...start };
+    const calls: { patch: Row; key: string }[] = [];
+    const retrieve = jest.fn(async () => ({ ...sub }));
+    const update = jest.fn(async (_id: string, patch: Row, o: { idempotencyKey: string }) => {
+      calls.push({ patch, key: o.idempotencyKey });
+      if ('cancel_at_period_end' in patch && 'cancel_at' in patch) throw Object.assign(new Error('conflicting parameters'), { type: 'StripeInvalidRequestError' });
+      if (opts.failOn?.(patch, calls.length)) throw new Error('connection lost');
+      if (patch.cancel_at_period_end === false) { sub.cancel_at_period_end = false; if (opts.flagClearsDate) sub.cancel_at = null; }
+      if (patch.cancel_at === '' && !opts.ignoreDate) sub.cancel_at = null;
+      return { ...sub };
+    });
+    __setStripeForTests({ subscriptions: { retrieve, update } }); rpcImpl = () => 'applied';
+    return { sub, calls, retrieve };
+  };
+  const mirrored = () => rpcCalls.filter((c) => c.fn === 'subscription_mirror_apply').length;
+
+  it('both fields set and the provider keeps the date: clears the flag, re-reads, clears the date, re-reads', async () => {
+    const p = provider({ cancel_at_period_end: true, cancel_at: DATE });
+    await expect(undoCancellation(stripeOwner)).resolves.toEqual({ cleared: true });
+    expect(p.calls.map((c) => c.patch)).toEqual([{ cancel_at_period_end: false }, { cancel_at: '' }]);   // never sent together
+    expect(p.sub).toMatchObject({ cancel_at_period_end: false, cancel_at: null });
+    expect(p.retrieve).toHaveBeenCalledTimes(4);   // before, after each update, and the mirror's own read
+    expect(new Set(p.calls.map((c) => c.key)).size).toBe(2);   // no key is reused
+    expect(mirrored()).toBe(1);
+  });
+  it('both fields set and the provider clears the date with the flag: one update, no second one', async () => {
+    const p = provider({ cancel_at_period_end: true, cancel_at: DATE }, { flagClearsDate: true });
+    await expect(undoCancellation(stripeOwner)).resolves.toEqual({ cleared: true });
+    expect(p.calls.map((c) => c.patch)).toEqual([{ cancel_at_period_end: false }]);
+    expect(p.sub).toMatchObject({ cancel_at_period_end: false, cancel_at: null });
+  });
+  it.each([
+    ['flag only', { cancel_at_period_end: true }, [{ cancel_at_period_end: false }]],
+    ['date only', { cancel_at: DATE }, [{ cancel_at: '' }]],
+    ['already clear', {}, []],
+  ] as [string, Row, Row[]][])('%s: sends exactly the update that state needs and ends clear', async (_name, start, patches) => {
+    const p = provider(start);
+    await expect(undoCancellation(stripeOwner)).resolves.toEqual({ cleared: true });
+    expect(p.calls.map((c) => c.patch)).toEqual(patches);
+    expect(p.sub).toMatchObject({ cancel_at_period_end: false, cancel_at: null });
+  });
+  it('a failure after the flag is cleared is reported, and a retry clears the remaining date with a new key', async () => {
+    const p = provider({ cancel_at_period_end: true, cancel_at: DATE }, { failOn: (_patch, call) => call === 2 });
+    await expect(undoCancellation(stripeOwner)).rejects.toMatchObject({ code: 'provider_unavailable' });
+    expect(p.sub).toMatchObject({ cancel_at_period_end: false, cancel_at: DATE });   // half done, and not called success
+    await expect(undoCancellation(stripeOwner)).resolves.toEqual({ cleared: true });
+    expect(p.calls.map((c) => c.patch)).toEqual([{ cancel_at_period_end: false }, { cancel_at: '' }, { cancel_at: '' }]);
+    expect(new Set(p.calls.map((c) => c.key)).size).toBe(3);
+    expect(p.sub).toMatchObject({ cancel_at_period_end: false, cancel_at: null });
+  });
+  it('a failure on the first update changes nothing, and a retry clears both', async () => {
+    const p = provider({ cancel_at_period_end: true, cancel_at: DATE }, { failOn: (_patch, call) => call === 1 });
+    await expect(undoCancellation(stripeOwner)).rejects.toMatchObject({ code: 'provider_unavailable' });
+    expect(p.sub).toMatchObject({ cancel_at_period_end: true, cancel_at: DATE });
+    await expect(undoCancellation(stripeOwner)).resolves.toEqual({ cleared: true });
+    expect(p.sub).toMatchObject({ cancel_at_period_end: false, cancel_at: null });
+  });
+  it('does not claim success when the date is still set after both updates', async () => {
+    const p = provider({ cancel_at_period_end: true, cancel_at: DATE }, { ignoreDate: true });
+    await expect(undoCancellation(stripeOwner)).rejects.toMatchObject({ code: 'provider_unavailable' });
+    expect(p.calls).toHaveLength(2);
+    expect(mirrored()).toBe(1);   // the mirror still records what the provider really holds
+  });
+  it('an ended subscription or another customer\'s subscription is refused before any update', async () => {
+    const ended = provider({ status: 'canceled', cancel_at: DATE });
+    await expect(undoCancellation(stripeOwner)).rejects.toMatchObject({ code: 'expired' });
+    const other = provider({ customer: 'cus_other', cancel_at_period_end: true });
+    await expect(undoCancellation(stripeOwner)).rejects.toMatchObject({ code: 'provider_unavailable' });
+    expect(ended.calls).toHaveLength(0);
+    expect(other.calls).toHaveLength(0);
+  });
 });
 
 describe('public error bodies', () => {

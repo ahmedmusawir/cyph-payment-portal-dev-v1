@@ -109,28 +109,35 @@ export async function assertPortalConfiguration(): Promise<void> {
 export function __resetPortalCheckForTests(): void { portalChecked = false; }
 
 /**
- * Undo a scheduled cancellation on the SAME subscription. Clears whichever schedule is actually set — the flag,
- * the cancel_at date the hosted portal uses, or both — then re-reads and requires both to be clear (RA-4).
+ * Undo a scheduled cancellation on the SAME subscription (RA-4). Either field can be set, or both: the flag, the
+ * cancel_at date the hosted portal uses. They are cleared one at a time, re-reading in between, because Stripe may
+ * clear the date itself when the flag is cleared and the two parameters are never sent together. Success is claimed
+ * only after a read that shows both clear. Every step is safe to repeat, so a failure part-way is finished by a retry.
  */
 export async function undoCancellation(userClient: SupabaseClient): Promise<{ cleared: boolean }> {
   const link = await stripeLinkFor(userClient);
   await assertStripeAccount();
   const s = stripe();
-  const before = await stripeCall('subscription read', () => s.subscriptions.retrieve(link.stripe_subscription_id));
-  if (before.status === 'canceled') throw new PortalError('expired', 'subscription already ended');
-  if (idOf(before.customer as string) !== link.stripe_customer_id) throw new PortalError('provider_unavailable', 'customer mismatch');
-  const patch: Stripe.SubscriptionUpdateParams = {};
-  if (before.cancel_at_period_end) patch.cancel_at_period_end = false;
-  else if (before.cancel_at) patch.cancel_at = '';
-  if (Object.keys(patch).length) {
-    // A fresh key for every undo. Clearing a schedule is harmless to repeat, and a key derived from the schedule
-    // (as before) is replayed by Stripe for 24 hours: a second cancel-and-undo with the same period end got the cached
-    // answer of the first undo and nothing was changed (found in the integrated proof, 13 November).
-    await stripeCall('subscription update', () => s.subscriptions.update(link.stripe_subscription_id, patch, { idempotencyKey: `undo:${link.stripe_subscription_id}:${randomUUID()}` }));
+  const id = link.stripe_subscription_id;
+  const read = () => stripeCall('subscription read', () => s.subscriptions.retrieve(id));
+  // A fresh key for every update. Clearing a schedule is harmless to repeat, and a key derived from the schedule
+  // (as before) is replayed by Stripe for 24 hours: a second cancel-and-undo with the same period end got the cached
+  // answer of the first undo and nothing was changed (found in the integrated proof, 13 November).
+  const update = (patch: Stripe.SubscriptionUpdateParams) =>
+    stripeCall('subscription update', () => s.subscriptions.update(id, patch, { idempotencyKey: `undo:${id}:${randomUUID()}` }));
+  let current = await read();
+  if (current.status === 'canceled') throw new PortalError('expired', 'subscription already ended');
+  if (idOf(current.customer as string) !== link.stripe_customer_id) throw new PortalError('provider_unavailable', 'customer mismatch');
+  if (current.cancel_at_period_end) {
+    await update({ cancel_at_period_end: false });
+    current = await read();
   }
-  const after = await stripeCall('subscription read', () => s.subscriptions.retrieve(link.stripe_subscription_id));
-  const cleared = !after.cancel_at_period_end && !after.cancel_at;
-  await mirror(link.stripe_subscription_id);
+  if (current.cancel_at) {
+    await update({ cancel_at: '' });
+    current = await read();
+  }
+  const cleared = !current.cancel_at_period_end && !current.cancel_at;
+  await mirror(id);
   if (!cleared) throw new PortalError('provider_unavailable', 'schedule still set after update');
   return { cleared };
 }

@@ -40,7 +40,7 @@ const values = ({ name, street, city, state, zip, ncpdp, npi, phone, software, s
 // server draft in one request.
 export function PharmacyStepView() {
   const router = useRouter();
-  const { loading, draft } = useRegistrationDraft();
+  const { loading, draft, setDraft } = useRegistrationDraft();
   const session = useRegistrationSession();
   const [form, setForm] = useState<PharmacyForm | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -49,6 +49,9 @@ export function PharmacyStepView() {
   const summaryRef = useRef<HTMLDivElement>(null);
   const noticeRef = useRef<HTMLDivElement>(null);
   const [focus, setFocus] = useState<{ n: number; target: "summary" | "notice" } | null>(null);
+  // Set once the server has accepted this step. From then on the page is leaving for review, and the
+  // owner guard below must not act on the form input that has just been cleared.
+  const saved = useRef(false);
 
   const ready = !loading && session.hydrated;
   // The owner step comes first: unsaved input from this tab, otherwise the saved draft.
@@ -56,7 +59,7 @@ export function PharmacyStepView() {
   const ownerOk = owner !== null && Object.keys(validateOwnerForm(owner)).length === 0;
 
   useEffect(() => {
-    if (!ready) return;
+    if (!ready || saved.current) return;
     if (!ownerOk) {
       router.replace("/register/owner");
       return;
@@ -87,7 +90,12 @@ export function PharmacyStepView() {
     registrationSession.keepPharmacy(values(form));
     const result = await portalApi.saveDraft({ owner: toOwnerInput(owner), pharmacy: toPharmacyInput(values(form)) });
     if (result.ok) {
-      registrationSession.clearForms(); // the server has it now
+      // The server has it now. Take its answer as this page's draft before the unsaved input is
+      // cleared: on a first registration the draft loaded with the page is still empty, and the owner
+      // guard reading it sent the browser back to the owner step instead of on to review (F-Q2-001).
+      saved.current = true;
+      setDraft(result.value);
+      registrationSession.clearForms();
       router.push("/register/review");
       return;
     }

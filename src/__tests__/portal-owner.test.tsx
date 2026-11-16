@@ -183,6 +183,9 @@ describe('PharmacyStepView — one pharmacy, saved with the owner', () => {
     expect(mockRouter.push).toHaveBeenCalledWith('/register/review');
     // Saved on the server: nothing unsaved is left in this tab.
     expect(registrationSessionStore.getState()).toMatchObject({ owner: null, pharmacy: null });
+    // F-Q2-001: clearing that input must not make the owner guard send the browser back.
+    await act(async () => { await new Promise((r) => setTimeout(r, 0)); });
+    expect(mockRouter.replace).not.toHaveBeenCalled();
   });
 
   it('an unavailable NPI shows the neutral server message on the field and keeps the input', async () => {
