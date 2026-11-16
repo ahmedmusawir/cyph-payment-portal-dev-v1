@@ -1,5 +1,12 @@
 # Recovery State — cyph-stripe-subscription-portal-v1
 
+## ▶ APBM007A Q4 REPAIR r05 — F-Q4-003 + F-Q4-002 + F-Q4-004 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
+- **Status:** provisioning concurrency (per-call lease, fenced writes, identity provenance), access-email claim, and stale-checkout settlement repaired in `provisioning.ts`, `checkout.ts`, `accessEmail.ts` plus tests, uncommitted on `qa/apbm-007a` (base `93add6f`). Portal 463/463; typecheck, lint, production build and bundle scan clean; real SCRATCH 6/6.
+- **Record:** OwedBook module `EVIDENCE/E2/r05/REPAIR_F-Q4-003_F-Q4-002_F-Q4-004.md`; commit handoff `EVIDENCE/E2/r05/commit/COMMIT_HANDOFF.md`; review ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_Q4_REPAIR_REVIEW_r05.zip`.
+- **DEV operation 25acbfb9:** do NOT touch. QA recovers it under AC-038 after the rebuild (REPAIR §6).
+- **QA work:** 6,613 OwedBook paths backed up to `~/APBM007A_QA_BACKUPS/q4_r05_20261116_124823/` and verified unchanged.
+- **WAITING FOR TONY:** three commits by the r05 lists, then rebuild and restart the portal; then Friday binds and retests. No deployment.
+
 ## ▶ APBM007A Q4 REPAIR r04 — F-Q4-001 / AC-011 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
 - **Status:** checkout lost-answer recovery repaired in `src/server/checkout.ts` plus a new test file, uncommitted on `qa/apbm-007a` (base `357c274`). Portal 444/444, typecheck, lint, production build and bundle scan clean; rolled-back SCRATCH proof PASS.
 - **Record:** OwedBook module `EVIDENCE/E2/r04/REPAIR_F-Q4-001.md`; commit handoff `EVIDENCE/E2/r04/commit/COMMIT_HANDOFF.md`; review ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_Q4_REPAIR_REVIEW_r04.zip`.
