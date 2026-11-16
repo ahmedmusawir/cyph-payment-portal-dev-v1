@@ -2,6 +2,7 @@
 // The operation is claimed in the database before any Stripe call; customer and session creation use stable
 // idempotency keys derived from it, with identical parameters on every retry; after a timeout or a lost answer the same
 // operation is resumed, never duplicated, and never assumed unpaid.
+import { createHash } from 'node:crypto';
 import type Stripe from 'stripe';
 import { admin, rpc } from '@/server/db';
 import { PortalError } from '@/server/errors';
@@ -20,9 +21,10 @@ export interface OperationRow {
   status: 'created' | 'checkout_open' | 'paid' | 'provisioning' | 'provisioned' | 'expired_unpaid' | 'attention';
   stripe_customer_id: string | null; stripe_checkout_session_id: string | null; stripe_subscription_id: string | null;
   stripe_invoice_id: string | null; checkout_expires_at: string | null; owner_user_id: string | null; owner_was_existing: boolean | null;
+  created_at?: string;
   account_id: string | null; business_id: string | null; last_error_code: string | null;
 }
-export const OP_COLUMNS = 'id,idempotency_key,draft_id,draft_revision,npi,expected_total_cents,expected_price_id,promotion_code,status,stripe_customer_id,stripe_checkout_session_id,stripe_subscription_id,stripe_invoice_id,checkout_expires_at,owner_user_id,owner_was_existing,account_id,business_id,last_error_code';
+export const OP_COLUMNS = 'id,idempotency_key,draft_id,draft_revision,npi,expected_total_cents,expected_price_id,promotion_code,status,stripe_customer_id,stripe_checkout_session_id,stripe_subscription_id,stripe_invoice_id,checkout_expires_at,owner_user_id,owner_was_existing,account_id,business_id,last_error_code,created_at';
 const OPEN = ['created', 'checkout_open', 'paid', 'provisioning', 'attention'];
 
 export async function loadOperation(id: string): Promise<OperationRow | null> {
@@ -43,6 +45,24 @@ export async function updateOperation(id: string, patch: Record<string, unknown>
 export interface Consents { termsAccepted: boolean; recurringChargeAccepted: boolean; priceChangeAccepted: boolean }
 
 /**
+ * The open attempt still describes what the buyer sees now: the same draft revision, the same quoted price and code, and
+ * consent recorded for that revision. An edit (new revision) or a re-quote (consent cleared) makes it stale (F-Q4-002).
+ */
+const stillCurrent = (op: OperationRow, draft: DraftRow): boolean =>
+  op.draft_revision === draft.revision && draft.consent_revision === op.draft_revision && draft.quote_total_cents === op.expected_total_cents
+  && (draft.quote_promotion_code ?? null) === (op.promotion_code ?? null) && draft.quote_price_id === op.expected_price_id;
+
+/**
+ * After a stale attempt is settled, the browser keeps its key, but that key already names the settled operation. The
+ * next attempt is stored under a successor key derived from it, which the same browser key still reaches.
+ */
+const successorKey = (key: string, settled: OperationRow): string => {
+  const k = `${key}_n${settled.id.replace(/-/g, '').slice(0, 8)}`;
+  return k.length <= 128 ? k : createHash('sha256').update(k).digest('hex');
+};
+const sameKey = (op: OperationRow, key: string): boolean => op.idempotency_key === key || op.idempotency_key.startsWith(`${key}_n`);
+
+/**
  * Start (or resume) Checkout for the draft. `operationKey` is the browser's stable key for this attempt:
  * the same key returns the same session; a different key cannot bypass an unresolved operation.
  */
@@ -60,18 +80,22 @@ export async function startCheckout(secret: string | undefined, input: { consent
   // Resume: the draft already has an unresolved operation.
   const current = await latestOperationForDraft(draft.id);
   let carriedCustomer: string | null = null;
+  let operationKey = input.operationKey;
   if (current && OPEN.includes(current.status)) {
-    // With no session recorded, the earlier attempt's outcome at Stripe is unknown: its answer may have been lost after
-    // Stripe created the customer and the session (F-Q4-001). A missing local reference proves nothing, so a retry with
-    // any key resumes that same operation, whose idempotency keys return Stripe's original objects.
-    const outcomeUnknown = current.status === 'created' && !current.stripe_checkout_session_id;
-    if (current.idempotency_key !== input.operationKey && !outcomeUnknown) throw new PortalError('operation_in_progress', 'different key');
     if (current.status !== 'created' && current.status !== 'checkout_open') throw new PortalError('operation_in_progress', current.status);
-    if (current.idempotency_key === input.operationKey || current.draft_revision === draft.revision) {
+    if (!stillCurrent(current, draft)) {
+      // The draft, its quote or its consent changed after that attempt began (F-Q4-002). Its Checkout is not valid for
+      // what the buyer sees now, under any key: settle it with Stripe (released only on proof), then start a new one.
+      carriedCustomer = await settleEarlierAttempt(draft, current);
+      if (sameKey(current, operationKey)) operationKey = successorKey(operationKey, current);
+    } else {
+      // With no session recorded, the attempt's outcome at Stripe is unknown: its answer may have been lost after Stripe
+      // created the customer and the session (F-Q4-001). A missing local reference proves nothing, so a retry with any
+      // key resumes that same operation, whose idempotency keys return Stripe's original objects.
+      const outcomeUnknown = current.status === 'created' && !current.stripe_checkout_session_id;
+      if (!sameKey(current, operationKey) && !outcomeUnknown) throw new PortalError('operation_in_progress', 'different key');
       return { url: await ensureSession(draft, current) };
     }
-    // The draft was edited after that attempt began. Settle it with Stripe first, then start one for this revision.
-    carriedCustomer = await settleEarlierAttempt(draft, current);
   }
   if (draft.status !== 'draft') throw new PortalError('operation_in_progress', `draft is ${draft.status}`);
   if (!quoteIsCurrent(draft) || draft.quote_price_id !== priceId) throw new PortalError('expired', 'quote');
@@ -90,7 +114,7 @@ export async function startCheckout(secret: string | undefined, input: { consent
   if (!consent.data) throw new PortalError('operation_in_progress', 'draft changed concurrently');
 
   const ins = await admin().from('checkout_operations').insert({
-    idempotency_key: input.operationKey, draft_id: draft.id, draft_revision: draft.revision, npi: draft.npi,
+    idempotency_key: operationKey, draft_id: draft.id, draft_revision: draft.revision, npi: draft.npi,
     expected_total_cents: draft.quote_total_cents, expected_currency: 'usd', expected_price_id: priceId, promotion_code: draft.quote_promotion_code,
     ...(carriedCustomer ? { stripe_customer_id: carriedCustomer } : {}),
   }).select(OP_COLUMNS).maybeSingle();
@@ -189,15 +213,18 @@ async function ensureSession(draft: DraftRow, op: OperationRow): Promise<string>
 }
 
 /**
- * An attempt whose outcome is unknown, for a draft revision that has since changed. Its own idempotency keys return
- * whatever Stripe created for it (or create it); an open session is expired through Stripe, and the operation is then
- * released on that proof. Returns the customer, so the next attempt keeps the same one.
+ * An attempt that no longer matches the draft. Its recorded session is read, or, if its outcome is unknown, its own
+ * idempotency keys return whatever Stripe created for it (or create it). An open session is expired through Stripe and
+ * the operation is released only on that proof; a paid one is never released and goes on to provisioning. Returns the
+ * customer, so the next attempt keeps the same one.
  */
 async function settleEarlierAttempt(draft: DraftRow, op: OperationRow): Promise<string> {
   const customerId = await customerFor(draft, op);
-  const session = await sessionFor(op, customerId);
+  const session = op.stripe_checkout_session_id
+    ? await stripeCall('session read', () => stripe().checkout.sessions.retrieve(op.stripe_checkout_session_id!))
+    : await sessionFor(op, customerId);
   if (session.status === 'open') await stripeCall('session expire', () => stripe().checkout.sessions.expire(session.id));
-  await updateOperation(op.id, { stripe_checkout_session_id: session.id });
+  if (!op.stripe_checkout_session_id) await updateOperation(op.id, { stripe_checkout_session_id: session.id });
   if ((await proveUnpaidAndRelease(op.id)) !== 'released') throw new PortalError('operation_in_progress', 'earlier attempt not provably unpaid');
   return customerId;
 }

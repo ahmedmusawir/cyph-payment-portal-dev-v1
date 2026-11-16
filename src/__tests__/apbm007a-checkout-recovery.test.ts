@@ -104,6 +104,7 @@ const live = (id: string) => {
 };
 const fakeStripe = {
   accounts: { retrieveCurrent: async () => ({ id: 'acct_unit' }) },
+  promotionCodes: { list: async (p: Row) => ({ data: p.code === 'APA10UNIT' ? [{ id: 'promo_unit', code: 'APA10UNIT', expires_at: null, promotion: { coupon: { valid: true, percent_off: 10 } } }] : [] }) },
   customers: {
     create: (params: Row, o: { idempotencyKey: string }) => idem('customer', o.idempotencyKey, params, () => {
       const c = { id: `cus_M${++P.n}`, object: 'customer', ...params };
@@ -170,7 +171,7 @@ const releases = () => rpcCalls.filter((c) => c.fn === 'npi_release_unpaid');
 const unsupportedUnpaid = () => ops().filter((o) => o.status === 'expired_unpaid' && !o.stripe_checkout_session_id);
 
 beforeAll(() => {
-  Object.assign(process.env, { STRIPE_SECRET_KEY: 'sk_test_unit', STRIPE_PRICE_STORES: 'price_unit', STRIPE_PORTAL_CONFIGURATION: 'bpc_unit', STRIPE_EXPECTED_ACCOUNT: 'acct_unit', STRIPE_WEBHOOK_SECRET: 'whsec_unit', NEXT_PUBLIC_SUPABASE_URL: 'https://unitproject.supabase.co' });
+  Object.assign(process.env, { APA_PROMOTION_CODES: 'APA10UNIT', STRIPE_SECRET_KEY: 'sk_test_unit', STRIPE_PRICE_STORES: 'price_unit', STRIPE_PORTAL_CONFIGURATION: 'bpc_unit', STRIPE_EXPECTED_ACCOUNT: 'acct_unit', STRIPE_WEBHOOK_SECRET: 'whsec_unit', NEXT_PUBLIC_SUPABASE_URL: 'https://unitproject.supabase.co' });
   jest.spyOn(Date, 'now').mockImplementation(() => clock);
 });
 beforeEach(() => {
@@ -340,6 +341,85 @@ describe('F-Q4-001 — existing protections kept', () => {
     expect(await codeOf(startCheckout(SECRET, { consents, operationKey: KEY_1 }, null))).toBe('npi_unavailable');
     expect([...P.sessions.values()][0].status).toBe('expired');
     expect(ops()[0]).toMatchObject({ status: 'expired_unpaid', last_error_code: 'reservation_lost' });
+  });
+});
+
+describe('F-Q4-002 — a checkout begun for an earlier revision, quote or consent is never resumed', () => {
+  /** The buyer applies the APA code after the lost attempt: a new revision, quoted at 8910, consent not yet renewed. */
+  const editToDiscount = () => editDraft({ quote_total_cents: 8910, quote_discount_cents: 990, quote_promotion_code: 'APA10UNIT', consent_revision: null });
+  const lostFirstAttempt = async (key = KEY_1) => {
+    P.lose = { kind: 'session', when: 'after' };
+    expect(await codeOf(startCheckout(SECRET, { consents, operationKey: key }, null))).toBe('provider_unavailable');
+    return { ...ops()[0] };
+  };
+
+  it('same-key retry after an edit: the earlier attempt is settled with Stripe, the new one charges the current quote with renewed consent', async () => {
+    const first = await lostFirstAttempt();
+    advance(30);
+    editToDiscount();
+    const { url } = await startCheckout(SECRET, { consents, operationKey: KEY_1 }, null);
+    const [earlier, current] = ops();
+    expect(earlier).toMatchObject({ id: first.id, status: 'expired_unpaid', draft_revision: 1, expected_total_cents: 9900 });
+    expect(P.sessions.get(earlier.stripe_checkout_session_id as string)).toMatchObject({ status: 'expired', amount_total: 9900 });
+    expect(current).toMatchObject({ status: 'checkout_open', draft_revision: 2, expected_total_cents: 8910, promotion_code: 'APA10UNIT', stripe_customer_id: first.stripe_customer_id });
+    expect(String(current.idempotency_key).startsWith(`${KEY_1}_n`)).toBe(true);   // the browser's key still reaches the new attempt
+    const live = P.sessions.get(current.stripe_checkout_session_id as string)!;
+    expect(url).toBe(live.url);
+    expect(live.amount_total).toBe(8910);
+    expect(tables.registration_drafts[0]).toMatchObject({ consent_revision: 2, status: 'checkout_started' });
+    expect({ customers: P.customers.size, sessions: P.sessions.size, operations: ops().length }).toEqual({ customers: 1, sessions: 2, operations: 2 });
+    expect(unsupportedUnpaid()).toEqual([]);
+    // The same key again resumes the new attempt: nothing else is created.
+    expect((await startCheckout(SECRET, { consents, operationKey: KEY_1 }, null)).url).toBe(url);
+    expect({ sessions: P.sessions.size, operations: ops().length }).toEqual({ sessions: 2, operations: 2 });
+  });
+
+  it('different-key retry after an edit behaves the same, and the old Checkout is never returned', async () => {
+    const first = await lostFirstAttempt();
+    editToDiscount();
+    const { url } = await startCheckout(SECRET, { consents, operationKey: KEY_2 }, null);
+    const oldSession = [...P.sessions.values()].find((x) => x.client_reference_id === first.id)!;
+    expect(url).not.toBe(oldSession.url);
+    expect(oldSession.status).toBe('expired');
+    expect(ops()[1]).toMatchObject({ idempotency_key: KEY_2, expected_total_cents: 8910, status: 'checkout_open' });
+    expect(unsupportedUnpaid()).toEqual([]);
+  });
+
+  it('a re-quote without an edit (consent cleared, same revision) also settles the earlier attempt first', async () => {
+    const first = await lostFirstAttempt();
+    Object.assign(tables.registration_drafts[0], { quote_total_cents: 8910, quote_discount_cents: 990, quote_promotion_code: 'APA10UNIT', consent_revision: null });
+    await startCheckout(SECRET, { consents, operationKey: KEY_1 }, null);
+    expect(ops().map((o) => [o.id === first.id, o.status, o.expected_total_cents])).toEqual([[true, 'expired_unpaid', 9900], [false, 'checkout_open', 8910]]);
+  });
+
+  it('without renewed consent nothing happens: refused before any provider call, the earlier attempt untouched', async () => {
+    await lostFirstAttempt();
+    editToDiscount();
+    const calls = { ...P.createCalls };
+    expect(await codeOf(startCheckout(SECRET, { consents: { ...consents, recurringChargeAccepted: false }, operationKey: KEY_1 }, null))).toBe('invalid_input');
+    expect(P.createCalls).toEqual(calls);
+    expect(ops()).toHaveLength(1);
+    expect(ops()[0].status).toBe('created');
+    expect(releases()).toEqual([]);
+  });
+
+  it('a stale attempt whose session was already paid is never released or replaced: it goes on to provisioning', async () => {
+    await startCheckout(SECRET, { consents, operationKey: KEY_1 }, null);
+    const paid = [...P.sessions.values()][0];
+    Object.assign(paid, { status: 'complete', payment_status: 'paid' });
+    Object.assign(tables.registration_drafts[0], { revision: 2, quote_revision: 2, consent_revision: null, status: 'draft' });   // a state an older build could leave
+    expect(await codeOf(startCheckout(SECRET, { consents, operationKey: KEY_2 }, null))).toBe('operation_in_progress');
+    expect(ops()).toHaveLength(1);
+    expect(ops()[0].status).toBe('checkout_open');
+    expect(releases()).toEqual([]);
+  });
+
+  it('an unchanged checkout keeps F-Q4-001 recovery: one customer, one session, one operation', async () => {
+    const first = await lostFirstAttempt();
+    const { url } = await startCheckout(SECRET, { consents, operationKey: KEY_1 }, null);
+    expect(url).toBe([...P.sessions.values()][0].url);
+    expect(ops()).toEqual([expect.objectContaining({ id: first.id, idempotency_key: KEY_1, status: 'checkout_open' })]);
+    expect({ customers: P.customers.size, sessions: P.sessions.size }).toEqual({ customers: 1, sessions: 1 });
   });
 });
 

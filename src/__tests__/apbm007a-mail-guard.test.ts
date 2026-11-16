@@ -21,7 +21,7 @@ function builder(table: string) {
   const match = () => tables[table].filter((r) => filters.every(([k, v]) => r[k] === v));
   const run = () => {
     if (mode === 'insert') { const row = { id: 'n1', attempts: 0, updated_at: new Date(0).toISOString(), ...payload }; tables[table].push(row); return { data: row, error: null }; }
-    if (mode === 'update') { match().forEach((r) => Object.assign(r, payload)); return { data: null, error: null }; }
+    if (mode === 'update') { const hit = match(); hit.forEach((r) => Object.assign(r, payload)); return { data: hit[0] ?? null, error: null }; }   // like the real client: the updated row
     return { data: match()[0] ?? null, error: null };
   };
   const api: Record<string, unknown> = {
