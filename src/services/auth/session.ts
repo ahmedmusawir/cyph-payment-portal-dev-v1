@@ -3,6 +3,10 @@
 // server-only: createClient imports next/headers, so never import this from a
 // client component or a client-safe barrel.
 //
+// APBM007A: the customer screens (/dashboard, /billing) admit ANY authenticated user through
+// getPortalUser()/requirePortalUser() — customers are ordinary members, and what a user may see is
+// decided by the server operation behind each screen. The staff resolver below is kept unchanged.
+//
 // TEMPORARY RULE (Director ruling R-008, 2026-10-27): resolves the operator as a
 // PortalStaffUser when user_roles.role is 'admin' OR 'superadmin' (derived
 // server-side via getUserRole(); never read from user_metadata). Otherwise null
@@ -15,10 +19,38 @@
 
 import { createHash } from 'node:crypto';
 import { redirect } from 'next/navigation';
-import type { PortalStaffUser } from '@/types/auth';
+import type { PortalStaffUser, PortalUser } from '@/types/auth';
 import { isPortalStaffRole } from '@/services/auth/access';
 import { createClient } from '@/utils/supabase/server';
 import { getUserRole } from '@/utils/get-user-role';
+
+/**
+ * APBM007A — any authenticated user (customers are ordinary members), or null when signed out.
+ * No role is read: what the user may see is decided by the server operation behind each screen.
+ */
+export async function getPortalUser(): Promise<PortalUser | null> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return null;
+
+  // Display-only name from auth metadata, falling back to the email local-part.
+  const metadataName =
+    typeof user.user_metadata?.full_name === 'string' ? (user.user_metadata.full_name as string) : undefined;
+  const email = user.email ?? '';
+  return { id: user.id, email, displayName: metadataName?.trim() || email.split('@')[0] || 'Account' };
+}
+
+/**
+ * Server-side guard for every signed-in page. Same predicate as the (account) layout, repeated per
+ * page so soft navigation re-checks and a signed-out 307 body carries no page payload.
+ */
+export async function requirePortalUser(): Promise<PortalUser> {
+  const user = await getPortalUser();
+  if (!user) redirect('/login');
+  return user;
+}
 
 /**
  * Resolve the authenticated operator as a PortalStaffUser, or null.

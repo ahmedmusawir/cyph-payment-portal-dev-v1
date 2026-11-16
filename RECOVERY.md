@@ -1,5 +1,53 @@
 # Recovery State — cyph-stripe-subscription-portal-v1
 
+## ▶ APBM007A CLOSEOUT PREPARED — Director merge/push pending (updated 2026-11-16, Asia/Dhaka) — read this first
+- **Status:** Gate Q PASS WITH KNOWN RISK (Friday) on OwedBook `c976968` / portal `54a56b5` (product `6ed09ff`). r06 U-1/U-2/U-3 committed and Director-accepted, not QA-certified. Q5 cleanup complete (`af1b4af` in OwedBook). Both checkouts clean on `qa/apbm-007a`: OwedBook `af1b4af`, portal `1a39132`.
+- **Record:** OwedBook module `CLOSEOUT_REPORT.md`; Git handoff `EVIDENCE/CLOSEOUT/commit/COMMIT_HANDOFF.md`.
+- **WAITING FOR TONY:** in each repository, the closeout records commit, then fast-forward `main`, merge `qa/apbm-007a` with `--no-ff`, push normally, and send back the printed SHAs. 007A becomes CLOSED once both are verified. No deployment.
+
+## ▶ APBM007A FINAL UI REPAIR r06 — U-1 + U-2 + U-3 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
+- **Status:** OwedBook admin nav (route-driven), OwedBook billing details (from `owner_billing_overview`), and password show/hide in both apps; uncommitted on `qa/apbm-007a` (OwedBook `c976968`, portal `54a56b5`). Tests 309/309 and 468/468; typecheck, lint, both production builds and bundle scans clean; production-build browser walk 73/73 (fixture proof).
+- **Record:** OwedBook module `EVIDENCE/E2/r06/REPAIR_U-1_U-2_U-3.md`; commit handoff `EVIDENCE/E2/r06/commit/COMMIT_HANDOFF.md`; review ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_UI_REPAIR_REVIEW_r06.zip`.
+- **Director rulings recorded:** Mission Control out of 007A scope; placeholders accepted for local use, must be resolved before any external or staging exposure.
+- **QA work:** 9,805 OwedBook paths backed up to `~/APBM007A_QA_BACKUPS/u123_r06_20261116_150305/` and verified unchanged.
+- **WAITING FOR TONY:** commits by the r06 lists (portal product + records, OwedBook product + records), rebuild both apps; then Friday binds and Cody retests. No deployment.
+
+## ▶ APBM007A Q4 REPAIR r05 — F-Q4-003 + F-Q4-002 + F-Q4-004 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
+- **Status:** provisioning concurrency (per-call lease, fenced writes, identity provenance), access-email claim, and stale-checkout settlement repaired in `provisioning.ts`, `checkout.ts`, `accessEmail.ts` plus tests, uncommitted on `qa/apbm-007a` (base `93add6f`). Portal 463/463; typecheck, lint, production build and bundle scan clean; real SCRATCH 6/6.
+- **Record:** OwedBook module `EVIDENCE/E2/r05/REPAIR_F-Q4-003_F-Q4-002_F-Q4-004.md`; commit handoff `EVIDENCE/E2/r05/commit/COMMIT_HANDOFF.md`; review ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_Q4_REPAIR_REVIEW_r05.zip`.
+- **DEV operation 25acbfb9:** do NOT touch. QA recovers it under AC-038 after the rebuild (REPAIR §6).
+- **QA work:** 6,613 OwedBook paths backed up to `~/APBM007A_QA_BACKUPS/q4_r05_20261116_124823/` and verified unchanged.
+- **WAITING FOR TONY:** three commits by the r05 lists, then rebuild and restart the portal; then Friday binds and retests. No deployment.
+
+## ▶ APBM007A Q4 REPAIR r04 — F-Q4-001 / AC-011 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
+- **Status:** checkout lost-answer recovery repaired in `src/server/checkout.ts` plus a new test file, uncommitted on `qa/apbm-007a` (base `357c274`). Portal 444/444, typecheck, lint, production build and bundle scan clean; rolled-back SCRATCH proof PASS.
+- **Record:** OwedBook module `EVIDENCE/E2/r04/REPAIR_F-Q4-001.md`; commit handoff `EVIDENCE/E2/r04/commit/COMMIT_HANDOFF.md`; review ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_Q4_REPAIR_REVIEW_r04.zip`.
+- **QA work:** Cody's 3,422 OwedBook paths backed up to `~/APBM007A_QA_BACKUPS/q4_r04_20261116_114741/` and verified unchanged.
+- **WAITING FOR TONY:** three commits by the r04 lists (verifier after each), then rebuild and restart the portal on the repaired candidate; then Friday binds and retests. No deployment before 007B.
+
+## ▶ APBM007A Q2 REPAIR r03 — F-Q2-001 + F-Q2-002 DELIVERED (updated 2026-11-16, Asia/Dhaka) — read this first
+- **Branch rule:** repairs stay on `qa/apbm-007a` (QAM §11, RRM §§7/9). Never ask for a switch back to `apbm-007a` or a worktree once QA has started.
+- **Status:** registration-to-review fix (`PharmacyStepView.tsx`) and both-field undo fix (`billing.ts`) plus three test files, uncommitted in this checkout on `qa/apbm-007a` (base `9d938f6`). Portal 429/429; typecheck, lint, production build and bundle scan clean; production-browser walk reached review with the server quote and stopped before checkout.
+- **Record:** OwedBook module `EVIDENCE/E2/r03/REPAIR_F-Q2.md`; commit handoff `EVIDENCE/E2/r03/commit/COMMIT_HANDOFF.md`; review ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_Q2_REPAIR_REVIEW_r03.zip` (copy in Downloads).
+- **QA work:** Cody's 5,011 uncommitted OwedBook paths backed up to `~/APBM007A_QA_BACKUPS/q2_r03_20261116_100605/` and verified unchanged. QA helper processes `Q2-a01/new-owner*.cjs` left running for QA. Friday's Q2 a01 FAIL stands.
+- **DEV effect left in place:** 1 synthetic draft (`eng.proof.r03@example.test`, NPI 1373398746) with its NPI hold. Do not delete without a Director disposition.
+- **WAITING FOR TONY:** three commits by the r03 lists (verifier after each), then Cody binds the pair and retests. No deployment before 007B.
+
+## ▶ APBM007A E2 r02 — F-Q1-01 REPAIR + AMENDMENT A1 DELIVERED (updated 2026-11-13 13:50, Asia/Dhaka) — read this first
+- **Status:** webhook recovery repaired (portal, 8 paths, uncommitted on `apbm-007a`); Amendment A1 recorded in the OwedBook module. Portal 412/412, typecheck/lint/build clean. No schema change; no live effect except one read-only DEV query.
+- **Record:** module `EVIDENCE/E2/r02/REPAIR_F-Q1-01.md`; commit handoff `EVIDENCE/E2/r02/commit/COMMIT_HANDOFF.md` (lists, hashes, verifier).
+- **QA (Cody) paused.** Cody's 37 OwedBook files sit uncommitted in the working tree (backed up by Tony). Never edit, stage or move them.
+- **WAITING FOR TONY:** commit by the r02 lists (two commits per repo, verifier after each), then return checkouts to QA and rebind the candidate pair. No deployment before 007B.
+
+## ▶ APBM007A E2 — ENGINEERING RETURN DELIVERED, webhook FAIL CLOSED (updated 2026-11-13 10:30, Asia/Dhaka) — read this first
+- **Status:** E2 code complete, DEV migrated (0053–0060), integrated proof done. B4 webhook FAIL (12 Nov) CLOSED 13 Nov: two signed events processed, mirror followed, OWNER_1's subscription left ACTIVE. Third defect fixed (undo idempotency key). Everything UNCOMMITTED on `apbm-007a` in both repos — Git is Tony's.
+- **Return:** module `EVIDENCE/E2/r01/ENGINEERING_HANDOFF.md`; ZIP `QAM/HANDOFFS/APBM-007A-CYBER-PHARMA_E2_ENGINEERING_r02.zip` (SHA-256 0e395674…fc45d75; also in Downloads; r01 kept).
+- **Still NOT RUN:** brand-new owner (gap; no identity authorised), signed-out existing identity, declined card, test-clock renewal, email click, only-card removal; checkout/invoice webhook events not redelivered on DEV.
+- **13 Nov 11:00 — commit handoff ready:** OwedBook module `EVIDENCE/E2/r01/commit/COMMIT_HANDOFF.md` (lists, hashes, commands, verifier). Tony commits by the lists — no blanket add. Q1 carry-over: `ENGINEERING_HANDOFF.md` §11.
+- **WAITING FOR TONY:** the commit (then rerun `verify_commit.py` after each commit), decisions on the NOT RUN cases, then independent Q1. No new checkout or identity without his word. No deployment before 007B.
+- **Work lane:** `/home/moose/NEXTJS/CYBER_PHARMA/ARCHIVE/APBM007A_E2_WORK/r01/` (proof harness in `proof/`; private screenshots there — never package them).
+- **Never:** start/stop servers outside QA testing; touch :3457; print or export credentials; reset a password; mutate Git; load samples; deploy.
+
 ## ▶ Resume here (updated 2026-10-30 11:32, Asia/Dhaka)
 - **Status:**
   - Gate Q **PASS** (JARVIS / QA Lead) for the frozen snapshot (manifest `f7181d3c…e9ab`).

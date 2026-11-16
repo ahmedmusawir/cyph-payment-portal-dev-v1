@@ -1,41 +1,23 @@
-// Portal FFM — the only import surface for portal UI (components never import
-// fixtures or the engines' state shapes directly; AC-24).
-export { registration, registrationHarness, useRegistration } from './registrationService';
-export { AccountDemoProvider, useAccount } from './accountService';
-export type { AccountFacade } from './accountService';
-export { clearDemoStorage, PUBLIC_STORAGE_KEY } from './storage';
-export { formatCents, initialRecurringCents, ADDITIONAL_STORE_CENTS, BASE_CENTS, DEMO_CODE, QUOTE_TTL_MS } from './pricing';
-export { formatDate, formatTime, maskEmail } from './format';
+// Portal — the only import surface for portal UI (components and pages never import the engines,
+// fixtures or server modules directly; AC-24). APBM007A: customer screens use the real API through
+// `portalApi`. The frontend-first mock surface now lives in './ffm' and must not be imported by any
+// route, layout or mounted component.
+export { portalApi, toApiError } from './portalApi';
+export { externalRedirect } from './navigate';
+export { registrationSession, useRegistrationSession, REGISTRATION_SESSION_KEY } from './registrationSession';
 export {
-  accessEmailPreviews,
-  checkoutHold,
-  consistentActivation,
-  coveredDetails,
-  estimateAvailable,
-  firstIncomplete,
-  isEmailVariant,
-  isPharmacyStep,
-  isQuoteExpired,
-  isSubmitted,
-  paymentPhase,
-  EMAIL_VARIANTS,
-} from './registration';
-export type { EmailVariant, CheckoutHold, CheckoutOutcome, PaymentPhase, RegistrationStep } from './registration';
-export type { CheckoutScope } from '@/types/portal/state';
-export {
-  addStoreAvailability,
-  lastOperationPharmacy,
-  PERSONA_PROFILE,
-  BILLING_PURPOSES,
-  isQuoteExpired as isAddQuoteExpired,
-} from './account';
-export type { AccountReadModel, AccountViewModel, PharmacyListItem, BillingPurpose, AddStoreAvailability } from './account';
-export { PLAN_VIEW, US_STATE_NAMES, DEMO_HINTS, OWNER_DECLARATION } from './catalog';
-export { classifyStripeStandIn } from './stripeRoute';
-export {
-  REGISTRATION_SCENARIOS,
-  ACCOUNT_SCENARIOS,
-  ACCOUNT_PERSONAS,
-  ADD_OUTCOMES,
-  ACTIVATION_PLANS,
-} from '@/types/portal/state';
+  draftIsComplete,
+  EMPTY_OWNER,
+  EMPTY_PHARMACY,
+  ownerFromDraft,
+  pharmacyFromDraft,
+  splitFieldErrors,
+  toOwnerInput,
+  toPharmacyInput,
+  validateOwnerForm,
+  validatePharmacyValues,
+} from './registrationForm';
+export type { FieldErrors, OwnerForm, PharmacyValues } from './registrationForm';
+export { formatDate, formatTime, formatUsd } from './format';
+export { OWNER_DECLARATION, US_STATE_OPTIONS } from './reference';
+export { normalizeNpi, NPI_MESSAGES } from './npi';

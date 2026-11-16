@@ -5,131 +5,155 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Alert, DemoNotice } from "../Alert";
+import { Alert } from "../Alert";
 import { ErrorSummary, summarize } from "../ErrorSummary";
 import { RequiredNote } from "../FormField";
 import { PageContainer, ViewSkeleton } from "../Loading";
 import { Pill } from "../Pill";
-import { PHARMACY_SUMMARY_FIELDS, PharmacyFields, toDraft, toForm, type PharmacyForm } from "../PharmacyFields";
+import { PHARMACY_SUMMARY_FIELDS, PharmacyFields, type PharmacyForm } from "../PharmacyFields";
 import { Stepper } from "../Stepper";
-import { MISSING, MissingContextNotice } from "./MissingContext";
-import { firstIncomplete, isPharmacyStep, registration, useRegistration } from "@/services/portal";
+import { useRegistrationDraft } from "./useRegistrationDraft";
+import {
+  ownerFromDraft,
+  pharmacyFromDraft,
+  portalApi,
+  registrationSession,
+  splitFieldErrors,
+  toOwnerInput,
+  toPharmacyInput,
+  useRegistrationSession,
+  validateOwnerForm,
+  validatePharmacyValues,
+  type OwnerForm,
+  type PharmacyValues,
+} from "@/services/portal";
 
-// C03 Pharmacy n of N (repeat for every requested store) + C16 duplicate.
-export function PharmacyStepView({ storeParam, notice }: { storeParam: number; notice: boolean }) {
+type Notice = { title: string; body: string; link?: { href: string; label: string } };
+
+// The owner is this store's admin in 007A; the form keeps the shared shape.
+const withAdmin = (v: PharmacyValues): PharmacyForm => ({ ...v, admin: "owner", adminName: "", adminEmail: "" });
+const values = ({ name, street, city, state, zip, ncpdp, npi, phone, software, softwareOther }: PharmacyForm): PharmacyValues => ({
+  name, street, city, state, zip, ncpdp, npi, phone, software, softwareOther,
+});
+
+// C03 Your pharmacy (exactly one store). Completing this step saves owner and pharmacy to the
+// server draft in one request.
+export function PharmacyStepView() {
   const router = useRouter();
-  const { state, hydrated } = useRegistration();
-  const count = state.draft.requestedStoreCount;
-  const index = storeParam - 1;
-  // Steps fill in order; a link past the next unentered pharmacy goes back to it (R-012).
-  const valid = isPharmacyStep(state.draft, index);
+  const { loading, draft, setDraft } = useRegistrationDraft();
+  const session = useRegistrationSession();
   const [form, setForm] = useState<PharmacyForm | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [duplicate, setDuplicate] = useState<string | null>(null);
+  const [notice, setNotice] = useState<Notice | null>(null);
   const [saving, setSaving] = useState(false);
   const summaryRef = useRef<HTMLDivElement>(null);
-  const dupRef = useRef<HTMLDivElement>(null);
-  const [focus, setFocus] = useState<{ n: number; target: "summary" | "dup" } | null>(null);
+  const noticeRef = useRef<HTMLDivElement>(null);
+  const [focus, setFocus] = useState<{ n: number; target: "summary" | "notice" } | null>(null);
+  // Set once the server has accepted this step. From then on the page is leaving for review, and the
+  // owner guard below must not act on the form input that has just been cleared.
+  const saved = useRef(false);
+
+  const ready = !loading && session.hydrated;
+  // The owner step comes first: unsaved input from this tab, otherwise the saved draft.
+  const owner: OwnerForm | null = !ready ? null : session.owner ?? (draft ? ownerFromDraft(draft) : null);
+  const ownerOk = owner !== null && Object.keys(validateOwnerForm(owner)).length === 0;
 
   useEffect(() => {
-    if (!hydrated) return;
-    const gate = firstIncomplete(state.draft);
-    if (gate.step === "plan" || gate.step === "owner") {
-      router.replace(`/demo/register/${gate.step}?notice=${MISSING}`);
+    if (!ready || saved.current) return;
+    if (!ownerOk) {
+      router.replace("/register/owner");
       return;
     }
-    if (!valid) {
-      const target = gate.step === "pharmacy" ? (gate.index ?? 0) + 1 : 1;
-      router.replace(`/demo/register/pharmacies?store=${target}&notice=${MISSING}`);
-      return;
-    }
-    setForm(toForm(state.draft.pharmacies[index]));
-    setErrors({});
-    setDuplicate(null);
-    // Reload the form only when the step changes, not on every save.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hydrated, index, valid]);
+    if (!form) setForm(withAdmin(session.pharmacy ?? pharmacyFromDraft(draft)));
+  }, [ready, ownerOk, form, session.pharmacy, draft, router]);
 
   useEffect(() => {
     if (!focus) return;
-    (focus.target === "dup" ? dupRef.current : summaryRef.current)?.focus();
+    (focus.target === "notice" ? noticeRef.current : summaryRef.current)?.focus();
   }, [focus]);
 
-  if (!hydrated || !form || !valid) return <PageContainer><ViewSkeleton /></PageContainer>;
+  if (!ready || !ownerOk || !owner || !form) return <PageContainer><ViewSkeleton /></PageContainer>;
 
-  const ownerName = [state.draft.owner.firstName, state.draft.owner.lastName].filter(Boolean).join(" ") || "you";
-  const last = index === count - 1;
-  const title = count === 1 ? "Your pharmacy" : `Pharmacy ${index + 1} of ${count}`;
-  const chip = count === 1 ? "1 of 1" : last ? "Last one" : `${count - index - 1} more after this`;
-  const cta = duplicate ? "Fix and try again" : last ? "Continue to review" : `Continue to pharmacy ${index + 2} of ${count}`;
+  const ownerName = [owner.firstName, owner.lastName].filter(Boolean).join(" ") || "you";
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
-    if (saving || !form) return;
-    setSaving(true);
-    const result = await registration.savePharmacy(index, toDraft(form));
-    setSaving(false);
-    if (result.ok) {
-      setErrors({});
-      setDuplicate(null);
-      router.push(last ? "/demo/register/review" : `/demo/register/pharmacies?store=${index + 2}`);
+    if (saving || !form || !owner) return;
+    setNotice(null);
+    const found = validatePharmacyValues(values(form));
+    setErrors(found);
+    if (Object.keys(found).length) {
+      setFocus({ n: Date.now(), target: "summary" });
       return;
     }
-    setErrors(result.fieldErrors ?? {});
-    if (result.code === "duplicate") {
-      setDuplicate(form.ncpdp);
-      setFocus({ n: Date.now(), target: "dup" });
-    } else {
-      setDuplicate(null);
+    setSaving(true);
+    registrationSession.keepPharmacy(values(form));
+    const result = await portalApi.saveDraft({ owner: toOwnerInput(owner), pharmacy: toPharmacyInput(values(form)) });
+    if (result.ok) {
+      // The server has it now. Take its answer as this page's draft before the unsaved input is
+      // cleared: on a first registration the draft loaded with the page is still empty, and the owner
+      // guard reading it sent the browser back to the owner step instead of on to review (F-Q2-001).
+      saved.current = true;
+      setDraft(result.value);
+      registrationSession.clearForms();
+      router.push("/register/review");
+      return;
+    }
+    setSaving(false);
+    const split = splitFieldErrors(result.fieldErrors);
+    if (result.code === "npi_unavailable") {
+      // Deliberately neutral server wording, shown as-is on the field.
+      setErrors({ npi: result.message });
       setFocus({ n: Date.now(), target: "summary" });
+    } else if (Object.keys(split.pharmacy).length) {
+      setErrors(split.pharmacy);
+      setFocus({ n: Date.now(), target: "summary" });
+    } else if (Object.keys(split.owner).length) {
+      setNotice({ title: "Your owner details need another look", body: result.message, link: { href: "/register/owner", label: "Go to owner details" } });
+      setFocus({ n: Date.now(), target: "notice" });
+    } else if (result.code === "operation_in_progress") {
+      setNotice({ title: "This registration can't be edited right now", body: result.message, link: { href: "/register/activation", label: "See its status" } });
+      setFocus({ n: Date.now(), target: "notice" });
+    } else {
+      setNotice({ title: "We couldn't save your details", body: `${result.message} What you typed is kept on this page.` });
+      setFocus({ n: Date.now(), target: "notice" });
     }
   }
 
   function back() {
-    if (form) registration.keepPharmacy(index, toDraft(form));
-    router.push(index === 0 ? "/demo/register/owner" : `/demo/register/pharmacies?store=${index}`);
+    if (form) registrationSession.keepPharmacy(values(form));
+    router.push("/register/owner");
   }
 
   return (
     <PageContainer>
-      <DemoNotice />
-      <MissingContextNotice show={notice} />
       <Stepper current={3} />
       <div className="flex min-w-0 flex-wrap items-end justify-between gap-2">
         <div className="min-w-0">
           <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Step 3 · Pharmacy</p>
-          <h1 className="mt-1 text-[26px] font-bold leading-tight text-foreground md:text-[32px]">{title}</h1>
+          <h1 className="mt-1 text-[26px] font-bold leading-tight text-foreground md:text-[32px]">Your pharmacy</h1>
         </div>
-        <Pill tone="muted">{chip}</Pill>
+        <Pill tone="muted">1 of 1</Pill>
       </div>
       <p className="mt-1 text-sm text-muted-foreground">
-        We use these details to identify your pharmacy and set up its store. Ownership checks are separate — entering an identifier doesn&apos;t prove ownership. You can add more stores after you&apos;re set up.
+        We use these details to identify your pharmacy and set up its store. Ownership checks are separate — entering an identifier doesn&apos;t prove ownership. Adding more stores is not available yet.
       </p>
 
-      {duplicate ? (
-        <div ref={dupRef} tabIndex={-1} className="mt-5 focus-visible:outline-none" data-testid="duplicate-alert">
-          <Alert tone="destructive" title="This pharmacy is already registered">
-            <p>
-              A Pharmacy Books account already uses NCPDP <span className="font-medium text-foreground">{duplicate}</span>. For security we can&apos;t show whose account it is. Your details are kept below; nothing has been charged.
-            </p>
-            <ul className="mt-2 list-inside list-disc space-y-1">
-              <li>
-                Already subscribed? <Link href="/login" className="portal-link">Sign in</Link> and use Add a store.
-              </li>
-              <li>Believe this pharmacy is yours? Contact [SUPPORT EMAIL] and we&apos;ll review it (ownership review process [TBD]).</li>
-              <li>Typo? Check the number and try again.</li>
-            </ul>
+      {notice ? (
+        <div ref={noticeRef} tabIndex={-1} className="mt-5 focus-visible:outline-none" data-testid="save-notice">
+          <Alert tone="destructive" title={notice.title}>
+            {notice.body}{" "}
+            {notice.link ? <Link href={notice.link.href} className="portal-link">{notice.link.label}</Link> : null}
           </Alert>
         </div>
-      ) : (
-        <ErrorSummary ref={summaryRef} items={summarize(errors, PHARMACY_SUMMARY_FIELDS)} />
-      )}
+      ) : null}
+      <ErrorSummary ref={summaryRef} items={summarize(errors, PHARMACY_SUMMARY_FIELDS)} />
 
       <form className="mt-6 space-y-6" noValidate onSubmit={submit}>
         <RequiredNote />
         <PharmacyFields form={form} onChange={setForm} errors={errors} ownerName={ownerName} context="signup" />
         <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <Button type="button" variant="outline" onClick={back}>
+          <Button type="button" variant="outline" onClick={back} disabled={saving}>
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             Back
           </Button>
@@ -140,11 +164,11 @@ export function PharmacyStepView({ storeParam, notice }: { storeParam: number; n
                 Saving…
               </>
             ) : (
-              cta
+              "Continue to review"
             )}
           </Button>
         </div>
-        <p className="text-xs text-muted-foreground">Going back keeps what you&apos;ve entered on every pharmacy.</p>
+        <p className="text-xs text-muted-foreground">Going back keeps what you&apos;ve entered.</p>
       </form>
     </PageContainer>
   );

@@ -12,3 +12,11 @@ export interface PortalStaffUser {
   displayName: string; // best-available; falls back to email local-part
   role: PortalStaffRole; // from user_roles, never user_metadata
 }
+
+// APBM007A: customers are ordinary users (role `member`). Any authenticated user may enter the signed-in
+// portal screens; this identity deliberately carries no role.
+export interface PortalUser {
+  id: string; // Supabase auth.users.id (uuid)
+  email: string;
+  displayName: string; // best-available; falls back to email local-part
+}

@@ -6,7 +6,7 @@ import { DemoNotice } from "../Alert";
 import { PageContainer, ViewSkeleton } from "../Loading";
 import { PageHeader } from "../PageHeader";
 import { EmailPreview } from "./EmailPreview";
-import { accessEmailPreviews, coveredDetails, EMAIL_VARIANTS, formatCents, initialRecurringCents, useRegistration, type EmailVariant } from "@/services/portal";
+import { accessEmailPreviews, coveredDetails, EMAIL_VARIANTS, formatCents, initialRecurringCents, useRegistration, type EmailVariant } from "@/services/portal/ffm";
 
 const TAB: Record<EmailVariant, string> = {
   owner: "Owner access",

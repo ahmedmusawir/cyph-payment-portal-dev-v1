@@ -1,81 +1,63 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { isPortalStaffRole } from "@/services/auth/access";
-import { clearDemoStorage } from "@/services/portal";
-import { Alert, DemoNotice, Placeholder } from "@/components/portal/Alert";
-import { TextField } from "@/components/portal/FormField";
+import { externalRedirect, portalApi } from "@/services/portal";
+import { LinkRequestForm } from "@/components/auth/LinkRequestForm";
+import { Alert } from "@/components/portal/Alert";
+import { BRAND } from "@/components/portal/brand";
+import { PasswordField, TextField } from "@/components/portal/FormField";
 import { PageContainer } from "@/components/portal/Loading";
 
-// REAL Supabase auth (kit /api/auth/login), with the designed sign-in
-// presentation (UI_SPEC sign-in; RULINGS R-009 — no separate simulated login).
-// TEMPORARY RULE (Director ruling R-008, 2026-10-27): admin or superadmin may
-// continue; any other role is signed out again. The server layout/page gates
-// are the real check — this only gives an early, friendly message.
-export function LoginPageContent({ sessionExpired }: { sessionExpired: boolean }) {
+const HANDOFF_RESUME = "/api/handoff/authorize?resume=1";
+
+// Supabase password sign-in (kit /api/auth/login) with the designed sign-in
+// presentation, plus the email sign-in link. APBM007A: any account may sign in —
+// customers are ordinary members; the server layout and each server operation
+// decide what a signed-in user can see.
+export function LoginPageContent({ sessionExpired, continueHandoff = false }: { sessionExpired: boolean; continueHandoff?: boolean }) {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<{ title: string; body?: string } | null>(null);
   const [loading, setLoading] = useState(false);
 
-  // Account demo state never outlives a session (expiry, sign-out elsewhere).
-  useEffect(() => clearDemoStorage("account"), []);
-
   const canSubmit = email.trim().length > 0 && password.length > 0 && !loading;
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (!canSubmit) return;
     setError(null);
     setLoading(true);
 
-    // .catch() chains, not try/catch (kit gotcha: dev overlay intercepts throws).
-    const res = await fetch("/api/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    }).catch(() => null);
-
-    if (!res) {
-      setError({ title: "Could not reach the server. Try again." });
-      setLoading(false);
-      return;
-    }
-
-    const result = await res.json().catch(() => ({}));
-
-    if (!res.ok) {
+    const result = await portalApi.signIn(email, password);
+    if (!result.ok) {
       setError(
-        /invalid login credentials/i.test(String(result.error))
+        /invalid login credentials/i.test(result.message)
           ? { title: "That email and password don't match", body: "Check both and try again." }
-          : { title: result.error || "Login failed." },
+          : { title: result.message },
       );
       setLoading(false);
       return;
     }
 
-    // Real role from the auth response (user_roles). TEMPORARY: admin or superadmin.
-    if (!isPortalStaffRole(result.data?.role)) {
-      await fetch("/api/auth/logout", { method: "POST" }).catch(() => {});
-      setError({ title: "This account does not have access to account management." });
-      setLoading(false);
+    if (continueHandoff) {
+      // Resume the move to the other app that was waiting for this sign-in.
+      externalRedirect(HANDOFF_RESUME);
       return;
     }
-
     router.push("/dashboard");
     router.refresh();
   }
 
   return (
     <PageContainer width="md">
-      <DemoNotice>Sign-in is real; the account details you see afterwards are synthetic demo data.</DemoNotice>
       <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Account &amp; Billing</p>
       <h1 className="mt-1 text-[26px] font-bold leading-tight text-foreground md:text-[32px]">Sign in</h1>
-      <p className="mt-1 text-sm text-muted-foreground">Same sign-in as OwedBook. Use your existing account to manage your subscription.</p>
+      <p className="mt-1 text-sm text-muted-foreground">Same sign-in as {BRAND.owedBook}. Use your existing account to manage your subscription.</p>
 
       {sessionExpired ? (
         <Alert tone="info" className="mt-5" title="Your session expired">
@@ -98,9 +80,8 @@ export function LoginPageContent({ sessionExpired }: { sessionExpired: boolean }
           onValue={setEmail}
           aria-invalid={error ? true : undefined}
         />
-        <TextField
+        <PasswordField
           id="password"
-          type="password"
           autoComplete="current-password"
           label="Password"
           value={password}
@@ -117,12 +98,16 @@ export function LoginPageContent({ sessionExpired }: { sessionExpired: boolean }
             "Sign in"
           )}
         </Button>
-        <p className="text-xs text-muted-foreground">
-          Forgot your password? <Placeholder>[RESET FLOW — not in this portal&apos;s scope]</Placeholder> · Contact <Placeholder>[SUPPORT EMAIL]</Placeholder>
-        </p>
       </form>
+
+      <section aria-labelledby="link-h" className="mt-6">
+        <h2 id="link-h" className="text-base font-semibold text-foreground">No password, or forgot it?</h2>
+        <p className="mb-3 mt-1 text-sm text-muted-foreground">We can email you a sign-in link instead. It works once.</p>
+        <LinkRequestForm />
+      </section>
+
       <p className="mt-6 text-sm text-muted-foreground">
-        New pharmacy? <Link href="/demo/register/plan" className="portal-link">Start a subscription</Link>
+        New pharmacy? <Link href="/register/plan" className="portal-link">Start a subscription</Link>
       </p>
     </PageContainer>
   );

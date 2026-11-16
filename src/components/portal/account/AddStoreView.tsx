@@ -12,7 +12,7 @@ import { PageContainer, ViewSkeleton } from "../Loading";
 import { Pill } from "../Pill";
 import { PHARMACY_SUMMARY_FIELDS, PharmacyFields, toDraft, toForm, type PharmacyForm } from "../PharmacyFields";
 import { AccountGate } from "./AccountGate";
-import { useAccount } from "@/services/portal";
+import { useAccount } from "@/services/portal/ffm";
 
 export function Crumbs({ trail }: { trail: { label: string; href?: string }[] }) {
   return (

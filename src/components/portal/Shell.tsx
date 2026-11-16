@@ -3,7 +3,8 @@
 import { useEffect, useState, useTransition } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { ArrowLeft, ChevronDown, LogOut, Menu } from "lucide-react";
+import { ChevronDown, ExternalLink, Loader2, LogOut, Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import SpinnerLarge from "@/components/common/SpinnerLarge";
 import ThemeToggler from "@/components/global/ThemeToggler";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -15,32 +16,26 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { clearDemoStorage } from "@/services/portal";
-import type { PortalStaffRole } from "@/types/auth";
+import { portalApi } from "@/services/portal";
+import type { PortalUserView } from "@/types/portal/api";
+import { Alert } from "./Alert";
 import { Brand } from "./Brand";
-import { BRAND } from "./brand";
+import { BRAND, owedBookHandoffHref } from "./brand";
 import { Footer, SkipLink } from "./Footer";
 import { Initials } from "./PageHeader";
-import { AccountStrip } from "./AccountStrip";
 
 // Authenticated account shell (UI_SPEC §1): top bar + centered content, no
 // rail. Rendered only inside the server-protected (account) layout, which
-// admits real admin OR superadmin sessions (R-008/R-009). The account menu
-// shows the REAL signed-in identity; the strip below names the SYNTHETIC
-// account and persona being previewed.
+// admits any signed-in user (APBM007A). The account menu shows the signed-in
+// identity; it carries no role.
 //
 // Mobile-first: < md the right side collapses to theme toggle + 44px hamburger
 // opening the existing left Sheet (Radix: focus trap, Escape, focus return).
-const ROLE_LABEL: Record<PortalStaffRole, string> = {
-  superadmin: "Super Admin",
-  admin: "Admin",
-};
-
 export function Shell({
   user,
   children,
 }: {
-  user: { displayName: string; role: PortalStaffRole };
+  user: PortalUserView;
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
@@ -49,6 +44,8 @@ export function Shell({
   // Next 16 keeps the old page visible during client navigation; nav clicks go
   // through startTransition and isPending shows the kit spinner in the slot.
   const [isPending, startTransition] = useTransition();
+  const [signingOut, setSigningOut] = useState(false);
+  const [signOutError, setSignOutError] = useState<string | null>(null);
 
   useEffect(() => {
     setDrawerOpen(false);
@@ -61,15 +58,24 @@ export function Shell({
     startTransition(() => router.push(href));
   }
 
+  // Provider-wide sign-out. A failure is shown as the server words it, with a retry —
+  // the page never claims a sign-out it could not confirm.
   async function signOut() {
-    // Demo state first (both namespaces), then the real logout.
-    clearDemoStorage("all");
-    await fetch("/api/auth/logout", { method: "POST" }).catch(() => {});
-    router.push("/login");
-    router.refresh();
+    if (signingOut) return;
+    setSigningOut(true);
+    setSignOutError(null);
+    setDrawerOpen(false);
+    const r = await portalApi.signOut();
+    if (r.ok) {
+      router.push("/login");
+      router.refresh();
+      return;
+    }
+    setSigningOut(false);
+    setSignOutError(r.message);
   }
 
-  const roleLabel = ROLE_LABEL[user.role];
+  const owedBookHref = owedBookHandoffHref();
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -78,14 +84,13 @@ export function Shell({
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5">
           <Brand href="/dashboard" />
           <nav className="hidden items-center gap-1 md:flex" aria-label="Account">
-            <Link
-              href="/demo/references/owedbook"
-              onClick={(e) => navigate(e, "/demo/references/owedbook")}
+            <a
+              href={owedBookHref}
               className="inline-flex h-11 items-center gap-1.5 px-3 text-sm font-medium text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-              Back to {BRAND.owedBook}
-            </Link>
+              Open {BRAND.owedBook}
+              <ExternalLink className="h-4 w-4" aria-hidden="true" />
+            </a>
             <ThemeToggler />
             <DropdownMenu>
               <DropdownMenuTrigger
@@ -99,11 +104,14 @@ export function Shell({
               <DropdownMenuContent align="end" className="min-w-[14rem]">
                 <DropdownMenuLabel className="font-normal">
                   <span className="block truncate text-sm font-semibold">{user.displayName}</span>
-                  <span className="block text-[11px] uppercase tracking-wide text-muted-foreground">{roleLabel} · real account</span>
+                  <span className="block truncate text-xs text-muted-foreground">{user.email}</span>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onSelect={() => startTransition(() => router.push("/dashboard"))}>Account &amp; Billing</DropdownMenuItem>
-                <DropdownMenuItem onSelect={() => startTransition(() => router.push("/demo/references/owedbook"))}>Back to {BRAND.owedBook}</DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => startTransition(() => router.push("/dashboard"))}>Your account</DropdownMenuItem>
+                <DropdownMenuItem onSelect={() => startTransition(() => router.push("/billing"))}>Billing</DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href={owedBookHref}>Open {BRAND.owedBook}</a>
+                </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onSelect={() => void signOut()} data-testid="sign-out">
                   <LogOut className="mr-2 h-4 w-4" aria-hidden="true" />
@@ -131,16 +139,19 @@ export function Shell({
                   <Initials name={user.displayName} />
                   <div className="min-w-0">
                     <p className="truncate text-sm font-semibold text-foreground">{user.displayName}</p>
-                    <p className="truncate text-[11px] uppercase tracking-wide text-muted-foreground">{roleLabel} · real account</p>
+                    <p className="truncate text-xs text-muted-foreground">{user.email}</p>
                   </div>
                 </div>
                 <nav className="flex flex-col px-4 py-2" aria-label="Account">
                   <Link href="/dashboard" onClick={(e) => navigate(e, "/dashboard")} className="flex min-h-[44px] items-center text-sm font-medium text-foreground">
-                    Account &amp; Billing
+                    Your account
                   </Link>
-                  <Link href="/demo/references/owedbook" onClick={(e) => navigate(e, "/demo/references/owedbook")} className="flex min-h-[44px] items-center text-sm font-medium text-foreground">
-                    Back to {BRAND.owedBook}
+                  <Link href="/billing" onClick={(e) => navigate(e, "/billing")} className="flex min-h-[44px] items-center text-sm font-medium text-foreground">
+                    Billing
                   </Link>
+                  <a href={owedBookHref} className="flex min-h-[44px] items-center text-sm font-medium text-foreground">
+                    Open {BRAND.owedBook}
+                  </a>
                   <button type="button" onClick={() => void signOut()} className="flex min-h-[44px] items-center text-left text-sm font-medium text-muted-foreground hover:text-foreground">
                     Sign out
                   </button>
@@ -150,7 +161,28 @@ export function Shell({
           </div>
         </div>
       </header>
-      <AccountStrip realName={user.displayName} roleLabel={roleLabel} />
+      {signingOut || signOutError ? (
+        <div className="mx-auto w-full max-w-6xl px-5 pt-4" data-testid="sign-out-status">
+          {signOutError ? (
+            <Alert
+              tone="destructive"
+              title="Sign-out didn't finish"
+              action={
+                <Button type="button" variant="outline" onClick={() => void signOut()} data-testid="sign-out-retry">
+                  Try again
+                </Button>
+              }
+            >
+              {signOutError}
+            </Alert>
+          ) : (
+            <p className="flex items-center gap-2 text-sm text-muted-foreground" role="status">
+              <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+              Signing out…
+            </p>
+          )}
+        </div>
+      ) : null}
       <main id="main" tabIndex={-1} className="w-full flex-1 focus:outline-none">
         {isPending ? (
           // Operator's kit spinner by explicit direction (Rule Zero-B exception

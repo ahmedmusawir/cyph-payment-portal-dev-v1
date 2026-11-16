@@ -10,6 +10,7 @@ export function RadioCard({
   title,
   description,
   id,
+  disabled,
 }: {
   name: string;
   value: string;
@@ -18,11 +19,14 @@ export function RadioCard({
   title: React.ReactNode;
   description?: React.ReactNode;
   id?: string;
+  /** Shown but not selectable (an option that is not available yet). */
+  disabled?: boolean;
 }) {
   return (
     <label
       className={cn(
-        "flex min-h-[44px] cursor-pointer items-start gap-3 bg-card p-4 focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 focus-within:ring-offset-card",
+        "flex min-h-[44px] items-start gap-3 bg-card p-4 focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 focus-within:ring-offset-card",
+        disabled ? "cursor-not-allowed" : "cursor-pointer",
         checked ? "border-2 border-primary" : "border border-border",
       )}
     >
@@ -32,6 +36,7 @@ export function RadioCard({
         name={name}
         value={value}
         checked={checked}
+        disabled={disabled}
         onChange={() => onSelect(value)}
         className="mt-1 h-4 w-4 shrink-0"
       />

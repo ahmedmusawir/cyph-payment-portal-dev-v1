@@ -8,19 +8,19 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { Brand } from "./Brand";
 import { BRAND } from "./brand";
 import { Footer, SkipLink } from "./Footer";
-import { PublicDemoControls } from "./PublicDemoControls";
 
-// Public shell (RULINGS R-009): prospective subscribers, no login. "Already
-// subscribed? Sign in" goes to the REAL /login. Below md the right side
+// Public shell: prospective subscribers, no login. "Already
+// subscribed? Sign in" goes to /login. Below md the right side
 // collapses to theme toggle + hamburger opening the existing left Sheet.
-export function PublicShell({ children, demoControls = true }: { children: React.ReactNode; demoControls?: boolean }) {
+//
+export function PublicShell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <SkipLink />
       <header className="sticky top-0 z-30 border-b border-border bg-card">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5">
-          <Brand href="/demo/register/plan" />
+          <Brand href="/register/plan" />
           <nav className="hidden items-center gap-1 md:flex" aria-label="Site">
             <span className="px-3 text-sm text-muted-foreground">
               Questions? <span className="font-medium text-foreground">{BRAND.supportEmail}</span>
@@ -44,7 +44,7 @@ export function PublicShell({ children, demoControls = true }: { children: React
               <SheetContent aria-describedby={undefined}>
                 <SheetTitle className="sr-only">Menu</SheetTitle>
                 <div className="border-b border-border p-4 pr-14">
-                  <Brand href="/demo/register/plan" />
+                  <Brand href="/register/plan" />
                 </div>
                 <div className="px-4 py-3">
                   <Link href="/login" onClick={() => setOpen(false)} className="flex min-h-[44px] items-center text-sm font-medium text-foreground">
@@ -59,7 +59,6 @@ export function PublicShell({ children, demoControls = true }: { children: React
           </div>
         </div>
       </header>
-      {demoControls ? <PublicDemoControls /> : null}
       <main id="main" tabIndex={-1} className="w-full flex-1 focus:outline-none">
         {children}
       </main>

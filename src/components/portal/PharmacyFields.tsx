@@ -2,11 +2,13 @@
 
 import type { PharmacyDraft } from "@/types/portal/contract";
 import { SelectField, TextField } from "./FormField";
+import { Pill } from "./Pill";
 import { RadioCard } from "./RadioCard";
-import { US_STATE_NAMES } from "@/services/portal";
+import { US_STATE_OPTIONS } from "@/services/portal";
 
-// Shared pharmacy form (C03 signup, C09 add-store): same fields, validation
-// lives in the service. Identifiers stay strings (leading zeros kept).
+// Shared pharmacy form (C03 signup; C09 add-store is deferred): same fields, validation
+// lives in the service. Identifiers stay strings (leading zeros kept). The state value is the
+// two-letter code the server stores; NCPDP is optional; the NPI carries a check digit.
 export interface PharmacyForm {
   name: string;
   street: string;
@@ -78,7 +80,7 @@ const SOFTWARE = [
   { value: "Pioneer", label: "Pioneer" },
   { value: "Other", label: "Other" },
 ] as const;
-const STATES = US_STATE_NAMES.map((s) => ({ value: s, label: s }));
+const STATES = US_STATE_OPTIONS;
 
 export function PharmacyFields({
   form,
@@ -103,20 +105,20 @@ export function PharmacyFields({
         <TextField id="ph-street" label="Street address" required autoComplete="street-address" shellClassName="sm:col-span-6" value={form.street} onValue={set("street")} error={errors.street} />
         <TextField id="ph-city" label="City" required shellClassName="sm:col-span-3" value={form.city} onValue={set("city")} error={errors.city} />
         <SelectField id="ph-state" label="State" required shellClassName="sm:col-span-2" value={form.state} onValue={set("state")} options={STATES} error={errors.state} />
-        <TextField id="ph-zip" label="ZIP" required inputMode="numeric" autoComplete="postal-code" maxLength={5} shellClassName="sm:col-span-1" value={form.zip} onValue={set("zip")} error={errors.zip} />
+        <TextField id="ph-zip" label="ZIP" required inputMode="numeric" autoComplete="postal-code" maxLength={10} shellClassName="sm:col-span-1" value={form.zip} onValue={set("zip")} error={errors.zip} />
         <TextField
           id="ph-ncpdp"
           label="NCPDP number"
-          required
+          optionalNote="(optional)"
           inputMode="numeric"
           maxLength={7}
           shellClassName="sm:col-span-3"
           value={form.ncpdp}
           onValue={set("ncpdp")}
           error={errors.ncpdp}
-          help="7 digits. Identifies the pharmacy; not proof of ownership."
+          help="7 digits, if you have it to hand. Identifies the pharmacy; not proof of ownership."
         />
-        <TextField id="ph-npi" label="NPI" required inputMode="numeric" maxLength={10} shellClassName="sm:col-span-3" value={form.npi} onValue={set("npi")} error={errors.npi} help="10 digits." />
+        <TextField id="ph-npi" label="NPI" required inputMode="numeric" maxLength={14} shellClassName="sm:col-span-3" value={form.npi} onValue={set("npi")} error={errors.npi} help="10 digits. Spaces and hyphens are fine." />
         <TextField id="ph-phone" label="Store phone" required type="tel" inputMode="tel" shellClassName="sm:col-span-3" value={form.phone} onValue={set("phone")} error={errors.phone} />
         <SelectField
           id="ph-software"
@@ -140,7 +142,9 @@ export function PharmacyFields({
           Who will be this store&apos;s admin? <span className="text-destructive">*</span>
         </p>
         <p className="text-xs text-muted-foreground">
-          Each store has one designated admin, who invites the team and manages the store in OwedBook. Either way, you keep account ownership and billing.
+{context === "signup"
+            ? "Each store has one designated admin, who manages the store in OwedBook. You keep account ownership and billing."
+            : "Each store has one designated admin, who invites the team and manages the store in OwedBook. Either way, you keep account ownership and billing."}
         </p>
         <div className="grid gap-3 sm:grid-cols-2">
           <RadioCard
@@ -151,20 +155,34 @@ export function PharmacyFields({
             title={`Me (${ownerName})`}
             description="You also manage this store as its admin, in addition to owning the account."
           />
-          <RadioCard
-            name="admin"
-            value="other"
-            checked={form.admin === "other"}
-            onSelect={() => onChange({ ...form, admin: "other" })}
-            title="Someone else"
-            description={
-              context === "signup"
-                ? "You appoint a store admin and we'll ask for their name and email. They get a separate store invitation after payment; you still get your own access link. This doesn't transfer ownership, billing or permission to buy more stores."
-                : "You appoint a store admin; they get a store invitation once the store is added. Ownership, billing and adding stores stay with you."
-            }
-          />
+          {context === "signup" ? (
+            // 007A: naming a different store admin is deferred. Shown, never selectable.
+            <RadioCard
+              name="admin"
+              value="other"
+              checked={false}
+              disabled
+              onSelect={() => undefined}
+              title={
+                <span className="flex flex-wrap items-center gap-2">
+                  <span className="text-muted-foreground">Someone else</span>
+                  <Pill tone="muted">Not available yet</Pill>
+                </span>
+              }
+              description="Naming a different store admin is not available yet. You will be this store's admin."
+            />
+          ) : (
+            <RadioCard
+              name="admin"
+              value="other"
+              checked={form.admin === "other"}
+              onSelect={() => onChange({ ...form, admin: "other" })}
+              title="Someone else"
+              description="You appoint a store admin; they get a store invitation once the store is added. Ownership, billing and adding stores stay with you."
+            />
+          )}
         </div>
-        {form.admin === "other" ? (
+        {context !== "signup" && form.admin === "other" ? (
           <div className="grid gap-5 sm:grid-cols-2">
             <TextField id="ph-admin-name" label="Admin's full name" required value={form.adminName} onValue={set("adminName")} error={errors.adminName} />
             <TextField id="ph-admin-email" label="Admin's email" required type="email" inputMode="email" value={form.adminEmail} onValue={set("adminEmail")} error={errors.adminEmail} />

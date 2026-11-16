@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Alert, DemoNotice } from "../Alert";
 import { PageContainer } from "../Loading";
 import { Pill } from "../Pill";
-import { addStoreAvailability, PERSONA_PROFILE, useAccount } from "@/services/portal";
+import { addStoreAvailability, PERSONA_PROFILE, useAccount } from "@/services/portal/ffm";
 
 // Add-store screens for a synthetic non-owner or a paused subscription. The
 // service enforces the same rules; this is the readable outcome, not the control.

@@ -1,34 +1,14 @@
-import { type EmailOtpType } from "@supabase/supabase-js";
-import { type NextRequest, NextResponse } from "next/server";
+// APBM007A — emailed sign-in link landing (FC-4). GET shows; only the explicit POST verifies. See src/server/emailLink.ts.
+import { type NextRequest } from "next/server";
+import { confirmEntry, confirmSubmit } from "@/server/emailLink";
 
-import { createClient } from "@/utils/supabase/server";
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-  const token_hash = searchParams.get("token_hash");
-  const type = searchParams.get("type") as EmailOtpType | null;
-  const next = searchParams.get("next") ?? "/";
+  return confirmEntry(request);   // never calls verifyOtp, generateLink or creates a session
+}
 
-  const redirectTo = request.nextUrl.clone();
-  redirectTo.pathname = next;
-  redirectTo.searchParams.delete("token_hash");
-  redirectTo.searchParams.delete("type");
-
-  if (token_hash && type) {
-    const supabase = await createClient();
-
-    const { error } = await supabase.auth.verifyOtp({
-      type,
-      token_hash,
-    });
-    if (!error) {
-      redirectTo.searchParams.delete("next");
-      return NextResponse.redirect(redirectTo);
-    }
-  }
-
-  // Failed/expired link: land on the login screen (F-1 ruling 2026-07-10 —
-  // /error deleted with the kit surfaces; recovery is Supabase-console-only in v1)
-  redirectTo.pathname = "/login";
-  return NextResponse.redirect(redirectTo);
+export async function POST(request: NextRequest) {
+  return confirmSubmit(request);
 }

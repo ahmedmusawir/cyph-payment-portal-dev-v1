@@ -1,7 +1,7 @@
 "use client";
 
-import { forwardRef } from "react";
-import { AlertCircle, ChevronDown } from "lucide-react";
+import { forwardRef, useCallback, useLayoutEffect, useRef, useState } from "react";
+import { AlertCircle, ChevronDown, Eye, EyeOff } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // FormField helpers (COMPONENT_MANIFEST §2): visible label, required marker
@@ -82,6 +82,93 @@ export const TextField = forwardRef<HTMLInputElement, InputProps>(function TextF
           className={cn(CONTROL, className)}
           {...rest}
         />
+      )}
+    </FieldShell>
+  );
+});
+
+/**
+ * A password field with a show/hide control (U-3): the same shell and input as TextField, plus one button that never
+ * submits the form. The password starts hidden; the button's label and aria-pressed follow the state; the value, focus
+ * and caret stay in the field while the visibility changes. Nothing is logged or stored.
+ */
+export const PasswordField = forwardRef<HTMLInputElement, Omit<InputProps, "type">>(function PasswordField(
+  { id, label, value, onValue, help, error, required, optionalNote, shellClassName, className, ...rest },
+  ref,
+) {
+  const [visible, setVisible] = useState(false);
+  // Browsers put the caret at the start when an input's type changes, and Chromium does it again just after the commit.
+  // Remember the selection before the toggle and put it back once the type has changed and again on the next frame, so
+  // typing continues where it was (found in the production-browser walk; jsdom keeps the caret).
+  const input = useRef<HTMLInputElement | null>(null);
+  const selection = useRef<[number | null, number | null] | null>(null);
+  const setRefs = useCallback((el: HTMLInputElement | null) => {
+    input.current = el;
+    if (typeof ref === "function") ref(el);
+    else if (ref) ref.current = el;
+  }, [ref]);
+  useLayoutEffect(() => {
+    const el = input.current, s = selection.current;
+    selection.current = null;
+    if (!el || !s) return;
+    const [start, end] = s;
+    if (start === null || end === null) return;
+    const restore = () => el.setSelectionRange(start, end);
+    restore();
+    // Chromium moves the caret once more after the commit. Put it back on the next frame, or at the first key if the
+    // person types sooner (before the character goes in); a click in the field picks a new position, so leave that.
+    let done = false;
+    let frame = 0;
+    const onKey = () => settle(true);
+    const onPointer = () => settle(false);
+    function settle(apply: boolean) {
+      if (done) return;
+      done = true;
+      if (apply) restore();
+      if (frame && typeof cancelAnimationFrame === "function") cancelAnimationFrame(frame);
+      el!.removeEventListener("keydown", onKey, true);
+      el!.removeEventListener("pointerdown", onPointer, true);
+    }
+    el.addEventListener("keydown", onKey, true);
+    el.addEventListener("pointerdown", onPointer, true);
+    if (typeof requestAnimationFrame === "function") frame = requestAnimationFrame(() => settle(true));
+    return () => settle(false);
+  }, [visible]);
+  const toggle = () => {
+    selection.current = input.current ? [input.current.selectionStart, input.current.selectionEnd] : null;
+    setVisible((v) => !v);
+  };
+  return (
+    <FieldShell id={id} label={label} required={required} optionalNote={optionalNote} help={help} error={error} className={shellClassName}>
+      {(describedBy) => (
+        <div className="relative">
+          <input
+            ref={setRefs}
+            id={id}
+            name={id}
+            type={visible ? "text" : "password"}
+            value={value}
+            onChange={(e) => onValue(e.target.value)}
+            aria-invalid={error ? true : undefined}
+            aria-describedby={describedBy}
+            aria-required={required || undefined}
+            className={cn(CONTROL, className, "pr-12")}
+            {...rest}
+          />
+          <button
+            type="button"
+            onClick={toggle}
+            // Keep the caret in the field for pointer users, so typing continues after a toggle.
+            onMouseDown={(e) => e.preventDefault()}
+            aria-label={visible ? "Hide password" : "Show password"}
+            aria-pressed={visible}
+            aria-controls={id}
+            disabled={rest.disabled}
+            className="absolute inset-y-0 right-1.5 my-auto flex h-8 w-8 items-center justify-center text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
+          >
+            {visible ? <EyeOff className="h-4 w-4" aria-hidden="true" /> : <Eye className="h-4 w-4" aria-hidden="true" />}
+          </button>
+        </div>
       )}
     </FieldShell>
   );
