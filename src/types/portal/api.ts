@@ -61,7 +61,8 @@ export interface BillingOverview {
     current_period_start: string | null; current_period_end: string | null; cancel_at: string | null; cancel_at_period_end: boolean;
     paid_through: string | null; latest_invoice_status: string | null; grace_started_at: string | null; verified_at: string | null;
   };
-  stores: { id: string; name: string; npi: string; status: string }[];
+  stores: { id: string; name: string; npi: string; status: string; removal_effective_at?: string | null }[];
+  billable_count?: number;
 }
 export type PaymentMethodState = { onFile: boolean; brand?: string; last4?: string } | 'unknown' | 'not_applicable';
 export interface BillingOverviewResponse { overview: BillingOverview; paymentMethod: PaymentMethodState }

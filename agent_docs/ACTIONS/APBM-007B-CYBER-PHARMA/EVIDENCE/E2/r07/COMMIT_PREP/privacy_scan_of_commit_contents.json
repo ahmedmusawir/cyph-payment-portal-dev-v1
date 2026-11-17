@@ -1,0 +1,83 @@
+{
+ "tool": "scripts/apbm007b/privacy-scan.mjs (existing)",
+ "allowed_email_domains": [
+  "apbm007b-proof.invalid",
+  "example.invalid",
+  "cyberizedev.com"
+ ],
+ "repos": {
+  "portal": {
+   "files_scanned_tree": 491,
+   "hits": [
+    {
+     "file": "agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/EVIDENCE/E2/r07/COMMIT_PREP/privacy_scan_of_commit_contents.json",
+     "rule": "email",
+     "count": 4
+    },
+    {
+     "file": "agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/GOVERNING/APBM007_DECISIONS_2026-11-11.md",
+     "rule": "email",
+     "count": 1
+    },
+    {
+     "file": "agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/GOVERNING/JARVIS_HANDOFF_APBM007B_PLANNING_2026-11-16.md",
+     "rule": "email",
+     "count": 1
+    },
+    {
+     "file": "agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/STAGING_AND_GATE_D.md",
+     "rule": "email",
+     "count": 1
+    },
+    {
+     "file": "scripts/apbm007b/mail-guard-probe.mjs",
+     "rule": "email",
+     "count": 6
+    },
+    {
+     "file": "scripts/apbm007b/privacy-scan.mjs",
+     "rule": "private_key",
+     "count": 1
+    },
+    {
+     "file": "scripts/apbm007b/privacy-scan.mjs",
+     "rule": "email",
+     "count": 1
+    },
+    {
+     "file": "src/__tests__/apbm007b-store.test.ts",
+     "rule": "email",
+     "count": 9
+    }
+   ],
+   "binary_skipped": 24
+  },
+  "owedbook": {
+   "files_scanned_tree": 67,
+   "hits": [],
+   "binary_skipped": 0
+  }
+ },
+ "hit_review": {
+  "scripts/apbm007b/privacy-scan.mjs": "the scanner itself: rule patterns and synthetic poison controls (incl. the PRIVATE KEY header pattern) \u2014 no real value",
+  "scripts/apbm007b/mail-guard-probe.mjs": "synthetic test addresses (a@b.co, x@y.zz, example.com) for guard decisions",
+  "src/__tests__/apbm007b-store.test.ts": "unit-test fixture addresses (owner@example.com etc.)",
+  "GOVERNING/APBM007_DECISIONS_2026-11-11.md, GOVERNING/JARVIS_HANDOFF_APBM007B_PLANNING_2026-11-16.md, STAGING_AND_GATE_D.md": "the business support address support@pharmacybooks.com in Director-supplied governing text \u2014 not a credential or private inbox",
+  "secret-shaped strings (separate grep)": "sk_test_/whsec_ CANARY values in build-check.mjs and GOVERNING/E1_SOURCE_RECEIPT/COMMANDS.md are deliberate fake poison canaries; rk_test_ in apbm007b-store.itest.ts is a key-prefix check regex",
+  "real cast inbox addresses": "none present (grep for the five engineering addresses: 0 files)",
+  "binary files": "24 Portal binaries: 6 evidence ZIPs (contents extracted and scanned: only the same benign files) and 18 screenshots (synthetic .invalid proof identities; the one real address was redacted in E/review.png at r03)",
+  "EVIDENCE/E2/r07/COMMIT_PREP/privacy_scan_of_commit_contents.json": "this record itself: its hit review quotes the same benign example/test addresses and the business support address"
+ },
+ "verdict": "PASS \u2014 no credential, token, password-bearing DB URL, JWT, private key, hosted invoice link or real private address in the proposed commit contents",
+ "final_rescan": {
+  "at": "2026-11-17 (after the R-3 ruling records)",
+  "real_address_files": 0,
+  "live_key_db_url_jwt_files": [],
+  "changed_records_since_previous_scan": [
+   "R-3 ruling records (APBM_RULINGS, SOURCE_REGISTER, APBM_STATE, SUCCESSOR_INPUTS, GOVERNING_INDEX, journal, handoff)",
+   "EVIDENCE/E2/r07_v0_1_review_r3_verification.json",
+   "agent_docs/RESPONSES/response_2026-11-17_130000_apbm007b-r3-ruling-final-lists.md",
+   "COMMIT_INSTRUCTIONS.md"
+  ]
+ }
+}

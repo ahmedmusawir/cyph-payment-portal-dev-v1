@@ -1,0 +1,18 @@
+{
+ "command": "forward",
+ "target": "local-rehearsal",
+ "startedAt": "2026-11-16T16:52:54.461Z",
+ "committed": [
+  "0063_007b_lifecycle_transfers.sql",
+  "0064_007b_invitations.sql",
+  "0065_007b_notices.sql",
+  "0066_007b_operator_audit.sql",
+  "0067_007b_reads_privileges.sql"
+ ],
+ "status": "PASS",
+ "ledger": {
+  "n": 67,
+  "last": "0067_007b_reads_privileges.sql"
+ },
+ "finishedAt": "2026-11-16T16:52:54.561Z"
+}

@@ -1,0 +1,164 @@
+{
+ "label": "cr-r06",
+ "scenario": "s1",
+ "timeline": [
+  {
+   "t": "2026-11-17T05:57:51.574Z",
+   "event": "resume",
+   "op_state": "payment_pending",
+   "note": "first run crashed the Portal as designed, then the evidence capture failed on a query error; this run continues the SAME operation (no new quote/confirm/kill)",
+   "killedAt": "2026-11-17T05:57:14.771Z",
+   "killStage": "pay intent recorded (op state payment_pending)"
+  },
+  {
+   "t": "2026-11-17T05:57:53.594Z",
+   "event": "capture:down_resume",
+   "op": "payment_pending",
+   "lease_live": true,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 2,
+   "stores": 0,
+   "scope": 0
+  },
+  {
+   "t": "2026-11-17T05:57:53.684Z",
+   "event": "restart:start",
+   "out": "{\"started\":{\"ob\":3094284,\"pp\":3094872},\"mail\":\"blocked (empty allowlist)\"}"
+  },
+  {
+   "t": "2026-11-17T05:57:54.793Z",
+   "event": "restart:ready",
+   "app": "pp",
+   "revision": "c68c4acaccc4+uncommitted-007b-e2",
+   "artifactId": "09ffa057cbb00af51c2c5d15f06571f2"
+  },
+  {
+   "t": "2026-11-17T05:58:19.145Z",
+   "event": "recovery:polls",
+   "polls": [
+    "05:58:06 200 payment_pending",
+    "05:58:19 200 activated"
+   ]
+  },
+  {
+   "t": "2026-11-17T05:58:21.077Z",
+   "event": "capture:after_recovery",
+   "op": "activated",
+   "lease_live": null,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 3,
+   "stores": 1,
+   "scope": 1
+  },
+  {
+   "t": "2026-11-17T05:58:27.722Z",
+   "event": "events:delivered",
+   "customer.created": [
+    "200:ignored"
+   ],
+   "customer.updated": [
+    "200:ignored",
+    "200:ignored"
+   ],
+   "payment_method.attached": [
+    "200:ignored"
+   ],
+   "payment_intent.created": [
+    "200:ignored",
+    "200:ignored"
+   ],
+   "charge.succeeded": [
+    "200:ignored",
+    "200:ignored"
+   ],
+   "customer.subscription.created": [
+    "200:applied"
+   ],
+   "invoice.payment_succeeded": [
+    "200:ignored",
+    "200:ignored"
+   ],
+   "invoice.paid": [
+    "503:",
+    "200:store_activated"
+   ],
+   "invoice.finalized": [
+    "200:ignored",
+    "200:ignored"
+   ],
+   "invoice.created": [
+    "200:ignored",
+    "200:ignored"
+   ],
+   "payment_intent.succeeded": [
+    "200:ignored",
+    "200:ignored"
+   ],
+   "invoice.updated": [
+    "200:ignored",
+    "200:ignored",
+    "200:ignored"
+   ],
+   "invoiceitem.created": [
+    "200:ignored"
+   ],
+   "customer.subscription.updated": [
+    "200:applied"
+   ]
+  },
+  {
+   "t": "2026-11-17T05:58:30.116Z",
+   "event": "jobs",
+   "store_operations": {}
+  },
+  {
+   "t": "2026-11-17T05:58:31.572Z",
+   "event": "capture:final",
+   "op": "activated",
+   "lease_live": null,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 3,
+   "stores": 1,
+   "scope": 1
+  }
+ ],
+ "cents": 4900,
+ "qty_before": 2,
+ "kill_stage": "pay intent recorded (op state payment_pending)",
+ "killed_at": "2026-11-17T05:57:14.771Z",
+ "confirm_client": {
+  "error": "UND_ERR_SOCKET (first run)"
+ },
+ "recovery_polls": [
+  {
+   "t": "2026-11-17T05:58:06.698Z",
+   "http": 200,
+   "state": "payment_pending"
+  },
+  {
+   "t": "2026-11-17T05:58:19.145Z",
+   "http": 200,
+   "state": "activated"
+  }
+ ],
+ "checks": {
+  "killed_while_operation_unfinished": true,
+  "no_access_while_down": true,
+  "recovered_state_activated": true,
+  "exactly_one_invoice": true,
+  "paid_exactly_once": true,
+  "quantity_plus_one_exactly": true,
+  "exactly_one_store_and_membership": true,
+  "replayed_events_added_nothing": true
+ },
+ "pass": true
+}

@@ -1,0 +1,26 @@
+**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**
+
+# QAM preflight — Architect-authored expectations, Executor result cells
+
+Every result NOT RUN. First row must execute first in Q1 and Q2: verify both running candidate build identities, Stripe listener/secret match and controlled inbox readability; report concrete blockers immediately and continue unaffected safe work. This row does not grant Q1 sends/payments. Exact running commands/paths come from factual engineering handoff; missing scripts are a Q1 gap, never assumed passed.
+
+| ID | Check / command and cwd | Expected | Effect / owner | Result | Evidence |
+|---|---|---|---|---|---|
+| PF-00 | Both apps: node scripts/apbm007b/served-identity.mjs --help then handoff invocation; inspect listener account/endpoint via private readiness helper; validate inbox-file schema in memory | HTTP artifact matches handoff manifest/candidate pair; correct target/listener; inbox readable | metadata reads; private values never logged; Engineer supplies facts, Cody verifies | NOT RUN | |
+| PF-01 | git rev-parse HEAD; git branch --show-current; git status --porcelain in both repos | qa/apbm-007b pair and Director candidate receipt; listed QA-only changes | read-only | NOT RUN | |
+| PF-02 | Complete git diff baseline..candidate and candidate..HEAD both repos; reconcile manifest committed/staged/unstaged/untracked inventory | all paths accounted; product delta invalidates old binding | read-only | NOT RUN | |
+| PF-03 | Verify ../CONTRACT_MANIFEST.json, ruling lane and GOVERNING/README; read all ACs | hashes match; no contract reinterpretation | local reads | NOT RUN | |
+| PF-04 | Read QAM_MANIFEST.md and HANDOFFS/ENGINEERING_HANDOFF.md | every AC claim+command+counters+limits; candidate pair resolved | local reads | NOT RUN | |
+| PF-05 | node --version; npm --version; inspect lockfile and QA-controlled disposable install | compatible installed/source versions, independent build inputs | local setup only, no product writes | NOT RUN | |
+| PF-06 | Inspect ports3100/3101 and owned build lane; build-check/served identity command per handoff | correct source/config, no old server or arbitrary origin patch | local QA copy/build only under Q1 lane | NOT RUN | |
+| PF-07 | Target/env-preflight.mjs per handoff; compare exact DEV/SCRATCH refs, server resolved precedence | identities match intended target; no secret echo, no fallback env | names/metadata only; no DB mutation | NOT RUN | |
+| PF-08 | git check-ignore -v .env.qa.local; git ls-files --error-unmatch .env.qa.local (must fail); private schema validation | ignored, untracked, minimum required identity/inbox keys | in-memory, no passwords/keys/hashes exported | NOT RUN | |
+| PF-09 | Role/store fixture inventory via approved read-only helper; no signup/mail | owner/admin/member/foreign accounts correct, no shared fixture collisions | exact reads; effects beyond this require plan/release | NOT RUN | |
+| PF-10 | privacy-scan.mjs --self-test; counter/guard poison+clean controls; mail-guard-probe with blocked transport | real failures preserved; vacuous grep cannot pass | local synthetic only | NOT RUN | |
+| PF-11 | Browser launch/basic local fixture interaction with no sign-in | driver works; screenshots complement assertions; no persistent auth traces | local only | NOT RUN | |
+| PF-12 | Read effect counters, caps, QA proposal and available budgets; compare release | no use of closed E2/probe budget; no undeclared auth/network mutations | review only | NOT RUN | |
+| PF-13 | Read ../GOVERNING/E1_CHECK2/A_ledger_search_receipt.json | exact first-probe94IDs/DEV0matches known; no blanket global-clean claim | source receipt only | NOT RUN | |
+| PF-14 | Check readonly/time seam defaults and ENGINEERING handoff context disable | staging/DEV deny fixture seam even stale non-null clock data | inspect only; actual negatives in released plan | NOT RUN | |
+| PF-15 | Exporter --self-test and state recovery check | exact safe member hashes and CRC; durable attempt folders | local synthetic QA lane only | NOT RUN | |
+
+Aggregate independent gaps with owner/enabler. At Q2/Q4 recheck PF00–04,06–09,12,14 and any changed prerequisite; valid unchanged instrument evidence can carry with provenance. A connectivity HTTP code is not readiness for payment/mail. Do not perform a generic live sign-in probe without explicit allowance.

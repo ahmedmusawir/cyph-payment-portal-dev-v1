@@ -42,7 +42,7 @@ function builder(table: string) {
   };
   return api;
 }
-const effects = { provisioned: 0, mirrorApplied: 0, graceClear: 0, graceStart: 0 };
+const effects = { provisioned: 0, mirrorApplied: 0, graceClear: 0, graceStart: 0, noticeSchedules: [] as Row[], noticeSuppress: 0 };
 jest.mock('@/server/db', () => ({
   admin: () => ({ from: (t: string) => builder(t) }),
   rpc: async (fn: string, args: Row) => {
@@ -52,7 +52,15 @@ jest.mock('@/server/db', () => ({
       return known ? 'applied' : 'unknown_subscription';
     }
     if (fn === 'subscription_grace_clear') { effects.graceClear++; return 'unchanged'; }
-    if (fn === 'subscription_grace_start') { effects.graceStart++; return 'started'; }
+    if (fn === 'subscription_grace_start') {
+      effects.graceStart++;
+      // SQL keeps the first start for the same invoice (0057); the fake mirrors that so the webhook reads it back.
+      const sub = (tables.subscriptions ?? []).find((x) => x.stripe_subscription_id === args.p_stripe_subscription_id);
+      if (sub && sub.grace_invoice_id !== args.p_invoice) { sub.grace_invoice_id = args.p_invoice; sub.grace_started_at = args.p_failed_at; }
+      return 'started';
+    }
+    if (fn === 'notice_schedule_for_failure') { effects.noticeSchedules.push(args); return 'scheduled'; }
+    if (fn === 'notice_suppress_for_invoice') { effects.noticeSuppress++; return 0; }
     throw new Error(`unexpected rpc ${fn}`);
   },
   bytea: (b: Buffer) => '\\x' + b.toString('hex'),
@@ -116,7 +124,7 @@ beforeAll(() => {
 beforeEach(() => {
   for (const k of Object.keys(tables)) delete tables[k];
   for (const k of Object.keys(objects)) objects[k] = {};
-  Object.assign(effects, { provisioned: 0, mirrorApplied: 0, graceClear: 0, graceStart: 0 });
+  Object.assign(effects, { provisioned: 0, mirrorApplied: 0, graceClear: 0, graceStart: 0, noticeSchedules: [], noticeSuppress: 0 });
   auditFails = false; advanceOperation.mockClear(); reads.mockClear();
   __setStripeForTests(fakeStripe);
 });
@@ -360,22 +368,42 @@ describe('f. no duplicate provisioning or billing effects', () => {
   });
 });
 
-describe('G5 renewal reminder record (Amendment A1-3, AC-031)', () => {
-  it('a failed renewal records one pending reminder for the owner, whatever the number of events; no email is sent', async () => {
+// APBM-007B: the 007A deferred reminder record (Amendment A1-3) is superseded by the durable notice ledger (0065); the
+// webhook now schedules both billing notices for the invoice that started grace, and suppresses them on recovery.
+describe('007B renewal notices scheduling (supersedes G5 reminder record)', () => {
+  it('a failed renewal schedules notices for that invoice, grace anchored on the invoice timeline; no email is sent here', async () => {
     tables.subscriptions = [{ stripe_subscription_id: 'sub_a', account_id: 'acct_1', origin: 'stripe' }];
     tables.accounts = [{ id: 'acct_1', owner_user_id: 'user_owner' }];
     objects.subscriptions.sub_a = { id: 'sub_a', customer: 'cus_a', metadata: marker('op_a'), items: { data: [] } };
-    objects.invoices.in_9 = { id: 'in_9', customer: 'cus_a', billing_reason: 'subscription_cycle', status: 'open', attempted: true, parent: { subscription_details: { subscription: 'sub_a', metadata: marker('op_a') } } };
+    objects.invoices.in_9 = { id: 'in_9', customer: 'cus_a', billing_reason: 'subscription_cycle', status: 'open', attempted: true, amount_due: 14800,
+      status_transitions: { finalized_at: 1797437254 }, created: 1797437254, parent: { subscription_details: { subscription: 'sub_a', metadata: marker('op_a') } } };
     for (const e of [evt('invoice.payment_failed', { id: 'in_9' }), evt('invoice.payment_failed', { id: 'in_9' })]) expect((await e.deliver()).body).toEqual({ result: 'renewal' });
-    expect(tables.notification_operations).toEqual([{ kind: 'renewal_reminder', dedupe_key: 'renewal_reminder:in_9', account_id: 'acct_1', user_id: 'user_owner', status: 'pending', last_error_code: 'email_deferred_007b' }]);
     expect(effects.graceStart).toBe(2);                                                // SQL keeps the first start; it never restarts
+    expect(effects.noticeSchedules.map((n) => [n.p_invoice, n.p_grace_started, n.p_amount_due])).toEqual([
+      ['in_9', new Date(1797437254 * 1000).toISOString(), 14800], ['in_9', new Date(1797437254 * 1000).toISOString(), 14800]]);   // SQL dedupes per (invoice, kind)
+    expect(tables.notification_operations ?? []).toEqual([]);                           // the legacy reminder writer is gone
   });
-  it('a paid renewal invoice records no reminder', async () => {
+  it('a paid renewal invoice clears grace and suppresses pending notices; schedules none', async () => {
     tables.subscriptions = [{ stripe_subscription_id: 'sub_a', account_id: 'acct_1', origin: 'stripe' }];
     objects.subscriptions.sub_a = { id: 'sub_a', customer: 'cus_a', metadata: {}, items: { data: [] } };
     objects.invoices.in_8 = { id: 'in_8', customer: 'cus_a', billing_reason: 'subscription_cycle', status: 'paid', parent: { subscription_details: { subscription: 'sub_a', metadata: {} } } };
     await evt('invoice.paid', { id: 'in_8' }).deliver();
-    expect(tables.notification_operations ?? []).toEqual([]);
+    expect(effects.noticeSuppress).toBe(1);
+    expect(effects.noticeSchedules).toEqual([]);
+  });
+  it('a failed NON-renewal subscription invoice (subscription_update) never starts grace or notices', async () => {
+    tables.subscriptions = [{ stripe_subscription_id: 'sub_a', account_id: 'acct_1', origin: 'stripe' }];
+    objects.subscriptions.sub_a = { id: 'sub_a', customer: 'cus_a', metadata: {}, items: { data: [] } };
+    objects.invoices.in_u = { id: 'in_u', customer: 'cus_a', billing_reason: 'subscription_update', status: 'open', attempted: true, parent: { subscription_details: { subscription: 'sub_a', metadata: {} } } };
+    expect((await evt('invoice.payment_failed', { id: 'in_u' }).deliver()).body).toEqual({ result: 'mirror_only' });
+    expect(effects.graceStart).toBe(0);
+    expect(effects.noticeSchedules).toEqual([]);
+  });
+  it('an unmapped standalone invoice carrying the Add Store marker stays retryable (non-2xx); one without it is ignored', async () => {
+    objects.invoices.in_s = { id: 'in_s', customer: 'cus_a', billing_reason: 'manual', status: 'paid', parent: null, metadata: { apbm_kind: 'store_add' } };
+    expect((await evt('invoice.paid', { id: 'in_s' }).deliver()).status).toBe(503);
+    objects.invoices.in_f = { id: 'in_f', customer: 'cus_a', billing_reason: 'manual', status: 'paid', parent: null, metadata: {} };
+    expect((await evt('invoice.paid', { id: 'in_f' }).deliver()).body).toEqual({ result: 'ignored' });
   });
 });
 

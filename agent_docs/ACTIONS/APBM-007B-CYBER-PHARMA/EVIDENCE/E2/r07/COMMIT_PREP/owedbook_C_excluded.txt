@@ -1,0 +1,6 @@
+.env.local	# git-ignored local artefact/credential (not addable without -f)
+.next/	# git-ignored local artefact/credential (not addable without -f)
+next-env.d.ts	# git-ignored local artefact/credential (not addable without -f)
+tsconfig.tsbuildinfo	# git-ignored local artefact/credential (not addable without -f)
+/tmp/apbm007b-o1-cast.json, ~/.apbm007b/*	# private 0600 credential/cast files outside the repositories
+/home/moose/APBM007B_E2_WORK/**	# disposable build/proof/rehearsal lanes outside the repositories

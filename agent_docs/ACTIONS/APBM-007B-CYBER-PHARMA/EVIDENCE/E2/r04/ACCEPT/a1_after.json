@@ -1,0 +1,44 @@
+{
+ "at": "2026-11-17T04:46:07.366Z",
+ "store": "O-1 A1",
+ "account_owner": "ENGINEERING_OWNER_A",
+ "account_access": "active",
+ "identities_exist": {
+  "ENGINEERING_MEMBER": true,
+  "ENGINEERING_ADMIN": true
+ },
+ "members": [
+  {
+   "who": "ENGINEERING_MEMBER",
+   "role": "member"
+  },
+  {
+   "who": "ENGINEERING_OWNER_A",
+   "role": "member"
+  },
+  {
+   "who": "ENGINEERING_ADMIN",
+   "role": "admin"
+  }
+ ],
+ "invitations": [
+  {
+   "who": "ENGINEERING_MEMBER",
+   "role": "member",
+   "status": "accepted",
+   "dispatches": 3,
+   "disposition": null,
+   "accepted_at": "2026-11-17T04:43:07.393758+00:00",
+   "reason": null
+  },
+  {
+   "who": "ENGINEERING_ADMIN",
+   "role": "admin",
+   "status": "accepted",
+   "dispatches": 2,
+   "disposition": "member",
+   "accepted_at": "2026-11-17T04:45:32.228442+00:00",
+   "reason": null
+  }
+ ]
+}

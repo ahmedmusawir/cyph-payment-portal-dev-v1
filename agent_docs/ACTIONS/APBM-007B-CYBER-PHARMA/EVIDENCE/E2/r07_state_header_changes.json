@@ -1,0 +1,23 @@
+{
+ "reason": "Friday diff confirmation: the pack's state records must match reality before the candidate commit (QAM_ENTRY state check)",
+ "at": "2026-11-17",
+ "by": "Claudy",
+ "changes": [
+  {
+   "path": "CONTRACT_MANIFEST.json",
+   "field": "status",
+   "old": "FROZEN_FOR_FRIDAY_REVIEW_E2_NOT_RELEASED",
+   "new": "FROZEN_v1_0_E2_RELEASED_2026-11-16_ENGINEERING_COMPLETE_AWAITING_QA_BRANCH",
+   "sha256_old": "696ad4b7d18114e85f186c0f5cf8ca67f15cc63cc83859be639fee6760e7ea97",
+   "sha256_new": "05464df00db071946f7cf561b12a419f4cda4faae351129600447cdbb20165ba",
+   "files_list_unchanged": true
+  },
+  {
+   "path": "QAM/AC_EVIDENCE_MATRIX.md",
+   "field": "header line 1",
+   "sha256_old": "8ae1b09c41aa9638acae4dafbfa1c6b9e92c00114e20138acc1d8b6e9aed7185",
+   "sha256_new": "958944132582bab42beb6173c6d67bbdfb660b1339d582f657cc8e6a3f12df76",
+   "body_unchanged": true
+  }
+ ]
+}

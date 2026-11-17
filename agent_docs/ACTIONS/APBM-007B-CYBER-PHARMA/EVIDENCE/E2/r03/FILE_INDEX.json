@@ -1,0 +1,227 @@
+{
+ "package": "r03",
+ "indexed_files": 44,
+ "note": "FILE_INDEX.json is not listed in itself; the ZIP SHA-256 is recorded outside the ZIP.",
+ "files": [
+  {
+   "path": "C/c-r03/auth_dashboard.png",
+   "bytes": 73227,
+   "sha256": "9d79c225b1b050a042c5b1ac2459ff9909bcb9a4bbd83b7988c170b3deeec04e"
+  },
+  {
+   "path": "C/c-r03/auth_dashboard_after_activation.png",
+   "bytes": 76308,
+   "sha256": "6aad2e1d269e1cc9267be0e30e1aaafe93b872bc7e102955abcf5a5b4cdd9831"
+  },
+  {
+   "path": "C/c-r03/auth_hosted_after.png",
+   "bytes": 44435,
+   "sha256": "095df35d3417c5f39cf4e55c66190652f9438857e40396ad867407245531e818"
+  },
+  {
+   "path": "C/c-r03/auth_payment_pending.png",
+   "bytes": 50649,
+   "sha256": "59eccef1283a331638bd3abbc5896ea34e030aed67d4cab6a5501d040ea4f332"
+  },
+  {
+   "path": "C/c-r03/decline_abandoned.png",
+   "bytes": 30564,
+   "sha256": "5d5a736fc1b39d1e5b05a74ceb4e7ebcf6cb866cf5b2937038b973e281dd9435"
+  },
+  {
+   "path": "C/c-r03/decline_payment_pending.png",
+   "bytes": 48272,
+   "sha256": "d4193693beec11d70754616c5c5cd98af5a3503b1623e1105cf234baf38ce762"
+  },
+  {
+   "path": "C/c-r03/results.json",
+   "bytes": 1262,
+   "sha256": "ea328fb6af93e18af3d9a91c372d47989da8ec40ae6b5bd9d3fb89234b8fcfd1"
+  },
+  {
+   "path": "CHECKPOINT_REPORT_r03.md",
+   "bytes": 9750,
+   "sha256": "c3cf046e4e917ddad48fb017e7cb7ddb114cbf1280126e5702c8a7ffadab97b2"
+  },
+  {
+   "path": "E/e-r03/review.png",
+   "bytes": 129651,
+   "sha256": "d7cfe678cb8caa11cf6d8149505148a53da596f83464fddce025b4a9be8ac5e4"
+  },
+  {
+   "path": "E/e-r03/state.json",
+   "bytes": 1215,
+   "sha256": "ac7b2ecc6764b72b44546937e83a5750b6025bffc134086a6f898faf592ea524"
+  },
+  {
+   "path": "EFFECTS/counters.json",
+   "bytes": 740,
+   "sha256": "2a3a57f44c8a8a7e7fd8b5aa6fe7cfb6989e4f5123b67a52bed32b11c4148f07"
+  },
+  {
+   "path": "EFFECTS/ledger.jsonl",
+   "bytes": 138308,
+   "sha256": "a6b5bec688bb722d19849cfb5f1159dc470b85e643829271527a8eebef275bfa"
+  },
+  {
+   "path": "GF/gf-r03/g_dashboard_after_undo.png",
+   "bytes": 76014,
+   "sha256": "402dd55816e604b9459f537689f676e0809387775d8636644b0c512a139ccf52"
+  },
+  {
+   "path": "GF/gf-r03/g_dashboard_cancel_scheduled.png",
+   "bytes": 91440,
+   "sha256": "13354feed7b1adfa0bfcd0474f59e6261be97deff445f35ed72630ed26c07dc0"
+  },
+  {
+   "path": "GF/gf-r03/g_portal_after_cancel.png",
+   "bytes": 26799,
+   "sha256": "9de3ca5a085c788d62625e213c4829d9733feaa2880d16eb79bd2f51c9b2e84d"
+  },
+  {
+   "path": "GF/gf-r03/results.json",
+   "bytes": 1236,
+   "sha256": "214716b1fed8f34e82282520b795c38e211c28a48865b2e7120f2c288a735ec6"
+  },
+  {
+   "path": "INBOX/manual_observations.json",
+   "bytes": 2862,
+   "sha256": "f8fcaab72088f2e1ee26cb00e4c223680499dbae2e6d9e2a4280ee78dbd463c0"
+  },
+  {
+   "path": "INVENTORY/cyph-payment-portal-dev-v1_2.1_committed.txt",
+   "bytes": 41,
+   "sha256": "4bee945f0040410547af47e0cdcdb60fe8324cb8dcc32a7e6f249a0901d05159"
+  },
+  {
+   "path": "INVENTORY/cyph-payment-portal-dev-v1_2.2_staged.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "INVENTORY/cyph-payment-portal-dev-v1_2.3_unstaged.txt",
+   "bytes": 382,
+   "sha256": "07b0e31a3e28435129c23f70ad4a980dd54cf8f52f1ebb8e42a29c33db8ab232"
+  },
+  {
+   "path": "INVENTORY/cyph-payment-portal-dev-v1_2.4_untracked.txt",
+   "bytes": 28651,
+   "sha256": "4e6834291d0a81b6de40c8af37a76bf329061e49bc53227e1d8273c000fb3779"
+  },
+  {
+   "path": "INVENTORY/cyph-payment-portal-dev-v1_2.5_status.txt",
+   "bytes": 1188,
+   "sha256": "8e77b02926a91798503f2481f884d5976bf228bf479ce3e5ed7041d70968fb48"
+  },
+  {
+   "path": "INVENTORY/cyph-v1-dev_2.1_committed.txt",
+   "bytes": 41,
+   "sha256": "1bf14bcd59548b3c8c9bdd783dd8cf782d8882a2c2cd1c5449f7a8cda17c56ac"
+  },
+  {
+   "path": "INVENTORY/cyph-v1-dev_2.2_staged.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "INVENTORY/cyph-v1-dev_2.3_unstaged.txt",
+   "bytes": 215,
+   "sha256": "f451d03d2967365bd84e3ab127a855ac2e55caf3ad4669d2d882ee50ed779c46"
+  },
+  {
+   "path": "INVENTORY/cyph-v1-dev_2.4_untracked.txt",
+   "bytes": 2379,
+   "sha256": "e5530e3fac873cd80d016d58d4d2d174928436602df34d16d68fce4539aa324c"
+  },
+  {
+   "path": "INVENTORY/cyph-v1-dev_2.5_status.txt",
+   "bytes": 1152,
+   "sha256": "1f5ed9ef743023e11b256ee3613fc8a453fe70f7175c386c21455eca676f01d4"
+  },
+  {
+   "path": "INVITE/inv-r03/results.json",
+   "bytes": 799,
+   "sha256": "ebd42a04d10341db7c1a5e37d19917fc50e2aa0a86f1691273971592324679d2"
+  },
+  {
+   "path": "O1/o1r03/state.json",
+   "bytes": 16050,
+   "sha256": "e901f4ef58163111518d2a73a504585badcb85f1f09f5112c7882e0faac0eb1b"
+  },
+  {
+   "path": "RECORDS/APBM_JOURNAL.md",
+   "bytes": 14729,
+   "sha256": "19e8cde585193643019e34ddc9caa2135e14681e2a4dd6b01c34d9fc2880acdf"
+  },
+  {
+   "path": "RECORDS/APBM_RULINGS.md",
+   "bytes": 7849,
+   "sha256": "cc309d8fe1eab3a1d494747eeb5148ec807f9c079cf969e3d6c27484ff88aac5"
+  },
+  {
+   "path": "RECORDS/APBM_STATE.md",
+   "bytes": 2273,
+   "sha256": "59b7a4cefc2331f2d0a244da5d23c00c5d4da9d461df7dcac2200fdb048f5afc"
+  },
+  {
+   "path": "RECORDS/ENGINEERING_HANDOFF.md",
+   "bytes": 6158,
+   "sha256": "976bbe415233a463b097c7531b1b5aa57135e4944908e1d0cd34e71329d51495"
+  },
+  {
+   "path": "RECORDS/ENVIRONMENT_AND_EFFECTS.md",
+   "bytes": 6794,
+   "sha256": "3165b64fffe811b94975d701b64cd5e03ce6226d9f890a97ad225f24d06be5a0"
+  },
+  {
+   "path": "RECORDS/SUCCESSOR_INPUTS.json",
+   "bytes": 839,
+   "sha256": "2dcb494ec8f358d3d935011c2f3ac83f6bfd4e4cc7faf2bf920e2f4fcc984323"
+  },
+  {
+   "path": "SCRIPTS/apbm007b.o1-state.spec.ts",
+   "bytes": 2970,
+   "sha256": "58327d0522ee6d7f17af69eb79e873e49e0311d5ca8d4c3bceea9c0e7d93bca7"
+  },
+  {
+   "path": "SCRIPTS/c-journeys.mjs",
+   "bytes": 11073,
+   "sha256": "61d36aaf71bb6feb82349625a8d71caeba168b47d4ea5763b866213639d818fe"
+  },
+  {
+   "path": "SCRIPTS/e-transfer.mjs",
+   "bytes": 15722,
+   "sha256": "b5e5c30256e9bfa9d89658d1f6912b8264386fe54a963aa62c30f45a9b7bd194"
+  },
+  {
+   "path": "SCRIPTS/gf-checks.mjs",
+   "bytes": 11806,
+   "sha256": "8325cb0a7c2517224bcfb2bcad3bd2010a49d8c602662a1f2eaaf01c79b40128"
+  },
+  {
+   "path": "SCRIPTS/inbox.mjs",
+   "bytes": 9878,
+   "sha256": "14a2a591f018410a05a073cb26679ec5c768c301dbcebfa97d4c41707d42d223"
+  },
+  {
+   "path": "SCRIPTS/invite-send.mjs",
+   "bytes": 5579,
+   "sha256": "abc6dc700dfc5e608091a018c24aeb3a4e1b2abb5cf2e9ff09616ffb4075fdec"
+  },
+  {
+   "path": "SCRIPTS/lib/effects.mjs",
+   "bytes": 4917,
+   "sha256": "8ddc98ce675b13c4942804068c016e9314aae7ffdfde11889ca3bf75897c7511"
+  },
+  {
+   "path": "SCRIPTS/o1-journey.mjs",
+   "bytes": 23964,
+   "sha256": "340db72a85bce9d4d823b7c6633ee9ab166b916aa6f71239f139ae961faef7d6"
+  },
+  {
+   "path": "SCRIPTS/proof-serve.mjs",
+   "bytes": 7940,
+   "sha256": "bd28c439c71600f61dbc3b8c9c7f7562820117a93733a8d4e91efb00b4a9b10c"
+  }
+ ]
+}

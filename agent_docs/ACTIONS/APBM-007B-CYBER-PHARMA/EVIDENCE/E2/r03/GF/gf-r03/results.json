@@ -1,0 +1,57 @@
+{
+ "g": {
+  "cancel_scheduled_in_stripe": true,
+  "events_delivered": [
+   "billing_portal.session.created=200:ignored",
+   "customer.subscription.updated=200:applied"
+  ],
+  "dashboard_showed_undo": true,
+  "add_store_quote_while_scheduled": "409:cancellation_scheduled",
+  "after_undo_stripe": {
+   "cancel_at_period_end": false,
+   "cancel_at": null,
+   "status": "active"
+  },
+  "mirror_after_undo": {
+   "status": "active",
+   "cancel_at_period_end": false,
+   "cancel_at": null
+  },
+  "undo_control_gone": true,
+  "add_store_quote_after_undo": "200:ok"
+ },
+ "f_transfer": {
+  "authorize": "applied",
+  "cancel": "applied",
+  "cancel_detail": {
+   "status": "canceled",
+   "seller_quantity": {
+    "before": 1,
+    "after": 2
+   }
+  },
+  "quantity": {
+   "before": 2,
+   "after_authorize": 1,
+   "after_cancel": 2
+  },
+  "transfer_status": "canceled",
+  "source_store_after": {
+   "status": "active",
+   "removal_effective_at": null
+  }
+ },
+ "f_owner": {
+  "plan": "planned",
+  "apply": "applied",
+  "outcome": "replaced",
+  "provider": "customer_email_updated",
+  "owner_now_new_user": true,
+  "customer_email_matches_new_owner": true,
+  "repeat": {
+   "result": "applied",
+   "error": null,
+   "outcome": "already_owner"
+  }
+ }
+}

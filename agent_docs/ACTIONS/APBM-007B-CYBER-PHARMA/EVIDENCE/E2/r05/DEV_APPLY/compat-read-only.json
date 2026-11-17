@@ -1,0 +1,39 @@
+{
+  "mode": "read-only",
+  "at": "2026-11-17T05:19:03.123Z",
+  "members": 11,
+  "scope_equal_live_memberships": 10,
+  "scope_diffs": [
+    {
+      "memberships": 1,
+      "roles": [
+        "admin"
+      ],
+      "my_business_ids": 3,
+      "live_memberships": 1,
+      "stores": [
+        {
+          "status": "active",
+          "ended": false,
+          "live": true,
+          "has_account": true
+        }
+      ],
+      "error": null
+    }
+  ],
+  "owedbook_rows": {
+    "25006": 14
+  },
+  "owedbook_summary": {
+    "25006": 14
+  },
+  "owner_billing_overview": {
+    "25006": 7
+  },
+  "access_states": {
+    "active": 6,
+    "past_due_reminder": 1
+  },
+  "transaction_read_only": "on"
+}

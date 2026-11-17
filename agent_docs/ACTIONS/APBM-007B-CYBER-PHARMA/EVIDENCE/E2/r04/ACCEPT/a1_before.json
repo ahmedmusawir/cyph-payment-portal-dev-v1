@@ -1,0 +1,36 @@
+{
+ "at": "2026-11-17T03:57:50.617Z",
+ "store": "O-1 A1",
+ "account_owner": "ENGINEERING_OWNER_A",
+ "account_access": "active",
+ "identities_exist": {
+  "ENGINEERING_MEMBER": true,
+  "ENGINEERING_ADMIN": true
+ },
+ "members": [
+  {
+   "who": "ENGINEERING_OWNER_A",
+   "role": "admin"
+  }
+ ],
+ "invitations": [
+  {
+   "who": "ENGINEERING_MEMBER",
+   "role": "member",
+   "status": "pending",
+   "dispatches": 1,
+   "disposition": null,
+   "accepted_at": null,
+   "reason": null
+  },
+  {
+   "who": "ENGINEERING_ADMIN",
+   "role": "admin",
+   "status": "pending",
+   "dispatches": 1,
+   "disposition": "member",
+   "accepted_at": null,
+   "reason": null
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "scratch_chain_cycles": {
+  "ceiling": 12,
+  "used": 0,
+  "left": 12
+ },
+ "scratch_auth_identities": {
+  "ceiling": 14,
+  "used": 0,
+  "left": 14
+ },
+ "dev_auth_identities": {
+  "ceiling": 0,
+  "used": 0,
+  "left": 0
+ },
+ "stripe_customers": {
+  "ceiling": 12,
+  "used": 4,
+  "left": 8
+ },
+ "stripe_subscriptions": {
+  "ceiling": 12,
+  "used": 4,
+  "left": 8
+ },
+ "test_clocks": {
+  "ceiling": 4,
+  "used": 1,
+  "left": 3
+ },
+ "test_clock_advances": {
+  "ceiling": 30,
+  "used": 10,
+  "left": 20
+ },
+ "invoice_create": {
+  "ceiling": 30,
+  "used": 14,
+  "left": 16
+ },
+ "invoiceitem_create": {
+  "ceiling": 30,
+  "used": 6,
+  "left": 24
+ },
+ "invoice_finalize": {
+  "ceiling": 30,
+  "used": 7,
+  "left": 23
+ },
+ "invoice_void": {
+  "ceiling": 30,
+  "used": 6,
+  "left": 24
+ },
+ "invoice_pay_or_hosted": {
+  "ceiling": 24,
+  "used": 10,
+  "left": 14
+ },
+ "payment_attempts": {
+  "ceiling": 60,
+  "used": 14,
+  "left": 46
+ },
+ "payment_attempt_cents": {
+  "ceiling": 300000,
+  "used": 91620,
+  "left": 208380
+ },
+ "subscription_mutations": {
+  "ceiling": 50,
+  "used": 5,
+  "left": 45
+ },
+ "payment_method_attach": {
+  "ceiling": 24,
+  "used": 7,
+  "left": 17
+ },
+ "default_card_changes": {
+  "ceiling": 30,
+  "used": 8,
+  "left": 22
+ },
+ "apa_redemptions": {
+  "ceiling": 3,
+  "used": 2,
+  "left": 1
+ },
+ "email_dispatch": {
+  "ceiling": 24,
+  "used": 0,
+  "left": 24
+ },
+ "fixture_app_mutations": {
+  "ceiling": 400,
+  "used": 0,
+  "left": 400
+ },
+ "dev_live_apply": {
+  "ceiling": 1,
+  "used": 0,
+  "left": 1
+ },
+ "dev_forward_fix": {
+  "ceiling": 1,
+  "used": 0,
+  "left": 1
+ }
+}

@@ -57,7 +57,8 @@ beforeEach(() => {
 
 describe('frozen identity table — the same literals are pinned in both apps (AC-021)', () => {
   it('holds the agreed return-path allowlists and defaults for both apps', () => {
-    expect(RETURN_PATHS_BY_APP).toEqual({ ob: ['/', '/owedbook', '/admin-portal', '/admin-portal/billing'], pp: ['/', '/dashboard', '/billing', '/register/activation'] });
+    // APBM-007B (IDENTITY_AND_MEMBERSHIP.md, BP-09): /invitations and the Add Store path joined the exact allowlists.
+    expect(RETURN_PATHS_BY_APP).toEqual({ ob: ['/', '/owedbook', '/admin-portal', '/admin-portal/billing', '/invitations'], pp: ['/', '/dashboard', '/billing', '/register/activation', '/stores/add'] });
     expect(DEFAULT_RETURN_BY_APP).toEqual({ ob: '/owedbook', pp: '/dashboard' });
   });
   it('uses this app\'s own cookie names and the frozen local origins', () => {

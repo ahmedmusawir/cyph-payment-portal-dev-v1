@@ -2,12 +2,15 @@
 // status map (CONTRACT_DELTA §2); `detail` is for the server log only and must never carry a secret or address.
 export type PortalErrorCode =
   | 'invalid_input' | 'sign_in_required' | 'not_owner' | 'not_found' | 'operation_in_progress' | 'npi_unavailable'
-  | 'already_subscribed' | 'expired' | 'promotion_not_accepted' | 'slow_down' | 'provider_unavailable' | 'not_billable' | 'configuration';
+  | 'already_subscribed' | 'expired' | 'promotion_not_accepted' | 'slow_down' | 'provider_unavailable' | 'not_billable' | 'configuration'
+  // APBM-007B store operations (CONTRACTS/DATA_AND_API_SHAPES.md status codes)
+  | 'store_conflict' | 'store_refused' | 'billing_configuration_attention' | 'retry_later';
 
 const STATUS: Record<PortalErrorCode, number> = {
   invalid_input: 400, sign_in_required: 401, not_owner: 403, not_found: 404, operation_in_progress: 409,
   npi_unavailable: 409, not_billable: 409, already_subscribed: 409, expired: 410, promotion_not_accepted: 422, slow_down: 429,
   provider_unavailable: 502, configuration: 500,
+  store_conflict: 409, store_refused: 409, billing_configuration_attention: 422, retry_later: 503,
 };
 
 export class PortalError extends Error {
@@ -32,10 +35,20 @@ const PUBLIC_MESSAGE: Record<PortalErrorCode, string> = {
   slow_down: 'Too many attempts. Wait a minute and try again.',
   provider_unavailable: "We couldn't reach the payment provider. Nothing was charged. Try again shortly.",
   configuration: 'This service is not available right now.',
+  store_conflict: 'Another store change is already in progress for this account. Check its status first.',
+  store_refused: "This store change can't be made right now.",
+  billing_configuration_attention: 'Your billing setup needs support before a store can be added. Nothing was charged.',
+  retry_later: 'This is still being processed. Check again in a moment.',
 };
 
+/** A store operation refused for a named, safe reason (shown to the owner; never a tenant fact or provider detail). */
+export class StoreRefusal extends PortalError {
+  constructor(code: PortalErrorCode, readonly reason: string, readonly publicMessage: string) { super(code, reason); }
+}
+
 /** JSON body for a failed request. Never includes `detail`. */
-export function errorBody(e: unknown): { status: number; body: { error: PortalErrorCode; message: string; fieldErrors?: Record<string, string> } } {
+export function errorBody(e: unknown): { status: number; body: { error: PortalErrorCode; message: string; reason?: string; fieldErrors?: Record<string, string> } } {
+  if (e instanceof StoreRefusal) return { status: e.status, body: { error: e.code, message: e.publicMessage, reason: e.reason } };
   if (e instanceof PortalError) return { status: e.status, body: { error: e.code, message: PUBLIC_MESSAGE[e.code], ...(e.fieldErrors ? { fieldErrors: e.fieldErrors } : {}) } };
   return { status: 502, body: { error: 'provider_unavailable', message: PUBLIC_MESSAGE.provider_unavailable } };
 }

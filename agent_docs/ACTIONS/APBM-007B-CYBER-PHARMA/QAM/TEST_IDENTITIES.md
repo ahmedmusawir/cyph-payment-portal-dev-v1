@@ -1,0 +1,7 @@
+**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**
+
+# Private identity and inbox schema
+
+Director creates ignored/untracked .env.qa.local privately before QA; never put values in manifest. Role aliases OWNER_A, OWNER_B, STORE_ADMIN, MEMBER, FOREIGN_OWNER, NEW_ADMIN, NEW_MEMBER, EXISTING_INVITEE and one signed-out context. Key names ROLE_<ALIAS>_EMAIL, ROLE_<ALIAS>_PASSWORD where password login used; INBOX_ADAPTER, INBOX_ACCESS_FILE (private path, mode0600), QA_RUN_ID. Adapter-specific names/commands go in engineering handoff, never assumed available. Controlled inbox map must resolve exact recipient per role, new/existing status and account/store relation without printing secrets.
+
+Engineering uses distinct ENGINEERING_* recipients/identities and guards. Do not consume QA NEW_ADMIN/NEW_MEMBER/new-owner journey before final repaired candidate. Private key does not substitute for user login; globals/logout can affect other sessions and require explicit test scope. No secrets in build env/client/public variables or screenshots. One-time identity/address availability is a prerequisite for affected live checks only; unaffected source/local work continues.

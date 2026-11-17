@@ -1,0 +1,31 @@
+{
+ "archive": {
+  "file": "APBM007B_BUILD_PACK_v1.zip",
+  "sha256": "08d5448b60d2410d08f25c5addfc73c842971db4a0bac9242c4a7d8d6ac31f01",
+  "members": 123,
+  "friday_pack_as_used_sha256": "08d5448b60d2410d08f25c5addfc73c842971db4a0bac9242c4a7d8d6ac31f01",
+  "sha_match": true,
+  "name_note": "Friday names it APBM007B_BUILD_PACK_v1_0.zip; the local copy is APBM007B_BUILD_PACK_v1.zip; bytes identical by SHA-256"
+ },
+ "index_files": 122,
+ "install_files_matching_index": 122,
+ "zip_files_matching_index": 122,
+ "contract_manifest_files": 12,
+ "install_contract_files_matching_manifest": 12,
+ "module_contract_files_changed_since_pack": [
+  "ACCEPTANCE_SPEC.md",
+  "APBM_RULINGS.md",
+  "EXECUTION_PLAN.md",
+  "ENVIRONMENT_AND_EFFECTS.md",
+  "ALLOWED_PATHS.md",
+  "CONTRACTS/API_ROLE_MATRIX.md",
+  "CONTRACTS/BILLING.md",
+  "CONTRACTS/CLOCK_AND_NOTICES.md",
+  "CONTRACTS/DATA_AND_API_SHAPES.md",
+  "CONTRACTS/IDENTITY_AND_MEMBERSHIP.md",
+  "CONTRACTS/LIFECYCLE_AND_TRANSFER.md",
+  "CONTRACTS/MIGRATIONS.md"
+ ],
+ "module_changes_all_in_r02_header_record": true,
+ "reviewed_candidate_sha256": "a45493266d03d947485980187d9bc45b9f0140c01bb5e5c27f9c06d7f18b99e0"
+}

@@ -1,0 +1,90 @@
+# Friday review — APBM-007B pre-E2 review draft v0.1
+
+Date: 16 November 2026, Asia/Dhaka. Reviewer: Friday. Author reviewed: the Architect (JARVIS). Requested by the Director.
+
+## Reviewed package
+
+| Item | Value |
+|---|---|
+| File | `APBM007B_PRE_E2_REVIEW_DRAFT_v0_1.zip` |
+| SHA-256 | `02737ecb118d1fac05c3ae249f00fba3644a674638395142180576f91bfbdd90` |
+| Members | 4 files; 3 indexed plus the index. All sizes and hashes match. |
+| Read | All three documents in full. |
+
+## Scope and limit of this review
+
+This is a review of the Architect's advance brief. It is not the frozen-pack review, not an E2 release, not Q1 approval and not a certification.
+
+**The E1 return was not supplied to the reviewer.** The brief cites files `02`, `04` and `07` inside `APBM-007B-CYBER-PHARMA_E1_RECON_REVIEW_20261116_183841.zip`. Those were not available, so AR-01 to AR-11 are reviewed as stated, not checked against the recon. The same holds for the E1 forecast and for the payment probe, which has not returned.
+
+## Disposition
+
+**NO OBJECTION — proceed to freeze, with the additions below carried into the frozen pack.** No reply or new version of this brief is needed. The additions are checked once, at the frozen-pack review.
+
+## What is right
+
+- AR-01 to AR-11 are the right questions, and AR-01, AR-02, AR-03 and AR-06 are the ones most likely to have produced QA failures later. Catching them before the build is the purpose of this step.
+- Settled scope is restated correctly and none of it is reopened.
+- Director input is triaged into one short request, not one question per technical row.
+- "Resolve before implementation, or write an exact bounded checkpoint with a fully specified fallback" is the correct rule for keeping E2 a single run.
+- The lifecycle at the end matches the playbooks, including cleanup before closeout and deployment as a separate release.
+- The checklist's FR-05 to FR-09 map matches the accepted v0.3 obligations.
+
+## Additions for the frozen pack
+
+Format: ID; target; concern; exact addition; owner.
+
+**PE-01 — Removal must not create a refund or credit.**
+- Target: AR-04.
+- Concern: AR-04 describes the proposal as lowering the quantity immediately while access continues to period end. Lowering a Stripe quantity mid-period can raise a proration credit. Decisions record 5.11 says the store's charge stops at the end of the paid period, and 5.14 excludes refunds in the first release.
+- Addition to AR-04: "A scheduled removal produces no credit, refund or proration line in the current period. The charge stops from the next period. Prove with the provider's invoice preview and the next real invoice."
+- Owner: Architect; evidence from the probe.
+
+**PE-02 — Transfer identity: reviewer input for the Director's choice.**
+- Target: AR-05 and the Director request.
+- Concern: AR-05 correctly sends the identity model to the Director. Two points should be in front of him when he chooses.
+  1. The Director ruled that a buyer gets no access to past claims. A separate buyer store record makes that denial structural: the buyer's record has no history attached. A single shared record makes it a policy enforced by filters, which is harder to prove and easier to break.
+  2. Whatever the model, the rule "no two stores share an NPI" (decisions record 6.1, 6.3) must survive as "no two active stores share an NPI", enforced by the database, with the duplicate-NPI-goes-to-support behaviour and the concurrent-reservation protection from 007A unchanged.
+- Addition: put both points in the Director request, and add to the affected criterion: "At most one active store per NPI at any moment, including during a transfer; proved with two concurrent attempts."
+- Owner: Architect drafts; Director decides.
+
+**PE-03 — Name the test-clock work as the first candidate for a bounded checkpoint.**
+- Target: checklist, "Smooth E2 execution requirements"; AR-06.
+- Concern: the probe excludes test clocks. O-1 is therefore the one design frozen without capability evidence.
+- Addition: "O-1 (live failed-renewal with a test clock) is frozen either on probe evidence, or with one exact engineering checkpoint and a fully specified fallback. It is not left as 'choose later'."
+- Owner: Architect.
+
+**PE-04 — Director-accepted screens enter the regression list.**
+- Target: checklist rows "Baseline" and "QAM"; AC-028.
+- Concern: the brief keeps the certified-versus-accepted distinction but does not add the screens to regression. U-1, U-2 and U-3 were merged without QA.
+- Addition to AC-028: "Regression includes the navigation highlight, the OwedBook billing fields and the password show/hide controls on every screen 007B touches."
+- Owner: Architect.
+
+**PE-05 — Rebind the QA inputs to what E1 found.**
+- Target: checklist row "QAM".
+- Addition: "The role × action matrix maps every real server operation named in E1, with no unmapped operation. The QA Lead's requirements note stays in `GOVERNING/` unchanged. Exact build, serve and listener commands and the build-ID comparison method are written into the engineering handoff fields."
+- Owner: Architect.
+
+**PE-06 — QAM template set: the source exists.**
+- Target: checklist row FR-07 ("Template source unresolved").
+- Concern: the Hub template set is in the project doc set under `03_BUILD_METHODOLOGY/_templates/QAM/`. It only needs to reach the Architect.
+- Addition: status becomes "Source available from the Director; reconcile on receipt".
+- Owner: Director supplies; Architect reconciles.
+
+**PE-07 — Operator identity: reviewer recommendation.**
+- Target: AR-09 and the Director request.
+- Recommendation: for staging, a shared operator credential with a mandatory named-operator field recorded in the audit row, stated on the certificate as a known limitation. Individual operator sign-in is required before production. The audit row must separate "authenticated as" from "declared actor".
+- Owner: Director decides.
+
+**PE-08 — Mail: reviewer recommendation.**
+- Target: AR-08.
+- Recommendation: the sender domain already verified for sign-in mail is the natural sender for billing notices, sent through the provider's own sending interface, not through the sign-in mail path. The frozen contract names the one service that sends them.
+- Owner: Architect proposes; Director confirms the sender.
+
+## Needed with the frozen pack
+
+1. The E1 return ZIP.
+2. The payment probe return, or a statement that it did not run and which contracts are frozen without it.
+3. The Director's rulings on the consolidated request.
+
+With those three the frozen-pack review is a single pass.

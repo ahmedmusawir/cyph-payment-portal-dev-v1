@@ -2,19 +2,28 @@
 // Pure and import-free so the browser client, the proxy and server code share one constant.
 // Origins are configuration, never browser-selected.
 export type AppId = 'ob' | 'pp';
-export type AppEnv = 'local' | 'staging';
+// APBM-007B: 'local-proof' is the fixed engineering/QA proof pair (OwedBook 3100, Portal 3101) with its own cookie names.
+export type AppEnv = 'local' | 'local-proof' | 'staging';
 
 export const APP_ID: AppId = 'pp';
 export const PEER_ID: AppId = 'ob';
 
 const ORIGINS: Record<AppEnv, Record<AppId, string>> = {
   local: { ob: 'http://localhost:3000', pp: 'http://localhost:3001' },
+  'local-proof': { ob: 'http://localhost:3100', pp: 'http://localhost:3101' },
   staging: { ob: 'https://owedbook.cyberizedev.com', pp: 'https://owedbook-payment.cyberizedev.com' },
 };
 
 export function appEnv(): AppEnv {
-  return process.env.NEXT_PUBLIC_APP_ENV === 'staging' ? 'staging' : 'local';
+  const v = process.env.NEXT_PUBLIC_APP_ENV;
+  return v === 'staging' ? 'staging' : v === 'local-proof' ? 'local-proof' : 'local';
 }
+/**
+ * Environment label bound into handoff codes (0059 allows 'local' | 'staging'). The local-proof pair is a LOCAL environment:
+ * its codes use the 'local' label. A code still binds the destination app, is single-use, and needs the PKCE verifier held
+ * only by the destination instance that started the flow.
+ */
+export const handoffEnv = (): 'local' | 'staging' => (appEnv() === 'staging' ? 'staging' : 'local');
 export const ownOrigin = (): string => ORIGINS[appEnv()][APP_ID];
 export const peerOrigin = (): string => ORIGINS[appEnv()][PEER_ID];
 
@@ -42,8 +51,8 @@ export function siteOriginMatches(): boolean {
  * in both apps so that the source can validate a destination's return path (an agreement test compares the copies).
  */
 export const RETURN_PATHS_BY_APP: Record<AppId, readonly string[]> = {
-  ob: ['/', '/owedbook', '/admin-portal', '/admin-portal/billing'],
-  pp: ['/', '/dashboard', '/billing', '/register/activation'],
+  ob: ['/', '/owedbook', '/admin-portal', '/admin-portal/billing', '/invitations'],
+  pp: ['/', '/dashboard', '/billing', '/register/activation', '/stores/add'],
 };
 export const DEFAULT_RETURN_BY_APP: Record<AppId, string> = { ob: '/owedbook', pp: '/dashboard' };
 export const RETURN_PATHS: readonly string[] = RETURN_PATHS_BY_APP[APP_ID];

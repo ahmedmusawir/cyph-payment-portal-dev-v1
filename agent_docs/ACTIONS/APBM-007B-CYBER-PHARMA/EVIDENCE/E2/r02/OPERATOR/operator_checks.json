@@ -1,0 +1,94 @@
+[
+ {
+  "command": "no token",
+  "raw": "http 404"
+ },
+ {
+  "command": "quantity-check --account-id <uuid>",
+  "http": 200,
+  "phase": "dry_run",
+  "result": "planned",
+  "error": null,
+  "audited": true
+ },
+ {
+  "command": "removed-store-reactivate --business-id <uuid>",
+  "http": 200,
+  "phase": "dry_run",
+  "result": "planned",
+  "error": null,
+  "audited": true
+ },
+ {
+  "command": "removed-store-reactivate --business-id <uuid> --apply --actor Claudy (engineering) --reason E2 negative check: live store --ticket APBM007B-E2-OP1",
+  "http": 409,
+  "phase": "apply",
+  "result": "refused",
+  "error": "not_removed",
+  "audited": true
+ },
+ {
+  "command": "store-operation-close --operation-id <uuid>",
+  "http": 409,
+  "phase": "dry_run",
+  "result": "refused",
+  "error": "partial_or_missing_proof",
+  "audited": true
+ },
+ {
+  "command": "store-operation-close --operation-id <uuid> --apply --actor Claudy (engineering) --reason E2 negative check: activated op --ticket APBM007B-E2-OP2 --proof-ref none",
+  "http": 409,
+  "phase": "apply",
+  "result": "refused",
+  "error": "not_closable",
+  "audited": true
+ },
+ {
+  "command": "store-admin-set --business-id <uuid> --user-id <uuid> --apply",
+  "http": 409,
+  "phase": "apply",
+  "result": "refused",
+  "error": "actor_reason_ticket_required",
+  "audited": false
+ },
+ {
+  "command": "store-admin-set --business-id <uuid> --user-id <uuid> --apply --actor Claudy (engineering) --reason E2 admin recovery check --ticket APBM007B-E2-OP3",
+  "http": 200,
+  "phase": "apply",
+  "result": "applied",
+  "error": null,
+  "audited": true
+ },
+ {
+  "command": "store-admin-set --business-id <uuid> --user-id <uuid> --former-admin-disposition remove --apply --actor Claudy (engineering) --reason E2 restore owner as admin --ticket APBM007B-E2-OP4",
+  "http": 200,
+  "phase": "apply",
+  "result": "applied",
+  "error": null,
+  "audited": true
+ },
+ {
+  "command": "owner-replace --account-id <uuid> --new-owner-user-id <uuid>",
+  "http": 200,
+  "phase": "dry_run",
+  "result": "planned",
+  "error": null,
+  "audited": true
+ },
+ {
+  "command": "store-operation-reconcile --operation-id <uuid>",
+  "http": 200,
+  "phase": "dry_run",
+  "result": "planned",
+  "error": null,
+  "audited": true
+ },
+ {
+  "command": "quantity-check --account-id not-a-uuid",
+  "http": 409,
+  "phase": "dry_run",
+  "result": "refused",
+  "error": "accountId_required_exact_uuid",
+  "audited": true
+ }
+]

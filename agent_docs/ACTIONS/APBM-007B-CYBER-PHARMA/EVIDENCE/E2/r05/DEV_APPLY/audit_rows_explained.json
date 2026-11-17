@@ -1,0 +1,17 @@
+{
+ "preexisting_rows": 1805,
+ "preexisting_per_business_digest_equals_preflight": true,
+ "new_rows_since_preflight": [
+  {
+   "table_name": "businesses",
+   "action": "update",
+   "businesses": 9,
+   "n": 9
+  }
+ ],
+ "changed_columns_in_new_rows": [
+  "ownership_started_at",
+  "pharmacy_id",
+  "updated_at"
+ ]
+}

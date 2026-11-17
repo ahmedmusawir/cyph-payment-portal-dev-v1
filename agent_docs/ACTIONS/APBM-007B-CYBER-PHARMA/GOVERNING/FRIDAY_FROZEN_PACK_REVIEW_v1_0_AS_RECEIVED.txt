@@ -1,0 +1,146 @@
+# Friday review — APBM-007B frozen build/QAM pack v1.0 (review candidate)
+
+Date: 16 November 2026, Asia/Dhaka. Reviewer: Friday. Author reviewed: the Architect (JARVIS). Requested by the Director.
+
+This is the pre-E2 architecture and readiness review. It is not Q1 approval, not a product certification and not an E2 release.
+
+## Reviewed package
+
+| Item | Value |
+|---|---|
+| File | `APBM007B_BUILD_PACK_v1_0_REVIEW_CANDIDATE.zip` |
+| SHA-256 | `a45493266d03d947485980187d9bc45b9f0140c01bb5e5c27f9c06d7f18b99e0` (matches the value the Director supplied) |
+| Members | 118 files; 117 indexed plus the index. All sizes and hashes match. No unindexed or missing member. |
+| Contract manifest | All 12 contract files match their recorded hashes. |
+| Evidence archives | All four pass an archive integrity test, and each matches its own internal index: recon 14, first capability check 29, source receipt 191, second check and ledger receipt 21 entries. |
+
+## What was read
+
+- Every authored file in the module: rulings, scope, baseline, acceptance spec, all seven contracts, execution plan, effects envelope, allowed paths, commands, support procedures, staging, closeout, amendment ledger, source register.
+- The QAM folder, checked against the supplied template set by script.
+- From the evidence: the consolidated recon report and effort forecast in full; the transfer, removal and operator sections of the proposed contracts; the decision and gap tables; the full findings of the second focused check; the ledger search receipt and cleanup receipt.
+- Not read line by line: the five recon appendices (about 270 KB of source inventory) and the first capability check's raw evidence. They were used for targeted lookups only.
+- One provider fact was checked against Stripe's current public documentation (see BP-01).
+
+## Disposition
+
+**ACCEPT WITH EXACT AMENDMENTS.**
+
+The pack is complete, internally consistent in all but the points below, and testable. Nine amendments follow. BP-01 to BP-05 change contract text and must be in the pack before E2 is released. BP-06 to BP-09 are small additions. Once the Architect issues the successor with these applied, Friday confirms by diff; no new review round is needed.
+
+## Verification of what the Director asked to be checked
+
+| Item | Result |
+|---|---|
+| FR-05 implemented versus procedure | Done. AC-021 to AC-024 tagged IMPLEMENTED (OPERATOR COMMAND); identity verification tagged SUPPORT PROCEDURE and graded separately. |
+| FR-06 Gate D and process duties | Done. GD-001 is outside the Gate Q set; AC-031 is the bundle scan only; export, retention and cleanup duties are in `QAM/QAM_PACKAGING.md`. |
+| FR-07 QAM from the Hub template set | Done and verified by script: 25 template files, all 25 instantiated, snapshot hashes match the reconciliation map, both entry-file pairs identical, the standing-requirements section byte-identical to the template, no result prefilled. Remaining angle-bracket tokens are intended naming patterns. |
+| FR-08 committed baseline only | Done. Both merged commits bound; no dirty overlays. |
+| FR-09 forecast wording | Wording done. See BP-08: the forecast itself is not shown to the Director. |
+| PE-01 removal creates no credit | Done in AC-018 and the lifecycle contract. |
+| PE-02 identity model and one active NPI | Done. Director ruling 1 recorded; AC-002, AC-022, AC-023. |
+| PE-03, CP-2 clock checkpoint and fallback | Done. One fixed fallback, an explicit block if both fail, no "choose later". |
+| PE-04 Director-accepted screens in regression | Done in AC-028. |
+| PE-05 operation map and handoff fields | Done. Twenty-six planned operations mapped; handoff carries the factual fields. |
+| PE-06 template source | Done. |
+| PE-07 operator identity limitation | Done. Director ruling 4. |
+| PE-08 single billing sender | Done. Director ruling 7. |
+| PE-09 mid-period charge | Done in AC-003 and inside the CP-2 clock work. |
+| PE-10 consent window and late payment | Done in AC-007 and the billing contract. See BP-04 for the missing end state. |
+| PE-11 stray delivery | Done. 94 event IDs searched read-only on DEV, zero matches; scoped honestly in preflight row PF-13. |
+| Eight Director rulings | All eight carried consistently into the contracts and criteria. Recorded as the Architect's transcription of the Director's words, and labelled as such. |
+| Revised APA-preserving billing contract | Sound in design. The second check shows why it is needed: default proration charged 5,890 cents for a 4,900-cent store. One real defect found (BP-01). |
+| CP-1 | Correctly labelled as verification still to be done, not as evidence. Placed first, with a stop rule. Three observations to add (BP-06). |
+
+## Amendments
+
+Format: ID; file; concern; exact change; stage; owner.
+
+### Before E2 release
+
+**BP-01 — A quote below the provider's minimum charge breaks the mechanism.**
+- Files: `CONTRACTS/BILLING.md` (Incremental charge; Expiry); `ACCEPTANCE_SPEC.md` AC-003; `EXECUTION_PLAN.md` CP-1.
+- Concern: the contract refuses confirmation only in the last 90 minutes of a period. The remaining-period price of a 4,900-cent store falls below 50 cents roughly seven and a half hours before a monthly period ends. Stripe's documentation states that an invoice below the minimum chargeable amount is marked paid without a charge and the amount is moved to the customer's balance as a debit for the next invoice (docs.stripe.com/billing/customer/balance, transaction type `invoice_too_small`; docs.stripe.com/invoicing/overview). Under this contract that produces a "paid" invoice with nothing paid, an amount mismatch, an attention state, and a non-zero balance that then blocks every later Add Store for that account.
+- Exact change:
+  1. BILLING, after the formula: "If the computed amount is below 50 cents (the provider's minimum charge for USD, read from one named constant), refuse the quote and the confirmation with a plain message that the store can be added after renewal. No invoice is created. This refusal replaces the 90-minute rule wherever it is stricter."
+  2. AC-003, append: "A quote below the provider's minimum charge is refused before any invoice exists; no customer balance is created."
+  3. CP-1, append: "Confirm the sub-minimum refusal by computation only; do not create a sub-minimum invoice."
+- Owner: Architect.
+
+**BP-02 — Removal and undo have no protection at the period boundary.**
+- Files: `CONTRACTS/LIFECYCLE_AND_TRANSFER.md` (Scheduled removal); `CONTRACTS/BILLING.md` (Quantity/access accounting); AC-019.
+- Concern: Add Store is refused near the boundary. Removal and undo are not. A removal whose quantity change lands after the renewal invoice is created bills the removed store for another period. An undo that lands after it leaves a store active in a period it was not billed for. AC-019 names overcharge only.
+- Exact change:
+  1. LIFECYCLE: "Scheduling a removal and undoing one are refused inside the same end-of-period window as Add Store. Each binds the subscription period it was requested in. After the provider quantity change, re-read the subscription; if the period is no longer the bound one, the operation enters attention and no store is left active unbilled or billed after its cutoff."
+  2. AC-019, replace "cannot silently overcharge or reactivate a store" with "cannot silently overcharge, undercharge or reactivate a store; a store is never active in a period whose renewal invoice excluded it".
+- An equivalent rule that achieves the same outcome is acceptable if the Architect records it.
+- Owner: Architect.
+
+**BP-03 — When the buyer may pay in a transfer is not stated.**
+- Files: `CONTRACTS/LIFECYCLE_AND_TRANSFER.md` (Sale history); AC-022.
+- Concern: the contract says buyer-paid activation closes the seller's ownership in one transaction, and also that the seller keeps access until the agreed effective time. If the buyer pays early, one of those two statements must give way. The recon proposal reserved the NPI for the buyer "from the effective time"; the frozen text dropped that phrase.
+- Exact change, LIFECYCLE: "A buyer quote or confirmation for a transfer-reserved NPI is refused before the transfer's effective time. From the effective time, the reservation holds the NPI for the exact buyer until the authorization's recorded expiry. Between the effective time and buyer activation the pharmacy has no active ownership. Reservation expiry without buyer payment enters attention; the NPI is never released to the public by timeout."
+- AC-022, append: "A buyer cannot activate before the effective time; the seller's access does not end early."
+- Owner: Architect.
+
+**BP-04 — A paid operation that will never be activated has no end state.**
+- Files: `CONTRACTS/BILLING.md` (Expiry and late payment; States); `CONTRACTS/LIFECYCLE_AND_TRANSFER.md` (operator commands); `SUPPORT_PROCEDURES.md`; AC-007.
+- Concern: a late payment goes to attention with no automatic refund, and resumes only if the owner reconfirms. Unresolved states hold the account's single operation slot and the NPI hold. If the owner does not want the store any more, the account can never add or remove a store again, and the money has no recorded outcome. Refunds are outside the app by decisions record 5.9 and 5.14, so the software needs a way to record that one happened.
+- Exact change:
+  1. BILLING, States: add `closed_refunded_externally` (terminal).
+  2. Operator commands: add `store-operation-close` with exact operation ID, actor, reason and ticket. It requires an authoritative provider read showing the operation's invoice fully refunded or credited. Only then does it set the terminal state and release the NPI hold and the operation slot. It never issues a refund and never activates. Without that proof it refuses.
+  3. SUPPORT_PROCEDURES: add the procedure — who decides, who performs the refund in the provider dashboard, the evidence reference, the close command.
+  4. AC-007, append: "A paid operation that is not activated ends only by owner-reconfirmed activation or by operator close on provider proof of refund; the account is never left permanently blocked."
+- Owner: Architect.
+
+**BP-05 — `removed-store-reactivate` is named but not defined.**
+- Files: `CONTRACTS/LIFECYCLE_AND_TRANSFER.md`; `CONTRACTS/API_ROLE_MATRIX.md` W4.
+- Concern: the command appears in the list with no rule for payment, quantity or history. Undefined, it is a path to a store that is active and not billed.
+- Exact change, LIFECYCLE: "`removed-store-reactivate` authorizes only. It applies to the account that owned the removed store, and refuses if the NPI has an active ownership or the store was transferred. The owner then pays through the ordinary Add Store flow at the remaining-period price. The command never changes provider quantity and never grants access."
+- One Director default is needed and is listed below: whether the re-added store is the original record with its history, or a new one.
+- Owner: Architect; Director for the default.
+
+### Small additions, same successor
+
+**BP-06 — Three observations for CP-1 and two for CP-2.**
+- File: `EXECUTION_PLAN.md` Stage 1; `CONTRACTS/CLOCK_AND_NOTICES.md`.
+- CP-1, append: "Record (a) the upcoming-renewal preview after the no-proration quantity change, expected 9,900 + 4,900 × (stores − 1) with no discount or adjustment line, for both the ordinary and the APA account; (b) that an open, failed or voided standalone invoice leaves the subscription status and its latest renewal invoice unchanged; (c) whether the provider reports sending any customer email for the standalone invoice."
+- CP-2, append: "Record the sandbox's retry schedule and the subscription's actual state at each step of the seven days and after, and whether the provider's own failed-payment emails are enabled. The journey's expected states are written from that record, not assumed." (Recon items G-9 and S-10 have no home in the frozen pack.)
+- Owner: Architect.
+
+**BP-07 — The acceptance spec cites a register that is not in the pack.**
+- File: `ACCEPTANCE_SPEC.md`, "Decision dependencies" column.
+- Concern: 33 references to D-01 to D-10. `DECISION_REGISTER.md` is not a member of this pack.
+- Exact change: replace each reference with the ruling number or contract file that now governs it, or include a one-page key mapping D-01 to D-10 to those.
+- Owner: Architect.
+
+**BP-08 — The Director summary omits the Engineer's forecast.**
+- File: `DIRECTOR_SUMMARY.md`.
+- Concern: the recon forecast says staging by 23 November is not achievable for the full scope: 10 working days best case, 14 likely, 22 adverse, from freeze to Gate D. It also lists a split (its option B) that only the Director can choose. The pack keeps the forecast in the evidence archive and says nothing of it to the Director.
+- Exact change, add: "The Engineer's recon forecast from freeze to Gate D is 10 working days best case, 14 likely. It was made before the billing mechanism changed. It is an estimate, not a commitment. Delivering transfer and recovery commands as a second candidate (recon option B) is a Director choice and is not assumed."
+- Owner: Architect.
+
+**BP-09 — Housekeeping.**
+- `GOVERNING/`: add the original `FRIDAY_REVIEW_APBM007B_PRE_E2_DRAFT_v0_1_2026-11-16.md` (SHA-256 `37a0993a700264f8a1efab02c149c67e5bc0c1760abe47c8e6b73b5ecea50d48`, supplied with this review) beside the transcription.
+- `CONTRACTS/IDENTITY_AND_MEMBERSHIP.md`, append: "New return destinations such as `/invitations` and the Add Store path are added to the return-path allowlist in both applications." (Recon S-14.)
+- `STAGING_AND_GATE_D.md`, append: "The per-process rate limiters assume a single running instance; the staging service is configured accordingly or the limiters are changed." (Recon S-12.)
+- Owner: Architect.
+
+## One Director default
+
+| # | Question | Recommendation |
+|---|---|---|
+| 9 | When an owner pays to re-add a store they removed earlier, do they get that store's old records back? | Yes. It is the same owner and their own data. A buyer in a sale still gets nothing, as already ruled. |
+
+## Notes for the certificate, no change required
+
+- O-1 can be proved only on the isolated SCRATCH database with a live provider test clock. By design the time seam is denied on DEV and staging, so no O-1 proof will ever exist on those. The certificate will state that scope.
+- CP-1 and CP-2 are engineering checks. Independent QA repeats what it needs under its own plan and budget.
+- The proposed E2 effect envelope is internally consistent and bounded. Approving it is the Director's act at E2 release.
+
+## What happens next
+
+1. The Architect applies BP-01 to BP-09 and issues one indexed successor.
+2. The Director rules on default 9.
+3. Friday confirms the successor by diff against this pack.
+4. The Director releases E2.

@@ -1,0 +1,13 @@
+{
+ "at": "2026-11-17T05:05Z",
+ "removed": [
+  {"what": "check-C proof owner (c-r03, also E's seller)", "subscription": "canceled", "customer": "deleted", "via": "fixture-owner.mjs cleanup"},
+  {"what": "check-E buyer (registration via Stripe Checkout)", "subscription": "canceled", "customer": "deleted", "via": "ledger-reserved cancel/delete (cleanup counters)"},
+  {"what": "O-1 test clock (removes O-1 customers A/B and their subscriptions)", "result": "deleted earlier in r03; customers verified deleted"}
+ ],
+ "verified_after": {"live_e2_marked_customers": 0, "live_e2_subscriptions": 0, "test_clocks": 0, "open_e2_invoices": 0,
+   "note": "Stripe customer search briefly still listed the c-r03 customer (search-index lag); a direct retrieve returned deleted:true"},
+ "left_alone": "four active subscriptions marked apbm007a (12 Nov and 16 Nov 2026), not created by this E2 run (007A/QA-owned)",
+ "scratch_rows": "retained (labelled rehearsal/fixture rows); SCRATCH subscription mirrors of cleaned objects were not updated by webhook (no listener) and may still read active",
+ "proof_servers": "OwedBook 3100 / Portal 3101 still running (owned; stop with proof-serve.mjs stop)"
+}

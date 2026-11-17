@@ -1,0 +1,101 @@
+diff --git a/src/__tests__/apbm007a-auth.test.ts b/src/__tests__/apbm007a-auth.test.ts
+index 31528de..496fe19 100644
+--- a/src/__tests__/apbm007a-auth.test.ts
++++ b/src/__tests__/apbm007a-auth.test.ts
+@@ -16,9 +16,10 @@ const cookieClient = {
+   session: null as null | { access_token: string },
+   userFor: {} as Record<string, string>,
+   verifyOtp: jest.fn(), setSession: jest.fn(async (..._a: unknown[]) => ({ error: null as unknown })), signOut: jest.fn(async (..._a: unknown[]) => ({ error: null as unknown })),
++  rpc: jest.fn(async (..._a: unknown[]) => ({ data: [] as unknown, error: null as unknown })),
+ };
+ jest.mock('@/utils/supabase/server', () => ({
+-  createClient: async () => ({ auth: {
++  createClient: async () => ({ rpc: (fn: string, a?: unknown) => cookieClient.rpc(fn, a), auth: {
+     getSession: async () => ({ data: { session: cookieClient.session } }),
+     getUser: async (token?: string) => { const t = token ?? cookieClient.session?.access_token; const id = t ? cookieClient.userFor[t] : undefined; return id ? { data: { user: { id, email: `${id}@example.invalid` } }, error: null } : { data: { user: null }, error: { code: 'no_session' } }; },
+     verifyOtp: (a: unknown) => cookieClient.verifyOtp(a), setSession: (a: unknown) => cookieClient.setSession(a), signOut: (a: unknown) => cookieClient.signOut(a),
+@@ -57,7 +58,8 @@ beforeEach(() => {
+ 
+ describe('frozen identity table — the same literals are pinned in both apps (AC-021)', () => {
+   it('holds the agreed return-path allowlists and defaults for both apps', () => {
+-    expect(RETURN_PATHS_BY_APP).toEqual({ ob: ['/', '/owedbook', '/admin-portal', '/admin-portal/billing'], pp: ['/', '/dashboard', '/billing', '/register/activation'] });
++    // APBM-007B (IDENTITY_AND_MEMBERSHIP.md, BP-09): /invitations and the Add Store path joined the exact allowlists.
++    expect(RETURN_PATHS_BY_APP).toEqual({ ob: ['/', '/owedbook', '/admin-portal', '/admin-portal/billing', '/invitations'], pp: ['/', '/dashboard', '/billing', '/register/activation', '/stores/add'] });
+     expect(DEFAULT_RETURN_BY_APP).toEqual({ ob: '/owedbook', pp: '/dashboard' });
+   });
+   it('uses this app\'s own cookie names and the frozen local origins', () => {
+@@ -125,6 +127,18 @@ describe('emailed sign-in link: GET never redeems, only the button POST does (FC
+     expect(setCookie(r, confirmCookieName())).toMatch(/Max-Age=0/i);
+     expect(afterSignIn).toHaveBeenCalledWith('u1', 'u1@example.invalid');
+   });
++  it('APBM-007B: a person with pending invitations lands on /invitations; a failed read keeps the default', async () => {
++    cookieClient.verifyOtp.mockResolvedValue({ data: { user: { id: 'u2', email: 'u2@example.invalid' } }, error: null });
++    cookieClient.rpc.mockResolvedValueOnce({ data: [{ id: 'i1', role: 'member' }], error: null });
++    let c = context();
++    let r = await confirmSubmit(req('/api/auth/confirm', { method: 'POST', cookies: { [confirmCookieName()]: c }, form: { csrf: JSON.parse(c).c } }));
++    expect(cookieClient.rpc).toHaveBeenCalledWith('my_invitations', undefined);
++    expect(r.headers.get('location')).toBe(`${OWN}/invitations`);
++    cookieClient.rpc.mockRejectedValueOnce(new Error('network'));
++    c = context();
++    r = await confirmSubmit(req('/api/auth/confirm', { method: 'POST', cookies: { [confirmCookieName()]: c }, form: { csrf: JSON.parse(c).c } }));
++    expect(r.headers.get('location')).toBe(`${OWN}${DEFAULT_RETURN}`);
++  });
+   it('an expired or used link goes to the recovery page and the context is cleared', async () => {
+     cookieClient.verifyOtp.mockResolvedValue({ data: { user: null }, error: { code: 'otp_expired' } });
+     const c = context();
+diff --git a/src/__tests__/apbm007a-boundaries.test.ts b/src/__tests__/apbm007a-boundaries.test.ts
+index 0b07489..e86e759 100644
+--- a/src/__tests__/apbm007a-boundaries.test.ts
++++ b/src/__tests__/apbm007a-boundaries.test.ts
+@@ -15,8 +15,18 @@ describe('OwedBook service-key and server-module boundaries', () => {
+   it('the service-role factory has exactly one importer: the guarded access point', () => {
+     expect(all.filter((f) => /utils\/supabase\/admin['"]/.test(read(f))).map(rel)).toEqual(['src/server/db.ts']);
+   });
+-  it('the access point is used only by the handoff and logout server module', () => {
+-    expect(all.filter((f) => /from ['"]@\/server\/db['"]/.test(read(f))).map(rel)).toEqual(['src/server/handoff.ts']);
++  // APBM-007B (Director ruling 5): narrowly extended to the invitation identity/mail module, and nothing else.
++  it('the access point is used only by the handoff/logout module and the invitation mail module', () => {
++    expect(all.filter((f) => /from ['"]@\/server\/db['"]/.test(read(f))).map(rel).sort()).toEqual(['src/server/handoff.ts', 'src/server/invitationMail.ts']);
++  });
++  it('every emailed sign-in link requests the EXACT confirm address with nothing appended (approved template rule)', () => {
++    for (const name of ['emailLink.ts', 'invitationMail.ts']) {
++      const redirects = [...read(join(SRC, 'server', name)).matchAll(/emailRedirectTo: (`[^`]*`|[^,}\s]+)/g)].map((m) => m[1].trim());
++      expect({ name, redirects }).toEqual({ name, redirects: ['`${ownOrigin()}/api/auth/confirm`'] });
++    }
++  });
++  it('the invitation mail module is imported only by the staff server module (after the SQL authority check)', () => {
++    expect(all.filter((f) => /from ['"]@\/server\/invitationMail['"]/.test(read(f))).map(rel)).toEqual(['src/server/staff.ts']);
+   });
+   it('no client component, client service or type module imports a server module', () => {
+     const offenders = all.filter((f) => {
+@@ -32,7 +42,7 @@ describe('OwedBook service-key and server-module boundaries', () => {
+     expect(all.filter((f) => /from ['"]stripe['"]|@stripe\/|STRIPE_SECRET_KEY|STRIPE_WEBHOOK_SECRET/.test(read(f).replace(/\/\/.*$/gm, ''))).map(rel)).toEqual([]);
+   });
+   it('the handoff and emailed-link modules log only fixed text plus a provider error code or status', () => {
+-    for (const name of ['handoff.ts', 'emailLink.ts']) {
++    for (const name of ['handoff.ts', 'emailLink.ts', 'invitationMail.ts']) {
+       const lines = read(join(SRC, 'server', name)).split('\n');
+       // every direct console use is the single `log` helper
+       expect(lines.filter((l) => /console\./.test(l) && !/^const log = /.test(l))).toEqual([]);
+diff --git a/src/server/emailLink.ts b/src/server/emailLink.ts
+index 32f1378..e52566d 100644
+--- a/src/server/emailLink.ts
++++ b/src/server/emailLink.ts
+@@ -58,7 +58,16 @@ export async function confirmSubmit(request: NextRequest): Promise<NextResponse>
+   const { data, error } = await supabase.auth.verifyOtp({ type: context.y, token_hash: context.h });
+   if (error || !data.user) { log('confirm', `verification refused ${error?.code ?? ''}`.trim()); return clear(to('/auth/link-expired')); }
+   await afterSignIn(data.user.id, data.user.email);
+-  return clear(to(context.n));
++  // APBM-007B: links carry no return path, so a person with pending invitations (read as that person) lands on
++  // /invitations to accept or decline; viewing grants nothing. Any read failure keeps the normal destination.
++  let destination = context.n;
++  if (destination === DEFAULT_RETURN) {
++    try {
++      const mine = await supabase.rpc('my_invitations');
++      if (!mine.error && Array.isArray(mine.data) && mine.data.length > 0) destination = '/invitations';
++    } catch { /* keep the normal destination */ }
++  }
++  return clear(to(destination));
+ }
+ 
+ // Per-instance limiter for link requests: bounds one client against one server process.

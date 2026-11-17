@@ -1,0 +1,42 @@
+[
+ {
+  "step": "O:add1",
+  "pass": true
+ },
+ {
+  "step": "O:decline",
+  "pass": true
+ },
+ {
+  "step": "O:abandon_void_then_late_pay",
+  "pass": true
+ },
+ {
+  "step": "O:auth",
+  "pass": true
+ },
+ {
+  "step": "O:auth_hosted_complete_then_activate",
+  "pass": false
+ },
+ {
+  "step": "O:void_after_paid_refused",
+  "pass": true
+ },
+ {
+  "step": "O:auth_hosted_complete_then_activate",
+  "pass": true
+ },
+ {
+  "step": "O:lost_reply_reconciliation",
+  "pass": false
+ },
+ {
+  "step": "P:add1",
+  "pass": true
+ },
+ {
+  "step": "O:lost_reply_reconciliation",
+  "pass": true
+ }
+]

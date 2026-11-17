@@ -1,0 +1,158 @@
+{
+ "label": "preflight-e",
+ "objects": {},
+ "steps": [],
+ "preflight": {
+  "sdk": "22.1.0",
+  "api_version": "2026-04-22.dahlia",
+  "account_matches": true,
+  "account_suffix": "u3RR",
+  "price": {
+   "id": "price_1UavqdGnEQDyu3RRcj32U2Ob",
+   "livemode": false,
+   "active": true,
+   "currency": "usd",
+   "tiers_mode": "graduated",
+   "tiers": [
+    {
+     "up_to": 1,
+     "unit_amount": 9900
+    },
+    {
+     "up_to": null,
+     "unit_amount": 4900
+    }
+   ]
+  },
+  "catalogue_ok": true,
+  "apa": {
+   "id": "promo_1UavqfGnEQDyu3RRZMN3whuY",
+   "active": true,
+   "times_redeemed": 8,
+   "coupon": {
+    "id": "zJilviUO",
+    "percent_off": 10,
+    "duration": "once"
+   }
+  },
+  "delivery": {
+   "webhook_endpoints": [],
+   "event_destinations": 0,
+   "local_stripe_listeners": 0
+  },
+  "effects_remaining": {
+   "scratch_chain_cycles": {
+    "ceiling": 12,
+    "used": 2,
+    "left": 10
+   },
+   "scratch_auth_identities": {
+    "ceiling": 14,
+    "used": 11,
+    "left": 3
+   },
+   "dev_auth_identities": {
+    "ceiling": 0,
+    "used": 0,
+    "left": 0
+   },
+   "stripe_customers": {
+    "ceiling": 13,
+    "used": 12,
+    "left": 1
+   },
+   "stripe_subscriptions": {
+    "ceiling": 13,
+    "used": 12,
+    "left": 1
+   },
+   "test_clocks": {
+    "ceiling": 4,
+    "used": 2,
+    "left": 2
+   },
+   "test_clock_advances": {
+    "ceiling": 30,
+    "used": 15,
+    "left": 15
+   },
+   "invoice_create": {
+    "ceiling": 30,
+    "used": 25,
+    "left": 5
+   },
+   "invoiceitem_create": {
+    "ceiling": 30,
+    "used": 17,
+    "left": 13
+   },
+   "invoice_finalize": {
+    "ceiling": 30,
+    "used": 18,
+    "left": 12
+   },
+   "invoice_void": {
+    "ceiling": 30,
+    "used": 9,
+    "left": 21
+   },
+   "invoice_pay_or_hosted": {
+    "ceiling": 30,
+    "used": 24,
+    "left": 6
+   },
+   "payment_attempts": {
+    "ceiling": 60,
+    "used": 46,
+    "left": 14
+   },
+   "payment_attempt_cents": {
+    "ceiling": 480000,
+    "used": 424704,
+    "left": 55296
+   },
+   "subscription_mutations": {
+    "ceiling": 50,
+    "used": 26,
+    "left": 24
+   },
+   "payment_method_attach": {
+    "ceiling": 24,
+    "used": 19,
+    "left": 5
+   },
+   "default_card_changes": {
+    "ceiling": 30,
+    "used": 23,
+    "left": 7
+   },
+   "apa_redemptions": {
+    "ceiling": 3,
+    "used": 3,
+    "left": 0
+   },
+   "email_dispatch": {
+    "ceiling": 24,
+    "used": 8,
+    "left": 16
+   },
+   "fixture_app_mutations": {
+    "ceiling": 400,
+    "used": 22,
+    "left": 378
+   },
+   "dev_live_apply": {
+    "ceiling": 1,
+    "used": 0,
+    "left": 1
+   },
+   "dev_forward_fix": {
+    "ceiling": 1,
+    "used": 0,
+    "left": 1
+   }
+  },
+  "delivery_isolated": true,
+  "result": "PASS"
+ }
+}

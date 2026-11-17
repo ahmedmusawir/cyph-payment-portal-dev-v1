@@ -24,6 +24,9 @@ const SUPABASE_IMPORTERS = [
   'src/app/api/billing/undo-cancel/route.ts',
   'src/app/api/registration/checkout/route.ts',
   'src/app/api/registration/draft/route.ts',
+      // APBM-007B owner store routes: each passes the cookie-bound client to the server module (owner check in SQL).
+      'src/app/api/stores/[id]/removal/route.ts', 'src/app/api/stores/[id]/removal/undo/route.ts', 'src/app/api/stores/add/abandon/route.ts',
+      'src/app/api/stores/add/confirm/route.ts', 'src/app/api/stores/add/quote/route.ts', 'src/app/api/stores/add/status/route.ts', 'src/app/api/stores/operations/route.ts',
   'src/app/auth/switch/page.tsx',
   'src/proxy.ts',
   'src/server/db.ts',

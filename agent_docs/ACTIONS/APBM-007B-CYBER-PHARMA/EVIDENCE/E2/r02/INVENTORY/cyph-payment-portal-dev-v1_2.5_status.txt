@@ -1,0 +1,34 @@
+ M next.config.js
+ M playwright.config.ts
+ M src/__tests__/apbm007a-auth.test.ts
+ M src/__tests__/apbm007a-webhook-recovery.test.ts
+ M src/__tests__/portal-boundaries.test.ts
+ M src/__tests__/portal-dashboard.test.tsx
+ M src/components/portal/account/DashboardView.tsx
+ M src/lib/appIdentity.ts
+ M src/server/billing.ts
+ M src/server/errors.ts
+ M src/server/handoff.ts
+ M src/server/webhook.ts
+ M src/types/portal/api.ts
+?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/
+?? agent_docs/PACKAGES/
+?? e2e/apbm007b.addstore.spec.ts
+?? e2e/apbm007b.regression.spec.ts
+?? scripts/apbm007b/
+?? scripts/operator-007b.mjs
+?? src/__tests__/apbm007b-store.test.ts
+?? src/app/(account)/stores/
+?? src/app/api/build-info/
+?? src/app/api/internal/
+?? src/app/api/operator/007b/
+?? src/app/api/stores/
+?? src/components/portal/account/AddStoreFlow.tsx
+?? src/components/portal/account/StoreRemovalControl.tsx
+?? src/integration/apbm007b-ledger.ts
+?? src/integration/apbm007b-store.itest.ts
+?? src/server/billingNotices.ts
+?? src/server/mailGuard.ts
+?? src/server/operator007b.ts
+?? src/server/storeOperations.ts
+?? src/server/storePricing.ts

@@ -1,0 +1,5 @@
+**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**
+
+# Closeout boundary
+
+After Friday's product certificate, required QA cleanup/retention acceptance and durable records: JARVIS reads exact certified pair, qualifications, cleanup and full successor diff. Claudy performs bounded administrative closeout on continuing QA branches; preserve accepted product bytes and limitations, create source-indexed receipt and safe commit manifest. Tony commits/merges/pushes; verify target ancestry/tree equality and remote main. No credential-containing historical archive is republished; keep retained fixtures until explicit cleanup authority. No branch deletion or deployment implied. Final module CLOSED only on actual integration receipts. No further full QA campaign for docs-only closeout.

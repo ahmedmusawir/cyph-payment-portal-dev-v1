@@ -1,0 +1,196 @@
+{
+ "app": "pp",
+ "artifact_id": "da8d53c9b4aac8fe7f996a88d6789190",
+ "revision": "c68c4acaccc4+uncommitted-007b-e2",
+ "next_build_id": "OwjlgnPF5wOF2FCVlqpeH",
+ "changed_files": [
+  {
+   "path": "next.config.js",
+   "sha256": "a53be9a25787abdf35556d825d1d9c614ce09ef208bd2b85d5e5a779f2752875"
+  },
+  {
+   "path": "scripts/apbm007b/build-check.mjs",
+   "sha256": "c0a87be93b2b2cda8e59c3f52812e7c6999fb4ecf960fdea7b3286e7bb4274cb"
+  },
+  {
+   "path": "scripts/apbm007b/capability-check.mjs",
+   "sha256": "a9d93029e355044af00e25fd4953d23766fa3570d8f4a4412a033d33759df7c1"
+  },
+  {
+   "path": "scripts/apbm007b/env-preflight.mjs",
+   "sha256": "d40c768649c18a0b57974bba9560da4e867e74653599cd5b623cff1dca2cb6e7"
+  },
+  {
+   "path": "scripts/apbm007b/export.mjs",
+   "sha256": "9a6490877e891bc98078ae5b55f1f8f62de06d36158910f7a5c5c6d563195f6f"
+  },
+  {
+   "path": "scripts/apbm007b/fixture-clock.mjs",
+   "sha256": "b871383fbfa4f3790467b60707041124c0972e6e7cdf46eb46d9484fd0d9591c"
+  },
+  {
+   "path": "scripts/apbm007b/integration.mjs",
+   "sha256": "585445b4f1c5b9c0823e9a2b35da4cc68e6e7847888276b5fd1d835c31818036"
+  },
+  {
+   "path": "scripts/apbm007b/jobs-run.mjs",
+   "sha256": "fc20e908a83d897ccc17dbef340124412a482ed1de2d85d48dd46c860f11b20f"
+  },
+  {
+   "path": "scripts/apbm007b/lib/effects.mjs",
+   "sha256": "57d98584ce4e8e4a5ad7b7eaf2e8e9f9a8d091e9a85d347c7002ad29af8fd314"
+  },
+  {
+   "path": "scripts/apbm007b/lib/env.mjs",
+   "sha256": "e9cfe02a0d4ffbcd6c7c01e30549d43d0b69726c75950d2b1ab77be1d9d080c1"
+  },
+  {
+   "path": "scripts/apbm007b/lib/stripe.mjs",
+   "sha256": "4b80d21ce661e3c0072b2a8cf00e42bcb4dc97a77c37b38ae084cb90e7b880b5"
+  },
+  {
+   "path": "scripts/apbm007b/mail-guard-probe.mjs",
+   "sha256": "8d744d30978b4d4feede8ec9f8646e74fe779d07646346779193ef2c4dd98a99"
+  },
+  {
+   "path": "scripts/apbm007b/privacy-scan.mjs",
+   "sha256": "accb9e0026c41a2975861a6049f415e8cfb0e60d710387bb978b826623169c44"
+  },
+  {
+   "path": "scripts/apbm007b/served-identity.mjs",
+   "sha256": "7769b1c4beb6c9621d65155d6a5237c093577e376ade311a0dfe516f63d4cc5a"
+  },
+  {
+   "path": "scripts/apbm007b/testclock.mjs",
+   "sha256": "c3fd5d6c3c1e4586e15801ac885780bc3b6c97a50905982220eb2c1709030520"
+  },
+  {
+   "path": "scripts/operator-007b.mjs",
+   "sha256": "39fbc6bf6799d57c64514f6c5f16b69433a92769433f8abe9f7153d91892dd4f"
+  },
+  {
+   "path": "src/__tests__/apbm007a-auth.test.ts",
+   "sha256": "ee6bbaed08a5134f4181a8e4422b0ef428fb3959092ec1bc27eff8895de3db67"
+  },
+  {
+   "path": "src/__tests__/apbm007a-webhook-recovery.test.ts",
+   "sha256": "685f2c470c84e94cd8aa140dc7fe0bd37f64e045c204a19dbb3cd587ce3eed5b"
+  },
+  {
+   "path": "src/__tests__/apbm007b-store.test.ts",
+   "sha256": "13dadeefa8cb01d51637b18525880a3a51eb2e41fad2800efb3e651b860e8b3b"
+  },
+  {
+   "path": "src/__tests__/portal-boundaries.test.ts",
+   "sha256": "12d675c794e50dd956935a504b4e2b8551654a57509581e74e85350fcddee695"
+  },
+  {
+   "path": "src/__tests__/portal-dashboard.test.tsx",
+   "sha256": "ab33abc30ec38d885e98bcf91f8c51c25e09631f7b705a0368be5e0b5d7cc90d"
+  },
+  {
+   "path": "src/app/(account)/stores/add/page.tsx",
+   "sha256": "1dd9ffb67adc9b7463cf1b4bc7f683207dba97f49b821e7a0f70c662b11fba11"
+  },
+  {
+   "path": "src/app/api/build-info/route.ts",
+   "sha256": "c2aecf9a9ceea4c6fbed6bf36612a9b15851cb49d53287768cec0fb58d018b92"
+  },
+  {
+   "path": "src/app/api/internal/jobs/run/route.ts",
+   "sha256": "1a5cb6a6ffbd93137550494d40c9558c88835ea586f93d0f7c2c533dd4f92146"
+  },
+  {
+   "path": "src/app/api/operator/007b/route.ts",
+   "sha256": "cb69897c06332fc0d5413e92b96ad073c2a373f1b4e7d6e5731f7d018913ea2e"
+  },
+  {
+   "path": "src/app/api/stores/[id]/removal/route.ts",
+   "sha256": "a92f326eabc6c7393932fe92005243013e3694d3ab1de3e32e386ff952345d86"
+  },
+  {
+   "path": "src/app/api/stores/[id]/removal/undo/route.ts",
+   "sha256": "c0ddb47ce01e19bb235ac11748d82438bdc87b1eabed5195cea8faacabe13c3b"
+  },
+  {
+   "path": "src/app/api/stores/add/abandon/route.ts",
+   "sha256": "ced74d3e7a31afd49fb58666bd531442e9233ee994dfe26c19be67d97759376e"
+  },
+  {
+   "path": "src/app/api/stores/add/confirm/route.ts",
+   "sha256": "2363369a9157a45aeaebef15acab1fbe4b23238117fa2159e83e8d15aedc29c3"
+  },
+  {
+   "path": "src/app/api/stores/add/quote/route.ts",
+   "sha256": "c0adb0f2b6416cb3c587aceb54d11cd9e85916976393db198f9bc3919de63185"
+  },
+  {
+   "path": "src/app/api/stores/add/status/route.ts",
+   "sha256": "1cfa641c23aaea0e68c2b91513a0239b009dffdbb64bced00f05cc7c72273145"
+  },
+  {
+   "path": "src/app/api/stores/operations/route.ts",
+   "sha256": "e1735cd86e97dd520e4fa0354cc1e2117862f5d7b7149aeacd1bdc818db308c5"
+  },
+  {
+   "path": "src/components/portal/account/AddStoreFlow.tsx",
+   "sha256": "0dc904be09d11c065011ae9f3bde65bb76771324b177c90511ef261255a049e9"
+  },
+  {
+   "path": "src/components/portal/account/DashboardView.tsx",
+   "sha256": "dc76d05a9d846506addd5ac17b034ef68dfd20b4821b90c79eb8079eceb6bf64"
+  },
+  {
+   "path": "src/components/portal/account/StoreRemovalControl.tsx",
+   "sha256": "e3f8fb354349b7befb678a7160c7d10aebd800124eae92d70d07fc2749914a3d"
+  },
+  {
+   "path": "src/integration/apbm007b-ledger.ts",
+   "sha256": "14605852a3187398cdec29aa85d874d51f20d99f9ebfe04d0556490fbaa19cec"
+  },
+  {
+   "path": "src/integration/apbm007b-store.itest.ts",
+   "sha256": "2fecf863782b2c509e4a0c21528c65c7c1ef2ad729239e79d20dd35059ce17b8"
+  },
+  {
+   "path": "src/lib/appIdentity.ts",
+   "sha256": "93876caf0144c909a6176d5a142128b73043796ed458af01af938d943058a531"
+  },
+  {
+   "path": "src/server/billing.ts",
+   "sha256": "5f14701906d1879ca9fcb620f9134ae345c3cfbfe7bf7ad16955177c393192d3"
+  },
+  {
+   "path": "src/server/billingNotices.ts",
+   "sha256": "1c94e43fd529bb036ca46d7a0f1f3f5f21316f1c041a40b7ecf050b23ec66249"
+  },
+  {
+   "path": "src/server/errors.ts",
+   "sha256": "79438fb8118461d85d307158bbd643a224531daabcdeaad55ee1c50f42819337"
+  },
+  {
+   "path": "src/server/mailGuard.ts",
+   "sha256": "6fcd0ce0f51b0ad037a9aa5fec9df0086f9f5022926caae503c74486357594ed"
+  },
+  {
+   "path": "src/server/operator007b.ts",
+   "sha256": "6803755a0ddf185b354e1dc6af0138a22f7be8b0914894d1d5cb93a4fd19e936"
+  },
+  {
+   "path": "src/server/storeOperations.ts",
+   "sha256": "d5b004eb1211738d8be0f09a68e43c7a5457be2460288bb00b410f008dc15adf"
+  },
+  {
+   "path": "src/server/storePricing.ts",
+   "sha256": "ef8ce55977bde1d3a8f62320e7dcaa7a5cdd3827b327ef222e459aa217ee5ff1"
+  },
+  {
+   "path": "src/server/webhook.ts",
+   "sha256": "43dd8817edecdc62b41e4f32f1836a057de126ccb371b67a6dd63f317f5b1ef3"
+  },
+  {
+   "path": "src/types/portal/api.ts",
+   "sha256": "8537b6dc1016f88c623ab0b686e8a7d3c97e62597751093062cf3e77030248e6"
+  }
+ ]
+}

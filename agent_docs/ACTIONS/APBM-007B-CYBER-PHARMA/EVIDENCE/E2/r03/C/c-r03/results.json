@@ -1,0 +1,36 @@
+{
+ "decline": {
+  "quote_cents": 4900,
+  "state_after_confirm": "payment_pending",
+  "final_state": "expired_unpaid",
+  "error_code": "abandoned",
+  "store_created": false,
+  "invoice_status": "void",
+  "amount_paid": 0,
+  "quantity": 2,
+  "quantity_unchanged": true,
+  "ui_evidence": [
+   "decline_payment_pending.png",
+   "decline_abandoned.png"
+  ],
+  "note": "result fields re-read from SCRATCH/Stripe after the run script failed on a column name AFTER the journey completed; no step repeated"
+ },
+ "auth": {
+  "quote_cents": 4900,
+  "state_after_confirm": "payment_pending",
+  "hosted_link_shown": true,
+  "challenge_clicked": true,
+  "invoice_status": "paid",
+  "final_state": "activated",
+  "store_created": true,
+  "dashboard_shows_store": true,
+  "quantity": {
+   "before": 2,
+   "after": 3
+  },
+  "anchor_unchanged": true,
+  "activation_path": "real invoice.paid event delivered to the proof Portal by the owned signed forwarder (no listener in the proof setup) -> 200 store_activated",
+  "dashboard_count": "3 pharmacies",
+  "note_first_poll": "within ~80 s of the hosted payment the operation was still payment_pending because no event had been delivered; the page itself does not advance a pending operation without an event or the jobs runner"
+ }
+}
