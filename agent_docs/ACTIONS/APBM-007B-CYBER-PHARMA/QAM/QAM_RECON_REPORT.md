@@ -1,67 +1,34 @@
-# QAM_RECON_REPORT — `APBM-007B-CYBER-PHARMA` (Q1, attempt `NOT RECORDED — owning seat authors at its phase`)
+# Q1 recon — Cody, 2026-11-17
 
-> TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_RECON_REPORT.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §8. **Owner: QA Executor.** Independent Q1 observations, contradictions and readiness. Q1 is not the full QA campaign and produces no verdict. A successful login during recon does not satisfy the later acceptance walk.
+Candidate pair: cyph-payment-portal-dev-v1 427bec6267b9777e9cb44f81c22d1396a495bc14; cyph-v1-dev c8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea. See HANDOFFS/CANDIDATE_PAIR_2026-11-17.md for authoritative QA binding. Historical state says QA branch not created; current Git and Tony's explicit Q1 release supersede that prerequisite. No Engineer-owned manifest or contract was edited.
 
-**Executor:** `NOT RECORDED — owning seat authors at its phase` · **Start:** `NOT RECORDED — owning seat authors at its phase` · **End:** `NOT RECORDED — owning seat authors at its phase` · **Working directory:** `NOT RECORDED — owning seat authors at its phase` · **Preflight results:** `evidence/preflight/NOT RECORDED — owning seat authors at its phase/`
+## Readiness and evidence limits
 
-## 1. Identity resolved independently
+PF-00 first: engineering handoff says proof processes stopped, no listener/endpoint and no automated inbox access. Candidate runtime identity/listener/inbox readiness is BLOCKED, not inferred from old build IDs. No sign-in or provider probes performed. Continue safe inspection under Tony's Q1 release.
 
-| Field | Value | Evidence |
-|---|---|---|
-| Repository / branch | `NOT RECORDED — owning seat authors at its phase` / `qa/apbm-007b` | `NOT RECORDED — owning seat authors at its phase` |
-| Full HEAD at recon | NOT RECORDED | |
-| Baseline | `c68c4acaccc4a68f20ede267f06cfda17fa15aac (Portal); 0b785524a621c4384db8bee47ef9b4149b8ab44c (OwedBook)` | |
-| Candidate (the Director's committed candidate, from the receipt / read-only Git evidence; `qa/apbm-007b` created at it) | NOT RECORDED | |
-| Candidate → HEAD classification, from review of the **complete** diff (`git diff NOT RECORDED — owning seat authors at its phase..HEAD`, not `--stat`) | NOT RECORDED (docs-only successor / product change → `STOP-IDENTITY`) | |
-| Committed candidate reconciled against the handoff inventory (manifest §2: committed, staged, unstaged, untracked at handoff) | NOT RECORDED (every difference listed as a GAP in §4) | |
-| Tracked / untracked state | NOT RECORDED | |
+All twelve manifest hashes mismatch current files (exact expected/actual in evidence/preflight/01/contract_hashes.json). STOP-CONTRACT affects binding of execution expectations; draft below uses current candidate text provisionally. Architect must reconcile authored hashes and approved amendments; QA does not repair contracts. This is not a product FAIL or certification.
 
-## 2. Contract, scope and governing versions as read
+Private file exists, ignored and untracked; declared schema absent. Missing variable names: INBOX_ACCESS_FILE, INBOX_ADAPTER, QA_RUN_ID, ROLE_EXISTING_INVITEE_EMAIL, ROLE_EXISTING_INVITEE_PASSWORD, ROLE_FOREIGN_OWNER_EMAIL, ROLE_FOREIGN_OWNER_PASSWORD, ROLE_MEMBER_EMAIL, ROLE_MEMBER_PASSWORD, ROLE_NEW_ADMIN_EMAIL, ROLE_NEW_ADMIN_PASSWORD, ROLE_NEW_MEMBER_EMAIL, ROLE_NEW_MEMBER_PASSWORD, ROLE_OWNER_A_EMAIL, ROLE_OWNER_A_PASSWORD, ROLE_OWNER_B_EMAIL, ROLE_OWNER_B_PASSWORD, ROLE_STORE_ADMIN_EMAIL, ROLE_STORE_ADMIN_PASSWORD. EMAIL maps role and intended recipient; PASSWORD only for password-login roles; new invitees remain unused. INBOX_ADAPTER and INBOX_ACCESS_FILE enable real inbox observation; QA_RUN_ID isolates all effects. Do not substitute engineering cast or copy private values into app/build env.
 
-| Item | Identity read | Notes |
-|---|---|---|
-| Frozen acceptance spec | `NOT RECORDED — owning seat authors at its phase` | AC count `NOT RECORDED — owning seat authors at its phase` |
-| Ruling / erratum lane entries in force | `NOT RECORDED — owning seat authors at its phase` | pre-ruled exceptions: `NOT RECORDED — owning seat authors at its phase` |
-| Protected paths | `NOT RECORDED — owning seat authors at its phase` | |
-| Governing bodies (from `GOVERNING/README.md`) | `NOT RECORDED — owning seat authors at its phase` | all resolved? `NOT RECORDED — owning seat authors at its phase` |
-| Engineer handoff completeness | `NOT RECORDED — owning seat authors at its phase` | |
+## Implementation recon
 
-## 3. Readiness results (summary of `QAM_PREFLIGHT.md`)
+Portal storeOperations/storePricing implement standalone invoice saga and reconciliation; webhook routes operation invoices separately from renewal grace. SQL 0061–0069 in OwedBook owns NPI/ownership, invitation locks, clock context, notices, audit and privileges. staff/invitationMail implement scoped acceptance and privileged mail boundary; history endpoints expose ownership-scoped reads. Inspect guards and state transitions independently in Q2; source presence is no behavioral proof.
 
-| Section | Rows | Passed | Failed | Not run | Blocking? |
-|---|---|---|---|---|---|
-| 1 Repository / identity | | NOT RECORDED | | | |
-| 2 Contract / handoff | | | | | |
-| 3 Runtime / tools | | | | | |
-| 4 Target / data / roles | | | | | |
-| 5 Browser / instruments / auth | | | | | |
-| 6 Packaging / recovery | | | | | |
+r06 records real crash S1 in-flight pay and S2 hosted payment while down; both recovered by owner polling. These are engineering claims, not QA results and not automatic webhooks. r05 DEV apply receipts claim ledger69, preservation and DEV clock exclusion; Q2 must independently compare ledger/catalogue without repeating apply. r01–r04 provide CP1/CP2, live lifecycle, invitations and transfer support. Engineering's cleaned provider fixtures and stale mirrors cannot be reused as healthy QA fixtures. Final Portal browser regression was not rerun; plan requires full candidate regression.
 
-Distinguish "endpoint reachable" from "service ready for the required operation" in every row that touches a service.
+007A limitations (restore, real Auth crash, Mission Control, residual session/token qualification) remain separately labelled; no inherited PASS. generateLink library-name hit is the narrow approved baseline exception, not a secret-scan bypass. BP02 minimum-price guard applies to add/removal/undo, often earlier than 90 minutes. Decision9 paid same-owner restoration is approved; buyer history remains denied.
 
-## 4. Unresolved details, contradictions and challenged claims
+## Consolidated blockers / decisions
 
-| # | Type (GAP / QUESTION / BLOCKED / CONTRADICTION) | Detail | Sources in conflict | Owner | Exact resolution needed | Blocks |
-|---|---|---|---|---|---|---|
-| R-1 | `NOT RECORDED — owning seat authors at its phase` | `NOT RECORDED — owning seat authors at its phase` | `NOT RECORDED — owning seat authors at its phase` | `NOT RECORDED — owning seat authors at its phase` | `NOT RECORDED — owning seat authors at its phase` | `NOT RECORDED — owning seat authors at its phase` |
+1. Architect/JARVIS: reconcile all twelve contract hash mismatches with exact authorized bytes and approval provenance. Recommendation: corrected factual manifest by owning seat, retain old hashes/history; Friday reviews any semantic delta before Q2.
+2. Tony: supply separate QA role/inbox schema above, exact sandbox account/price, SCRATCH keys and operator identity privately; verify recipients new/existing and allowlist in both apps. Recommendation: eight distinct role contexts, controlled new recipients reserved until final candidate; adapter access or declared grouped manual inbox session.
+3. Friday: review this complete draft, effects capsule and Gate D split; bind approved plan SHA to both commits. Recommendation: exact amendments where needed; no execution approval inferred here.
+4. Tony: separately release Q2 after contract/readiness resolution; approve fresh bounded capsule, local Stripe listener and session-only signing secret. Recommendation: no shared provider settings changes; never reopen E2 ledger.
+5. Tony/Gate D: authorize permanent staging HTTPS webhook destination, exact events/account/secret, scheduler, Auth redirects and mail domains in a separate release. Recommendation: staging delivery/outage retries and revision pair are mandatory GD001; local forwarding is insufficient.
+6. Friday/Tony: external full-refund/credit proof for paid-operation-close needs an approved sandbox fixture or separately authorized external refund. Recommendation: no refund creation in default capsule; block only that provider closure subcase until supplied. Support identity-verification procedure graded separately; shared operator credential cannot prove individual sign-in.
 
-Engineer claims challenged (claim → what recon observed → consequence for the plan): `NOT RECORDED — owning seat authors at its phase`
+Q1 did not execute product tests, create resources, send mail, mutate DB, change webhooks, or repair product. All ACs NOT RUN.
 
-## 5. Stops raised in Q1
+## Friday resolution, 2026-11-17
 
-| Stop ID | Phase / time | Identity | Affected checks | Evidence | Owner | Required resolution | Safe resume point |
-|---|---|---|---|---|---|---|---|
-| none | | | | | | | |
-
-## 6. What cannot yet be tested, and why
-
-| AC / area | Reason | What would enable it | Owner |
-|---|---|---|---|
-| `NOT RECORDED — owning seat authors at its phase` | `NOT RECORDED — owning seat authors at its phase` | `NOT RECORDED — owning seat authors at its phase` | `NOT RECORDED — owning seat authors at its phase` |
-
-## 7. Readiness statement and decision requested
-
-Readiness for Q2 planning approval: NOT RECORDED (`READY — plan drafted` / `READY WITH GAPS` / `BLOCKED`).
-Decision requested from the QA Lead: review `QAM_TEST_PLAN.md` (draft, SHA-256 `NOT RECORDED — owning seat authors at its phase`) and the Q1 package `HANDOFFS/APBM-007B-CYBER-PHARMA_Q1_REVIEW_NOT RECORDED — owning seat authors at its phase.zip`; approve, approve with exact amendments, or hold with specific blockers.
-
-*TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*
+Consolidated decision1 reduced by QL-01 to two mismatches (line1 excluded); dependent tests held, unaffected checks not stopped. Exact diffs in evidence/preflight/02/. Manifest correction deferred to closeout, not Q2 gate. Friday exact amendments supersede earlier draft recommendations: refund subcase pending Director approval only, no second plan review, no Architect loop unless Engineering repair required. See approval and amended plan.

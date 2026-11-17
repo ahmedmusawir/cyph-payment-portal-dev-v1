@@ -9,3 +9,7 @@ This lane holds: the Engineer's `ENGINEERING_HANDOFF.md`; every review ZIP (`APB
 | none yet | | | | | |
 
 *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*
+
+2026-11-17 Cody Q1 review01: /home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/APBM-007B-CYBER-PHARMA_Q1_REVIEW_01.zip; 22 members; SHA-256 b1d5fce17c5ea8ff76bc72656624fc45c6de268cbcf1872118197ef890c6fb0c; CRC, exact indexed membership/hashes, safe generated paths and expanded privacy scan PASS. Friday plan review requested; Q2 not released.
+
+2026-11-17 Cody Q1 amendments02: /home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/APBM-007B-CYBER-PHARMA_Q1_REVIEW_02.zip; 28 members; SHA-256 b0d6640e76d27b234602c134b86f558826dc2e7bb04168c79bacfd7b1ef70340; CRC, exact indexed membership/hashes, safe generated paths and expanded privacy scan PASS. Friday resolution of two QL-01 diffs requested; no second plan review; Q2 not released.

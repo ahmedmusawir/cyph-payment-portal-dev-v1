@@ -46,3 +46,18 @@ A new product/config/test change after this binding invalidates it and requires 
 `RELEASED FOR Q4` requires all three: the repaired candidate identity, the QA Lead's retest-scope approval and the Director's release (`QAM_ENTRY.md` §5).
 
 *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*
+
+## Friday decision — transcribed by Cody, 2026-11-17
+
+Author: Friday, QA Lead. Source: exact decision and explicit transcription instruction supplied in current conversation. File/hash reference below is attributed to Friday; not an independently verified attachment. This dated block supersedes unfilled template cells above.
+
+QA LEAD PLAN APPROVAL — APBM-007B — 2026-11-17
+Decision: APPROVED WITH EXACT AMENDMENTS QL-01..QL-10 (QA_LEAD_DECISION_APBM007B_Q1_01_2026-11-17.md, SHA-256 304be11445b91494c98605f76f6e89406860d1f43d51c5bb7e3964b7d885af95)
+Candidate pair: Portal 427bec6267b9777e9cb44f81c22d1396a495bc14; OwedBook c8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea (qa/apbm-007b)
+Plan reviewed SHA-256: f5e40b504a81efb386ed14ed2a59f996707260d2c2b0cd67518425d06ebf331c
+Plan as amended SHA-256: 606034367290d798cf7b6ad10ad1494105933b5189b9cee97b6cc18e4926f0c0
+Contract identity: build pack as used for E2; header-line difference only; QL-01 check: 10/12 match; APBM_RULINGS.md and ENVIRONMENT_AND_EFFECTS.md mismatch (dependent tests held; supplied header-only premise not established for these two files)
+Environment: QA production builds on 3100/3101, SCRATCH, Stripe sandbox, local listener; DEV read-only
+Limitations: automatic event delivery first proven in Q2; seller-history screen not built; refund-proof subcase per QL-07; U-1..U-3 Director-accepted not QA-certified
+Release conditions: amendments applied; QL-01 passes; private QA inputs present; PF-00 basics pass; Director approves the effects envelope and releases Q2
+Q2 release: DIRECTOR — pending

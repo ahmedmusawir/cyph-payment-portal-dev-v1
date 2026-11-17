@@ -1,0 +1,134 @@
+[
+  {
+    "path": "ACCEPTANCE_SPEC.md",
+    "expected": "225fe3fd10ab15917dd751d980d23449e6b9fe5b5d55e9ec16cba703495e7c31",
+    "actual": "225fe3fd10ab15917dd751d980d23449e6b9fe5b5d55e9ec16cba703495e7c31",
+    "matches": true,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "225fe3fd10ab15917dd751d980d23449e6b9fe5b5d55e9ec16cba703495e7c31  -\n",
+    "stderr": ""
+  },
+  {
+    "path": "APBM_RULINGS.md",
+    "expected": "f118e4f73ae38f87590e4e5c5ae425f68caf5a35d2354e7124eba256497add60",
+    "actual": "5a3059676f313773062ae1aa9824f80675e115a35f1dec2d7df78900e155608d",
+    "matches": false,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "5a3059676f313773062ae1aa9824f80675e115a35f1dec2d7df78900e155608d  -\n",
+    "stderr": ""
+  },
+  {
+    "path": "EXECUTION_PLAN.md",
+    "expected": "568fb8b102c6b842f9691c94b9d4b9d4d6fa93a9be55ed3a62394932ff8540f8",
+    "actual": "568fb8b102c6b842f9691c94b9d4b9d4d6fa93a9be55ed3a62394932ff8540f8",
+    "matches": true,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "568fb8b102c6b842f9691c94b9d4b9d4d6fa93a9be55ed3a62394932ff8540f8  -\n",
+    "stderr": ""
+  },
+  {
+    "path": "ENVIRONMENT_AND_EFFECTS.md",
+    "expected": "b361d0310d03517b698474fef14c27910dfd8ae66569ae302c6a7aba35a43fdc",
+    "actual": "8171da1f02853e21eff7ddcb9f35c5b4e1ae879cd0180bdf64b63d6022c0b76e",
+    "matches": false,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "8171da1f02853e21eff7ddcb9f35c5b4e1ae879cd0180bdf64b63d6022c0b76e  -\n",
+    "stderr": ""
+  },
+  {
+    "path": "ALLOWED_PATHS.md",
+    "expected": "1515ff89484222dad1c20df97b9905bb3d4a3f8a77351b75d0105091f3e75ce2",
+    "actual": "1515ff89484222dad1c20df97b9905bb3d4a3f8a77351b75d0105091f3e75ce2",
+    "matches": true,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "1515ff89484222dad1c20df97b9905bb3d4a3f8a77351b75d0105091f3e75ce2  -\n",
+    "stderr": ""
+  },
+  {
+    "path": "CONTRACTS/API_ROLE_MATRIX.md",
+    "expected": "71c5adb521a95848345e9febf8f2659c7e5a6e0ee4314161c25de584d4f09820",
+    "actual": "71c5adb521a95848345e9febf8f2659c7e5a6e0ee4314161c25de584d4f09820",
+    "matches": true,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "71c5adb521a95848345e9febf8f2659c7e5a6e0ee4314161c25de584d4f09820  -\n",
+    "stderr": ""
+  },
+  {
+    "path": "CONTRACTS/BILLING.md",
+    "expected": "87e9fd34d8252852051759b9836c959efc835c0284f485f65077915c4e4db90c",
+    "actual": "87e9fd34d8252852051759b9836c959efc835c0284f485f65077915c4e4db90c",
+    "matches": true,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "87e9fd34d8252852051759b9836c959efc835c0284f485f65077915c4e4db90c  -\n",
+    "stderr": ""
+  },
+  {
+    "path": "CONTRACTS/CLOCK_AND_NOTICES.md",
+    "expected": "c15c77b175ac667ee47af8a16ff7c6148c292256cb7ba14ee337bb89476d80e3",
+    "actual": "c15c77b175ac667ee47af8a16ff7c6148c292256cb7ba14ee337bb89476d80e3",
+    "matches": true,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "c15c77b175ac667ee47af8a16ff7c6148c292256cb7ba14ee337bb89476d80e3  -\n",
+    "stderr": ""
+  },
+  {
+    "path": "CONTRACTS/DATA_AND_API_SHAPES.md",
+    "expected": "46aa59a1b51f8ad61956f3a8cfdbb2c1d2677961d57c45450885a351ba23684a",
+    "actual": "46aa59a1b51f8ad61956f3a8cfdbb2c1d2677961d57c45450885a351ba23684a",
+    "matches": true,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "46aa59a1b51f8ad61956f3a8cfdbb2c1d2677961d57c45450885a351ba23684a  -\n",
+    "stderr": ""
+  },
+  {
+    "path": "CONTRACTS/IDENTITY_AND_MEMBERSHIP.md",
+    "expected": "a5a9dec93d6f0e3db295c95d163411a1b58510905ce6ce1ac93c39322d5ac982",
+    "actual": "a5a9dec93d6f0e3db295c95d163411a1b58510905ce6ce1ac93c39322d5ac982",
+    "matches": true,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "a5a9dec93d6f0e3db295c95d163411a1b58510905ce6ce1ac93c39322d5ac982  -\n",
+    "stderr": ""
+  },
+  {
+    "path": "CONTRACTS/LIFECYCLE_AND_TRANSFER.md",
+    "expected": "ad1ae4d464fc09f390043680f8f04d43493edb1608a27e0451c868058564a6b4",
+    "actual": "ad1ae4d464fc09f390043680f8f04d43493edb1608a27e0451c868058564a6b4",
+    "matches": true,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "ad1ae4d464fc09f390043680f8f04d43493edb1608a27e0451c868058564a6b4  -\n",
+    "stderr": ""
+  },
+  {
+    "path": "CONTRACTS/MIGRATIONS.md",
+    "expected": "bc8640548f56f1bf58c4e1a8187c18241ff9703003542126af97a15fc40a0eb0",
+    "actual": "bc8640548f56f1bf58c4e1a8187c18241ff9703003542126af97a15fc40a0eb0",
+    "matches": true,
+    "command": "tail -n +2 <file> | sha256sum",
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA",
+    "exit": 0,
+    "stdout": "bc8640548f56f1bf58c4e1a8187c18241ff9703003542126af97a15fc40a0eb0  -\n",
+    "stderr": ""
+  }
+]

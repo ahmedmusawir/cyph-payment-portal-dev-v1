@@ -1,41 +1,36 @@
-**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS; successor diff CONFIRMED by Friday 17 November 2026. E2 RELEASED by Tony 16 November 2026; ENGINEERING COMPLETE — AWAITING QA BRANCH 17 November 2026. Header status updated by Claudy (17 Nov); matrix text unchanged.**
+# Acceptance/evidence matrix — Q1 plan, all NOT RUN
 
-# Independent QA evidence matrix — Cody owns observations
-
-Every status initially NOT RUN. Test IDs, evidence and independently derived expected results are authored in Q1/Q2, not copied from engineering claims. PASS/FAIL require evidence paths; BLOCKED/ADJUDICATE remain honest. No result is pre-approved by this matrix.
-
-| AC | Test IDs | Status | Evidence | Independent reference | Limitations |
-|---|---|---|---|---|---|
-| AC-001 | | NOT RUN | | | |
-| AC-002 | | NOT RUN | | | |
-| AC-003 | | NOT RUN | | | |
-| AC-004 | | NOT RUN | | | |
-| AC-005 | | NOT RUN | | | |
-| AC-006 | | NOT RUN | | | |
-| AC-007 | | NOT RUN | | | |
-| AC-008 | | NOT RUN | | | |
-| AC-009 | | NOT RUN | | | |
-| AC-010 | | NOT RUN | | | |
-| AC-011 | | NOT RUN | | | |
-| AC-012 | | NOT RUN | | | |
-| AC-013 | | NOT RUN | | | |
-| AC-014 | | NOT RUN | | | |
-| AC-015 | | NOT RUN | | | |
-| AC-016 | | NOT RUN | | | |
-| AC-017 | | NOT RUN | | | |
-| AC-018 | | NOT RUN | | | |
-| AC-019 | | NOT RUN | | | |
-| AC-020 | | NOT RUN | | | |
-| AC-021 | | NOT RUN | | | |
-| AC-022 | | NOT RUN | | | |
-| AC-023 | | NOT RUN | | | |
-| AC-024 | | NOT RUN | | | |
-| AC-025 | | NOT RUN | | | |
-| AC-026 | | NOT RUN | | | |
-| AC-027 | | NOT RUN | | | |
-| AC-028 | | NOT RUN | | | |
-| AC-029 | | NOT RUN | | | |
-| AC-030 | | NOT RUN | | | |
-| AC-031 | | NOT RUN | | | |
-
-GD-001 is Gate D only, outside this Gate Q set. Operator behavioral AC021–024 and accompanying support procedures have separate evidence labels/certificate treatment. PE09 mid-period invoice and PE01 next real invoice live proof required; PE10 late payment included. Any carried evidence cites original SHA/attempt and demonstrated applicability. Totals NOT RECORDED until executed.
+| AC | Test | Required evidence | Status |
+|---|---|---|---|
+| AC-001 | T-001 | Real application/API and tenant-negative proof | NOT RUN |
+| AC-002 | T-002 | Database-backed concurrency, transfer and UI proof | NOT RUN |
+| AC-003 | T-003 | UI/API plus provider quote/invoice at controlled mid-period time | NOT RUN |
+| AC-004 | T-004 | Live provider, product event/recovery and permission negatives | NOT RUN |
+| AC-005 | T-005 | Provider failure plus application/API/DB/UI and event-order proof | NOT RUN |
+| AC-006 | T-006 | Database concurrency, controlled response loss and historical reconciliation | NOT RUN |
+| AC-007 | T-007 | Late-payment, expiry, crash/restart and forward recovery evidence | NOT RUN |
+| AC-008 | T-008 | Provider/local comparisons and race tests | NOT RUN |
+| AC-009 | T-009 | Catalogue identity, invoice and billing regression | NOT RUN |
+| AC-010 | T-010 | API/DB denial and successful intended role journey | NOT RUN |
+| AC-011 | T-011 | Actual email/inbox and browser proof for both identity cases | NOT RUN |
+| AC-012 | T-012 | Token and browser negative coverage | NOT RUN |
+| AC-013 | T-013 | Delivery counters and link-state tests | NOT RUN |
+| AC-014 | T-014 | Database concurrency and two-identity browser journey | NOT RUN |
+| AC-015 | T-015 | Fresh and existing-session tests plus direct API checks | NOT RUN |
+| AC-016 | T-016 | Concurrency, denial and recovery proof | NOT RUN |
+| AC-017 | T-017 | Independent role-by-route/API/DB matrix | NOT RUN |
+| AC-018 | T-018 | Controlled time, next real invoice, access and concurrency proof | NOT RUN |
+| AC-019 | T-019 | Boundary and concurrency tests | NOT RUN |
+| AC-020 | T-020 | Whole-account lifecycle proof | NOT RUN |
+| AC-021 | T-021 | Operator authorization, negative controls, audit and procedure review | NOT RUN |
+| AC-022 | T-022 | Two-account transition, NPI concurrency and recovery | NOT RUN |
+| AC-023 | T-023 | Before/after data and direct access assertions for every role | NOT RUN |
+| AC-024 | T-024 | Controlled recovery, audit/denial proof and procedure completeness | NOT RUN |
+| AC-025 | T-025 | Live clock/provider, SQL permissions and production-build application proof | NOT RUN |
+| AC-026 | T-026 | Provider receipt plus actual inbox observation | NOT RUN |
+| AC-027 | T-027 | Fault, guard, recovery/send race, provider receipt and inbox checks | NOT RUN |
+| AC-028 | T-028 | Independent production-build browser and necessary live regression | NOT RUN |
+| AC-029 | T-029 | Catalogue/checksum/preservation and forward-resume evidence | NOT RUN |
+| AC-030 | T-030 | Rendered assertions and selected sanitized screenshots | NOT RUN |
+| AC-031 | T-031 | Validated built client-bundle scan | NOT RUN |
+| GD-001 | D-01 | Revision-bound staging journeys, automatic delivery and outage retries | NOT RUN / separate Gate D |

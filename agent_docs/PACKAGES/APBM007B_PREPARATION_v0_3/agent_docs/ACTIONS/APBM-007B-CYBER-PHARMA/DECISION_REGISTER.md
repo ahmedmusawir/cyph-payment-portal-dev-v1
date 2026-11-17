@@ -1,0 +1,32 @@
+# 007B settled rules and remaining choices
+
+**Version:** 0.3 · **Date:** 16 November 2026, Asia/Dhaka · **Author:** JARVIS
+
+**Status: PREPARATION AMENDMENT RETURN. E1 and E2 NOT RELEASED.**
+
+Each row separates SETTLED rules, cited to the decisions record, from REMAINING choices. Remaining choices are technical mechanisms or Director defaults. No row waits on Frank or Coach.
+
+Authority: Friday review FR-01 reports the Director's 16 November instruction to build from the settled thread. Director recommendations 1–4 are approved in APBM_RULINGS.md; the fifth inspection question is resolved by the ordinary E1 workflow. Frank/Coach/Heather may be informed; they are not dependencies for 007B release. A later business change is a change request.
+
+| ID | Topic | SETTLED rule and source | REMAINING choice | Decision owner | Coverage |
+|---|---|---|---|---|---|
+| D-01 | Add Store | Decisions 5.10: disclose charge; owner consents; charge rest of current period; activate after confirmed payment; failure leaves new store pending and existing stores working. | Quote freshness/expiry, payment-authentication handling, pending-operation expiry, retry behavior and technical discount/invoice reconciliation. | Architect from E1 evidence; Director approves | AC-003–008 |
+| D-02 | Invitations/admins | Decisions 5.12: owners appoint/replace admins; one admin per active store; store admins manage only their own members; members cannot create stores or manage billing. | APPROVED: current admin stays until replacement accepts. Remaining technical: expiry, resend/revoke, old-admin disposition and existing-user affiliation policy. | Director on Architect proposal | AC-010–017 |
+| D-03 | Removal/last store | Decisions 5.11: removal at paid-period end; charge stops; records kept. | APPROVED: undo before period end; last-store removal through whole-account cancellation. Remaining exact boundary and concurrent lifecycle mechanism from E1. | Director on Architect proposal | AC-018–020 |
+| D-04 | Transfer/history/recovery | Decisions 5.12 and 6.4: support-assisted; buyer uses own account/billing; records kept. Preserve seller receivables under carried rulings. | APPROVED: audited operator commands plus support procedure; no customer transfer screens; buyer denied historical claims. Remaining: per-operation FR-05 classification, exact operator scope, audit and effective-time mechanism from E1. | Director | AC-021–024 |
+| D-05 | Reminders | O-2 delivery obligation; dispatch counting, guard validation, retry safety and suppression after recovery required. | APPROVED: notice at failure and notice before read-only, each type at most once per failed invoice; suppress after recovery. Remaining: exact pre-read-only offset, template, recipient, sender and retry mechanism from E1. | Director; Architect supplies technical proposal | AC-026–027 |
+| D-06 | Grace/APA | Decisions 5.6: seven-day grace carried as provisional; no reset through cancellation/retry. Sandbox APA fixture remains clearly labeled. No new business reply is a dependency. | Additional-store coupon behavior measured in E1 and implemented consistently with the authorized sandbox fixture. No production discount policy invented. | Architect from E1; Director approves technical/default choices | AC-003–008,025–027 |
+| D-07 | Effects/identities | 007A allowances do not carry over; controlled inbox cast and measured capsule required. | Actual counters, hard ceilings, private identities and isolated test-clock authority. | Director; Friday approves QA plan | AC-029–032 |
+| D-08 | Staging settings | Agreed app domains and automatic handoff; permanent sandbox webhook needed. | Exact services/project/region, DNS mapping, Auth Site URL/token lifetime, redirects, templates and secret configuration. | Director / deployment owner | AC-032 |
+| D-09 | 007A residuals | Preserve final certificate limitations; do not invent baseline readiness. | Restore limitation, real-Auth crash gap, Mission Control runtime coverage, direct-token residual and copy reconciled to final receipts. F-Q4-001: repaired in 007A, or carried by Director ruling as a numbered 007B criterion. | Friday certificate; Architect reconciliation; Director risk decisions | AC-028–032; conditional AC-033 |
+| D-10 | Public copy | support@pharmacybooks.com; truthful capability; no invented legal text. | Director supplies/chooses staging consent and legal-link treatment from approved content. No external stakeholder response is imposed as a 007B gate. | Director | AC-003,030,032 |
+
+## Recorded preparation decisions
+
+1. **Seats approved:** Claudy builds and performs engineering E1; Cody tests independently; Friday leads QA; JARVIS authors the architecture and pack. Tony retains Director authority.
+2. **Transfer/recovery approach approved:** audited operator command plus written support procedure for sale, ownership transfer and recovery. No new customer-facing transfer screens in 007B. E1 identifies the exact operations; FR-05 classifies each criterion at freeze. This is not permission to substitute a document for required software behavior.
+3. **Buyer history approved:** buyer starts fresh and receives no access to historical claims. Preserve historical records with controlled access and the stable store identity; preserve seller receivables under existing rulings. E1 must specify the data/access boundary.
+4. **Operating defaults approved:** undo scheduled removal before the paid period ends; last-store removal uses whole-account cancellation; the incumbent admin remains until replacement acceptance. Send one notice at failed payment and one before read-only. Each approved notice type is sent at most once per failed invoice; suppress outstanding reminders after recovery. Exact pre-read-only offset, templates, retry and failure semantics are technical freeze details from E1.
+5. **Workflow clarification, not an additional Director approval:** the separate pre-E1 inspection proposal is withdrawn. E1 itself inspects the code. Prepare now, bind the final merged 007A commit pair and closeout evidence, then separately launch E1. No early recon, E1/E2 execution or assumption that 007A repairs have passed is authorized by this pack.
+
+D-01–D-10 still identify technical, evidence and execution details to resolve at their stated stages. They do not reopen the four approved recommendations. F-Q4-001 final disposition belongs to 007A closeout.

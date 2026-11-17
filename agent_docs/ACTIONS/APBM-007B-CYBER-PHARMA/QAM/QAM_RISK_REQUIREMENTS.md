@@ -55,6 +55,6 @@ QA effects: Q1 local source/build/instrument lanes only plus any separately stat
 
 ## 3. Executor's reading (Q1) — contradictions and open risk questions (QA Executor-owned section)
 
-NOT RECORDED (filled by the QA Executor in Q1 without altering §1 or §2; contradictions between §1/§2, the contract and the Engineer's claims go to `QAM_RECON_REPORT.md` §4 and, if grading depends on them, to `STOP-CONTRACT`).
+Cody, 2026-11-17: SR1–11 adopted as inputs; contract hash mismatch is STOP-CONTRACT for execution binding. Automatic webhooks and actual inbox observation remain independent gaps; no E2 effect authority transfers. See recon consolidated decisions and draft plan.
 
 *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*
