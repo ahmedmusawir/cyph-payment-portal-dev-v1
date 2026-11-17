@@ -21,8 +21,9 @@ export interface OperationRow {
   payment_deadline: string | null; stripe_customer_id: string | null; stripe_subscription_id: string | null; stripe_item_id: string | null;
   period_start: string | null; period_end: string | null; target_quantity: number | null; invoice_id: string | null; hosted_invoice_url: string | null;
   last_error_code: string | null; transfer_id: string | null; created_at: string; fencing_epoch: number;
+  provider_paid_at: string | null; close_reference: string | null;
 }
-const OP_COLUMNS = 'id,account_id,kind,state,intent_key,actor_user_id,quote_id,business_id,store_name,npi,amount_cents,currency,payment_deadline,stripe_customer_id,stripe_subscription_id,stripe_item_id,period_start,period_end,target_quantity,invoice_id,hosted_invoice_url,last_error_code,transfer_id,created_at,fencing_epoch';
+const OP_COLUMNS = 'id,account_id,kind,state,intent_key,actor_user_id,quote_id,business_id,store_name,npi,amount_cents,currency,payment_deadline,stripe_customer_id,stripe_subscription_id,stripe_item_id,period_start,period_end,target_quantity,invoice_id,hosted_invoice_url,last_error_code,transfer_id,created_at,fencing_epoch,provider_paid_at,close_reference';
 
 // ---------------------------------------------------------------- refusals (safe, named)
 const REFUSAL: Record<string, [ConstructorParameters<typeof StoreRefusal>[0], string]> = {
@@ -154,8 +155,9 @@ export async function loadStoreOperation(id: string): Promise<OperationRow | nul
 async function statusFor(ctx: OwnerContext, id: string): Promise<StatusView> {
   const op = await loadStoreOperation(id);
   if (!op || op.account_id !== ctx.accountId) throw new PortalError('not_found', 'operation');
-  // The hosted page is an owner-only capability, offered only while that exact invoice is open and awaiting payment.
-  const showHosted = op.kind === 'store_add' && op.state === 'payment_pending' && !!op.hosted_invoice_url && !!op.payment_deadline && Date.parse(op.payment_deadline) > Date.now();
+  // The hosted page is an owner-only capability, offered only while that exact invoice is open and awaiting payment
+  // before the deadline on the account's billing clock (the database decides; never this server's wall clock).
+  const showHosted = op.kind === 'store_add' && op.state === 'payment_pending' && !!op.hosted_invoice_url && !!op.payment_deadline && !(await deadlinePassed(op.id));
   return { operationId: op.id, kind: op.kind, state: op.state, errorCode: op.last_error_code, paymentDeadline: op.payment_deadline, amountCents: op.amount_cents,
     paymentRequired: op.state === 'payment_pending', hostedPaymentUrl: showHosted ? op.hosted_invoice_url : null, businessId: op.state === 'activated' ? op.business_id : null,
     storeName: op.store_name, effectiveAt: op.kind === 'store_removal' && op.state === 'completed' ? op.period_end : null };
@@ -202,6 +204,19 @@ async function intent(op: OperationRow, l: Lease, stage: string, key: string, pa
   const r = await rpc<string>('store_operation_intent', { p_operation: op.id, p_owner: l.owner, p_epoch: l.epoch, p_stage: stage, p_attempt: 1, p_key: key, p_params: params });
   if (r === 'lease_lost') throw new LeaseLost();
 }
+/** The consent deadline on the account's billing clock (0070): real time, or simulated only in the verified SCRATCH test context. */
+async function deadlinePassed(id: string): Promise<boolean> {
+  return (await rpc<boolean | null>('store_operation_deadline_passed', { p_operation: id })) === true;
+}
+/** A paid invoice: the database routes it by the provider's paid time against the stored deadline (0070), never by when
+ * this event, poll or restart is processed. On time → paid_pending_activation; late or unproven → attention. */
+async function paymentObserved(op: OperationRow, l: Lease, inv: Stripe.Invoice): Promise<string> {
+  const paidAt = inv.status_transitions?.paid_at;
+  const r = await rpc<string>('store_operation_payment_observed', { p_operation: op.id, p_owner: l.owner, p_epoch: l.epoch, p_invoice: inv.id,
+    p_paid_cents: inv.amount_paid, p_currency: inv.currency, p_paid_at: typeof paidAt === 'number' ? iso(paidAt) : null });
+  if (r === 'lease_lost') throw new LeaseLost();
+  return r;
+}
 const outcome = (op: OperationRow, stage: string, value: string) => rpc('store_operation_intent_outcome', { p_operation: op.id, p_stage: stage, p_attempt: 1, p_outcome: value });
 async function intentRecorded(op: OperationRow, stage: string): Promise<{ created_at: string } | null> {
   const r = await admin().from('provider_call_intents').select('created_at').eq('operation_id', op.id).eq('stage', stage).eq('attempt', 1).maybeSingle();
@@ -246,7 +261,7 @@ export async function advanceStoreOperation(id: string, opts: { waitMs?: number 
       const op = await loadStoreOperation(id);
       if (!op) return 'unknown_operation';
       if (op.kind !== 'store_add') return await advanceLifecycle(op, l);
-      const due = op.payment_deadline ? Date.parse(op.payment_deadline) <= Date.now() : false;
+      const due = (op.state === 'payment_setup' || op.state === 'payment_pending') && !!op.payment_deadline && (await deadlinePassed(op.id));
       if (op.state === 'payment_setup') { if (due) { await closeUnpaid(op, l); continue; } await setupInvoice(op, l); continue; }
       if (op.state === 'payment_pending') { await settlePayment(op, l, due); const after = await loadStoreOperation(id); if (after?.state === 'payment_pending') return 'payment_pending'; continue; }
       if (op.state === 'cancel_requested') { await closeUnpaid(op, l); continue; }
@@ -306,7 +321,7 @@ async function setupInvoice(op: OperationRow, l: Lease): Promise<void> {
   await transition(op, l, 'attention', `invoice_${inv.status}`);
 }
 
-/** Attempt payment ONCE, then only read. Paid → activation; void/uncollectible → verified close; open → wait. */
+/** Attempt payment ONCE (only before the deadline), then only read. Paid → routed by paid time; due and unpaid → verified close; open → wait. */
 async function settlePayment(op: OperationRow, l: Lease, due: boolean): Promise<void> {
   const s = stripe();
   let inv = await stripeCall('invoice read', () => s.invoices.retrieve(op.invoice_id as string));
@@ -318,9 +333,9 @@ async function settlePayment(op: OperationRow, l: Lease, due: boolean): Promise<
   }
   if (inv.status === 'paid') {
     if (inv.amount_paid !== op.amount_cents || inv.currency !== 'usd' || inv.metadata?.apbm_operation !== op.id) { await transition(op, l, 'attention', 'payment_mismatch'); return; }
-    // Paid after the deadline: preserved and routed to attention by the transition; never silently activated.
-    if (due) { await transition(op, l, 'attention', 'paid_after_deadline'); return; }
-    await transition(op, l, 'paid_pending_activation');
+    // Lateness is the provider's paid time against the stored deadline, decided in SQL: a late payment is preserved in
+    // attention (no activation, no quantity change, no refund); an on-time payment processed late still activates.
+    await paymentObserved(op, l, inv);
     return;
   }
   if (due) { await closeUnpaid(op, l); return; }
@@ -347,14 +362,14 @@ async function closeUnpaid(op: OperationRow, l: Lease): Promise<void> {
   }
   if (invoiceId) {
     let inv = await stripeCall('invoice read', () => s.invoices.retrieve(invoiceId as string));
-    if (inv.status === 'paid') { await transition(op, l, 'paid_pending_activation'); return; }   // SQL routes a paid abandon/late payment to attention
+    if (inv.status === 'paid') { await paymentObserved(op, l, inv); return; }   // SQL routes a paid abandon/late payment to attention
     if (inv.status === 'draft') { await stripeCall('invoice delete draft', () => s.invoices.del(invoiceId as string, {}, { idempotencyKey: `${op.id}:delete` })); }
     else if (inv.status === 'open') {
       if (!(await intentRecorded(op, 'void'))) await intent(op, l, 'void', `${op.id}:void`, { invoice: invoiceId });
       try { await s.invoices.voidInvoice(invoiceId, {}, { idempotencyKey: `${op.id}:void` }); await outcome(op, 'void', 'void'); }
       catch (e) { await outcome(op, 'void', (e as { code?: string }).code ?? 'error'); }
       inv = await stripeCall('invoice read', () => s.invoices.retrieve(invoiceId as string));
-      if (inv.status === 'paid') { await transition(op, l, 'paid_pending_activation'); return; }
+      if (inv.status === 'paid') { await paymentObserved(op, l, inv); return; }   // paid-versus-void race: routed by paid time
       if (inv.status !== 'void' || inv.amount_paid !== 0) { await transition(op, l, 'attention', 'void_unverified'); return; }
     } else if (inv.status !== 'void' || inv.amount_paid !== 0) { await transition(op, l, 'attention', `close_${inv.status}`); return; }
   }
@@ -366,6 +381,9 @@ async function activate(op: OperationRow, l: Lease): Promise<void> {
   const s = stripe();
   const inv = await stripeCall('invoice read', () => s.invoices.retrieve(op.invoice_id as string));
   if (inv.status !== 'paid' || inv.amount_paid !== op.amount_cents) { await transition(op, l, 'attention', 'payment_not_verified'); return; }
+  // Paid time not yet recorded (reached paid_pending_activation before 0070) and not an operator resume: decide it now,
+  // before any quantity change.
+  if (!op.provider_paid_at && !op.close_reference && (await paymentObserved(op, l, inv)) !== 'paid_pending_activation') return;
   let sub = await stripeCall('subscription read', () => s.subscriptions.retrieve(op.stripe_subscription_id as string));
   const item = sub.items.data[0];
   const samePeriod = item.current_period_start === secs(op.period_start) && item.current_period_end === secs(op.period_end);

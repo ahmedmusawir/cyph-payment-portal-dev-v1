@@ -359,7 +359,7 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
       {sub !== null || stores.length > 0 ? storesSection : null}
 
       <p className="mt-8 text-xs text-muted-foreground">
-        Inviting staff and adding stores are not available yet. Only the billing owner can manage billing; to change the billing owner, contact <Placeholder>{BRAND.supportEmail}</Placeholder>.
+        Only the billing owner can manage billing; to change the billing owner, contact <Placeholder>{BRAND.supportEmail}</Placeholder>.
       </p>
     </PageContainer>
   );
