@@ -1,0 +1,35 @@
+{
+  "apps": {
+    "ob": {
+      "scratch_target": true,
+      "allowlist_exact8": true,
+      "production": true
+    },
+    "pp": {
+      "scratch_target": true,
+      "allowlist_exact8": true,
+      "production": true
+    }
+  },
+  "listeners": [
+    {
+      "pid": 3207218,
+      "forward": "http://localhost:3101/api/webhooks/stripe"
+    }
+  ],
+  "account_matches": true,
+  "secret_matches_owned_session": true,
+  "checkout_session_id": "cs_test_c0RXNNRSSrqkDFRmniGcXOpgzUA6cVf3eeGoLpu73DRCVFUU7BQCJm7lgw",
+  "event_id": "evt_1UchUMGnEQDyu3RRvLFbpAbv",
+  "durable_receipt": [
+    {
+      "event_id": "evt_1UchUMGnEQDyu3RRvLFbpAbv",
+      "status": "ignored",
+      "error_code": "foreign",
+      "attempts": 0
+    }
+  ],
+  "forwarded_http200": true,
+  "delivery_lane": "real sandbox event automatically forwarded by owned Stripe CLI; no manual signer",
+  "pf00": true
+}

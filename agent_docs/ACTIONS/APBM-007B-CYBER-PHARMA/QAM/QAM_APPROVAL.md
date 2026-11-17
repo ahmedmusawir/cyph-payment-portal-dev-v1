@@ -30,6 +30,13 @@ A new product/config/test change after this binding invalidates it and requires 
 
 ## 3. Director release (Q2)
 
+### Tony release — transcribed by Cody, 17 November 2026
+
+Source: Friday release message sent by Director Tony in current conversation. Q2 RELEASED for Portal product427bec6267b9777e9cb44f81c22d1396a495bc14 and OwedBook c8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea, both qa/apbm-007b; approved plan before release records606034367290d798cf7b6ad10ad1494105933b5189b9cee97b6cc18e4926f0c0, with QL01–10. Portal QA records/execution HEAD61b683ab2aeeb18905666a56feed2d2513b6e6c5. Product SHA stays427bec62. PF00 first; dependent effects held on environment failure.
+
+Plan after release record lines SHA-256: 794c4d9c7877d585a47abb6630e03984d6a038f475dfdb5c284a3cd0c4d74f2c
+
+
 | Field | Value |
 |---|---|
 | Records committed (which files, commit SHA on `qa/apbm-007b`) | NOT RECORDED |
@@ -61,3 +68,29 @@ Environment: QA production builds on 3100/3101, SCRATCH, Stripe sandbox, local l
 Limitations: automatic event delivery first proven in Q2; seller-history screen not built; refund-proof subcase per QL-07; U-1..U-3 Director-accepted not QA-certified
 Release conditions: amendments applied; QL-01 passes; private QA inputs present; PF-00 basics pass; Director approves the effects envelope and releases Q2
 Q2 release: DIRECTOR — pending
+
+## Adjudication and effects approval — supplied sections B/C
+
+Transcribed by Cody from current message, attributed respectively to Friday and Tony, 2026-11-17. Later supplied release supersedes pending Director status in earlier block.
+
+B. QL-01 ADJUDICATION a01 (QA_LEAD_ADJUDICATION_APBM007B_Q1_a01_2026-11-17.md, SHA-256 2f28f72581e1da8601d2b0a3beb40e129f5b3cbe68cb37a5e77db1ab1b301d61)
+Contract identity CLEARED 12/12. I read both diffs in your REVIEW_02 package (SHA-256 b0d6640e76d27b234602c134b86f558826dc2e7bb04168c79bacfd7b1ef70340). APBM_RULINGS.md and ENVIRONMENT_AND_EFFECTS.md differ from the pack as used for E2 by the header line plus append-only Director entries dated 17 November 2026; no earlier line changed; the current repository files govern. All QL-01 holds are lifted. No plan edit is required: T-020, T-022, T-029 and T-031 already cover the appended rulings. Engineering's raised ceilings are Engineering's E2 envelope only; QA runs its own fresh ledger and borrows nothing.
+
+C. DIRECTOR APPROVALS (Tony, 17 November 2026)
+- QA effects envelope approved exactly as proposed in plan section 5.
+- One sandbox full refund approved for the QL-07 refunded-operation closure subcase; remove the "pending Director approval" marking.
+- Private QA inputs are prepared; no further credentials come from the Director.
+
+## Runtime ownership ruling record — 2026-11-17
+
+Friday, Director-approved current conversation: QA owns production candidate3100/3101, SCRATCH, one sandbox listener→3101, private session secret, Director apps untouched/listener off; exact selected handled events in owned setup evidence. Plan record SHA-256 b79bbee036ae18c7e471d6358c2423dd5520c9628ee0a6ab7e64458330927f38. No new product identity or plan review inferred.
+
+### Q2 adjudication a01 — transcribed 2026-11-17 by Cody
+
+Friday adjudication a01, supplied by Director Tony in current conversation, 17 November2026; QA_LEAD_ADJUDICATION_APBM007B_Q2_a01_2026-11-17.md SHA-256744a2d2d4795b6894f7397b7d97d0d5fa196f4a40005115d3e8339347b422c5e (attributed supplied reference; no independent attachment invented).
+
+Director Tony budget amendment, 17 November2026: provider mutations80→240 total, last20cleanup; sign-ins48→96; identity creation attempts10→14; unique identities≤10, no new addresses. All other limits unchanged; counters preserved, nothing reset. Friday directs first unchanged WebKit staff spec3x, then item4 unaffected tests on current candidate. Hold late payment, consent expiry/void race, in-flight payment crash and refunded-operation closure for repaired candidate. Retain activated F-Q2-001 store, no refund or cleanup. Do not pull/rebind during Engineering repair; require Director repaired pair and Friday retest scope.
+
+## Friday continuous-Q2 correction — transcribed by Cody, 2026-11-17
+
+Friday correction supplied by Director in current conversation replaces a01 items5/6: no repair during Q2; Engineering stopped. Continue approved plan to Q2 COMPLETE on Portal427bec6267b9777e9cb44f81c22d1396a495bc14/OwedBookc8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea. Holds lifted for consent-expiry/void race/in-flight crash. Refund closure only if paid-but-not-activated naturally produced, else BLOCKED BY F-Q2-001; never refund activated retained store. F-Q2-001/F-Q2-003 disposition rows preserved; no routing to Engineering until complete. Existing budget amendment stands. Prepare single grouped Director session near end. Return only playbook stop/limit/Q2 complete.

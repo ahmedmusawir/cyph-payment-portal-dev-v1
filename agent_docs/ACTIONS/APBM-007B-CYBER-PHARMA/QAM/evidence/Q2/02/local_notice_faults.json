@@ -1,0 +1,47 @@
+{
+  "layer": "actual local PostgreSQL functions, declared rollback-only fixtures; no SMTP/provider requests",
+  "target": "QA owned Docker127.0.0.1:55439",
+  "actual_emails": 0,
+  "checks": [
+    {
+      "name": "exclusive-claim-no-second-dispatch",
+      "result": "PASS",
+      "second_error": "not_claimable"
+    },
+    {
+      "name": "definite-refusal-bounded-backoff-stable-payload",
+      "result": "PASS",
+      "attempts": 1,
+      "backoff": true
+    },
+    {
+      "name": "backoff-omitted-from-due-queue",
+      "result": "PASS"
+    },
+    {
+      "name": "five-total-attempts-sixth-refused",
+      "result": "PASS",
+      "status": "attention",
+      "attempts": 5,
+      "attention_reason": "attempts_exhausted"
+    },
+    {
+      "name": "unknown-result-at-23h-attention-no-resend",
+      "result": "PASS",
+      "status": "attention",
+      "attempts": 1,
+      "attention_reason": "idempotency_horizon"
+    },
+    {
+      "name": "lease-reclaimed-stale-finish-fenced",
+      "result": "PASS",
+      "stale_finish": "lease_lost"
+    },
+    {
+      "name": "recovery-committed-before-claim-no-send",
+      "result": "PASS",
+      "claim_error": "suppressed"
+    }
+  ],
+  "result": "PASS"
+}

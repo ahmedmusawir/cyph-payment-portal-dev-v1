@@ -1,0 +1,26 @@
+{
+  "qa_apps": {
+    "ob": 3209772,
+    "pp": 3263086
+  },
+  "qa_listener_pid": 3263045,
+  "qa_local_containers": [
+    "apbm007b-qa-q2-db",
+    "apbm007b-qa-q2-auth"
+  ],
+  "qa_identities_existing": 8,
+  "human_observations_received": 0,
+  "expected_grouped_observations": 5,
+  "resources": {
+    "clock": "clock_1UchbzGnEQDyu3RRdTw6kZ0j",
+    "customers": [
+      "cus_VdzbFhbYulqAOe",
+      "cus_VdzbotJE2rHxEt"
+    ],
+    "subscriptions": [
+      "sub_1Uchc1GnEQDyu3RRyZ7Lns7W",
+      "sub_1Uchc8GnEQDyu3RR4dPvjODp"
+    ]
+  },
+  "cleanup": "NOT EXECUTED; pending QA Lead adjudication/retention; frozen provider clock, no runner active"
+}

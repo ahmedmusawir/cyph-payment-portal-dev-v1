@@ -1,0 +1,26 @@
+{
+  "ob": {
+    "client_files": 46,
+    "hits": {
+      "generateLink": [
+        "chunks/1b-sl_wkhew4q.js"
+      ]
+    },
+    "approved_baseline_exception": {
+      "generateLink": [
+        "chunks/1b-sl_wkhew4q.js"
+      ]
+    },
+    "unexpected": {},
+    "result": "PASS",
+    "source": "candidate build-check PATTERNS, validated poison/clean; existing exact library exception"
+  },
+  "pp": {
+    "client_files": 32,
+    "hits": {},
+    "approved_baseline_exception": {},
+    "unexpected": {},
+    "result": "PASS",
+    "source": "candidate build-check PATTERNS, validated poison/clean; existing exact library exception"
+  }
+}

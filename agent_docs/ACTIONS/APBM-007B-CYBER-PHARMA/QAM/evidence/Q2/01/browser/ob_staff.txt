@@ -1,0 +1,42 @@
+
+Running 6 tests using 1 worker
+
+  ✓  1 [apbm007b] › e2e/apbm007b.staff.spec.ts:23:5 › owner invites a member (guarded send), sees it pending, revokes it (7.8s)
+  ✓  2 [apbm007b] › e2e/apbm007b.staff.spec.ts:37:5 › /invitations lists only invitations addressed to the signed-in person; viewing grants nothing (1.6s)
+  ✓  3 [apbm007b-firefox] › e2e/apbm007b.staff.spec.ts:23:5 › owner invites a member (guarded send), sees it pending, revokes it (4.3s)
+  ✓  4 [apbm007b-firefox] › e2e/apbm007b.staff.spec.ts:37:5 › /invitations lists only invitations addressed to the signed-in person; viewing grants nothing (4.6s)
+  ✘  5 [apbm007b-webkit] › e2e/apbm007b.staff.spec.ts:23:5 › owner invites a member (guarded send), sees it pending, revokes it (30.1s)
+  -  6 [apbm007b-webkit] › e2e/apbm007b.staff.spec.ts:37:5 › /invitations lists only invitations addressed to the signed-in person; viewing grants nothing
+
+
+  1) [apbm007b-webkit] › e2e/apbm007b.staff.spec.ts:23:5 › owner invites a member (guarded send), sees it pending, revokes it 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoContainText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: getByRole('status').first()
+    Expected substring: [32m"Email delivery is disabled for this address"[39m
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toContainText" with timeout 30000ms[22m
+    [2m  - waiting for getByRole('status').first()[22m
+
+
+      27 |   await page.getByLabel("Email address").fill(email);
+      28 |   await page.getByRole("button", { name: "Send invitation" }).click();
+    > 29 |   await expect(page.getByRole("status").first()).toContainText("Email delivery is disabled for this address", { timeout: 30000 });
+         |                                                  ^
+      30 |   const row = page.getByRole("listitem").filter({ hasText: email });
+      31 |   await expect(row).toContainText("pending");
+      32 |   await row.getByRole("button", { name: "Revoke" }).click();
+        at /tmp/apbm007b-qa-q2-01/proof/ob/e2e/apbm007b.staff.spec.ts:29:50
+
+    Error Context: test-results/apbm007b.staff-owner-invit-33ff1--sees-it-pending-revokes-it-apbm007b-webkit/error-context.md
+
+  1 failed
+    [apbm007b-webkit] › e2e/apbm007b.staff.spec.ts:23:5 › owner invites a member (guarded send), sees it pending, revokes it 
+  1 did not run
+  4 passed (52.2s)
+

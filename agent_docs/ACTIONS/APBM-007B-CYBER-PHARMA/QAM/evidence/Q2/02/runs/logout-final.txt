@@ -1,0 +1,2 @@
+{"actor":"EXISTING_INVITEE QA only","before":{"ob_path":"/owedbook","pp_path":"/billing"},"logout_status":200,"after":{"ob_path":"/auth","pp_path":"/login"},"portal_denied":true,"owedbook_denied_next_navigation":true,"result":"PASS","qualification":"Observed cross-app navigation immediately after actual provider-global logout; no provider session/token value exported. Existing residual token limitations are not automatically waived or reclassified."}
+

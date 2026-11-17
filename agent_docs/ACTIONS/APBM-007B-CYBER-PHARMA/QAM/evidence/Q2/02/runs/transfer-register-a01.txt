@@ -1,0 +1,18 @@
+complete {"operator":"applied","finalize":"transferred","refusal":null,"transfer":{"status":"buyer_reserved","buyer_account_id":null,"buyer_business_id":null},"npi_holds":["transfer_held"],"source_store":{"status":"transferred","ownership_ended_at":"2026-11-17T09:25:52.791+00:00"}}
+qa-first-store-expected {"expected_cents":9900,"currency":"usd","source":"approved graduated first-store catalogue, no promotion"}
+
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 45000ms exceeded.
+Call log:
+[2m  - waiting for getByText(/Your card was declined|card has been declined/i).first() to be visible[22m
+
+    at /home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/transfer-qa.mjs:124:84
+    at async phase (/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/transfer-qa.mjs:51:73)
+    at async file:///home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/transfer-qa.mjs:83:1 {
+  name: 'TimeoutError'
+}
+
+Node.js v22.17.0

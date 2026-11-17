@@ -1,0 +1,578 @@
+{
+ "label": "qa-20261117-c414",
+ "done": [
+  "setup",
+  "midpoint",
+  "removal",
+  "renewal",
+  "day2",
+  "day5",
+  "day7",
+  "recovery",
+  "reactivate"
+ ],
+ "log": [
+  {
+   "step": "setup",
+   "at": "2026-11-17T08:19:42.907Z",
+   "clock": "clock_1UchbzGnEQDyu3RRdTw6kZ0j",
+   "A": {
+    "stores": 2
+   },
+   "B": {
+    "stores": 1,
+    "apa": true
+   }
+  },
+  {
+   "step": "qa-money-expected:A",
+   "at": "2026-11-17T08:24:57.242Z",
+   "period_start": 1794903569,
+   "period_end": 1797495569,
+   "provider_clock_now": 1796199569,
+   "expected_cents": 2450,
+   "expected_renewal_cents": 19700,
+   "apa_earned_discount_preserved": false
+  },
+  {
+   "step": "midpoint:A",
+   "at": "2026-11-17T08:25:09.212Z",
+   "clock_fraction_remaining": 0.5,
+   "quote_cents": 2450,
+   "invoice_total": 2450,
+   "paid": 2450,
+   "quote_equals_invoice": true,
+   "below_full": true,
+   "state": "activated",
+   "renewal_quoted": 19700
+  },
+  {
+   "step": "qa-money-expected:B",
+   "at": "2026-11-17T08:25:10.730Z",
+   "period_start": 1794903569,
+   "period_end": 1797495569,
+   "provider_clock_now": 1796199569,
+   "expected_cents": 2450,
+   "expected_renewal_cents": 14800,
+   "apa_earned_discount_preserved": true
+  },
+  {
+   "step": "midpoint:B",
+   "at": "2026-11-17T08:25:29.682Z",
+   "clock_fraction_remaining": 0.5,
+   "quote_cents": 2450,
+   "invoice_total": 2450,
+   "paid": 2450,
+   "quote_equals_invoice": true,
+   "below_full": true,
+   "state": "activated",
+   "renewal_quoted": 14800
+  },
+  {
+   "step": "removal",
+   "at": "2026-11-17T08:27:04.567Z",
+   "state": "completed",
+   "renewal_preview_cents": 14800,
+   "removal_effective_at": "2026-12-17T08:19:29+00:00"
+  },
+  {
+   "step": "renewal-resume",
+   "at": "2026-11-17T08:30:15.058Z",
+   "provider_already_advanced": true,
+   "no_provider_mutation_reissued": true
+  },
+  {
+   "step": "automatic:renewal",
+   "at": "2026-11-17T08:30:21.743Z",
+   "delivered": 10,
+   "results": {
+    "evt_1UchjZGnEQDyu3RRoaVREnRI": {
+     "type": "invoice.paid",
+     "receipt": {
+      "event_id": "evt_1UchjZGnEQDyu3RRoaVREnRI",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    },
+    "evt_1UchjVGnEQDyu3RRDZI6pUcS": {
+     "type": "invoice.payment_failed",
+     "receipt": {
+      "event_id": "evt_1UchjVGnEQDyu3RRDZI6pUcS",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    },
+    "evt_1UchjVGnEQDyu3RRFuxkdIXC": {
+     "type": "customer.subscription.updated",
+     "receipt": {
+      "event_id": "evt_1UchjVGnEQDyu3RRFuxkdIXC",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    },
+    "evt_1UchjPGnEQDyu3RRYWhDvtHK": {
+     "type": "customer.subscription.updated",
+     "receipt": {
+      "event_id": "evt_1UchjPGnEQDyu3RRYWhDvtHK",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    },
+    "evt_1UchjOGnEQDyu3RRqR5xfe5v": {
+     "type": "customer.subscription.updated",
+     "receipt": {
+      "event_id": "evt_1UchjOGnEQDyu3RRqR5xfe5v",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    },
+    "evt_1UchjFGnEQDyu3RRN7iSNw6p": {
+     "type": "customer.subscription.updated",
+     "receipt": {
+      "event_id": "evt_1UchjFGnEQDyu3RRN7iSNw6p",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    },
+    "evt_1UchhkGnEQDyu3RRAVuSMCkh": {
+     "type": "customer.subscription.updated",
+     "receipt": {
+      "event_id": "evt_1UchhkGnEQDyu3RRAVuSMCkh",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    },
+    "evt_1UchhiGnEQDyu3RRydGVz3fz": {
+     "type": "invoice.paid",
+     "receipt": {
+      "event_id": "evt_1UchhiGnEQDyu3RRydGVz3fz",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    },
+    "evt_1UchhNGnEQDyu3RRSu8QuLCk": {
+     "type": "customer.subscription.updated",
+     "receipt": {
+      "event_id": "evt_1UchhNGnEQDyu3RRSu8QuLCk",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    },
+    "evt_1UchhMGnEQDyu3RRg2xhLySI": {
+     "type": "invoice.paid",
+     "receipt": {
+      "event_id": "evt_1UchhMGnEQDyu3RRg2xhLySI",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    }
+   }
+  },
+  {
+   "step": "renewal",
+   "at": "2026-11-17T08:30:24.150Z",
+   "A_access": {
+    "state": "grace",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": "2026-12-24T09:19:29+00:00",
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "A_sub": {
+    "status": "past_due",
+    "quantity": 2,
+    "grace_started_at": "2026-12-17T09:19:29+00:00",
+    "grace_invoice_id": "in_1UchjNGnEQDyu3RRR4t8xZqp",
+    "latest_invoice_status": "open"
+   },
+   "B_access": {
+    "state": "active",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": null,
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "notices": [
+    {
+     "notice_kind": "renewal_read_only_warning",
+     "status": "pending",
+     "attempts": 0,
+     "due_at": "2026-12-22T09:19:29+00:00",
+     "provider_message_id": null,
+     "suppression_reason": null,
+     "attention_reason": null
+    },
+    {
+     "notice_kind": "renewal_payment_failed",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-17T09:19:29+00:00",
+     "provider_message_id": "01a1e8a0-ef50-7ce5-b157-e283fb388172",
+     "suppression_reason": null,
+     "attention_reason": null
+    }
+   ],
+   "emails_reserved": 1,
+   "jobs": {
+    "at": "2026-11-17T08:30:22.566Z",
+    "store_operations": {},
+    "lifecycle": {},
+    "removals": {
+     "99cbe279-2a2d-413c-b45e-76ed87b21021": "removed"
+    },
+    "transfers": {},
+    "notices": {
+     "claimed": 1,
+     "sent": 1,
+     "retry": 0,
+     "attention": 0,
+     "blocked": 0,
+     "suppressed": 0
+    }
+   },
+   "A2": {
+    "status": "removed",
+    "ownership_ended_at": "2026-12-17T08:19:29+00:00"
+   }
+  },
+  {
+   "step": "automatic:day2",
+   "at": "2026-11-17T08:30:54.302Z",
+   "delivered": 1,
+   "results": {
+    "evt_1UchmuGnEQDyu3RRghamRWky": {
+     "type": "invoice.payment_failed",
+     "receipt": {
+      "event_id": "evt_1UchmuGnEQDyu3RRghamRWky",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    }
+   }
+  },
+  {
+   "step": "day2",
+   "at": "2026-11-17T08:30:55.168Z",
+   "A_access": {
+    "state": "grace",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": "2026-12-24T09:19:29+00:00",
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "A_sub": {
+    "status": "past_due",
+    "quantity": 2,
+    "grace_started_at": "2026-12-17T09:19:29+00:00",
+    "grace_invoice_id": "in_1UchjNGnEQDyu3RRR4t8xZqp",
+    "latest_invoice_status": "open"
+   },
+   "notices": [
+    {
+     "notice_kind": "renewal_read_only_warning",
+     "status": "pending",
+     "attempts": 0,
+     "due_at": "2026-12-22T09:19:29+00:00",
+     "provider_message_id": null,
+     "suppression_reason": null,
+     "attention_reason": null
+    },
+    {
+     "notice_kind": "renewal_payment_failed",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-17T09:19:29+00:00",
+     "provider_message_id": "01a1e8a0-ef50-7ce5-b157-e283fb388172",
+     "suppression_reason": null,
+     "attention_reason": null
+    }
+   ]
+  },
+  {
+   "step": "automatic:day5",
+   "at": "2026-11-17T08:31:03.449Z",
+   "delivered": 1,
+   "results": {
+    "evt_1Uchn6GnEQDyu3RRBSL5iJF2": {
+     "type": "invoice.payment_failed",
+     "receipt": {
+      "event_id": "evt_1Uchn6GnEQDyu3RRBSL5iJF2",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    }
+   }
+  },
+  {
+   "step": "day5",
+   "at": "2026-11-17T08:31:05.984Z",
+   "A_access": {
+    "state": "grace",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": "2026-12-24T09:19:29+00:00",
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "notices": [
+    {
+     "notice_kind": "renewal_payment_failed",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-17T09:19:29+00:00",
+     "provider_message_id": "01a1e8a0-ef50-7ce5-b157-e283fb388172",
+     "suppression_reason": null,
+     "attention_reason": null
+    },
+    {
+     "notice_kind": "renewal_read_only_warning",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-22T09:19:29+00:00",
+     "provider_message_id": "01a1e8a1-9359-738f-8e1d-9c1a920bc0b2",
+     "suppression_reason": null,
+     "attention_reason": null
+    }
+   ],
+   "emails_reserved": 1,
+   "jobs_notices": {
+    "claimed": 1,
+    "sent": 1,
+    "retry": 0,
+    "attention": 0,
+    "blocked": 0,
+    "suppressed": 0
+   }
+  },
+  {
+   "step": "automatic:day7",
+   "at": "2026-11-17T08:31:14.563Z",
+   "delivered": 1,
+   "results": {
+    "evt_1UchnGGnEQDyu3RR9xbisf1r": {
+     "type": "invoice.payment_failed",
+     "receipt": {
+      "event_id": "evt_1UchnGGnEQDyu3RR9xbisf1r",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    }
+   }
+  },
+  {
+   "step": "day7",
+   "at": "2026-11-17T08:31:21.895Z",
+   "A_access": {
+    "state": "read_only",
+    "origin": "stripe",
+    "read_only": true,
+    "grace_ends_at": "2026-12-24T09:19:29+00:00",
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "A_sub": {
+    "status": "past_due",
+    "quantity": 2,
+    "grace_started_at": "2026-12-17T09:19:29+00:00",
+    "grace_invoice_id": "in_1UchjNGnEQDyu3RRR4t8xZqp",
+    "latest_invoice_status": "open"
+   },
+   "app_quote": {
+    "status": 409,
+    "reason": "account_in_grace"
+   },
+   "sql_new_grant": "denied 42P01",
+   "sql_reads_still_allowed": true,
+   "owner_billing_reachable": true,
+   "notices": [
+    {
+     "notice_kind": "renewal_payment_failed",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-17T09:19:29+00:00",
+     "provider_message_id": "01a1e8a0-ef50-7ce5-b157-e283fb388172",
+     "suppression_reason": null,
+     "attention_reason": null
+    },
+    {
+     "notice_kind": "renewal_read_only_warning",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-22T09:19:29+00:00",
+     "provider_message_id": "01a1e8a1-9359-738f-8e1d-9c1a920bc0b2",
+     "suppression_reason": null,
+     "attention_reason": null
+    }
+   ]
+  },
+  {
+   "step": "automatic:recovery",
+   "at": "2026-11-17T08:36:04.257Z",
+   "delivered": 1,
+   "results": {
+    "evt_1UchrsGnEQDyu3RRYoXrcdCK": {
+     "type": "invoice.paid",
+     "receipt": {
+      "event_id": "evt_1UchrsGnEQDyu3RRYoXrcdCK",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    }
+   }
+  },
+  {
+   "step": "recovery",
+   "at": "2026-11-17T08:36:05.671Z",
+   "invoice_paid": "paid",
+   "A_access": {
+    "state": "active",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": null,
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "A_sub": {
+    "status": "active",
+    "quantity": 2,
+    "grace_started_at": null,
+    "grace_invoice_id": "in_1UchjNGnEQDyu3RRR4t8xZqp",
+    "latest_invoice_status": "paid"
+   },
+   "replay_old_failure": "NOT RUN here: duplicate/reorder requires separately labelled real redelivery, no manual signer",
+   "A_access_after_replay": {
+    "state": "active",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": null,
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "notices": [
+    {
+     "notice_kind": "renewal_payment_failed",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-17T09:19:29+00:00",
+     "provider_message_id": "01a1e8a0-ef50-7ce5-b157-e283fb388172",
+     "suppression_reason": null,
+     "attention_reason": null
+    },
+    {
+     "notice_kind": "renewal_read_only_warning",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-22T09:19:29+00:00",
+     "provider_message_id": "01a1e8a1-9359-738f-8e1d-9c1a920bc0b2",
+     "suppression_reason": null,
+     "attention_reason": null
+    }
+   ],
+   "events_delivered": 1,
+   "ignore": 0
+  },
+  {
+   "step": "reactivate",
+   "at": "2026-11-17T08:37:39.561Z",
+   "operator": "applied",
+   "quote_cents": 3774,
+   "state": "activated",
+   "activated_business_is_original": true,
+   "store": {
+    "id": "99cbe279-2a2d-413c-b45e-76ed87b21021",
+    "status": "active",
+    "reactivated_at": "2026-12-24T11:19:29+00:00"
+   },
+   "owner_history_rows_before_payment": "42501",
+   "owner_history_rows_after_payment": "42501"
+  }
+ ],
+ "forwarded": [
+  "evt_1UchjZGnEQDyu3RRoaVREnRI",
+  "evt_1UchjVGnEQDyu3RRDZI6pUcS",
+  "evt_1UchjVGnEQDyu3RRFuxkdIXC",
+  "evt_1UchjPGnEQDyu3RRYWhDvtHK",
+  "evt_1UchjOGnEQDyu3RRqR5xfe5v",
+  "evt_1UchjFGnEQDyu3RRN7iSNw6p",
+  "evt_1UchhkGnEQDyu3RRAVuSMCkh",
+  "evt_1UchhiGnEQDyu3RRydGVz3fz",
+  "evt_1UchhNGnEQDyu3RRSu8QuLCk",
+  "evt_1UchhMGnEQDyu3RRg2xhLySI",
+  "evt_1UchmuGnEQDyu3RRghamRWky",
+  "evt_1Uchn6GnEQDyu3RRBSL5iJF2",
+  "evt_1UchnGGnEQDyu3RR9xbisf1r",
+  "evt_1UchrsGnEQDyu3RRYoXrcdCK"
+ ],
+ "startedReal": 1794903569,
+ "clock": "clock_1UchbzGnEQDyu3RRdTw6kZ0j",
+ "A": {
+  "customer": "cus_VdzbFhbYulqAOe",
+  "sub": "sub_1Uchc1GnEQDyu3RRyZ7Lns7W",
+  "visa": "pm_1Uchc0GnEQDyu3RRlSkM6Xel",
+  "account": "91bf8e6f-1782-4721-a5a2-c52435336c37",
+  "stores": [
+   {
+    "name": "A1",
+    "id": "589a39d0-8969-4b1c-bd0f-22e23b57a919",
+    "npi": "1630706988"
+   },
+   {
+    "name": "A2",
+    "id": "99cbe279-2a2d-413c-b45e-76ed87b21021",
+    "npi": "1688332711"
+   }
+  ],
+  "R": 1797495569
+ },
+ "B": {
+  "customer": "cus_VdzbotJE2rHxEt",
+  "sub": "sub_1Uchc8GnEQDyu3RR4dPvjODp",
+  "visa": "pm_1Uchc6GnEQDyu3RR9EJgXbxg",
+  "account": "2ecdcb60-633d-4b6a-a4ff-462399a00152",
+  "stores": [
+   {
+    "name": "B1",
+    "id": "8a888060-6e49-4ade-bf81-7e9d82705be1",
+    "npi": "1597894389"
+   }
+  ],
+  "R": 1797495569
+ },
+ "fixture_bootstrap_events": [
+  "evt_1UchcAGnEQDyu3RR3CaeAJXh",
+  "evt_1UchcAGnEQDyu3RRLvQ0sNJa",
+  "evt_1Uchc3GnEQDyu3RRAHwLyVZK",
+  "evt_1Uchc3GnEQDyu3RRfUhqBw8C"
+ ]
+}

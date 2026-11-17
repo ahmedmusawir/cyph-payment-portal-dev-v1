@@ -1,0 +1,143 @@
+{
+  "target": "QA owned local Docker127.0.0.1:55439 only; frozen OwedBook archive",
+  "baseline_ledger": {
+    "n": 60,
+    "last": "0060_billing_reads.sql"
+  },
+  "forward_ledger": {
+    "n": 69,
+    "last": "0069_007b_reactivation_transfer_registration.sql"
+  },
+  "method": "Snapshot all nonempty public/Auth tables through0060; compare every original row on its original column projection after0061–0069. Raw rows and password values never exported.",
+  "checks": [
+    {
+      "table": "auth.schema_migrations",
+      "before_rows": 77,
+      "after_rows": 77,
+      "legacy_rows_unchanged": true,
+      "changed_legacy_columns": [],
+      "backfill_timestamp_only": false,
+      "before_sha256": "7a7f10c2a8427a7512e5420377c68a1f62594c9bd15cefce4ac5e11aad740f72",
+      "after_legacy_sha256": "7a7f10c2a8427a7512e5420377c68a1f62594c9bd15cefce4ac5e11aad740f72",
+      "result": "PASS"
+    },
+    {
+      "table": "auth.users",
+      "before_rows": 17,
+      "after_rows": 17,
+      "legacy_rows_unchanged": true,
+      "changed_legacy_columns": [],
+      "backfill_timestamp_only": false,
+      "before_sha256": "041f4c5153fa546db8ec7d0760ad9a07412b2cfff5d25ec10a9c0b83cbd8ca1d",
+      "after_legacy_sha256": "041f4c5153fa546db8ec7d0760ad9a07412b2cfff5d25ec10a9c0b83cbd8ca1d",
+      "result": "PASS"
+    },
+    {
+      "table": "public.accounts",
+      "before_rows": 3,
+      "after_rows": 3,
+      "legacy_rows_unchanged": true,
+      "changed_legacy_columns": [],
+      "backfill_timestamp_only": false,
+      "before_sha256": "b019ff4d3d10b5a8b6a70729c2b9b5646f40fc163abc75459e8702aaf83a13eb",
+      "after_legacy_sha256": "b019ff4d3d10b5a8b6a70729c2b9b5646f40fc163abc75459e8702aaf83a13eb",
+      "result": "PASS"
+    },
+    {
+      "table": "public.audit_logs",
+      "before_rows": 34,
+      "after_rows": 38,
+      "legacy_rows_unchanged": true,
+      "changed_legacy_columns": [],
+      "backfill_timestamp_only": false,
+      "before_sha256": "5ac5faad38e7933b94100300561c2c918b2a33151541de670fb6cdf902e2d4f6",
+      "after_legacy_sha256": "d803f13db4111bb0e605232106899cc66be3f8f6a26e754238b9ea8733251242",
+      "result": "PASS"
+    },
+    {
+      "table": "public.billing_customers",
+      "before_rows": 2,
+      "after_rows": 2,
+      "legacy_rows_unchanged": true,
+      "changed_legacy_columns": [],
+      "backfill_timestamp_only": false,
+      "before_sha256": "24234cb6285e348f49a3982220be0770a49768f7a3b6e4d646ec9bc7db38d471",
+      "after_legacy_sha256": "24234cb6285e348f49a3982220be0770a49768f7a3b6e4d646ec9bc7db38d471",
+      "result": "PASS"
+    },
+    {
+      "table": "public.businesses",
+      "before_rows": 4,
+      "after_rows": 4,
+      "legacy_rows_unchanged": false,
+      "changed_legacy_columns": [
+        {
+          "id": "a1000000-0000-4000-8000-0000000000a1",
+          "column": "updated_at"
+        },
+        {
+          "id": "a2000000-0000-4000-8000-0000000000a2",
+          "column": "updated_at"
+        },
+        {
+          "id": "b1000000-0000-4000-8000-0000000000b1",
+          "column": "updated_at"
+        },
+        {
+          "id": "c1000000-0000-4000-8000-0000000000c1",
+          "column": "updated_at"
+        }
+      ],
+      "backfill_timestamp_only": true,
+      "before_sha256": "9744c40563ab2782bb53c5cf6e4fe58e878609147bb6cc45d540f50e533c8742",
+      "after_legacy_sha256": "1f7a5a1f1a544a407c932d43de40d393fd46ed3c9c5ba627a6d1c49422149ea9",
+      "result": "PASS with documented backfill updated_at change"
+    },
+    {
+      "table": "public.report_files",
+      "before_rows": 2,
+      "after_rows": 2,
+      "legacy_rows_unchanged": true,
+      "changed_legacy_columns": [],
+      "backfill_timestamp_only": false,
+      "before_sha256": "1a11e942ed974b420947bb9d2f0145e24895d942da20c68e591e132c75f2f22e",
+      "after_legacy_sha256": "1a11e942ed974b420947bb9d2f0145e24895d942da20c68e591e132c75f2f22e",
+      "result": "PASS"
+    },
+    {
+      "table": "public.subscriptions",
+      "before_rows": 2,
+      "after_rows": 2,
+      "legacy_rows_unchanged": true,
+      "changed_legacy_columns": [],
+      "backfill_timestamp_only": false,
+      "before_sha256": "1c142d901b57bab39597698bdcd1257387fd1b198c428951160f9426e681bf37",
+      "after_legacy_sha256": "1c142d901b57bab39597698bdcd1257387fd1b198c428951160f9426e681bf37",
+      "result": "PASS"
+    },
+    {
+      "table": "public.user_businesses",
+      "before_rows": 6,
+      "after_rows": 6,
+      "legacy_rows_unchanged": true,
+      "changed_legacy_columns": [],
+      "backfill_timestamp_only": false,
+      "before_sha256": "71edcb351a434ba8bff21a29b2721e703a83d89d6aed10b141076df0ca379d30",
+      "after_legacy_sha256": "71edcb351a434ba8bff21a29b2721e703a83d89d6aed10b141076df0ca379d30",
+      "result": "PASS"
+    },
+    {
+      "table": "public.user_data",
+      "before_rows": 15,
+      "after_rows": 15,
+      "legacy_rows_unchanged": true,
+      "changed_legacy_columns": [],
+      "backfill_timestamp_only": false,
+      "before_sha256": "8c4bf42c5d3b979e38282370f9b5abbfce74fb825a4246b529906596cb605772",
+      "after_legacy_sha256": "8c4bf42c5d3b979e38282370f9b5abbfce74fb825a4246b529906596cb605772",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS",
+  "report_qualification": "Exact unchanged row sets take precedence; changed-column diagnostics apply only to non-identical rows. Only businesses.updated_at changed, from the explicit0061 identity backfill invoking the pre-existing updated_at trigger; IDs, claims, files, Auth credentials and other legacy data retained."
+}

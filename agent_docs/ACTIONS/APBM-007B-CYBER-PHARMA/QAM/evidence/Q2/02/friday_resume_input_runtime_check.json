@@ -1,0 +1,97 @@
+{
+  "at": "2026-11-17T10:52:41.583Z",
+  "source": "Friday resume message in current conversation, 17 November2026; no new findings disposition",
+  "apps": [
+    {
+      "app": "ob",
+      "exit": 0,
+      "identity": {
+        "base": "http://localhost:3100",
+        "http": {
+          "app": "ob",
+          "revision": "c8a2ed9bbfdf+qa-product",
+          "artifactId": "c7f4a5c0dfca2ec81f5a166a95c0696e"
+        },
+        "manifest": {
+          "app": "ob",
+          "artifact_id": "c7f4a5c0dfca2ec81f5a166a95c0696e",
+          "revision": "c8a2ed9bbfdf+qa-product",
+          "next_build_id": "AjQGExux_Ee0-zJ5HtJC8"
+        },
+        "process": {
+          "pid": 3209772,
+          "cwd": "/tmp/apbm007b-qa-q2-01/proof/ob",
+          "started": "Tue Nov 17 14:10:18 2026",
+          "disk_build_id": "AjQGExux_Ee0-zJ5HtJC8",
+          "build_id_mtime": "2026-11-17T08:08:53.381Z"
+        },
+        "match": true
+      },
+      "production": true,
+      "SCRATCH": true
+    },
+    {
+      "app": "pp",
+      "exit": 0,
+      "identity": {
+        "base": "http://localhost:3101",
+        "http": {
+          "app": "pp",
+          "revision": "427bec6267b9+qa-product",
+          "artifactId": "96225fced4ca5c93096231bc125fbc81"
+        },
+        "manifest": {
+          "app": "pp",
+          "artifact_id": "96225fced4ca5c93096231bc125fbc81",
+          "revision": "427bec6267b9+qa-product",
+          "next_build_id": "ylHyy2fydLEyphq3d9046"
+        },
+        "process": {
+          "pid": 3400261,
+          "cwd": "/tmp/apbm007b-qa-q2-01/proof/pp",
+          "started": "Tue Nov 17 16:26:37 2026",
+          "disk_build_id": "ylHyy2fydLEyphq3d9046",
+          "build_id_mtime": "2026-11-17T08:09:41.040Z"
+        },
+        "match": true
+      },
+      "production": true,
+      "SCRATCH": true,
+      "secret_matches_owned_listener": true
+    }
+  ],
+  "listeners": [
+    {
+      "pid": 3263045,
+      "qa_owned": true,
+      "target": "http://localhost:3101/api/webhooks/stripe"
+    }
+  ],
+  "sandbox_account_matches": true,
+  "heads": {
+    "portal": "61b683ab2aeeb18905666a56feed2d2513b6e6c5",
+    "owedbook": "c8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea"
+  },
+  "private_input_check": {
+    "path": "/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/grouped_director_inputs.json",
+    "file_modified": "2026-11-17T10:01:34.694Z",
+    "links": {
+      "NEW_ADMIN_OB": {
+        "present": false
+      },
+      "NEW_MEMBER_OB": {
+        "present": false
+      },
+      "MEMBER_PP": {
+        "present": false
+      }
+    },
+    "observed_at_present": false,
+    "invitation_observations_present": false,
+    "billing_observations_present": false,
+    "screen_observation_present": false,
+    "credential_or_link_values_printed": false
+  },
+  "dependent_effects_spent": 0,
+  "identity_creation_or_mail": 0
+}

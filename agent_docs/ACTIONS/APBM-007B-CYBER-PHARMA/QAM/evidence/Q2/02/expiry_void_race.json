@@ -1,0 +1,224 @@
+{
+  "done": [
+    "setup",
+    "expiry",
+    "void_race"
+  ],
+  "log": [
+    {
+      "phase": "setup",
+      "at": "2026-11-17T09:42:07.782Z",
+      "clock": "clock_1UcitkGnEQDyu3RR1xFBf7ZT",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "baseline_store": "a8298a96-2316-4193-956a-b7306d9829fc",
+      "isolated_from_retained_F001": true
+    },
+    {
+      "phase": "expected-consent-expiry",
+      "at": "2026-11-17T09:42:08.359Z",
+      "period_start": 1794908513,
+      "period_end": 1797500513,
+      "provider_clock": 1794908513,
+      "expected_cents": 4900,
+      "basis_cents": 4900,
+      "expected_pending": true
+    },
+    {
+      "phase": "confirmed-consent-expiry",
+      "at": "2026-11-17T09:42:25.394Z",
+      "operation": {
+        "id": "d0c91a5f-5e7d-4a50-bce5-f6eb989ac2c2",
+        "state": "payment_pending",
+        "invoice_id": "in_1Uciu1GnEQDyu3RRRDhgB41r",
+        "amount_cents": 4900,
+        "payment_deadline": "2026-11-17T10:11:53+00:00",
+        "npi": "1310430453",
+        "business_id": null
+      }
+    },
+    {
+      "phase": "deadline-minus1",
+      "at": "2026-11-17T09:42:28.826Z",
+      "due_includes_operation": false,
+      "expected": false
+    },
+    {
+      "phase": "at-deadline",
+      "at": "2026-11-17T09:42:30.904Z",
+      "due_includes_operation": true,
+      "expected": true
+    },
+    {
+      "phase": "expiry-minute-worker",
+      "at": "2026-11-17T09:43:42.148Z",
+      "ticks": [
+        {
+          "at": "2026-11-17T09:42:37.057Z",
+          "job": {
+            "status": 200,
+            "body": {
+              "at": "2026-11-17T09:42:31.333Z",
+              "store_operations": {
+                "d0c91a5f-5e7d-4a50-bce5-f6eb989ac2c2": "payment_pending"
+              },
+              "lifecycle": {},
+              "removals": {},
+              "transfers": {},
+              "notices": {
+                "claimed": 0,
+                "sent": 0,
+                "retry": 0,
+                "attention": 0,
+                "blocked": 0,
+                "suppressed": 0
+              }
+            }
+          },
+          "operation": {
+            "state": "payment_pending",
+            "business_id": null
+          },
+          "invoice_status": "open",
+          "amount_paid": 0
+        },
+        {
+          "at": "2026-11-17T09:43:42.148Z",
+          "job": {
+            "status": 200,
+            "body": {
+              "at": "2026-11-17T09:43:40.136Z",
+              "store_operations": {
+                "d0c91a5f-5e7d-4a50-bce5-f6eb989ac2c2": "payment_pending"
+              },
+              "lifecycle": {},
+              "removals": {},
+              "transfers": {},
+              "notices": {
+                "claimed": 0,
+                "sent": 0,
+                "retry": 0,
+                "attention": 0,
+                "blocked": 0,
+                "suppressed": 0
+              }
+            }
+          },
+          "operation": {
+            "state": "payment_pending",
+            "business_id": null
+          },
+          "invoice_status": "open",
+          "amount_paid": 0
+        }
+      ],
+      "expected": "expired_unpaid/void with verified zero paid",
+      "result": "FAIL"
+    },
+    {
+      "phase": "expiry-fixture-forward-close",
+      "at": "2026-11-17T09:43:45.021Z",
+      "status": 200,
+      "state": "expired_unpaid",
+      "invoice_status": "void",
+      "not_a_repair": true
+    },
+    {
+      "phase": "expected-paid-void-race",
+      "at": "2026-11-17T09:43:45.601Z",
+      "period_start": 1794908513,
+      "period_end": 1797500513,
+      "provider_clock": 1794910313,
+      "expected_cents": 4897,
+      "basis_cents": 4900,
+      "expected_pending": true
+    },
+    {
+      "phase": "confirmed-paid-void-race",
+      "at": "2026-11-17T09:43:53.395Z",
+      "operation": {
+        "id": "15c2091e-5a83-437e-a5b7-fc4b79d90d7b",
+        "state": "payment_pending",
+        "invoice_id": "in_1UcivXGnEQDyu3RRXhAlcS5K",
+        "amount_cents": 4897,
+        "payment_deadline": "2026-11-17T10:41:53+00:00",
+        "npi": "1205636123",
+        "business_id": null
+      }
+    },
+    {
+      "phase": "actual-paid-versus-void-outcome",
+      "at": "2026-11-17T09:44:05.457Z",
+      "abandon": {
+        "status": 200,
+        "state": "attention"
+      },
+      "pay": {
+        "status": "paid",
+        "paid": 4897
+      },
+      "operation": {
+        "id": "15c2091e-5a83-437e-a5b7-fc4b79d90d7b",
+        "state": "attention",
+        "business_id": null,
+        "invoice_id": "in_1UcivXGnEQDyu3RRXhAlcS5K",
+        "amount_cents": 4897
+      },
+      "provider_invoice": {
+        "status": "paid",
+        "paid": 4897
+      },
+      "status_http": 200,
+      "expected": "attention/no store",
+      "result": "PASS"
+    },
+    {
+      "phase": "refund-close",
+      "at": "2026-11-17T09:44:11.405Z",
+      "natural_precondition": "attention",
+      "no_forced_state": true,
+      "missing_proof_result": "refused",
+      "apply_without_proof": "refused",
+      "refund_status": "succeeded",
+      "refund_amount": 4897,
+      "expected_full_amount": 4897,
+      "close": "applied",
+      "repeat": "applied",
+      "final": {
+        "state": "closed_refunded_externally",
+        "business_id": null
+      },
+      "hold_statuses": [
+        {
+          "status": "released"
+        }
+      ],
+      "result": "PASS"
+    }
+  ],
+  "start": 1794908513,
+  "clock": "clock_1UcitkGnEQDyu3RR1xFBf7ZT",
+  "customer": "cus_Ve0v0K7v4FPDJq",
+  "visa": "pm_1UcitlGnEQDyu3RRmEryphZP",
+  "sub": "sub_1UcitmGnEQDyu3RRftoi8saR",
+  "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+  "baseline_store": "a8298a96-2316-4193-956a-b7306d9829fc",
+  "expiry": {
+    "id": "d0c91a5f-5e7d-4a50-bce5-f6eb989ac2c2",
+    "state": "payment_pending",
+    "invoice_id": "in_1Uciu1GnEQDyu3RRRDhgB41r",
+    "amount_cents": 4900,
+    "payment_deadline": "2026-11-17T10:11:53+00:00",
+    "npi": "1310430453",
+    "business_id": null
+  },
+  "race": {
+    "id": "15c2091e-5a83-437e-a5b7-fc4b79d90d7b",
+    "state": "payment_pending",
+    "invoice_id": "in_1UcivXGnEQDyu3RRXhAlcS5K",
+    "amount_cents": 4897,
+    "payment_deadline": "2026-11-17T10:41:53+00:00",
+    "npi": "1205636123",
+    "business_id": null
+  },
+  "refund_result": "PASS"
+}

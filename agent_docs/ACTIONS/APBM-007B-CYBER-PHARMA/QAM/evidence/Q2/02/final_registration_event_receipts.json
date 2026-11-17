@@ -1,0 +1,116 @@
+[
+  {
+    "event_id": "evt_1UckKuGnEQDyu3RRPKZSsnIW",
+    "type": "checkout.session.completed",
+    "object_id": "cs_test_a0rkQDGnBU1vNg1twzEMqr3fSBZQCe4i8ppktzEn5WNs9BUe3bCu0VAG7E",
+    "before": {
+      "status": "processed",
+      "error_code": null,
+      "received_at": "2026-11-17T11:14:07.067989+00:00",
+      "processed_at": "2026-11-17T11:14:09.002+00:00"
+    },
+    "provider_resend_exit": null,
+    "after": {
+      "status": "processed",
+      "error_code": null,
+      "processed_at": "2026-11-17T11:14:09.002+00:00"
+    },
+    "delivery_lane": "automatic Stripe CLI only",
+    "result": "PASS"
+  },
+  {
+    "event_id": "evt_1UcinOGnEQDyu3RRCgg66QWy",
+    "type": "checkout.session.completed",
+    "object_id": "cs_test_a0h8cbnB0ZG9rYfB1aCOiwdkjtG22rd1HoVhsS0tXCFUIyt4c3wPWEwfR5",
+    "before": {
+      "status": "processed",
+      "error_code": null,
+      "received_at": "2026-11-17T09:35:25.288402+00:00",
+      "processed_at": "2026-11-17T09:35:31.25+00:00"
+    },
+    "provider_resend_exit": null,
+    "after": {
+      "status": "processed",
+      "error_code": null,
+      "processed_at": "2026-11-17T09:35:31.25+00:00"
+    },
+    "delivery_lane": "automatic Stripe CLI only",
+    "result": "PASS"
+  },
+  {
+    "event_id": "evt_1UckKuGnEQDyu3RRPunNxvpT",
+    "type": "customer.subscription.created",
+    "object_id": "sub_1UckKtGnEQDyu3RRzSsOMNyj",
+    "before": {
+      "status": "processed",
+      "error_code": null,
+      "received_at": "2026-11-17T11:14:07.107245+00:00",
+      "processed_at": "2026-11-17T11:14:09.488+00:00"
+    },
+    "provider_resend_exit": null,
+    "after": {
+      "status": "processed",
+      "error_code": null,
+      "processed_at": "2026-11-17T11:14:09.488+00:00"
+    },
+    "delivery_lane": "automatic Stripe CLI only",
+    "result": "PASS"
+  },
+  {
+    "event_id": "evt_1UcinOGnEQDyu3RRjN4ftewo",
+    "type": "customer.subscription.created",
+    "object_id": "sub_1UcinNGnEQDyu3RRRIn3qrzB",
+    "before": {
+      "status": "processed",
+      "error_code": null,
+      "received_at": "2026-11-17T09:35:25.290194+00:00",
+      "processed_at": "2026-11-17T09:35:34.14+00:00"
+    },
+    "provider_resend_exit": null,
+    "after": {
+      "status": "processed",
+      "error_code": null,
+      "processed_at": "2026-11-17T09:35:34.14+00:00"
+    },
+    "delivery_lane": "automatic Stripe CLI only",
+    "result": "PASS"
+  },
+  {
+    "event_id": "evt_1UckKuGnEQDyu3RRUNwAxt3T",
+    "type": "invoice.paid",
+    "object_id": "in_1UckKrGnEQDyu3RRQqhmNR2Z",
+    "before": {
+      "status": "processed",
+      "error_code": null,
+      "received_at": "2026-11-17T11:14:07.103448+00:00",
+      "processed_at": "2026-11-17T11:14:09.105+00:00"
+    },
+    "provider_resend_exit": null,
+    "after": {
+      "status": "processed",
+      "error_code": null,
+      "processed_at": "2026-11-17T11:14:09.105+00:00"
+    },
+    "delivery_lane": "automatic Stripe CLI only",
+    "result": "PASS"
+  },
+  {
+    "event_id": "evt_1UcinOGnEQDyu3RRxTgNJ1xp",
+    "type": "invoice.paid",
+    "object_id": "in_1UcinLGnEQDyu3RRStHgojpG",
+    "before": {
+      "status": "processed",
+      "error_code": null,
+      "received_at": "2026-11-17T09:35:23.233305+00:00",
+      "processed_at": "2026-11-17T09:35:32.646+00:00"
+    },
+    "provider_resend_exit": null,
+    "after": {
+      "status": "processed",
+      "error_code": null,
+      "processed_at": "2026-11-17T09:35:32.646+00:00"
+    },
+    "delivery_lane": "automatic Stripe CLI only",
+    "result": "PASS"
+  }
+]

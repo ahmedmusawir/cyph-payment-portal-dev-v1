@@ -1,0 +1,13 @@
+{
+  "command": [
+    "node",
+    "scripts/apbm007b/migrate-rehearsal.mjs",
+    "forward",
+    "--db",
+    "<QA-local DB>"
+  ],
+  "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-v1-dev",
+  "exit": 0,
+  "stdout": "{\n \"command\": \"forward\",\n \"target\": \"local-rehearsal\",\n \"startedAt\": \"2026-11-17T08:18:16.680Z\",\n \"committed\": [\n  \"0064_007b_invitations.sql\",\n  \"0065_007b_notices.sql\",\n  \"0066_007b_operator_audit.sql\",\n  \"0067_007b_reads_privileges.sql\",\n  \"0068_007b_identity_compat_fix.sql\",\n  \"0069_007b_reactivation_transfer_registration.sql\"\n ],\n \"status\": \"PASS\",\n \"ledger\": {\n  \"n\": 69,\n  \"last\": \"0069_007b_reactivation_transfer_registration.sql\"\n },\n \"finishedAt\": \"2026-11-17T08:18:16.779Z\"\n}\n",
+  "stderr": ""
+}

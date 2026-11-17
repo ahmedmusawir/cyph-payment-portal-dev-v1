@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-17T11:00:27.691Z",
+  "requests": [
+    {
+      "role": "NEW_ADMIN",
+      "app": "ob",
+      "requested_at": "2026-11-17T11:00:17.371Z",
+      "status": 200,
+      "identity_creation": false
+    },
+    {
+      "role": "NEW_MEMBER",
+      "app": "ob",
+      "requested_at": "2026-11-17T11:00:20.502Z",
+      "status": 200,
+      "identity_creation": false
+    },
+    {
+      "role": "MEMBER",
+      "app": "pp",
+      "requested_at": "2026-11-17T11:00:23.476Z",
+      "status": 200,
+      "identity_creation": false
+    }
+  ],
+  "qualification": "Ordinary app existing-user OTP requests; generic200 is not actual inbox delivery proof. Addresses/links omitted, no identity creation.",
+  "email_attempts_used": 16
+}

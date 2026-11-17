@@ -1,0 +1,42 @@
+{
+  "invoice": {
+    "id": "in_1UcjK3GnEQDyu3RR06WbyVWc",
+    "status": "paid",
+    "attempt_count": 1,
+    "amount_paid": 9900
+  },
+  "subscription": {
+    "stripe_subscription_id": "sub_1UcitmGnEQDyu3RRftoi8saR",
+    "grace_started_at": null,
+    "grace_invoice_id": "in_1UcjGLGnEQDyu3RRtvWLEuNB",
+    "current_period_end": "2027-02-17T09:41:53+00:00",
+    "latest_invoice_id": "in_1UcjK3GnEQDyu3RR06WbyVWc"
+  },
+  "notices": [
+    {
+      "id": "c00364cb-63c7-4e49-976a-656cc445b3a0",
+      "invoice_id": "in_1UcjGLGnEQDyu3RRtvWLEuNB",
+      "notice_kind": "renewal_payment_failed",
+      "status": "sent",
+      "attempts": 1,
+      "suppression_reason": null
+    },
+    {
+      "id": "35c7d141-3708-4dfe-bcfe-50ecb94044d9",
+      "invoice_id": "in_1UcjGLGnEQDyu3RRtvWLEuNB",
+      "notice_kind": "renewal_read_only_warning",
+      "status": "sent",
+      "attempts": 1,
+      "suppression_reason": null
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_1UcjKDGnEQDyu3RRaC5n8YKr",
+      "created": 1794910152,
+      "invoice_status": "open",
+      "attempt_count": 1,
+      "paid": 0
+    }
+  ]
+}

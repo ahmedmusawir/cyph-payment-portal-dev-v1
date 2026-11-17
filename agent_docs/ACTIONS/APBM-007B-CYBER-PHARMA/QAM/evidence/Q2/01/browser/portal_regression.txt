@@ -1,0 +1,48 @@
+
+Running 9 tests using 1 worker
+
+  ✓  1 [apbm007b] › e2e/apbm007b.regression.spec.ts:29:5 › dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action (9.8s)
+  ✓  2 [apbm007b] › e2e/apbm007b.regression.spec.ts:38:5 › handoff Portal → OwedBook keeps the same user; OwedBook → Portal billing returns (9.7s)
+  ✓  3 [apbm007b] › e2e/apbm007b.regression.spec.ts:50:5 › Add Store quote screen: keyboard-only, dark theme, server quote shown, confirm disabled until all three consents (6.0s)
+  ✘  4 [apbm007b-firefox] › e2e/apbm007b.regression.spec.ts:29:5 › dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action (3ms)
+  -  5 [apbm007b-firefox] › e2e/apbm007b.regression.spec.ts:38:5 › handoff Portal → OwedBook keeps the same user; OwedBook → Portal billing returns
+  -  6 [apbm007b-firefox] › e2e/apbm007b.regression.spec.ts:50:5 › Add Store quote screen: keyboard-only, dark theme, server quote shown, confirm disabled until all three consents
+  ✘  7 [apbm007b-webkit] › e2e/apbm007b.regression.spec.ts:29:5 › dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action (3ms)
+  -  8 [apbm007b-webkit] › e2e/apbm007b.regression.spec.ts:38:5 › handoff Portal → OwedBook keeps the same user; OwedBook → Portal billing returns
+  -  9 [apbm007b-webkit] › e2e/apbm007b.regression.spec.ts:50:5 › Add Store quote screen: keyboard-only, dark theme, server quote shown, confirm disabled until all three consents
+
+
+  1) [apbm007b-firefox] › e2e/apbm007b.regression.spec.ts:29:5 › dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action 
+
+    Error: browserType.launch: Executable doesn't exist at /home/moose/.cache/ms-playwright/firefox-1511/firefox/firefox
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/apbm007b.regression-dashbo-3f0b8-s-one-Manage-billing-action-apbm007b-firefox/error-context.md
+
+  2) [apbm007b-webkit] › e2e/apbm007b.regression.spec.ts:29:5 › dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action 
+
+    Error: browserType.launch: Executable doesn't exist at /home/moose/.cache/ms-playwright/webkit-2272/pw_run.sh
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/apbm007b.regression-dashbo-3f0b8-s-one-Manage-billing-action-apbm007b-webkit/error-context.md
+
+  2 failed
+    [apbm007b-firefox] › e2e/apbm007b.regression.spec.ts:29:5 › dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action 
+    [apbm007b-webkit] › e2e/apbm007b.regression.spec.ts:29:5 › dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action 
+  4 did not run
+  3 passed (28.9s)
+

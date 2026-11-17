@@ -1,0 +1,33 @@
+{
+  "at": "2026-11-17T11:07:34.547Z",
+  "apps": [
+    {
+      "app": "ob",
+      "match": true,
+      "production": true,
+      "SCRATCH": true
+    },
+    {
+      "app": "pp",
+      "match": true,
+      "production": true,
+      "SCRATCH": true,
+      "secret_matches": true
+    }
+  ],
+  "listener_target_matches": true,
+  "sandbox_account_matches": true,
+  "supplied_link_fields": [
+    "NEW_ADMIN_OB",
+    "NEW_MEMBER_OB",
+    "MEMBER_PP"
+  ],
+  "ages_seconds": {
+    "NEW_ADMIN": 437,
+    "NEW_MEMBER": 434,
+    "MEMBER": 429
+  },
+  "lifetime_seconds": 3600,
+  "human_source": "Tony supplied three real inbox links in current conversation; stored privately, never repeated or packaged",
+  "other_human_observations": "pending; not inferred from supplied links"
+}

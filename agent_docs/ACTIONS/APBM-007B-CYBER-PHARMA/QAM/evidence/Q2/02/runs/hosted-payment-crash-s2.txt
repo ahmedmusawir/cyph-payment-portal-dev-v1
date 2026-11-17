@@ -1,0 +1,19 @@
+independent_expected_before_confirm {"period_start":1794907161,"period_end":1797499161,"quote_computed_at":"2026-11-17T10:25:46.011Z","expected_cents":4892,"application_helper_used":false}
+quote {"cents":4892,"qty_before":2}
+confirm:client {"http":200,"state":"payment_pending"}
+pending {"state":"payment_pending","hosted_link":true}
+capture:before_kill {"op":"payment_pending","lease_live":null,"invoices":["open"],"charges_ok":0,"qty":2,"stores":0,"scope":0}
+kill:issue {"killStage":"payment_pending (idle server)","out":"{\"stopped\":\"pp\",\"pid\":3344502,\"signal\":\"SIGKILL\",\"at\":\"2026-11-17T10:26:01.873Z\"}"}
+capture:down_immediately {"op":"payment_pending","lease_live":null,"invoices":["open"],"charges_ok":0,"qty":2,"stores":0,"scope":0}
+capture:down_poll {"op":"payment_pending","lease_live":null,"invoices":["paid"],"charges_ok":1,"qty":2,"stores":0,"scope":0}
+hosted:paid_while_down {"paid":true,"portal_listening":false}
+capture:down_settled {"op":"payment_pending","lease_live":null,"invoices":["paid"],"charges_ok":1,"qty":2,"stores":0,"scope":0}
+restart:start {"out":"{\"started\":{\"ob\":3209772,\"pp\":3400261},\"mail\":\"live (private allowlist in memory)\"}"}
+restart:ready {"app":"pp","revision":"427bec6267b9+qa-product","artifactId":"96225fced4ca5c93096231bc125fbc81"}
+recovery:polls {"polls":["10:26:44 200 activated"]}
+capture:after_recovery {"op":"activated","lease_live":null,"invoices":["paid"],"charges_ok":1,"qty":3,"stores":1,"scope":1}
+events:real_CLI_redelivery {"method":"provider events resend → owned Stripe CLI; no manual signer","results":{"evt_1UcjamGnEQDyu3RRSqMmbIg7":{"type":"invoice.paid","delivery_lane":"real provider resend to existing Stripe CLI","manual_signer":false},"evt_1UcjaJGnEQDyu3RRLPH2m3yU":{"type":"invoice.payment_failed","delivery_lane
+jobs {"store_operations":"Not invoked in crash case; expiry driver tests scope-guarded minute jobs separately"}
+capture:final {"op":"activated","lease_live":null,"invoices":["paid"],"charges_ok":1,"qty":3,"stores":1,"scope":1}
+RESULT {"pass":true,"checks":{"killed_while_operation_unfinished":true,"no_access_while_down":true,"recovered_state_activated":true,"exactly_one_invoice":true,"paid_exactly_once":true,"quantity_plus_one_exactly":true,"exactly_one_store_and_membership":true,"replayed_events_added_nothing":true}}
+

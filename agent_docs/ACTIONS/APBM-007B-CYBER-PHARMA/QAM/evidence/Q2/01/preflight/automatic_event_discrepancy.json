@@ -1,0 +1,20 @@
+{
+  "event_id": "evt_1UchcAGnEQDyu3RRLvQ0sNJa",
+  "type": "invoice.paid",
+  "object_id": "in_1Uchc8GnEQDyu3RRER7iIBhE",
+  "created": 1794903582,
+  "receipt": [
+    {
+      "event_id": "evt_1UchcAGnEQDyu3RRLvQ0sNJa",
+      "type": "invoice.paid",
+      "status": "failed",
+      "error_code": "awaiting_mapping",
+      "attempts": 1,
+      "processed_at": null
+    }
+  ],
+  "listener_lines": [
+    "2026-11-17 14:19:42   --> invoice.paid [evt_1UchcAGnEQDyu3RRLvQ0sNJa]",
+    "2026-11-17 14:19:45  <--  [503] POST http://localhost:3101/api/webhooks/stripe [evt_1UchcAGnEQDyu3RRLvQ0sNJa]"
+  ]
+}

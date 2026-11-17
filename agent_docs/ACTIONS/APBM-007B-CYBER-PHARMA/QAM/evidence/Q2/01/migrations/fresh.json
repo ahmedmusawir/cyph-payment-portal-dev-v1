@@ -1,0 +1,7 @@
+{
+  "command": "node scripts/apbm007b/migrate-rehearsal.mjs fresh --db <QA-owned local DB>",
+  "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-v1-dev",
+  "exit": 13,
+  "stdout": "",
+  "stderr": "Warning: Detected unsettled top-level await at file:///home/moose/NEXTJS/CYBER_PHARMA/cyph-v1-dev/scripts/apbm007b/migrate-rehearsal.mjs:76\n  try { receipt.ledger = (await client.query('select count(*)::int n, max(name) last from apbm_migrations.ledger')).rows[0]; } catch { /* absent */ }\n                          ^\n\n\n\n"
+}

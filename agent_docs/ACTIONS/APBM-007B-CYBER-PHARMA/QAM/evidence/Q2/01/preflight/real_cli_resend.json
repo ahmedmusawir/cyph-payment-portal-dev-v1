@@ -1,0 +1,16 @@
+{
+  "event_id": "evt_1UchUMGnEQDyu3RRvLFbpAbv",
+  "command": "stripe events resend evt_1UchUMGnEQDyu3RRvLFbpAbv --confirm (sandbox key private env)",
+  "exit": 0,
+  "before_listener_lines": [
+    "2026-11-17 14:11:39   --> checkout.session.expired [evt_1UchUMGnEQDyu3RRvLFbpAbv]",
+    "2026-11-17 14:11:41  <--  [200] POST http://localhost:3101/api/webhooks/stripe [evt_1UchUMGnEQDyu3RRvLFbpAbv]"
+  ],
+  "after_listener_lines": [
+    "2026-11-17 14:11:39   --> checkout.session.expired [evt_1UchUMGnEQDyu3RRvLFbpAbv]",
+    "2026-11-17 14:11:41  <--  [200] POST http://localhost:3101/api/webhooks/stripe [evt_1UchUMGnEQDyu3RRvLFbpAbv]",
+    "2026-11-17 14:44:59   --> checkout.session.expired [evt_1UchUMGnEQDyu3RRvLFbpAbv]",
+    "2026-11-17 14:45:02  <--  [200] POST http://localhost:3101/api/webhooks/stripe [evt_1UchUMGnEQDyu3RRvLFbpAbv]"
+  ],
+  "new_forward_observed": true
+}

@@ -1,0 +1,35 @@
+{
+  "phase": "Q2",
+  "stop": "STOP-AUTH",
+  "at": "2026-11-17T10:41:19.835089+00:00",
+  "candidate_pair": {
+    "portal": "427bec6267b9777e9cb44f81c22d1396a495bc14",
+    "owedbook": "c8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea"
+  },
+  "missing_permitted_auth_fields": [
+    "links.NEW_ADMIN_OB",
+    "links.NEW_MEMBER_OB",
+    "links.MEMBER_PP"
+  ],
+  "missing_cast_addresses_or_passwords": [],
+  "human_observations": "still blank; invitations, two billing notices, T030",
+  "owner": "Director Tony, same grouped session",
+  "unaffected_work": "continued to completion, named results in execution report; guarded remaining journeys cannot prove real mail without actual inputs",
+  "runtime": "production/SCRATCH verified; own listener only3101; no3001 listener; kept for resume",
+  "safe_resume": "HANDOFFS/QA_NEAR_END_RESUME.md",
+  "counters_preserved": {
+    "reads": 1059,
+    "provider_mutations": 161,
+    "new_identities": 12,
+    "test_clocks": 3,
+    "customers": 6,
+    "subscriptions": 6,
+    "attempted_cents": 332579,
+    "sign_ins": 90,
+    "pay_or_hosted": 20,
+    "email_attempts": 13,
+    "unique_identities": 8,
+    "refunds": 1
+  },
+  "no_repair_rebind_certification": true
+}

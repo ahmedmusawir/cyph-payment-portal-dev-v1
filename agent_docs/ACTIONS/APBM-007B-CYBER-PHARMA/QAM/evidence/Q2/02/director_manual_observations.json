@@ -1,0 +1,55 @@
+{
+  "source": "Director-completed private questionnaire; human observations, separate from automated results",
+  "data": {
+    "observer": "Tony",
+    "observed_at": "2026-11-17T17:27:00+06:00",
+    "invitations": {
+      "NEW_ADMIN": {
+        "received": true,
+        "content_ok": true,
+        "notes": "message of14:35"
+      },
+      "NEW_MEMBER": {
+        "received": true,
+        "content_ok": true,
+        "notes": "message of14:34"
+      },
+      "EXISTING_INVITEE": {
+        "received": true,
+        "content_ok": true,
+        "notes": "message of14:37 and the15:52 resend both seen"
+      }
+    },
+    "billing_notices": {
+      "failure": {
+        "received": true,
+        "deadline_status_link_ok": true,
+        "notes": "to OWNER_A, $148.00, Thu24Dec2026 09:19 UTC, billing link present"
+      },
+      "warning48h": {
+        "received": true,
+        "deadline_status_link_ok": true,
+        "notes": "to OWNER_A, $148.00 still unpaid, Thu24Dec2026 09:19 UTC, billing link present"
+      }
+    },
+    "screens": {
+      "reviewed": true,
+      "notes": "On SIGNED_OUT-pp-_login-375-light and -dark, an orange \"Skip to content\" button is visible over the header and covers the logo. Everything else looked fine to Tony. Pending independent fresh-load/one-Tab investigation on all three engines; not classified by this entry."
+    }
+  },
+  "authentication_links": "omitted; real confirmations already executed",
+  "scope": "Invitations, two original OWNER_A billing notices and static screen review only; does not certify product or waive recorded failures",
+  "independent_screen_followup": {
+    "path": "evidence/Q2/02/skip_link_investigation.json",
+    "cases": 6,
+    "passed": 6,
+    "proposal": "observation: deliberate keyboard-focus state in capture, not reproduced as persistent overlay on fresh load",
+    "new_product_repair": false
+  },
+  "expected_billing_comparison": {
+    "amount_cents": 14800,
+    "deadline_exact_UTC": "2026-12-24T09:19:29.000Z",
+    "displayed_deadline_UTC": "24 Dec2026 09:19 UTC",
+    "Director_notes_agree_with_displayed_minute": true
+  }
+}

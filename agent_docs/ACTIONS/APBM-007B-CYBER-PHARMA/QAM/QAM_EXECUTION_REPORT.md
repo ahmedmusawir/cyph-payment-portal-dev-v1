@@ -1,82 +1,43 @@
-# QAM_EXECUTION_REPORT — `APBM-007B-CYBER-PHARMA` (Q2 attempt `NOT RECORDED — owning seat authors at its phase` / Q4 retest `NOT RECORDED — owning seat authors at its phase`)
+# QAM execution report — Q2 COMPLETE — AWAITING ADJUDICATION
 
-> TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_EXECUTION_REPORT.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §10, §11, §17. **Owner: QA Executor.** Measurements, attempts, stops, helper corrections and limitations. **No self-certification**: this report carries observations and a recommendation, never the verdict.
+Cody,2026-11-17T11:48:09.037760+00:00. Product candidates: Portal427bec6267b9777e9cb44f81c22d1396a495bc14 and OwedBookc8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea, both qa/apbm-007b. Portal QA records execution HEAD61b683ab2aeeb18905666a56feed2d2513b6e6c5 is separate from the tested product SHA. Complete427..61 diff was read; non-doc tree equality and QA-only current changes verified. No product repair/rebind, Git staging/commit/push/merge or deployment. Current approved-plan-plus-record-lines SHA-256 f7e7bc8c48cd6136a8c3b7fcafdc9112575f0e84d99f177c97fc689cabbcf345; reviewed/bound original hashes remain in QAM_APPROVAL.md.
 
-**Executor:** `NOT RECORDED — owning seat authors at its phase` · **Start:** `NOT RECORDED — owning seat authors at its phase` · **End:** `NOT RECORDED — owning seat authors at its phase` · **Working directory:** `NOT RECORDED — owning seat authors at its phase`
+## Outcome and authority
 
-## 1. Entry verification (before the first test)
+All approved Q2 work is finished on the frozen pair under Friday/Tony's release, QL01–10, amended envelope and continuous-current-candidate/no-repair correction. Product failures were findings, not run stops. Earlier actual authority/auth stops were resolved with preserved counters and independent work continued. STOP_REVIEW_01/02 remain immutable history. Friday now adjudicates the complete result set; Cody issues no certificate, retention acceptance or product release verdict.
 
-| Check | Value | Evidence |
-|---|---|---|
-| Approved plan (SHA-256) matches `QAM_APPROVAL.md` §2 | NOT RECORDED | |
-| Current full HEAD on `qa/apbm-007b` | NOT RECORDED | |
-| Product identity (candidate) = approved candidate | NOT RECORDED | |
-| Target identity = approved target | NOT RECORDED | |
-| Director release present (`QAM_APPROVAL.md` §3; for Q4: §4) | NOT RECORDED | |
-| Candidate → HEAD classification from the complete diff (not `--stat`) | NOT RECORDED | |
-| **Q4 only:** repaired candidate identity = the Director's commit receipt; QA Lead retest-scope approval (`QAM_APPROVAL.md` §4) matches `QAM_TEST_PLAN.md` §7; Director Q4 release present | NOT RECORDED | |
-| Changeable readiness rows rechecked (`QAM_PREFLIGHT.md` outcome row) | NOT RECORDED | |
-| Q1 instrument evidence reused (with provenance) / setup repeated | NOT RECORDED | |
+31-AC mapping:23 PASS,4 FAIL (AC004/007/025/030),4 implemented-operator PASS with separate support-documentation FAIL (AC021–024). Six F findings plus one unranked keyboard-focus observation are in FINDINGS.md. No inherited condition is newly waived. Complete results and qualifications are in AC_EVIDENCE_MATRIX.md.
 
-## 2. Execution log (plan order)
+## Independent evidence by layer
 
-| Test ID | AC(s) | Command / steps (working dir) | Started | Result label (PASS · FAIL · BLOCKED · NOT RUN · ADJUDICATE) | Evidence path | Note |
-|---|---|---|---|---|---|---|
-| T-01 | | | | NOT RUN | | |
+- Unit/mocked: Portal482/482 and OwedBook312/312; both type/lint exit0. Additional QA isolated execution of frozen notice dispatcher12/12 with hard zero-network guard tests timeout/unknown/refusal/retry/payload identity. Actual local rollback SQL7/7 tests exclusive claim, bounded backoff, five attempts,23-hour horizon, stale fencing and recovery-first suppression. These are labelled isolated/local, not live external provider outage proof.
+- Migrations: actual local fresh0001–0069 and seeded-through0060 upgrade, injected0064 rollback then forward resume;134/134 SQL checks on fresh and134/134 upgrade, including two-connection races. Focused before/after legacy projections over10 nonempty public/Auth tables preserve all original data, except businesses.updated_at changes from explicit0061 identity backfill invoking the pre-existing trigger. DEV/SCRATCH69 filename/checksum ledgers and catalogue independently match candidate. DEV was read-only ledger/catalogue only. Remote SCRATCH was already migrated; no destructive remote reset/reapply or DEV restore is claimed.
+- Runtime: exact git-archive product production builds in owned disposable lane; OB build AjQGExux_Ee0-zJ5HtJC8 and PP ylHyy2fydLEyphq3d9046. Public served artifact/revision, disk BUILD_ID, PID/cwd/start time and manifests agree. Actual server/client resolve SCRATCH and expected sandbox; exact8-address mail allowlists. Owned listener only3101, private signing secret matched and real forwarded receipts200. Wrong-artifact identity poison rejected. Director3000/3001/3457 untouched.
+- Browser regression: final Portal9/9 across Chromium/Firefox/WebKit. Missing initial browser binaries/setup attempts preserved. OB staff original Chromium/Firefox4 checks PASS; unchanged WebKit repeats FAIL/PASS/FAIL, no timeout edits/hidden retries. Corrected actual375/1440 stored light/dark visual24 states plus error/reverse-handoff26/26. Real fresh-recipient owedbook/staff rendered destinations also verified.
+- Owner/tenant/role: actual six existing QA roles plus signed-out API131/131; fresh recipients40/40; six actual user-JWT direct RLS/billing/clock checks18/18 and fresh actual-JWT checks10/10. Fresh admin/member own-store cases2/2: only B1 before later purchase, data reads allowed, admin staff form/list allowed, member staff list denied, both billing/add denied for B account. Their real OB→PP handoffs verified subjects and supplied actual PP sessions, reused for purchase without extra sign-in. Memberships are evaluated per account as fixtures evolve, never from an old cast label.
+- Independent money: QA contract integer formula using provider periods recorded before observations; ordinary and APA midpoint2450 matched quote/paid invoice, new-store4900 basis with earned APA benefit retained.50c allowed,49c refused with no invoice/balance; common add/removal/undo end-guard sides covered. Actual removal preview and next real invoices verify no credit/proration, paid access to cutoff and next-period quantity. Undo/last-store refusal and whole-account cancel/undo preserve quantity≥1 and owner billing.
+- Decline/3DS and idempotency: failed additional payment leaves existing access healthy/no renewal grace or notices; verified unpaid abandon ends void/no new store. Hosted challenge actually completed. Timely S1 hard-kill at durable pay intent and S2 hard-kill at payment_pending with hosted3DS payment while Portal down both PASS8/8: no prepay store/membership/scope, one invoice/one successful charge, restart recovery, quantity+1, one store/membership; genuine paid/failure event redelivery adds nothing.
+- Deadline failures: F001 real provider/SQL paid_at exceeds consent deadline but restart/poll activates and quantity4→5. Store93632de4-1ae4-4191-9a02-9381d84fbb2a retained; final provider read amount_refunded0. F004 unpaid invoice remained open/payment_pending after SQL due and two real minute-spaced jobs at test-clock expiry. Explicit owner abandon afterward voided it, no repair. Actual paid/void race naturally produced attention/no store; approved one full4897c sandbox refund and exact operator proof close/repeat PASS, closed_refunded_externally and exact hold released. No forced paid state and no refund of F001.
+- Invitations/admin: actual new admin/member sends grant no membership. Real inbox links from Tony: GET no grant, forged CSRF403 preserves context, explicit POST, deliberate old-user switch, then exact recipient browser acceptance200 and owedbook destination; B1 admin/member only, incumbent becomes member, account owner unchanged and one admin. Existing invitee accepted with original Auth/password preserved. Wrong/altered/expired/revoked/replayed invitations denied, actual61s resend/cooldown/dedupe; five-attempt exhaustion is an explicitly seeded fixture after two actual sends, not five sends. Real existing-actor B2 demote/remove/stale-incumbent/last-admin7/7 and actual old-JWT immediate revocation, including read-only reduction.
+- Transfer/history: real seller2→1 authorize/cutoff, exact buyer reservation, actual decline no buyer access then paid9900. Correct existing-owner email-proof gate held attention until actual Portal confirmation; afterSignIn resumed normal provisioning. Final12/12 verifies successor new business/same permanent pharmacy ID, one current ownership, buyer source RPC denied and history404, buyer own rows0 seller history, source seller readonly200, original claims/report-file IDs retained and buyer dashboard rendered. Pre-effective cancel returns2→1→2; email-only new-registration authorization correctly refused for an already owning buyer. Later S1/S2 each legitimately add a seller store, so final seller3 is not compared incorrectly to pre-transfer2. Seller history screen was not built; approved W6 data/API path per QL09 used. Paid same-owner re-add restored original record and2 retained rows through approved owedbook RPC. Operator reactivation alone grants no access/quantity.
+- Recovery/audit: exact owner-replace uses an eligible confirmed QA MEMBER with no owned account, temporary declared nonexistent-customer mapping causes provider failure after committed owner change, durable audit reports failed, binding restored in finally, retry completes provider step, owner restored. Other memberships and paid-buyer proof gate preserved; no new identities/mail. First invalid fault fixture was correctly constraint-rejected with binding unchanged. Shared_operator_v1 plus declared actor/reason/ticket is honest; not individual authentication. Authenticated update/delete audit denial42501 tested in rollback. Support procedure review is distinct: F006 required executable per-action runbook missing despite typed CLI help.
+- Renewal/notices: actual provider-clock renewal failure→normal grace→warning→day7 read-only→same-invoice recovery, with new grants denied and owner billing reachable. Same old user JWT loses access immediately on member removal. Actual duplicate minute jobs send no extra notice. Recovery before failure scheduling sends nothing and genuine stale-failure redelivery leaves active; original driver requiring two suppressed rows was overstrict, follow-up chronology retained.
+- Real transport:36 actual paid/failure events seen in owned listener,30 forwarded200/processed,14 failed-payment events200; prebinding/foreign/unfinished cases qualified. Final6 E/G registration events all processed automatically, no extra redelivery. Earlier owned listener outage followed by genuine provider resend and paid-event duplicates labelled. Forged/mutated/stale/wrong-secret/live/wrong-account negatives7/7 are controlled lane only; no controlled-signed positive is called automatic delivery. Transport receipts alone are not claimed causal proof when synchronous/poll recovery activated first.
+- Actual notices/human: Tony's private questionnaire observed at2026-11-17T17:27:00+06:00 confirms all3 original invitations, existing resend, both OWNER_A notices with14800c amount, displayed Thu24Dec2026 09:19 UTC deadline and Portal billing link. Provider receipts and human inbox/content are separate. Deadline exact09:19:29Z is rendered to minute, matching human notes. Tony reviewed screens and reported skip-link overlap. Independent fresh-load/firstTab/activation6/6 across3engines2themes finds hidden at rest, focus-visible on Tab, Enter focuses main then hides. Prior screenshots intentionally pressed Tab: O001 proposed observation/capture focus state, not a newly reproduced persistent overlay. Two signed-out empty-form comparison images were visually privacy-reviewed and selected; all other private images excluded. F002/F005 remain.
+- Actual client bundles: poison/clean controls23/23 plus server-secret/private-value scans PASS; OB exact approved baseline auth-js generateLink library-name exception only. No general scan bypass. Export process duties are additional to product AC031.
 
-Labels are observations, not release decisions. Where governing vocabulary differs (e.g. UNTESTED, PASS-PENDING-ADJUDICATION), the mapping is stated once here: `NOT RECORDED — owning seat authors at its phase`.
+## Instruments, limits and inherited qualifications
 
-## 3. Helper corrections (instrument repairs within the QA lane)
+F003 historical pre-reservation timing issues remain as Friday accepted/disclosed; no counter reset/reclaim. QA-only table/route/201, network-idle/HttpOnly/theme/handoff-direction assumptions corrected with failed attempts retained. Later stale in-memory session persistence overwrote a new cache entry; real sessions stayed valid, were restored only after provider expected-subject validation, affected40-case matrix rerun PASS, no replacement sign-in. No product change. Direct-read numbers are instrumented/reserved requests rather than a complete internal network trace.
 
-| # | Helper | Failed attempt preserved at | Correction | Verified corrected instrument how | Assertion weakened? (must be No) |
-|---|---|---|---|---|---|
-| none | | | | | |
+Final monotonic counters: {"reads": 1268, "provider_mutations": 166, "new_identities": 12, "test_clocks": 3, "customers": 7, "subscriptions": 7, "attempted_cents": 342479, "sign_ins": 95, "pay_or_hosted": 21, "email_attempts": 16, "unique_identities": 8, "refunds": 1}. Provider166/240, normal ceiling220 with last20 cleanup untouched; customers7/12, subscriptions7/12, clocks3/3, pay/hosted21/32, attempted/reserved342479/500000c, sign-ins95/96, creation attempts12/14, unique8/10, email attempts16/40 (active≤32, last8 cleanup), refund1/1. All8 aliases route to the controlled inbox; identities separate from DEV/Engineering cast. Attempted/reserved cents include failed/uncertain/repeated collection slots and are not net paid spend. No E2 ceiling or spent allowance borrowed.
 
-## 4. Stops
+U1/U2/U3 and existing007A certificate limitations remain Director-accepted, not QA-certified. Local migration/SQL fault rehearsal is not a claim of a remote DEV restore or repeated remote Scratch reset. Historical first-pass ledger94-ID/DEV0 source is not a new global QA clean claim. Contract manifest hash record correction is deferred to closeout and does not gate Q2 per Friday; current append-only repository rulings govern.
 
-| Stop ID (`STOP-*`) | Phase / time | Identity | Affected checks | Evidence | Owner | Required resolution | Safe resume point | Resolved? |
-|---|---|---|---|---|---|---|---|---|
-| none | | | | | | | | |
+## Phase exit and next owner
 
-## 5. Human checks and Director touches (declared beforehand; counted)
+Actual phase-exit evidence phase_exit_processes.json: owned OB3209772/PP3400261, listener3263045 and the two named local DB/Auth containers stopped;3100/3101 unbound, no owned listener alive, Director3000/3001/3457 PIDs unchanged. No remote Scratch/sandbox/Auth deletion, context disable, refund or fixture cleanup performed during exit. Every fixture retained, including protected unrefunded F001. Local containers/data/builds and private0700/0600 inputs/auth states retained pending Friday's explicit retention decision; tracked browser contexts closed. Routine process hygiene is not formal cleanup acceptance. Tony has been told his listener can restart.
 
-| # | Purpose | Declared in plan? | When requested | Count |
-|---|---|---|---|---|
-| | | | | 0 |
+Next: Friday adjudicates all six F findings and O001 together, issues verdict and any bounded repair/retest/retention instructions. No repair work order, certificate, deployment or staging Gate D release composed by Cody. Native public HTTPS webhook retry/outage, deployed revision binding, real staging Auth redirects/security and rollback readiness remain GD001 NOT RUN. Individual production operator sign-in remains a prerequisite; shared staging credential is not individual attribution.
 
-Actual sign-in counts per role: NOT RECORDED.
-
-## 6. Remaining untested areas
-
-| AC / area | Reason | Owner |
-|---|---|---|
-| | | |
-
-## 7. Final identities and inventory
-
-| Field | Value |
-|---|---|
-| HEAD at end (unchanged from entry?) | NOT RECORDED |
-| `git status --porcelain` at end (only QA-lane paths dirty) | NOT RECORDED |
-| Final changed-file inventory (QA lane) | NOT RECORDED |
-| Evidence inventory | `evidence/README.md` inventory table |
-| Package | `HANDOFFS/APBM-007B-CYBER-PHARMA_Q2_REVIEW_NOT RECORDED — owning seat authors at its phase.zip` SHA-256 NOT RECORDED |
-
-## 8. Metrics (playbook §17; measured separately)
-
-| Measure | Value |
-|---|---|
-| Preparation (Architect) | NOT RECORDED |
-| Q1 | NOT RECORDED |
-| Review / wait | NOT RECORDED |
-| Q2 execution | NOT RECORDED |
-| Packaging | NOT RECORDED |
-| Repair (if any) | NOT RECORDED |
-| Cleanup | NOT RECORDED |
-| Director touches by purpose · helper corrections · product repairs · stops · retries · skipped checks · remaining gaps | NOT RECORDED |
-
-## 9. Summary for the QA Lead (no verdict)
-
-Totals by label: NOT RECORDED. Findings by proposed class: see `FINDINGS.md`. Recommendation (supporting evidence only; the verdict is the QA Lead's): NOT RECORDED. Decision requested: adjudicate `FINDINGS.md` and the `AC_EVIDENCE_MATRIX.md`.
-
-*TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*
+The indexed Q2_REVIEW_01 contains a pre-export state snapshot and excludes credentials/token URLs/cookies/raw private logs/other images/builds/dependencies/old ZIPs. Pattern, actual-value and expanded archive checks plus exact membership/hash/CRC validation are recorded by the exporter; completed ZIP hash lives only in its external receipt and subsequent live state.

@@ -17,19 +17,19 @@
 
 | Item | Done at Q1 exit | Done at Q2 exit | Done at Q4 exit (if Q4 ran) | Evidence |
 |---|---|---|---|---|
-| Owned browsers closed | NOT RECORDED | NOT RECORDED | NOT RECORDED | |
-| Owned QA servers / processes stopped | NOT RECORDED | NOT RECORDED | NOT RECORDED | |
-| Declared transient auth state removed | NOT RECORDED | NOT RECORDED | NOT RECORDED | |
+| Owned browsers closed | NOT RECORDED | PASS tracked contexts closed | NOT RECORDED | AUTOMATION/Q2 driver finally/close paths and exit receipts; no unrelated browser killed |
+| Owned QA servers / processes stopped | NOT RECORDED | PASS | evidence/Q2/02/phase_exit_processes.json; own3100/3101, listener, local DB/Auth only; Director PIDs unchanged |
+| Declared transient auth state removed | NOT RECORDED | RETAINED PRIVATE under current fixture-hold instruction; browser contexts closed | NOT RECORDED | No remote Auth revocation/identity deletion; private0600 states retained until Friday retention ruling |
 
 ## 2. Credential and auth-state cleanup (Executor; sequence matters; record the actual order)
 
 | Step | Action | Result | Evidence |
 |---|---|---|---|
-| 1 | Value scan of retained outputs **while the credential source still exists** (scanner validated with a synthetic fixture and a clean control) | NOT RUN | |
-| 2 | Resolve / quarantine actual leaks without publishing them (safe counts and locations only) | NOT RUN | |
-| 3 | Delete `.env.qa.local` and owned auth state under the declared authority | NOT RUN | |
-| 4 | Verify removal (already absent = verified absent, not newly deleted) | NOT RUN | |
-| 5 | Pattern-scan retained outputs and the final export | NOT RUN | |
+| 1 | Value scan of retained outputs **while the credential source still exists** (scanner validated with a synthetic fixture and a clean control) | PASS pre-export selected QA source/evidence;82 private values checked in memory; gate repeated for final export | EXPORT_VALIDATION.json; exporter external receipt |
+| 2 | Resolve / quarantine actual leaks without publishing them (safe counts and locations only) | No hits in selected export; raw private logs/auth states excluded under0700/0600 | EXPORT_VALIDATION.json; private_retention_modes.json |
+| 3 | Delete `.env.qa.local` and owned auth state under the declared authority | NOT RUN — retained under current Friday fixture-hold instruction | phase_exit_processes.json; no final retention/cleanup ruling yet |
+| 4 | Verify removal (already absent = verified absent, not newly deleted) | Not removed; private0700/0600 presence verified | evidence/Q2/02/private_retention_modes.json |
+| 5 | Pattern-scan retained outputs and the final export | PASS pre-export selected QA source/evidence; final staged/expanded gate required by exporter | EXPORT_VALIDATION.json and external receipt |
 
 Do not preserve credential values or their hashes as evidence. After deletion, do not claim a new value scan happened; record the actual sequence and the earlier source hashes of the scan reports.
 
@@ -55,3 +55,9 @@ Do not preserve credential values or their hashes as evidence. After deletion, d
 | Released to Architect closeout (recorded in `QAM_CERTIFICATION.md` §4) | NOT RECORDED | QA Lead |
 
 *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*
+
+### Cody Q2 phase-exit execution record
+
+Friday/Director's current release explicitly requires stopping only owned apps/listener/local containers and keeping every Scratch/sandbox/identity fixture, including F001, until retention is ruled. Executed process hygiene only; phase_exit_processes.json all_owned_stopped=true, Director ports/PIDs unchanged, remote/provider/Auth fixture mutations0. Containers stopped and data kept; no SQL context disable, provider deletion or further refund. Protected F001 verified amount_refunded0 in fixture_inventory.json.
+
+Credential/auth-state final removal and formal cleanup sequence in section2 remain NOT RUN pending owning-seat authority; their existing Decision/Acceptance fields remain unfilled. Actual-value and pattern scans of selected retained QA outputs/export performed while private sources exist, with poison/clean controls; exporter validation supplies safe counts/locations only, no credential hashes. Raw private logs/states remain0700/0600, excluded from archive. This entry is an execution record, not retention decision, cleanup acceptance or certificate.

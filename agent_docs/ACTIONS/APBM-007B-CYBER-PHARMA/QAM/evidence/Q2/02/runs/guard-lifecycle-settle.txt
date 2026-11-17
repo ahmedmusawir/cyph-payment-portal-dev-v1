@@ -1,0 +1,10 @@
+{"name":"expected-before-next-invoice","billable_stores":3,"expected_cents":19700,"source":"9900+4900*(3-1)","paid_access_before":4}
+{"name":"renewal-resume","clock_already_advanced":true,"prior_19700_attempt_reservation_preserved":true}
+{"name":"invoice-not-yet-finalized","status":"draft","amount_paid":0,"not_graded_as_price_failure":true}
+{"name":"next-real-invoice","invoice_id":"in_1UcilxGnEQDyu3RRnkwDXODE","amount_paid":19700,"expected_cents":19700,"quantity":3,"proration_lines":0}
+{"name":"await-automatic-renewal-mirror","polls":[{"at":"2026-11-17T09:35:56.114Z","current_period_start":"2026-12-17T09:32:36+00:00","latest_invoice_status":"paid"}]}
+{"name":"ordinary-removal-data-kept-no-archive","store":{"id":"df6b8514-8cc2-4341-a05c-552e4674f919","status":"removed"},"original_claim_retained":true,"history_status":404,"jobs":{"at":"2026-11-17T09:35:58.658Z","store_operations":{},"lifecycle":{},"removals":{"df6b8514-8cc2-4341-a05c-552e4674f919":"removed"},"transfers":{},"notices":{"claimed":0,"sent":0,"retry":0,"attention":0,"blocked":0,"suppressed":0}}}
+{"name":"schedule-third-store","status":200,"state":"completed","expected_status":200}
+{"name":"last-store-no-zero","status":409,"error":"last_store","quantity":1,"expected_quantity":1,"owner_recovery_billing":200}
+Guard/removal/last-store phases complete
+

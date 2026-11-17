@@ -1,0 +1,58 @@
+{
+  "source_business_id": "214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6",
+  "permanent_pharmacy_id": "ccd5af0d-bb7c-4410-9a50-973db650dd26",
+  "transfer": {
+    "id": "bdd1c52a-0072-4d25-8fc0-03bb20789b52",
+    "status": "authorized",
+    "effective_at": "2026-11-17T09:25:52.791+00:00",
+    "buyer_account_id": null,
+    "buyer_business_id": null
+  },
+  "claims_before": [
+    {
+      "id": "4d9b529d-a18c-4d99-89af-5bda968d7a96",
+      "business_id": "214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6",
+      "drug_name": "E SELLER HISTORY 1",
+      "owed": 10
+    },
+    {
+      "id": "6afb610c-cf44-4f33-8d7a-23a74bb5e1d5",
+      "business_id": "214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6",
+      "drug_name": "E SELLER HISTORY 2",
+      "owed": 10
+    }
+  ],
+  "file_before": {
+    "id": "64a46ead-6acb-4f44-89c2-eef94ad90c71",
+    "business_id": "214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6",
+    "file_name": "QA-TRANSFER-HISTORY.csv"
+  },
+  "authority_negatives": [
+    {
+      "action": "sql",
+      "status": 409,
+      "result": "refused",
+      "error": "unknown_action"
+    },
+    {
+      "action": "store-transfer-authorize",
+      "status": 409,
+      "result": "refused",
+      "error": "sourceBusinessId_required_exact_uuid"
+    },
+    {
+      "action": "store-admin-set",
+      "status": 409,
+      "result": "refused",
+      "error": "actor_reason_ticket_required"
+    }
+  ],
+  "duplicate_authorization": {
+    "result": "refused",
+    "reason": "source_not_live",
+    "quantity_before": 1,
+    "quantity_after": 1,
+    "unchanged": true
+  },
+  "fixture": "two synthetic claims plus one file, original IDs required to remain unchanged"
+}

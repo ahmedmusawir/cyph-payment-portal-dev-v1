@@ -1,0 +1,140 @@
+{
+ "label": "qa-a01-transfer",
+ "done": [
+  "seed",
+  "authorize",
+  "complete",
+  "register",
+  "deliver",
+  "verify"
+ ],
+ "log": [
+  {
+   "step": "seed",
+   "at": "2026-11-17T09:24:22.790Z",
+   "source_store": "214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6",
+   "seller_history_rows": 2,
+   "seller_quantity_before": 2
+  },
+  {
+   "step": "authorize",
+   "at": "2026-11-17T09:24:26.179Z",
+   "plan": "planned",
+   "apply": "applied",
+   "refusal": null,
+   "transfer_status": "authorized",
+   "seller_quantity_after": {
+    "before": 2,
+    "after": 1
+   }
+  },
+  {
+   "step": "complete",
+   "at": "2026-11-17T09:27:56.344Z",
+   "operator": "applied",
+   "finalize": "transferred",
+   "refusal": null,
+   "transfer": {
+    "status": "buyer_reserved",
+    "buyer_account_id": null,
+    "buyer_business_id": null
+   },
+   "npi_holds": [
+    "transfer_held"
+   ],
+   "source_store": {
+    "status": "transferred",
+    "ownership_ended_at": "2026-11-17T09:25:52.791+00:00"
+   }
+  },
+  {
+   "step": "qa-first-store-expected",
+   "at": "2026-11-17T09:27:58.021Z",
+   "expected_cents": 9900,
+   "currency": "usd",
+   "source": "approved graduated first-store catalogue, no promotion"
+  },
+  {
+   "step": "register",
+   "at": "2026-11-17T09:35:56.988Z",
+   "due_today": "$99.00",
+   "checkout": {
+    "status": "complete",
+    "payment_status": "paid",
+    "amount_total": 9900,
+    "currency": "usd"
+   },
+   "returned_to": "/register/activation",
+   "heading": null,
+   "note": "first browser run reached Checkout and stopped before card entry (card choice not yet rendered); the same session was completed once by e-checkout-complete.mjs"
+  },
+  {
+   "step": "deliver",
+   "at": "2026-11-17T09:37:49.133Z",
+   "checkout_status_before": "attention",
+   "events": 3,
+   "results": {
+    "evt_1UcinOGnEQDyu3RRCgg66QWy": {
+     "type": "checkout.session.completed",
+     "receipt": {
+      "event_id": "evt_1UcinOGnEQDyu3RRCgg66QWy",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    },
+    "evt_1UcinOGnEQDyu3RRjN4ftewo": {
+     "type": "customer.subscription.created",
+     "receipt": {
+      "event_id": "evt_1UcinOGnEQDyu3RRjN4ftewo",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    },
+    "evt_1UcinOGnEQDyu3RRxTgNJ1xp": {
+     "type": "invoice.paid",
+     "receipt": {
+      "event_id": "evt_1UcinOGnEQDyu3RRxTgNJ1xp",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0
+     },
+     "delivery_lane": "automatic Stripe CLI"
+    }
+   },
+   "checkout_status_after": "attention",
+   "other_recent_ops": 5
+  },
+  {
+   "step": "verify",
+   "at": "2026-11-17T09:37:49.651Z",
+   "transfer_status": "buyer_reserved",
+   "buyer_business_is_new": false,
+   "same_pharmacy_identity": false,
+   "buyer_scope_excludes_source": false,
+   "buyer_read_of_source_store": "ALLOWED rows=undefined",
+   "buyer_sees_seller_history_in_own_store": false,
+   "buyer_own_store_rows": 0,
+   "seller_quantity": {
+    "before": 2,
+    "now": 1
+   },
+   "checkout_operation": null
+  }
+ ],
+ "src": {
+  "id": "214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6",
+  "npi": "1198471405",
+  "pharmacy_id": "ccd5af0d-bb7c-4410-9a50-973db650dd26",
+  "pharmacy_name": "QA seller transfer store"
+ },
+ "qtyBefore": 2,
+ "transfer": "bdd1c52a-0072-4d25-8fc0-03bb20789b52",
+ "effectiveAt": "2026-11-17T09:25:52.791Z",
+ "registerHeading": null,
+ "checkoutOp": "69b001d2-e33f-4ba3-bd23-74a5c10a6bb1",
+ "customer": "cus_Ve0hHqFExjMSdp"
+}

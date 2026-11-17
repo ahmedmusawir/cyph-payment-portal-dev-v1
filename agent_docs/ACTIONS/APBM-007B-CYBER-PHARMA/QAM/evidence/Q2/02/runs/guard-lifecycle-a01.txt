@@ -1,0 +1,18 @@
+{"name":"setup","account":"fd478c52-4c94-413e-86a9-a0e7cf36dd19","clock":"clock_1UcikjGnEQDyu3RRyDjN9as0","quantity":3,"period_start":1794907956,"period_end":1797499956,"boundary_seconds":26185,"fixture_only":true}
+{"name":"expected-before-50","now":1797473771,"remaining":26185,"expected_cents":50,"add":"allowed","removal":"allowed","undo":"allowed","source":"QA contract arithmetic before request"}
+{"name":"removal-allowed50","status":200,"state":"completed","expected_status":200}
+{"name":"undo-allowed50","status":200,"state":"completed","expected_status":200}
+{"name":"removal-again50","status":200,"state":"completed","expected_status":200}
+{"name":"exact50-paid","expected_cents":50,"quote_cents":50,"invoice_paid":50,"total":50,"state":"activated"}
+{"name":"expected-before-49","remaining":26184,"expected_cents":49,"all_three_actions":"refused with no new invoice/balance"}
+{"name":"removal-refused49","status":409,"error":"below_minimum_charge","expected_status":409}
+{"name":"undo-refused49","status":409,"error":"below_minimum_charge","expected_status":409}
+{"name":"under-minimum","quote_status":409,"error":"below_minimum_charge","no_new_invoice":true,"no_balance":true}
+{"name":"boundary-5401","expected":"common guard refuses; hypothetical price already below50","quote":409,"removal":409,"undo":409,"quote_error":"below_minimum_charge"}
+{"name":"boundary-5400","expected":"common guard refuses; hypothetical price already below50","quote":409,"removal":409,"undo":409,"quote_error":"below_minimum_charge"}
+{"name":"boundary-5399","expected":"common guard refuses; hypothetical price already below50","quote":409,"removal":409,"undo":409,"quote_error":"period_end_window"}
+{"name":"boundary-1","expected":"common guard refuses; hypothetical price already below50","quote":409,"removal":409,"undo":409,"quote_error":"period_end_window"}
+{"name":"expected-before-next-invoice","billable_stores":3,"expected_cents":19700,"source":"9900+4900*(3-1)","paid_access_before":4}
+{"name":"next-real-invoice","invoice_id":"in_1UcilxGnEQDyu3RRnkwDXODE","amount_paid":0,"expected_cents":19700,"quantity":3,"proration_lines":0}
+
+renewal amount

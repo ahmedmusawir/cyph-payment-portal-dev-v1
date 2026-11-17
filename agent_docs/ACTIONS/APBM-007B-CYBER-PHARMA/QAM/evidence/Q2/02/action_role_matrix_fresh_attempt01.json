@@ -1,0 +1,16 @@
+{
+  "fixture": "Actual app/API customer credentials; existing roles may own distinct billing accounts after fixture setup. All foreign-target IDs belong to A. Unsent SQL-only recipient fixture; no actual SMTP or Auth creation. Authorized mutations covered by named live scenarios, skipped here to protect fixtures.",
+  "observations": [
+    {
+      "role": "NEW_ADMIN",
+      "action": "A3",
+      "app": "pp",
+      "method": "GET",
+      "target": "caller-owned account only",
+      "expected": "403",
+      "status": 403,
+      "error_code": "not_owner",
+      "result": "PASS"
+    }
+  ]
+}

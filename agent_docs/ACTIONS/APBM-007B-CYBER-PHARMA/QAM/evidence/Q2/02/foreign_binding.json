@@ -1,0 +1,22 @@
+{
+  "account_id": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+  "stages": [
+    "customer",
+    "visa",
+    "default_card",
+    "subscription",
+    "scratch_binding"
+  ],
+  "customer": "cus_Ve0Z5kYb2AIQYm",
+  "visa": "pm_1UciXsGnEQDyu3RRQG1alGK8",
+  "default_card": "cus_Ve0Z5kYb2AIQYm",
+  "subscription": "sub_1UciXtGnEQDyu3RR69YGmVyL",
+  "transfer_source_store": {
+    "id": "214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6",
+    "npi": "1198471405",
+    "pharmacy_id": "ccd5af0d-bb7c-4410-9a50-973db650dd26"
+  },
+  "actual_quantity": 2,
+  "initial_paid_cents": 14800,
+  "fixture_qualification": "Direct SCRATCH fixture binding after actual provider subscription; not first-store product provisioning proof"
+}

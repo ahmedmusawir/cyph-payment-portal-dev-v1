@@ -1,0 +1,24 @@
+{
+  "fixture_correction": "ordinary removal deleted memberships; paid re-add reinstated owner as admin. Prior last-admin assertion used stale alias; preserved as instrument attempt, not product failure.",
+  "unauthorized_status": 404,
+  "missing_actor_result": "refused",
+  "dry_run_result": "planned",
+  "apply_result": "applied",
+  "one_admin": true,
+  "new_admin_exact": true,
+  "owner_retains_member": true,
+  "admin_own_staff_list_status": 200,
+  "self_removal": {
+    "status": 409,
+    "code": "admin_protected"
+  },
+  "owner_removal_effective_admin": {
+    "status": 409,
+    "code": "admin_protected"
+  },
+  "admin_elevation": {
+    "status": 403,
+    "code": "not_permitted"
+  },
+  "audit_qualification": "shared operator credential authenticates; declared Cody actor is distinct audit attribution, not individual sign-in"
+}

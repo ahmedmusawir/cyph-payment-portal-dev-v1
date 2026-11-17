@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "scripts/apbm007b/privacy-scan.mjs",
+    "--self-test"
+  ],
+  "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1",
+  "exit": 0,
+  "stdout": "{\"self_test\":\"PASS\",\"rules\":10,\"poison_rules_hit\":10,\"clean_hits\":0}\n",
+  "stderr": ""
+}

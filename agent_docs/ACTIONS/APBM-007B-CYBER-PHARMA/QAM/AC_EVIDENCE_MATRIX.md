@@ -1,36 +1,38 @@
-# Acceptance/evidence matrix — Q1 plan, all NOT RUN
+# Acceptance/evidence matrix — Q2 COMPLETE, awaiting Friday adjudication
 
-| AC | Test | Required evidence | Status |
+Cody,2026-11-17T11:48:09.037760+00:00. Frozen candidate pair unchanged. These are Executor observations, not certification or a release verdict. All31 criteria executed/mapped;23 PASS,4 FAIL,4 implemented-software PASS with separate support-documentation FAIL. Layer/scope qualifications remain; GD001 is outside Gate Q and NOT RUN. Human observations are attributed separately.
+
+| AC / Test | Executor result | Observation / scope / limits | Evidence (QAM-relative) |
 |---|---|---|---|
-| AC-001 | T-001 | Real application/API and tenant-negative proof | NOT RUN |
-| AC-002 | T-002 | Database-backed concurrency, transfer and UI proof | NOT RUN |
-| AC-003 | T-003 | UI/API plus provider quote/invoice at controlled mid-period time | NOT RUN |
-| AC-004 | T-004 | Live provider, product event/recovery and permission negatives | NOT RUN |
-| AC-005 | T-005 | Provider failure plus application/API/DB/UI and event-order proof | NOT RUN |
-| AC-006 | T-006 | Database concurrency, controlled response loss and historical reconciliation | NOT RUN |
-| AC-007 | T-007 | Late-payment, expiry, crash/restart and forward recovery evidence | NOT RUN |
-| AC-008 | T-008 | Provider/local comparisons and race tests | NOT RUN |
-| AC-009 | T-009 | Catalogue identity, invoice and billing regression | NOT RUN |
-| AC-010 | T-010 | API/DB denial and successful intended role journey | NOT RUN |
-| AC-011 | T-011 | Actual email/inbox and browser proof for both identity cases | NOT RUN |
-| AC-012 | T-012 | Token and browser negative coverage | NOT RUN |
-| AC-013 | T-013 | Delivery counters and link-state tests | NOT RUN |
-| AC-014 | T-014 | Database concurrency and two-identity browser journey | NOT RUN |
-| AC-015 | T-015 | Fresh and existing-session tests plus direct API checks | NOT RUN |
-| AC-016 | T-016 | Concurrency, denial and recovery proof | NOT RUN |
-| AC-017 | T-017 | Independent role-by-route/API/DB matrix | NOT RUN |
-| AC-018 | T-018 | Controlled time, next real invoice, access and concurrency proof | NOT RUN |
-| AC-019 | T-019 | Boundary and concurrency tests | NOT RUN |
-| AC-020 | T-020 | Whole-account lifecycle proof | NOT RUN |
-| AC-021 | T-021 | Operator authorization, negative controls, audit and procedure review | NOT RUN |
-| AC-022 | T-022 | Two-account transition, NPI concurrency and recovery | NOT RUN |
-| AC-023 | T-023 | Before/after data and direct access assertions for every role | NOT RUN |
-| AC-024 | T-024 | Controlled recovery, audit/denial proof and procedure completeness | NOT RUN |
-| AC-025 | T-025 | Live clock/provider, SQL permissions and production-build application proof | NOT RUN |
-| AC-026 | T-026 | Provider receipt plus actual inbox observation | NOT RUN |
-| AC-027 | T-027 | Fault, guard, recovery/send race, provider receipt and inbox checks | NOT RUN |
-| AC-028 | T-028 | Independent production-build browser and necessary live regression | NOT RUN |
-| AC-029 | T-029 | Catalogue/checksum/preservation and forward-resume evidence | NOT RUN |
-| AC-030 | T-030 | Rendered assertions and selected sanitized screenshots | NOT RUN |
-| AC-031 | T-031 | Validated built client-bundle scan | NOT RUN |
-| GD-001 | D-01 | Revision-bound staging journeys, automatic delivery and outage retries | NOT RUN / separate Gate D |
+| AC-001 / T-001 | PASS | Owner-account boundaries passed in real app/API including131 existing-role and40 fresh-role checks; new admin/member own-store reads allowed and account billing/add denied before later own-account purchase. | evidence/Q2/02/action_role_matrix.json; evidence/Q2/02/action_role_matrix_fresh.json; evidence/Q2/02/fresh_own_store_reads.json |
+| AC-002 / T-002 | PASS | Local actual concurrent NPI attempts, paid same-ID re-add, and actual buyer successor on same permanent pharmacy identity; exactly one current ownership. | evidence/Q2/01/migrations/sql_upgraded.json; evidence/Q2/02/transfer_buyer_final.json; evidence/Q2/02/history_and_last_store_cancel.json |
+| AC-003 / T-003 | PASS | Independent ordinary/APA2450 expected before payment;50/49 boundary; separate consents. | evidence/Q2/01/money/; evidence/Q2/01/campaign/r03/O1/; evidence/Q2/02/guard_lifecycle.json |
+| AC-004 / T-004 | FAIL | F-Q2-001: late payment activated. Timely payment/3DS/crash positives retained separately. | evidence/Q2/01/late_outage_refund/; evidence/Q2/01/campaign/r03/C/; evidence/Q2/01/campaign/r06/CRASH_RESTART/ |
+| AC-005 / T-005 | PASS | Decline, payment_pending, explicit abandon/verified void: no store/quantity granted; real CLI failed events. | evidence/Q2/01/campaign/r03/C/; evidence/Q2/02/automatic_payment_event_correlation.json |
+| AC-006 / T-006 | PASS | Fenced leases/local SQL concurrency; actual paid-event redelivery adds no second store/charge. | evidence/Q2/01/migrations/sql_upgraded.json; evidence/Q2/01/campaign/r06/CRASH_RESTART/ |
+| AC-007 / T-007 | FAIL | F-Q2-001 late activation and F-Q2-004 unpaid expiry worker. Natural pay/void race attention, full refund/proof closure PASS; S1 and S2 crash PASS8/8 each. | evidence/Q2/02/expiry_void_race.json; evidence/Q2/01/campaign/r06/CRASH_RESTART/ |
+| AC-008 / T-008 | PASS | Provider vs billable count across removal/re-add/renewal and crash, last-store cancellation/undo; no unnamed-store access in SQL negatives. | evidence/Q2/01/campaign/r03/O1/; evidence/Q2/02/guard_lifecycle.json; evidence/Q2/02/history_and_last_store_cancel.json |
+| AC-009 / T-009 | PASS | Graduated99/49 price, APA first-store benefit retained, no per-store subscription; real cancellation/undo. | evidence/Q2/01/campaign/r03/O1/; evidence/Q2/01/campaign/r03/GF/; evidence/Q2/02/history_and_last_store_cancel.json |
+| AC-010 / T-010 | PASS | Owner/admin sends to exact controlled recipients; no role on send; member/foreign/admin-elevation negatives. HTTP201 create expectation corrected. | evidence/Q2/01/campaign/r03/INVITE/; evidence/Q2/02/invitation_controls.json; evidence/Q2/02/instrument_followup_corrections.json |
+| AC-011 / T-011 | PASS | Tony confirmed all3 original invitation messages/content (including existing-recipient resend). Actual new-role email confirmation and browser acceptance give B1-only admin/member; existing identity/password preserved. Human observation and automated results separate. | evidence/Q2/02/director_manual_observations.json; evidence/Q2/02/grouped_browser_confirmation.json; evidence/Q2/01/campaign/r05/ACCEPT_EXISTING/ |
+| AC-012 / T-012 | PASS | Actual GET no grant, forged-CSRF403 preserves link, deliberate existing-user switch, exact-recipient accept; wrong/revoked/expired/replay/altered invitation API negatives and local token/authority checks. | evidence/Q2/02/grouped_browser_confirmation.json; evidence/Q2/02/invitation_controls.json; evidence/Q2/01/roles/invitation_abuse_oldjwt.json |
+| AC-013 / T-013 | PASS | Actual eligible resend after61s and cooldown/duplicate/revoke PASS; seeded five-attempt exhaustion, two actual sends only; link authority checked SQL/API, human receipt pending. | evidence/Q2/02/invitation_controls.json; evidence/Q2/01/migrations/sql_upgraded.json |
+| AC-014 / T-014 | PASS | Actual NEW_ADMIN acceptance leaves one admin, old owner member and legal ownership unchanged; separate B2 real demote/remove/stale7/7 and local two-connection acceptance race. | evidence/Q2/02/grouped_browser_confirmation.json; evidence/Q2/02/admin_existing_actors.json; evidence/Q2/01/migrations/sql_upgraded.json |
+| AC-015 / T-015 | PASS | Actual old JWT read before and immediate denial after member revocation, including read-only account. | evidence/Q2/01/roles/invitation_abuse_oldjwt.json; evidence/Q2/02/readonly_membership.json |
+| AC-016 / T-016 | PASS | Self/owner last-admin removal409, foreign/elevation refusals; real operator restoration plus SQL sole-admin invariant. | evidence/Q2/02/; evidence/Q2/01/migrations/sql_upgraded.json |
+| AC-017 / T-017 | PASS | All six existing cast identities plus signed-out131/131 and fresh roles40/40; old6 direct JWT18/18 and fresh10/10 service-clock/billing/RLS checks. Current memberships assessed per account, with new-role own-store reads and denied billing. | evidence/Q2/02/action_role_matrix.json; evidence/Q2/02/action_role_matrix_fresh.json; evidence/Q2/02/fresh_trusted_boundary.json; evidence/Q2/02/fresh_own_store_reads.json |
+| AC-018 / T-018 | PASS | Scheduled quantity drop/no current credit, actual next invoice19700/14800, cutoff removes access and retains physical claims; minimum and shared end guards. | evidence/Q2/01/campaign/r03/O1/; evidence/Q2/02/guard_lifecycle.json |
+| AC-019 / T-019 | PASS | Undo at50 allowed,49 refused;90-minute boundary sides; stale-period guard local SQL, actual same-period undo. | evidence/Q2/02/guard_lifecycle.json; evidence/Q2/01/migrations/sql_upgraded.json |
+| AC-020 / T-020 | PASS | Last-store removal refused; whole-account cancel+undo retains billing and quantity1; operator reactivation grants no access/quantity; same-owner paid re-add returns original history. | evidence/Q2/02/reactivation_authorization_only.json; evidence/Q2/02/history_and_last_store_cancel.json; evidence/Q2/02/instrument_followup_corrections.json |
+| AC-021 / T-021 | PASS implemented / FAIL procedure | Protected exact-ID operator actions, dry-run, actor/reason/ticket and honest shared-credential audit PASS; F006 missing executable support runbook graded separately. | evidence/Q2/02/transfer_history_before.json; evidence/Q2/02/transfer_cancel_before_effective.json; evidence/Q2/02/support_procedure_review.json |
+| AC-022 / T-022 | PASS implemented / FAIL procedure | Seller cutoff/quantity and exact buyer hold; failure grants no access; paid9900 plus actual email proof creates successor on same canonical identity with own billing. Transfer cancel before effect2→1→2 PASS. F006 separate documentation. | evidence/Q2/02/transfer_buyer_final.json; evidence/Q2/02/transfer_cancel_before_effective.json; evidence/Q2/02/support_procedure_review.json |
+| AC-023 / T-023 | PASS implemented / FAIL procedure | Seller readonly history200; buyer404/source RPC denied and own successor0 seller rows; immutable claims/report-file IDs retained. Original-ID paid re-add history2 rows. Source-owner API path per QL09; screen absent, no screen stop. F006 separately. | evidence/Q2/02/transfer_buyer_final.json; evidence/Q2/02/history_and_last_store_cancel.json; evidence/Q2/02/instrument_followup_corrections.json; evidence/Q2/02/support_procedure_review.json |
+| AC-024 / T-024 | PASS implemented / FAIL procedure | Real owner-recovery DB commit/provider failure is reported failed and audited; retry resumes provider step, restore retains other memberships; audit update/delete denied42501. F006 runbook gap, shared credential not individual identity. | evidence/Q2/02/owner_recovery_audit.json; evidence/Q2/02/support_procedure_review.json |
+| AC-025 / T-025 | FAIL | Full actual renewal failure→grace→day5→day7readonly→same-invoice recovery and member reduction PASS, with real CLI. F-Q2-001 deadline activation remains separately recorded. | evidence/Q2/01/campaign/r03/O1/; evidence/Q2/02/readonly_membership.json; evidence/Q2/01/late_outage_refund/ |
+| AC-026 / T-026 | PASS | Two original Portal Resend receipts plus Tony inbox/content confirmation: $148.00,24Dec2026 09:19 UTC displayed deadline, authenticated Portal billing link; Auth invitation mail is a distinct lane. | evidence/Q2/02/director_manual_observations.json; evidence/Q2/01/campaign/r03/O1/; evidence/Q2/02/readonly_membership.json |
+| AC-027 / T-027 | PASS | Real sent notice dedupe/recovery-before-scheduling; isolated dispatcher12 cases with zero network; actual local SQL7 retry/horizon/lease cases. No claim live provider timeout or23-hour wall wait. | evidence/Q2/02/local_notice_faults.json; evidence/Q2/02/notice_dispatch_faults.json; evidence/Q2/02/reminder_recovery_followup.json |
+| AC-028 / T-028 | PASS | Final-candidate Portal9/9 three engines; real decline/3DS/cancel/undo, both handoffs, explicit email confirm/switch and first-store9900 paid/provisioned/rendered ready/dashboard; actual global logout PP→login and OB→auth next navigation. U1–U3 remain Director-accepted, not QA-certified. | evidence/Q2/01/browser/; evidence/Q2/02/grouped_browser_confirmation.json; evidence/Q2/02/signed_in_first_store_browser.json; evidence/Q2/02/logout_cross_app.json |
+| AC-029 / T-029 | PASS | Owned local fresh+upgrade134/134 each; failed0064 rolls back then resumes;10 nonempty public/Auth table projections preserved except intended businesses.updated_at backfill; DEV/SCRATCH69 ledgers exact. No destructive remote SCRATCH reset/reapply of pre-existing retained fixtures. | evidence/Q2/01/migrations/; evidence/Q2/02/migration_preservation_digests.json |
+| AC-030 / T-030 | FAIL | F002 unchanged WebKit FAIL/PASS/FAIL and F005 misleading capability copy remain. Actual theme/viewport visual26/26 and fresh recipient final renders PASS; Tony reviewed screens. Reported skip-link overlap is focused capture state: fresh hidden/firstTab visible/Enter→main/hides6/6 across3engines2themes, proposed O001 observation. | evidence/Q2/02/director_manual_observations.json; evidence/Q2/02/skip_link_investigation.json; evidence/Q2/02/screens/; evidence/Q2/02/screens_final_corrected.json; FINDINGS.md |
+| AC-031 / T-031 | PASS | Actual client bundles, known private values scanned in memory; poison/clean controls23/23. OB only exact approved baseline auth-js generateLink exception, no broad suppression. | evidence/Q2/01/board/client_bundle_scan.json; evidence/Q2/actual_private_values_bundle_scan.json; evidence/Q2/01/preflight/bundle_controls.json |
+| GD-001 / D-01 | NOT RUN — separate Gate D | Deployed revision-bound real HTTPS origins, permanent sandbox webhook/retry/outage, Auth/template/security and rollback readiness require staging release. Local CLI does not certify native HTTPS retry. | QAM_TEST_PLAN.md section6; ../STAGING_AND_GATE_D.md |

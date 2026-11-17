@@ -1,0 +1,22 @@
+[
+  {
+    "test": "wrong verified recipient cannot accept pending admin invite",
+    "status": 404,
+    "result": "PASS"
+  },
+  {
+    "test": "GET viewing wrong-user invitations does not accept pending admin invitation",
+    "status": 200,
+    "invitation_status": "pending",
+    "result": "PASS"
+  },
+  {
+    "test": "membership removal denies next request on already-issued JWT",
+    "had_access_before": true,
+    "removal_status": 200,
+    "next_status": 200,
+    "next_row_count": 0,
+    "result": "PASS",
+    "identity_session": "same old JWT still identifies user; store rights gone"
+  }
+]

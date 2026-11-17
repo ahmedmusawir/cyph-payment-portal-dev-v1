@@ -1,0 +1,16 @@
+[
+  {
+    "role": "NEW_ADMIN",
+    "final_path": "/dashboard",
+    "actual_subject_verified": true,
+    "session_source": "actual real-email OB session then normal PP destination handoff, no cookie-name forgery",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "final_path": "/dashboard",
+    "actual_subject_verified": true,
+    "session_source": "actual real-email OB session then normal PP destination handoff, no cookie-name forgery",
+    "result": "PASS"
+  }
+]

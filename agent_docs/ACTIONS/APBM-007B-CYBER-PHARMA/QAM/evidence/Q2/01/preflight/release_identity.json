@@ -1,0 +1,18 @@
+{
+  "phase": "Q2",
+  "tested_product_portal": "427bec6267b9777e9cb44f81c22d1396a495bc14",
+  "qa_execution_head_portal": "61b683ab2aeeb18905666a56feed2d2513b6e6c5",
+  "owedbook": "c8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea",
+  "docs_only_delta": true,
+  "text_diff_read_in_full": true,
+  "diff_bytes": 812984,
+  "all_non_doc_git_blobs_equal": true,
+  "plan_sha256": "794c4d9c7877d585a47abb6630e03984d6a038f475dfdb5c284a3cd0c4d74f2c",
+  "listener": {
+    "pid": 3173001,
+    "actual_forward": "http://localhost:3001/api/webhooks/stripe",
+    "expected_forward": "http://localhost:3101/api/webhooks/stripe",
+    "status": "STOP-ENV"
+  },
+  "live_effects": 0
+}

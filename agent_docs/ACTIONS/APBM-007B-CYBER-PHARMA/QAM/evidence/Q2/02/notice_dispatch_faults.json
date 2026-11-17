@@ -1,0 +1,128 @@
+{
+  "layer": "QA isolated execution of frozen actual TypeScript via transpileModule; database claims and sender seam mocked; zero network permitted",
+  "sourceHashes": {
+    "server/billingNotices.ts": "1c94e43fd529bb036ca46d7a0f1f3f5f21316f1c041a40b7ecf050b23ec66249",
+    "server/mailGuard.ts": "6fcd0ce0f51b0ad037a9aa5fec9df0086f9f5022926caae503c74486357594ed"
+  },
+  "actual_provider_requests": 0,
+  "checks": [
+    {
+      "scenario": "timeout",
+      "expected": "retry",
+      "observed": "retry",
+      "error": "unknown_outcome",
+      "sender_calls": 1,
+      "stable_key": "renewal_payment_failed/in_QAIsolatedNotice",
+      "correct_billing_origin": true,
+      "result": "PASS"
+    },
+    {
+      "scenario": "retry-after-unknown-keeps-exact-key-and-payload",
+      "same_key": true,
+      "same_payload": true,
+      "same_fingerprint": true,
+      "result": "PASS"
+    },
+    {
+      "scenario": "network",
+      "expected": "retry",
+      "observed": "retry",
+      "error": "unknown_outcome",
+      "sender_calls": 1,
+      "stable_key": "renewal_payment_failed/in_QAIsolatedNotice",
+      "correct_billing_origin": true,
+      "result": "PASS"
+    },
+    {
+      "scenario": "503",
+      "expected": "retry",
+      "observed": "retry",
+      "error": "http_503",
+      "sender_calls": 1,
+      "stable_key": "renewal_payment_failed/in_QAIsolatedNotice",
+      "correct_billing_origin": true,
+      "result": "PASS"
+    },
+    {
+      "scenario": "429",
+      "expected": "retry",
+      "observed": "retry",
+      "error": "http_429",
+      "sender_calls": 1,
+      "stable_key": "renewal_payment_failed/in_QAIsolatedNotice",
+      "correct_billing_origin": true,
+      "result": "PASS"
+    },
+    {
+      "scenario": "409",
+      "expected": "retry",
+      "observed": "retry",
+      "error": "http_409",
+      "sender_calls": 1,
+      "stable_key": "renewal_payment_failed/in_QAIsolatedNotice",
+      "correct_billing_origin": true,
+      "result": "PASS"
+    },
+    {
+      "scenario": "422",
+      "expected": "attention",
+      "observed": "attention",
+      "error": "http_422",
+      "sender_calls": 1,
+      "stable_key": "renewal_payment_failed/in_QAIsolatedNotice",
+      "correct_billing_origin": true,
+      "result": "PASS"
+    },
+    {
+      "scenario": "200",
+      "expected": "sent",
+      "observed": "sent",
+      "error": null,
+      "sender_calls": 1,
+      "stable_key": "renewal_payment_failed/in_QAIsolatedNotice",
+      "correct_billing_origin": true,
+      "result": "PASS"
+    },
+    {
+      "scenario": "missing-id",
+      "expected": "attention",
+      "observed": "attention",
+      "error": "http_200",
+      "sender_calls": 1,
+      "stable_key": "renewal_payment_failed/in_QAIsolatedNotice",
+      "correct_billing_origin": true,
+      "result": "PASS"
+    },
+    {
+      "scenario": "guard-deny",
+      "expected": "attention",
+      "observed": "attention",
+      "error": "mail_guard_blocked",
+      "sender_calls": 0,
+      "stable_key": null,
+      "correct_billing_origin": null,
+      "result": "PASS"
+    },
+    {
+      "scenario": "missing-key",
+      "expected": "attention",
+      "observed": "attention",
+      "error": "sender_not_configured",
+      "sender_calls": 0,
+      "stable_key": null,
+      "correct_billing_origin": null,
+      "result": "PASS"
+    },
+    {
+      "scenario": "recovery-suppressed",
+      "expected": "suppressed",
+      "observed": "suppressed",
+      "error": null,
+      "sender_calls": 0,
+      "stable_key": null,
+      "correct_billing_origin": null,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

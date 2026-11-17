@@ -88,7 +88,7 @@ Target: all writes, new sign-in identities, payments, clocks and mail only SCRAT
 
 QL-03 prerequisite: before execution record QA-computed expected cents per case using provider period timestamps and contract integer formula, independently of application helpers. Cover ordinary/APA mid-period, under50 refusal/no invoice, both sides of shared guard for add/removal/undo, 30-minute expiry/void and late-payment attention/no activation. Capture inputs and expected result before observed result.
 
-QL-07: one sandbox full refund of paid-but-not-activated operation, then store-operation-close proof, inside existing mutation cap; pending Director approval. If declined, this subcase NOT RUN with limitation; block nothing else.
+QL-07: one sandbox full refund of paid-but-not-activated operation, then store-operation-close proof, inside existing mutation cap; Director approved 2026-11-17. If declined, this subcase NOT RUN with limitation; block nothing else.
 
 Expected: Fixed payment deadline and durable one-minute expiry responsibility. At expiry/abandonment void open invoice and verify no paid outcome before releasing hold. Late payment or paid-versus-void race reconciles to exact consented operation/attention; no silent activation, extra charge or automatic refund. Prove crash/restart and late-payment case. A paid operation not activated ends only by owner-reconfirmed activation or operator close on provider proof of full refund/credit; the account is never permanently blocked solely for lack of such a terminal command.
 
@@ -370,7 +370,7 @@ UI workflows: Add Store/status/removal/undo/billing dashboard, staff/invitations
 
 ## 5. Proposed effects envelope (requires Friday approval and Tony release)
 
-Fresh QA ledger scoped QA_RUN_ID, reserve before attempt, uncertainty consumes allowance, monotonic counters and hard caps; no reset or borrowing E2/007A. Proposal sized by scenario slots, not measured execution: at most12 sandbox customers/subscriptions (4 ordinary/APA lifecycle,2 transfer buyers,2 crash,2 registration/regression,2 bounded recovery contingency),3 clocks,32 invoice pay/hosted submissions, USD5000 aggregate attempted simulated charges (500000 cents),80 provider mutation requests including cleanup,40 actual email dispatch attempts (12 invite/resend,8 notices/faults,12 auth,8 contingency),48 sign-ins,10 new Auth identities,2 SCRATCH rehearsal cycles plus1 retry;2400 bounded read requests total. Cleanup included in all limits; reserve last20 provider mutations and8 sends exclusively for cleanup/recovery. If slot model exceeds cap on dry-run, return amendment before effect. No real money, no production or DEV writes, no DEV apply, no shared Stripe retry/email settings, no provider resource beyond sandbox label. QL-07: one sandbox full refund for T-007 inside existing mutation cap, pending Director approval; if declined only that subcase NOT RUN with limitation. One local forwarding session; permanent endpoint/config outside this capsule. Proposed48h campaign, stop at earliest cap/time boundary. Distinct roles/fixtures cannot collapse just to fit limits.
+Fresh QA ledger scoped QA_RUN_ID, reserve before attempt, uncertainty consumes allowance, monotonic counters and hard caps; no reset or borrowing E2/007A. Proposal sized by scenario slots, not measured execution: at most12 sandbox customers/subscriptions (4 ordinary/APA lifecycle,2 transfer buyers,2 crash,2 registration/regression,2 bounded recovery contingency),3 clocks,32 invoice pay/hosted submissions, USD5000 aggregate attempted simulated charges (500000 cents),80 provider mutation requests including cleanup,40 actual email dispatch attempts (12 invite/resend,8 notices/faults,12 auth,8 contingency),48 sign-ins,10 new Auth identities,2 SCRATCH rehearsal cycles plus1 retry;2400 bounded read requests total. Cleanup included in all limits; reserve last20 provider mutations and8 sends exclusively for cleanup/recovery. If slot model exceeds cap on dry-run, return amendment before effect. No real money, no production or DEV writes, no DEV apply, no shared Stripe retry/email settings, no provider resource beyond sandbox label. QL-07: one sandbox full refund for T-007 inside existing mutation cap, Director approved 2026-11-17; if declined only that subcase NOT RUN with limitation. One local forwarding session; permanent endpoint/config outside this capsule. Proposed48h campaign, stop at earliest cap/time boundary. Distinct roles/fixtures cannot collapse just to fit limits.
 
 Fixtures: synthetic NPIs validated and unique, QA_RUN_ID labels in account/store/provider metadata; A ordinary multistore, B APA multistore, seller/buyer separate identities, foreign account, staff roles and two unused new recipients plus existing invitee; dedicated crash accounts and frozen clock campaign. Inventory includes original IDs, ownership history, memberships, invoices and cleanup ownership. Retained007A and engineering fixtures are read-only references, never cleanup targets.
 
@@ -402,7 +402,7 @@ QL-05 Order and one-time budget. Repeatable automated checks first. The one-time
 
 QL-06 One grouped Director session near the end of Q2, with a prepared list: inbox observation of the invitation mail and the two billing notices; any provider-hosted card challenge automation cannot complete; a human look at screens and wording for T-030.
 
-QL-07 Refund-proof subcase. Plan one sandbox full refund on a paid-but-not-activated operation to prove store-operation-close, inside the mutation cap, marked "pending Director approval". If declined, record that subcase NOT RUN with a limitation; block nothing else.
+QL-07 Refund-proof subcase. Plan one sandbox full refund on a paid-but-not-activated operation to prove store-operation-close, inside the mutation cap, marked "Director approved 2026-11-17". If declined, record that subcase NOT RUN with a limitation; block nothing else.
 
 QL-08 Add to T-020: removed-store-reactivate only authorizes and never activates a store without payment; a same-owner paid re-add restores the original store record and history (Director default 9).
 
@@ -430,3 +430,30 @@ CONTRACTS/MIGRATIONS.md bc8640548f56f1bf58c4e1a8187c18241ff9703003542126af97a15f
 QL-01 observed 10/12 match. APBM_RULINGS.md and ENVIRONMENT_AND_EFFECTS.md differ beyond line1; exact hash-matched reference diffs recorded. Hold only dependent live/effect tests, paid-reactivation/transfer-registration, migration 0068/0069 authorization, bundle exception and historical release/ruling assertions until Friday resolves these append-only deltas. Unaffected local/source checks may continue when separately released; Q2 currently unreleased. Evidence: evidence/preflight/02/ql01_contract_identity.json.
 
 Standing rules: a product failure is a finding, keep testing; only the eight playbook stop types halt the run; repairs stay on qa/apbm-007b with the pair rebound after each; evidence layers stay separate. Q2 release pending.
+
+
+### Release/adjudication record — 2026-11-17
+
+Sections B and C transcribed by Cody from Friday/Tony current release message; named source/hash attributed as supplied, not an independently received attachment. These later records supersede the earlier conditional hold and refund-pending annotations.
+
+B. QL-01 ADJUDICATION a01 (QA_LEAD_ADJUDICATION_APBM007B_Q1_a01_2026-11-17.md, SHA-256 2f28f72581e1da8601d2b0a3beb40e129f5b3cbe68cb37a5e77db1ab1b301d61)
+Contract identity CLEARED 12/12. I read both diffs in your REVIEW_02 package (SHA-256 b0d6640e76d27b234602c134b86f558826dc2e7bb04168c79bacfd7b1ef70340). APBM_RULINGS.md and ENVIRONMENT_AND_EFFECTS.md differ from the pack as used for E2 by the header line plus append-only Director entries dated 17 November 2026; no earlier line changed; the current repository files govern. All QL-01 holds are lifted. No plan edit is required: T-020, T-022, T-029 and T-031 already cover the appended rulings. Engineering's raised ceilings are Engineering's E2 envelope only; QA runs its own fresh ledger and borrows nothing.
+
+C. DIRECTOR APPROVALS (Tony, 17 November 2026)
+- QA effects envelope approved exactly as proposed in plan section 5.
+- One sandbox full refund approved for the QL-07 refunded-operation closure subcase; remove the "Director approved 2026-11-17" marking.
+- Private QA inputs are prepared; no further credentials come from the Director.
+
+Friday runtime correction, 17 November 2026 (supersedes all earlier runtime ports/evidence labels): use Director production OwedBook3000 and Portal3001 plus existing listener→3001; no QA servers/restarts or second listener; read-only candidate/build/SCRATCH/sandbox verification first, then real forwarded-event signature proof; on failure Director alone changes/restarts runtime.
+
+Friday/Tony runtime ruling (current message) supersedes prior correction: QA owns candidate production builds3100/3101 on SCRATCH and exactly one sandbox CLI listener→3101 with explicit handled events; Director apps untouched and Director listener off; verify no3001 listener before payment; stop only QA processes at closeout.
+
+### Q2 adjudication a01 — transcribed 2026-11-17 by Cody
+
+Friday adjudication a01, supplied by Director Tony in current conversation, 17 November2026; QA_LEAD_ADJUDICATION_APBM007B_Q2_a01_2026-11-17.md SHA-256744a2d2d4795b6894f7397b7d97d0d5fa196f4a40005115d3e8339347b422c5e (attributed supplied reference; no independent attachment invented).
+
+Director Tony budget amendment, 17 November2026: provider mutations80→240 total, last20cleanup; sign-ins48→96; identity creation attempts10→14; unique identities≤10, no new addresses. All other limits unchanged; counters preserved, nothing reset. Friday directs first unchanged WebKit staff spec3x, then item4 unaffected tests on current candidate. Hold late payment, consent expiry/void race, in-flight payment crash and refunded-operation closure for repaired candidate. Retain activated F-Q2-001 store, no refund or cleanup. Do not pull/rebind during Engineering repair; require Director repaired pair and Friday retest scope.
+
+## Friday continuous-Q2 correction — transcribed by Cody, 2026-11-17
+
+Friday correction supplied by Director in current conversation replaces a01 items5/6: no repair during Q2; Engineering stopped. Continue approved plan to Q2 COMPLETE on Portal427bec6267b9777e9cb44f81c22d1396a495bc14/OwedBookc8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea. Holds lifted for consent-expiry/void race/in-flight crash. Refund closure only if paid-but-not-activated naturally produced, else BLOCKED BY F-Q2-001; never refund activated retained store. F-Q2-001/F-Q2-003 disposition rows preserved; no routing to Engineering until complete. Existing budget amendment stands. Prepare single grouped Director session near end. Return only playbook stop/limit/Q2 complete.

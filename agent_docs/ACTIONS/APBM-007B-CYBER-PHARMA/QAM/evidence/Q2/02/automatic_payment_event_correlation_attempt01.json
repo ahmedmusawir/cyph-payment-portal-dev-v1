@@ -1,0 +1,666 @@
+{
+  "at": "2026-11-17T10:12:58.210Z",
+  "events": [
+    {
+      "event_id": "evt_1UcjKFGnEQDyu3RRsHiohA5w",
+      "type": "invoice.paid",
+      "object_id": "in_1UcjK3GnEQDyu3RR06WbyVWc",
+      "customer_fixture": "expiry_void_race.json",
+      "created": 1794910159,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 9900,
+      "durable_receipt": {
+        "event_id": "evt_1UcjKFGnEQDyu3RRsHiohA5w",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T10:09:21.796189+00:00",
+        "processed_at": "2026-11-17T10:09:23.145+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UcjHkGnEQDyu3RRuBhCK3jm",
+      "type": "invoice.paid",
+      "object_id": "in_1UcjGLGnEQDyu3RRtvWLEuNB",
+      "customer_fixture": "expiry_void_race.json",
+      "created": 1794910004,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 9900,
+      "durable_receipt": {
+        "event_id": "evt_1UcjHkGnEQDyu3RRuBhCK3jm",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T10:06:44.704361+00:00",
+        "processed_at": "2026-11-17T10:06:46.141+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UciyaGnEQDyu3RRps7y8qj2",
+      "type": "invoice.paid",
+      "object_id": "in_1UciyUGnEQDyu3RR2zW90k8G",
+      "customer_fixture": "foreign_binding.json",
+      "created": 1794908816,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 4897,
+      "durable_receipt": {
+        "event_id": "evt_1UciyaGnEQDyu3RRps7y8qj2",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T09:48:01.106037+00:00",
+        "processed_at": "2026-11-17T09:48:03.871+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 3
+    },
+    {
+      "event_id": "evt_1UciviGnEQDyu3RROTpzwvOa",
+      "type": "invoice.paid",
+      "object_id": "in_1UcivXGnEQDyu3RRXhAlcS5K",
+      "customer_fixture": "expiry_void_race.json",
+      "created": 1794908638,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 4897,
+      "durable_receipt": {
+        "event_id": "evt_1UciviGnEQDyu3RROTpzwvOa",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T09:43:58.976951+00:00",
+        "processed_at": "2026-11-17T09:43:59.825+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UcitoGnEQDyu3RRvyTu7N9J",
+      "type": "invoice.paid",
+      "object_id": "in_1UcitmGnEQDyu3RRwBQ9VxYG",
+      "customer_fixture": "expiry_void_race.json",
+      "created": 1794908519,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 9900,
+      "durable_receipt": {
+        "event_id": "evt_1UcitoGnEQDyu3RRvyTu7N9J",
+        "status": "failed",
+        "error_code": "awaiting_mapping",
+        "received_at": "2026-11-17T09:42:03.519582+00:00",
+        "processed_at": null
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": false,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UcinsGnEQDyu3RRWvt8SDzJ",
+      "type": "invoice.paid",
+      "object_id": "in_1UcilxGnEQDyu3RRnkwDXODE",
+      "customer_fixture": "guard_lifecycle.json",
+      "created": 1794908151,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 19700,
+      "durable_receipt": {
+        "event_id": "evt_1UcinsGnEQDyu3RRWvt8SDzJ",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T09:35:52.654637+00:00",
+        "processed_at": "2026-11-17T09:35:55.744+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UcinOGnEQDyu3RRxTgNJ1xp",
+      "type": "invoice.paid",
+      "object_id": "in_1UcinLGnEQDyu3RRStHgojpG",
+      "customer_fixture": "buyer-registration",
+      "created": 1794908121,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 9900,
+      "durable_receipt": {
+        "event_id": "evt_1UcinOGnEQDyu3RRxTgNJ1xp",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T09:35:23.233305+00:00",
+        "processed_at": "2026-11-17T09:35:32.646+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UcilBGnEQDyu3RR0pSwtm0H",
+      "type": "invoice.paid",
+      "object_id": "in_1Ucil6GnEQDyu3RRw8H3Mhbq",
+      "customer_fixture": "guard_lifecycle.json",
+      "created": 1794907985,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 50,
+      "durable_receipt": {
+        "event_id": "evt_1UcilBGnEQDyu3RR0pSwtm0H",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T09:33:06.033992+00:00",
+        "processed_at": "2026-11-17T09:33:10.813+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UciknGnEQDyu3RRlmgfgOej",
+      "type": "invoice.paid",
+      "object_id": "in_1UciklGnEQDyu3RRNxfu0cIu",
+      "customer_fixture": "guard_lifecycle.json",
+      "created": 1794907960,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 19700,
+      "durable_receipt": {
+        "event_id": "evt_1UciknGnEQDyu3RRlmgfgOej",
+        "status": "failed",
+        "error_code": "awaiting_mapping",
+        "received_at": "2026-11-17T09:32:44.089777+00:00",
+        "processed_at": null
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": false,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UciXwGnEQDyu3RRmkzaevQn",
+      "type": "invoice.paid",
+      "object_id": "in_1UciXtGnEQDyu3RRY928urXI",
+      "customer_fixture": "foreign_binding.json",
+      "created": 1794907163,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 14800,
+      "durable_receipt": {
+        "event_id": "evt_1UciXwGnEQDyu3RRmkzaevQn",
+        "status": "failed",
+        "error_code": "awaiting_mapping",
+        "received_at": "2026-11-17T09:19:25.942962+00:00",
+        "processed_at": null
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": false,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1Uci3vGnEQDyu3RRRa4omqhT",
+      "type": "invoice.paid",
+      "object_id": "in_1Uci3dGnEQDyu3RRKAP7VnOd",
+      "customer_fixture": "A",
+      "created": 1794905302,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 3774,
+      "durable_receipt": {
+        "event_id": "evt_1Uci3vGnEQDyu3RRRa4omqhT",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:53:16.686526+00:00",
+        "processed_at": "2026-11-17T08:53:18.625+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UchxFGnEQDyu3RRFsORjemp",
+      "type": "invoice.paid",
+      "object_id": "in_1UchwvGnEQDyu3RRJ0Sa4Dnr",
+      "customer_fixture": "A",
+      "created": 1794904889,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 3774,
+      "durable_receipt": {
+        "event_id": "evt_1UchxFGnEQDyu3RRFsORjemp",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:41:32.363252+00:00",
+        "processed_at": "2026-11-17T08:41:36.526+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UchtSGnEQDyu3RRSBdPKuye",
+      "type": "invoice.paid",
+      "object_id": "in_1UchtLGnEQDyu3RRHd7ZCXJM",
+      "customer_fixture": "A",
+      "created": 1794904653,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 3774,
+      "durable_receipt": {
+        "event_id": "evt_1UchtSGnEQDyu3RRSBdPKuye",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:37:34.604461+00:00",
+        "processed_at": "2026-11-17T08:37:37.453+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UchrsGnEQDyu3RRYoXrcdCK",
+      "type": "invoice.paid",
+      "object_id": "in_1UchjNGnEQDyu3RRR4t8xZqp",
+      "customer_fixture": "A",
+      "created": 1794904556,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 14800,
+      "durable_receipt": {
+        "event_id": "evt_1UchrsGnEQDyu3RRYoXrcdCK",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:35:59.76722+00:00",
+        "processed_at": "2026-11-17T08:36:03.535+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UchjZGnEQDyu3RRoaVREnRI",
+      "type": "invoice.paid",
+      "object_id": "in_1UchjOGnEQDyu3RRuyiNsdPe",
+      "customer_fixture": "B",
+      "created": 1794904041,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 14800,
+      "durable_receipt": {
+        "event_id": "evt_1UchjZGnEQDyu3RRoaVREnRI",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:27:22.076267+00:00",
+        "processed_at": "2026-11-17T08:27:23.102+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UchhiGnEQDyu3RRydGVz3fz",
+      "type": "invoice.paid",
+      "object_id": "in_1UchhVGnEQDyu3RRiOVZLrvt",
+      "customer_fixture": "B",
+      "created": 1794903925,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 2450,
+      "durable_receipt": {
+        "event_id": "evt_1UchhiGnEQDyu3RRydGVz3fz",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:25:26.320909+00:00",
+        "processed_at": "2026-11-17T08:25:29.53+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UchhMGnEQDyu3RRg2xhLySI",
+      "type": "invoice.paid",
+      "object_id": "in_1UchhGGnEQDyu3RRUYfimn3W",
+      "customer_fixture": "A",
+      "created": 1794903903,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 2450,
+      "durable_receipt": {
+        "event_id": "evt_1UchhMGnEQDyu3RRg2xhLySI",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:25:04.30323+00:00",
+        "processed_at": "2026-11-17T08:25:06.79+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UchcAGnEQDyu3RRLvQ0sNJa",
+      "type": "invoice.paid",
+      "object_id": "in_1Uchc8GnEQDyu3RRER7iIBhE",
+      "customer_fixture": "B",
+      "created": 1794903582,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 8910,
+      "durable_receipt": {
+        "event_id": "evt_1UchcAGnEQDyu3RRLvQ0sNJa",
+        "status": "failed",
+        "error_code": "awaiting_mapping",
+        "received_at": "2026-11-17T08:19:42.81883+00:00",
+        "processed_at": null
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": false,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1Uchc3GnEQDyu3RRfUhqBw8C",
+      "type": "invoice.paid",
+      "object_id": "in_1Uchc1GnEQDyu3RRTBqNRrg0",
+      "customer_fixture": "A",
+      "created": 1794903575,
+      "provider_status_at_event": "paid",
+      "provider_paid_at_event": 14800,
+      "durable_receipt": {
+        "event_id": "evt_1Uchc3GnEQDyu3RRfUhqBw8C",
+        "status": "failed",
+        "error_code": "awaiting_mapping",
+        "received_at": "2026-11-17T08:19:37.895656+00:00",
+        "processed_at": null
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": false,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UcjKDGnEQDyu3RRaC5n8YKr",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UcjK3GnEQDyu3RR06WbyVWc",
+      "customer_fixture": "expiry_void_race.json",
+      "created": 1794910152,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1UcjKDGnEQDyu3RRaC5n8YKr",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T10:09:17.788653+00:00",
+        "processed_at": "2026-11-17T10:09:21.974+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 4
+    },
+    {
+      "event_id": "evt_1UcjHWGnEQDyu3RRiHoyP2ZE",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UcjGLGnEQDyu3RRtvWLEuNB",
+      "customer_fixture": "expiry_void_race.json",
+      "created": 1794909989,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1UcjHWGnEQDyu3RRiHoyP2ZE",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T10:06:32.41054+00:00",
+        "processed_at": "2026-11-17T10:06:35.956+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UcjHCGnEQDyu3RRyHIeckuF",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UcjGLGnEQDyu3RRtvWLEuNB",
+      "customer_fixture": "expiry_void_race.json",
+      "created": 1794909969,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1UcjHCGnEQDyu3RRyHIeckuF",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T10:06:10.498822+00:00",
+        "processed_at": "2026-11-17T10:06:11.807+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UcjH6GnEQDyu3RRm3sgeNO9",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UcjGLGnEQDyu3RRtvWLEuNB",
+      "customer_fixture": "expiry_void_race.json",
+      "created": 1794909963,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1UcjH6GnEQDyu3RRm3sgeNO9",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T10:06:05.933442+00:00",
+        "processed_at": "2026-11-17T10:06:10.044+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UcjGRGnEQDyu3RRMFzWEquX",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UcjGLGnEQDyu3RRtvWLEuNB",
+      "customer_fixture": "expiry_void_race.json",
+      "created": 1794909922,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1UcjGRGnEQDyu3RRMFzWEquX",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T10:05:23.926437+00:00",
+        "processed_at": "2026-11-17T10:05:50.189+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UcivcGnEQDyu3RRnO7V6Q4L",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UcivXGnEQDyu3RRXhAlcS5K",
+      "customer_fixture": "expiry_void_race.json",
+      "created": 1794908632,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1UcivcGnEQDyu3RRnO7V6Q4L",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T09:43:53.088322+00:00",
+        "processed_at": "2026-11-17T09:43:54.269+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UciuCGnEQDyu3RR1AEOoYYB",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1Uciu1GnEQDyu3RRRDhgB41r",
+      "customer_fixture": "expiry_void_race.json",
+      "created": 1794908543,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1UciuCGnEQDyu3RR1AEOoYYB",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T09:42:24.447492+00:00",
+        "processed_at": "2026-11-17T09:42:26.275+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1Uci3iGnEQDyu3RRxfFCzzpo",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1Uci3dGnEQDyu3RRKAP7VnOd",
+      "customer_fixture": "A",
+      "created": 1794905290,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1Uci3iGnEQDyu3RRxfFCzzpo",
+        "status": "received",
+        "error_code": null,
+        "received_at": "2026-11-17T08:48:11.074166+00:00",
+        "processed_at": null
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": false,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 1
+    },
+    {
+      "event_id": "evt_1Uchx0GnEQDyu3RR3pelcipo",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UchwvGnEQDyu3RRJ0Sa4Dnr",
+      "customer_fixture": "A",
+      "created": 1794904874,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1Uchx0GnEQDyu3RR3pelcipo",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:41:14.613078+00:00",
+        "processed_at": "2026-11-17T08:41:15.75+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UchwlGnEQDyu3RRvczgFnLE",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UchwgGnEQDyu3RRejcoyzmD",
+      "customer_fixture": "A",
+      "created": 1794904859,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1UchwlGnEQDyu3RRvczgFnLE",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:41:00.074983+00:00",
+        "processed_at": "2026-11-17T08:41:01.301+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UchnGGnEQDyu3RR9xbisf1r",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UchjNGnEQDyu3RRR4t8xZqp",
+      "customer_fixture": "A",
+      "created": 1794904269,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1UchnGGnEQDyu3RR9xbisf1r",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:31:12.806547+00:00",
+        "processed_at": "2026-11-17T08:31:13.868+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1Uchn6GnEQDyu3RRBSL5iJF2",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UchjNGnEQDyu3RRR4t8xZqp",
+      "customer_fixture": "A",
+      "created": 1794904259,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1Uchn6GnEQDyu3RRBSL5iJF2",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:31:00.909298+00:00",
+        "processed_at": "2026-11-17T08:31:02.039+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UchmuGnEQDyu3RRghamRWky",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UchjNGnEQDyu3RRR4t8xZqp",
+      "customer_fixture": "A",
+      "created": 1794904248,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1UchmuGnEQDyu3RRghamRWky",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:30:51.039254+00:00",
+        "processed_at": "2026-11-17T08:30:52.681+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    },
+    {
+      "event_id": "evt_1UchjVGnEQDyu3RRDZI6pUcS",
+      "type": "invoice.payment_failed",
+      "object_id": "in_1UchjNGnEQDyu3RRR4t8xZqp",
+      "customer_fixture": "A",
+      "created": 1794904036,
+      "provider_status_at_event": "open",
+      "provider_paid_at_event": 0,
+      "durable_receipt": {
+        "event_id": "evt_1UchjVGnEQDyu3RRDZI6pUcS",
+        "status": "processed",
+        "error_code": null,
+        "received_at": "2026-11-17T08:27:19.582363+00:00",
+        "processed_at": "2026-11-17T08:27:21.932+00:00"
+      },
+      "listener_event_seen": true,
+      "listener_http_200_seen": true,
+      "delivery_lane": "real automatic Stripe CLI; selected events additionally provider-redelivered as labelled in scenario evidence",
+      "listener_line_count": 2
+    }
+  ],
+  "qualification": "Receipt establishes delivery/signature/durable handling, not alone business correctness. Direct fixture subscription_create events before local binding can be ignored foreign; product add-store operations are judged separately. Native HTTPS subscription retries remain Gate D."
+}

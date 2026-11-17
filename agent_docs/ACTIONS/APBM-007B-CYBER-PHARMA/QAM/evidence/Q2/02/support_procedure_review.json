@@ -1,0 +1,44 @@
+{
+  "layer": "independent frozen candidate document/help inspection; separate from operator API execution",
+  "support_document": {
+    "path": "agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/SUPPORT_PROCEDURES.md",
+    "sha256": "46919a9a3feab7b282c871c6a1d5d7b6b4c1cee1f3e3ad4925f22ee0f0bafeb5",
+    "title": "Support procedure acceptance requirements"
+  },
+  "help_exit": 0,
+  "actions": [
+    {
+      "action": "store-transfer-authorize",
+      "exact_help_schema_present": true,
+      "exact_action_command_in_support_runbook": false
+    },
+    {
+      "action": "store-transfer-complete",
+      "exact_help_schema_present": true,
+      "exact_action_command_in_support_runbook": false
+    },
+    {
+      "action": "store-transfer-cancel",
+      "exact_help_schema_present": true,
+      "exact_action_command_in_support_runbook": false
+    },
+    {
+      "action": "removed-store-reactivate",
+      "exact_help_schema_present": true,
+      "exact_action_command_in_support_runbook": false
+    },
+    {
+      "action": "owner-replace",
+      "exact_help_schema_present": true,
+      "exact_action_command_in_support_runbook": false
+    },
+    {
+      "action": "store-admin-set",
+      "exact_help_schema_present": true,
+      "exact_action_command_in_support_runbook": false
+    }
+  ],
+  "observation": "The designated document states that Engineer must author runbook steps, but contains no exact per-action command examples or per-action before/after and partial-failure/resume steps. CLI help lists inputs; this alone does not establish the requested support runbook.",
+  "result": "FINDING proposed; software execution evidence remains separate",
+  "limitations": "No real claimant identity documents collected or adjudicated. Shared credential proves possession, declared actor is not individual operator authentication."
+}

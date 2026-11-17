@@ -1,0 +1,1360 @@
+{
+  "DEV": {
+    "transaction": "BEGIN READ ONLY / ROLLBACK",
+    "ledger_count": 69,
+    "ledger_matches_candidate_files": true,
+    "catalogue": {
+      "tables": 34,
+      "policies": 14,
+      "functions": 99
+    },
+    "table_security": [
+      {
+        "relname": "aac_reference",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=arwdm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "accounts",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "apa_memberships",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "audit_logs",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=am/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "billing_customers",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "billing_deployment",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=r/postgres}"
+      },
+      {
+        "relname": "billing_test_contexts",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=r/postgres}"
+      },
+      {
+        "relname": "businesses",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "checkout_operations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "ful_reference",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=arwdm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "notification_operations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "npi_reservations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "operator_actions",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "pbm_info",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=arwdm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "pending_registrations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "pharmacy_identities",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "profiles",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=rwm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "provider_call_intents",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "provider_invoice_operations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "reference_dataset_versions",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=arwdm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "registration_drafts",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "report_files",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "store_invitations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "store_operations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "store_quotes",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "store_reactivations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "store_transfers",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "stripe_events",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "subscriptions",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "system_config",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres,authenticated=r/postgres}"
+      },
+      {
+        "relname": "user_businesses",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "user_data",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=m/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "user_roles",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "wac_reference",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=arwdm/postgres,service_role=arwdDxtm/postgres}"
+      }
+    ],
+    "function_security": [
+      {
+        "proname": "account_access_state",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "account_add_store_refusal",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "account_billable_count",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "account_grants_refusal",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "admin_audit",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "admin_billing_status",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "admin_members",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "admin_stores",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "audit_logs_immutable",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "audit_write",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_deployment_bind",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_now",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_test_context_disable",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_test_context_enable",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_test_context_sync",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_test_project_ref",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "businesses_assign_identity",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "caller_verified_email",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "current_admin_of",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handle_new_user",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handoff_claim",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handoff_complete",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handoff_fail",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handoff_invalidate_user",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handoff_issue",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_accept",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_create",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_decline",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_dispatch_claim",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_manager_ok",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_resend_check",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_revoke",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "is_account_member",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "is_admin_of",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "is_member_of",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "is_owner_of_account",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "member_remove",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "my_business_ids",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "my_invitations",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "notice_claim",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "notice_finish",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "notice_schedule_for_failure",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "notice_suppress_for_invoice",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "notices_due",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "npi_bind",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "npi_is_valid",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "npi_release_unpaid",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "npi_reserve",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "operation_lease",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "operator_action_record",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "operator_actions_append_only",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owedbook_kpis",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owedbook_pbm_options",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owedbook_rows",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owedbook_summary",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owner_billing_overview",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owner_history_rows",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owner_history_stores",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owner_replace",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owner_store_operations",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "provision_paid_registration",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "rls_auto_enable",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_access_state",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_add_activate",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_admin_set",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_incremental_cents",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_invitations_list",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_is_live",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_lifecycle_commit",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_lifecycle_due",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_lifecycle_request",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_manager_role",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_attention",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_cancel_request",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_claim",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_close",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_intent",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_intent_outcome",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_lease",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_map_invoice",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_release",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_resume",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_transition",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operations_due",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_period_window_refusal",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_quote_create",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_reactivation_authorize",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_removal_finalize",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_removals_due",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_transfer_authorize",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_transfer_authorize",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_transfer_cancel",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_transfer_mark_attention",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_transfers_expired",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "subscription_grace_clear",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "subscription_grace_start",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "subscription_mirror_apply",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "tenant_stores",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "update_updated_at",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      }
+    ]
+  },
+  "SCRATCH": {
+    "transaction": "BEGIN READ ONLY / ROLLBACK",
+    "ledger_count": 69,
+    "ledger_matches_candidate_files": true,
+    "catalogue": {
+      "tables": 34,
+      "policies": 14,
+      "functions": 99
+    },
+    "table_security": [
+      {
+        "relname": "aac_reference",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=arwdm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "accounts",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "apa_memberships",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "audit_logs",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=am/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "billing_customers",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "billing_deployment",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=r/postgres}"
+      },
+      {
+        "relname": "billing_test_contexts",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=r/postgres}"
+      },
+      {
+        "relname": "businesses",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "checkout_operations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "ful_reference",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=arwdm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "notification_operations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "npi_reservations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "operator_actions",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "pbm_info",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=arwdm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "pending_registrations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "pharmacy_identities",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "profiles",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=rwm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "provider_call_intents",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "provider_invoice_operations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "reference_dataset_versions",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=arwdm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "registration_drafts",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "report_files",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "store_invitations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "store_operations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "store_quotes",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "store_reactivations",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "store_transfers",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "stripe_events",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "subscriptions",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "system_config",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,service_role=arwdDxtm/postgres,authenticated=r/postgres}"
+      },
+      {
+        "relname": "user_businesses",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "user_data",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,authenticated=m/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "user_roles",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=rm/postgres,service_role=arwdDxtm/postgres}"
+      },
+      {
+        "relname": "wac_reference",
+        "relrowsecurity": true,
+        "relacl": "{postgres=arwdDxtm/postgres,anon=arwdm/postgres,authenticated=arwdm/postgres,service_role=arwdDxtm/postgres}"
+      }
+    ],
+    "function_security": [
+      {
+        "proname": "account_access_state",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "account_add_store_refusal",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "account_billable_count",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "account_grants_refusal",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "admin_audit",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "admin_billing_status",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "admin_members",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "admin_stores",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "audit_logs_immutable",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "audit_write",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_deployment_bind",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_now",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_test_context_disable",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_test_context_enable",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_test_context_sync",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "billing_test_project_ref",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "businesses_assign_identity",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "caller_verified_email",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "current_admin_of",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handle_new_user",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handoff_claim",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handoff_complete",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handoff_fail",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handoff_invalidate_user",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "handoff_issue",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_accept",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_create",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_decline",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_dispatch_claim",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_manager_ok",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_resend_check",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "invitation_revoke",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "is_account_member",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "is_admin_of",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "is_member_of",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "is_owner_of_account",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "member_remove",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "my_business_ids",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "my_invitations",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "notice_claim",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "notice_finish",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "notice_schedule_for_failure",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "notice_suppress_for_invoice",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "notices_due",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "npi_bind",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "npi_is_valid",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "npi_release_unpaid",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "npi_reserve",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "operation_lease",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "operator_action_record",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "operator_actions_append_only",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owedbook_kpis",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owedbook_pbm_options",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owedbook_rows",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owedbook_summary",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owner_billing_overview",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owner_history_rows",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owner_history_stores",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owner_replace",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "owner_store_operations",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "provision_paid_registration",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "rls_auto_enable",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_access_state",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_add_activate",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_admin_set",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_incremental_cents",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_invitations_list",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_is_live",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_lifecycle_commit",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_lifecycle_due",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_lifecycle_request",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_manager_role",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_attention",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_cancel_request",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_claim",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_close",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_intent",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_intent_outcome",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_lease",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_map_invoice",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_release",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_resume",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operation_transition",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_operations_due",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_period_window_refusal",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_quote_create",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_reactivation_authorize",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_removal_finalize",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_removals_due",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_transfer_authorize",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_transfer_authorize",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_transfer_cancel",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_transfer_mark_attention",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "store_transfers_expired",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "subscription_grace_clear",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "subscription_grace_start",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "subscription_mirror_apply",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "tenant_stores",
+        "prosecdef": true,
+        "proacl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+      },
+      {
+        "proname": "update_updated_at",
+        "prosecdef": false,
+        "proacl": "{postgres=X/postgres,service_role=X/postgres}"
+      }
+    ]
+  }
+}

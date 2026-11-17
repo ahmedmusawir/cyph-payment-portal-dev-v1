@@ -1,0 +1,75 @@
+{
+ "tag": "after_recovery",
+ "at": "2026-11-17T10:26:46.158Z",
+ "portal_listening": true,
+ "operation": {
+  "state": "activated",
+  "last_error_code": null,
+  "invoice_id": "in_1UcjaDGnEQDyu3RRGwTDdUgv",
+  "lease_held": false,
+  "lease_until": null,
+  "lease_live": null,
+  "fencing_epoch": "4",
+  "amount_cents": 4892,
+  "business_id": "9e64b347-5d84-4745-a360-7f89162fb965",
+  "payment_deadline": "2026-11-17T10:55:48.217Z",
+  "activated_at": "2026-11-17T10:26:44.468Z"
+ },
+ "intents": [
+  {
+   "stage": "invoice_create",
+   "attempt": 1,
+   "outcome": "in_1UcjaDGnEQDyu3RRGwTDdUgv",
+   "created_at": "2026-11-17T10:25:49.332Z",
+   "interval_end": "2026-11-17T10:25:49.955Z"
+  },
+  {
+   "stage": "item_create",
+   "attempt": 1,
+   "outcome": "created",
+   "created_at": "2026-11-17T10:25:50.175Z",
+   "interval_end": "2026-11-17T10:25:50.736Z"
+  },
+  {
+   "stage": "finalize",
+   "attempt": 1,
+   "outcome": "open",
+   "created_at": "2026-11-17T10:25:51.546Z",
+   "interval_end": "2026-11-17T10:25:52.874Z"
+  },
+  {
+   "stage": "pay",
+   "attempt": 1,
+   "outcome": "invoice_payment_intent_requires_action",
+   "created_at": "2026-11-17T10:25:53.504Z",
+   "interval_end": "2026-11-17T10:25:55.243Z"
+  },
+  {
+   "stage": "quantity_update",
+   "attempt": 1,
+   "outcome": "updated",
+   "created_at": "2026-11-17T10:26:43.376Z",
+   "interval_end": "2026-11-17T10:26:44.085Z"
+  }
+ ],
+ "provider": {
+  "invoices_for_operation": [
+   {
+    "id": "in_1UcjaDGnEQDyu3RRGwTDdUgv",
+    "status": "paid",
+    "total": 4892,
+    "amount_paid": 4892,
+    "attempt_count": 1
+   }
+  ],
+  "succeeded_charges_for_operation": 1,
+  "failed_charges_for_operation": 0,
+  "subscription_quantity": 3
+ },
+ "access": {
+  "store_rows_for_npi": 1,
+  "live_or_active": 1,
+  "owner_memberships_for_npi": 1,
+  "in_owner_scope": 1
+ }
+}

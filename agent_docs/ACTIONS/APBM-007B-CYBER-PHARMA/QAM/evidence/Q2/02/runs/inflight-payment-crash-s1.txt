@@ -1,0 +1,15 @@
+independent_expected_before_confirm {"period_start":1794907161,"period_end":1797499161,"quote_computed_at":"2026-11-17T09:46:48.789Z","expected_cents":4897,"application_helper_used":false}
+quote {"cents":4897,"qty_before":1}
+kill:issue {"killStage":"pay intent recorded (op state payment_pending)","out":"{\"stopped\":\"pp\",\"pid\":3263086,\"signal\":\"SIGKILL\",\"at\":\"2026-11-17T09:46:54.832Z\"}"}
+confirm:client {"error":"UND_ERR_SOCKET"}
+capture:down_immediately {"op":"payment_pending","lease_live":true,"invoices":["paid"],"charges_ok":1,"qty":1,"stores":0,"scope":0}
+capture:down_settled {"op":"payment_pending","lease_live":true,"invoices":["paid"],"charges_ok":1,"qty":1,"stores":0,"scope":0}
+restart:start {"out":"{\"started\":{\"ob\":3209772,\"pp\":3344502},\"mail\":\"live (private allowlist in memory)\"}"}
+restart:ready {"app":"pp","revision":"427bec6267b9+qa-product","artifactId":"96225fced4ca5c93096231bc125fbc81"}
+recovery:polls {"polls":["09:47:15 200 payment_pending","09:47:30 200 payment_pending","09:47:44 200 payment_pending","09:47:57 200 activated"]}
+capture:after_recovery {"op":"activated","lease_live":null,"invoices":["paid"],"charges_ok":1,"qty":2,"stores":1,"scope":1}
+events:real_CLI_redelivery {"method":"provider events resend → owned Stripe CLI; no manual signer","results":{"evt_1UciyaGnEQDyu3RRps7y8qj2":{"type":"invoice.paid","delivery_lane":"real provider resend to existing Stripe CLI","manual_signer":false}}}
+jobs {"store_operations":"Not invoked in crash case; expiry driver tests scope-guarded minute jobs separately"}
+capture:final {"op":"activated","lease_live":null,"invoices":["paid"],"charges_ok":1,"qty":2,"stores":1,"scope":1}
+RESULT {"pass":true,"checks":{"killed_while_operation_unfinished":true,"no_access_while_down":true,"recovered_state_activated":true,"exactly_one_invoice":true,"paid_exactly_once":true,"quantity_plus_one_exactly":true,"exactly_one_store_and_membership":true,"replayed_events_added_nothing":true}}
+

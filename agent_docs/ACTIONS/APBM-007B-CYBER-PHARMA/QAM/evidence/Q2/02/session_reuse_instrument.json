@@ -1,0 +1,5 @@
+{
+  "policy": "Retain the25minute fast cache; older sessions require actual provider getUser expected-identity validation and JWT expiry>60s; validated cache at most5min; otherwise counted password login or real inbox requirement. Product APIs still authorize current account memberships. No credential/token/hash exported.",
+  "purpose": "Avoid unnecessary repeat sign-ins; preserve all previously consumed counters",
+  "product_change": false
+}

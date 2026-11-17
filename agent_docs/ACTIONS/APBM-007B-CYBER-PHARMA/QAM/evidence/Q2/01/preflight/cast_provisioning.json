@@ -1,0 +1,38 @@
+{
+  "target": "SCRATCH",
+  "roles": {
+    "OWNER_A": {
+      "created": true,
+      "email_sent": false
+    },
+    "OWNER_B": {
+      "created": true,
+      "email_sent": false
+    },
+    "STORE_ADMIN": {
+      "created": true,
+      "email_sent": false
+    },
+    "MEMBER": {
+      "created": true,
+      "email_sent": false
+    },
+    "FOREIGN_OWNER": {
+      "created": true,
+      "email_sent": false
+    },
+    "NEW_ADMIN": {
+      "auth_absent": true,
+      "preserved_for_invitation": true
+    },
+    "NEW_MEMBER": {
+      "auth_absent": true,
+      "preserved_for_invitation": true
+    },
+    "EXISTING_INVITEE": {
+      "created": true,
+      "email_sent": false
+    }
+  },
+  "email_attempts": 0
+}
