@@ -1,0 +1,18 @@
+{
+  "command": [
+    "node",
+    "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4/inflight-crash-qa.mjs",
+    "--cred",
+    "/tmp/apbm007b-q4-s1.json",
+    "--label",
+    "qa-q4-s1",
+    "--scenario",
+    "s1"
+  ],
+  "script_sha256": "7e7876957111ed9144330986e84d45e0f2f1286ee2ca67d33c800adc49ba209e",
+  "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1",
+  "exit": 0,
+  "signal": null,
+  "raw_output": "private retained; sanitized export",
+  "at": "2026-11-18T02:30:44.087Z"
+}

@@ -1,0 +1,33 @@
+{
+  "cause": "Older in-memory OwnerB cookie cache was persisted after a newly confirmed recipient cache entry had been written to disk, overwriting that recipient entry. Product sessions remained valid.",
+  "correction": "Persist only the updated cache key merged with latest disk state; restore exact actual browser sessions after provider expected-subject validation.",
+  "restored": [
+    {
+      "role": "NEW_ADMIN",
+      "app": "ob",
+      "actual_identity_verified": true,
+      "new_sign_in": false
+    },
+    {
+      "role": "NEW_ADMIN",
+      "app": "pp",
+      "actual_identity_verified": true,
+      "new_sign_in": false
+    },
+    {
+      "role": "NEW_MEMBER",
+      "app": "ob",
+      "actual_identity_verified": true,
+      "new_sign_in": false
+    },
+    {
+      "role": "NEW_MEMBER",
+      "app": "pp",
+      "actual_identity_verified": true,
+      "new_sign_in": false
+    }
+  ],
+  "additional_sign_ins": 0,
+  "failed_attempt": "fresh-role-matrix-live-01; partial observations preserved",
+  "product_change": false
+}

@@ -1,7 +1,7 @@
 "use client";
 
 // APBM007A — "email me a sign-in link". The answer is deliberately the same for every address.
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Alert } from "@/components/portal/Alert";
 import { TextField } from "@/components/portal/FormField";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,12 @@ import { Button } from "@/components/ui/button";
 export function LinkRequestForm() {
   const [email, setEmail] = useState("");
   const [state, setState] = useState<"idle" | "sending" | "sent" | "slow" | "error">("idle");
+  // F-Q4-001: an address typed before the page finished loading never reached this state (button stayed disabled, an
+  // empty address was sent). Adopt what the field holds once React owns it.
+  const emailRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    if (emailRef.current?.value) setEmail(emailRef.current.value);
+  }, []);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -19,7 +25,7 @@ export function LinkRequestForm() {
 
   return (
     <form onSubmit={onSubmit} noValidate className="space-y-4 border border-border bg-card p-4 sm:p-5" data-testid="link-request-form">
-      <TextField id="link-email" type="email" autoComplete="email" label="Email for a sign-in link" value={email} onValue={setEmail} />
+      <TextField ref={emailRef} id="link-email" type="email" autoComplete="email" label="Email for a sign-in link" value={email} onValue={setEmail} />
       <Button type="submit" variant="outline" className="w-full" disabled={state === "sending" || email.trim().length === 0}>
         {state === "sending" ? "Sending…" : "Email me a sign-in link"}
       </Button>

@@ -1,0 +1,12 @@
+ next.config.js                                  |  6 +++
+ src/__tests__/apbm007a-auth.test.ts             |  3 +-
+ src/__tests__/apbm007a-webhook-recovery.test.ts | 46 +++++++++++++++----
+ src/__tests__/portal-boundaries.test.ts         |  3 ++
+ src/__tests__/portal-dashboard.test.tsx         |  7 +--
+ src/components/portal/account/DashboardView.tsx | 13 +++++-
+ src/lib/appIdentity.ts                          | 11 +++--
+ src/server/billing.ts                           |  3 +-
+ src/server/errors.ts                            | 17 ++++++-
+ src/server/webhook.ts                           | 60 +++++++++++++++----------
+ src/types/portal/api.ts                         |  3 +-
+ 11 files changed, 127 insertions(+), 45 deletions(-)

@@ -1,0 +1,29 @@
+{
+ "created": "2026-11-16T16:01:26.579Z",
+ "seq": 196,
+ "used": {
+  "stripe_customers": 13,
+  "payment_method_attach": 19,
+  "default_card_changes": 23,
+  "stripe_subscriptions": 13,
+  "payment_attempts": 47,
+  "payment_attempt_cents": 434604,
+  "invoice_create": 25,
+  "invoiceitem_create": 17,
+  "invoice_finalize": 18,
+  "invoice_pay_or_hosted": 25,
+  "subscription_mutations": 26,
+  "invoice_void": 9,
+  "apa_redemptions": 3,
+  "cleanup_subscription_cancel": 7,
+  "cleanup_customer_delete": 7,
+  "test_clocks": 2,
+  "test_clock_advances": 15,
+  "cleanup_test_clock_delete": 2,
+  "scratch_chain_cycles": 2,
+  "scratch_auth_identities": 12,
+  "fixture_app_mutations": 22,
+  "email_dispatch": 9
+ },
+ "updated": "2026-11-17T04:57:16.330Z"
+}

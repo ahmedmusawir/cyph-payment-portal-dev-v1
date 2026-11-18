@@ -1,0 +1,167 @@
+[
+  {
+    "engine": "chromium",
+    "app": "pp",
+    "case": "password signin",
+    "subject_verified": true,
+    "final_path": "/dashboard",
+    "result": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "app": "ob",
+    "case": "password signin",
+    "subject_verified": true,
+    "final_path": "/owedbook",
+    "result": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "app": "ob",
+    "case": "change password",
+    "changed_field": "ROLE_EXISTING_INVITEE_PASSWORD",
+    "http": 200,
+    "new_password_verified": true,
+    "current_value_only_private0600": true,
+    "result": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "app": "pp",
+    "case": "link signin",
+    "GET_created_no_session": true,
+    "explicit_button": true,
+    "subject_verified": true,
+    "delivery_lane": "SCRATCH Auth admin-generated real one-time token on existing QA identity; no email/inbox access; not a mail-delivery result",
+    "result": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "app": "ob",
+    "case": "link signin",
+    "GET_created_no_session": true,
+    "explicit_button": true,
+    "subject_verified": true,
+    "delivery_lane": "SCRATCH Auth admin-generated real one-time token on existing QA identity; no email/inbox access; not a mail-delivery result",
+    "result": "PASS"
+  },
+  {
+    "engine": "chromium",
+    "case": "cross-app signout",
+    "role": "EXISTING_INVITEE",
+    "portal_signed_out": true,
+    "owedbook_denied_next_navigation": true,
+    "other_test_identities_not_revoked": true,
+    "result": "PASS"
+  },
+  {
+    "engine": "firefox",
+    "app": "pp",
+    "case": "password signin",
+    "subject_verified": true,
+    "final_path": "/dashboard",
+    "result": "PASS"
+  },
+  {
+    "engine": "firefox",
+    "app": "ob",
+    "case": "password signin",
+    "subject_verified": true,
+    "final_path": "/owedbook",
+    "result": "PASS"
+  },
+  {
+    "engine": "firefox",
+    "app": "ob",
+    "case": "change password",
+    "changed_field": "ROLE_EXISTING_INVITEE_PASSWORD",
+    "http": 200,
+    "new_password_verified": true,
+    "current_value_only_private0600": true,
+    "result": "PASS"
+  },
+  {
+    "engine": "firefox",
+    "app": "pp",
+    "case": "link signin",
+    "GET_created_no_session": true,
+    "explicit_button": true,
+    "subject_verified": true,
+    "delivery_lane": "SCRATCH Auth admin-generated real one-time token on existing QA identity; no email/inbox access; not a mail-delivery result",
+    "result": "PASS"
+  },
+  {
+    "engine": "firefox",
+    "app": "ob",
+    "case": "link signin",
+    "GET_created_no_session": true,
+    "explicit_button": true,
+    "subject_verified": true,
+    "delivery_lane": "SCRATCH Auth admin-generated real one-time token on existing QA identity; no email/inbox access; not a mail-delivery result",
+    "result": "PASS"
+  },
+  {
+    "engine": "firefox",
+    "case": "cross-app signout",
+    "role": "EXISTING_INVITEE",
+    "portal_signed_out": true,
+    "owedbook_denied_next_navigation": true,
+    "other_test_identities_not_revoked": true,
+    "result": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "app": "pp",
+    "case": "password signin",
+    "subject_verified": true,
+    "final_path": "/dashboard",
+    "result": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "app": "ob",
+    "case": "password signin",
+    "subject_verified": true,
+    "final_path": "/owedbook",
+    "result": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "app": "ob",
+    "case": "change password",
+    "changed_field": "ROLE_EXISTING_INVITEE_PASSWORD",
+    "http": 200,
+    "new_password_verified": true,
+    "current_value_only_private0600": true,
+    "result": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "app": "pp",
+    "case": "link signin",
+    "GET_created_no_session": true,
+    "explicit_button": true,
+    "subject_verified": true,
+    "delivery_lane": "SCRATCH Auth admin-generated real one-time token on existing QA identity; no email/inbox access; not a mail-delivery result",
+    "result": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "app": "ob",
+    "case": "link signin",
+    "GET_created_no_session": true,
+    "explicit_button": true,
+    "subject_verified": true,
+    "delivery_lane": "SCRATCH Auth admin-generated real one-time token on existing QA identity; no email/inbox access; not a mail-delivery result",
+    "result": "PASS"
+  },
+  {
+    "engine": "webkit",
+    "case": "cross-app signout",
+    "role": "EXISTING_INVITEE",
+    "portal_signed_out": true,
+    "owedbook_denied_next_navigation": true,
+    "other_test_identities_not_revoked": true,
+    "result": "PASS"
+  }
+]

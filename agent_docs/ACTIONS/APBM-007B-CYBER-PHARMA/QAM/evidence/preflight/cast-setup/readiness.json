@@ -1,0 +1,78 @@
+{
+  "run_id": "apbm007b-qa-20261117T074504611Z-c414c4af",
+  "target": "SCRATCH",
+  "aliases": {
+    "OWNER_A": {
+      "auth_exists": false,
+      "invitation_count": 0,
+      "fresh_recipient": true,
+      "stage": "prepare at released fixture-setup stage",
+      "password_generated": true
+    },
+    "OWNER_B": {
+      "auth_exists": false,
+      "invitation_count": 0,
+      "fresh_recipient": true,
+      "stage": "prepare at released fixture-setup stage",
+      "password_generated": true
+    },
+    "STORE_ADMIN": {
+      "auth_exists": false,
+      "invitation_count": 0,
+      "fresh_recipient": true,
+      "stage": "prepare at released fixture-setup stage",
+      "password_generated": true
+    },
+    "MEMBER": {
+      "auth_exists": false,
+      "invitation_count": 0,
+      "fresh_recipient": true,
+      "stage": "prepare at released fixture-setup stage",
+      "password_generated": true
+    },
+    "FOREIGN_OWNER": {
+      "auth_exists": false,
+      "invitation_count": 0,
+      "fresh_recipient": true,
+      "stage": "prepare at released fixture-setup stage",
+      "password_generated": true
+    },
+    "NEW_ADMIN": {
+      "auth_exists": false,
+      "invitation_count": 0,
+      "fresh_recipient": true,
+      "stage": "defer until final-candidate invitation test",
+      "password_generated": false
+    },
+    "NEW_MEMBER": {
+      "auth_exists": false,
+      "invitation_count": 0,
+      "fresh_recipient": true,
+      "stage": "defer until final-candidate invitation test",
+      "password_generated": false
+    },
+    "EXISTING_INVITEE": {
+      "auth_exists": false,
+      "invitation_count": 0,
+      "fresh_recipient": true,
+      "stage": "prepare at released fixture-setup stage",
+      "password_generated": true
+    }
+  },
+  "emails_sent": 0,
+  "identities_created": 0,
+  "allowlist_count": 8,
+  "mail_guard": "on; QA config prepared, not injected into running app",
+  "manual_inbox": true,
+  "automated_inbox": false,
+  "private_file_mode": "0600",
+  "q2_release": "pending",
+  "effects_release": "pending",
+  "private_directory": "/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af",
+  "proof_ports_listening": {
+    "3100": false,
+    "3101": false
+  },
+  "ignored": true,
+  "untracked": true
+}

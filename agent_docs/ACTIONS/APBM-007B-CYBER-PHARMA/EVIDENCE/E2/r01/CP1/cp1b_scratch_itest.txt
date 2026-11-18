@@ -1,0 +1,28 @@
+  console.error
+    [portal:store advance] Error
+
+      57 | export function logServer(scope: string, e: unknown): void {
+      58 |   const code = e instanceof PortalError ? `${e.code}${e.detail ? ` (${e.detail})` : ''}` : (e as { code?: string })?.code || (e as Error)?.name || 'error';
+    > 59 |   console.error(`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`);
+         |           ^
+      60 | }
+      61 |
+
+      at logServer (src/server/errors.ts:59:11)
+      at src/server/storeOperations.ts:142:60
+      at confirmAddStore (src/server/storeOperations.ts:142:3)
+      at stripeMut (src/integration/apbm007b-store.itest.ts:49:19)
+      at Object.<anonymous> (src/integration/apbm007b-store.itest.ts:125:14)
+
+  console.log
+    APBM007B_ITEST_RESULTS {"run":"apbm007b-itest-1794847579470","account":"8730ad6a-68b8-4892-bf70-512764b91a91","results":{"happy":{"amount":4900,"operation":"8d0fe8ce-80cf-425f-b543-4d6e34c6c038","invoice":"in_1UcT3AGnEQDyu3RRyI9jTiLK","quantity":2,"renewal":14800,"replay_same":true},"paid_local_failure":{"operation":"5ebb5ceb-8f11-4e9f-a5ff-7a43c4a41ebd","converged":true,"invoices":1,"pay_intents":1,"quantity":3},"decline_abandon":{"operation":"1aaaa88b-c3a1-406b-8a08-cd841f197c94","invoice":"in_1UcT3ZGnEQDyu3RRkD3SCnkw","status":"void","subscription_unchanged":true,"grace":null},"expiry":{"operation":"9927c064-d376-42d9-b357-23eca412e4cf","invoice":"in_1UcT3mGnEQDyu3RR3oECKZFF","status":"void","hosted_url_offered_while_pending":true},"removal_undo":{"removal":"8eeca088-27fa-4336-8cf8-55bcfbc73a37","undo":"23605c76-d1c7-45c7-b63c-450dfe430e08","no_invoice":true},"cleanup":{}}}
+
+      at Object.<anonymous> (src/integration/apbm007b-store.itest.ts:94:11)
+
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        73.985 s
+Ran all test suites.
+

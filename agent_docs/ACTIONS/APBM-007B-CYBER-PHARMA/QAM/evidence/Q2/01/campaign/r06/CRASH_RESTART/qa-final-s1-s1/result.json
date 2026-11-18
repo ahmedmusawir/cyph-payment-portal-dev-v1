@@ -1,0 +1,163 @@
+{
+ "label": "qa-final-s1",
+ "scenario": "s1",
+ "timeline": [
+  {
+   "t": "2026-11-17T09:46:49.230Z",
+   "event": "independent_expected_before_confirm",
+   "period_start": 1794907161,
+   "period_end": 1797499161,
+   "quote_computed_at": "2026-11-17T09:46:48.789Z",
+   "expected_cents": 4897,
+   "application_helper_used": false
+  },
+  {
+   "t": "2026-11-17T09:46:49.231Z",
+   "event": "quote",
+   "cents": 4897,
+   "qty_before": 1
+  },
+  {
+   "t": "2026-11-17T09:46:54.842Z",
+   "event": "kill:issue",
+   "killStage": "pay intent recorded (op state payment_pending)",
+   "out": "{\"stopped\":\"pp\",\"pid\":3263086,\"signal\":\"SIGKILL\",\"at\":\"2026-11-17T09:46:54.832Z\"}"
+  },
+  {
+   "t": "2026-11-17T09:46:54.846Z",
+   "event": "confirm:client",
+   "error": "UND_ERR_SOCKET"
+  },
+  {
+   "t": "2026-11-17T09:46:58.101Z",
+   "event": "capture:down_immediately",
+   "op": "payment_pending",
+   "lease_live": true,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 1,
+   "stores": 0,
+   "scope": 0
+  },
+  {
+   "t": "2026-11-17T09:47:03.586Z",
+   "event": "capture:down_settled",
+   "op": "payment_pending",
+   "lease_live": true,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 1,
+   "stores": 0,
+   "scope": 0
+  },
+  {
+   "t": "2026-11-17T09:47:03.669Z",
+   "event": "restart:start",
+   "out": "{\"started\":{\"ob\":3209772,\"pp\":3344502},\"mail\":\"live (private allowlist in memory)\"}"
+  },
+  {
+   "t": "2026-11-17T09:47:04.755Z",
+   "event": "restart:ready",
+   "app": "pp",
+   "revision": "427bec6267b9+qa-product",
+   "artifactId": "96225fced4ca5c93096231bc125fbc81"
+  },
+  {
+   "t": "2026-11-17T09:47:57.011Z",
+   "event": "recovery:polls",
+   "polls": [
+    "09:47:15 200 payment_pending",
+    "09:47:30 200 payment_pending",
+    "09:47:44 200 payment_pending",
+    "09:47:57 200 activated"
+   ]
+  },
+  {
+   "t": "2026-11-17T09:47:58.850Z",
+   "event": "capture:after_recovery",
+   "op": "activated",
+   "lease_live": null,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 2,
+   "stores": 1,
+   "scope": 1
+  },
+  {
+   "t": "2026-11-17T09:48:04.470Z",
+   "event": "events:real_CLI_redelivery",
+   "method": "provider events resend → owned Stripe CLI; no manual signer",
+   "results": {
+    "evt_1UciyaGnEQDyu3RRps7y8qj2": {
+     "type": "invoice.paid",
+     "delivery_lane": "real provider resend to existing Stripe CLI",
+     "manual_signer": false
+    }
+   }
+  },
+  {
+   "t": "2026-11-17T09:48:06.474Z",
+   "event": "jobs",
+   "store_operations": "Not invoked in crash case; expiry driver tests scope-guarded minute jobs separately"
+  },
+  {
+   "t": "2026-11-17T09:48:07.914Z",
+   "event": "capture:final",
+   "op": "activated",
+   "lease_live": null,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 2,
+   "stores": 1,
+   "scope": 1
+  }
+ ],
+ "cents": 4897,
+ "qty_before": 1,
+ "kill_stage": "pay intent recorded (op state payment_pending)",
+ "killed_at": "2026-11-17T09:46:54.843Z",
+ "confirm_client": {
+  "error": "UND_ERR_SOCKET"
+ },
+ "recovery_polls": [
+  {
+   "t": "2026-11-17T09:47:15.830Z",
+   "http": 200,
+   "state": "payment_pending"
+  },
+  {
+   "t": "2026-11-17T09:47:30.152Z",
+   "http": 200,
+   "state": "payment_pending"
+  },
+  {
+   "t": "2026-11-17T09:47:44.175Z",
+   "http": 200,
+   "state": "payment_pending"
+  },
+  {
+   "t": "2026-11-17T09:47:57.011Z",
+   "http": 200,
+   "state": "activated"
+  }
+ ],
+ "checks": {
+  "killed_while_operation_unfinished": true,
+  "no_access_while_down": true,
+  "recovered_state_activated": true,
+  "exactly_one_invoice": true,
+  "paid_exactly_once": true,
+  "quantity_plus_one_exactly": true,
+  "exactly_one_store_and_membership": true,
+  "replayed_events_added_nothing": true
+ },
+ "pass": true
+}

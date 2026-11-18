@@ -1,0 +1,50 @@
+# Friday diff confirmation — APBM-007B build pack v1.0 (as used for E2)
+
+Date: 17 November 2026, Asia/Dhaka. Reviewer: Friday. Author reviewed: the Architect (JARVIS). Requested by the Director.
+
+This confirms the amendments from `FRIDAY_REVIEW_APBM007B_BUILD_PACK_v1_0_2026-11-16.md` against the pack the Director reports was used to start E2. It is not Q1 approval and not a product certification.
+
+## Packages compared
+
+| Item | Value |
+|---|---|
+| Reviewed candidate (16 November) | `APBM007B_BUILD_PACK_v1_0_REVIEW_CANDIDATE.zip`, SHA-256 `a45493266d03d947485980187d9bc45b9f0140c01bb5e5c27f9c06d7f18b99e0` |
+| Pack as used | `APBM007B_BUILD_PACK_v1_0.zip`, SHA-256 `08d5448b60d2410d08f25c5addfc73c842971db4a0bac9242c4a7d8d6ac31f01` |
+| Integrity of the pack as used | 123 files; 122 indexed plus the index. All hashes match. All 12 contract files match the contract manifest. |
+| Method | Full file-level diff of the two packs; every changed line read; every new file read. |
+
+## Result
+
+**DIFF CONFIRMED. BP-01 to BP-09 are applied as written.** No contract text changed other than the amendments. The pack is a sound contract to build from.
+
+| ID | Confirmed in |
+|---|---|
+| BP-01 minimum charge | `CONTRACTS/BILLING.md` (named constant, refusal before any invoice); AC-003; `EXECUTION_PLAN.md` CP-1 |
+| BP-02 boundary protection | `CONTRACTS/BILLING.md` and `CONTRACTS/LIFECYCLE_AND_TRANSFER.md` (one shared guard for add, removal and undo; period bound and re-read); AC-019 |
+| BP-03 buyer payment window | `CONTRACTS/LIFECYCLE_AND_TRANSFER.md` (refused before the effective time; exact-buyer hold; default 48-hour expiry; attention on expiry); AC-022 |
+| BP-04 terminal close | `CONTRACTS/BILLING.md` (state and proof rule); `CONTRACTS/LIFECYCLE_AND_TRANSFER.md` and `CONTRACTS/API_ROLE_MATRIX.md` (`store-operation-close`); `SUPPORT_PROCEDURES.md`; AC-007 |
+| BP-05 reactivation | `CONTRACTS/LIFECYCLE_AND_TRANSFER.md`, `CONTRACTS/API_ROLE_MATRIX.md` (authorizes only; owner pays through Add Store) |
+| BP-06 checkpoint observations | `EXECUTION_PLAN.md`; `CONTRACTS/CLOCK_AND_NOTICES.md` |
+| BP-07 decision key | `DECISION_REGISTER.md` restored as a one-page key |
+| BP-08 forecast shown | `DIRECTOR_SUMMARY.md` |
+| BP-09 housekeeping | `CONTRACTS/IDENTITY_AND_MEMBERSHIP.md`; `STAGING_AND_GATE_D.md`. The original pre-E2 v0.1 review file is still absent (see below). |
+
+One note for QA planning, not a defect: the shared guard in BP-02 also refuses removal and undo when the hypothetical remaining-period price is under 50 cents, so on a monthly period all three operations close roughly seven and a half hours before renewal, not 90 minutes.
+
+## The pack's own records do not match what happened
+
+The pack as used still says, in five places, that E2 is not released: `READ_FIRST_PENDING_RELEASE.md`, `APBM_STATE.md`, `APBM_RULINGS.md`, `BP_AMENDMENT_LEDGER.md`, `SUCCESSOR_INPUTS.json`, and the contract manifest status. It names two conditions before release: this diff confirmation and Director default 9. The Director reports that Engineering has started.
+
+Three records are therefore missing. None requires stopping the build. All three must exist before the Director commits the engineering candidate, because the QA Executor's entry check compares recorded state with reality and returns a discrepancy when they disagree (`QAM/QAM_ENTRY.md`, "Unknown, missing or inconsistent state").
+
+| # | Missing record | Owner | Effect if left open |
+|---|---|---|---|
+| R-1 | Director default 9: does a same-owner paid re-add restore the store's original record and history. | Director | The contract tells the Engineer not to build the reactivation history behaviour and not to invent the opposite until it is ruled. That one piece waits; the rest continues. |
+| R-2 | The Director's E2 release: date, executor, the two baseline commits, and approval of the effect envelope in `ENVIRONMENT_AND_EFFECTS.md`, which by its own words takes effect only on that release. | Director; Architect records | Engineering effects have no recorded authority. Q1 would report the state as inconsistent. |
+| R-3 | This diff confirmation, and the original `FRIDAY_REVIEW_APBM007B_PRE_E2_DRAFT_v0_1_2026-11-16.md` (SHA-256 `37a0993a700264f8a1efab02c149c67e5bc0c1760abe47c8e6b73b5ecea50d48`), added to `GOVERNING/`. | Architect | Record-keeping only. |
+
+Once R-1 to R-3 are recorded, `APBM_STATE.md` and `QAM/QAM_STATE.md` move from HOLD to the engineering state, each by its owning seat.
+
+## For QA preparation
+
+Nothing further is needed from the QA Lead until the engineering handoff. At that point Q1 needs: the committed candidate pair on `qa/apbm-007b`, the completed `QAM_MANIFEST.md` and `HANDOFFS/ENGINEERING_HANDOFF.md`, the measured engineering effect counts, the CP-1 and CP-2 results, and the private QA identity file with its inbox cast.

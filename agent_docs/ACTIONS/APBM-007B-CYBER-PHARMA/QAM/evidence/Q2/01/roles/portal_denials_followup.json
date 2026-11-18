@@ -1,0 +1,50 @@
+[
+  {
+    "role": "OWNER_B",
+    "action": "removal",
+    "status": 404,
+    "error": "not_found",
+    "result": "PASS",
+    "instrument_note": "Previous OWNER_B/MEMBER removal input was shorter than16 chars; corrected only test data, original attempt retained"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "removal/undo",
+    "status": 404,
+    "error": "not_found",
+    "result": "PASS",
+    "instrument_note": "Previous OWNER_B/MEMBER removal input was shorter than16 chars; corrected only test data, original attempt retained"
+  },
+  {
+    "role": "MEMBER",
+    "action": "removal",
+    "status": 403,
+    "error": "not_owner",
+    "result": "PASS",
+    "instrument_note": "Previous OWNER_B/MEMBER removal input was shorter than16 chars; corrected only test data, original attempt retained"
+  },
+  {
+    "role": "MEMBER",
+    "action": "removal/undo",
+    "status": 403,
+    "error": "not_owner",
+    "result": "PASS",
+    "instrument_note": "Previous OWNER_B/MEMBER removal input was shorter than16 chars; corrected only test data, original attempt retained"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "removal",
+    "status": 409,
+    "error": "not_billable",
+    "result": "BLOCKED authorization-depth assertion: own account lacks provider binding; business change refused",
+    "instrument_note": "Previous OWNER_B/MEMBER removal input was shorter than16 chars; corrected only test data, original attempt retained"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "removal/undo",
+    "status": 409,
+    "error": "not_billable",
+    "result": "BLOCKED authorization-depth assertion: own account lacks provider binding; business change refused",
+    "instrument_note": "Previous OWNER_B/MEMBER removal input was shorter than16 chars; corrected only test data, original attempt retained"
+  }
+]

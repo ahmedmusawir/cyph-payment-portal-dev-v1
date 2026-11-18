@@ -1,0 +1,16 @@
+{
+ "scratch_reference_sha": "3b9f467c51b34a3ce0c7967d98a77df853ed2c23045082948f727ded9e2153fc",
+ "dev_after_sha": "4a1c1719d65931710b14fe831ae522d2550fea0981a72a747b8bd6b2cb35b5bf",
+ "sections_identical": [
+  "columns",
+  "tables",
+  "policies",
+  "functions",
+  "constraints",
+  "indexes",
+  "triggers",
+  "enums"
+ ],
+ "only_difference": "defaultACLs: 3 platform default-privilege rows owned by supabase_admin exist on DEV (present unchanged in the DEV before-catalogue) and not on SCRATCH (rebuilt by scratch-reset bootstrap); not created by 0061-0069. New 007B tables still carry no anon/authenticated privilege (guard-post.json).",
+ "defaultACLs_unchanged_by_apply": true
+}

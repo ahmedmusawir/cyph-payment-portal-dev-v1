@@ -15,7 +15,7 @@ export default defineConfig({
   reporter: [["list"]],
   use: {
     baseURL,
-    channel: "chrome",
+    // channel is set per project (all Chrome projects name it); Firefox/WebKit projects use Playwright's own engines
     trace: "off",
     video: "off",
     screenshot: "off",
@@ -25,6 +25,10 @@ export default defineConfig({
     { name: "gate-m-public", testMatch: /gate-m\.public\.spec\.ts/, use: { channel: "chrome" } },
     // Account specs sign in through e2e/auth.ts (real admin, in memory; logout aborted).
     { name: "account", testMatch: /account\..*\.spec\.ts/, use: { ...devices["Desktop Chrome"], channel: "chrome" } },
+    // APBM-007B engineering happy paths on the proof pair (PORTAL_BASE_URL=http://localhost:3101); cast from APBM007B_PROOF_CAST.
+    { name: "apbm007b", testMatch: /apbm007b\..*\.spec\.ts/, use: { ...devices["Desktop Chrome"], channel: "chrome" } },
+    { name: "apbm007b-firefox", testMatch: /apbm007b\..*\.spec\.ts/, use: { ...devices["Desktop Firefox"] } },
+    { name: "apbm007b-webkit", testMatch: /apbm007b\..*\.spec\.ts/, use: { ...devices["Desktop Safari"] } },
     // Opt-in only (PORTAL_ALLOW_LOGOUT=1): the inherited logout is a GLOBAL
     // sign-out that ends every session of the account, including the Director's.
     ...(process.env.PORTAL_ALLOW_LOGOUT === "1"

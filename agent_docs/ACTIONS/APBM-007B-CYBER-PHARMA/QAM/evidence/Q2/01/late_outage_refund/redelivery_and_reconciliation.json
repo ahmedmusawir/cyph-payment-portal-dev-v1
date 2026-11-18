@@ -1,0 +1,45 @@
+{
+  "event_id": "evt_1Uci3vGnEQDyu3RRRa4omqhT",
+  "delivery_lane": "real provider events resend → owned Stripe CLI → Portal after owned listener outage",
+  "cli_exit": 0,
+  "receipt": {
+    "event_id": "evt_1Uci3vGnEQDyu3RRRa4omqhT",
+    "status": "processed",
+    "error_code": null,
+    "attempts": 0
+  },
+  "listener_lines": [
+    "2026-11-17 14:53:16   --> invoice.paid [evt_1Uci3vGnEQDyu3RRRa4omqhT]",
+    "2026-11-17 14:53:18  <--  [200] POST http://localhost:3101/api/webhooks/stripe [evt_1Uci3vGnEQDyu3RRRa4omqhT]"
+  ],
+  "provider_call_intents": [
+    {
+      "stage": "finalize",
+      "attempt": 1,
+      "outcome": "open"
+    },
+    {
+      "stage": "invoice_create",
+      "attempt": 1,
+      "outcome": "in_1Uci3dGnEQDyu3RRKAP7VnOd"
+    },
+    {
+      "stage": "item_create",
+      "attempt": 1,
+      "outcome": "created"
+    },
+    {
+      "stage": "pay",
+      "attempt": 1,
+      "outcome": "invoice_payment_intent_requires_action"
+    },
+    {
+      "stage": "quantity_update",
+      "attempt": 1,
+      "outcome": "updated"
+    }
+  ],
+  "successful_invoice_payments": 1,
+  "refund_issued": false,
+  "refund_reason": "Approved subcase requires paid-but-not-activated. Unexpected activation means no authority to refund this different state; preserved for QA Lead adjudication."
+}

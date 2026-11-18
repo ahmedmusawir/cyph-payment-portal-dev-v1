@@ -1,0 +1,206 @@
+{
+  "at": "2026-11-18T07:05:25.474Z",
+  "invoices": [
+    "in_1Ud2PPGnEQDyu3RRY5zupT6z",
+    "in_1Ud2R6GnEQDyu3RRaSutiLFe",
+    "in_1Ud2SxGnEQDyu3RR12KbzJLk",
+    "in_1Ud2TNGnEQDyu3RRq0dUIY7c",
+    "in_1Ud2V8GnEQDyu3RR6dO0le5g",
+    "in_1Ud2WmGnEQDyu3RRbd1AvW35",
+    "in_1Ud2YUGnEQDyu3RRsNOqRU0I",
+    "in_1Ud2bVGnEQDyu3RRl6eEXnnZ",
+    "in_1Ud2ddGnEQDyu3RRuKCdqp9V",
+    "in_1Ud2kCGnEQDyu3RRBjQHAmD5"
+  ],
+  "events": [
+    {
+      "event_id": "evt_1Ud2RCGnEQDyu3RRfvN5NRtH",
+      "type": "invoice.paid",
+      "object_id": "in_1Ud2R6GnEQDyu3RRaSutiLFe",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0,
+      "owned_CLI_HTTP200": true
+    },
+    {
+      "event_id": "evt_1Ud2TTGnEQDyu3RRB3IrzTIx",
+      "type": "invoice.paid",
+      "object_id": "in_1Ud2TNGnEQDyu3RRq0dUIY7c",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0,
+      "owned_CLI_HTTP200": true
+    },
+    {
+      "event_id": "evt_1Ud2VEGnEQDyu3RRZRE2aqrg",
+      "type": "invoice.paid",
+      "object_id": "in_1Ud2V8GnEQDyu3RR6dO0le5g",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0,
+      "owned_CLI_HTTP200": true
+    },
+    {
+      "event_id": "evt_1Ud2YaGnEQDyu3RR7IaBUQpv",
+      "type": "invoice.paid",
+      "object_id": "in_1Ud2YUGnEQDyu3RRsNOqRU0I",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0,
+      "owned_CLI_HTTP200": true
+    },
+    {
+      "event_id": "evt_1Ud2WsGnEQDyu3RRKsBlTASt",
+      "type": "invoice.paid",
+      "object_id": "in_1Ud2WmGnEQDyu3RRbd1AvW35",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0,
+      "owned_CLI_HTTP200": true
+    },
+    {
+      "event_id": "evt_1Ud2djGnEQDyu3RRncm3EZD9",
+      "type": "invoice.paid",
+      "object_id": "in_1Ud2ddGnEQDyu3RRuKCdqp9V",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0,
+      "owned_CLI_HTTP200": true
+    },
+    {
+      "event_id": "evt_1Ud2PVGnEQDyu3RRsIWLGbRD",
+      "type": "invoice.paid",
+      "object_id": "in_1Ud2PPGnEQDyu3RRY5zupT6z",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0,
+      "owned_CLI_HTTP200": true
+    },
+    {
+      "event_id": "evt_1Ud2bbGnEQDyu3RRyS76JvKB",
+      "type": "invoice.paid",
+      "object_id": "in_1Ud2bVGnEQDyu3RRl6eEXnnZ",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0,
+      "owned_CLI_HTTP200": true
+    },
+    {
+      "event_id": "evt_1Ud2kIGnEQDyu3RRUYJ5RMNy",
+      "type": "invoice.paid",
+      "object_id": "in_1Ud2kCGnEQDyu3RRBjQHAmD5",
+      "status": "processed",
+      "error_code": null,
+      "attempts": 0,
+      "owned_CLI_HTTP200": true
+    }
+  ],
+  "paid_event_count": 9,
+  "paid_forwarded200": 9,
+  "delivery_lane": "Real sandbox automatic existing owned Stripe CLI; no controlled signer",
+  "causal_limit": "Synchronous confirm also reconciles; receipt200/processed proves transport, not that automatic event alone caused activation",
+  "operations": [
+    {
+      "id": "7b338e3f-58e2-42b9-89ad-b79b789c941a",
+      "state": "activated",
+      "created_at": "2026-11-18T06:31:54.725192+00:00",
+      "activated_at": "2026-11-18T06:32:03.976018+00:00",
+      "invoice_id": "in_1Ud2PPGnEQDyu3RRY5zupT6z",
+      "business_id": "de20039e-3d41-4776-94b5-26ae9f388d9a",
+      "amount_cents": 4893,
+      "expected_cents": 4893,
+      "label": "add-webkit-1"
+    },
+    {
+      "id": "e4e7e90d-c40d-42d0-8790-89c5c2a636e1",
+      "state": "activated",
+      "created_at": "2026-11-18T06:33:39.78624+00:00",
+      "activated_at": "2026-11-18T06:33:50.687687+00:00",
+      "invoice_id": "in_1Ud2R6GnEQDyu3RRaSutiLFe",
+      "business_id": "dd87e9ad-d220-4193-aa8d-45bfd4801b9f",
+      "amount_cents": 4893,
+      "expected_cents": 4893,
+      "label": "add-webkit-2"
+    },
+    {
+      "id": "19a86b4e-b551-49c7-85be-9e7fe9f8bdff",
+      "state": "activated",
+      "created_at": "2026-11-18T06:35:34.266893+00:00",
+      "activated_at": "2026-11-18T06:35:48.23089+00:00",
+      "invoice_id": "in_1Ud2SxGnEQDyu3RR12KbzJLk",
+      "business_id": "92fb441b-0141-4a9e-805f-5b6ffe089e48",
+      "amount_cents": 4893,
+      "expected_cents": 4893,
+      "label": "add-webkit-3"
+    },
+    {
+      "id": "29222951-afc9-4933-949f-b7b7cb3bba90",
+      "state": "activated",
+      "created_at": "2026-11-18T06:36:00.278981+00:00",
+      "activated_at": "2026-11-18T06:36:11.565975+00:00",
+      "invoice_id": "in_1Ud2TNGnEQDyu3RRq0dUIY7c",
+      "business_id": "131b9ad5-7f6a-44d0-821e-f4983f110330",
+      "amount_cents": 4893,
+      "expected_cents": 4893,
+      "label": "add-webkit-4"
+    },
+    {
+      "id": "7fa5de1d-1119-4685-8586-520f50e3dba8",
+      "state": "activated",
+      "created_at": "2026-11-18T06:37:49.911134+00:00",
+      "activated_at": "2026-11-18T06:37:59.207297+00:00",
+      "invoice_id": "in_1Ud2V8GnEQDyu3RR6dO0le5g",
+      "business_id": "718bacd5-bb8b-4d0b-ae7d-18f7c74fd62e",
+      "amount_cents": 4893,
+      "expected_cents": 4893,
+      "label": "add-webkit-5"
+    },
+    {
+      "id": "4d457b98-2e82-474a-82fc-797ee50c13fa",
+      "state": "activated",
+      "created_at": "2026-11-18T06:39:32.145094+00:00",
+      "activated_at": "2026-11-18T06:39:40.942638+00:00",
+      "invoice_id": "in_1Ud2WmGnEQDyu3RRbd1AvW35",
+      "business_id": "e68ee8f5-32ff-4fe0-8348-5a51e744e3c1",
+      "amount_cents": 4893,
+      "expected_cents": 4893,
+      "label": "add-chromium"
+    },
+    {
+      "id": "2749878b-d50c-420f-a23d-3b7b85c9b7cb",
+      "state": "activated",
+      "created_at": "2026-11-18T06:41:17.424176+00:00",
+      "activated_at": "2026-11-18T06:41:26.571903+00:00",
+      "invoice_id": "in_1Ud2YUGnEQDyu3RRsNOqRU0I",
+      "business_id": "1dfe440a-f495-4805-b147-576b80cd13d4",
+      "amount_cents": 4893,
+      "expected_cents": 4893,
+      "label": "add-firefox"
+    },
+    {
+      "id": "916f507e-1fb2-4b4c-a7e2-47d5e3d6e3f5",
+      "state": "activated",
+      "created_at": "2026-11-18T06:44:24.201334+00:00",
+      "activated_at": "2026-11-18T06:44:33.806027+00:00",
+      "invoice_id": "in_1Ud2bVGnEQDyu3RRl6eEXnnZ",
+      "business_id": "a9e3c9d3-5f43-4b50-b36a-aed09214bbef",
+      "amount_cents": 4893,
+      "expected_cents": 4893,
+      "label": "full-order-webkit-1"
+    },
+    {
+      "id": "8eb789a7-4023-45e4-b976-463d871e24c3",
+      "state": "activated",
+      "created_at": "2026-11-18T06:46:36.825839+00:00",
+      "activated_at": "2026-11-18T06:46:46.506199+00:00",
+      "invoice_id": "in_1Ud2ddGnEQDyu3RRuKCdqp9V",
+      "business_id": "cd914d56-50c1-4d72-ba6a-31d885854fd4",
+      "amount_cents": 4893,
+      "expected_cents": 4893,
+      "label": "full-order-webkit-2"
+    }
+  ],
+  "all_independent_browser_cents_match": true,
+  "unique_invoice_per_browser_add": true,
+  "last_source_cents_match": true
+}

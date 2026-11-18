@@ -1,0 +1,16 @@
+{
+ "ruling": "Director (Tony) 17 Nov 2026: the hash-verified as-received v0.1 attachment satisfies Friday R-3, provided its full SHA-256 equals the required value",
+ "as_received_file": "GOVERNING/FRIDAY_REVIEW_APBM007B_PRE_E2_DRAFT_v0_1_2026-11-16_AS_RECEIVED.txt",
+ "as_received_bytes": 6574,
+ "as_received_sha256": "2dfaac3a6c9de60a058bc96d70d3493226cb01ce051b8ca70640ca9233ad29a9",
+ "as_received_last_byte_hex": "2e",
+ "as_received_ends_with_newline": false,
+ "restoration": "append exactly one final newline byte 0x0A (pasting stripped the file's final newline); no other byte changed",
+ "restored_bytes": 6575,
+ "restored_sha256": "37a0993a700264f8a1efab02c149c67e5bc0c1760abe47c8e6b73b5ecea50d48",
+ "required_sha256": "37a0993a700264f8a1efab02c149c67e5bc0c1760abe47c8e6b73b5ecea50d48",
+ "full_sha256_equal": true,
+ "as_received_file_unchanged": true,
+ "original_named_file_created": false,
+ "verify_command": "python3 -c \"import hashlib;print(hashlib.sha256(open('GOVERNING/FRIDAY_REVIEW_APBM007B_PRE_E2_DRAFT_v0_1_2026-11-16_AS_RECEIVED.txt','rb').read()+b'\\\\n').hexdigest())\""
+}

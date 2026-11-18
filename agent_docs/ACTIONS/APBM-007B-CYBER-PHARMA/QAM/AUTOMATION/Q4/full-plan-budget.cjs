@@ -1,0 +1,18 @@
+// Planning only: no provider/Auth/DB/mail calls. Actual attempts reserve separately in the same cumulative ledger.
+const fs=require('fs'),path=require('path'),L=require('./ledger.cjs');const q=path.resolve(__dirname,'../..');
+const rows=[
+ {phase:'PF00, retained-fixture digests, SCRATCH0070 forward and DEV69 read-only',provider_mutations:2,reads:500,scratch_cycles:1},
+ {phase:'Repeatable browser/sign-in/hydration/screens across3engines, WebKit5unchanged',sign_ins:34,reads:650},
+ {phase:'Fixture preparation, reuse existing separate accounts; at most2 extra sandbox bindings and1clock contingency',provider_mutations:10,customers:2,subscriptions:2,test_clocks:1,pay_or_hosted:2,attempted_cents:20000,sign_ins:4,reads:200},
+ {phase:'Seven simulated-clock deadline cases, including initial pending attempts,6payments, advance and resume',provider_mutations:41,pay_or_hosted:13,attempted_cents:65000,sign_ins:4,reads:450},
+ {phase:'Seven real-time deadline cases in separate-account concurrent waves, actual30minute waits, resume',provider_mutations:34,pay_or_hosted:13,attempted_cents:65000,sign_ins:4,reads:450},
+ {phase:'Ordinary/APA amounts,50c/endguards,decline/abandon,3DS,crashS1/S2,duplicate/redelivery,readd,refundclose',provider_mutations:59,pay_or_hosted:15,attempted_cents:90000,refunds:1,sign_ins:8,reads:550},
+ {phase:'Six exact runbook dry runs, role matrix, oldSQLwording, final protected-fixture/provider verification',sign_ins:10,reads:180},
+ {phase:'Bounded contingency: provider/card/auth retry, grouped human links only if needed; no new alias',provider_mutations:20,pay_or_hosted:8,attempted_cents:50000,email_attempts:6,sign_ins:8,new_identities:1,reads:300}
+];
+const total={};for(const row of rows)for(const[k,n]of Object.entries(row))if(k!=='phase')total[k]=(total[k]||0)+n;
+for(const k of ['unique_identities','new_identities','customers','subscriptions','test_clocks','refunds','email_attempts','scratch_cycles'])total[k]??=0;
+const before=fs.readFileSync(q+'/evidence/Q4/01/effects/counters.json');const c=JSON.parse(before);const dry=L.dryRun('Entire remaining Q4 scope including contingency; no counters spent',total);
+if(!before.equals(fs.readFileSync(q+'/evidence/Q4/01/effects/counters.json')))throw Error('dry-run changed counters');
+const limits=Object.entries(dry.caps).map(([counter,cap])=>({counter,used:c.used[counter]||0,remaining_plan:total[counter]||0,projected:(c.used[counter]||0)+(total[counter]||0),cap,normal_ceiling:counter==='provider_mutations'?cap-20:counter==='email_attempts'?cap-8:cap,pass:(c.used[counter]||0)+(total[counter]||0)<=(counter==='provider_mutations'?cap-20:counter==='email_attempts'?cap-8:cap)}));
+const out={at:new Date().toISOString(),rows,total,limits,pass:limits.every(x=>x.pass),campaign_deadline:'2026-11-20T23:59:00+06:00',real_time_design:'Use existing real accounts MEMBER/FOREIGN_OWNER/NEW_MEMBER and one eligible new account for existing NEW_ADMIN. Separate accounts for concurrent cases, sequential waves after terminal resolution; no test context on real cohort. Clock cohort uses isolated existing nonprotected QA account; F001 store never refunded/cleaned. Verify current ownership before setup. No new aliases. No fabricated real timestamps.',reserved_cleanup:{provider_mutations:20,email_attempts:8},counter_reset:false,scenario_rule:'This is a forecast, not spent reservation. Enforce each attempt; if forecast would grow beyond any limit stop before effect.',contingency_qualification:'Creation attempt contingency is for an authorized retry only, not permission for a new alias or duplicate identity.'};fs.writeFileSync(q+'/evidence/Q4/01/entry/full_plan_budget_2026-11-18.json',JSON.stringify(out,null,2)+'\n');console.log(JSON.stringify({pass:out.pass,limits},null,2));

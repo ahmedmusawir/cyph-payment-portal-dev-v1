@@ -1,0 +1,372 @@
+[
+  {
+    "role": "OWNER_A",
+    "action": "operations",
+    "method": "GET",
+    "url": "/api/stores/operations",
+    "status": 200,
+    "expected": "200",
+    "result": "PASS",
+    "error": null
+  },
+  {
+    "role": "OWNER_A",
+    "action": "jobs",
+    "method": "POST",
+    "url": "/api/internal/jobs/run",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "OWNER_A",
+    "action": "operator",
+    "method": "POST",
+    "url": "/api/operator/007b",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "operations",
+    "method": "GET",
+    "url": "/api/stores/operations",
+    "status": 200,
+    "expected": "200",
+    "result": "PASS",
+    "error": null
+  },
+  {
+    "role": "OWNER_B",
+    "action": "jobs",
+    "method": "POST",
+    "url": "/api/internal/jobs/run",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "operator",
+    "method": "POST",
+    "url": "/api/operator/007b",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "foreign removal",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal",
+    "status": 400,
+    "expected": "401/403/404",
+    "result": "FAIL",
+    "error": "invalid_input"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "foreign undo",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "operations",
+    "method": "GET",
+    "url": "/api/stores/operations",
+    "status": 403,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_owner"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "jobs",
+    "method": "POST",
+    "url": "/api/internal/jobs/run",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "operator",
+    "method": "POST",
+    "url": "/api/operator/007b",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "quote",
+    "method": "POST",
+    "url": "/api/stores/add/quote",
+    "status": 403,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_owner"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "foreign removal",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal",
+    "status": 403,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_owner"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "foreign undo",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo",
+    "status": 403,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_owner"
+  },
+  {
+    "role": "MEMBER",
+    "action": "operations",
+    "method": "GET",
+    "url": "/api/stores/operations",
+    "status": 403,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_owner"
+  },
+  {
+    "role": "MEMBER",
+    "action": "jobs",
+    "method": "POST",
+    "url": "/api/internal/jobs/run",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "MEMBER",
+    "action": "operator",
+    "method": "POST",
+    "url": "/api/operator/007b",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "MEMBER",
+    "action": "quote",
+    "method": "POST",
+    "url": "/api/stores/add/quote",
+    "status": 403,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_owner"
+  },
+  {
+    "role": "MEMBER",
+    "action": "foreign removal",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal",
+    "status": 400,
+    "expected": "401/403/404",
+    "result": "FAIL",
+    "error": "invalid_input"
+  },
+  {
+    "role": "MEMBER",
+    "action": "foreign undo",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo",
+    "status": 403,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_owner"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "operations",
+    "method": "GET",
+    "url": "/api/stores/operations",
+    "status": 200,
+    "expected": "200",
+    "result": "PASS",
+    "error": null
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "jobs",
+    "method": "POST",
+    "url": "/api/internal/jobs/run",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "operator",
+    "method": "POST",
+    "url": "/api/operator/007b",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "foreign removal",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal",
+    "status": 409,
+    "expected": "401/403/404",
+    "result": "FAIL",
+    "error": "not_billable"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "foreign undo",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo",
+    "status": 409,
+    "expected": "401/403/404",
+    "result": "FAIL",
+    "error": "not_billable"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "operations",
+    "method": "GET",
+    "url": "/api/stores/operations",
+    "status": 403,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_owner"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "jobs",
+    "method": "POST",
+    "url": "/api/internal/jobs/run",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "operator",
+    "method": "POST",
+    "url": "/api/operator/007b",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "quote",
+    "method": "POST",
+    "url": "/api/stores/add/quote",
+    "status": 403,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_owner"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "foreign removal",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal",
+    "status": 403,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_owner"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "foreign undo",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo",
+    "status": 403,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_owner"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "operations",
+    "method": "GET",
+    "url": "/api/stores/operations",
+    "status": 401,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "sign_in_required"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "jobs",
+    "method": "POST",
+    "url": "/api/internal/jobs/run",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "operator",
+    "method": "POST",
+    "url": "/api/operator/007b",
+    "status": 404,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "not_found"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "quote",
+    "method": "POST",
+    "url": "/api/stores/add/quote",
+    "status": 401,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "sign_in_required"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "foreign removal",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal",
+    "status": 401,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "sign_in_required"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "foreign undo",
+    "method": "POST",
+    "url": "/api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo",
+    "status": 401,
+    "expected": "401/403/404",
+    "result": "PASS",
+    "error": "sign_in_required"
+  }
+]

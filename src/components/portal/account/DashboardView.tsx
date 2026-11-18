@@ -14,6 +14,7 @@ import { PageContainer } from "../Loading";
 import { PageHeader } from "../PageHeader";
 import { Pill, type PillTone } from "../Pill";
 import { STORE_PILL, SUBSCRIPTION_PILL } from "./status";
+import { StoreRemovalControl } from "./StoreRemovalControl";
 import { externalRedirect, formatDate, portalApi } from "@/services/portal";
 import type { BillingOverview, BillingOverviewResponse, PaymentMethodState } from "@/types/portal/api";
 
@@ -187,6 +188,10 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
     { key: "name", header: "Pharmacy", primary: true, cell: (s: Store) => <span className="break-words font-medium text-foreground">{s.name}</span> },
     { key: "npi", header: "NPI", cell: (s: Store) => <span className="tabular-nums text-foreground">{s.npi}</span> },
     { key: "status", header: "Status", cell: storePill },
+    // APBM-007B: period-end removal/undo for an active Stripe subscription (never the last store; server-enforced).
+    ...(real && !ended && !access.read_only ? [{ key: "actions", header: "Changes", cell: (s: Store) => (stores.length > 1 || s.removal_effective_at)
+      ? <StoreRemovalControl storeId={s.id} removalEffectiveAt={s.removal_effective_at ?? null} onChanged={() => void load()} />
+      : <span className="text-xs text-muted-foreground">Only store — cancel the subscription to stop</span> }] : []),
   ];
 
   const storesSection = (
@@ -194,7 +199,13 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
       <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div className="min-w-0">
           <h2 id="ph-h" className="text-xl font-bold text-foreground">Pharmacies on this account</h2>
-          <p className="text-sm text-muted-foreground" data-testid="add-store-unavailable">Adding a store is not available yet.</p>
+          {real && !ended && !access.read_only && !cancelScheduled && access.state === "active" ? (
+            <Link className="text-sm underline" href="/stores/add" data-testid="add-store-link">Add a pharmacy</Link>
+          ) : (
+            <p className="text-sm text-muted-foreground" data-testid="add-store-unavailable">
+              {real ? "Adding a store needs an active subscription with no overdue payment or scheduled cancellation." : "Adding a store needs a paid subscription."}
+            </p>
+          )}
         </div>
         <span className="shrink-0 text-sm tabular-nums text-muted-foreground" data-testid="pharmacy-count">
           {stores.length} {stores.length === 1 ? "pharmacy" : "pharmacies"}
@@ -348,7 +359,7 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
       {sub !== null || stores.length > 0 ? storesSection : null}
 
       <p className="mt-8 text-xs text-muted-foreground">
-        Inviting staff and adding stores are not available yet. Only the billing owner can manage billing; to change the billing owner, contact <Placeholder>{BRAND.supportEmail}</Placeholder>.
+        Only the billing owner can manage billing; to change the billing owner, contact <Placeholder>{BRAND.supportEmail}</Placeholder>.
       </p>
     </PageContainer>
   );

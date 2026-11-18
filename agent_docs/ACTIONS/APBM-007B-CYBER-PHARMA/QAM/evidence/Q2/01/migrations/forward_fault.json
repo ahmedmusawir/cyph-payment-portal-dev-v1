@@ -1,0 +1,15 @@
+{
+  "command": [
+    "node",
+    "scripts/apbm007b/migrate-rehearsal.mjs",
+    "forward",
+    "--db",
+    "<QA-local DB>",
+    "--fault-at",
+    "0064_007b_invitations.sql"
+  ],
+  "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-v1-dev",
+  "exit": 0,
+  "stdout": "{\n \"command\": \"forward\",\n \"target\": \"local-rehearsal\",\n \"startedAt\": \"2026-11-17T08:18:16.496Z\",\n \"committed\": [\n  \"0061_007b_identity_clock_foundation.sql\",\n  \"0062_007b_store_operations.sql\",\n  \"0063_007b_lifecycle_transfers.sql\"\n ],\n \"status\": \"FAULT_INJECTED_ROLLED_BACK\",\n \"failedMigration\": \"0064_007b_invitations.sql\",\n \"errorCode\": \"22012\",\n \"message\": \"division by zero\",\n \"ledger\": {\n  \"n\": 63,\n  \"last\": \"0063_007b_lifecycle_transfers.sql\"\n },\n \"finishedAt\": \"2026-11-17T08:18:16.605Z\"\n}\n",
+  "stderr": ""
+}

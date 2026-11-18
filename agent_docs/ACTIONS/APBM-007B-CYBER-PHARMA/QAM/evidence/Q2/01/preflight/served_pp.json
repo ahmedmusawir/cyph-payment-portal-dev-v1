@@ -1,0 +1,14 @@
+{
+  "command": [
+    "node",
+    "scripts/apbm007b/served-identity.mjs",
+    "--base",
+    "http://localhost:3101",
+    "--manifest",
+    "/tmp/apbm007b-qa-q2-01/proof/manifest_pp.json"
+  ],
+  "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1",
+  "exit": 0,
+  "stdout": "{\n \"base\": \"http://localhost:3101\",\n \"http\": {\n  \"app\": \"pp\",\n  \"revision\": \"427bec6267b9+qa-product\",\n  \"artifactId\": \"96225fced4ca5c93096231bc125fbc81\"\n },\n \"manifest\": {\n  \"app\": \"pp\",\n  \"artifact_id\": \"96225fced4ca5c93096231bc125fbc81\",\n  \"revision\": \"427bec6267b9+qa-product\",\n  \"next_build_id\": \"ylHyy2fydLEyphq3d9046\"\n },\n \"process\": {\n  \"pid\": 3209773,\n  \"cwd\": \"/tmp/apbm007b-qa-q2-01/proof/pp\",\n  \"started\": \"Tue Nov 17 14:10:18 2026\",\n  \"disk_build_id\": \"ylHyy2fydLEyphq3d9046\",\n  \"build_id_mtime\": \"2026-11-17T08:09:41.040Z\"\n },\n \"match\": true\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,211 @@
+{
+  "at": "2026-11-18T01:40:38.638Z",
+  "rows": [
+    {
+      "phase": "PF00, retained-fixture digests, SCRATCH0070 forward and DEV69 read-only",
+      "provider_mutations": 2,
+      "reads": 500,
+      "scratch_cycles": 1
+    },
+    {
+      "phase": "Repeatable browser/sign-in/hydration/screens across3engines, WebKit5unchanged",
+      "sign_ins": 34,
+      "reads": 650
+    },
+    {
+      "phase": "Fixture preparation, reuse existing separate accounts; at most2 extra sandbox bindings and1clock contingency",
+      "provider_mutations": 10,
+      "customers": 2,
+      "subscriptions": 2,
+      "test_clocks": 1,
+      "pay_or_hosted": 2,
+      "attempted_cents": 20000,
+      "sign_ins": 4,
+      "reads": 200
+    },
+    {
+      "phase": "Seven simulated-clock deadline cases, including initial pending attempts,6payments, advance and resume",
+      "provider_mutations": 41,
+      "pay_or_hosted": 13,
+      "attempted_cents": 65000,
+      "sign_ins": 4,
+      "reads": 450
+    },
+    {
+      "phase": "Seven real-time deadline cases in separate-account concurrent waves, actual30minute waits, resume",
+      "provider_mutations": 34,
+      "pay_or_hosted": 13,
+      "attempted_cents": 65000,
+      "sign_ins": 4,
+      "reads": 450
+    },
+    {
+      "phase": "Ordinary/APA amounts,50c/endguards,decline/abandon,3DS,crashS1/S2,duplicate/redelivery,readd,refundclose",
+      "provider_mutations": 59,
+      "pay_or_hosted": 15,
+      "attempted_cents": 90000,
+      "refunds": 1,
+      "sign_ins": 8,
+      "reads": 550
+    },
+    {
+      "phase": "Six exact runbook dry runs, role matrix, oldSQLwording, final protected-fixture/provider verification",
+      "sign_ins": 10,
+      "reads": 180
+    },
+    {
+      "phase": "Bounded contingency: provider/card/auth retry, grouped human links only if needed; no new alias",
+      "provider_mutations": 20,
+      "pay_or_hosted": 8,
+      "attempted_cents": 50000,
+      "email_attempts": 6,
+      "sign_ins": 8,
+      "new_identities": 1,
+      "reads": 300
+    }
+  ],
+  "total": {
+    "provider_mutations": 166,
+    "reads": 3280,
+    "scratch_cycles": 1,
+    "sign_ins": 72,
+    "customers": 2,
+    "subscriptions": 2,
+    "test_clocks": 1,
+    "pay_or_hosted": 51,
+    "attempted_cents": 290000,
+    "refunds": 1,
+    "email_attempts": 6,
+    "new_identities": 1,
+    "unique_identities": 0
+  },
+  "limits": [
+    {
+      "counter": "provider_mutations",
+      "used": 166,
+      "remaining_plan": 166,
+      "projected": 332,
+      "cap": 400,
+      "normal_ceiling": 380,
+      "pass": true
+    },
+    {
+      "counter": "customers",
+      "used": 7,
+      "remaining_plan": 2,
+      "projected": 9,
+      "cap": 16,
+      "normal_ceiling": 16,
+      "pass": true
+    },
+    {
+      "counter": "subscriptions",
+      "used": 7,
+      "remaining_plan": 2,
+      "projected": 9,
+      "cap": 16,
+      "normal_ceiling": 16,
+      "pass": true
+    },
+    {
+      "counter": "test_clocks",
+      "used": 3,
+      "remaining_plan": 1,
+      "projected": 4,
+      "cap": 7,
+      "normal_ceiling": 7,
+      "pass": true
+    },
+    {
+      "counter": "pay_or_hosted",
+      "used": 21,
+      "remaining_plan": 51,
+      "projected": 72,
+      "cap": 80,
+      "normal_ceiling": 80,
+      "pass": true
+    },
+    {
+      "counter": "attempted_cents",
+      "used": 342479,
+      "remaining_plan": 290000,
+      "projected": 632479,
+      "cap": 1000000,
+      "normal_ceiling": 1000000,
+      "pass": true
+    },
+    {
+      "counter": "email_attempts",
+      "used": 16,
+      "remaining_plan": 6,
+      "projected": 22,
+      "cap": 40,
+      "normal_ceiling": 32,
+      "pass": true
+    },
+    {
+      "counter": "sign_ins",
+      "used": 95,
+      "remaining_plan": 72,
+      "projected": 167,
+      "cap": 176,
+      "normal_ceiling": 176,
+      "pass": true
+    },
+    {
+      "counter": "new_identities",
+      "used": 12,
+      "remaining_plan": 1,
+      "projected": 13,
+      "cap": 14,
+      "normal_ceiling": 14,
+      "pass": true
+    },
+    {
+      "counter": "unique_identities",
+      "used": 8,
+      "remaining_plan": 0,
+      "projected": 8,
+      "cap": 10,
+      "normal_ceiling": 10,
+      "pass": true
+    },
+    {
+      "counter": "scratch_cycles",
+      "used": 0,
+      "remaining_plan": 1,
+      "projected": 1,
+      "cap": 3,
+      "normal_ceiling": 3,
+      "pass": true
+    },
+    {
+      "counter": "reads",
+      "used": 1268,
+      "remaining_plan": 3280,
+      "projected": 4548,
+      "cap": 5000,
+      "normal_ceiling": 5000,
+      "pass": true
+    },
+    {
+      "counter": "refunds",
+      "used": 1,
+      "remaining_plan": 1,
+      "projected": 2,
+      "cap": 2,
+      "normal_ceiling": 2,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "campaign_deadline": "2026-11-20T23:59:00+06:00",
+  "real_time_design": "Use existing real accounts MEMBER/FOREIGN_OWNER/NEW_MEMBER and one eligible new account for existing NEW_ADMIN. Separate accounts for concurrent cases, sequential waves after terminal resolution; no test context on real cohort. Clock cohort uses isolated existing nonprotected QA account; F001 store never refunded/cleaned. Verify current ownership before setup. No new aliases. No fabricated real timestamps.",
+  "reserved_cleanup": {
+    "provider_mutations": 20,
+    "email_attempts": 8
+  },
+  "counter_reset": false,
+  "scenario_rule": "This is a forecast, not spent reservation. Enforce each attempt; if forecast would grow beyond any limit stop before effect.",
+  "contingency_qualification": "Creation attempt contingency is for an authorized retry only, not permission for a new alias or duplicate identity."
+}

@@ -1,0 +1,30 @@
+{
+ "label": "qa-20261117-c414",
+ "before": {
+  "identity_exists": true,
+  "memberships": 0,
+  "owns_account": 0
+ },
+ "send_ui": "Invitation email sent.",
+ "sent_at": "2026-11-17T08:37:23.523Z",
+ "invitation_after_send": {
+  "status": "pending",
+  "role": "member",
+  "dispatch_attempts": 1
+ },
+ "identity_after_send_unchanged": false,
+ "invitations_listed_for_invitee": 1,
+ "after_accept_url_path": "/owedbook",
+ "invitation_final": {
+  "status": "accepted",
+  "accepted_by_invitee": true
+ },
+ "memberships_after": [
+  {
+   "store": "A1",
+   "role": "member"
+  }
+ ],
+ "owns_account_after": 0,
+ "identity_unchanged_after_accept": true
+}

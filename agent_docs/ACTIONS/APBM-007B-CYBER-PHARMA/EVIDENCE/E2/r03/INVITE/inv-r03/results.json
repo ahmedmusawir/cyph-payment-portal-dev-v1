@@ -1,0 +1,25 @@
+{
+ "store_role": "O-1 store A1 (OWNER_A)",
+ "results": [
+  {
+   "role": "ENGINEERING_MEMBER",
+   "ui_delivery_text": "Invitation email sent.",
+   "sent_at": "2026-11-17T03:41:09.026Z",
+   "invitation_role": "member",
+   "invitation_status": "pending",
+   "dispatch_attempts": 1,
+   "former_admin_disposition": null
+  },
+  {
+   "role": "ENGINEERING_ADMIN",
+   "ui_delivery_text": "Invitation email sent.",
+   "sent_at": "2026-11-17T03:41:15.514Z",
+   "invitation_role": "admin",
+   "invitation_status": "pending",
+   "dispatch_attempts": 1,
+   "former_admin_disposition": "member"
+  }
+ ],
+ "note": "staff_panel_pending.png shows invitee addresses: excluded from packages unless redacted",
+ "note2": "invitation fields re-read after the run (the run read used a wrong column name; no step repeated)"
+}

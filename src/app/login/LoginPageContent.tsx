@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
@@ -24,6 +24,15 @@ export function LoginPageContent({ sessionExpired, continueHandoff = false }: { 
   const [password, setPassword] = useState("");
   const [error, setError] = useState<{ title: string; body?: string } | null>(null);
   const [loading, setLoading] = useState(false);
+
+  // F-Q4-001: what was typed or filled before the page finished loading is in the fields but never reached this state,
+  // so Sign in stayed disabled and the next re-render (e.g. Show password) wiped it. Adopt it once React owns the fields.
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    if (emailRef.current?.value) setEmail(emailRef.current.value);
+    if (passwordRef.current?.value) setPassword(passwordRef.current.value);
+  }, []);
 
   const canSubmit = email.trim().length > 0 && password.length > 0 && !loading;
 
@@ -72,6 +81,7 @@ export function LoginPageContent({ sessionExpired, continueHandoff = false }: { 
 
       <form onSubmit={onSubmit} noValidate className="mt-6 space-y-4 border border-border bg-card p-4 sm:p-5">
         <TextField
+          ref={emailRef}
           id="email"
           type="email"
           autoComplete="email"
@@ -81,6 +91,7 @@ export function LoginPageContent({ sessionExpired, continueHandoff = false }: { 
           aria-invalid={error ? true : undefined}
         />
         <PasswordField
+          ref={passwordRef}
           id="password"
           autoComplete="current-password"
           label="Password"

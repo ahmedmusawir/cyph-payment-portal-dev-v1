@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-18T08:03:11.510090+00:00",
+  "label": "final",
+  "credential_source_present": true,
+  "retained_QAM_files_copied": 800,
+  "archives_expanded": 9,
+  "expanded_members": 1741,
+  "archive_sha256s": {
+    "APBM-007B-CYBER-PHARMA_STOP_REVIEW_01.zip": "acd3b53e1f7ded79e2102da8125932fb7d38db9fc0e496e858ecc250becb4961",
+    "APBM-007B-CYBER-PHARMA_Q1_REVIEW_01.zip": "b1d5fce17c5ea8ff76bc72656624fc45c6de268cbcf1872118197ef890c6fb0c",
+    "APBM-007B-CYBER-PHARMA_Q1_REVIEW_02.zip": "b0d6640e76d27b234602c134b86f558826dc2e7bb04168c79bacfd7b1ef70340",
+    "APBM-007B-CYBER-PHARMA_STOP_REVIEW_02.zip": "911acf545c035d9b3f46c9b723f5fcdd2e5f89e4aed18b32a145cb20c34c8e77",
+    "APBM-007B-CYBER-PHARMA_STOP_REVIEW_03.zip": "926e6c424501c2cc5f08b7d5c33a7185b9cf7c6cb3c19056d12cd4648ac77233",
+    "APBM-007B-CYBER-PHARMA_Q4_REVIEW_01.zip": "ec99c079406250551abd02f1d5e4403f6f101a3bbc24c0cdd9b8b52a029400a5",
+    "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01.zip": "befa782288fe05ead925399d268dd6e218d6fb87e37000884fc144b66c7cfb9b",
+    "APBM-007B-CYBER-PHARMA_Q4_REVIEW_02.zip": "e6dd4520ac255a3a71e63cb71799618c0780c7baf8b1bb558adc3e8c7afb25d6",
+    "APBM-007B-CYBER-PHARMA_STOP_REVIEW_04.zip": "f15850f8f947f5a36ef22a2451dc60f67e71d895ef0beafe73d7fe61e76c81b7"
+  },
+  "actual_value_scan": {
+    "controls": {
+      "poison": true,
+      "clean": true
+    },
+    "files": 2541,
+    "private_values_checked": 96,
+    "hits": [],
+    "credential_values_or_hashes_printed": false
+  },
+  "exit": 0,
+  "credential_values_or_hashes_printed": false,
+  "scan_order": "Before private credential removal; actual values loaded only in scanner memory"
+}

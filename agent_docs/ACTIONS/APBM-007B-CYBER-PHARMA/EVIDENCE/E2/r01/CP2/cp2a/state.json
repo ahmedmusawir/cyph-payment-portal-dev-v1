@@ -1,0 +1,2509 @@
+{
+ "label": "cp2a",
+ "objects": {
+  "clock": "clock_1UcSROGnEQDyu3RRF2iDmk0g",
+  "start": 1794845254,
+  "O": {
+   "customer": "cus_VdjvpFtwdc89Be",
+   "subscription": "sub_1UcSRQGnEQDyu3RRhK33zNO4",
+   "visa": "pm_1UcSRPGnEQDyu3RR1X7z1rrT",
+   "failing": "pm_1UcSRpGnEQDyu3RRzZjsDwcS"
+  },
+  "P": {
+   "customer": "cus_VdjvqbR00qJ99i",
+   "subscription": "sub_1UcSRUGnEQDyu3RRcoaKxR4f",
+   "visa": "pm_1UcSRTGnEQDyu3RRyTykmcr7"
+  },
+  "renewalAt": 1797437254
+ },
+ "steps": [
+  {
+   "name": "clock_created",
+   "at": "2026-11-16T16:07:34.548Z",
+   "frozen_time": 1794845254,
+   "status": "ready"
+  },
+  {
+   "name": "O:fixture",
+   "at": "2026-11-16T16:07:38.422Z",
+   "subscription": {
+    "status": "active",
+    "quantity": 1,
+    "period": [
+     1794845254,
+     1797437254
+    ],
+    "latest_invoice": "in_1UcSRQGnEQDyu3RRezi98rrm",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "first_invoice": {
+    "id": "in_1UcSRQGnEQDyu3RRezi98rrm",
+    "status": "paid",
+    "billing_reason": "subscription_create",
+    "total": 9900,
+    "amount_due": 9900,
+    "amount_paid": 9900,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1794845254,
+    "status_transitions": {
+     "finalized_at": 1794845254,
+     "marked_uncollectible_at": null,
+     "paid_at": 1794845254,
+     "voided_at": null
+    },
+    "discounts": 0
+   }
+  },
+  {
+   "name": "P:fixture",
+   "at": "2026-11-16T16:07:43.489Z",
+   "subscription": {
+    "status": "active",
+    "quantity": 1,
+    "period": [
+     1794845254,
+     1797437254
+    ],
+    "latest_invoice": "in_1UcSRUGnEQDyu3RRroHALFqQ",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "first_invoice": {
+    "id": "in_1UcSRUGnEQDyu3RRroHALFqQ",
+    "status": "paid",
+    "billing_reason": "subscription_create",
+    "total": 8910,
+    "amount_due": 8910,
+    "amount_paid": 8910,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1794845254,
+    "status_transitions": {
+     "finalized_at": 1794845254,
+     "marked_uncollectible_at": null,
+     "paid_at": 1794845254,
+     "voided_at": null
+    },
+    "discounts": 1
+   }
+  },
+  {
+   "name": "advanced_mid",
+   "at": "2026-11-16T16:07:46.269Z",
+   "frozen_time": 1796141254
+  },
+  {
+   "name": "O:midpoint_add",
+   "at": "2026-11-16T16:07:53.197Z",
+   "clock_now": 1796141254,
+   "period": [
+    1794845254,
+    1797437254
+   ],
+   "fraction_remaining": 0.5,
+   "quote_cents": 2450,
+   "invoice": {
+    "id": "in_1UcSRbGnEQDyu3RR7M7LzNVg",
+    "status": "paid",
+    "billing_reason": "manual",
+    "total": 2450,
+    "amount_due": 2450,
+    "amount_paid": 2450,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1796141254,
+    "status_transitions": {
+     "finalized_at": 1796141254,
+     "marked_uncollectible_at": null,
+     "paid_at": 1796141254,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "quote_equals_invoice": true,
+   "less_than_full": true,
+   "subscription_after": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1794845254,
+     1797437254
+    ],
+    "latest_invoice": "in_1UcSRQGnEQDyu3RRezi98rrm",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "renewal_preview_cents": 14800,
+   "renewal_discount_lines": 0,
+   "pass": true
+  },
+  {
+   "name": "P:midpoint_add",
+   "at": "2026-11-16T16:08:01.165Z",
+   "clock_now": 1796141254,
+   "period": [
+    1794845254,
+    1797437254
+   ],
+   "fraction_remaining": 0.5,
+   "quote_cents": 2450,
+   "invoice": {
+    "id": "in_1UcSRhGnEQDyu3RR73rhAHgU",
+    "status": "paid",
+    "billing_reason": "manual",
+    "total": 2450,
+    "amount_due": 2450,
+    "amount_paid": 2450,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1796141254,
+    "status_transitions": {
+     "finalized_at": 1796141254,
+     "marked_uncollectible_at": null,
+     "paid_at": 1796141254,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "quote_equals_invoice": true,
+   "less_than_full": true,
+   "subscription_after": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1794845254,
+     1797437254
+    ],
+    "latest_invoice": "in_1UcSRUGnEQDyu3RRroHALFqQ",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "renewal_preview_cents": 14800,
+   "renewal_discount_lines": 0,
+   "pass": true
+  },
+  {
+   "name": "O:renewal_plus_1h",
+   "at": "2026-11-16T16:08:22.568Z",
+   "clock_now": 1797440854,
+   "clock_iso": "2026-12-16T17:07:34.000Z",
+   "subscription": {
+    "status": "past_due",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "latest_invoice": {
+    "id": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "status": "open",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 0,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": 1797596878,
+    "auto_advance": true,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": null,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "P_subscription": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "P_latest_invoice": {
+    "id": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "status": "paid",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 14800,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": 1797440854,
+     "voided_at": null
+    },
+    "discounts": 0
+   }
+  },
+  {
+   "name": "O:day_1",
+   "at": "2026-11-16T16:08:26.483Z",
+   "clock_now": 1797527254,
+   "clock_iso": "2026-12-17T17:07:34.000Z",
+   "subscription": {
+    "status": "past_due",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "latest_invoice": {
+    "id": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "status": "open",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 0,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": 1797596878,
+    "auto_advance": true,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": null,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "P_subscription": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "P_latest_invoice": {
+    "id": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "status": "paid",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 14800,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": 1797440854,
+     "voided_at": null
+    },
+    "discounts": 0
+   }
+  },
+  {
+   "name": "O:day_2",
+   "at": "2026-11-16T16:08:34.988Z",
+   "clock_now": 1797613654,
+   "clock_iso": "2026-12-18T17:07:34.000Z",
+   "subscription": {
+    "status": "past_due",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "latest_invoice": {
+    "id": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "status": "open",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 0,
+    "attempt_count": 2,
+    "attempted": true,
+    "next_payment_attempt": 1797753631,
+    "auto_advance": true,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": null,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "P_subscription": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "P_latest_invoice": {
+    "id": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "status": "paid",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 14800,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": 1797440854,
+     "voided_at": null
+    },
+    "discounts": 0
+   }
+  },
+  {
+   "name": "O:day_3",
+   "at": "2026-11-16T16:08:38.933Z",
+   "clock_now": 1797700054,
+   "clock_iso": "2026-12-19T17:07:34.000Z",
+   "subscription": {
+    "status": "past_due",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "latest_invoice": {
+    "id": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "status": "open",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 0,
+    "attempt_count": 2,
+    "attempted": true,
+    "next_payment_attempt": 1797753631,
+    "auto_advance": true,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": null,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "P_subscription": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "P_latest_invoice": {
+    "id": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "status": "paid",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 14800,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": 1797440854,
+     "voided_at": null
+    },
+    "discounts": 0
+   }
+  },
+  {
+   "name": "O:day_4",
+   "at": "2026-11-16T16:08:47.412Z",
+   "clock_now": 1797786454,
+   "clock_iso": "2026-12-20T17:07:34.000Z",
+   "subscription": {
+    "status": "past_due",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "latest_invoice": {
+    "id": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "status": "open",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 0,
+    "attempt_count": 3,
+    "attempted": true,
+    "next_payment_attempt": 1797907077,
+    "auto_advance": true,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": null,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "P_subscription": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "P_latest_invoice": {
+    "id": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "status": "paid",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 14800,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": 1797440854,
+     "voided_at": null
+    },
+    "discounts": 0
+   }
+  },
+  {
+   "name": "O:day_5",
+   "at": "2026-11-16T16:08:51.356Z",
+   "clock_now": 1797872854,
+   "clock_iso": "2026-12-21T17:07:34.000Z",
+   "subscription": {
+    "status": "past_due",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "latest_invoice": {
+    "id": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "status": "open",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 0,
+    "attempt_count": 3,
+    "attempted": true,
+    "next_payment_attempt": 1797907077,
+    "auto_advance": true,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": null,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "P_subscription": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "P_latest_invoice": {
+    "id": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "status": "paid",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 14800,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": 1797440854,
+     "voided_at": null
+    },
+    "discounts": 0
+   }
+  },
+  {
+   "name": "O:day_6",
+   "at": "2026-11-16T16:08:59.808Z",
+   "clock_now": 1797959254,
+   "clock_iso": "2026-12-22T17:07:34.000Z",
+   "subscription": {
+    "status": "past_due",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "latest_invoice": {
+    "id": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "status": "open",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 0,
+    "attempt_count": 4,
+    "attempted": true,
+    "next_payment_attempt": 1798068791,
+    "auto_advance": true,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": null,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "P_subscription": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "P_latest_invoice": {
+    "id": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "status": "paid",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 14800,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": 1797440854,
+     "voided_at": null
+    },
+    "discounts": 0
+   }
+  },
+  {
+   "name": "O:day_7",
+   "at": "2026-11-16T16:09:03.696Z",
+   "clock_now": 1798045654,
+   "clock_iso": "2026-12-23T17:07:34.000Z",
+   "subscription": {
+    "status": "past_due",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "latest_invoice": {
+    "id": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "status": "open",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 0,
+    "attempt_count": 4,
+    "attempted": true,
+    "next_payment_attempt": 1798068791,
+    "auto_advance": true,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": null,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "P_subscription": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "P_latest_invoice": {
+    "id": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "status": "paid",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 14800,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": 1797440854,
+     "voided_at": null
+    },
+    "discounts": 0
+   }
+  },
+  {
+   "name": "O:day_8",
+   "at": "2026-11-16T16:09:12.154Z",
+   "clock_now": 1798132054,
+   "clock_iso": "2026-12-24T17:07:34.000Z",
+   "subscription": {
+    "status": "past_due",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "latest_invoice": {
+    "id": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "status": "open",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 0,
+    "attempt_count": 5,
+    "attempted": true,
+    "next_payment_attempt": 1798223832,
+    "auto_advance": true,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": null,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "P_subscription": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "P_latest_invoice": {
+    "id": "in_1UcSRvGnEQDyu3RRpqkwzYGj",
+    "status": "paid",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 14800,
+    "attempt_count": 1,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": 1797440854,
+     "voided_at": null
+    },
+    "discounts": 0
+   }
+  },
+  {
+   "name": "O:recovery_pay",
+   "at": "2026-11-16T16:09:15.552Z",
+   "invoice_before": {
+    "id": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "status": "open",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 0,
+    "attempt_count": 5,
+    "attempted": true,
+    "next_payment_attempt": 1798223832,
+    "auto_advance": true,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": null,
+     "voided_at": null
+    },
+    "discounts": 0
+   },
+   "pay_error": null,
+   "clock_now": 1798132054,
+   "clock_iso": "2026-12-24T17:07:34.000Z",
+   "subscription": {
+    "status": "active",
+    "quantity": 2,
+    "period": [
+     1797437254,
+     1800115654
+    ],
+    "latest_invoice": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "discounts": 0,
+    "cancel_at_period_end": false
+   },
+   "latest_invoice": {
+    "id": "in_1UcSRuGnEQDyu3RR4nQFurmH",
+    "status": "paid",
+    "billing_reason": "subscription_cycle",
+    "total": 14800,
+    "amount_due": 14800,
+    "amount_paid": 14800,
+    "attempt_count": 5,
+    "attempted": true,
+    "next_payment_attempt": null,
+    "auto_advance": false,
+    "created": 1797437254,
+    "status_transitions": {
+     "finalized_at": 1797440854,
+     "marked_uncollectible_at": null,
+     "paid_at": 1798132054,
+     "voided_at": null
+    },
+    "discounts": 0
+   }
+  },
+  {
+   "name": "events_and_delivery",
+   "at": "2026-11-16T16:09:17.536Z",
+   "count": 102,
+   "invoice_failure_events": [
+    {
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "event_created": 1794845258
+    },
+    {
+     "type": "invoice.paid",
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "event_created": 1794845258
+    },
+    {
+     "type": "invoice.finalized",
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "event_created": 1794845258
+    },
+    {
+     "type": "invoice.created",
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "event_created": 1794845258
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "status": "draft",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "event_created": 1794845267
+    },
+    {
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "status": "draft",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "event_created": 1794845267
+    },
+    {
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "status": "open",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "event_created": 1794845269
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "status": "open",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "event_created": 1794845269
+    },
+    {
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "event_created": 1794845270
+    },
+    {
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "event_created": 1794845270
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "event_created": 1794845270
+    },
+    {
+     "type": "invoice.created",
+     "billing_reason": "subscription_cycle",
+     "status": "draft",
+     "attempt_count": 0,
+     "next_payment_attempt": 1797440854,
+     "event_created": 1794845286
+    },
+    {
+     "type": "invoice.payment_failed",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 1,
+     "next_payment_attempt": 1797596878,
+     "event_created": 1794845295
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 1,
+     "next_payment_attempt": 1797596878,
+     "event_created": 1794845295
+    },
+    {
+     "type": "invoice.finalized",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 0,
+     "next_payment_attempt": 1797440854,
+     "event_created": 1794845295
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "event_created": 1794845295
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 2,
+     "next_payment_attempt": 1797596878,
+     "event_created": 1794845308
+    },
+    {
+     "type": "invoice.payment_failed",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 2,
+     "next_payment_attempt": 1797753631,
+     "event_created": 1794845310
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 2,
+     "next_payment_attempt": 1797753631,
+     "event_created": 1794845310
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 3,
+     "next_payment_attempt": 1797753631,
+     "event_created": 1794845321
+    },
+    {
+     "type": "invoice.payment_failed",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 3,
+     "next_payment_attempt": 1797907077,
+     "event_created": 1794845322
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 3,
+     "next_payment_attempt": 1797907077,
+     "event_created": 1794845322
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 4,
+     "next_payment_attempt": 1797907077,
+     "event_created": 1794845333
+    },
+    {
+     "type": "invoice.payment_failed",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 4,
+     "next_payment_attempt": 1798068791,
+     "event_created": 1794845335
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 4,
+     "next_payment_attempt": 1798068791,
+     "event_created": 1794845335
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 5,
+     "next_payment_attempt": 1798068791,
+     "event_created": 1794845346
+    },
+    {
+     "type": "invoice.payment_failed",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 5,
+     "next_payment_attempt": 1798223832,
+     "event_created": 1794845347
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 5,
+     "next_payment_attempt": 1798223832,
+     "event_created": 1794845347
+    },
+    {
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "subscription_cycle",
+     "status": "paid",
+     "attempt_count": 5,
+     "next_payment_attempt": null,
+     "event_created": 1794845354
+    },
+    {
+     "type": "invoice.paid",
+     "billing_reason": "subscription_cycle",
+     "status": "paid",
+     "attempt_count": 5,
+     "next_payment_attempt": null,
+     "event_created": 1794845354
+    },
+    {
+     "type": "invoice.updated",
+     "billing_reason": "subscription_cycle",
+     "status": "paid",
+     "attempt_count": 5,
+     "next_payment_attempt": null,
+     "event_created": 1794845354
+    }
+   ],
+   "subscription_status_events": [
+    {
+     "who": "O",
+     "status": "active",
+     "event_created": 1794845272
+    },
+    {
+     "who": "P",
+     "status": "active",
+     "event_created": 1794845280
+    },
+    {
+     "who": "O",
+     "status": "active",
+     "event_created": 1794845286
+    },
+    {
+     "who": "P",
+     "status": "active",
+     "event_created": 1794845288
+    },
+    {
+     "who": "O",
+     "status": "past_due",
+     "event_created": 1794845295
+    },
+    {
+     "who": "O",
+     "status": "active",
+     "event_created": 1794845354
+    }
+   ],
+   "max_pending_webhooks": 2,
+   "delivery_after": {
+    "webhook_endpoints": [],
+    "event_destinations": 0,
+    "local_stripe_listeners": 0
+   },
+   "events": [
+    {
+     "id": "evt_1UcSROGnEQDyu3RRsmljZ1CG",
+     "created": 1794845254,
+     "type": "customer.created",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRPGnEQDyu3RRMSKEn0Qw",
+     "created": 1794845255,
+     "type": "customer.updated",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRPGnEQDyu3RRAYUBn7FN",
+     "created": 1794845255,
+     "type": "payment_method.attached",
+     "who": "O",
+     "object_created": 1794845255,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRQGnEQDyu3RR1dAa1WDd",
+     "created": 1794845256,
+     "type": "payment_intent.created",
+     "who": "O",
+     "object_created": 1794845256,
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRSGnEQDyu3RRz8UwXcSp",
+     "created": 1794845257,
+     "type": "customer.updated",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRQGnEQDyu3RR1jGwYUOc",
+     "created": 1794845257,
+     "type": "payment_intent.succeeded",
+     "who": "O",
+     "object_created": 1794845256,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRQGnEQDyu3RR1K55QxR2",
+     "created": 1794845257,
+     "type": "charge.succeeded",
+     "who": "O",
+     "object_created": 1794845257,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRSGnEQDyu3RRhSf4wn2x",
+     "created": 1794845258,
+     "type": "customer.created",
+     "who": "P",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRSGnEQDyu3RRz1BvKVNP",
+     "created": 1794845258,
+     "type": "customer.subscription.created",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": "active",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRSGnEQDyu3RRTEBHPlBZ",
+     "created": 1794845258,
+     "type": "invoice.payment_succeeded",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRSGnEQDyu3RRBLoUFW8q",
+     "created": 1794845258,
+     "type": "invoice.paid",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRSGnEQDyu3RRN56YDHBN",
+     "created": 1794845258,
+     "type": "invoice.finalized",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRSGnEQDyu3RRIYni9PfU",
+     "created": 1794845258,
+     "type": "invoice.created",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRTGnEQDyu3RRjvoNcuHE",
+     "created": 1794845259,
+     "type": "customer.updated",
+     "who": "P",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRTGnEQDyu3RRuqmyvCkc",
+     "created": 1794845259,
+     "type": "payment_method.attached",
+     "who": "P",
+     "object_created": 1794845259,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRVGnEQDyu3RR16oeDACF",
+     "created": 1794845261,
+     "type": "payment_intent.created",
+     "who": "P",
+     "object_created": 1794845261,
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRXGnEQDyu3RRp4eYpopq",
+     "created": 1794845262,
+     "type": "customer.updated",
+     "who": "P",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRVGnEQDyu3RR1fJDFV8h",
+     "created": 1794845262,
+     "type": "payment_intent.succeeded",
+     "who": "P",
+     "object_created": 1794845261,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRVGnEQDyu3RR1C6jyRTr",
+     "created": 1794845262,
+     "type": "charge.succeeded",
+     "who": "P",
+     "object_created": 1794845261,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRXGnEQDyu3RRhU7MAD3b",
+     "created": 1794845263,
+     "type": "customer.subscription.created",
+     "who": "P",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": "active",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRYGnEQDyu3RR89gJ2KSo",
+     "created": 1794845263,
+     "type": "invoice.payment_succeeded",
+     "who": "P",
+     "object_created": 1794845254,
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRXGnEQDyu3RRDjhBoWUe",
+     "created": 1794845263,
+     "type": "invoice.paid",
+     "who": "P",
+     "object_created": 1794845254,
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRXGnEQDyu3RRG2zxer7z",
+     "created": 1794845263,
+     "type": "invoice.finalized",
+     "who": "P",
+     "object_created": 1794845254,
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRYGnEQDyu3RRRBXilBKX",
+     "created": 1794845263,
+     "type": "invoice.created",
+     "who": "P",
+     "object_created": 1794845254,
+     "billing_reason": "subscription_create",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRXGnEQDyu3RRs6OKPtpP",
+     "created": 1794845263,
+     "type": "customer.discount.deleted",
+     "who": "P",
+     "object_created": null,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRXGnEQDyu3RRM47AVHUE",
+     "created": 1794845263,
+     "type": "customer.discount.created",
+     "who": "P",
+     "object_created": null,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRbGnEQDyu3RRuXyTxhvB",
+     "created": 1794845267,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "draft",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRbGnEQDyu3RRPQIRuReq",
+     "created": 1794845267,
+     "type": "invoiceitem.created",
+     "who": "O",
+     "object_created": null,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRbGnEQDyu3RRNbNFEZ0y",
+     "created": 1794845267,
+     "type": "invoice.created",
+     "who": "O",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "draft",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRcGnEQDyu3RR0otGxw3G",
+     "created": 1794845268,
+     "type": "payment_intent.created",
+     "who": "O",
+     "object_created": 1794845268,
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRdGnEQDyu3RRYQ25qW4G",
+     "created": 1794845269,
+     "type": "invoice.finalized",
+     "who": "O",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "open",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRdGnEQDyu3RRVmBrpb5V",
+     "created": 1794845269,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "open",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRfGnEQDyu3RR0P4avpZX",
+     "created": 1794845270,
+     "type": "invoice.payment_succeeded",
+     "who": "O",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRfGnEQDyu3RRvt3ZBzuU",
+     "created": 1794845270,
+     "type": "invoice.paid",
+     "who": "O",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRfGnEQDyu3RRPCjs7cZq",
+     "created": 1794845270,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRcGnEQDyu3RR0PU8pKUr",
+     "created": 1794845270,
+     "type": "payment_intent.succeeded",
+     "who": "O",
+     "object_created": 1794845268,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRcGnEQDyu3RR0tn3T0v7",
+     "created": 1794845270,
+     "type": "charge.succeeded",
+     "who": "O",
+     "object_created": 1794845270,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRgGnEQDyu3RRyc0Ybfwy",
+     "created": 1794845272,
+     "type": "customer.subscription.updated",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": "active",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRiGnEQDyu3RR3GSEs5Gc",
+     "created": 1794845274,
+     "type": "invoice.updated",
+     "who": "P",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "draft",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRiGnEQDyu3RRIEcc0Q5P",
+     "created": 1794845274,
+     "type": "invoiceitem.created",
+     "who": "P",
+     "object_created": null,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRiGnEQDyu3RRwXd24Uc2",
+     "created": 1794845274,
+     "type": "invoice.created",
+     "who": "P",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "draft",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRlGnEQDyu3RRiFgKLKm8",
+     "created": 1794845276,
+     "type": "invoice.finalized",
+     "who": "P",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "open",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRkGnEQDyu3RR3JpVu3P1",
+     "created": 1794845276,
+     "type": "invoice.updated",
+     "who": "P",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "open",
+     "attempt_count": 0,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRkGnEQDyu3RR1kfTazrn",
+     "created": 1794845276,
+     "type": "payment_intent.created",
+     "who": "P",
+     "object_created": 1794845276,
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRnGnEQDyu3RRZNmGhDwf",
+     "created": 1794845278,
+     "type": "invoice.payment_succeeded",
+     "who": "P",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRnGnEQDyu3RR8RUNv4hs",
+     "created": 1794845278,
+     "type": "invoice.paid",
+     "who": "P",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRnGnEQDyu3RRNAJWvyUV",
+     "created": 1794845278,
+     "type": "invoice.updated",
+     "who": "P",
+     "object_created": 1796141254,
+     "billing_reason": "manual",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRkGnEQDyu3RR1r1k76XZ",
+     "created": 1794845278,
+     "type": "payment_intent.succeeded",
+     "who": "P",
+     "object_created": 1794845276,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSRkGnEQDyu3RR1V5RgXBg",
+     "created": 1794845278,
+     "type": "charge.succeeded",
+     "who": "P",
+     "object_created": 1794845277,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRoGnEQDyu3RRRRepW8rX",
+     "created": 1794845280,
+     "type": "customer.subscription.updated",
+     "who": "P",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": "active",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRpGnEQDyu3RRhoKIUUe2",
+     "created": 1794845281,
+     "type": "payment_method.attached",
+     "who": "O",
+     "object_created": 1794845281,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRqGnEQDyu3RRHVDrN6SM",
+     "created": 1794845282,
+     "type": "customer.updated",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRsGnEQDyu3RRBKJjo90P",
+     "created": 1794845284,
+     "type": "invoice.upcoming",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "upcoming",
+     "status": "draft",
+     "attempt_count": 0,
+     "next_payment_attempt": 1797440854,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRtGnEQDyu3RRPq0ytIPi",
+     "created": 1794845285,
+     "type": "invoice.upcoming",
+     "who": "P",
+     "object_created": 1797437254,
+     "billing_reason": "upcoming",
+     "status": "draft",
+     "attempt_count": 0,
+     "next_payment_attempt": 1797440854,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRvGnEQDyu3RRaRLIpmPP",
+     "created": 1794845286,
+     "type": "customer.subscription.updated",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": "active",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRuGnEQDyu3RRZnekUMtP",
+     "created": 1794845286,
+     "type": "invoice.created",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "draft",
+     "attempt_count": 0,
+     "next_payment_attempt": 1797440854,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRwGnEQDyu3RRFMTPDcAi",
+     "created": 1794845287,
+     "type": "invoice.created",
+     "who": "P",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "draft",
+     "attempt_count": 0,
+     "next_payment_attempt": 1797440854,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSRwGnEQDyu3RRG141kpo2",
+     "created": 1794845288,
+     "type": "customer.subscription.updated",
+     "who": "P",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": "active",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0xUdxzff",
+     "created": 1794845294,
+     "type": "payment_intent.payment_failed",
+     "who": "O",
+     "object_created": 1794845292,
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0RT7d0Mr",
+     "created": 1794845294,
+     "type": "charge.failed",
+     "who": "O",
+     "object_created": 1794845294,
+     "billing_reason": null,
+     "status": "failed",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSS4GnEQDyu3RRvtpGH03B",
+     "created": 1794845295,
+     "type": "invoice.payment_failed",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 1,
+     "next_payment_attempt": 1797596878,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSS4GnEQDyu3RRqOyB22ZH",
+     "created": 1794845295,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 1,
+     "next_payment_attempt": 1797596878,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSS4GnEQDyu3RRVBDMoPQ2",
+     "created": 1794845295,
+     "type": "customer.subscription.updated",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": "past_due",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSS3GnEQDyu3RR08wVpy0z",
+     "created": 1794845295,
+     "type": "customer.updated",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSS3GnEQDyu3RRMIIVe7ep",
+     "created": 1794845295,
+     "type": "invoice.finalized",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 0,
+     "next_payment_attempt": 1797440854,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSS3GnEQDyu3RRVZuRBXTB",
+     "created": 1794845295,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0iCSYhU3",
+     "created": 1794845295,
+     "type": "payment_intent.created",
+     "who": "O",
+     "object_created": 1794845292,
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS4GnEQDyu3RR1EHN4Hei",
+     "created": 1794845298,
+     "type": "payment_intent.succeeded",
+     "who": "P",
+     "object_created": 1794845296,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS4GnEQDyu3RR1uW8tQYS",
+     "created": 1794845298,
+     "type": "charge.succeeded",
+     "who": "P",
+     "object_created": 1794845298,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSS8GnEQDyu3RRxEx4Iin6",
+     "created": 1794845299,
+     "type": "invoice.payment_succeeded",
+     "who": "P",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSS8GnEQDyu3RReRlgJtb7",
+     "created": 1794845299,
+     "type": "invoice.paid",
+     "who": "P",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSS8GnEQDyu3RRRBL9GPaE",
+     "created": 1794845299,
+     "type": "invoice.finalized",
+     "who": "P",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 0,
+     "next_payment_attempt": 1797440854,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSS8GnEQDyu3RRHCNQfHUW",
+     "created": 1794845299,
+     "type": "invoice.updated",
+     "who": "P",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "paid",
+     "attempt_count": 1,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS4GnEQDyu3RR1qYYQioL",
+     "created": 1794845299,
+     "type": "payment_intent.created",
+     "who": "P",
+     "object_created": 1794845296,
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSSHGnEQDyu3RRZDbP6zp2",
+     "created": 1794845308,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 2,
+     "next_payment_attempt": 1797596878,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR05RaPzxh",
+     "created": 1794845308,
+     "type": "payment_intent.payment_failed",
+     "who": "O",
+     "object_created": 1794845292,
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0u3MA4Y4",
+     "created": 1794845308,
+     "type": "charge.failed",
+     "who": "O",
+     "object_created": 1794845308,
+     "billing_reason": null,
+     "status": "failed",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSSIGnEQDyu3RR7j9IJler",
+     "created": 1794845310,
+     "type": "invoice.payment_failed",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 2,
+     "next_payment_attempt": 1797753631,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSSIGnEQDyu3RRMvrfybqc",
+     "created": 1794845310,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 2,
+     "next_payment_attempt": 1797753631,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0NKcCcF3",
+     "created": 1794845320,
+     "type": "charge.failed",
+     "who": "O",
+     "object_created": 1794845320,
+     "billing_reason": null,
+     "status": "failed",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSSTGnEQDyu3RRKUi85ipH",
+     "created": 1794845321,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 3,
+     "next_payment_attempt": 1797753631,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0t3bWDrS",
+     "created": 1794845321,
+     "type": "payment_intent.payment_failed",
+     "who": "O",
+     "object_created": 1794845292,
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSSVGnEQDyu3RRIe5Z19me",
+     "created": 1794845322,
+     "type": "invoice.payment_failed",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 3,
+     "next_payment_attempt": 1797907077,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSSVGnEQDyu3RRz2lSbRGI",
+     "created": 1794845322,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 3,
+     "next_payment_attempt": 1797907077,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSSgGnEQDyu3RR9nCj1WAs",
+     "created": 1794845333,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 4,
+     "next_payment_attempt": 1797907077,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0rEQBb47",
+     "created": 1794845333,
+     "type": "payment_intent.payment_failed",
+     "who": "O",
+     "object_created": 1794845292,
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0Hy1qllb",
+     "created": 1794845333,
+     "type": "charge.failed",
+     "who": "O",
+     "object_created": 1794845333,
+     "billing_reason": null,
+     "status": "failed",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSShGnEQDyu3RRq3b0dmZy",
+     "created": 1794845335,
+     "type": "invoice.payment_failed",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 4,
+     "next_payment_attempt": 1798068791,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSShGnEQDyu3RRc04Bt9zQ",
+     "created": 1794845335,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 4,
+     "next_payment_attempt": 1798068791,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0gyU43mp",
+     "created": 1794845345,
+     "type": "payment_intent.payment_failed",
+     "who": "O",
+     "object_created": 1794845292,
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0NGqclNH",
+     "created": 1794845345,
+     "type": "charge.failed",
+     "who": "O",
+     "object_created": 1794845345,
+     "billing_reason": null,
+     "status": "failed",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSSsGnEQDyu3RRVt4OG9Hk",
+     "created": 1794845346,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 5,
+     "next_payment_attempt": 1798068791,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSSuGnEQDyu3RRcqxQLTxU",
+     "created": 1794845347,
+     "type": "invoice.payment_failed",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 5,
+     "next_payment_attempt": 1798223832,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSStGnEQDyu3RRlZjvFaWq",
+     "created": 1794845347,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "open",
+     "attempt_count": 5,
+     "next_payment_attempt": 1798223832,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSSyGnEQDyu3RRPa3tVneU",
+     "created": 1794845352,
+     "type": "customer.updated",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcST1GnEQDyu3RRH6ynxOeQ",
+     "created": 1794845354,
+     "type": "customer.subscription.updated",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": "active",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcST1GnEQDyu3RR6mpTHar4",
+     "created": 1794845354,
+     "type": "invoice.payment_succeeded",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "paid",
+     "attempt_count": 5,
+     "next_payment_attempt": null,
+     "pending_webhooks": 1
+    },
+    {
+     "id": "evt_1UcST1GnEQDyu3RR1RfHXjdf",
+     "created": 1794845354,
+     "type": "invoice.paid",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "paid",
+     "attempt_count": 5,
+     "next_payment_attempt": null,
+     "pending_webhooks": 1
+    },
+    {
+     "id": "evt_1UcST1GnEQDyu3RRevmOPgXM",
+     "created": 1794845354,
+     "type": "invoice.updated",
+     "who": "O",
+     "object_created": 1797437254,
+     "billing_reason": "subscription_cycle",
+     "status": "paid",
+     "attempt_count": 5,
+     "next_payment_attempt": null,
+     "pending_webhooks": 2
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0RtSEGcr",
+     "created": 1794845354,
+     "type": "payment_intent.succeeded",
+     "who": "O",
+     "object_created": 1794845292,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSS0GnEQDyu3RR0z0WW38V",
+     "created": 1794845354,
+     "type": "charge.succeeded",
+     "who": "O",
+     "object_created": 1794845353,
+     "billing_reason": null,
+     "status": "succeeded",
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcST1GnEQDyu3RR609KwIhJ",
+     "created": 1794845354,
+     "type": "customer.updated",
+     "who": "O",
+     "object_created": 1794845254,
+     "billing_reason": null,
+     "status": null,
+     "attempt_count": null,
+     "next_payment_attempt": null,
+     "pending_webhooks": 0
+    }
+   ],
+   "note": "Event `created` is real wall time; chronology of the provider timeline is the invoice `created`/status_transitions in clock time. Stripe failed-payment email and retry settings are not readable by API; the retry schedule below is derived from observed next_payment_attempt values."
+  }
+ ],
+ "preflight": {
+  "sdk": "22.1.0",
+  "api": "2026-04-22.dahlia",
+  "account_matches": true,
+  "delivery": {
+   "webhook_endpoints": [],
+   "event_destinations": 0,
+   "local_stripe_listeners": 0
+  },
+  "effects_remaining": {
+   "scratch_chain_cycles": {
+    "ceiling": 12,
+    "used": 0,
+    "left": 12
+   },
+   "scratch_auth_identities": {
+    "ceiling": 14,
+    "used": 0,
+    "left": 14
+   },
+   "dev_auth_identities": {
+    "ceiling": 0,
+    "used": 0,
+    "left": 0
+   },
+   "stripe_customers": {
+    "ceiling": 12,
+    "used": 2,
+    "left": 10
+   },
+   "stripe_subscriptions": {
+    "ceiling": 12,
+    "used": 2,
+    "left": 10
+   },
+   "test_clocks": {
+    "ceiling": 4,
+    "used": 0,
+    "left": 4
+   },
+   "test_clock_advances": {
+    "ceiling": 30,
+    "used": 0,
+    "left": 30
+   },
+   "invoice_create": {
+    "ceiling": 30,
+    "used": 12,
+    "left": 18
+   },
+   "invoiceitem_create": {
+    "ceiling": 30,
+    "used": 4,
+    "left": 26
+   },
+   "invoice_finalize": {
+    "ceiling": 30,
+    "used": 5,
+    "left": 25
+   },
+   "invoice_void": {
+    "ceiling": 30,
+    "used": 6,
+    "left": 24
+   },
+   "invoice_pay_or_hosted": {
+    "ceiling": 24,
+    "used": 7,
+    "left": 17
+   },
+   "payment_attempts": {
+    "ceiling": 60,
+    "used": 9,
+    "left": 51
+   },
+   "payment_attempt_cents": {
+    "ceiling": 300000,
+    "used": 53110,
+    "left": 246890
+   },
+   "subscription_mutations": {
+    "ceiling": 50,
+    "used": 3,
+    "left": 47
+   },
+   "payment_method_attach": {
+    "ceiling": 24,
+    "used": 4,
+    "left": 20
+   },
+   "default_card_changes": {
+    "ceiling": 30,
+    "used": 4,
+    "left": 26
+   },
+   "apa_redemptions": {
+    "ceiling": 3,
+    "used": 1,
+    "left": 2
+   },
+   "email_dispatch": {
+    "ceiling": 24,
+    "used": 0,
+    "left": 24
+   },
+   "fixture_app_mutations": {
+    "ceiling": 400,
+    "used": 0,
+    "left": 400
+   },
+   "dev_live_apply": {
+    "ceiling": 1,
+    "used": 0,
+    "left": 1
+   },
+   "dev_forward_fix": {
+    "ceiling": 1,
+    "used": 0,
+    "left": 1
+   }
+  },
+  "result": "PASS"
+ }
+}

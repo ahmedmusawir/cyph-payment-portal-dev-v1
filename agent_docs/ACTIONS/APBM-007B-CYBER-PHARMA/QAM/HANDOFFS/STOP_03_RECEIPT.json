@@ -1,0 +1,28 @@
+{
+  "status": "Q4 PARTIAL \u2014 STOP-AUTHORITY",
+  "path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/APBM-007B-CYBER-PHARMA_STOP_REVIEW_03.zip",
+  "downloads": "/home/moose/Downloads/APBM-007B-CYBER-PHARMA_STOP_REVIEW_03.zip",
+  "members": 57,
+  "indexed_entries": 56,
+  "sha256": "926e6c424501c2cc5f08b7d5c33a7185b9cf7c6cb3c19056d12cd4648ac77233",
+  "validated": true,
+  "expanded_privacy_gates": [
+    {
+      "dir": "/tmp/APBM007B_STOP03_EXPANDED",
+      "hits": [],
+      "skipped_binary": 0
+    },
+    {
+      "controls": {
+        "poison": true,
+        "clean": true
+      },
+      "files": 57,
+      "private_values_checked": 82,
+      "hits": [],
+      "credential_values_or_hashes_printed": false
+    }
+  ],
+  "no_remote_effects_in_Q4": true,
+  "decision": "Director cumulative pay_or_hosted cap32\u219264; preserve counters; stop Director listener\u21923001 before live campaign"
+}

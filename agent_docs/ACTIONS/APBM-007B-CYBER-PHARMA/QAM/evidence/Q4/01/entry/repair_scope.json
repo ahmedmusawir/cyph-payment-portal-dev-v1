@@ -1,0 +1,11 @@
+{
+  "declared_product_paths_match": true,
+  "intervening_QA_commit_documents_only": true,
+  "migration_0070_sha256": "de0b51c61c4ef255934fc20b6c7abdc5d4b69e1129bbce4a8a15111905edce81",
+  "old_sql_check_invocations": 139,
+  "new_sql_check_invocations": 156,
+  "removed_or_changed_check_lines": [],
+  "sql_changes": "24 added checks; three fixture transitions replaced by paid-time observation; existing assertions unchanged",
+  "dashboard_change": "only obsolete first sentence removed",
+  "source_claims": "Engineering assertions independently inspected, not QA execution"
+}

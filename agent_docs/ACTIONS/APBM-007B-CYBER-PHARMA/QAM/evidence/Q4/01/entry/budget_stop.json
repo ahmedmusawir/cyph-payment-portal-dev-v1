@@ -1,0 +1,28 @@
+{
+  "phase": "Q4",
+  "at": "2026-11-17T14:43:06.155Z",
+  "stop": "STOP-AUTHORITY",
+  "used": {
+    "reads": 1268,
+    "provider_mutations": 166,
+    "new_identities": 12,
+    "test_clocks": 3,
+    "customers": 7,
+    "subscriptions": 7,
+    "attempted_cents": 342479,
+    "sign_ins": 95,
+    "pay_or_hosted": 21,
+    "email_attempts": 16,
+    "unique_identities": 8,
+    "refunds": 1
+  },
+  "cap": 32,
+  "remaining": 11,
+  "required_lower_bound": 12,
+  "derivation": "7 deadline cases per clock mode; six require an actual paid invoice, one unpaid expiry. Two modes require >=12 pay/hosted attempts, before any additional activation regression or failed/hosted retry.",
+  "dry_run_error": "QA dry-run limit pay_or_hosted",
+  "counters_unchanged": true,
+  "remote_mutations": 0,
+  "recommendation": "Director increase cumulative pay_or_hosted cap from32 to64; preserve counters and all other limits. QA reserve each scenario before effects; return again if any other limit would be exceeded.",
+  "safe_resume": "After budget amendment and Director3001 listener stopped, recheck candidate/production builds, run retained-fixture digest and forward SCRATCH0070 proof, verify owned3100/3101 plus one listener3101; then automated browser checks and released live campaign."
+}

@@ -1,0 +1,164 @@
+{
+ "app": "ob",
+ "artifact_id": "4e43362f743105dccabf9dcb05cea8fe",
+ "revision": "0b785524a621+uncommitted-007b-e2",
+ "next_build_id": "_uRpvpA9aQab_-LTF-nBY",
+ "changed_files": [
+  {
+   "path": "e2e/apbm007b.staff.spec.ts",
+   "sha256": "ee2cb80ea2ecfa92f7194e8431573d115ddfae1bf736a3ff6e1e28452e7ad00d"
+  },
+  {
+   "path": "next.config.js",
+   "sha256": "fc9f7585620793f8b430f0ba0931dae679091e700e7d5858605098fd31eaa4f9"
+  },
+  {
+   "path": "playwright.config.ts",
+   "sha256": "a6301b64ae9def4b39731cac2ec5bd9972b9fbb39667aeb2695ec93df9d72e00"
+  },
+  {
+   "path": "scripts/apbm007b/migrate-rehearsal.mjs",
+   "sha256": "b819e8f127f827b55c956c2d733029a5304294161282232d8f79188488e7556d"
+  },
+  {
+   "path": "scripts/apbm007b/rehearsal-seed.sql",
+   "sha256": "cb5a2d39a5cf1530520568ef9fd04aac71f2c5ee4a6c849d95fabe9ef75c911a"
+  },
+  {
+   "path": "scripts/apbm007b/sql-proof.mjs",
+   "sha256": "41d02d27e9835ebf7050d2756ba32cf5ee6c5c2032ae78960383175eae0b535b"
+  },
+  {
+   "path": "scripts/rls-harness/lib/env.mjs",
+   "sha256": "c9bded7092b37f6baa554f3602eacbd76ffb3c18bcee42d402f5d0b0b902fb8c"
+  },
+  {
+   "path": "src/__tests__/apbm007a-auth.test.ts",
+   "sha256": "a76c9a9eb444d66351b9562d870285aa471df49d36f6802ecd2e2beb13a884c7"
+  },
+  {
+   "path": "src/__tests__/apbm007a-boundaries.test.ts",
+   "sha256": "5d0c2ca135b4f3e9a82b7fcf46743202cdc2584197ae5e417cc244160b44f4d8"
+  },
+  {
+   "path": "src/app/api/build-info/route.ts",
+   "sha256": "c2aecf9a9ceea4c6fbed6bf36612a9b15851cb49d53287768cec0fb58d018b92"
+  },
+  {
+   "path": "src/app/api/invitations/[id]/accept/route.ts",
+   "sha256": "474bc84c543abd208472bce500e0c175f86515f9f62a41242f3d77197fa9d2f4"
+  },
+  {
+   "path": "src/app/api/invitations/[id]/decline/route.ts",
+   "sha256": "204bf6fd835e2ed31b7ac015d8abcb923a4216b47dd5055dcf7974b34a2ad3db"
+  },
+  {
+   "path": "src/app/api/invitations/[id]/resend/route.ts",
+   "sha256": "a4702109e41fb5155a1e9e475e9575e06af6157e7554ee9a26866c6831275477"
+  },
+  {
+   "path": "src/app/api/invitations/[id]/revoke/route.ts",
+   "sha256": "008f8fc49a71815f4b6f19dede4ea9cd42dd8fc451f449b39f882bb0f902ec47"
+  },
+  {
+   "path": "src/app/api/invitations/mine/route.ts",
+   "sha256": "ab9ab8df552e7cc2fb9e25541ee5ddbc0a8aa4e2586fe8ac68949941a971e97b"
+  },
+  {
+   "path": "src/app/api/stores/[id]/history/route.ts",
+   "sha256": "706c5c48d7c3b354b984a6b3f910ce614726e7156b8e2787a7ed1d068a4d6cec"
+  },
+  {
+   "path": "src/app/api/stores/[id]/invitations/route.ts",
+   "sha256": "8b8fd90e9389f317057945f5f2aefd6e5a0af45829e86a2e36c6349e03977476"
+  },
+  {
+   "path": "src/app/api/stores/[id]/members/[uid]/remove/route.ts",
+   "sha256": "3d6f783aace87355092f9139456157ca8fc0c65bbd5cad5e414559b8455573ce"
+  },
+  {
+   "path": "src/app/api/stores/history/route.ts",
+   "sha256": "59fc62f783522b8e835f637e53976b089df74df65ad6e8a2efb85967b5cf6948"
+  },
+  {
+   "path": "src/app/invitations/page.tsx",
+   "sha256": "5c0afbf9779d74dba093452760d226d8d4b208f336eef155188caaa604410967"
+  },
+  {
+   "path": "src/components/admin-portal/InviteScreen.tsx",
+   "sha256": "00083908e44a5f2cab7a38f7526e258a98f91eb7bdcabb1112641097915fe262"
+  },
+  {
+   "path": "src/components/admin-portal/LiveStaffPanel.tsx",
+   "sha256": "cb885fbdeeacf76bde38d8af45dbfc1433f11893f6b39c8ef1d8acf2fb132a32"
+  },
+  {
+   "path": "src/components/invitations/InvitationsScreen.tsx",
+   "sha256": "273dfee3b2620f93469fa62b416a6c71f72f2d96674590a70932fdbc4b9bf8e8"
+  },
+  {
+   "path": "src/lib/appIdentity.ts",
+   "sha256": "db13172c457e359ec7237f137936c49076576860621ebb9ee8b205e9b09a041d"
+  },
+  {
+   "path": "src/server/emailLink.ts",
+   "sha256": "4523c9cbfb39d863ad0e40708f8ab94d0bfccaae587a4e8809b17065d5e3f5c7"
+  },
+  {
+   "path": "src/server/handoff.ts",
+   "sha256": "72afdfd7f42bccf8a46d299170af931b62a921d07683bab7d7cd265c014f5aaa"
+  },
+  {
+   "path": "src/server/invitationMail.ts",
+   "sha256": "fd6abcb361329834280c1bab2ba5a346cdd70f3ffcd459b720c54e494ca244de"
+  },
+  {
+   "path": "src/server/mailGuard.ts",
+   "sha256": "74d24309ec4ae2d8bb6f0f624d38b899ded30309d0c8094af290f261bf96edb8"
+  },
+  {
+   "path": "src/server/staff.ts",
+   "sha256": "b8c1eec36f79ed5e82426e317500f7635db56aac55b314b5389467711e76bd8c"
+  },
+  {
+   "path": "supabase/migrations/0061_007b_identity_clock_foundation.sql",
+   "sha256": "97ab60b20365add56fcc9da4c8c69d6f92879a8a1f2b847d2a665cac86780043"
+  },
+  {
+   "path": "supabase/migrations/0062_007b_store_operations.sql",
+   "sha256": "a47d459ad3d1bb86e19a28da82747827ee5d0a7a2577a29698facae47370d5ce"
+  },
+  {
+   "path": "supabase/migrations/0063_007b_lifecycle_transfers.sql",
+   "sha256": "3adef5ca840b4ce1a4ee8df705c8b239c14693401dc4080fa993c34ef1baba88"
+  },
+  {
+   "path": "supabase/migrations/0064_007b_invitations.sql",
+   "sha256": "b104a17f0dc97020b7cfa6ec93cd3d2e94fdb1b4fb419d38fe3fd6c8920d2b11"
+  },
+  {
+   "path": "supabase/migrations/0065_007b_notices.sql",
+   "sha256": "9eca9725a36bdadd064201ac3bbe774edffecc6c574a6194858d3699d8e9b55d"
+  },
+  {
+   "path": "supabase/migrations/0066_007b_operator_audit.sql",
+   "sha256": "3c9bae80614af88ffa205e6401548c6dbb9db5e183876c2155141c8b3b11c85c"
+  },
+  {
+   "path": "supabase/migrations/0067_007b_reads_privileges.sql",
+   "sha256": "9668bb9d73fc4323c55242e36aef94574788d20ada990dadc2c4ae10b8e90bde"
+  },
+  {
+   "path": "supabase/migrations/0068_007b_identity_compat_fix.sql",
+   "sha256": "aa567f2d48a13abf85085e610ce0c64d0c749c765acf7a54f980d69faf4db847"
+  },
+  {
+   "path": "supabase/migrations/0069_007b_reactivation_transfer_registration.sql",
+   "sha256": "c173249ad7706392f26da57ab32011b641e7dee9ebdf39ad613e9137d74668ad"
+  },
+  {
+   "path": "test-results/.last-run.json",
+   "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+  }
+ ]
+}

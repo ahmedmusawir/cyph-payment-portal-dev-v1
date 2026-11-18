@@ -111,10 +111,11 @@ describe('DashboardView — real subscription', () => {
     const stores = screen.getByTestId('pharmacies-section');
     expect(stores.textContent).toContain('Main Street Pharmacy');
     expect(stores.textContent).toContain('1234567893');
-    // Deferred scope is visibly unavailable, never a working or fake control.
-    expect(screen.getByTestId('add-store-unavailable').textContent).toBe('Adding a store is not available yet.');
+    // APBM-007B: Add Store is a real route for an active, current Stripe subscription; invite/invoice/cancel stay off this page.
+    expect(screen.getByTestId('add-store-link').getAttribute('href')).toBe('/stores/add');
+    expect(screen.queryByTestId('add-store-unavailable')).toBeNull();
     expect(screen.queryByRole('button', { name: /add a store|invite/i })).toBeNull();
-    expect(screen.queryByRole('link', { name: /add a store|invite|invoice|cancel/i })).toBeNull();
+    expect(screen.queryByRole('link', { name: /invite|invoice|cancel/i })).toBeNull();
     expect(document.body.textContent).not.toMatch(/illustrative|demo|simulated|synthetic/i);
   });
 

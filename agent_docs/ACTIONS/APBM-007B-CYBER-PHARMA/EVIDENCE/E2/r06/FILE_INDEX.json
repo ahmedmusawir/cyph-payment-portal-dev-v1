@@ -1,0 +1,202 @@
+{
+ "package": "r06",
+ "indexed_files": 39,
+ "note": "FILE_INDEX.json is not listed in itself; the ZIP SHA-256 is recorded outside the ZIP.",
+ "files": [
+  {
+   "path": "ADDENDUM_r06.md",
+   "bytes": 5966,
+   "sha256": "74acea3f2412bbf54a9a18e52aeffdb9619bd3183d2544ff7edd8acb19c02629"
+  },
+  {
+   "path": "CRASH_RESTART/cleanup_receipt.json",
+   "bytes": 166,
+   "sha256": "28345d88dcb3a98f36ccd28ada51ad1ccb9e831f0be910d34c24acf66d3c9306"
+  },
+  {
+   "path": "CRASH_RESTART/cr-r06-s1/result.json",
+   "bytes": 3464,
+   "sha256": "2675959be116bf56f898ebe40cdb49fe6e433967628fe122b3681bd9e6c7a689"
+  },
+  {
+   "path": "CRASH_RESTART/cr-r06-s1/state_after_recovery.json",
+   "bytes": 1747,
+   "sha256": "e6287713a9d0f4af1f5408f946305c1847546b61b44e1a2d126f6df5507c5edc"
+  },
+  {
+   "path": "CRASH_RESTART/cr-r06-s1/state_down_resume.json",
+   "bytes": 1543,
+   "sha256": "1565835188bd44a5d8e2ceb8a41b1d8f0ca643577ea017354bcfac8196e86175"
+  },
+  {
+   "path": "CRASH_RESTART/cr-r06-s1/state_final.json",
+   "bytes": 1738,
+   "sha256": "7022f9f0ea0b76e13a5e007b4520862586994dfbb1dc72f702d02972488b0e74"
+  },
+  {
+   "path": "CRASH_RESTART/cr-r06-s2/result.json",
+   "bytes": 3775,
+   "sha256": "7ad6314ca96b58389255c0bc20f6f0889952d0287dc368bd29eccb48162c7110"
+  },
+  {
+   "path": "CRASH_RESTART/cr-r06-s2/state_after_recovery.json",
+   "bytes": 1805,
+   "sha256": "88be3ffd4a4055bbed048e16f4655d4107f3489654b571e213e83599e0af148c"
+  },
+  {
+   "path": "CRASH_RESTART/cr-r06-s2/state_before_kill.json",
+   "bytes": 1576,
+   "sha256": "0566f38989355515801ea048b5d2a06ef68f09b26d153f50de834a5393a7ce49"
+  },
+  {
+   "path": "CRASH_RESTART/cr-r06-s2/state_down_immediately.json",
+   "bytes": 1582,
+   "sha256": "e7777d5492b3b38299ca8986860fe9a1f3089fcbbcb4eb466c69ed7efa74c7df"
+  },
+  {
+   "path": "CRASH_RESTART/cr-r06-s2/state_down_poll.json",
+   "bytes": 1578,
+   "sha256": "2c39d2585d64baeccd504e918463fb57231eebe6d0955ddd54b287fb7d46560c"
+  },
+  {
+   "path": "CRASH_RESTART/cr-r06-s2/state_down_settled.json",
+   "bytes": 1581,
+   "sha256": "642a7dfc44aeb9b0163ac626aee819f8bd41a93d5084671aedfbf50639437965"
+  },
+  {
+   "path": "CRASH_RESTART/cr-r06-s2/state_final.json",
+   "bytes": 1796,
+   "sha256": "0dc18854dd374bdb90f63085f0f69e985fba3988a277465457c8f335882d40c4"
+  },
+  {
+   "path": "CRASH_RESTART/interrupted_s2_reconciliation.json",
+   "bytes": 2668,
+   "sha256": "b29393905efa27540727352b78004a3cc39b58f2b4543fa62a83af4505414615"
+  },
+  {
+   "path": "EFFECTS/counters.json",
+   "bytes": 764,
+   "sha256": "54f623f4c671331e33f362da35cb588e98157247d846092ae1e7311883f863e1"
+  },
+  {
+   "path": "EFFECTS/ledger.jsonl",
+   "bytes": 150049,
+   "sha256": "78e105192f43bff9ac0973979399d9694d6ccc36fd0801095dcd31007a5243c4"
+  },
+  {
+   "path": "INVENTORY/cyph-payment-portal-dev-v1_2.1_committed.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "INVENTORY/cyph-payment-portal-dev-v1_2.2_staged.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "INVENTORY/cyph-payment-portal-dev-v1_2.3_unstaged.txt",
+   "bytes": 408,
+   "sha256": "d2c2a477bdcb5934f51ddd694d8a539a87e653925a972f7998a9035f21de6a5b"
+  },
+  {
+   "path": "INVENTORY/cyph-payment-portal-dev-v1_2.4_untracked.txt",
+   "bytes": 43450,
+   "sha256": "9202666bc1e7156e4a206968a21a87411134f8c4fe21546a2ae0559ccd33afba"
+  },
+  {
+   "path": "INVENTORY/cyph-payment-portal-dev-v1_2.5_status.txt",
+   "bytes": 1426,
+   "sha256": "395e6e09fbbff5743a0c8ce121d010b44f2e63de57c46a3f825f394a455cbdc3"
+  },
+  {
+   "path": "INVENTORY/cyph-v1-dev_2.1_committed.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "INVENTORY/cyph-v1-dev_2.2_staged.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "INVENTORY/cyph-v1-dev_2.3_unstaged.txt",
+   "bytes": 255,
+   "sha256": "f4bb875b33042032ca0d960216a25bec003c100e6386ec1f32b1ded79040a24c"
+  },
+  {
+   "path": "INVENTORY/cyph-v1-dev_2.4_untracked.txt",
+   "bytes": 3814,
+   "sha256": "36815edae9e957b360a71fdaa47baf579ca0b4a3b268ba36f12df24f1df8e3a0"
+  },
+  {
+   "path": "INVENTORY/cyph-v1-dev_2.5_status.txt",
+   "bytes": 1162,
+   "sha256": "9c502679f4e48cd3088aaf562f74a089e07b867a986389282edd93429adadaa0"
+  },
+  {
+   "path": "PRIOR_PACKAGES.json",
+   "bytes": 906,
+   "sha256": "8bb7899ee2abed3f46c3d5bffca3ceeb032f1f6c4b3f991d1a3a3e7659b7cf90"
+  },
+  {
+   "path": "QAM/ENGINEERING_HANDOFF.md",
+   "bytes": 20887,
+   "sha256": "bea52db43406ac053f1efae5696b6fa1c1625250fd7cc5945ce01e7aa774c453"
+  },
+  {
+   "path": "QAM/QAM_MANIFEST.md",
+   "bytes": 13213,
+   "sha256": "7e257c10e6db0c4873c01cf07f9ec1956b2838fe65d87dc85147cccde43aee92"
+  },
+  {
+   "path": "QAM/QAM_STATE.md",
+   "bytes": 3486,
+   "sha256": "d5bdabe44cc87e30ab40dd352ea9c98d3b9ca402a0766f7f9fd2d1ce42d4ff67"
+  },
+  {
+   "path": "RECORDS/APBM_JOURNAL.md",
+   "bytes": 24949,
+   "sha256": "fe3730440c2229b2329c369ea2d2e6600d653edda2fa1973fadcbc16f7b9bfea"
+  },
+  {
+   "path": "RECORDS/APBM_RULINGS.md",
+   "bytes": 9730,
+   "sha256": "6d08db730a154b34be273ce831fbb38ee19b4d56c53440ed70da71f5a49d6e15"
+  },
+  {
+   "path": "RECORDS/APBM_STATE.md",
+   "bytes": 3512,
+   "sha256": "d773179b181d0d0ff04c59b780f66a0db80159f7ca34eb0c95c3c056d833f6d7"
+  },
+  {
+   "path": "RECORDS/ENVIRONMENT_AND_EFFECTS.md",
+   "bytes": 7188,
+   "sha256": "efa755fa4f3a036848532378ff59e9d07a737f30aa1e11d98b8071d3b6fbabf3"
+  },
+  {
+   "path": "RECORDS/SUCCESSOR_INPUTS.json",
+   "bytes": 1168,
+   "sha256": "934240576765101743f7cdbf4a54d420dede2ace1a6fe58b5391d8af7144dd32"
+  },
+  {
+   "path": "RECORDS/manual_observations.json",
+   "bytes": 6445,
+   "sha256": "3dc5e78f255ed5ac34f1c5bbc769866f3561d3de5a6853eca37d7c5ed5a8b761"
+  },
+  {
+   "path": "SCRIPTS/crash-restart.mjs",
+   "bytes": 22060,
+   "sha256": "8f523fc8ecbdf612d3634dce0a4192fbb03fa192cf9c6eb0fd075eb0bab519a5"
+  },
+  {
+   "path": "SCRIPTS/effects.mjs",
+   "bytes": 5049,
+   "sha256": "c72092b8be32c2f77ef14c45dd0778c6d844ec9d800dc778ab20ded878590751"
+  },
+  {
+   "path": "SCRIPTS/proof-serve.mjs",
+   "bytes": 8838,
+   "sha256": "2139ea73406a336fa0a2a900228ec39f40a5b60ef682da4726162a8dad606168"
+  }
+ ]
+}

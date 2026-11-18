@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-18T07:13:58.770351+00:00",
+  "cumulative_used": {
+    "reads": 4177,
+    "provider_mutations": 470,
+    "new_identities": 12,
+    "test_clocks": 3,
+    "customers": 8,
+    "subscriptions": 8,
+    "attempted_cents": 639981,
+    "sign_ins": 244,
+    "pay_or_hosted": 74,
+    "email_attempts": 22,
+    "unique_identities": 8,
+    "refunds": 2,
+    "scratch_cycles": 1
+  },
+  "caps": {
+    "refunds": 2,
+    "provider_mutations": 560,
+    "customers": 16,
+    "subscriptions": 16,
+    "test_clocks": 7,
+    "pay_or_hosted": 100,
+    "attempted_cents": 1000000,
+    "email_attempts": 40,
+    "sign_ins": 300,
+    "new_identities": 14,
+    "unique_identities": 10,
+    "scratch_cycles": 3,
+    "reads": 8000
+  },
+  "Q402_reserved_delta": {
+    "reads": 1076,
+    "provider_mutations": 87,
+    "new_identities": 0,
+    "test_clocks": 0,
+    "customers": 0,
+    "subscriptions": 0,
+    "attempted_cents": 48803,
+    "sign_ins": 77,
+    "pay_or_hosted": 10,
+    "email_attempts": 4,
+    "unique_identities": 0,
+    "refunds": 0,
+    "scratch_cycles": 0
+  },
+  "exact_ledger_reconciliation": true,
+  "unique_monotonic_sequences": true,
+  "counter_reset": false,
+  "self_raised_limits_in_Q402": [],
+  "cleanup_reserves": {
+    "provider_mutations": 20,
+    "email_attempts": 8
+  },
+  "qualification": "Reservations include conservative Auth token/password/signout requests and failed/skipped/uncertain slots. No reclaim/reset; reserved requests are not net payments."
+}

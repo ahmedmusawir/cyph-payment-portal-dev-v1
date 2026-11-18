@@ -1,0 +1,156 @@
+{
+  "at": "2026-11-18T08:02:09.834Z",
+  "subscriptions": [
+    {
+      "id": "sub_1Ucy1GGnEQDyu3RRvzi7OUrP",
+      "status": "canceled",
+      "verified": true
+    },
+    {
+      "id": "sub_1Uchc8GnEQDyu3RR4dPvjODp",
+      "status": "canceled",
+      "verified": true
+    },
+    {
+      "id": "sub_1UciklGnEQDyu3RRiTtSmwcF",
+      "status": "canceled",
+      "verified": true
+    },
+    {
+      "id": "sub_1Uchc1GnEQDyu3RRyZ7Lns7W",
+      "status": "canceled",
+      "verified": true
+    },
+    {
+      "id": "sub_1UcitmGnEQDyu3RRftoi8saR",
+      "status": "canceled",
+      "verified": true
+    },
+    {
+      "id": "sub_1UciXtGnEQDyu3RR69YGmVyL",
+      "status": "canceled",
+      "verified": true
+    }
+  ],
+  "identities": [
+    {
+      "role": "OWNER_A",
+      "identity_preserved": true,
+      "sessions": 0,
+      "active_refresh": 0
+    },
+    {
+      "role": "OWNER_B",
+      "identity_preserved": true,
+      "sessions": 0,
+      "active_refresh": 0
+    },
+    {
+      "role": "STORE_ADMIN",
+      "identity_preserved": true,
+      "sessions": 0,
+      "active_refresh": 0
+    },
+    {
+      "role": "MEMBER",
+      "identity_preserved": true,
+      "sessions": 0,
+      "active_refresh": 0
+    },
+    {
+      "role": "FOREIGN_OWNER",
+      "identity_preserved": true,
+      "sessions": 0,
+      "active_refresh": 0
+    },
+    {
+      "role": "NEW_ADMIN",
+      "identity_preserved": true,
+      "sessions": 0,
+      "active_refresh": 0
+    },
+    {
+      "role": "NEW_MEMBER",
+      "identity_preserved": true,
+      "sessions": 0,
+      "active_refresh": 0
+    },
+    {
+      "role": "EXISTING_INVITEE",
+      "identity_preserved": true,
+      "sessions": 0,
+      "active_refresh": 0
+    }
+  ],
+  "no_refunds_performed": true,
+  "transfer": [
+    {
+      "id": "b254f723-9774-494d-9096-e50672ad323c",
+      "status": "canceled"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "9a37c780-670d-45d3-93d0-d75fafe4111f",
+      "status": "released"
+    }
+  ],
+  "contexts": [
+    {
+      "account_id": "91bf8e6f-1782-4721-a5a2-c52435336c37",
+      "enabled": false
+    },
+    {
+      "account_id": "fd478c52-4c94-413e-86a9-a0e7cf36dd19",
+      "enabled": false
+    },
+    {
+      "account_id": "2ecdcb60-633d-4b6a-a4ff-462399a00152",
+      "enabled": false
+    },
+    {
+      "account_id": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "enabled": false
+    }
+  ],
+  "migration_ledger_max": [
+    {
+      "version": "20261012053902"
+    }
+  ],
+  "business_claim_digest": [
+    {
+      "table": "businesses",
+      "n": 82,
+      "digest": "846eba8daf47cca2330a3c8b92b060ab"
+    },
+    {
+      "table": "user_data",
+      "n": 363,
+      "digest": "2afa82d7df20f77e3384393802d88fc0"
+    },
+    {
+      "table": "report_files",
+      "n": 1,
+      "digest": "771a526a39017a8dbf1764423c113ffc"
+    },
+    {
+      "table": "pharmacy_identities",
+      "n": 80,
+      "digest": "c3093f04092161488f0e348399326f75"
+    }
+  ],
+  "business_claim_rows_unchanged": true,
+  "F_Q2_001": {
+    "invoice_status": "paid",
+    "subscription_canceled": true,
+    "refunds": [
+      {
+        "amount_refunded": 0
+      }
+    ]
+  },
+  "temporary_cast_matches_QA": false,
+  "PASS": true,
+  "migration_ledger_max_note": "Raw max(version) reflects mixed timestamp/number ledger ordering; not a count and not used to claim ledger 70. Exact 70-file checksum proof is carried from Q4/02 entry/runtime_and_ledger.json; cleanup performs no migration."
+}

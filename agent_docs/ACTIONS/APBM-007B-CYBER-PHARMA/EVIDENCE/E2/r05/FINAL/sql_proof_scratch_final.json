@@ -1,0 +1,528 @@
+{
+ "target": "scratch",
+ "total": 130,
+ "passed": 130,
+ "failed": 0,
+ "checks": [
+  {
+   "name": "every ownership row maps to an existing canonical identity; one live ownership per identity; shared identity only via a completed transfer",
+   "status": "PASS"
+  },
+  {
+   "name": "old all-row NPI index replaced by active-ownership indexes",
+   "status": "PASS"
+  },
+  {
+   "name": "a store inserted without pharmacy_id (007A provisioning shape) gets its own canonical identity",
+   "status": "PASS"
+  },
+  {
+   "name": "an NPI with an existing identity is never silently re-attached by a plain insert",
+   "status": "PASS"
+  },
+  {
+   "name": "owner A sees both stores",
+   "status": "PASS"
+  },
+  {
+   "name": "foreign sees none of A",
+   "status": "PASS"
+  },
+  {
+   "name": "after cutoff: owner loses A2 via my_business_ids",
+   "status": "PASS"
+  },
+  {
+   "name": "after cutoff: member loses A2 (is_member_of false)",
+   "status": "PASS"
+  },
+  {
+   "name": "after cutoff: admin loses admin_members",
+   "status": "PASS"
+  },
+  {
+   "name": "after cutoff: claims RPC denied to owner",
+   "status": "PASS"
+  },
+  {
+   "name": "after cutoff: store_access_state denied",
+   "status": "PASS"
+  },
+  {
+   "name": "after cutoff: report_files row not visible",
+   "status": "PASS"
+  },
+  {
+   "name": "after cutoff: businesses row not visible",
+   "status": "PASS"
+  },
+  {
+   "name": "after cutoff: memberships not visible",
+   "status": "PASS"
+  },
+  {
+   "name": "A1 still live for member",
+   "status": "PASS"
+  },
+  {
+   "name": "finalize: status removed, ownership ended, memberships retired, claims preserved",
+   "status": "PASS"
+  },
+  {
+   "name": "finalize is idempotent",
+   "status": "PASS"
+  },
+  {
+   "name": "removed store: no seller-history exception for ordinary removal",
+   "status": "PASS"
+  },
+  {
+   "name": "SCRATCH + enabled context: billing_now = frozen time",
+   "status": "PASS"
+  },
+  {
+   "name": "other account unaffected (real now)",
+   "status": "PASS"
+  },
+  {
+   "name": "disabled context with non-null old frozen time: billing_now = real now",
+   "status": "PASS"
+  },
+  {
+   "name": "customer cannot call billing_now",
+   "status": "PASS"
+  },
+  {
+   "name": "customer cannot enable a test context",
+   "status": "PASS"
+  },
+  {
+   "name": "customer cannot bind deployment identity",
+   "status": "PASS"
+  },
+  {
+   "name": "forged claim flag/header has no effect (billing_now takes no user input)",
+   "status": "PASS"
+  },
+  {
+   "name": "bound identity is immutable (cannot be rebound to DEV or anything else)",
+   "status": "PASS"
+  },
+  {
+   "name": "DEV-identity negative (needs unbound deployment; skipped on bound target)",
+   "status": "PASS"
+  },
+  {
+   "name": "quote created with amount < 4900 and next renewal 9900+4900*2",
+   "status": "PASS"
+  },
+  {
+   "name": "quote refused for non-owner actor",
+   "status": "PASS"
+  },
+  {
+   "name": "quote refused for a registered NPI",
+   "status": "PASS"
+  },
+  {
+   "name": "quote refused on provider/local quantity mismatch",
+   "status": "PASS"
+  },
+  {
+   "name": "claim creates payment_setup op with NPI op_held and deadline <= 30 min",
+   "status": "PASS"
+  },
+  {
+   "name": "same intent resumes the same operation",
+   "status": "PASS"
+  },
+  {
+   "name": "new intent while unresolved is refused",
+   "status": "PASS"
+  },
+  {
+   "name": "pending store grants nothing: no business row for the NPI",
+   "status": "PASS"
+  },
+  {
+   "name": "registration cannot reserve an Add Store-held NPI",
+   "status": "PASS"
+  },
+  {
+   "name": "competing lease refused while held",
+   "status": "PASS"
+  },
+  {
+   "name": "stale epoch transition refused",
+   "status": "PASS"
+  },
+  {
+   "name": "invoice mapping with wrong amount refused",
+   "status": "PASS"
+  },
+  {
+   "name": "invoice mapped",
+   "status": "PASS"
+  },
+  {
+   "name": "activation refused on amount mismatch → attention",
+   "status": "PASS"
+  },
+  {
+   "name": "activation refused on changed period → attention",
+   "status": "PASS"
+  },
+  {
+   "name": "activation creates exactly one store, owner is its admin, hold consumed",
+   "status": "PASS"
+  },
+  {
+   "name": "activated state",
+   "status": "PASS"
+  },
+  {
+   "name": "activation is idempotent",
+   "status": "PASS"
+  },
+  {
+   "name": "owner sees the new store; foreign does not",
+   "status": "PASS"
+  },
+  {
+   "name": "owner_store_operations exposes no capability URL",
+   "status": "PASS"
+  },
+  {
+   "name": "admin/member cannot read owner_store_operations",
+   "status": "PASS"
+  },
+  {
+   "name": "owner abandon records cancel_requested only",
+   "status": "PASS"
+  },
+  {
+   "name": "hold still held after abandon request (no blind release)",
+   "status": "PASS"
+  },
+  {
+   "name": "paid-after-abandon goes to attention, never activation",
+   "status": "PASS"
+  },
+  {
+   "name": "attention keeps the NPI hold and the account slot",
+   "status": "PASS"
+  },
+  {
+   "name": "operator close refused without matching invoice/full proof",
+   "status": "PASS"
+  },
+  {
+   "name": "removal request target quantity = billable - 1",
+   "status": "PASS"
+  },
+  {
+   "name": "removal commit schedules cutoff at period end; billable drops now",
+   "status": "PASS"
+  },
+  {
+   "name": "store still live until cutoff",
+   "status": "PASS"
+  },
+  {
+   "name": "last billable store cannot be removed",
+   "status": "PASS"
+  },
+  {
+   "name": "undo with changed provider period enters attention",
+   "status": "PASS"
+  },
+  {
+   "name": "admin cannot request removal",
+   "status": "PASS"
+  },
+  {
+   "name": "shared window refuses inside the last 90 minutes",
+   "status": "PASS"
+  },
+  {
+   "name": "member cannot invite",
+   "status": "PASS"
+  },
+  {
+   "name": "foreign owner cannot invite to A",
+   "status": "PASS"
+  },
+  {
+   "name": "store admin cannot invite an admin",
+   "status": "PASS"
+  },
+  {
+   "name": "store admin cannot act on another store",
+   "status": "PASS"
+  },
+  {
+   "name": "store admin invites a member to its own store",
+   "status": "PASS"
+  },
+  {
+   "name": "duplicate pending invitation refused",
+   "status": "PASS"
+  },
+  {
+   "name": "wrong signed-in user cannot accept",
+   "status": "PASS"
+  },
+  {
+   "name": "my_invitations shows it to the recipient only",
+   "status": "PASS"
+  },
+  {
+   "name": "recipient accepts → member of A2 only",
+   "status": "PASS"
+  },
+  {
+   "name": "replay of accepted invitation is refused",
+   "status": "PASS"
+  },
+  {
+   "name": "accepted member gets no billing rights",
+   "status": "PASS"
+  },
+  {
+   "name": "incumbent stays admin until acceptance",
+   "status": "PASS"
+  },
+  {
+   "name": "admin acceptance: new admin, former admin demoted to member, exactly one admin",
+   "status": "PASS"
+  },
+  {
+   "name": "incumbent changed after issue → acceptance rejected as stale",
+   "status": "PASS"
+  },
+  {
+   "name": "effective admin cannot be removed",
+   "status": "PASS"
+  },
+  {
+   "name": "owner removes a member; next request denied (existing session/JWT)",
+   "status": "PASS"
+  },
+  {
+   "name": "read-only: new invitation denied",
+   "status": "PASS"
+  },
+  {
+   "name": "read-only: revocation still allowed",
+   "status": "PASS"
+  },
+  {
+   "name": "read-only: member removal still allowed",
+   "status": "PASS"
+  },
+  {
+   "name": "read-only: Add Store quote refused",
+   "status": "PASS"
+  },
+  {
+   "name": "dispatch claim not callable by customers",
+   "status": "PASS"
+  },
+  {
+   "name": "transfer authorized; seller removal scheduled at effective time",
+   "status": "PASS"
+  },
+  {
+   "name": "buyer quote refused before effective time",
+   "status": "PASS"
+  },
+  {
+   "name": "seller access unchanged before effective time",
+   "status": "PASS"
+  },
+  {
+   "name": "at effective time seller staff lose access",
+   "status": "PASS"
+  },
+  {
+   "name": "finalize marks source transferred and holds NPI for the buyer",
+   "status": "PASS"
+  },
+  {
+   "name": "no active ownership between seller end and buyer activation",
+   "status": "PASS"
+  },
+  {
+   "name": "public registration cannot take the held NPI",
+   "status": "PASS"
+  },
+  {
+   "name": "seller owner reads source-ownership history (read-only)",
+   "status": "PASS"
+  },
+  {
+   "name": "seller staff denied history",
+   "status": "PASS"
+  },
+  {
+   "name": "buyer denied seller history",
+   "status": "PASS"
+  },
+  {
+   "name": "foreign denied seller history",
+   "status": "PASS"
+  },
+  {
+   "name": "buyer can quote from effective time",
+   "status": "PASS"
+  },
+  {
+   "name": "other account cannot quote the held NPI",
+   "status": "PASS"
+  },
+  {
+   "name": "buyer activation: new ownership row under the same canonical identity",
+   "status": "PASS"
+  },
+  {
+   "name": "buyer has no association to pre-sale claims",
+   "status": "PASS"
+  },
+  {
+   "name": "exactly one active ownership of the pharmacy",
+   "status": "PASS"
+  },
+  {
+   "name": "without operator authorization the removed NPI is refused",
+   "status": "PASS"
+  },
+  {
+   "name": "reactivation authorization recorded (authorization only)",
+   "status": "PASS"
+  },
+  {
+   "name": "authorization grants no access before payment",
+   "status": "PASS"
+  },
+  {
+   "name": "same-owner quote allowed after authorization",
+   "status": "PASS"
+  },
+  {
+   "name": "another account cannot quote that NPI",
+   "status": "PASS"
+  },
+  {
+   "name": "still no access while payment is pending",
+   "status": "PASS"
+  },
+  {
+   "name": "after payment the ORIGINAL ownership record is restored (same business id)",
+   "status": "PASS"
+  },
+  {
+   "name": "original history is back for the owner (claims RPC answers)",
+   "status": "PASS"
+  },
+  {
+   "name": "original claims rows unchanged (3)",
+   "status": "PASS"
+  },
+  {
+   "name": "exactly one current ownership for the pharmacy",
+   "status": "PASS"
+  },
+  {
+   "name": "authorization consumed",
+   "status": "PASS"
+  },
+  {
+   "name": "transfer authorized to an email-identified buyer",
+   "status": "PASS"
+  },
+  {
+   "name": "before the effective time the buyer cannot reserve via registration",
+   "status": "PASS"
+  },
+  {
+   "name": "after the effective time a different person still cannot register the NPI",
+   "status": "PASS"
+  },
+  {
+   "name": "the exact buyer reserves through registration (transfer hold, not a public hold)",
+   "status": "PASS"
+  },
+  {
+   "name": "checkout binds the transfer hold to its operation",
+   "status": "PASS"
+  },
+  {
+   "name": "provisioning creates the buyer account and the SUCCESSOR ownership under the same canonical identity",
+   "status": "PASS"
+  },
+  {
+   "name": "transfer completed with the new buyer account",
+   "status": "PASS"
+  },
+  {
+   "name": "buyer sees none of the seller history",
+   "status": "PASS"
+  },
+  {
+   "name": "seller owner keeps read-only history of the sold store",
+   "status": "PASS"
+  },
+  {
+   "name": "a sold store cannot be reactivated by the seller",
+   "status": "PASS"
+  },
+  {
+   "name": "one notice per (invoice, kind) even on repeated failure events",
+   "status": "PASS"
+  },
+  {
+   "name": "both due (failure at grace start, warning at grace start + 5 days)",
+   "status": "PASS"
+  },
+  {
+   "name": "claim returns owner address, deadline and fenced epoch",
+   "status": "PASS"
+  },
+  {
+   "name": "second claim while in flight refused",
+   "status": "PASS"
+  },
+  {
+   "name": "finish with stale epoch refused",
+   "status": "PASS"
+  },
+  {
+   "name": "finish sent recorded",
+   "status": "PASS"
+  },
+  {
+   "name": "recovery committed first suppresses the next claim",
+   "status": "PASS"
+  },
+  {
+   "name": "notices not readable by customers",
+   "status": "PASS"
+  },
+  {
+   "name": "owner-replace refuses an identity that already owns an account",
+   "status": "PASS"
+  },
+  {
+   "name": "owner-replace: new owner, old identity loses all access on that account, admins preserved",
+   "status": "PASS"
+  },
+  {
+   "name": "operator audit is append-only",
+   "status": "PASS"
+  },
+  {
+   "name": "reactivation of a non-removed store refused",
+   "status": "PASS"
+  }
+ ]
+}

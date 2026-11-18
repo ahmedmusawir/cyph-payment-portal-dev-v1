@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-17T10:01:45.059Z",
+  "requests": [
+    {
+      "role": "NEW_ADMIN",
+      "app": "ob",
+      "status": 200,
+      "delivery_lane": "Supabase Auth email; human receipt pending",
+      "identity_creation": false
+    },
+    {
+      "role": "NEW_MEMBER",
+      "app": "ob",
+      "status": 200,
+      "delivery_lane": "Supabase Auth email; human receipt pending",
+      "identity_creation": false
+    },
+    {
+      "role": "MEMBER",
+      "app": "pp",
+      "status": 200,
+      "delivery_lane": "Supabase Auth email; human receipt pending",
+      "identity_creation": false
+    }
+  ],
+  "private_input_field_names": [
+    "NEW_ADMIN_OB",
+    "NEW_MEMBER_OB",
+    "MEMBER_PP"
+  ],
+  "receipt_verification": "NOT YET OBSERVED"
+}

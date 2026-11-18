@@ -1,0 +1,84 @@
+{
+ "stores": [
+  {
+   "name": "<label> North",
+   "status": "active",
+   "removal_scheduled": false,
+   "ended": false
+  },
+  {
+   "name": "<label> South",
+   "status": "active",
+   "removal_scheduled": false,
+   "ended": false
+  },
+  {
+   "name": "<label> Store 4",
+   "status": "active",
+   "removal_scheduled": false,
+   "ended": false
+  },
+  {
+   "name": "<label> East",
+   "status": "active",
+   "removal_scheduled": false,
+   "ended": false
+  }
+ ],
+ "operations": [
+  {
+   "kind": "store_add",
+   "state": "activated",
+   "last_error_code": null,
+   "amount_cents": 4900,
+   "invoice_id": "in_1UcTEvGnEQDyu3RRF7x0thFG"
+  },
+  {
+   "kind": "store_removal",
+   "state": "completed",
+   "last_error_code": null,
+   "amount_cents": null,
+   "invoice_id": null
+  },
+  {
+   "kind": "store_removal_undo",
+   "state": "completed",
+   "last_error_code": null,
+   "amount_cents": null,
+   "invoice_id": null
+  },
+  {
+   "kind": "store_add",
+   "state": "activated",
+   "last_error_code": null,
+   "amount_cents": 4899,
+   "invoice_id": "in_1UcTL2GnEQDyu3RRB2E16Ni6"
+  },
+  {
+   "kind": "store_removal",
+   "state": "completed",
+   "last_error_code": null,
+   "amount_cents": null,
+   "invoice_id": null
+  },
+  {
+   "kind": "store_removal_undo",
+   "state": "completed",
+   "last_error_code": null,
+   "amount_cents": null,
+   "invoice_id": null
+  }
+ ],
+ "invitations": [
+  {
+   "role": "member",
+   "status": "revoked",
+   "dispatch_attempts": 0
+  }
+ ],
+ "billable_count": 4,
+ "mirror_quantity": 4,
+ "provider_quantity": 4,
+ "provider_status": "active",
+ "consistent": true
+}

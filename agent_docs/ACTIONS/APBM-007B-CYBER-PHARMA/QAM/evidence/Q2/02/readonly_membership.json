@@ -1,0 +1,125 @@
+{
+  "done": [
+    "fixture",
+    "renewal",
+    "day5",
+    "day7",
+    "recover"
+  ],
+  "rows": [
+    {
+      "name": "fixture",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "business": "a8298a96-2316-4193-956a-b7306d9829fc",
+      "admin_role": "FOREIGN_OWNER",
+      "member_role": "MEMBER"
+    },
+    {
+      "name": "grace-real-automatic",
+      "access": {
+        "state": "grace",
+        "origin": "stripe",
+        "read_only": false,
+        "grace_ends_at": "2026-12-24T10:41:53+00:00",
+        "policy_version": "access-v1",
+        "cancel_scheduled": false
+      },
+      "notices": [
+        {
+          "id": "35c7d141-3708-4dfe-bcfe-50ecb94044d9",
+          "notice_kind": "renewal_read_only_warning",
+          "status": "pending",
+          "attempts": 0,
+          "provider_message_id": null,
+          "suppression_reason": null
+        },
+        {
+          "id": "c00364cb-63c7-4e49-976a-656cc445b3a0",
+          "notice_kind": "renewal_payment_failed",
+          "status": "sent",
+          "attempts": 1,
+          "provider_message_id": "01a1e8f8-61c3-729d-94a6-8eefd1bd5351",
+          "suppression_reason": null
+        }
+      ],
+      "job_status": 200,
+      "delivery_lane": "automatic Stripe CLI"
+    },
+    {
+      "name": "warning-and-duplicate-minute",
+      "notices": [
+        {
+          "id": "c00364cb-63c7-4e49-976a-656cc445b3a0",
+          "notice_kind": "renewal_payment_failed",
+          "status": "sent",
+          "attempts": 1,
+          "provider_message_id": "01a1e8f8-61c3-729d-94a6-8eefd1bd5351",
+          "suppression_reason": null
+        },
+        {
+          "id": "35c7d141-3708-4dfe-bcfe-50ecb94044d9",
+          "notice_kind": "renewal_read_only_warning",
+          "status": "sent",
+          "attempts": 1,
+          "provider_message_id": "01a1e8f8-d02c-7202-aed6-810984cac4a5",
+          "suppression_reason": null
+        }
+      ],
+      "duplicate_jobs_no_extra_attempts": true,
+      "delivery_lane": "automatic Stripe CLI plus real Resend SMTP, human receipt separate"
+    },
+    {
+      "name": "readonly-reduction-old-jwt",
+      "access": {
+        "state": "read_only",
+        "origin": "stripe",
+        "read_only": true,
+        "grace_ends_at": "2026-12-24T10:41:53+00:00",
+        "policy_version": "access-v1",
+        "cancel_scheduled": false
+      },
+      "read_before_error": null,
+      "read_before_total": 1,
+      "new_grant_status": 409,
+      "new_grant_code": "account_read_only",
+      "remove_status": 200,
+      "same_old_jwt_after_error": "P0001",
+      "owner_billing_status": 200,
+      "result": "PASS"
+    },
+    {
+      "name": "recovered",
+      "invoice": "in_1UcjGLGnEQDyu3RRtvWLEuNB",
+      "amount_paid": 9900,
+      "access": {
+        "state": "active",
+        "origin": "stripe",
+        "read_only": false,
+        "grace_ends_at": null,
+        "policy_version": "access-v1",
+        "cancel_scheduled": false
+      },
+      "notices": [
+        {
+          "id": "c00364cb-63c7-4e49-976a-656cc445b3a0",
+          "notice_kind": "renewal_payment_failed",
+          "status": "sent",
+          "attempts": 1,
+          "provider_message_id": "01a1e8f8-61c3-729d-94a6-8eefd1bd5351",
+          "suppression_reason": null
+        },
+        {
+          "id": "35c7d141-3708-4dfe-bcfe-50ecb94044d9",
+          "notice_kind": "renewal_read_only_warning",
+          "status": "sent",
+          "attempts": 1,
+          "provider_message_id": "01a1e8f8-d02c-7202-aed6-810984cac4a5",
+          "suppression_reason": null
+        }
+      ],
+      "delivery_lane": "automatic Stripe CLI"
+    }
+  ],
+  "claim": "2e9e6edb-1614-44d7-be13-f613a0e6a0f9",
+  "end": 1797500513
+}

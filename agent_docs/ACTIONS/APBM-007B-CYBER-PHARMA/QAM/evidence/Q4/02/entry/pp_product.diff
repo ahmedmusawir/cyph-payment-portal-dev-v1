@@ -1,0 +1,232 @@
+diff --git a/src/__tests__/apbm007b-hydration-forms.test.tsx b/src/__tests__/apbm007b-hydration-forms.test.tsx
+new file mode 100644
+index 0000000..d3aeae0
+--- /dev/null
++++ b/src/__tests__/apbm007b-hydration-forms.test.tsx
+@@ -0,0 +1,93 @@
++/**
++ * @jest-environment jsdom
++ */
++// APBM-007B F-Q4-001 — what is typed or filled before the page finishes loading is kept, the submit button follows the
++// real field values, and Show password never clears the field. Each test server-renders the form, types into the
++// server HTML with no input event (React never sees it, as when the production script is still loading), then hydrates.
++import { act } from 'react';
++import { renderToString } from 'react-dom/server';
++import { hydrateRoot, type Root } from 'react-dom/client';
++import { fireEvent, screen, waitFor } from '@testing-library/react';
++import { LoginPageContent } from '@/app/login/LoginPageContent';
++import { LinkRequestForm } from '@/components/auth/LinkRequestForm';
++import { AddStoreFlow } from '@/components/portal/account/AddStoreFlow';
++
++const mockRouter = { push: jest.fn(), replace: jest.fn(), refresh: jest.fn() };
++jest.mock('next/navigation', () => ({ useRouter: () => mockRouter }));
++jest.mock('@/services/portal/navigate', () => ({ externalRedirect: jest.fn() }));
++
++let posts: { url: string; body: Record<string, string> }[] = [];
++beforeEach(() => {
++  posts = [];
++  global.fetch = jest.fn(async (url: string, init?: RequestInit) => {
++    posts.push({ url, body: JSON.parse(String(init?.body ?? '{}')) });
++    return { ok: true, status: 200, json: async () => ({ data: { role: null } }) };
++  }) as unknown as typeof fetch;
++});
++afterEach(() => { document.body.innerHTML = ''; mockRouter.push.mockClear(); });
++
++async function typeBeforeHydration(ui: React.ReactElement, typed: Record<string, string>) {
++  const container = document.createElement('div');
++  container.innerHTML = renderToString(ui);
++  document.body.appendChild(container);
++  for (const [id, value] of Object.entries(typed)) (container.querySelector(`#${id}`) as HTMLInputElement).value = value;   // no input event
++  let root: Root | undefined;
++  await act(async () => { root = hydrateRoot(container, ui); });
++  return { container, root: root as Root, field: (id: string) => container.querySelector(`#${id}`) as HTMLInputElement };
++}
++
++it('password sign-in: typed values are kept, Sign in is enabled, Show password keeps the password, and they are submitted', async () => {
++  const { container, root, field } = await typeBeforeHydration(<LoginPageContent sessionExpired={false} />, {
++    email: 'early@x.invalid', password: 'typed-early',
++  });
++  const signIn = screen.getByRole('button', { name: 'Sign in' }) as HTMLButtonElement;
++  expect(signIn.disabled).toBe(false);
++  await act(async () => { fireEvent.click(screen.getByRole('button', { name: 'Show password' })); });
++  expect(field('password').value).toBe('typed-early');
++  expect(field('password').type).toBe('text');
++  await act(async () => { fireEvent.submit(container.querySelector('form') as HTMLFormElement); });
++  await waitFor(() => expect(posts).toContainEqual({ url: '/api/auth/login', body: { email: 'early@x.invalid', password: 'typed-early' } }));
++  act(() => root.unmount());
++});
++
++it('password sign-in: with nothing typed, Sign in stays disabled after loading', async () => {
++  const { root } = await typeBeforeHydration(<LoginPageContent sessionExpired={false} />, {});
++  expect((screen.getByRole('button', { name: 'Sign in' }) as HTMLButtonElement).disabled).toBe(true);
++  act(() => root.unmount());
++});
++
++it('add store details: typed details are kept and are the ones quoted; "See the price" is disabled in the server HTML', async () => {
++  const container = document.createElement('div');
++  container.innerHTML = renderToString(<AddStoreFlow />);
++  document.body.appendChild(container);
++  const ssrDisabled = (container.querySelector('button[type=submit]') as HTMLButtonElement).disabled;
++  const field = (id: string) => container.querySelector(`#${id}`) as HTMLInputElement;
++  field('sn').value = 'Early Typed Pharmacy'; field('npi').value = '1234567893';   // no input events
++  let root: Root | undefined;
++  await act(async () => { root = hydrateRoot(container, <AddStoreFlow />); });
++  // The quote is refused here, so the details form stays on screen after the re-renders of the request.
++  (global.fetch as jest.Mock).mockImplementation(async (url: string, init?: RequestInit) => {
++    posts.push({ url, body: JSON.parse(String(init?.body ?? '{}')) });
++    return { ok: false, status: 400, json: async () => ({ message: 'Refused in this test.' }) };
++  });
++  const see = screen.getByRole('button', { name: 'See the price' }) as HTMLButtonElement;
++  expect(see.disabled).toBe(false);
++  await act(async () => { fireEvent.submit(container.querySelector('form') as HTMLFormElement); });
++  expect(posts).toEqual([{ url: '/api/stores/add/quote', body: { storeName: 'Early Typed Pharmacy', npi: '1234567893' } }]);
++  await waitFor(() => expect(screen.getByText('Refused in this test.')).toBeTruthy());
++  expect(field('sn').value).toBe('Early Typed Pharmacy');
++  expect(field('npi').value).toBe('1234567893');
++  expect(ssrDisabled).toBe(true);
++  act(() => (root as Root).unmount());
++});
++
++it('sign-in link: a typed address is kept, the button is enabled, and that address is the one sent', async () => {
++  const { container, root, field } = await typeBeforeHydration(<LinkRequestForm />, { 'link-email': 'link-early@x.invalid' });
++  const send = screen.getByRole('button', { name: 'Email me a sign-in link' }) as HTMLButtonElement;
++  expect(send.disabled).toBe(false);
++  await act(async () => { fireEvent.submit(container.querySelector('form') as HTMLFormElement); });
++  expect(posts).toEqual([{ url: '/api/auth/link', body: { email: 'link-early@x.invalid' } }]);
++  await waitFor(() => expect(screen.getByText('Check your inbox')).toBeTruthy());
++  expect(field('link-email').value).toBe('link-early@x.invalid');   // survived the re-renders
++  act(() => root.unmount());
++});
+diff --git a/src/app/login/LoginPageContent.tsx b/src/app/login/LoginPageContent.tsx
+index e94f15d..1697fce 100644
+--- a/src/app/login/LoginPageContent.tsx
++++ b/src/app/login/LoginPageContent.tsx
+@@ -1,6 +1,6 @@
+ "use client";
+ 
+-import { useState } from "react";
++import { useEffect, useRef, useState } from "react";
+ import Link from "next/link";
+ import { useRouter } from "next/navigation";
+ import { Loader2 } from "lucide-react";
+@@ -25,6 +25,15 @@ export function LoginPageContent({ sessionExpired, continueHandoff = false }: {
+   const [error, setError] = useState<{ title: string; body?: string } | null>(null);
+   const [loading, setLoading] = useState(false);
+ 
++  // F-Q4-001: what was typed or filled before the page finished loading is in the fields but never reached this state,
++  // so Sign in stayed disabled and the next re-render (e.g. Show password) wiped it. Adopt it once React owns the fields.
++  const emailRef = useRef<HTMLInputElement>(null);
++  const passwordRef = useRef<HTMLInputElement>(null);
++  useEffect(() => {
++    if (emailRef.current?.value) setEmail(emailRef.current.value);
++    if (passwordRef.current?.value) setPassword(passwordRef.current.value);
++  }, []);
++
+   const canSubmit = email.trim().length > 0 && password.length > 0 && !loading;
+ 
+   async function onSubmit(e: React.FormEvent) {
+@@ -72,6 +81,7 @@ export function LoginPageContent({ sessionExpired, continueHandoff = false }: {
+ 
+       <form onSubmit={onSubmit} noValidate className="mt-6 space-y-4 border border-border bg-card p-4 sm:p-5">
+         <TextField
++          ref={emailRef}
+           id="email"
+           type="email"
+           autoComplete="email"
+@@ -81,6 +91,7 @@ export function LoginPageContent({ sessionExpired, continueHandoff = false }: {
+           aria-invalid={error ? true : undefined}
+         />
+         <PasswordField
++          ref={passwordRef}
+           id="password"
+           autoComplete="current-password"
+           label="Password"
+diff --git a/src/components/auth/LinkRequestForm.tsx b/src/components/auth/LinkRequestForm.tsx
+index 6954d10..5d73bb7 100644
+--- a/src/components/auth/LinkRequestForm.tsx
++++ b/src/components/auth/LinkRequestForm.tsx
+@@ -1,7 +1,7 @@
+ "use client";
+ 
+ // APBM007A — "email me a sign-in link". The answer is deliberately the same for every address.
+-import { useState } from "react";
++import { useEffect, useRef, useState } from "react";
+ import { Alert } from "@/components/portal/Alert";
+ import { TextField } from "@/components/portal/FormField";
+ import { Button } from "@/components/ui/button";
+@@ -9,6 +9,12 @@ import { Button } from "@/components/ui/button";
+ export function LinkRequestForm() {
+   const [email, setEmail] = useState("");
+   const [state, setState] = useState<"idle" | "sending" | "sent" | "slow" | "error">("idle");
++  // F-Q4-001: an address typed before the page finished loading never reached this state (button stayed disabled, an
++  // empty address was sent). Adopt what the field holds once React owns it.
++  const emailRef = useRef<HTMLInputElement>(null);
++  useEffect(() => {
++    if (emailRef.current?.value) setEmail(emailRef.current.value);
++  }, []);
+ 
+   async function onSubmit(e: React.FormEvent) {
+     e.preventDefault();
+@@ -19,7 +25,7 @@ export function LinkRequestForm() {
+ 
+   return (
+     <form onSubmit={onSubmit} noValidate className="space-y-4 border border-border bg-card p-4 sm:p-5" data-testid="link-request-form">
+-      <TextField id="link-email" type="email" autoComplete="email" label="Email for a sign-in link" value={email} onValue={setEmail} />
++      <TextField ref={emailRef} id="link-email" type="email" autoComplete="email" label="Email for a sign-in link" value={email} onValue={setEmail} />
+       <Button type="submit" variant="outline" className="w-full" disabled={state === "sending" || email.trim().length === 0}>
+         {state === "sending" ? "Sending…" : "Email me a sign-in link"}
+       </Button>
+diff --git a/src/components/portal/account/AddStoreFlow.tsx b/src/components/portal/account/AddStoreFlow.tsx
+index 22733ba..46626fc 100644
+--- a/src/components/portal/account/AddStoreFlow.tsx
++++ b/src/components/portal/account/AddStoreFlow.tsx
+@@ -2,7 +2,7 @@
+ // APBM-007B — paid Add Store (owner). Server quote → explicit three-part consent → durable operation → payment status.
+ // The browser never reports a payment result: it only asks the server for the operation's state. The provider-hosted
+ // payment page is offered only when the server says that exact invoice needs the owner (e.g. bank authentication).
+-import { useEffect, useRef, useState } from "react";
++import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+ import Link from "next/link";
+ import { Button } from "@/components/ui/button";
+ import { Input } from "@/components/ui/input";
+@@ -22,6 +22,7 @@ async function post<T>(url: string, body: unknown): Promise<{ ok: true; data: T
+   return { ok: false, message: json?.message ?? "That did not work. Nothing was charged.", fieldErrors: json?.fieldErrors };
+ }
+ const newIntent = () => `add_${crypto.randomUUID().replace(/-/g, "")}`;
++const noSubscribe = () => () => {};   // useSyncExternalStore: false on the server and while hydrating, true once React owns the page
+ 
+ export function AddStoreFlow() {
+   const [storeName, setStoreName] = useState(""); const [npi, setNpi] = useState(""); const [ncpdp, setNcpdp] = useState("");
+@@ -32,6 +33,17 @@ export function AddStoreFlow() {
+   const [busy, setBusy] = useState(false);
+   const intent = useRef<string | null>(null);   // one intent per confirmation: a double click or retry resumes, never charges twice
+ 
++  // F-Q4-001 (round 2 extension): details typed or filled before the page finished loading never reached this state, and
++  // the next re-render wiped them. Adopt what the fields hold once React owns them (with the same digit rules as typing);
++  // "See the price" stays disabled until then, so an early click cannot become a native form submission.
++  const nameRef = useRef<HTMLInputElement>(null); const npiRef = useRef<HTMLInputElement>(null); const ncpdpRef = useRef<HTMLInputElement>(null);
++  const hydrated = useSyncExternalStore(noSubscribe, () => true, () => false);
++  useEffect(() => {
++    if (nameRef.current?.value) setStoreName(nameRef.current.value);
++    if (npiRef.current?.value) setNpi(npiRef.current.value.replace(/\D/g, "").slice(0, 10));
++    if (ncpdpRef.current?.value) setNcpdp(ncpdpRef.current.value.replace(/\D/g, "").slice(0, 7));
++  }, []);
++
+   const getQuote = async () => {
+     setBusy(true); setError(null);
+     const r = await post<Quote>("/api/stores/add/quote", { storeName, npi, ...(ncpdp ? { ncpdp } : {}) });
+@@ -63,10 +75,10 @@ export function AddStoreFlow() {
+ 
+       {!quote && !status && (
+         <form className="mt-6 space-y-4 border border-border bg-card p-4 sm:p-5" onSubmit={(e) => { e.preventDefault(); void getQuote(); }} data-testid="add-store-form">
+-          <div className="space-y-1"><Label htmlFor="sn">Pharmacy name</Label><Input id="sn" value={storeName} onChange={(e) => setStoreName(e.target.value)} required maxLength={200} aria-invalid={!!error?.fieldErrors?.storeName} />{error?.fieldErrors?.storeName && <p className="text-sm text-destructive">{error.fieldErrors.storeName}</p>}</div>
+-          <div className="space-y-1"><Label htmlFor="npi">NPI</Label><Input id="npi" inputMode="numeric" value={npi} onChange={(e) => setNpi(e.target.value.replace(/\D/g, "").slice(0, 10))} required aria-invalid={!!error?.fieldErrors?.npi} />{error?.fieldErrors?.npi && <p className="text-sm text-destructive">{error.fieldErrors.npi}</p>}</div>
+-          <div className="space-y-1"><Label htmlFor="ncpdp">NCPDP (optional)</Label><Input id="ncpdp" inputMode="numeric" value={ncpdp} onChange={(e) => setNcpdp(e.target.value.replace(/\D/g, "").slice(0, 7))} /></div>
+-          <Button type="submit" disabled={busy}>See the price</Button>
++          <div className="space-y-1"><Label htmlFor="sn">Pharmacy name</Label><Input ref={nameRef} id="sn" value={storeName} onChange={(e) => setStoreName(e.target.value)} required maxLength={200} aria-invalid={!!error?.fieldErrors?.storeName} />{error?.fieldErrors?.storeName && <p className="text-sm text-destructive">{error.fieldErrors.storeName}</p>}</div>
++          <div className="space-y-1"><Label htmlFor="npi">NPI</Label><Input ref={npiRef} id="npi" inputMode="numeric" value={npi} onChange={(e) => setNpi(e.target.value.replace(/\D/g, "").slice(0, 10))} required aria-invalid={!!error?.fieldErrors?.npi} />{error?.fieldErrors?.npi && <p className="text-sm text-destructive">{error.fieldErrors.npi}</p>}</div>
++          <div className="space-y-1"><Label htmlFor="ncpdp">NCPDP (optional)</Label><Input ref={ncpdpRef} id="ncpdp" inputMode="numeric" value={ncpdp} onChange={(e) => setNcpdp(e.target.value.replace(/\D/g, "").slice(0, 7))} /></div>
++          <Button type="submit" disabled={busy || !hydrated}>See the price</Button>
+         </form>
+       )}
+ 

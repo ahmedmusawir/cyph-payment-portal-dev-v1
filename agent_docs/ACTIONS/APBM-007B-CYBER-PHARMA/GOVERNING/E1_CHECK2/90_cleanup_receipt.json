@@ -1,0 +1,52 @@
+{
+  "run": "E1_CHECK2_20261116_204015",
+  "at": "2026-11-16T14:43:43.231Z",
+  "subscriptions": [
+    {
+      "who": "P",
+      "id": "sub_1UcR66GnEQDyu3RRbtfZl3bQ",
+      "status_after": "canceled",
+      "error": null
+    },
+    {
+      "who": "H",
+      "id": "sub_1UcR7EGnEQDyu3RR9Y4ohA65",
+      "status_after": "canceled",
+      "error": null
+    }
+  ],
+  "customers": [
+    {
+      "who": "P",
+      "id": "cus_VdiXxr2SFQ1b5c",
+      "deleted": true,
+      "error": null
+    },
+    {
+      "who": "H",
+      "id": "cus_VdiYimzfy0FUmc",
+      "deleted": true,
+      "error": null
+    }
+  ],
+  "remaining": [],
+  "marker_search_after": {
+    "customers_still_found": 2,
+    "note": "search is eventually consistent; direct retrieval above is authoritative"
+  },
+  "counters_final": {
+    "customer_create": 2,
+    "payment_method_attach": 3,
+    "default_card_update": 3,
+    "payment_attempt": 5,
+    "subscription_create": 2,
+    "invoice_preview": 3,
+    "pending_update_call": 2,
+    "hosted_submission": 1,
+    "cleanup_subscription_cancel": 2,
+    "cleanup_customer_delete": 2
+  },
+  "attempted_charge_cents": 34500,
+  "elapsed_minutes_since_first_mutation": 2.4,
+  "result": "COMPLETE"
+}

@@ -1,0 +1,19 @@
+{
+ "default9": "APPROVED by Director 17 November 2026: same-owner paid re-add restores original record/history after payment; buyer still denied",
+ "required_original": "FRIDAY_REVIEW_APBM007B_PRE_E2_DRAFT_v0_1_2026-11-16.md",
+ "required_sha256": "37a0993a700264f8a1efab02c149c67e5bc0c1760abe47c8e6b73b5ecea50d48",
+ "required_original_status": "SATISFIED by Director ruling 17 Nov 2026: the hash-verified as-received attachment satisfies R-3 (as received + one restored final newline 0x0A = full SHA-256 37a0993a700264f8a1efab02c149c67e5bc0c1760abe47c8e6b73b5ecea50d48; EVIDENCE/E2/r07_v0_1_review_r3_verification.json). The original-named file was not created.",
+ "friday_successor_diff_confirmation": "RECEIVED 17 Nov 2026 \u2014 DIFF CONFIRMED (BP-01..BP-09 applied as written). Retained: GOVERNING/FRIDAY_DIFF_CONFIRMATION_APBM007B_BUILD_PACK_v1_0_2026-11-17_AS_RECEIVED.txt (sha256 8ca01156d5f088ed4bd2eeb17a4805ea2f9cab511f04db146d589728badea7da)",
+ "E2": "RELEASED by Tony 16 November 2026 (APBM_JOURNAL.md)",
+ "installed_successor_archive_sha256": "08d5448b60d2410d08f25c5addfc73c842971db4a0bac9242c4a7d8d6ac31f01 = Friday \"pack as used\"; 123 members, 122/122 indexed files and 12/12 contract files match (EVIDENCE/E2/r07_friday_confirmation_reconciliation.json)",
+ "migration_0069": "APPROVED by Director 17 Nov 2026",
+ "dev_apply": "APPLIED 17 Nov 2026 under the Director DEV-apply release (0061-0069; ledger 69 = manifest; deployment identity bound to DEV)",
+ "engineering_status": "ENGINEERING COMPLETE \u2014 AWAITING QA BRANCH (17 Nov 2026, addendum r06); automatic webhook delivery untested, carried to QA planning and staging verification",
+ "friday_records_R1_R3": {
+  "R-1 default 9": "RECORDED (APBM_RULINGS.md 17 Nov: approved; implemented in 0069; proven in O-1 decision-9 proof)",
+  "R-2 E2 release": "RECORDED (APBM_JOURNAL.md 16 Nov verbatim: executor Claudy, both repos on apbm-007b, envelope authorized; baselines recorded in preflight and APBM_STATE.md)",
+  "R-3 diff confirmation": "RECORDED in GOVERNING (as received)",
+  "R-3 original v0.1 review": "SATISFIED by Director ruling 17 Nov 2026: the hash-verified as-received attachment satisfies R-3 (as received + one restored final newline 0x0A = full SHA-256 37a0993a700264f8a1efab02c149c67e5bc0c1760abe47c8e6b73b5ecea50d48; EVIDENCE/E2/r07_v0_1_review_r3_verification.json)"
+ },
+ "required_original_history": "Original file never supplied to Engineering (MISSING since intake; not reconstructed or manufactured). Retained as-received pasted attachment: GOVERNING/FRIDAY_REVIEW_APBM007B_PRE_E2_DRAFT_v0_1_2026-11-16_AS_RECEIVED.txt"
+}

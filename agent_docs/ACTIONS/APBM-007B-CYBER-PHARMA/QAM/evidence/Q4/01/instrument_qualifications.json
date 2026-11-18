@@ -1,0 +1,43 @@
+{
+  "runbook_lookup": {
+    "first_run": "runs/q4-support-runbook_receipt.json",
+    "error": "QA lookup used seller_account_id; actual column source_account_id; fixed in QA helper only; failed attempt kept",
+    "provider_effects": 0
+  },
+  "S1_import": {
+    "first_run": "runs/q4-inflight-s1_receipt.json",
+    "error": "QA SDK dependency resolver mistakenly resolved ../ledger from disposable package; fixed using import.meta.url",
+    "before_test_effects": true,
+    "Visa_preparation_reservation_preserved": true
+  },
+  "delivery_lane": {
+    "affected_cases": [
+      "real_on_time_delayed_within",
+      "clock_on_time_prompt",
+      "clock_on_time_delayed_within",
+      "clock_on_time_processed_after_deadline",
+      "clock_late_prompt",
+      "clock_late_after_crash"
+    ],
+    "raw_labels_preserved": true,
+    "derived_labels_corrected": true,
+    "no_manual_positive_signing": true,
+    "first_real_prompt_automatic_activation_remains_independently_proven": true
+  },
+  "APA": {
+    "original_empty_discount_arrays": "Not sufficient proof of active earned benefit; kept as qualification",
+    "new_fresh_evidence": "reg_APA_active_discount and reg_midperiod_APA, actual active provider discount before/after; QA fixture grant explicitly disclosed, no new promotion resource or product redemption claim"
+  },
+  "counter_reset": false,
+  "final_status_parser": {
+    "first_attempt": "QA helper trim removed leading porcelain status whitespace and falsely reported outside-QAM path",
+    "resolution": "Preserve exact porcelain line indentation; reread both HEADs/branches/paths; candidates unchanged and no non-QAM changes",
+    "effects": 0,
+    "product_or_contract_change": false
+  },
+  "interrupted_real_race": {
+    "case": "real_paid_void_race",
+    "qualification": "No payment attempted before privacy interruption. Resume worker correctly voided/expired it; generic settle helper compared never-executed paid-race expectation and emitted FAIL. Preserve raw failure as attempt/instrument qualification, not a product defect. Fresh consent case real_paid_void_race_final uses a new full real30minute wait.",
+    "deadline_edited": false
+  }
+}

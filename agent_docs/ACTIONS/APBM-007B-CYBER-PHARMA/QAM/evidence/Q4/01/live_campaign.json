@@ -1,0 +1,2999 @@
+{
+  "fixtures": {
+    "MEMBER": {
+      "role": "MEMBER",
+      "account": "baaa602f-7c79-49a6-bd13-aa1e2cf8051e",
+      "customer": "cus_Ve0hHqFExjMSdp",
+      "subscription": "sub_1UcinNGnEQDyu3RRRIn3qrzB",
+      "clock": null,
+      "context_enabled": false,
+      "visa": "pm_1UcinKGnEQDyu3RR44biHqWb",
+      "authpm": "pm_1Ucy19GnEQDyu3RR0wpPYoXl",
+      "card_selected": true,
+      "prepared": true
+    },
+    "FOREIGN_OWNER": {
+      "role": "FOREIGN_OWNER",
+      "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+      "customer": "cus_Ve0Z5kYb2AIQYm",
+      "subscription": "sub_1UciXtGnEQDyu3RR69YGmVyL",
+      "clock": null,
+      "context_enabled": false,
+      "visa": "pm_1UciXsGnEQDyu3RRQG1alGK8",
+      "authpm": "pm_1Ucy1BGnEQDyu3RRM4sWYIwx",
+      "card_selected": true,
+      "prepared": true
+    },
+    "NEW_MEMBER": {
+      "role": "NEW_MEMBER",
+      "account": "82a2d611-4ed4-402f-8082-531749b2a523",
+      "customer": "cus_Ve2PY4BIOkhh4R",
+      "subscription": "sub_1UckKtGnEQDyu3RRzSsOMNyj",
+      "clock": null,
+      "context_enabled": false,
+      "visa": "pm_1UckKqGnEQDyu3RRg5HbWof2",
+      "authpm": "pm_1Ucy1DGnEQDyu3RRT3UX7TDn",
+      "card_selected": true,
+      "prepared": true
+    },
+    "NEW_ADMIN": {
+      "role": "NEW_ADMIN",
+      "customer": "cus_VeGY4NupjibtEo",
+      "visa": "pm_1Ucy1EGnEQDyu3RRMAM24qBy",
+      "subscription": "sub_1Ucy1GGnEQDyu3RRvzi7OUrP",
+      "account": "132f1534-c86e-423b-b1df-07f171793dcf",
+      "clock": null,
+      "context_enabled": false,
+      "baseline_store": "f16bbfaf-5200-4260-99b3-e8b3a2906065",
+      "authpm": "pm_1Ucy1IGnEQDyu3RRW7tPJjV1",
+      "card_selected": true,
+      "prepared": true
+    },
+    "STORE_ADMIN": {
+      "role": "STORE_ADMIN",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "customer": "cus_Ve0v0K7v4FPDJq",
+      "subscription": "sub_1UcitmGnEQDyu3RRftoi8saR",
+      "clock": "clock_1UcitkGnEQDyu3RR1xFBf7ZT",
+      "context_enabled": true,
+      "visa": "pm_1UcitlGnEQDyu3RRmEryphZP",
+      "authpm": "pm_1Ucy1KGnEQDyu3RRLghisGfB",
+      "card_selected": true,
+      "prepared": true,
+      "declinepm": "pm_1Ucy8oGnEQDyu3RRE9wH7ynw"
+    },
+    "OWNER_B": {
+      "role": "OWNER_B",
+      "account": "2ecdcb60-633d-4b6a-a4ff-462399a00152",
+      "customer": "cus_VdzbotJE2rHxEt",
+      "subscription": "sub_1Uchc8GnEQDyu3RR4dPvjODp",
+      "clock": "clock_1UchbzGnEQDyu3RRdTw6kZ0j",
+      "context_enabled": true,
+      "discounts_before": [],
+      "provider_default_before": "pm_1Uchc6GnEQDyu3RR9EJgXbxg",
+      "active_discount_ids_before": [
+        "di_1UcyB9GnEQDyu3RR1IW7Kr8Z"
+      ],
+      "active_promotion_id": "promo_1UavqfGnEQDyu3RRZMN3whuY"
+    }
+  },
+  "cases": {
+    "real_on_time_prompt": {
+      "name": "real_on_time_prompt",
+      "role": "MEMBER",
+      "mode": "real_time_no_test_clock",
+      "account": "baaa602f-7c79-49a6-bd13-aa1e2cf8051e",
+      "period_start": 1794908119,
+      "period_end": 1797500119,
+      "calculated_at": 1794966730,
+      "expected_cents": 4789,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T01:52:10.720Z",
+      "quote_created_at": "2026-11-18T01:52:13.049673+00:00",
+      "independent_timestamp_source": "Stored quote creation timestamp, real clock; provider period timestamps; no application price helper",
+      "expected_written_before_confirm": "2026-11-18T01:52:13.550Z",
+      "quote_cents": 4789,
+      "quote_matches_independent": true,
+      "operation": "1528ffb5-9e5f-4ddb-b134-6ec283578a13",
+      "invoice": "in_1Ucy2lGnEQDyu3RRLz3g3mKB",
+      "deadline": "2026-11-18T02:22:14.307212+00:00",
+      "amount": 4789,
+      "target_quantity": 2,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T01:52:23.994Z",
+      "paid": {
+        "status": "paid",
+        "amount_paid": 4789,
+        "paid_at": 1794966744,
+        "wall": "2026-11-18T01:52:25.813Z"
+      },
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2026-11-18T01:52:24+00:00",
+        "deadline": "2026-11-18T02:22:14.307212+00:00",
+        "business_id": "d0d908f8-997c-4739-b5e7-596371920054",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4789,
+        "provider_quantity": 2,
+        "target_quantity": 2,
+        "observed_wall": "2026-11-18T01:52:30.513Z",
+        "delivery_lane": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "result": "PASS"
+    },
+    "real_on_time_delayed_within": {
+      "name": "real_on_time_delayed_within",
+      "role": "FOREIGN_OWNER",
+      "mode": "real_time_no_test_clock",
+      "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+      "period_start": 1794907161,
+      "period_end": 1797499161,
+      "calculated_at": 1794966750,
+      "expected_cents": 4787,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T01:52:30.833Z",
+      "quote_created_at": "2026-11-18T01:52:31.758285+00:00",
+      "independent_timestamp_source": "Stored quote creation timestamp, real clock; provider period timestamps; no application price helper",
+      "expected_written_before_confirm": "2026-11-18T01:52:31.912Z",
+      "quote_cents": 4787,
+      "quote_matches_independent": true,
+      "operation": "2214085d-fd46-4d4e-965c-5c142bb51ba1",
+      "invoice": "in_1Ucy32GnEQDyu3RRcTkl3Ril",
+      "deadline": "2026-11-18T02:22:32.272755+00:00",
+      "amount": 4787,
+      "target_quantity": 4,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T01:52:39.040Z",
+      "paid": {
+        "status": "paid",
+        "amount_paid": 4787,
+        "paid_at": 1794966775,
+        "wall": "2026-11-18T01:52:57.023Z"
+      },
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2026-11-18T01:52:55+00:00",
+        "deadline": "2026-11-18T02:22:32.272755+00:00",
+        "business_id": "be9d6dba-b1cd-4055-8400-e2c6e67744a8",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4787,
+        "provider_quantity": 4,
+        "target_quantity": 4,
+        "observed_wall": "2026-11-18T01:53:18.095Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "result": "PASS"
+    },
+    "real_on_time_processed_after_deadline": {
+      "name": "real_on_time_processed_after_deadline",
+      "role": "NEW_MEMBER",
+      "mode": "real_time_no_test_clock",
+      "account": "82a2d611-4ed4-402f-8082-531749b2a523",
+      "period_start": 1794914041,
+      "period_end": 1797506041,
+      "calculated_at": 1794966759,
+      "expected_cents": 4800,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T01:52:39.362Z",
+      "quote_created_at": "2026-11-18T01:52:40.382465+00:00",
+      "independent_timestamp_source": "Stored quote creation timestamp, real clock; provider period timestamps; no application price helper",
+      "expected_written_before_confirm": "2026-11-18T01:52:40.481Z",
+      "quote_cents": 4800,
+      "quote_matches_independent": true,
+      "operation": "1ded9052-5f79-4f88-aad3-03c1be776d8a",
+      "invoice": "in_1Ucy3BGnEQDyu3RROu5Uei9n",
+      "deadline": "2026-11-18T02:22:40.755773+00:00",
+      "amount": 4800,
+      "target_quantity": 2,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T01:52:47.160Z",
+      "paid": {
+        "status": "paid",
+        "amount_paid": 4800,
+        "paid_at": 1794966777,
+        "wall": "2026-11-18T01:52:58.800Z"
+      },
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2026-11-18T01:52:57+00:00",
+        "deadline": "2026-11-18T02:22:40.755773+00:00",
+        "business_id": "98c57048-7ed5-4ed3-888f-140a89b2bd96",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4800,
+        "provider_quantity": 2,
+        "target_quantity": 2,
+        "observed_wall": "2026-11-18T02:22:58.934Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "result": "PASS"
+    },
+    "real_unpaid_expiry": {
+      "name": "real_unpaid_expiry",
+      "role": "NEW_ADMIN",
+      "mode": "real_time_no_test_clock",
+      "account": "132f1534-c86e-423b-b1df-07f171793dcf",
+      "period_start": 1794966641,
+      "period_end": 1797558641,
+      "calculated_at": 1794966767,
+      "expected_cents": 4900,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "expired_unpaid/void/zero paid/no owner action",
+      "expected_written_at": "2026-11-18T01:52:47.824Z",
+      "quote_created_at": "2026-11-18T01:52:48.694264+00:00",
+      "independent_timestamp_source": "Stored quote creation timestamp, real clock; provider period timestamps; no application price helper",
+      "expected_written_before_confirm": "2026-11-18T01:52:48.809Z",
+      "quote_cents": 4900,
+      "quote_matches_independent": true,
+      "operation": "073d7b1d-658c-4bdd-a474-d5ba4eab64dc",
+      "invoice": "in_1Ucy3JGnEQDyu3RRKsX2jyMZ",
+      "deadline": "2026-11-18T02:22:49.098041+00:00",
+      "amount": 4900,
+      "target_quantity": 2,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T01:52:55.392Z",
+      "final": {
+        "http": 200,
+        "state": "expired_unpaid",
+        "code": "deadline_passed",
+        "paid_at": null,
+        "deadline": "2026-11-18T02:22:49.098041+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "void",
+        "amount_paid": 0,
+        "provider_quantity": 1,
+        "target_quantity": 2,
+        "observed_wall": "2026-11-18T02:23:22.730Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "result": "PASS"
+    },
+    "clock_on_time_prompt": {
+      "name": "clock_on_time_prompt",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1800182513,
+      "expected_cents": 4893,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T01:52:59.387Z",
+      "quote_cents": 4893,
+      "quote_matches_independent": true,
+      "operation": "a7b704d1-b186-4d59-8c61-604334441f30",
+      "invoice": "in_1Ucy3VGnEQDyu3RRFhrnRROV",
+      "deadline": "2027-01-17T11:11:53+00:00",
+      "amount": 4893,
+      "target_quantity": 2,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T01:53:07.547Z",
+      "paid": {
+        "status": "paid",
+        "amount_paid": 4893,
+        "paid_at": 1800182513,
+        "wall": "2026-11-18T01:53:09.271Z"
+      },
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-01-17T10:41:53+00:00",
+        "deadline": "2027-01-17T11:11:53+00:00",
+        "business_id": "1c3aa81d-1f62-489b-8f95-2afc2eb4abc0",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4893,
+        "provider_quantity": 2,
+        "target_quantity": 2,
+        "observed_wall": "2026-11-18T01:53:13.594Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "result": "PASS"
+    },
+    "clock_on_time_delayed_within": {
+      "name": "clock_on_time_delayed_within",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1800182513,
+      "expected_cents": 4893,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T01:53:18.682Z",
+      "quote_cents": 4893,
+      "quote_matches_independent": true,
+      "operation": "abec5dd8-eaaf-4c37-8545-11c376e18925",
+      "invoice": "in_1Ucy3qGnEQDyu3RRe7Fl3O7n",
+      "deadline": "2027-01-17T11:11:53+00:00",
+      "amount": 4893,
+      "target_quantity": 3,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T01:53:28.246Z",
+      "paid": {
+        "status": "paid",
+        "amount_paid": 4893,
+        "paid_at": 1800182513,
+        "wall": "2026-11-18T01:53:30.274Z"
+      },
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-01-17T10:41:53+00:00",
+        "deadline": "2027-01-17T11:11:53+00:00",
+        "business_id": "4b7fd52a-4d77-4d77-b341-75d987e81a1d",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4893,
+        "provider_quantity": 3,
+        "target_quantity": 3,
+        "observed_wall": "2026-11-18T01:53:37.794Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "result": "PASS"
+    },
+    "clock_on_time_processed_after_deadline": {
+      "name": "clock_on_time_processed_after_deadline",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1800183713,
+      "expected_cents": 4891,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T01:53:38.388Z",
+      "quote_cents": 4891,
+      "quote_matches_independent": true,
+      "operation": "a971818c-2afc-4d8c-8fa7-fecdfbe56581",
+      "invoice": "in_1Ucy48GnEQDyu3RRYLLsq7sK",
+      "deadline": "2027-01-17T11:31:53+00:00",
+      "amount": 4891,
+      "target_quantity": 4,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T01:53:46.766Z",
+      "paid": {
+        "status": "paid",
+        "amount_paid": 4891,
+        "paid_at": 1800183713,
+        "wall": "2026-11-18T01:53:48.635Z"
+      },
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-01-17T11:01:53+00:00",
+        "deadline": "2027-01-17T11:31:53+00:00",
+        "business_id": "58af1229-7ed8-4016-a262-e66849d46a67",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4891,
+        "provider_quantity": 4,
+        "target_quantity": 4,
+        "observed_wall": "2026-11-18T01:53:55.914Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "result": "PASS",
+      "repeated_activation": {
+        "same_business": true,
+        "final_state": "activated"
+      }
+    },
+    "clock_late_prompt": {
+      "name": "clock_late_prompt",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1800185515,
+      "expected_cents": 4888,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "attention/no store/no quantity grant",
+      "expected_written_at": "2026-11-18T01:53:56.995Z",
+      "quote_cents": 4888,
+      "quote_matches_independent": true,
+      "operation": "5b9b5014-478c-47b0-916e-00254a674e51",
+      "invoice": "in_1Ucy4QGnEQDyu3RRPwKILfNd",
+      "deadline": "2027-01-17T12:01:55+00:00",
+      "amount": 4888,
+      "target_quantity": 5,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T01:54:05.480Z",
+      "paid": {
+        "status": "paid",
+        "amount_paid": 4888,
+        "paid_at": 1800187317,
+        "wall": "2026-11-18T01:54:09.407Z"
+      },
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2027-01-17T12:01:57+00:00",
+        "deadline": "2027-01-17T12:01:55+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 4888,
+        "provider_quantity": 4,
+        "target_quantity": 5,
+        "observed_wall": "2026-11-18T01:54:11.453Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "result": "PASS",
+      "resume": {
+        "without_reconfirmation": "refused",
+        "dry": "planned",
+        "apply": "applied",
+        "final": "activated",
+        "owner_reconfirmation": "Controlled QA owner reconfirmation recorded before apply; Director Q4scope authorizes the test"
+      }
+    },
+    "clock_late_after_crash": {
+      "name": "clock_late_after_crash",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1800187317,
+      "expected_cents": 4885,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "attention/no store/no quantity grant",
+      "expected_written_at": "2026-11-18T01:54:15.062Z",
+      "quote_cents": 4885,
+      "quote_matches_independent": true,
+      "operation": "9f6e2865-f0f5-4858-8041-43506caa2c9f",
+      "invoice": "in_1Ucy4mGnEQDyu3RR6dCAw1vH",
+      "deadline": "2027-01-17T12:31:57+00:00",
+      "amount": 4885,
+      "target_quantity": 6,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T01:54:26.684Z",
+      "paid": {
+        "status": "paid",
+        "amount_paid": 4885,
+        "paid_at": 1800189119,
+        "wall": "2026-11-18T01:54:31.792Z"
+      },
+      "actual_crash": {
+        "paid_while_owned_process_down": true,
+        "at": "2026-11-18T01:54:31.793Z"
+      },
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2027-01-17T12:31:59+00:00",
+        "deadline": "2027-01-17T12:31:57+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 4885,
+        "provider_quantity": 5,
+        "target_quantity": 6,
+        "observed_wall": "2026-11-18T01:54:36.212Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "result": "PASS",
+      "refund_close": {
+        "natural_state_before": "attention",
+        "no_forced_precondition": true,
+        "missing_proof": "refused",
+        "refund_status": "succeeded",
+        "refund_cents": 4885,
+        "invoice_paid_cents": 4885,
+        "close": "applied",
+        "repeat": "applied",
+        "state": "closed_refunded_externally",
+        "store": null,
+        "holds": [
+          {
+            "status": "released"
+          }
+        ],
+        "result": "PASS"
+      }
+    },
+    "reg_ordinary": {
+      "name": "reg_ordinary",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1800189119,
+      "expected_cents": 4881,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "activated",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T01:58:01.266Z",
+      "quote_cents": 4881,
+      "quote_matches_independent": true,
+      "operation": "e6d2a6ab-7e39-4e3a-b160-5ada0c6d052f",
+      "invoice": "in_1Ucy8OGnEQDyu3RRL9M75gHu",
+      "deadline": "2027-01-17T13:01:59+00:00",
+      "amount": 4881,
+      "target_quantity": 6,
+      "initial_state": "activated",
+      "created_wall": "2026-11-18T01:58:12.704Z",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-01-17T12:31:59+00:00",
+        "deadline": "2027-01-17T13:01:59+00:00",
+        "business_id": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4881,
+        "provider_quantity": 6,
+        "target_quantity": 6,
+        "observed_wall": "2026-11-18T01:58:13.887Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "result": "PASS"
+    },
+    "reg_APA": {
+      "name": "reg_APA",
+      "role": "OWNER_B",
+      "mode": "test_clock",
+      "account": "2ecdcb60-633d-4b6a-a4ff-462399a00152",
+      "period_start": 1797495569,
+      "period_end": 1800173969,
+      "calculated_at": 1798113029,
+      "expected_cents": 3770,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "activated",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T01:58:15.959Z",
+      "quote_cents": 3770,
+      "quote_matches_independent": true,
+      "operation": "b22365a6-2ac2-42a4-bf62-56effdc21748",
+      "invoice": "in_1Ucy8eGnEQDyu3RRsVEh4ErN",
+      "deadline": "2026-12-24T12:20:29+00:00",
+      "amount": 3770,
+      "target_quantity": 3,
+      "initial_state": "activated",
+      "created_wall": "2026-11-18T01:58:29.035Z",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2026-12-24T11:50:29+00:00",
+        "deadline": "2026-12-24T12:20:29+00:00",
+        "business_id": "e5311571-71ef-4667-a0e1-c79a81898dfd",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 3770,
+        "provider_quantity": 3,
+        "target_quantity": 3,
+        "observed_wall": "2026-11-18T01:58:30.329Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "result": "PASS",
+      "discount_check": {
+        "before": [],
+        "after": [],
+        "preserved": true,
+        "new_store_basis_cents": 4900,
+        "actual_invoice_cents": 3770,
+        "expected_prorated_cents": 3770
+      }
+    },
+    "reg_unpaid_decline_abandon": {
+      "name": "reg_unpaid_decline_abandon",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1800189119,
+      "expected_cents": 4881,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "expired_unpaid/void/zero paid/no owner action",
+      "expected_written_at": "2026-11-18T01:58:32.233Z",
+      "quote_cents": 4881,
+      "quote_matches_independent": true,
+      "operation": "deb29749-1d05-44a3-9583-b73b3d4e7a82",
+      "invoice": "in_1Ucy8sGnEQDyu3RRPtKIZ1Fb",
+      "deadline": "2027-01-17T13:01:59+00:00",
+      "amount": 4881,
+      "target_quantity": 7,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T01:58:40.073Z",
+      "final": {
+        "http": 200,
+        "state": "expired_unpaid",
+        "code": "abandoned",
+        "paid_at": null,
+        "deadline": "2027-01-17T13:01:59+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "void",
+        "amount_paid": 0,
+        "provider_quantity": 6,
+        "target_quantity": 7,
+        "observed_wall": "2026-11-18T01:58:43.560Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "result": "PASS",
+      "decline": {
+        "before": "payment_pending",
+        "business_before": null,
+        "after": "expired_unpaid",
+        "no_activation": true,
+        "zero_paid": true
+      }
+    },
+    "reg_hosted_3ds_s2": {
+      "name": "reg_hosted_3ds_s2",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1800189119,
+      "expected_cents": 4881,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T01:58:44.540Z",
+      "quote_cents": 4881,
+      "quote_matches_independent": true,
+      "operation": "98d0a3a3-11b1-4b55-aad4-edbe8104f251",
+      "invoice": "in_1Ucy94GnEQDyu3RRLu77al3W",
+      "deadline": "2027-01-17T13:01:59+00:00",
+      "amount": 4881,
+      "target_quantity": 7,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T01:58:52.377Z",
+      "S2": {
+        "before_state": "payment_pending",
+        "quantity_before": 6,
+        "crashed_wall": "2026-11-18T01:58:53.163Z",
+        "challenge_clicked": true,
+        "invoice_status_while_down": "paid",
+        "paid_cents": 4881,
+        "state_while_down": "payment_pending",
+        "stores_while_down": 0,
+        "quantity_while_down": 6,
+        "portal_listening_while_down": false,
+        "result": "PASS"
+      },
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-01-17T12:31:59+00:00",
+        "deadline": "2027-01-17T13:01:59+00:00",
+        "business_id": "48b2237b-9a33-4868-8dd9-f9203f779a1d",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4881,
+        "provider_quantity": 7,
+        "target_quantity": 7,
+        "observed_wall": "2026-11-18T01:59:20.334Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "result": "PASS"
+    },
+    "reg_APA_active_discount": {
+      "name": "reg_APA_active_discount",
+      "role": "OWNER_B",
+      "mode": "test_clock",
+      "account": "2ecdcb60-633d-4b6a-a4ff-462399a00152",
+      "period_start": 1797495569,
+      "period_end": 1800173969,
+      "calculated_at": 1798113029,
+      "expected_cents": 3770,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "activated",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T02:00:56.780Z",
+      "quote_cents": 3770,
+      "quote_matches_independent": true,
+      "operation": "c4fabea4-24cd-4553-a5a0-2744b3af7c01",
+      "invoice": "in_1UcyBHGnEQDyu3RRGixTzhKs",
+      "deadline": "2026-12-24T12:20:29+00:00",
+      "amount": 3770,
+      "target_quantity": 4,
+      "initial_state": "activated",
+      "created_wall": "2026-11-18T02:01:12.125Z",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2026-12-24T11:50:29+00:00",
+        "deadline": "2026-12-24T12:20:29+00:00",
+        "business_id": "1e0ac103-3dbb-43b4-8584-1a34cd11e8b6",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 3770,
+        "provider_quantity": 4,
+        "target_quantity": 4,
+        "observed_wall": "2026-11-18T02:01:13.452Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "result": "PASS",
+      "active_discount_proof": {
+        "fixture_qualification": "Original earned Q2 once-only APA benefit had already expired on this retained subscription before Q4; empty before/after arrays in reg_APA are not proof of an active benefit. Install the existing allowlisted sandbox promotion as explicit Q4 fixture preparation. This is not an Add Store input, product repair, new promotion resource or assertion of product redemption.",
+        "active_discount_ids_before": [
+          "di_1UcyB9GnEQDyu3RR1IW7Kr8Z"
+        ],
+        "active_discount_ids_after": [
+          "di_1UcyB9GnEQDyu3RR1IW7Kr8Z"
+        ],
+        "preserved": true,
+        "new_store_basis_cents": 4900,
+        "expected_cents": 3770,
+        "actual_invoice_paid": 3770,
+        "standalone_discounts": 0,
+        "proration_lines": 0,
+        "customer_balance_created": false,
+        "source": "QA existing sandbox promotion fixture setup; productAddStore sees already-active earned-benefit shape, no new code in Add Store"
+      }
+    },
+    "real_late_prompt": {
+      "name": "real_late_prompt",
+      "role": "MEMBER",
+      "mode": "real_time_no_test_clock",
+      "account": "baaa602f-7c79-49a6-bd13-aa1e2cf8051e",
+      "period_start": 1794908119,
+      "period_end": 1797500119,
+      "calculated_at": 1794967298,
+      "expected_cents": 4788,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "attention/no store/no quantity grant",
+      "expected_written_at": "2026-11-18T02:01:38.111Z",
+      "quote_created_at": "2026-11-18T02:01:39.729418+00:00",
+      "independent_timestamp_source": "Stored quote creation timestamp, real clock; provider period timestamps; no application price helper",
+      "expected_written_before_confirm": "2026-11-18T02:01:40.236Z",
+      "quote_cents": 4788,
+      "quote_matches_independent": true,
+      "operation": "b2ca62af-753e-45a9-8a14-72b5293ac433",
+      "invoice": "in_1UcyBuGnEQDyu3RRZHCLtPOP",
+      "deadline": "2026-11-18T02:31:41.38437+00:00",
+      "amount": 4788,
+      "target_quantity": 3,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T02:01:48.440Z",
+      "paid": {
+        "status": "paid",
+        "amount_paid": 4788,
+        "paid_at": 1794969112,
+        "wall": "2026-11-18T02:31:54.034Z"
+      },
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2026-11-18T02:31:52+00:00",
+        "deadline": "2026-11-18T02:31:41.38437+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 4788,
+        "provider_quantity": 2,
+        "target_quantity": 3,
+        "observed_wall": "2026-11-18T02:31:58.423Z",
+        "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+      },
+      "result": "PASS",
+      "resume": {
+        "without_reconfirmation": "refused",
+        "dry": "planned",
+        "apply": "applied",
+        "final": "activated",
+        "owner_reconfirmation": "Controlled QA owner reconfirmation recorded before apply; Director Q4scope authorizes the test"
+      }
+    },
+    "real_late_after_crash": {
+      "name": "real_late_after_crash",
+      "role": "FOREIGN_OWNER",
+      "mode": "real_time_no_test_clock",
+      "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+      "period_start": 1794907161,
+      "period_end": 1797499161,
+      "calculated_at": 1794967308,
+      "expected_cents": 4786,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "attention/no store/no quantity grant",
+      "expected_written_at": "2026-11-18T02:01:48.751Z",
+      "quote_created_at": "2026-11-18T02:01:49.65529+00:00",
+      "independent_timestamp_source": "Stored quote creation timestamp, real clock; provider period timestamps; no application price helper",
+      "expected_written_before_confirm": "2026-11-18T02:01:49.760Z",
+      "quote_cents": 4786,
+      "quote_matches_independent": true,
+      "operation": "7f9b7583-131c-4f53-bc00-0aeb62e95de6",
+      "invoice": "in_1UcyC2GnEQDyu3RRhF5aVZGx",
+      "deadline": "2026-11-18T02:31:50.102566+00:00",
+      "amount": 4786,
+      "target_quantity": 5,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T02:01:56.751Z",
+      "paid": {
+        "status": "paid",
+        "amount_paid": 4786,
+        "paid_at": 1794969119,
+        "wall": "2026-11-18T02:32:00.625Z"
+      },
+      "actual_crash": {
+        "paid_after_real_deadline_while_owned_process_down": true,
+        "no_test_clock": true,
+        "state_while_down": "payment_pending",
+        "stores_while_down": 0,
+        "quantity_before": 4,
+        "quantity_while_down": 4,
+        "at": "2026-11-18T02:32:01.058Z"
+      },
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2026-11-18T02:31:59+00:00",
+        "deadline": "2026-11-18T02:31:50.102566+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 4786,
+        "provider_quantity": 4,
+        "target_quantity": 5,
+        "observed_wall": "2026-11-18T02:32:05.887Z",
+        "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+      },
+      "result": "PASS"
+    },
+    "reg_midperiod_ordinary": {
+      "name": "reg_midperiod_ordinary",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1801518113,
+      "expected_cents": 2450,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "activated",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T02:09:12.975Z",
+      "quote_cents": 2450,
+      "quote_matches_independent": true,
+      "operation": "9443912f-4620-4215-9f3d-405eb99793a3",
+      "invoice": "in_1UcyJKGnEQDyu3RRXXjkpLtY",
+      "deadline": "2027-02-01T22:11:53+00:00",
+      "amount": 2450,
+      "target_quantity": 8,
+      "initial_state": "activated",
+      "created_wall": "2026-11-18T02:09:32.109Z",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-02-01T21:41:53+00:00",
+        "deadline": "2027-02-01T22:11:53+00:00",
+        "business_id": "ebd4b62a-3795-4a79-90d7-2c02401bfe51",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 2450,
+        "provider_quantity": 8,
+        "target_quantity": 8,
+        "observed_wall": "2026-11-18T02:09:33.422Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "result": "PASS",
+      "midpoint_proof": {
+        "expected_cents": 2450,
+        "actual_paid": 2450,
+        "discount_ids_before": [],
+        "discount_ids_after": [],
+        "active_discount_required": false,
+        "preserved": true,
+        "same_provider_billing_anchor": true
+      }
+    },
+    "reg_midperiod_APA": {
+      "name": "reg_midperiod_APA",
+      "role": "OWNER_B",
+      "mode": "test_clock",
+      "account": "2ecdcb60-633d-4b6a-a4ff-462399a00152",
+      "period_start": 1797495569,
+      "period_end": 1800173969,
+      "calculated_at": 1798834769,
+      "expected_cents": 2450,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "activated",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T02:09:39.854Z",
+      "quote_cents": 2450,
+      "quote_matches_independent": true,
+      "operation": "6c63a9d1-a5e8-4a66-aebb-acb2793821b0",
+      "invoice": "in_1UcyJeGnEQDyu3RR1bA6X9Dk",
+      "deadline": "2027-01-01T20:49:29+00:00",
+      "amount": 2450,
+      "target_quantity": 5,
+      "initial_state": "activated",
+      "created_wall": "2026-11-18T02:09:51.216Z",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-01-01T20:19:29+00:00",
+        "deadline": "2027-01-01T20:49:29+00:00",
+        "business_id": "4847a85f-6c6a-4323-a5e5-70f144344863",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 2450,
+        "provider_quantity": 5,
+        "target_quantity": 5,
+        "observed_wall": "2026-11-18T02:09:52.463Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "result": "PASS",
+      "midpoint_proof": {
+        "expected_cents": 2450,
+        "actual_paid": 2450,
+        "discount_ids_before": [
+          "di_1UcyB9GnEQDyu3RR1IW7Kr8Z"
+        ],
+        "discount_ids_after": [
+          "di_1UcyB9GnEQDyu3RR1IW7Kr8Z"
+        ],
+        "active_discount_required": true,
+        "preserved": true,
+        "same_provider_billing_anchor": true
+      }
+    },
+    "clock_unpaid_expiry": {
+      "name": "clock_unpaid_expiry",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1801518113,
+      "expected_cents": 2450,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "expired_unpaid/void/zero paid/no owner action",
+      "expected_written_at": "2026-11-18T02:22:59.916Z",
+      "quote_cents": 2450,
+      "quote_matches_independent": true,
+      "operation": "50555d10-5335-416e-90a0-0b852f6e3520",
+      "invoice": "in_1UcyWXGnEQDyu3RRfBYKlfcZ",
+      "deadline": "2027-02-01T22:11:53+00:00",
+      "amount": 2450,
+      "target_quantity": 12,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T02:23:08.324Z",
+      "final": {
+        "http": 200,
+        "state": "expired_unpaid",
+        "code": "deadline_passed",
+        "paid_at": null,
+        "deadline": "2027-02-01T22:11:53+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "void",
+        "amount_paid": 0,
+        "provider_quantity": 11,
+        "target_quantity": 12,
+        "observed_wall": "2026-11-18T02:23:21.192Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "result": "PASS"
+    },
+    "clock_paid_void_race": {
+      "name": "clock_paid_void_race",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1801519914,
+      "expected_cents": 2447,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "attention/no store/no quantity grant",
+      "expected_written_at": "2026-11-18T02:23:23.310Z",
+      "quote_cents": 2447,
+      "quote_matches_independent": true,
+      "operation": "f2907e06-a7af-4545-87ec-60a5dad6b26f",
+      "invoice": "in_1UcyWvGnEQDyu3RR0SMSbz8g",
+      "deadline": "2027-02-01T22:41:54+00:00",
+      "amount": 2447,
+      "target_quantity": 12,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T02:23:31.332Z",
+      "race_actual": {
+        "pay": "fulfilled",
+        "pay_code": null,
+        "job": "fulfilled",
+        "controlled_signer": false
+      },
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2027-02-01T22:41:55+00:00",
+        "deadline": "2027-02-01T22:41:54+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 2447,
+        "provider_quantity": 11,
+        "target_quantity": 12,
+        "observed_wall": "2026-11-18T02:23:41.166Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "result": "PASS",
+      "resume": {
+        "without_reconfirmation": "refused",
+        "dry": "planned",
+        "apply": "applied",
+        "final": "activated",
+        "owner_reconfirmation": "Controlled QA owner reconfirmation recorded before apply; Director Q4scope authorizes the test"
+      }
+    },
+    "real_paid_void_race": {
+      "name": "real_paid_void_race",
+      "role": "NEW_MEMBER",
+      "mode": "real_time_no_test_clock",
+      "account": "82a2d611-4ed4-402f-8082-531749b2a523",
+      "period_start": 1794914041,
+      "period_end": 1797506041,
+      "calculated_at": 1794968625,
+      "expected_cents": 4797,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "attention/no store/no quantity grant",
+      "expected_written_at": "2026-11-18T02:23:45.024Z",
+      "quote_created_at": "2026-11-18T02:23:46.071609+00:00",
+      "independent_timestamp_source": "Stored quote creation timestamp, real clock; provider period timestamps; no application price helper",
+      "expected_written_before_confirm": "2026-11-18T02:23:46.277Z",
+      "quote_cents": 4797,
+      "quote_matches_independent": true,
+      "operation": "c3cb985d-d49b-427a-b843-3571524a5897",
+      "invoice": "in_1UcyXHGnEQDyu3RRE5sJS5in",
+      "deadline": "2026-11-18T02:53:46.609796+00:00",
+      "amount": 4797,
+      "target_quantity": 3,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T02:23:53.093Z",
+      "final": {
+        "http": 200,
+        "state": "expired_unpaid",
+        "code": "deadline_passed",
+        "paid_at": null,
+        "deadline": "2026-11-18T02:53:46.609796+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "void",
+        "amount_paid": 0,
+        "provider_quantity": 2,
+        "target_quantity": 3,
+        "observed_wall": "2026-11-18T03:19:53.610Z",
+        "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+      },
+      "result": "FAIL"
+    },
+    "reg_boundary_50": {
+      "name": "reg_boundary_50",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "calculated_at": 1802830255,
+      "expected_cents": 50,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "activated",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T02:37:34.518Z",
+      "quote_cents": 50,
+      "quote_matches_independent": true,
+      "operation": "693a7933-258c-4677-b6ee-69200f831d0a",
+      "invoice": "in_1UcykeGnEQDyu3RRDfVPdA4H",
+      "deadline": "2027-02-17T02:40:55+00:00",
+      "amount": 50,
+      "target_quantity": 13,
+      "initial_state": "activated",
+      "created_wall": "2026-11-18T02:37:44.945Z",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-02-17T02:10:55+00:00",
+        "deadline": "2027-02-17T02:40:55+00:00",
+        "business_id": "d40c73ad-5ae2-494c-b094-8fdfe5395df4",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 50,
+        "provider_quantity": 13,
+        "target_quantity": 13,
+        "observed_wall": "2026-11-18T02:37:46.174Z",
+        "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+      },
+      "result": "PASS"
+    },
+    "reg_paid_readd": {
+      "name": "reg_paid_readd",
+      "role": "STORE_ADMIN",
+      "mode": "test_clock",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "period_start": 1802857313,
+      "period_end": 1805276513,
+      "calculated_at": 1802860913,
+      "expected_cents": 4893,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "activated",
+      "expected_result": "activated exactly once, one store/member, quantity+1",
+      "expected_written_at": "2026-11-18T02:38:35.561Z",
+      "quote_cents": 4893,
+      "quote_matches_independent": true,
+      "operation": "3b923c54-cba3-4c87-b4f2-ab7bc9a49833",
+      "invoice": "in_1UcyldGnEQDyu3RRmgyVf1Z1",
+      "deadline": "2027-02-17T11:11:53+00:00",
+      "amount": 4893,
+      "target_quantity": 14,
+      "initial_state": "activated",
+      "created_wall": "2026-11-18T02:38:46.526Z",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-02-17T10:41:53+00:00",
+        "deadline": "2027-02-17T11:11:53+00:00",
+        "business_id": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4893,
+        "provider_quantity": 14,
+        "target_quantity": 14,
+        "observed_wall": "2026-11-18T02:38:47.711Z",
+        "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+      },
+      "result": "PASS"
+    },
+    "real_paid_void_race_final": {
+      "name": "real_paid_void_race_final",
+      "role": "MEMBER",
+      "mode": "real_time_no_test_clock",
+      "account": "baaa602f-7c79-49a6-bd13-aa1e2cf8051e",
+      "period_start": 1794908119,
+      "period_end": 1797500119,
+      "calculated_at": 1794971993,
+      "expected_cents": 4779,
+      "basis_cents": 4900,
+      "formula": "round_half_up(4900*(period_end-provider_now)/(period_end-period_start))",
+      "expected_initial_state": "payment_pending",
+      "expected_result": "attention/no store/no quantity grant",
+      "expected_written_at": "2026-11-18T03:19:53.917Z",
+      "quote_created_at": "2026-11-18T03:19:55.753115+00:00",
+      "independent_timestamp_source": "Stored quote creation timestamp, real clock; provider period timestamps; no application price helper",
+      "expected_written_before_confirm": "2026-11-18T03:19:55.888Z",
+      "quote_cents": 4779,
+      "quote_matches_independent": true,
+      "operation": "87a71548-3cac-4cb2-af27-b2fb87630f2f",
+      "invoice": "in_1UczPcGnEQDyu3RR3B0o01Lq",
+      "deadline": "2026-11-18T03:49:56.205744+00:00",
+      "amount": 4779,
+      "target_quantity": 4,
+      "initial_state": "payment_pending",
+      "created_wall": "2026-11-18T03:20:05.564Z",
+      "race_actual": {
+        "launched_at": "2026-11-18T03:49:58.326Z",
+        "deadline": "2026-11-18T03:49:56.205744+00:00",
+        "actual_wait_ms": 1796334,
+        "no_test_clock": true,
+        "no_timestamp_edits": true,
+        "pay": "fulfilled",
+        "pay_code": null,
+        "job": "fulfilled",
+        "controlled_signer": false,
+        "listener": "Owned automatic CLI remains running; provider delivery and minute job race naturally",
+        "provider_paid_at": 1794973798
+      },
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2026-11-18T03:49:58+00:00",
+        "deadline": "2026-11-18T03:49:56.205744+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 4779,
+        "provider_quantity": 3,
+        "target_quantity": 4,
+        "observed_wall": "2026-11-18T03:50:07.767Z",
+        "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+      },
+      "result": "PASS",
+      "race_intent_summary": {
+        "count": 4,
+        "stages": [
+          "finalize",
+          "invoice_create",
+          "item_create",
+          "pay"
+        ]
+      }
+    }
+  },
+  "events": [
+    {
+      "name": "fixture-prepared",
+      "at": "2026-11-18T01:50:35.914Z",
+      "role": "MEMBER",
+      "account": "baaa602f-7c79-49a6-bd13-aa1e2cf8051e",
+      "real_time": true,
+      "clock": null,
+      "context_enabled": false
+    },
+    {
+      "name": "fixture-prepared",
+      "at": "2026-11-18T01:50:38.256Z",
+      "role": "FOREIGN_OWNER",
+      "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+      "real_time": true,
+      "clock": null,
+      "context_enabled": false
+    },
+    {
+      "name": "fixture-prepared",
+      "at": "2026-11-18T01:50:40.224Z",
+      "role": "NEW_MEMBER",
+      "account": "82a2d611-4ed4-402f-8082-531749b2a523",
+      "real_time": true,
+      "clock": null,
+      "context_enabled": false
+    },
+    {
+      "name": "fixture-prepared",
+      "at": "2026-11-18T01:50:45.799Z",
+      "role": "NEW_ADMIN",
+      "account": "132f1534-c86e-423b-b1df-07f171793dcf",
+      "real_time": true,
+      "clock": null,
+      "context_enabled": false
+    },
+    {
+      "name": "fixture-prepared",
+      "at": "2026-11-18T01:50:47.657Z",
+      "role": "STORE_ADMIN",
+      "account": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "real_time": false,
+      "clock": "clock_1UcitkGnEQDyu3RR1xFBf7ZT",
+      "context_enabled": true
+    },
+    {
+      "name": "real_on_time_prompt",
+      "at": "2026-11-18T01:52:23.994Z",
+      "operation": "1528ffb5-9e5f-4ddb-b134-6ec283578a13",
+      "initial_state": "payment_pending",
+      "deadline": "2026-11-18T02:22:14.307212+00:00",
+      "cents": 4789
+    },
+    {
+      "name": "real_on_time_prompt",
+      "at": "2026-11-18T01:52:25.814Z",
+      "status": "paid",
+      "amount_paid": 4789,
+      "paid_at": 1794966744,
+      "wall": "2026-11-18T01:52:25.813Z"
+    },
+    {
+      "name": "real-prompt-before-owner-poll",
+      "at": "2026-11-18T01:52:28.403Z",
+      "state": "paid_pending_activation",
+      "automatic_activation": false
+    },
+    {
+      "name": "real_on_time_prompt",
+      "at": "2026-11-18T01:52:30.513Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2026-11-18T01:52:24+00:00",
+      "deadline": "2026-11-18T02:22:14.307212+00:00",
+      "business_id": "d0d908f8-997c-4739-b5e7-596371920054",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 4789,
+      "provider_quantity": 2,
+      "target_quantity": 2,
+      "observed_wall": "2026-11-18T01:52:30.513Z",
+      "delivery_lane": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+    },
+    {
+      "name": "real_on_time_delayed_within",
+      "at": "2026-11-18T01:52:39.041Z",
+      "operation": "2214085d-fd46-4d4e-965c-5c142bb51ba1",
+      "initial_state": "payment_pending",
+      "deadline": "2026-11-18T02:22:32.272755+00:00",
+      "cents": 4787
+    },
+    {
+      "name": "real_on_time_processed_after_deadline",
+      "at": "2026-11-18T01:52:47.160Z",
+      "operation": "1ded9052-5f79-4f88-aad3-03c1be776d8a",
+      "initial_state": "payment_pending",
+      "deadline": "2026-11-18T02:22:40.755773+00:00",
+      "cents": 4800
+    },
+    {
+      "name": "real_unpaid_expiry",
+      "at": "2026-11-18T01:52:55.393Z",
+      "operation": "073d7b1d-658c-4bdd-a474-d5ba4eab64dc",
+      "initial_state": "payment_pending",
+      "deadline": "2026-11-18T02:22:49.098041+00:00",
+      "cents": 4900
+    },
+    {
+      "name": "owned-listener-outage",
+      "at": "2026-11-18T01:52:55.394Z",
+      "pid": 13593,
+      "reason": "Bounded real delivery outage; preserve paid-before-deadline invoice until processing after its actual30minute deadline; no controlled signer"
+    },
+    {
+      "name": "real_on_time_delayed_within",
+      "at": "2026-11-18T01:52:57.024Z",
+      "status": "paid",
+      "amount_paid": 4787,
+      "paid_at": 1794966775,
+      "wall": "2026-11-18T01:52:57.023Z"
+    },
+    {
+      "name": "real_on_time_processed_after_deadline",
+      "at": "2026-11-18T01:52:58.801Z",
+      "status": "paid",
+      "amount_paid": 4800,
+      "paid_at": 1794966777,
+      "wall": "2026-11-18T01:52:58.800Z"
+    },
+    {
+      "name": "real-wave-wait-begins",
+      "at": "2026-11-18T01:52:58.801Z",
+      "process_after_deadline": "2026-11-18T02:22:40.755773+00:00",
+      "unpaid_deadline": "2026-11-18T02:22:49.098041+00:00"
+    },
+    {
+      "name": "clock_on_time_prompt",
+      "at": "2026-11-18T01:53:07.547Z",
+      "operation": "a7b704d1-b186-4d59-8c61-604334441f30",
+      "initial_state": "payment_pending",
+      "deadline": "2027-01-17T11:11:53+00:00",
+      "cents": 4893
+    },
+    {
+      "name": "clock_on_time_prompt",
+      "at": "2026-11-18T01:53:09.271Z",
+      "status": "paid",
+      "amount_paid": 4893,
+      "paid_at": 1800182513,
+      "wall": "2026-11-18T01:53:09.271Z"
+    },
+    {
+      "name": "clock_on_time_prompt",
+      "at": "2026-11-18T01:53:13.594Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2027-01-17T10:41:53+00:00",
+      "deadline": "2027-01-17T11:11:53+00:00",
+      "business_id": "1c3aa81d-1f62-489b-8f95-2afc2eb4abc0",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 4893,
+      "provider_quantity": 2,
+      "target_quantity": 2,
+      "observed_wall": "2026-11-18T01:53:13.594Z",
+      "delivery_lane": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+    },
+    {
+      "name": "real_on_time_delayed_within",
+      "at": "2026-11-18T01:53:18.095Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2026-11-18T01:52:55+00:00",
+      "deadline": "2026-11-18T02:22:32.272755+00:00",
+      "business_id": "be9d6dba-b1cd-4055-8400-e2c6e67744a8",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 4787,
+      "provider_quantity": 4,
+      "target_quantity": 4,
+      "observed_wall": "2026-11-18T01:53:18.095Z",
+      "delivery_lane": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+    },
+    {
+      "name": "clock_on_time_delayed_within",
+      "at": "2026-11-18T01:53:28.247Z",
+      "operation": "abec5dd8-eaaf-4c37-8545-11c376e18925",
+      "initial_state": "payment_pending",
+      "deadline": "2027-01-17T11:11:53+00:00",
+      "cents": 4893
+    },
+    {
+      "name": "clock_on_time_delayed_within",
+      "at": "2026-11-18T01:53:30.277Z",
+      "status": "paid",
+      "amount_paid": 4893,
+      "paid_at": 1800182513,
+      "wall": "2026-11-18T01:53:30.274Z"
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T01:53:33.614Z",
+      "label": "clock_on_time_delayed_within",
+      "to": 1800183713
+    },
+    {
+      "name": "clock_on_time_delayed_within",
+      "at": "2026-11-18T01:53:37.795Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2027-01-17T10:41:53+00:00",
+      "deadline": "2027-01-17T11:11:53+00:00",
+      "business_id": "4b7fd52a-4d77-4d77-b341-75d987e81a1d",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 4893,
+      "provider_quantity": 3,
+      "target_quantity": 3,
+      "observed_wall": "2026-11-18T01:53:37.794Z",
+      "delivery_lane": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+    },
+    {
+      "name": "clock_on_time_processed_after_deadline",
+      "at": "2026-11-18T01:53:46.766Z",
+      "operation": "a971818c-2afc-4d8c-8fa7-fecdfbe56581",
+      "initial_state": "payment_pending",
+      "deadline": "2027-01-17T11:31:53+00:00",
+      "cents": 4891
+    },
+    {
+      "name": "clock_on_time_processed_after_deadline",
+      "at": "2026-11-18T01:53:48.635Z",
+      "status": "paid",
+      "amount_paid": 4891,
+      "paid_at": 1800183713,
+      "wall": "2026-11-18T01:53:48.635Z"
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T01:53:51.945Z",
+      "label": "clock_on_time_processed_after_deadline",
+      "to": 1800185515
+    },
+    {
+      "name": "clock_on_time_processed_after_deadline",
+      "at": "2026-11-18T01:53:55.915Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2027-01-17T11:01:53+00:00",
+      "deadline": "2027-01-17T11:31:53+00:00",
+      "business_id": "58af1229-7ed8-4016-a262-e66849d46a67",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 4891,
+      "provider_quantity": 4,
+      "target_quantity": 4,
+      "observed_wall": "2026-11-18T01:53:55.914Z",
+      "delivery_lane": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+    },
+    {
+      "name": "clock_late_prompt",
+      "at": "2026-11-18T01:54:05.480Z",
+      "operation": "5b9b5014-478c-47b0-916e-00254a674e51",
+      "initial_state": "payment_pending",
+      "deadline": "2027-01-17T12:01:55+00:00",
+      "cents": 4888
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T01:54:07.474Z",
+      "label": "clock_late_prompt",
+      "to": 1800187317
+    },
+    {
+      "name": "clock_late_prompt",
+      "at": "2026-11-18T01:54:09.407Z",
+      "status": "paid",
+      "amount_paid": 4888,
+      "paid_at": 1800187317,
+      "wall": "2026-11-18T01:54:09.407Z"
+    },
+    {
+      "name": "clock_late_prompt",
+      "at": "2026-11-18T01:54:11.454Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "attention",
+      "code": "paid_after_deadline",
+      "paid_at": "2027-01-17T12:01:57+00:00",
+      "deadline": "2027-01-17T12:01:55+00:00",
+      "business_id": null,
+      "stores": 0,
+      "invoice_status": "paid",
+      "amount_paid": 4888,
+      "provider_quantity": 4,
+      "target_quantity": 5,
+      "observed_wall": "2026-11-18T01:54:11.453Z",
+      "delivery_lane": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+    },
+    {
+      "name": "clock_late_prompt",
+      "at": "2026-11-18T01:54:14.476Z",
+      "without_reconfirmation": "refused",
+      "dry": "planned",
+      "apply": "applied",
+      "final": "activated",
+      "owner_reconfirmation": "Controlled QA owner reconfirmation recorded before apply; Director Q4scope authorizes the test"
+    },
+    {
+      "name": "clock_late_after_crash",
+      "at": "2026-11-18T01:54:26.685Z",
+      "operation": "9f6e2865-f0f5-4858-8041-43506caa2c9f",
+      "initial_state": "payment_pending",
+      "deadline": "2027-01-17T12:31:57+00:00",
+      "cents": 4885
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T01:54:29.985Z",
+      "label": "clock_late_after_crash",
+      "to": 1800189119
+    },
+    {
+      "name": "owned-runtime-stop",
+      "at": "2026-11-18T01:54:30.036Z",
+      "args": [
+        "--only",
+        "pp",
+        "--signal",
+        "KILL"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "clock_late_after_crash",
+      "at": "2026-11-18T01:54:31.792Z",
+      "status": "paid",
+      "amount_paid": 4885,
+      "paid_at": 1800189119,
+      "wall": "2026-11-18T01:54:31.792Z"
+    },
+    {
+      "name": "owned-runtime-start",
+      "at": "2026-11-18T01:54:31.873Z",
+      "args": [
+        "--only",
+        "pp"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "clock_late_after_crash",
+      "at": "2026-11-18T01:54:36.212Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "attention",
+      "code": "paid_after_deadline",
+      "paid_at": "2027-01-17T12:31:59+00:00",
+      "deadline": "2027-01-17T12:31:57+00:00",
+      "business_id": null,
+      "stores": 0,
+      "invoice_status": "paid",
+      "amount_paid": 4885,
+      "provider_quantity": 5,
+      "target_quantity": 6,
+      "observed_wall": "2026-11-18T01:54:36.212Z",
+      "delivery_lane": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+    },
+    {
+      "name": "first-deadline-phase-complete",
+      "at": "2026-11-18T01:54:36.213Z",
+      "real_wait_until": "2026-11-18T02:22:40.755773+00:00",
+      "remaining_clock": "unpaid minute job and actual pay-versus-void race after real paid-delayed case processed; global job not run early"
+    },
+    {
+      "name": "refund-operation-closure",
+      "at": "2026-11-18T01:57:31.162Z",
+      "natural_state_before": "attention",
+      "no_forced_precondition": true,
+      "missing_proof": "refused",
+      "refund_status": "succeeded",
+      "refund_cents": 4885,
+      "invoice_paid_cents": 4885,
+      "close": "applied",
+      "repeat": "applied",
+      "state": "closed_refunded_externally",
+      "store": null,
+      "holds": [
+        {
+          "status": "released"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "reg_ordinary",
+      "at": "2026-11-18T01:58:12.704Z",
+      "operation": "e6d2a6ab-7e39-4e3a-b160-5ada0c6d052f",
+      "initial_state": "activated",
+      "deadline": "2027-01-17T13:01:59+00:00",
+      "cents": 4881
+    },
+    {
+      "name": "reg_ordinary",
+      "at": "2026-11-18T01:58:13.888Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2027-01-17T12:31:59+00:00",
+      "deadline": "2027-01-17T13:01:59+00:00",
+      "business_id": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 4881,
+      "provider_quantity": 6,
+      "target_quantity": 6,
+      "observed_wall": "2026-11-18T01:58:13.887Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "reg_APA",
+      "at": "2026-11-18T01:58:29.036Z",
+      "operation": "b22365a6-2ac2-42a4-bf62-56effdc21748",
+      "initial_state": "activated",
+      "deadline": "2026-12-24T12:20:29+00:00",
+      "cents": 3770
+    },
+    {
+      "name": "reg_APA",
+      "at": "2026-11-18T01:58:30.331Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2026-12-24T11:50:29+00:00",
+      "deadline": "2026-12-24T12:20:29+00:00",
+      "business_id": "e5311571-71ef-4667-a0e1-c79a81898dfd",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 3770,
+      "provider_quantity": 3,
+      "target_quantity": 3,
+      "observed_wall": "2026-11-18T01:58:30.329Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "APA-discount-check",
+      "at": "2026-11-18T01:58:30.638Z",
+      "before": [],
+      "after": [],
+      "preserved": true,
+      "new_store_basis_cents": 4900,
+      "actual_invoice_cents": 3770,
+      "expected_prorated_cents": 3770
+    },
+    {
+      "name": "reg_unpaid_decline_abandon",
+      "at": "2026-11-18T01:58:40.074Z",
+      "operation": "deb29749-1d05-44a3-9583-b73b3d4e7a82",
+      "initial_state": "payment_pending",
+      "deadline": "2027-01-17T13:01:59+00:00",
+      "cents": 4881
+    },
+    {
+      "name": "reg_unpaid_decline_abandon",
+      "at": "2026-11-18T01:58:43.560Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "expired_unpaid",
+      "code": "abandoned",
+      "paid_at": null,
+      "deadline": "2027-01-17T13:01:59+00:00",
+      "business_id": null,
+      "stores": 0,
+      "invoice_status": "void",
+      "amount_paid": 0,
+      "provider_quantity": 6,
+      "target_quantity": 7,
+      "observed_wall": "2026-11-18T01:58:43.560Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "reg_hosted_3ds_s2",
+      "at": "2026-11-18T01:58:52.377Z",
+      "operation": "98d0a3a3-11b1-4b55-aad4-edbe8104f251",
+      "initial_state": "payment_pending",
+      "deadline": "2027-01-17T13:01:59+00:00",
+      "cents": 4881
+    },
+    {
+      "name": "owned-runtime-stop",
+      "at": "2026-11-18T01:58:53.162Z",
+      "args": [
+        "--only",
+        "pp",
+        "--signal",
+        "KILL"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "owned-runtime-start",
+      "at": "2026-11-18T01:59:12.348Z",
+      "args": [
+        "--only",
+        "pp"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "reg_hosted_3ds_s2",
+      "at": "2026-11-18T01:59:20.334Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2027-01-17T12:31:59+00:00",
+      "deadline": "2027-01-17T13:01:59+00:00",
+      "business_id": "48b2237b-9a33-4868-8dd9-f9203f779a1d",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 4881,
+      "provider_quantity": 7,
+      "target_quantity": 7,
+      "observed_wall": "2026-11-18T01:59:20.334Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "hosted3DS-S2-result",
+      "at": "2026-11-18T01:59:20.335Z",
+      "before_state": "payment_pending",
+      "quantity_before": 6,
+      "crashed_wall": "2026-11-18T01:58:53.163Z",
+      "challenge_clicked": true,
+      "invoice_status_while_down": "paid",
+      "paid_cents": 4881,
+      "state_while_down": "payment_pending",
+      "stores_while_down": 0,
+      "quantity_while_down": 6,
+      "portal_listening_while_down": false,
+      "result": "PASS"
+    },
+    {
+      "name": "APA-fixture-qualification",
+      "at": "2026-11-18T02:00:55.432Z",
+      "qualification": "Original earned Q2 once-only APA benefit had already expired on this retained subscription before Q4; empty before/after arrays in reg_APA are not proof of an active benefit. Install the existing allowlisted sandbox promotion as explicit Q4 fixture preparation. This is not an Add Store input, product repair, new promotion resource or assertion of product redemption.",
+      "original_active_discount_count": 0,
+      "provider_fixture_mutation_authorized_under_Q4_envelope": true
+    },
+    {
+      "name": "reg_APA_active_discount",
+      "at": "2026-11-18T02:01:12.125Z",
+      "operation": "c4fabea4-24cd-4553-a5a0-2744b3af7c01",
+      "initial_state": "activated",
+      "deadline": "2026-12-24T12:20:29+00:00",
+      "cents": 3770
+    },
+    {
+      "name": "reg_APA_active_discount",
+      "at": "2026-11-18T02:01:13.453Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2026-12-24T11:50:29+00:00",
+      "deadline": "2026-12-24T12:20:29+00:00",
+      "business_id": "1e0ac103-3dbb-43b4-8584-1a34cd11e8b6",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 3770,
+      "provider_quantity": 4,
+      "target_quantity": 4,
+      "observed_wall": "2026-11-18T02:01:13.452Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "active-APA-result",
+      "at": "2026-11-18T02:01:14.093Z",
+      "result": "PASS",
+      "fixture_qualification": "Original earned Q2 once-only APA benefit had already expired on this retained subscription before Q4; empty before/after arrays in reg_APA are not proof of an active benefit. Install the existing allowlisted sandbox promotion as explicit Q4 fixture preparation. This is not an Add Store input, product repair, new promotion resource or assertion of product redemption.",
+      "active_discount_ids_before": [
+        "di_1UcyB9GnEQDyu3RR1IW7Kr8Z"
+      ],
+      "active_discount_ids_after": [
+        "di_1UcyB9GnEQDyu3RR1IW7Kr8Z"
+      ],
+      "preserved": true,
+      "new_store_basis_cents": 4900,
+      "expected_cents": 3770,
+      "actual_invoice_paid": 3770,
+      "standalone_discounts": 0,
+      "proration_lines": 0,
+      "customer_balance_created": false,
+      "source": "QA existing sandbox promotion fixture setup; productAddStore sees already-active earned-benefit shape, no new code in Add Store"
+    },
+    {
+      "name": "real_late_prompt",
+      "at": "2026-11-18T02:01:48.440Z",
+      "operation": "b2ca62af-753e-45a9-8a14-72b5293ac433",
+      "initial_state": "payment_pending",
+      "deadline": "2026-11-18T02:31:41.38437+00:00",
+      "cents": 4788
+    },
+    {
+      "name": "real_late_after_crash",
+      "at": "2026-11-18T02:01:56.751Z",
+      "operation": "7f9b7583-131c-4f53-bc00-0aeb62e95de6",
+      "initial_state": "payment_pending",
+      "deadline": "2026-11-18T02:31:50.102566+00:00",
+      "cents": 4786
+    },
+    {
+      "name": "separate-account-real-late-wave-started",
+      "at": "2026-11-18T02:01:56.752Z",
+      "started": "2026-11-18T02:01:56.752Z",
+      "cases": [
+        "real_late_prompt",
+        "real_late_after_crash"
+      ]
+    },
+    {
+      "name": "expected-before-midpoint-effect",
+      "at": 1801518113,
+      "role": "STORE_ADMIN",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "expected_cents": 2450,
+      "new_store_basis_cents": 4900,
+      "earned_APA_discount_required": false,
+      "clock_advance_within_current_period": true
+    },
+    {
+      "name": "reg_midperiod_ordinary",
+      "at": "2026-11-18T02:09:32.110Z",
+      "operation": "9443912f-4620-4215-9f3d-405eb99793a3",
+      "initial_state": "activated",
+      "deadline": "2027-02-01T22:11:53+00:00",
+      "cents": 2450
+    },
+    {
+      "name": "reg_midperiod_ordinary",
+      "at": "2026-11-18T02:09:33.422Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2027-02-01T21:41:53+00:00",
+      "deadline": "2027-02-01T22:11:53+00:00",
+      "business_id": "ebd4b62a-3795-4a79-90d7-2c02401bfe51",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 2450,
+      "provider_quantity": 8,
+      "target_quantity": 8,
+      "observed_wall": "2026-11-18T02:09:33.422Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "reg_midperiod_ordinary",
+      "at": "2026-11-18T02:09:33.729Z",
+      "result": "PASS",
+      "expected_cents": 2450,
+      "actual_paid": 2450,
+      "discount_ids_before": [],
+      "discount_ids_after": [],
+      "active_discount_required": false,
+      "preserved": true,
+      "same_provider_billing_anchor": true
+    },
+    {
+      "name": "expected-before-midpoint-effect",
+      "at": 1798834769,
+      "role": "OWNER_B",
+      "period_start": 1797495569,
+      "period_end": 1800173969,
+      "expected_cents": 2450,
+      "new_store_basis_cents": 4900,
+      "earned_APA_discount_required": true,
+      "clock_advance_within_current_period": true
+    },
+    {
+      "name": "reg_midperiod_APA",
+      "at": "2026-11-18T02:09:51.217Z",
+      "operation": "6c63a9d1-a5e8-4a66-aebb-acb2793821b0",
+      "initial_state": "activated",
+      "deadline": "2027-01-01T20:49:29+00:00",
+      "cents": 2450
+    },
+    {
+      "name": "reg_midperiod_APA",
+      "at": "2026-11-18T02:09:52.463Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2027-01-01T20:19:29+00:00",
+      "deadline": "2027-01-01T20:49:29+00:00",
+      "business_id": "4847a85f-6c6a-4323-a5e5-70f144344863",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 2450,
+      "provider_quantity": 5,
+      "target_quantity": 5,
+      "observed_wall": "2026-11-18T02:09:52.463Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "reg_midperiod_APA",
+      "at": "2026-11-18T02:09:52.779Z",
+      "result": "PASS",
+      "expected_cents": 2450,
+      "actual_paid": 2450,
+      "discount_ids_before": [
+        "di_1UcyB9GnEQDyu3RR1IW7Kr8Z"
+      ],
+      "discount_ids_after": [
+        "di_1UcyB9GnEQDyu3RR1IW7Kr8Z"
+      ],
+      "active_discount_required": true,
+      "preserved": true,
+      "same_provider_billing_anchor": true
+    },
+    {
+      "name": "real_on_time_processed_after_deadline",
+      "at": "2026-11-18T02:22:57.813Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2026-11-18T01:52:57+00:00",
+      "deadline": "2026-11-18T02:22:40.755773+00:00",
+      "business_id": "98c57048-7ed5-4ed3-888f-140a89b2bd96",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 4800,
+      "provider_quantity": 2,
+      "target_quantity": 2,
+      "observed_wall": "2026-11-18T02:22:57.812Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "real_on_time_processed_after_deadline",
+      "at": "2026-11-18T02:22:58.935Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2026-11-18T01:52:57+00:00",
+      "deadline": "2026-11-18T02:22:40.755773+00:00",
+      "business_id": "98c57048-7ed5-4ed3-888f-140a89b2bd96",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 4800,
+      "provider_quantity": 2,
+      "target_quantity": 2,
+      "observed_wall": "2026-11-18T02:22:58.934Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "clock_unpaid_expiry",
+      "at": "2026-11-18T02:23:08.324Z",
+      "operation": "50555d10-5335-416e-90a0-0b852f6e3520",
+      "initial_state": "payment_pending",
+      "deadline": "2027-02-01T22:11:53+00:00",
+      "cents": 2450
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T02:23:11.577Z",
+      "label": "unpaid-expiry",
+      "to": 1801519914
+    },
+    {
+      "name": "minute-job-before",
+      "at": "2026-11-18T02:23:12.028Z",
+      "label": "unpaid clock and real deadlines",
+      "due": [
+        {
+          "fn": "store_operations_due",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "name": "minute-job-result",
+      "at": "2026-11-18T02:23:19.641Z",
+      "label": "unpaid clock and real deadlines",
+      "status": 200,
+      "body": {
+        "at": "2026-11-18T02:23:12.038Z",
+        "store_operations": {
+          "073d7b1d-658c-4bdd-a474-d5ba4eab64dc": "expired_unpaid",
+          "50555d10-5335-416e-90a0-0b852f6e3520": "expired_unpaid"
+        },
+        "lifecycle": {},
+        "removals": {},
+        "transfers": {},
+        "notices": {
+          "claimed": 0,
+          "sent": 0,
+          "retry": 0,
+          "attention": 0,
+          "blocked": 0,
+          "suppressed": 0
+        }
+      }
+    },
+    {
+      "name": "clock_unpaid_expiry",
+      "at": "2026-11-18T02:23:21.192Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "expired_unpaid",
+      "code": "deadline_passed",
+      "paid_at": null,
+      "deadline": "2027-02-01T22:11:53+00:00",
+      "business_id": null,
+      "stores": 0,
+      "invoice_status": "void",
+      "amount_paid": 0,
+      "provider_quantity": 11,
+      "target_quantity": 12,
+      "observed_wall": "2026-11-18T02:23:21.192Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "real_unpaid_expiry",
+      "at": "2026-11-18T02:23:22.731Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "expired_unpaid",
+      "code": "deadline_passed",
+      "paid_at": null,
+      "deadline": "2026-11-18T02:22:49.098041+00:00",
+      "business_id": null,
+      "stores": 0,
+      "invoice_status": "void",
+      "amount_paid": 0,
+      "provider_quantity": 1,
+      "target_quantity": 2,
+      "observed_wall": "2026-11-18T02:23:22.730Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "clock_paid_void_race",
+      "at": "2026-11-18T02:23:31.332Z",
+      "operation": "f2907e06-a7af-4545-87ec-60a5dad6b26f",
+      "initial_state": "payment_pending",
+      "deadline": "2027-02-01T22:41:54+00:00",
+      "cents": 2447
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T02:23:37.188Z",
+      "label": "actual-paid-void-race",
+      "to": 1801521715
+    },
+    {
+      "name": "minute-job-before",
+      "at": "2026-11-18T02:23:37.584Z",
+      "label": "concurrent actual paid-void race",
+      "due": [
+        {
+          "fn": "store_operations_due",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "minute-job-result",
+      "at": "2026-11-18T02:23:39.786Z",
+      "label": "concurrent actual paid-void race",
+      "status": 200,
+      "body": {
+        "at": "2026-11-18T02:23:37.593Z",
+        "store_operations": {
+          "f2907e06-a7af-4545-87ec-60a5dad6b26f": "attention"
+        },
+        "lifecycle": {},
+        "removals": {},
+        "transfers": {},
+        "notices": {
+          "claimed": 0,
+          "sent": 0,
+          "retry": 0,
+          "attention": 0,
+          "blocked": 0,
+          "suppressed": 0
+        }
+      }
+    },
+    {
+      "name": "clock_paid_void_race",
+      "at": "2026-11-18T02:23:41.166Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "attention",
+      "code": "paid_after_deadline",
+      "paid_at": "2027-02-01T22:41:55+00:00",
+      "deadline": "2027-02-01T22:41:54+00:00",
+      "business_id": null,
+      "stores": 0,
+      "invoice_status": "paid",
+      "amount_paid": 2447,
+      "provider_quantity": 11,
+      "target_quantity": 12,
+      "observed_wall": "2026-11-18T02:23:41.166Z",
+      "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+    },
+    {
+      "name": "clock_paid_void_race",
+      "at": "2026-11-18T02:23:44.317Z",
+      "without_reconfirmation": "refused",
+      "dry": "planned",
+      "apply": "applied",
+      "final": "activated",
+      "owner_reconfirmation": "Controlled QA owner reconfirmation recorded before apply; Director Q4scope authorizes the test"
+    },
+    {
+      "name": "clock-family-complete",
+      "at": "2026-11-18T02:23:44.318Z",
+      "case_count": 14,
+      "findings": []
+    },
+    {
+      "name": "real_paid_void_race",
+      "at": "2026-11-18T02:23:53.094Z",
+      "operation": "c3cb985d-d49b-427a-b843-3571524a5897",
+      "initial_state": "payment_pending",
+      "deadline": "2026-11-18T02:53:46.609796+00:00",
+      "cents": 4797
+    },
+    {
+      "name": "final-real-race-wait-started",
+      "at": "2026-11-18T02:23:53.095Z",
+      "deadline": "2026-11-18T02:53:46.609796+00:00",
+      "clock": null,
+      "actual_wait_required": true
+    },
+    {
+      "name": "owned-runtime-stop",
+      "at": "2026-11-18T02:25:08.123Z",
+      "args": [
+        "--only",
+        "pp"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "owned-runtime-start",
+      "at": "2026-11-18T02:25:13.958Z",
+      "args": [
+        "--only",
+        "pp"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "owned-listener-restored",
+      "at": "2026-11-18T02:25:16.042Z",
+      "pid": 52858,
+      "account_matches": true,
+      "forward_to": "http://localhost:3101/api/webhooks/stripe",
+      "secret_matches": true,
+      "served_identity": {
+        "base": "http://localhost:3101",
+        "http": {
+          "app": "pp",
+          "revision": "00a9e0e98aad+qa-product",
+          "artifactId": "b4491268b384abb17294d4e593f73875"
+        },
+        "manifest": {
+          "app": "pp",
+          "artifact_id": "b4491268b384abb17294d4e593f73875",
+          "revision": "00a9e0e98aad+qa-product",
+          "next_build_id": "RJoBqGM9zZvHRaIeETP47"
+        },
+        "process": {
+          "pid": 52944,
+          "cwd": "/tmp/apbm007b-qa-q4-01/proof/pp",
+          "started": "Wed Nov 18 08:25:13 2026",
+          "disk_build_id": "RJoBqGM9zZvHRaIeETP47",
+          "build_id_mtime": "2026-11-17T14:40:48.943Z"
+        },
+        "match": true
+      },
+      "mail": "blocked"
+    },
+    {
+      "name": "delivery-lane-qualification",
+      "affected": [
+        "real_on_time_delayed_within",
+        "clock_on_time_prompt",
+        "clock_on_time_delayed_within",
+        "clock_on_time_processed_after_deadline",
+        "clock_late_prompt",
+        "clock_late_after_crash"
+      ],
+      "reason": "Initial reusable helper constant labelled automatic CLI despite known outage. Raw attempts preserved; corrected derived lane; no activation attribution or counter reset."
+    },
+    {
+      "name": "real_late_prompt",
+      "at": "2026-11-18T02:31:54.035Z",
+      "status": "paid",
+      "amount_paid": 4788,
+      "paid_at": 1794969112,
+      "wall": "2026-11-18T02:31:54.034Z"
+    },
+    {
+      "name": "real-late-before-owner-poll",
+      "at": "2026-11-18T02:31:56.551Z",
+      "state": "payment_pending",
+      "code": null,
+      "automatic_receipt_path": 52858
+    },
+    {
+      "name": "real_late_prompt",
+      "at": "2026-11-18T02:31:58.424Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "attention",
+      "code": "paid_after_deadline",
+      "paid_at": "2026-11-18T02:31:52+00:00",
+      "deadline": "2026-11-18T02:31:41.38437+00:00",
+      "business_id": null,
+      "stores": 0,
+      "invoice_status": "paid",
+      "amount_paid": 4788,
+      "provider_quantity": 2,
+      "target_quantity": 3,
+      "observed_wall": "2026-11-18T02:31:58.423Z",
+      "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+    },
+    {
+      "name": "owned-runtime-stop",
+      "at": "2026-11-18T02:31:58.795Z",
+      "args": [
+        "--only",
+        "pp",
+        "--signal",
+        "KILL"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "real_late_after_crash",
+      "at": "2026-11-18T02:32:00.626Z",
+      "status": "paid",
+      "amount_paid": 4786,
+      "paid_at": 1794969119,
+      "wall": "2026-11-18T02:32:00.625Z"
+    },
+    {
+      "name": "owned-runtime-start",
+      "at": "2026-11-18T02:32:01.162Z",
+      "args": [
+        "--only",
+        "pp"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "real_late_after_crash",
+      "at": "2026-11-18T02:32:05.888Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "attention",
+      "code": "paid_after_deadline",
+      "paid_at": "2026-11-18T02:31:59+00:00",
+      "deadline": "2026-11-18T02:31:50.102566+00:00",
+      "business_id": null,
+      "stores": 0,
+      "invoice_status": "paid",
+      "amount_paid": 4786,
+      "provider_quantity": 4,
+      "target_quantity": 5,
+      "observed_wall": "2026-11-18T02:32:05.887Z",
+      "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+    },
+    {
+      "name": "real-late-crash-result",
+      "at": "2026-11-18T02:32:01.058Z",
+      "result": "PASS",
+      "paid_after_real_deadline_while_owned_process_down": true,
+      "no_test_clock": true,
+      "state_while_down": "payment_pending",
+      "stores_while_down": 0,
+      "quantity_before": 4,
+      "quantity_while_down": 4
+    },
+    {
+      "name": "real_late_prompt",
+      "at": "2026-11-18T02:34:01.285Z",
+      "without_reconfirmation": "refused",
+      "dry": "planned",
+      "apply": "applied",
+      "final": "activated",
+      "owner_reconfirmation": "Controlled QA owner reconfirmation recorded before apply; Director Q4scope authorizes the test"
+    },
+    {
+      "name": "guard-expected-before-effects",
+      "at": "2026-11-18T02:37:21.158Z",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "minimum_remaining_seconds": 27058,
+      "expected50": 50,
+      "expected49": 49,
+      "all_three_actions": "50allowed;49refused/noinvoice/balance;90minute both sides masked by stricter50minimum",
+      "scheduled_store": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+      "history_claim_id": "00486c85-ae10-4549-8199-f925c0ef564e"
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T02:37:24.528Z",
+      "label": "guard-50",
+      "to": 1802830255
+    },
+    {
+      "name": "reg_boundary_50",
+      "at": "2026-11-18T02:37:44.946Z",
+      "operation": "693a7933-258c-4677-b6ee-69200f831d0a",
+      "initial_state": "activated",
+      "deadline": "2027-02-17T02:40:55+00:00",
+      "cents": 50
+    },
+    {
+      "name": "reg_boundary_50",
+      "at": "2026-11-18T02:37:46.175Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2027-02-17T02:10:55+00:00",
+      "deadline": "2027-02-17T02:40:55+00:00",
+      "business_id": "d40c73ad-5ae2-494c-b094-8fdfe5395df4",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 50,
+      "provider_quantity": 13,
+      "target_quantity": 13,
+      "observed_wall": "2026-11-18T02:37:46.174Z",
+      "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+    },
+    {
+      "name": "guard50-results",
+      "at": "2026-11-18T02:37:46.176Z",
+      "checks": [
+        {
+          "action": "removal",
+          "http": 200,
+          "state": "completed"
+        },
+        {
+          "action": "undo",
+          "http": 200,
+          "state": "completed"
+        },
+        {
+          "action": "removal",
+          "http": 200,
+          "state": "completed"
+        }
+      ],
+      "invoice_paid": 50,
+      "expected": 50,
+      "result": "PASS"
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T02:37:49.409Z",
+      "label": "guard-49",
+      "to": 1802830256
+    },
+    {
+      "name": "guard49-results",
+      "at": "2026-11-18T02:37:53.812Z",
+      "expected_cents": 49,
+      "add": 409,
+      "removal": 409,
+      "undo": 409,
+      "no_invoice": true,
+      "no_balance": true,
+      "result": "PASS"
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T02:37:55.805Z",
+      "label": "guard90-5401",
+      "to": 1802851912
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T02:38:02.985Z",
+      "label": "guard90-5400",
+      "to": 1802851913
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T02:38:09.009Z",
+      "label": "guard90-5399",
+      "to": 1802851914
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T02:38:13.212Z",
+      "label": "guard90-1",
+      "to": 1802857312
+    },
+    {
+      "name": "end-guard-results",
+      "at": "2026-11-18T02:38:15.584Z",
+      "cases": [
+        {
+          "remaining_seconds": 5401,
+          "expected": "All refuse:50cent minimum is stricter than90minutes in this30/31day fixture; no isolated90minute pass claimed",
+          "add": 409,
+          "removal": 409,
+          "undo": 409,
+          "result": "PASS"
+        },
+        {
+          "remaining_seconds": 5400,
+          "expected": "All refuse:50cent minimum is stricter than90minutes in this30/31day fixture; no isolated90minute pass claimed",
+          "add": 409,
+          "removal": 409,
+          "undo": 409,
+          "result": "PASS"
+        },
+        {
+          "remaining_seconds": 5399,
+          "expected": "All refuse:50cent minimum is stricter than90minutes in this30/31day fixture; no isolated90minute pass claimed",
+          "add": 409,
+          "removal": 409,
+          "undo": 409,
+          "result": "PASS"
+        },
+        {
+          "remaining_seconds": 1,
+          "expected": "All refuse:50cent minimum is stricter than90minutes in this30/31day fixture; no isolated90minute pass claimed",
+          "add": 409,
+          "removal": 409,
+          "undo": 409,
+          "result": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "next-invoice-expected-before-advance",
+      "at": "2026-11-18T02:38:15.877Z",
+      "quantity": 13,
+      "expected_cents": 68700,
+      "formula": "9900+4900*(billable_quantity-1)",
+      "no_current_refund_or_credit": true
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T02:38:22.015Z",
+      "label": "guard-renewal",
+      "to": 1802857373
+    },
+    {
+      "name": "clock-advanced",
+      "at": "2026-11-18T02:38:31.807Z",
+      "label": "guard-renewal-settle",
+      "to": 1802860913
+    },
+    {
+      "name": "minute-job-before",
+      "at": "2026-11-18T02:38:32.882Z",
+      "label": "Q4 isolated scheduled removal cutoff",
+      "due": [
+        {
+          "fn": "store_removals_due",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "minute-job-result",
+      "at": "2026-11-18T02:38:33.438Z",
+      "label": "Q4 isolated scheduled removal cutoff",
+      "status": 200,
+      "body": {
+        "at": "2026-11-18T02:38:32.891Z",
+        "store_operations": {},
+        "lifecycle": {},
+        "removals": {
+          "688ab2d4-0be9-4602-9891-b31eaa3a6bed": "removed"
+        },
+        "transfers": {},
+        "notices": {
+          "claimed": 0,
+          "sent": 0,
+          "retry": 0,
+          "attention": 0,
+          "blocked": 0,
+          "suppressed": 0
+        }
+      }
+    },
+    {
+      "name": "removal-cutoff-result",
+      "at": "2026-11-18T02:38:33.599Z",
+      "removed": {
+        "id": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+        "status": "removed"
+      },
+      "original_claim_preserved": true,
+      "next_invoice": {
+        "id": "in_1UcylKGnEQDyu3RRQorhyusX",
+        "status": "paid",
+        "amount_paid": 68700,
+        "expected_cents": 68700,
+        "quantity": 13,
+        "proration_lines": 0
+      },
+      "result": "PASS"
+    },
+    {
+      "name": "reactivation-authorizes-only",
+      "at": "2026-11-18T02:38:34.997Z",
+      "dry": "planned",
+      "apply": "applied",
+      "status": "removed",
+      "quantity_unchanged": true,
+      "history_before_paid": 404,
+      "policy_wording": "paid re-add pending Director decision 9; no access or quantity granted",
+      "result": "PASS"
+    },
+    {
+      "name": "reg_paid_readd",
+      "at": "2026-11-18T02:38:46.527Z",
+      "operation": "3b923c54-cba3-4c87-b4f2-ab7bc9a49833",
+      "initial_state": "activated",
+      "deadline": "2027-02-17T11:11:53+00:00",
+      "cents": 4893
+    },
+    {
+      "name": "reg_paid_readd",
+      "at": "2026-11-18T02:38:47.712Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "activated",
+      "code": null,
+      "paid_at": "2027-02-17T10:41:53+00:00",
+      "deadline": "2027-02-17T11:11:53+00:00",
+      "business_id": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+      "stores": 1,
+      "invoice_status": "paid",
+      "amount_paid": 4893,
+      "provider_quantity": 14,
+      "target_quantity": 14,
+      "observed_wall": "2026-11-18T02:38:47.711Z",
+      "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+    },
+    {
+      "name": "paid-readd-original-history",
+      "at": "2026-11-18T02:38:47.908Z",
+      "original_business": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+      "returned_business": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+      "same_record": true,
+      "original_claim_same_id": true,
+      "history_rpc_error": null,
+      "original_claim_returned": true,
+      "result": "PASS"
+    },
+    {
+      "name": "minute-job-before",
+      "at": "2026-11-18T03:19:48.686Z",
+      "label": "expire retained interrupted unpaid real-race invoice before fresh consent",
+      "due": [
+        {
+          "fn": "store_operations_due",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "minute-job-result",
+      "at": "2026-11-18T03:19:51.838Z",
+      "label": "expire retained interrupted unpaid real-race invoice before fresh consent",
+      "status": 200,
+      "body": {
+        "at": "2026-11-18T03:19:48.735Z",
+        "store_operations": {
+          "c3cb985d-d49b-427a-b843-3571524a5897": "expired_unpaid"
+        },
+        "lifecycle": {},
+        "removals": {},
+        "transfers": {},
+        "notices": {
+          "claimed": 0,
+          "sent": 0,
+          "retry": 0,
+          "attention": 0,
+          "blocked": 0,
+          "suppressed": 0
+        }
+      }
+    },
+    {
+      "name": "real_paid_void_race",
+      "at": "2026-11-18T03:19:53.611Z",
+      "result": "FAIL",
+      "http": 200,
+      "state": "expired_unpaid",
+      "code": "deadline_passed",
+      "paid_at": null,
+      "deadline": "2026-11-18T02:53:46.609796+00:00",
+      "business_id": null,
+      "stores": 0,
+      "invoice_status": "void",
+      "amount_paid": 0,
+      "provider_quantity": 2,
+      "target_quantity": 3,
+      "observed_wall": "2026-11-18T03:19:53.610Z",
+      "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+    },
+    {
+      "name": "real_paid_void_race_final",
+      "at": "2026-11-18T03:20:05.565Z",
+      "operation": "87a71548-3cac-4cb2-af27-b2fb87630f2f",
+      "initial_state": "payment_pending",
+      "deadline": "2026-11-18T03:49:56.205744+00:00",
+      "cents": 4779
+    },
+    {
+      "name": "final-real-race-new-consent-wait",
+      "at": "2026-11-18T03:20:05.566Z",
+      "deadline": "2026-11-18T03:49:56.205744+00:00",
+      "real_wait": true,
+      "original_interrupted_case_retained": true
+    },
+    {
+      "name": "minute-job-before",
+      "at": "2026-11-18T03:50:00.350Z",
+      "label": "final actual real-time payment versus expiry minute-job",
+      "due": [
+        {
+          "fn": "store_operations_due",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "minute-job-result",
+      "at": "2026-11-18T03:50:01.896Z",
+      "label": "final actual real-time payment versus expiry minute-job",
+      "status": 200,
+      "body": {
+        "at": "2026-11-18T03:50:00.360Z",
+        "store_operations": {
+          "87a71548-3cac-4cb2-af27-b2fb87630f2f": "attention"
+        },
+        "lifecycle": {},
+        "removals": {},
+        "transfers": {},
+        "notices": {
+          "claimed": 0,
+          "sent": 0,
+          "retry": 0,
+          "attention": 0,
+          "blocked": 0,
+          "suppressed": 0
+        }
+      }
+    },
+    {
+      "name": "real_paid_void_race_final",
+      "at": "2026-11-18T03:50:07.768Z",
+      "result": "PASS",
+      "http": 200,
+      "state": "attention",
+      "code": "paid_after_deadline",
+      "paid_at": "2026-11-18T03:49:58+00:00",
+      "deadline": "2026-11-18T03:49:56.205744+00:00",
+      "business_id": null,
+      "stores": 0,
+      "invoice_status": "paid",
+      "amount_paid": 4779,
+      "provider_quantity": 3,
+      "target_quantity": 4,
+      "observed_wall": "2026-11-18T03:50:07.767Z",
+      "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+    },
+    {
+      "name": "real_paid_void_race_final",
+      "at": "2026-11-18T03:50:07.851Z",
+      "result": "PASS",
+      "race": {
+        "launched_at": "2026-11-18T03:49:58.326Z",
+        "deadline": "2026-11-18T03:49:56.205744+00:00",
+        "actual_wait_ms": 1796334,
+        "no_test_clock": true,
+        "no_timestamp_edits": true,
+        "pay": "fulfilled",
+        "pay_code": null,
+        "job": "fulfilled",
+        "controlled_signer": false,
+        "listener": "Owned automatic CLI remains running; provider delivery and minute job race naturally",
+        "provider_paid_at": 1794973798
+      },
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2026-11-18T03:49:58+00:00",
+        "deadline": "2026-11-18T03:49:56.205744+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 4779,
+        "provider_quantity": 3,
+        "target_quantity": 4,
+        "observed_wall": "2026-11-18T03:50:07.767Z",
+        "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+      },
+      "intents": {
+        "count": 4,
+        "stages": [
+          "finalize",
+          "invoice_create",
+          "item_create",
+          "pay"
+        ]
+      }
+    }
+  ],
+  "listener_off": {
+    "pid": 13593,
+    "at": "2026-11-18T01:52:55.394Z",
+    "reason": "Bounded real delivery outage; preserve paid-before-deadline invoice until processing after its actual30minute deadline; no controlled signer"
+  },
+  "real_wave_started": {
+    "at": "2026-11-18T01:52:58.801Z",
+    "process_after_deadline": "2026-11-18T02:22:40.755773+00:00",
+    "unpaid_deadline": "2026-11-18T02:22:49.098041+00:00"
+  },
+  "real_late_wave": {
+    "started": "2026-11-18T02:01:56.752Z",
+    "cases": [
+      "real_late_prompt",
+      "real_late_after_crash"
+    ]
+  },
+  "listener_restored": {
+    "at": "2026-11-18T02:25:16.042Z",
+    "pid": 52858,
+    "account_matches": true,
+    "forward_to": "http://localhost:3101/api/webhooks/stripe",
+    "secret_matches": true,
+    "served_identity": {
+      "base": "http://localhost:3101",
+      "http": {
+        "app": "pp",
+        "revision": "00a9e0e98aad+qa-product",
+        "artifactId": "b4491268b384abb17294d4e593f73875"
+      },
+      "manifest": {
+        "app": "pp",
+        "artifact_id": "b4491268b384abb17294d4e593f73875",
+        "revision": "00a9e0e98aad+qa-product",
+        "next_build_id": "RJoBqGM9zZvHRaIeETP47"
+      },
+      "process": {
+        "pid": 52944,
+        "cwd": "/tmp/apbm007b-qa-q4-01/proof/pp",
+        "started": "Wed Nov 18 08:25:13 2026",
+        "disk_build_id": "RJoBqGM9zZvHRaIeETP47",
+        "build_id_mtime": "2026-11-17T14:40:48.943Z"
+      },
+      "match": true
+    },
+    "mail": "blocked"
+  },
+  "guard": {
+    "done": [
+      "setup",
+      "50",
+      "49",
+      "ninety",
+      "cutoff",
+      "authorization",
+      "paidreadd"
+    ],
+    "period_start": 1800178913,
+    "period_end": 1802857313,
+    "minimum_remaining": 27058,
+    "expected50": 50,
+    "expected49": 49,
+    "store": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+    "npi": "1209497795",
+    "history_claim": {
+      "id": "00486c85-ae10-4549-8199-f925c0ef564e",
+      "business_id": "688ab2d4-0be9-4602-9891-b31eaa3a6bed"
+    },
+    "allowed50": [
+      {
+        "action": "removal",
+        "http": 200,
+        "state": "completed"
+      },
+      {
+        "action": "undo",
+        "http": 200,
+        "state": "completed"
+      },
+      {
+        "action": "removal",
+        "http": 200,
+        "state": "completed"
+      }
+    ],
+    "fifty_paid": 50,
+    "refused49": {
+      "expected_cents": 49,
+      "add": 409,
+      "removal": 409,
+      "undo": 409,
+      "no_invoice": true,
+      "no_balance": true,
+      "result": "PASS"
+    },
+    "ninety": [
+      {
+        "remaining_seconds": 5401,
+        "expected": "All refuse:50cent minimum is stricter than90minutes in this30/31day fixture; no isolated90minute pass claimed",
+        "add": 409,
+        "removal": 409,
+        "undo": 409,
+        "result": "PASS"
+      },
+      {
+        "remaining_seconds": 5400,
+        "expected": "All refuse:50cent minimum is stricter than90minutes in this30/31day fixture; no isolated90minute pass claimed",
+        "add": 409,
+        "removal": 409,
+        "undo": 409,
+        "result": "PASS"
+      },
+      {
+        "remaining_seconds": 5399,
+        "expected": "All refuse:50cent minimum is stricter than90minutes in this30/31day fixture; no isolated90minute pass claimed",
+        "add": 409,
+        "removal": 409,
+        "undo": 409,
+        "result": "PASS"
+      },
+      {
+        "remaining_seconds": 1,
+        "expected": "All refuse:50cent minimum is stricter than90minutes in this30/31day fixture; no isolated90minute pass claimed",
+        "add": 409,
+        "removal": 409,
+        "undo": 409,
+        "result": "PASS"
+      }
+    ],
+    "next_invoice_expected": 68700,
+    "next_invoice": {
+      "id": "in_1UcylKGnEQDyu3RRQorhyusX",
+      "status": "paid",
+      "amount_paid": 68700,
+      "expected_cents": 68700,
+      "quantity": 13,
+      "proration_lines": 0
+    },
+    "cutoff": {
+      "removed": {
+        "id": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+        "status": "removed"
+      },
+      "original_claim_preserved": true,
+      "next_invoice": {
+        "id": "in_1UcylKGnEQDyu3RRQorhyusX",
+        "status": "paid",
+        "amount_paid": 68700,
+        "expected_cents": 68700,
+        "quantity": 13,
+        "proration_lines": 0
+      },
+      "result": "PASS"
+    },
+    "authorization_only": {
+      "dry": "planned",
+      "apply": "applied",
+      "status": "removed",
+      "quantity_unchanged": true,
+      "history_before_paid": 404,
+      "policy_wording": "paid re-add pending Director decision 9; no access or quantity granted",
+      "result": "PASS"
+    },
+    "paid_readd": {
+      "original_business": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+      "returned_business": "688ab2d4-0be9-4602-9891-b31eaa3a6bed",
+      "same_record": true,
+      "original_claim_same_id": true,
+      "history_rpc_error": null,
+      "original_claim_returned": true,
+      "result": "PASS"
+    }
+  },
+  "caseNpis": {
+    "reg_paid_readd": "1209497795"
+  }
+}

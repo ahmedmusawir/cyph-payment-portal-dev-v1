@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-18T06:27:53.589Z",
+  "F_Q4_002": {
+    "operation": {
+      "id": "f80277f8-8d46-49e5-857e-a179707a4852",
+      "state": "activated",
+      "created_at": "2026-11-18T02:21:05.295Z",
+      "activated_at": "2026-11-18T02:21:45.392Z",
+      "updated_at": "2026-11-18T02:21:45.392Z",
+      "business_id": "08b4165e-0cf5-4eea-8f10-3506eff8808b",
+      "invoice_id": "in_1UcyUjGnEQDyu3RRMe0HpLjo",
+      "provider_paid_at": "2027-02-01T21:41:53.000Z"
+    },
+    "original_pre_spawn_marker": "2026-11-18T02:20:38.310Z",
+    "original_exact_test_start": "NOT RECORDED; old private disposable test output no longer present. Do not substitute launch marker for exact onTestBegin.",
+    "outer_test_limit_ms": 30000,
+    "inner_locator_expect_ms": 60000,
+    "activated_minus_pre_spawn_ms": 66690,
+    "pre_spawn_plus30000": "2026-11-18T02:21:08.310Z",
+    "test_start_bound": "Test begins after pre-spawn marker; actual sign-in audit is an additional in-test bound. New repetitions record onTestBegin and confirm HAR timings.",
+    "original_timeout_recorded": true
+  },
+  "F_Q4_003": {
+    "role": "OWNER_A",
+    "auth_id": "bc30ca1c-6950-4c65-b541-384b618bf718",
+    "interval": [
+      "2026-11-18T02:19:38Z",
+      "2026-11-18T02:23:58Z"
+    ],
+    "auth_events": [],
+    "operator_actions": [
+      {
+        "id": "68",
+        "action": "store-operation-reconcile",
+        "created_at": "2026-11-18T02:23:41.353Z"
+      },
+      {
+        "id": "69",
+        "action": "store-operation-reconcile",
+        "created_at": "2026-11-18T02:23:41.516Z"
+      },
+      {
+        "id": "70",
+        "action": "store-operation-reconcile",
+        "created_at": "2026-11-18T02:23:44.218Z"
+      }
+    ],
+    "QA_ledger_revocation_or_logout_entries": [],
+    "revocation_events": [],
+    "later_known_privacy_revocations": "2026-11-18T03:10Z, after original failure; not a simultaneous cause",
+    "limitation": "Absence of retained server audit events is not proof no local browser SIGNED_OUT event occurred. Original exact browser event stream unavailable; no root cause inferred."
+  }
+}

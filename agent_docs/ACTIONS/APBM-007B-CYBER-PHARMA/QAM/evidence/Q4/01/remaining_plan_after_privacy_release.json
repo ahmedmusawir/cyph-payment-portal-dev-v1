@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-18T03:10:03.945Z",
+  "before": {
+    "reads": 2839,
+    "provider_mutations": 367,
+    "new_identities": 12,
+    "test_clocks": 3,
+    "customers": 8,
+    "subscriptions": 8,
+    "attempted_cents": 581620,
+    "sign_ins": 153,
+    "pay_or_hosted": 62,
+    "email_attempts": 16,
+    "unique_identities": 8,
+    "refunds": 2,
+    "scratch_cycles": 1
+  },
+  "remaining": {
+    "provider_mutations": 24,
+    "pay_or_hosted": 4,
+    "attempted_cents": 20000,
+    "sign_ins": 20,
+    "reads": 1000,
+    "email_attempts": 2,
+    "new_identities": 0,
+    "unique_identities": 0,
+    "customers": 0,
+    "subscriptions": 0,
+    "test_clocks": 0,
+    "refunds": 0,
+    "scratch_cycles": 0
+  },
+  "caps": {
+    "provider_mutations": 440,
+    "customers": 16,
+    "subscriptions": 16,
+    "test_clocks": 7,
+    "pay_or_hosted": 80,
+    "attempted_cents": 1000000,
+    "email_attempts": 40,
+    "sign_ins": 176,
+    "new_identities": 14,
+    "unique_identities": 10,
+    "scratch_cycles": 3,
+    "reads": 5000,
+    "refunds": 2
+  },
+  "pass": true,
+  "counters_reset": false
+}

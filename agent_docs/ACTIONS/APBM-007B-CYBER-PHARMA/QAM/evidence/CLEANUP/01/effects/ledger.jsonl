@@ -1,0 +1,230 @@
+{"seq":2665,"at":"2026-11-18T07:51:34.583Z","operation":"Cleanup verify Stripe sandbox account","charges":{"reads":1},"cleanup":true}
+{"seq":2666,"at":"2026-11-18T07:51:35.236Z","operation":"Cleanup read-only Stripe inventory webhook_endpoints","charges":{"reads":1},"cleanup":true}
+{"seq":2667,"at":"2026-11-18T07:51:35.511Z","operation":"Cleanup enabled webhook endpoint read","charges":{"reads":1},"cleanup":true}
+{"seq":2668,"at":"2026-11-18T07:51:35.797Z","operation":"Cleanup read-only Stripe inventory customers","charges":{"reads":1},"cleanup":true}
+{"seq":2669,"at":"2026-11-18T07:51:36.190Z","operation":"Cleanup read-only Stripe inventory subscriptions","charges":{"reads":1},"cleanup":true}
+{"seq":2670,"at":"2026-11-18T07:51:36.810Z","operation":"Cleanup read-only Stripe inventory test_clocks","charges":{"reads":1},"cleanup":true}
+{"seq":2671,"at":"2026-11-18T07:51:37.089Z","operation":"Cleanup read-only Stripe inventory invoices","charges":{"reads":1},"cleanup":true}
+{"seq":2672,"at":"2026-11-18T07:51:38.744Z","operation":"Cleanup read-only Stripe inventory invoice_items","charges":{"reads":1},"cleanup":true}
+{"seq":2673,"at":"2026-11-18T07:51:39.226Z","operation":"Cleanup read-only Stripe inventory payment_intents","charges":{"reads":1},"cleanup":true}
+{"seq":2674,"at":"2026-11-18T07:51:40.851Z","operation":"Cleanup read-only Stripe inventory payment_intents","charges":{"reads":1},"cleanup":true}
+{"seq":2675,"at":"2026-11-18T07:51:41.451Z","operation":"Cleanup read-only Stripe inventory setup_intents","charges":{"reads":1},"cleanup":true}
+{"seq":2676,"at":"2026-11-18T07:51:41.750Z","operation":"Cleanup read-only Stripe inventory checkout_sessions","charges":{"reads":1},"cleanup":true}
+{"seq":2677,"at":"2026-11-18T07:51:42.205Z","operation":"Cleanup read-only Stripe inventory subscription_schedules","charges":{"reads":1},"cleanup":true}
+{"seq":2678,"at":"2026-11-18T07:51:42.481Z","operation":"Cleanup read-only Stripe inventory coupons","charges":{"reads":1},"cleanup":true}
+{"seq":2679,"at":"2026-11-18T07:51:42.760Z","operation":"Cleanup read-only Stripe inventory promotion_codes","charges":{"reads":1},"cleanup":true}
+{"seq":2680,"at":"2026-11-18T07:51:43.043Z","operation":"Cleanup read-only Stripe inventory products","charges":{"reads":1},"cleanup":true}
+{"seq":2681,"at":"2026-11-18T07:51:43.333Z","operation":"Cleanup read-only Stripe inventory prices","charges":{"reads":1},"cleanup":true}
+{"seq":2682,"at":"2026-11-18T07:51:43.625Z","operation":"Cleanup read-only Stripe inventory payment_methods_cus_VeGY4NupjibtEo","charges":{"reads":1},"cleanup":true}
+{"seq":2683,"at":"2026-11-18T07:51:43.960Z","operation":"Cleanup read-only Stripe inventory payment_methods_cus_Ve0hHqFExjMSdp","charges":{"reads":1},"cleanup":true}
+{"seq":2684,"at":"2026-11-18T07:51:44.304Z","operation":"Cleanup read-only Stripe inventory payment_methods_cus_VdzbotJE2rHxEt","charges":{"reads":1},"cleanup":true}
+{"seq":2685,"at":"2026-11-18T07:51:44.621Z","operation":"Cleanup read-only Stripe inventory payment_methods_cus_Ve0mgpfF0Ib3yh","charges":{"reads":1},"cleanup":true}
+{"seq":2686,"at":"2026-11-18T07:51:44.968Z","operation":"Cleanup read-only Stripe inventory payment_methods_cus_VdzbFhbYulqAOe","charges":{"reads":1},"cleanup":true}
+{"seq":2687,"at":"2026-11-18T07:51:45.321Z","operation":"Cleanup read-only Stripe inventory payment_methods_cus_Ve0v0K7v4FPDJq","charges":{"reads":1},"cleanup":true}
+{"seq":2688,"at":"2026-11-18T07:51:45.674Z","operation":"Cleanup read-only Stripe inventory payment_methods_cus_Ve0Z5kYb2AIQYm","charges":{"reads":1},"cleanup":true}
+{"seq":2689,"at":"2026-11-18T07:51:46.019Z","operation":"Cleanup read-only Stripe inventory payment_methods_cus_Ve2PY4BIOkhh4R","charges":{"reads":1},"cleanup":true}
+{"seq":2690,"at":"2026-11-18T07:51:46.387Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2691,"at":"2026-11-18T07:52:41.397Z","operation":"Cleanup exact QA customer/subscription tag read","charges":{"reads":2},"cleanup":true}
+{"seq":2692,"at":"2026-11-18T07:52:42.327Z","operation":"Cleanup exact QA customer/subscription tag read","charges":{"reads":2},"cleanup":true}
+{"seq":2693,"at":"2026-11-18T07:52:42.940Z","operation":"Cleanup exact QA customer/subscription tag read","charges":{"reads":2},"cleanup":true}
+{"seq":2694,"at":"2026-11-18T07:52:43.567Z","operation":"Cleanup exact QA customer/subscription tag read","charges":{"reads":2},"cleanup":true}
+{"seq":2695,"at":"2026-11-18T07:52:44.180Z","operation":"Cleanup exact QA customer/subscription tag read","charges":{"reads":2},"cleanup":true}
+{"seq":2696,"at":"2026-11-18T07:52:45.135Z","operation":"Cleanup exact QA customer/subscription tag read","charges":{"reads":2},"cleanup":true}
+{"seq":2697,"at":"2026-11-18T07:52:45.752Z","operation":"Cleanup exact QA customer/subscription tag read","charges":{"reads":2},"cleanup":true}
+{"seq":2698,"at":"2026-11-18T07:52:46.360Z","operation":"Cleanup exact QA customer/subscription tag read","charges":{"reads":2},"cleanup":true}
+{"seq":2699,"at":"2026-11-18T07:55:09.698Z","operation":"Cleanup actual clock markers read","charges":{"reads":1},"cleanup":true}
+{"seq":2700,"at":"2026-11-18T07:55:12.273Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2701,"at":"2026-11-18T07:58:26.477Z","operation":"Cleanup read webhook endpoints","charges":{"reads":1},"cleanup":true}
+{"seq":2702,"at":"2026-11-18T07:58:29.089Z","operation":"Cleanup read sandbox account","charges":{"reads":1},"cleanup":true}
+{"seq":2703,"at":"2026-11-18T07:58:29.929Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2704,"at":"2026-11-18T07:58:30.042Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2705,"at":"2026-11-18T07:58:30.109Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2706,"at":"2026-11-18T07:58:30.160Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2707,"at":"2026-11-18T07:58:30.211Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2708,"at":"2026-11-18T07:58:30.287Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2709,"at":"2026-11-18T07:58:33.380Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2710,"at":"2026-11-18T07:58:33.635Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2711,"at":"2026-11-18T07:58:33.753Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2712,"at":"2026-11-18T07:58:33.905Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2713,"at":"2026-11-18T07:58:33.947Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2714,"at":"2026-11-18T07:58:33.996Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2715,"at":"2026-11-18T07:58:34.069Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2716,"at":"2026-11-18T07:58:34.125Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2717,"at":"2026-11-18T07:58:34.170Z","operation":"Cleanup read subscription sub_1Ucy1GGnEQDyu3RRvzi7OUrP","charges":{"reads":1},"cleanup":true}
+{"seq":2718,"at":"2026-11-18T07:58:34.490Z","operation":"Cleanup cancel tagged sandbox subscription sub_1Ucy1GGnEQDyu3RRvzi7OUrP","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2718,"at":"2026-11-18T07:58:35.045Z","result":{"ok":true,"id":"sub_1Ucy1GGnEQDyu3RRvzi7OUrP","status":"canceled"}}
+{"seq":2719,"at":"2026-11-18T07:58:35.046Z","operation":"Cleanup read subscription sub_1UcinNGnEQDyu3RRRIn3qrzB","charges":{"reads":1},"cleanup":true}
+{"seq":2720,"at":"2026-11-18T07:58:35.728Z","operation":"Cleanup read subscription sub_1Uchc8GnEQDyu3RR4dPvjODp","charges":{"reads":1},"cleanup":true}
+{"seq":2721,"at":"2026-11-18T07:58:36.074Z","operation":"Cleanup cancel tagged sandbox subscription sub_1Uchc8GnEQDyu3RR4dPvjODp","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2721,"at":"2026-11-18T07:58:36.650Z","result":{"ok":true,"id":"sub_1Uchc8GnEQDyu3RR4dPvjODp","status":"canceled"}}
+{"seq":2722,"at":"2026-11-18T07:58:36.650Z","operation":"Cleanup read subscription sub_1UciklGnEQDyu3RRiTtSmwcF","charges":{"reads":1},"cleanup":true}
+{"seq":2723,"at":"2026-11-18T07:58:36.985Z","operation":"Cleanup cancel tagged sandbox subscription sub_1UciklGnEQDyu3RRiTtSmwcF","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2723,"at":"2026-11-18T07:58:37.603Z","result":{"ok":true,"id":"sub_1UciklGnEQDyu3RRiTtSmwcF","status":"canceled"}}
+{"seq":2724,"at":"2026-11-18T07:58:37.605Z","operation":"Cleanup read subscription sub_1Uchc1GnEQDyu3RRyZ7Lns7W","charges":{"reads":1},"cleanup":true}
+{"seq":2725,"at":"2026-11-18T07:58:37.939Z","operation":"Cleanup cancel tagged sandbox subscription sub_1Uchc1GnEQDyu3RRyZ7Lns7W","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2725,"at":"2026-11-18T07:58:38.474Z","result":{"ok":true,"id":"sub_1Uchc1GnEQDyu3RRyZ7Lns7W","status":"canceled"}}
+{"seq":2726,"at":"2026-11-18T07:58:38.474Z","operation":"Cleanup read subscription sub_1UcitmGnEQDyu3RRftoi8saR","charges":{"reads":1},"cleanup":true}
+{"seq":2727,"at":"2026-11-18T07:58:38.795Z","operation":"Cleanup cancel tagged sandbox subscription sub_1UcitmGnEQDyu3RRftoi8saR","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2727,"at":"2026-11-18T07:58:39.373Z","result":{"ok":true,"id":"sub_1UcitmGnEQDyu3RRftoi8saR","status":"canceled"}}
+{"seq":2728,"at":"2026-11-18T07:58:39.374Z","operation":"Cleanup read subscription sub_1UciXtGnEQDyu3RR69YGmVyL","charges":{"reads":1},"cleanup":true}
+{"seq":2729,"at":"2026-11-18T07:58:39.707Z","operation":"Cleanup cancel tagged sandbox subscription sub_1UciXtGnEQDyu3RR69YGmVyL","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2729,"at":"2026-11-18T07:58:40.269Z","result":{"ok":true,"id":"sub_1UciXtGnEQDyu3RR69YGmVyL","status":"canceled"}}
+{"seq":2730,"at":"2026-11-18T07:58:40.269Z","operation":"Cleanup read subscription sub_1UckKtGnEQDyu3RRzSsOMNyj","charges":{"reads":1},"cleanup":true}
+{"seq":2731,"at":"2026-11-18T07:58:40.616Z","operation":"Cleanup read customer cus_VeGY4NupjibtEo","charges":{"reads":1},"cleanup":true}
+{"seq":2732,"at":"2026-11-18T07:58:40.937Z","operation":"Cleanup read customer-scoped invoices cus_VeGY4NupjibtEo","charges":{"reads":1},"cleanup":true}
+{"seq":2733,"at":"2026-11-18T07:58:41.304Z","operation":"Cleanup read customer payment methods cus_VeGY4NupjibtEo","charges":{"reads":1},"cleanup":true}
+{"seq":2734,"at":"2026-11-18T07:58:41.656Z","operation":"Cleanup read customer cus_Ve0hHqFExjMSdp","charges":{"reads":1},"cleanup":true}
+{"seq":2735,"at":"2026-11-18T07:58:41.931Z","operation":"Cleanup read customer cus_VdzbotJE2rHxEt","charges":{"reads":1},"cleanup":true}
+{"seq":2736,"at":"2026-11-18T07:58:42.259Z","operation":"Cleanup read customer-scoped invoices cus_VdzbotJE2rHxEt","charges":{"reads":1},"cleanup":true}
+{"seq":2737,"at":"2026-11-18T07:58:42.782Z","operation":"Cleanup read customer payment methods cus_VdzbotJE2rHxEt","charges":{"reads":1},"cleanup":true}
+{"seq":2738,"at":"2026-11-18T07:58:43.129Z","operation":"Cleanup read customer cus_Ve0mgpfF0Ib3yh","charges":{"reads":1},"cleanup":true}
+{"seq":2739,"at":"2026-11-18T07:58:43.446Z","operation":"Cleanup read customer-scoped invoices cus_Ve0mgpfF0Ib3yh","charges":{"reads":1},"cleanup":true}
+{"seq":2740,"at":"2026-11-18T07:58:43.860Z","operation":"Cleanup read customer payment methods cus_Ve0mgpfF0Ib3yh","charges":{"reads":1},"cleanup":true}
+{"seq":2741,"at":"2026-11-18T07:58:44.197Z","operation":"Cleanup read customer cus_VdzbFhbYulqAOe","charges":{"reads":1},"cleanup":true}
+{"seq":2742,"at":"2026-11-18T07:58:44.526Z","operation":"Cleanup read customer-scoped invoices cus_VdzbFhbYulqAOe","charges":{"reads":1},"cleanup":true}
+{"seq":2743,"at":"2026-11-18T07:58:45.017Z","operation":"Cleanup read customer payment methods cus_VdzbFhbYulqAOe","charges":{"reads":1},"cleanup":true}
+{"seq":2744,"at":"2026-11-18T07:58:45.391Z","operation":"Cleanup read customer cus_Ve0v0K7v4FPDJq","charges":{"reads":1},"cleanup":true}
+{"seq":2745,"at":"2026-11-18T07:58:45.722Z","operation":"Cleanup read customer-scoped invoices cus_Ve0v0K7v4FPDJq","charges":{"reads":1},"cleanup":true}
+{"seq":2746,"at":"2026-11-18T07:58:46.722Z","operation":"Cleanup read customer payment methods cus_Ve0v0K7v4FPDJq","charges":{"reads":1},"cleanup":true}
+{"seq":2747,"at":"2026-11-18T07:58:47.115Z","operation":"Cleanup read customer cus_Ve0Z5kYb2AIQYm","charges":{"reads":1},"cleanup":true}
+{"seq":2748,"at":"2026-11-18T07:58:47.444Z","operation":"Cleanup read customer-scoped invoices cus_Ve0Z5kYb2AIQYm","charges":{"reads":1},"cleanup":true}
+{"seq":2749,"at":"2026-11-18T07:58:47.851Z","operation":"Cleanup read customer payment methods cus_Ve0Z5kYb2AIQYm","charges":{"reads":1},"cleanup":true}
+{"seq":2750,"at":"2026-11-18T07:58:48.246Z","operation":"Cleanup read customer cus_Ve2PY4BIOkhh4R","charges":{"reads":1},"cleanup":true}
+{"seq":2751,"at":"2026-11-18T07:58:48.571Z","operation":"Cleanup read clock clock_1UchbzGnEQDyu3RRdTw6kZ0j","charges":{"reads":1},"cleanup":true}
+{"seq":2752,"at":"2026-11-18T07:58:48.863Z","operation":"Cleanup read clock clock_1UcikjGnEQDyu3RRyDjN9as0","charges":{"reads":1},"cleanup":true}
+{"seq":2753,"at":"2026-11-18T07:58:49.156Z","operation":"Cleanup read clock clock_1UcitkGnEQDyu3RR1xFBf7ZT","charges":{"reads":1},"cleanup":true}
+{"seq":2754,"at":"2026-11-18T07:58:49.447Z","operation":"Cleanup read tagged checkout cs_test_c0Oryg5oMT15rj93H9YfsmpETowp2qDiXmWsinA62cz1M7FIuYml866T2I","charges":{"reads":1},"cleanup":true}
+{"seq":2755,"at":"2026-11-18T07:58:49.761Z","operation":"Cleanup read tagged checkout cs_test_c0g22ZYVrSQvgFpP64kayqYK7UKV3Kzfe50Qgi5WADIsXkI1I8lzwdLOzu","charges":{"reads":1},"cleanup":true}
+{"seq":2756,"at":"2026-11-18T07:58:50.079Z","operation":"Cleanup read tagged checkout cs_test_c0RXNNRSSrqkDFRmniGcXOpgzUA6cVf3eeGoLpu73DRCVFUU7BQCJm7lgw","charges":{"reads":1},"cleanup":true}
+{"seq":2757,"at":"2026-11-18T07:58:50.387Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2758,"at":"2026-11-18T08:00:59.464Z","operation":"Cleanup read webhook endpoints","charges":{"reads":1},"cleanup":true}
+{"seq":2759,"at":"2026-11-18T08:01:02.031Z","operation":"Cleanup read sandbox account","charges":{"reads":1},"cleanup":true}
+{"seq":2760,"at":"2026-11-18T08:01:02.790Z","operation":"Cleanup read subscription sub_1UcinNGnEQDyu3RRRIn3qrzB","charges":{"reads":1},"cleanup":true}
+{"seq":2761,"at":"2026-11-18T08:01:03.106Z","operation":"Cleanup read subscription sub_1UckKtGnEQDyu3RRzSsOMNyj","charges":{"reads":1},"cleanup":true}
+{"seq":2762,"at":"2026-11-18T08:01:03.456Z","operation":"Cleanup read customer cus_VeGY4NupjibtEo","charges":{"reads":1},"cleanup":true}
+{"seq":2763,"at":"2026-11-18T08:01:03.782Z","operation":"Cleanup read customer-scoped invoices cus_VeGY4NupjibtEo","charges":{"reads":1},"cleanup":true}
+{"seq":2764,"at":"2026-11-18T08:01:04.150Z","operation":"Cleanup read customer payment methods cus_VeGY4NupjibtEo","charges":{"reads":1},"cleanup":true}
+{"seq":2765,"at":"2026-11-18T08:01:04.492Z","operation":"Cleanup read customer cus_Ve0hHqFExjMSdp","charges":{"reads":1},"cleanup":true}
+{"seq":2766,"at":"2026-11-18T08:01:04.796Z","operation":"Cleanup read customer cus_VdzbotJE2rHxEt","charges":{"reads":1},"cleanup":true}
+{"seq":2767,"at":"2026-11-18T08:01:05.101Z","operation":"Cleanup read customer-scoped invoices cus_VdzbotJE2rHxEt","charges":{"reads":1},"cleanup":true}
+{"seq":2768,"at":"2026-11-18T08:01:05.592Z","operation":"Cleanup read customer payment methods cus_VdzbotJE2rHxEt","charges":{"reads":1},"cleanup":true}
+{"seq":2769,"at":"2026-11-18T08:01:05.947Z","operation":"Cleanup read customer cus_Ve0mgpfF0Ib3yh","charges":{"reads":1},"cleanup":true}
+{"seq":2770,"at":"2026-11-18T08:01:06.249Z","operation":"Cleanup read customer-scoped invoices cus_Ve0mgpfF0Ib3yh","charges":{"reads":1},"cleanup":true}
+{"seq":2771,"at":"2026-11-18T08:01:06.670Z","operation":"Cleanup read customer payment methods cus_Ve0mgpfF0Ib3yh","charges":{"reads":1},"cleanup":true}
+{"seq":2772,"at":"2026-11-18T08:01:06.993Z","operation":"Cleanup read customer cus_VdzbFhbYulqAOe","charges":{"reads":1},"cleanup":true}
+{"seq":2773,"at":"2026-11-18T08:01:07.291Z","operation":"Cleanup read customer-scoped invoices cus_VdzbFhbYulqAOe","charges":{"reads":1},"cleanup":true}
+{"seq":2774,"at":"2026-11-18T08:01:07.746Z","operation":"Cleanup read customer payment methods cus_VdzbFhbYulqAOe","charges":{"reads":1},"cleanup":true}
+{"seq":2775,"at":"2026-11-18T08:01:08.112Z","operation":"Cleanup read customer cus_Ve0v0K7v4FPDJq","charges":{"reads":1},"cleanup":true}
+{"seq":2776,"at":"2026-11-18T08:01:08.414Z","operation":"Cleanup read customer-scoped invoices cus_Ve0v0K7v4FPDJq","charges":{"reads":1},"cleanup":true}
+{"seq":2777,"at":"2026-11-18T08:01:09.347Z","operation":"Cleanup read customer payment methods cus_Ve0v0K7v4FPDJq","charges":{"reads":1},"cleanup":true}
+{"seq":2778,"at":"2026-11-18T08:01:09.716Z","operation":"Cleanup read customer cus_Ve0Z5kYb2AIQYm","charges":{"reads":1},"cleanup":true}
+{"seq":2779,"at":"2026-11-18T08:01:10.022Z","operation":"Cleanup read customer-scoped invoices cus_Ve0Z5kYb2AIQYm","charges":{"reads":1},"cleanup":true}
+{"seq":2780,"at":"2026-11-18T08:01:10.436Z","operation":"Cleanup read customer payment methods cus_Ve0Z5kYb2AIQYm","charges":{"reads":1},"cleanup":true}
+{"seq":2781,"at":"2026-11-18T08:01:10.795Z","operation":"Cleanup read customer cus_Ve2PY4BIOkhh4R","charges":{"reads":1},"cleanup":true}
+{"seq":2782,"at":"2026-11-18T08:01:11.103Z","operation":"Cleanup read clock clock_1UchbzGnEQDyu3RRdTw6kZ0j","charges":{"reads":1},"cleanup":true}
+{"seq":2783,"at":"2026-11-18T08:01:11.375Z","operation":"Cleanup read clock clock_1UcikjGnEQDyu3RRyDjN9as0","charges":{"reads":1},"cleanup":true}
+{"seq":2784,"at":"2026-11-18T08:01:11.649Z","operation":"Cleanup read clock clock_1UcitkGnEQDyu3RR1xFBf7ZT","charges":{"reads":1},"cleanup":true}
+{"seq":2785,"at":"2026-11-18T08:01:11.926Z","operation":"Cleanup read tagged checkout cs_test_c0Oryg5oMT15rj93H9YfsmpETowp2qDiXmWsinA62cz1M7FIuYml866T2I","charges":{"reads":1},"cleanup":true}
+{"seq":2786,"at":"2026-11-18T08:01:12.225Z","operation":"Cleanup read tagged checkout cs_test_c0g22ZYVrSQvgFpP64kayqYK7UKV3Kzfe50Qgi5WADIsXkI1I8lzwdLOzu","charges":{"reads":1},"cleanup":true}
+{"seq":2787,"at":"2026-11-18T08:01:12.523Z","operation":"Cleanup read tagged checkout cs_test_c0RXNNRSSrqkDFRmniGcXOpgzUA6cVf3eeGoLpu73DRCVFUU7BQCJm7lgw","charges":{"reads":1},"cleanup":true}
+{"seq":2788,"at":"2026-11-18T08:01:12.819Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2789,"at":"2026-11-18T08:01:12.928Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2790,"at":"2026-11-18T08:01:15.460Z","operation":"Cleanup obtain existing QA session OWNER_A","charges":{"sign_ins":1,"reads":1},"cleanup":true}
+{"seq":2791,"at":"2026-11-18T08:01:15.972Z","operation":"Cleanup revoke all QA sessions OWNER_A","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2792,"at":"2026-11-18T08:01:15.973Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2791,"at":"2026-11-18T08:01:16.079Z","result":{"ok":true,"status":"revoked"}}
+{"seq":2793,"at":"2026-11-18T08:01:16.080Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2794,"at":"2026-11-18T08:01:16.122Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2795,"at":"2026-11-18T08:01:16.166Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2796,"at":"2026-11-18T08:01:16.236Z","operation":"Cleanup obtain existing QA session OWNER_B","charges":{"sign_ins":1,"reads":1},"cleanup":true}
+{"seq":2797,"at":"2026-11-18T08:01:16.400Z","operation":"Cleanup revoke all QA sessions OWNER_B","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2798,"at":"2026-11-18T08:01:16.400Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2797,"at":"2026-11-18T08:01:16.473Z","result":{"ok":true,"status":"revoked"}}
+{"seq":2799,"at":"2026-11-18T08:01:16.473Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2800,"at":"2026-11-18T08:01:16.518Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2801,"at":"2026-11-18T08:01:16.562Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2802,"at":"2026-11-18T08:01:16.640Z","operation":"Cleanup obtain existing QA session STORE_ADMIN","charges":{"sign_ins":1,"reads":1},"cleanup":true}
+{"seq":2803,"at":"2026-11-18T08:01:16.795Z","operation":"Cleanup revoke all QA sessions STORE_ADMIN","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2804,"at":"2026-11-18T08:01:16.795Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2803,"at":"2026-11-18T08:01:16.872Z","result":{"ok":true,"status":"revoked"}}
+{"seq":2805,"at":"2026-11-18T08:01:16.872Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2806,"at":"2026-11-18T08:01:16.916Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2807,"at":"2026-11-18T08:01:16.957Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2808,"at":"2026-11-18T08:01:17.030Z","operation":"Cleanup obtain existing QA session MEMBER","charges":{"sign_ins":1,"reads":1},"cleanup":true}
+{"seq":2809,"at":"2026-11-18T08:01:17.182Z","operation":"Cleanup revoke all QA sessions MEMBER","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2810,"at":"2026-11-18T08:01:17.182Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2809,"at":"2026-11-18T08:01:17.241Z","result":{"ok":true,"status":"revoked"}}
+{"seq":2811,"at":"2026-11-18T08:01:17.241Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2812,"at":"2026-11-18T08:01:17.286Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2813,"at":"2026-11-18T08:01:17.327Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2814,"at":"2026-11-18T08:01:17.396Z","operation":"Cleanup obtain existing QA session FOREIGN_OWNER","charges":{"sign_ins":1,"reads":1},"cleanup":true}
+{"seq":2815,"at":"2026-11-18T08:01:17.538Z","operation":"Cleanup revoke all QA sessions FOREIGN_OWNER","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2816,"at":"2026-11-18T08:01:17.538Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2815,"at":"2026-11-18T08:01:17.607Z","result":{"ok":true,"status":"revoked"}}
+{"seq":2817,"at":"2026-11-18T08:01:17.608Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2818,"at":"2026-11-18T08:01:17.651Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2819,"at":"2026-11-18T08:01:17.692Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2820,"at":"2026-11-18T08:01:17.762Z","operation":"Cleanup mint token for preverified existing QA identity NEW_ADMIN","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2821,"at":"2026-11-18T08:01:17.762Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2820,"at":"2026-11-18T08:01:17.848Z","result":{"ok":true}}
+{"seq":2822,"at":"2026-11-18T08:01:17.848Z","operation":"Cleanup verify existing QA token NEW_ADMIN","charges":{"sign_ins":1,"reads":1},"cleanup":true}
+{"seq":2823,"at":"2026-11-18T08:01:17.924Z","operation":"Cleanup revoke all QA sessions NEW_ADMIN","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2824,"at":"2026-11-18T08:01:17.925Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2823,"at":"2026-11-18T08:01:17.993Z","result":{"ok":true,"status":"revoked"}}
+{"seq":2825,"at":"2026-11-18T08:01:17.993Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2826,"at":"2026-11-18T08:01:18.036Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2827,"at":"2026-11-18T08:01:18.077Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2828,"at":"2026-11-18T08:01:18.143Z","operation":"Cleanup mint token for preverified existing QA identity NEW_MEMBER","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2829,"at":"2026-11-18T08:01:18.144Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2828,"at":"2026-11-18T08:01:18.212Z","result":{"ok":true}}
+{"seq":2830,"at":"2026-11-18T08:01:18.212Z","operation":"Cleanup verify existing QA token NEW_MEMBER","charges":{"sign_ins":1,"reads":1},"cleanup":true}
+{"seq":2831,"at":"2026-11-18T08:01:18.373Z","operation":"Cleanup revoke all QA sessions NEW_MEMBER","charges":{"provider_mutations":1},"cleanup":true}
+{"seq":2832,"at":"2026-11-18T08:01:18.373Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":2831,"at":"2026-11-18T08:01:18.439Z","result":{"ok":true,"status":"revoked"}}
+{"seq":2833,"at":"2026-11-18T08:01:18.440Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2834,"at":"2026-11-18T08:01:18.481Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2835,"at":"2026-11-18T08:01:18.525Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2836,"at":"2026-11-18T08:01:18.594Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2837,"at":"2026-11-18T08:01:18.653Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2838,"at":"2026-11-18T08:01:18.700Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2839,"at":"2026-11-18T08:01:18.746Z","operation":"Cleanup exact SCRATCH SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2840,"at":"2026-11-18T08:02:12.270Z","operation":"Cleanup verify canceled subscription","charges":{"reads":1},"cleanup":true}
+{"seq":2841,"at":"2026-11-18T08:02:14.834Z","operation":"Cleanup verify canceled subscription","charges":{"reads":1},"cleanup":true}
+{"seq":2842,"at":"2026-11-18T08:02:15.156Z","operation":"Cleanup verify canceled subscription","charges":{"reads":1},"cleanup":true}
+{"seq":2843,"at":"2026-11-18T08:02:15.466Z","operation":"Cleanup verify canceled subscription","charges":{"reads":1},"cleanup":true}
+{"seq":2844,"at":"2026-11-18T08:02:15.771Z","operation":"Cleanup verify canceled subscription","charges":{"reads":1},"cleanup":true}
+{"seq":2845,"at":"2026-11-18T08:02:16.092Z","operation":"Cleanup verify canceled subscription","charges":{"reads":1},"cleanup":true}
+{"seq":2846,"at":"2026-11-18T08:02:16.412Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2847,"at":"2026-11-18T08:02:16.553Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2848,"at":"2026-11-18T08:02:16.605Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2849,"at":"2026-11-18T08:02:16.652Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2850,"at":"2026-11-18T08:02:16.693Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2851,"at":"2026-11-18T08:02:16.736Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2852,"at":"2026-11-18T08:02:16.779Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2853,"at":"2026-11-18T08:02:16.824Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2854,"at":"2026-11-18T08:02:16.867Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2855,"at":"2026-11-18T08:02:16.911Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2856,"at":"2026-11-18T08:02:16.958Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2857,"at":"2026-11-18T08:02:17.001Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2858,"at":"2026-11-18T08:02:17.046Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2859,"at":"2026-11-18T08:02:17.089Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2860,"at":"2026-11-18T08:02:17.133Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2861,"at":"2026-11-18T08:02:17.178Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2862,"at":"2026-11-18T08:02:17.223Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2863,"at":"2026-11-18T08:02:17.267Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2864,"at":"2026-11-18T08:02:17.310Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2865,"at":"2026-11-18T08:02:17.354Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2866,"at":"2026-11-18T08:02:17.396Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2867,"at":"2026-11-18T08:02:17.446Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2868,"at":"2026-11-18T08:02:17.490Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2869,"at":"2026-11-18T08:02:17.534Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2870,"at":"2026-11-18T08:02:17.578Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2871,"at":"2026-11-18T08:02:17.630Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2872,"at":"2026-11-18T08:02:17.684Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2873,"at":"2026-11-18T08:02:17.730Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2874,"at":"2026-11-18T08:02:17.785Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2875,"at":"2026-11-18T08:02:17.839Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2876,"at":"2026-11-18T08:02:17.895Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2877,"at":"2026-11-18T08:02:17.937Z","operation":"Cleanup verification SQL","charges":{"reads":1},"cleanup":true}
+{"seq":2878,"at":"2026-11-18T08:02:17.984Z","operation":"Cleanup verify F001 no refund","charges":{"reads":2},"cleanup":true}
+{"seq":2879,"at":"2026-11-18T08:02:18.612Z","operation":"Cleanup refund verification","charges":{"reads":1},"cleanup":true}

@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-18T03:46:53.517Z",
+  "listeners": [
+    {
+      "pid": 90771,
+      "target": "http://localhost:3101/api/webhooks/stripe"
+    }
+  ],
+  "apps": {
+    "ob": {
+      "production": true,
+      "scratch": true
+    },
+    "pp": {
+      "production": true,
+      "scratch": true,
+      "session_secret_matches": true
+    }
+  },
+  "sandbox_account_matches": true,
+  "only_owned3101_listener": true
+}

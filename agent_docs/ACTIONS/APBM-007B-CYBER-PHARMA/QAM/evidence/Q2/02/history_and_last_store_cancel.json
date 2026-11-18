@@ -1,0 +1,100 @@
+[
+  {
+    "name": "paid-readd-approved-history-OWNER_A",
+    "business": "99cbe279-2a2d-413c-b45e-76ed87b21021",
+    "error": null,
+    "stored_original_rows": 2,
+    "rpc_rows": 2,
+    "result": "PASS",
+    "rpc_shape": [
+      "page",
+      "rows",
+      "limit",
+      "total",
+      "pageCount"
+    ]
+  },
+  {
+    "name": "paid-readd-approved-history-STORE_ADMIN",
+    "business": "99cbe279-2a2d-413c-b45e-76ed87b21021",
+    "error": null,
+    "stored_original_rows": 2,
+    "rpc_rows": 2,
+    "result": "PASS",
+    "rpc_shape": [
+      "page",
+      "rows",
+      "limit",
+      "total",
+      "pageCount"
+    ]
+  },
+  {
+    "name": "seller-history-api-FOREIGN_OWNER",
+    "status": 200,
+    "read_only": true,
+    "expected": 200,
+    "result": "PASS"
+  },
+  {
+    "name": "seller-history-api-OWNER_A",
+    "status": 404,
+    "expected": "denied",
+    "result": "PASS"
+  },
+  {
+    "name": "seller-history-api-OWNER_B",
+    "status": 404,
+    "expected": "denied",
+    "result": "PASS"
+  },
+  {
+    "name": "seller-history-api-STORE_ADMIN",
+    "status": 404,
+    "expected": "denied",
+    "result": "PASS"
+  },
+  {
+    "name": "seller-history-api-MEMBER",
+    "status": 404,
+    "expected": "denied",
+    "result": "PASS"
+  },
+  {
+    "name": "seller-history-api-EXISTING_INVITEE",
+    "status": 404,
+    "expected": "denied",
+    "result": "PASS"
+  },
+  {
+    "name": "seller-history-api-SIGNED_OUT",
+    "status": 401,
+    "expected": "denied",
+    "result": "PASS"
+  },
+  {
+    "name": "seller-immutable-history",
+    "claim_ids_preserved": true,
+    "file_unchanged": false,
+    "result": "FAIL"
+  },
+  {
+    "name": "last-store-precondition",
+    "quantity": 1,
+    "result": "PASS"
+  },
+  {
+    "name": "whole-account-cancel-retains-billing",
+    "dashboard_status": 404,
+    "billing_status": 404,
+    "delivery_lane": "automatic Stripe CLI",
+    "provider_quantity": 1
+  },
+  {
+    "name": "last-store-undo",
+    "http": 200,
+    "provider_cancel": false,
+    "quantity": 1,
+    "result": "PASS"
+  }
+]

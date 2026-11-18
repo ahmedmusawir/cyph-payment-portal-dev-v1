@@ -1,0 +1,23 @@
+[
+  {
+    "role": "OWNER_A",
+    "test": "read-only billing recovery visible",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_A",
+    "test": "read-only add-store unavailable",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_A",
+    "test": "owner billing remains reachable",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "test": "member Portal owner-only route",
+    "final_path": "/dashboard",
+    "result": "OBSERVE"
+  }
+]

@@ -1,0 +1,2429 @@
+{
+  "package": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01.zip",
+  "module_id": "APBM-007B-CYBER-PHARMA",
+  "phase": "Q2",
+  "attempt": "01",
+  "produced_by": "Cody / Codex QA Executor",
+  "produced_at": "2026-11-17T11:50:55.471648+00:00",
+  "candidate_sha": "427bec6267b9777e9cb44f81c22d1396a495bc14",
+  "candidate_pair": {
+    "portal": "427bec6267b9777e9cb44f81c22d1396a495bc14",
+    "owedbook": "c8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea"
+  },
+  "qa_execution_head": "61b683ab2aeeb18905666a56feed2d2513b6e6c5",
+  "plan_sha256": "f7e7bc8c48cd6136a8c3b7fcafdc9112575f0e84d99f177c97fc689cabbcf345",
+  "hash_scope": "every member except FILE_INDEX.json",
+  "state_snapshot": "immutable pre-export; completed ZIP hash only in external receipt and subsequent live state",
+  "status": "Q2 COMPLETE \u2014 AWAITING ADJUDICATION; no certification/deployment/retention acceptance",
+  "privacy_scan": {
+    "scanner": "candidate privacy-scan.mjs plus actual-private-value/session/token export gate",
+    "validated_with_synthetic_fixture_and_clean_control": true,
+    "hits": 0
+  },
+  "members": [
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/QAM_STATE.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_STATE.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 19376,
+      "sha256": "fdb4d6e0d36bd708e9cde80aa31782e84053d9ed4c7e69f6e1228ca5e9817cc5"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/QAM_ENTRY.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_ENTRY.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 13337,
+      "sha256": "434aca1f7c40ab91a86a6c55e00011901418464bd81099d0a22a6b4be732c3df"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/QAM_PREFLIGHT.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_PREFLIGHT.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 6901,
+      "sha256": "5634785581f32059565664b9af31c48f60271f57ab78c2480d81d5f0caf7956e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/QAM_MANIFEST.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_MANIFEST.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 13213,
+      "sha256": "7e257c10e6db0c4873c01cf07f9ec1956b2838fe65d87dc85147cccde43aee92"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/QAM_RECON_REPORT.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_RECON_REPORT.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 5804,
+      "sha256": "fbc44e8ad55833c4586025b70afd30095c2b00dd547f2976df126d553e0d47b0"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/QAM_TEST_PLAN.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_TEST_PLAN.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 53543,
+      "sha256": "f7e7bc8c48cd6136a8c3b7fcafdc9112575f0e84d99f177c97fc689cabbcf345"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/QAM_APPROVAL.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_APPROVAL.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 9532,
+      "sha256": "85619eed5153b79326e3fa072941e4afad9f72f113d7559ae02980346dc5f782"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/QAM_EXECUTION_REPORT.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_EXECUTION_REPORT.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 13858,
+      "sha256": "a891332bae8ff5f9351baad6efc14ac96bea441cc8a55076fed927fdd865f958"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AC_EVIDENCE_MATRIX.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AC_EVIDENCE_MATRIX.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 11220,
+      "sha256": "3d28f756776e58cc36036bedb8476fa9e8dc007f746521a2466fd32b1c46005e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/FINDINGS.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/FINDINGS.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 13033,
+      "sha256": "473264d9f0bd3a4a413c78d8bb67f63a71f44474a27383c818d75b7844c080f5"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/QAM_CLEANUP_REPORT.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_CLEANUP_REPORT.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 6514,
+      "sha256": "cdd4e45df24598f4384dd6d1ee0a31f502d5114d65dd64b24c836c3953d4c9b2"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/QAM_RISK_REQUIREMENTS.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_RISK_REQUIREMENTS.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 7377,
+      "sha256": "50e15dc1ed51d43ca5289c347b594007db4ef7f1635f27e5400cdee42ea9cc99"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/QAM_PACKAGING.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_PACKAGING.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 5931,
+      "sha256": "3df38652f2eecfce5804c1a4658042735def3668c6677b8a93f6c0755a98d56b"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/GOVERNING/README.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/GOVERNING/README.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1218,
+      "sha256": "541a427b041f42d9fdda2f5ff4f5d7d1b9c01fdf84072584256e45f6b252707b"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/TEST_IDENTITIES.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/TEST_IDENTITIES.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1494,
+      "sha256": "c0dccf2559d49f66dc3fe9eaf746ac892774605ace49b4f10f016ea790469b66"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/HANDOFFS/ENGINEERING_HANDOFF.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 21451,
+      "sha256": "9e6a4eaeeb4be0217fa7afaf3729898ca76cd024f5b87eb917c07c29e6148010"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/HANDOFFS/CANDIDATE_PAIR_2026-11-17.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/CANDIDATE_PAIR_2026-11-17.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1672,
+      "sha256": "e66ae3f29453edc44deccdb1e2714a5535ae4a85f61c1f551bde4d28637d7904"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/HANDOFFS/QA_INPUTS_PREPARATION.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/QA_INPUTS_PREPARATION.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 6260,
+      "sha256": "016fb9311b51af19df625c03e1cbdf47ea95ca97702ea4c8ef3361744e9cc1c9"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/HANDOFFS/QA_NEAR_END_RESUME.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/QA_NEAR_END_RESUME.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1223,
+      "sha256": "2f56f7a060b3f99d7cc8794735a941559f019dcbc714f117a7a2b29dd064dbb3"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/HANDOFFS/Q2_REVIEW_DECISIONS.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/Q2_REVIEW_DECISIONS.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3371,
+      "sha256": "45035eaa5e2b35b7dbd07892d3e3b19eb15addb8afa75c1666269b322ece3b48"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/REVIEW_START_HERE.md",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/REVIEW_START_HERE.md",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2968,
+      "sha256": "86301fb654aaebd42f662a52f441e42a1e31f215b9607e352b1589f654470fea"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/actual_private_values_bundle_scan.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/actual_private_values_bundle_scan.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 818,
+      "sha256": "1a2e0fe0d54c62a6efa52d683530aed6b447253097d5f95250ae50ac63591b30"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/client_bundle_scan.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/client_bundle_scan.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 630,
+      "sha256": "6c33e56c3a4bb169588f7b29d4776ac214f7fac41b78eb93ff17e40420160cf3"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/instrument_qualifications.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/instrument_qualifications.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 724,
+      "sha256": "a75bf1e6978d3c7f1220c3d66f651f44787555dcbc69e6d423c38072f213c8f0"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/owedbook_jest.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/owedbook_jest.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 149,
+      "sha256": "df736e7eb6d38157f53605020190a2d85c25653cbd05b1cb4c673147389b7180"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/owedbook_jest_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/owedbook_jest_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 182,
+      "sha256": "c2ccce727a1b00bfdf80f47e9094749c694475460bfc399857f5f91933114f17"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/owedbook_lint.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/owedbook_lint.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 18402,
+      "sha256": "0556dda73cc005cbdd1b6723f7751a75216a1703233bd3683514cd042e46d905"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/owedbook_lint_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/owedbook_lint_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 144,
+      "sha256": "76e9f730c12cbc6510aeb9e3d65ea4b911f2db76c0908366eba4172d9d35ff6c"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/owedbook_typecheck.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/owedbook_typecheck.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/owedbook_typecheck_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/owedbook_typecheck_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 148,
+      "sha256": "70a50f4978c6f4349497f8596013539177f1a731fcbf4bc4e356b6dbedaddd13"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/portal_jest.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/portal_jest.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 150,
+      "sha256": "4c9c0b4a77bbee46e410872a02acf4754454ccd1c637b9614783eba1048be8ba"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/portal_jest_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/portal_jest_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 197,
+      "sha256": "18005dd21e8ddc722faacd61cb0f4b057b1b4160f8f53371927a4b4e756fca82"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/portal_lint.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/portal_lint.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 13592,
+      "sha256": "812d7a8a9e33e862f30dddf3e80c2ba4ca469063b4421357af3c5eb6166186ae"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/portal_lint_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/portal_lint_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 159,
+      "sha256": "730327f865a02d46fe8929e3758a8cccbbbc4fe54f4ff7b88fe21b276e2951e8"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/portal_typecheck.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/portal_typecheck.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/board/portal_typecheck_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/board/portal_typecheck_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 163,
+      "sha256": "39032f08f128caa47d9f64baa11e527e61065e4dbaa0653b5ca2c4893b5d8a83"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/browser/ob_staff.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/browser/ob_staff.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2467,
+      "sha256": "b0a517f32d990ef53ec98f179ab0007263b6c9aa6de83cdceead084096b599a8"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/browser/ob_staff_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/browser/ob_staff_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 339,
+      "sha256": "61cc93230dd8242b1d0bef76495a2500b998a4f3d42ec657b810cc68830465f8"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/browser/portal_regression.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/browser/portal_regression.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 4466,
+      "sha256": "75c340edcfdcacc701a3501da973634c5471db53188dbaa909d5b8e0d1ccf80f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/browser/portal_regression_attempt02.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/browser/portal_regression_attempt02.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1141,
+      "sha256": "0391b222ef0da4bdd635d11df17e316728ecff1e6fe82a9cb2b202f5a4a63bf4"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/browser/portal_regression_attempt02_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/browser/portal_regression_attempt02_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 419,
+      "sha256": "ff7b168023f73dbe9e6bd1b395305b7c4d7ee8a35aca3bc6f597f211679fe893"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/browser/portal_regression_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/browser/portal_regression_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 438,
+      "sha256": "e2f954c70220354796d61ea776b2957b2c97b514be62d5cc6e80488619785554"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/browser/readonly_reused_sessions.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/browser/readonly_reused_sessions.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 438,
+      "sha256": "5a4913ed2a4808d31e32b8ba15c519f00f9a1ee35f340d8eb5fbc0004cac5f82"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r03/C/qa-20261117-c414/auth_expected.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r03/C/qa-20261117-c414/auth_expected.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 170,
+      "sha256": "85879ad7d72c16908f07d1b8f9cfcc54be3260dd6afce608d6554ab6ceb74190"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r03/C/qa-20261117-c414/decline_expected.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r03/C/qa-20261117-c414/decline_expected.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 170,
+      "sha256": "85879ad7d72c16908f07d1b8f9cfcc54be3260dd6afce608d6554ab6ceb74190"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r03/C/qa-20261117-c414/results.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r03/C/qa-20261117-c414/results.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 743,
+      "sha256": "57312ea47873e1cb9c6dca25b8c760c78717ed7bdb1f38cf465e9bc993957b69"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r03/E/qa-a01-transfer/state.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r03/E/qa-a01-transfer/state.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3557,
+      "sha256": "8f8b78122a294863b0827a441937211cd9de9b2e8da5629e6c679f90cfa17cfd"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r03/GF/qa-a01-cancel/results.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r03/GF/qa-a01-cancel/results.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 690,
+      "sha256": "e51af985f86e0ee25cbb331659a51a848965458f423da9522160387d0da2a3da"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r03/INVITE/qa-20261117-c414/results.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r03/INVITE/qa-20261117-c414/results.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 676,
+      "sha256": "741bea0d00a9578964ea9bac714ae8b427a99f16730b9f9b6ed0ef3d4b8d8afc"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r03/O1/qa-20261117-c414/state.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r03/O1/qa-20261117-c414/state.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 14610,
+      "sha256": "95091ab3a94ad084f142af586f684c8819565c0ca8dd0af1b67ea19b94fd819f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r05/ACCEPT_EXISTING/results.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r05/ACCEPT_EXISTING/results.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 635,
+      "sha256": "a430cf5046865591fdd1d53090c94e7bd8cf9cbe87209a750627161aa98b7260"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s1-s1/result.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s1-s1/result.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3718,
+      "sha256": "9235eb66f97659386385f11728bd736933bd1ad8a6ce53dfc6e03c04769ff6ba"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s1-s1/state_after_recovery.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s1-s1/state_after_recovery.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1747,
+      "sha256": "028afc5db63b6776e5f10614743d9dab17ed4c721f1946d7ceeaa46ccaa9e002"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s1-s1/state_down_immediately.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s1-s1/state_down_immediately.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1548,
+      "sha256": "ea58c713c07a9226eb96a7d3e4cf75cce4e028e9e21a47455dfa4b4343ec662a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s1-s1/state_down_settled.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s1-s1/state_down_settled.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1544,
+      "sha256": "c7e269ed0b8ad7e7d0a9d2e60302c07392322adc8aab686fc6602fe0a0eb57cb"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s1-s1/state_final.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s1-s1/state_final.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1738,
+      "sha256": "29e30a5614f535eabfdd9cc65cad9c179f2786a0f1d7b8e0df03859d596d289e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/result.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/result.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 4222,
+      "sha256": "48d9d861972fce031b3f1fd9a2de336c2d8e81e7bbaf34d37d364c1544f7580f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_after_recovery.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_after_recovery.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1805,
+      "sha256": "dd8b416ec070593efe223270dbc72722342cbee3e1ee2659822118e4c4ff257e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_before_kill.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_before_kill.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1576,
+      "sha256": "fbd8c53850140704cea31bc027fbcf01576f990d5525f89ef56f2fc2cf3c3ce7"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_down_immediately.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_down_immediately.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1582,
+      "sha256": "588d970929e545e5fc629a120f6e8b12be7154ad7a79d83a4d335783c8ffce16"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_down_poll.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_down_poll.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1578,
+      "sha256": "70717e2fe2b89ad7cf16436f032c16a8635f7f642482db44291ed193eb002db0"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_down_settled.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_down_settled.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1581,
+      "sha256": "970289c781c535ab05afa8bb457da0e5286dd0413c8326701cc4c6a45d2157b0"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_final.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/campaign/r06/CRASH_RESTART/qa-final-s2-s2/state_final.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1796,
+      "sha256": "941eaf9d88fa1d480f995aefb3d4f6120c543f6bba53556f1508ff1c4aa5d75f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/effects/counters.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/effects/counters.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 322,
+      "sha256": "abc47bf2f40eedd19059ec6546bea0e7475b0aeca14cd8cb7c2798712b551f24"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/effects/dry_runs.jsonl",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/effects/dry_runs.jsonl",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 55344,
+      "sha256": "374a69dda14ef69b09c0cad871b2f84f0a69de6992da2936ccf84929bf5373b7"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/effects/ledger.jsonl",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/effects/ledger.jsonl",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 163811,
+      "sha256": "d357a4a9568930fdce3d37eea6833731f9b85473dcff2477e092aea45bf2ae84"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/late_outage_refund/diagnostic.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/late_outage_refund/diagnostic.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 394,
+      "sha256": "007ba237720cbe208545a24828671e6d8e3e36d7b79cc8c1437f1eeb32263788"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/late_outage_refund/redelivery_and_reconciliation.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/late_outage_refund/redelivery_and_reconciliation.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1302,
+      "sha256": "2ccb230a5f96d5a8e2fbf39e6376057c078d598f426741728ee238dfd277e562"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/late_outage_refund/result.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/late_outage_refund/result.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1838,
+      "sha256": "05c35d14f3e14bf6efbf136d7709c173f2f52f0c922c85a944a4636d5170dabd"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/late_outage_refund/timeline_facts.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/late_outage_refund/timeline_facts.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 606,
+      "sha256": "bcb6725f9d6a264c2925fbc805086d6d2cfcab2d5f70dd204e71c4571ed5ec6a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/migrations/forward_fault.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/migrations/forward_fault.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 845,
+      "sha256": "aa8f3a7c2a7b046c8f8050590c2ad5b65cb6551317a43026592f2f9be229856c"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/migrations/forward_resume.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/migrations/forward_resume.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 778,
+      "sha256": "e39e8eb3cd8145463b1ca3c40e6323449aa911fef234b2b2ab17d94f1684d35e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/migrations/fresh.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/migrations/fresh.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 522,
+      "sha256": "5048ab8f75aacbc11090d4bfc56d38dce805313f8a02234da6d0415aec3a743e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/migrations/fresh_attempt02.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/migrations/fresh_attempt02.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2847,
+      "sha256": "2d8e7a1342281cc596c9dc5b7b4a0846640f17273d19476811bb3a65c44b0ee9"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/migrations/fresh_attempt03.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/migrations/fresh_attempt03.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3000,
+      "sha256": "23b745e8a50cc541534d64a7e7684757c9f8ffce270db16d14c9a4b21f77dfd1"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/migrations/remote_readonly_catalogue.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/migrations/remote_readonly_catalogue.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 44730,
+      "sha256": "a0d0aa9e2512a982515b0d17dce3758eaeeb82fd796e3ee376d519eb360ec887"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/migrations/sql_fresh.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/migrations/sql_fresh.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 14272,
+      "sha256": "06ae12fbd725583e640c19add8f1e6f6e25119fc08e4039361bff0d994518fca"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/migrations/sql_upgraded.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/migrations/sql_upgraded.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 14272,
+      "sha256": "06ae12fbd725583e640c19add8f1e6f6e25119fc08e4039361bff0d994518fca"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/migrations/upgrade_baseline.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/migrations/upgrade_baseline.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2667,
+      "sha256": "2da9c40e6b4c8b133516f3902cdff08d767d32e806f2e0168436db10276d1126"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/money/independent_expected_before_campaign.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/money/independent_expected_before_campaign.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1675,
+      "sha256": "1f541bbbadb150680726cd42f98dd588cd268b7ca6d45f5f0fde21d8e9fdfdff"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/automatic_event_discrepancy.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/automatic_event_discrepancy.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 591,
+      "sha256": "220603e439526f1fc03d0e225a1fd8e2c9d084d2db2c110bbd9788b61bad8f13"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/bundle_controls.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/bundle_controls.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 290,
+      "sha256": "0c71ec478c0fff7be6f84ef78dccfbae77a3eb4cec5602cdc7f7bbf6e7e05c45"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/cast_provisioning.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/cast_provisioning.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 706,
+      "sha256": "08e74d3061f05c3efc70f048b9a56252858a3de31b44cffb91f6fe9de9a1275e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/manifest_ob.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/manifest_ob.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 51208,
+      "sha256": "ad189491ed9d0c7af9a30990912fd54fe05dc750d72403ceb6196918abfc0865"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/manifest_pp.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/manifest_pp.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 38763,
+      "sha256": "2322ee4107036a53fdb260dced6f2f12e68130d013687ea185c88b6e7ab99b7a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/owned_runtime_event.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/owned_runtime_event.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 871,
+      "sha256": "4d992de617abbe36214f07b59666433a133fe8a334440893b75a4ef55b230e76"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/privacy_controls.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/privacy_controls.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 289,
+      "sha256": "594417cd84fed7db421eeec151d53c1c0d452f1f0b6627f49f6912263dac5d5d"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/real_cli_resend.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/real_cli_resend.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 878,
+      "sha256": "d958ab62622459732efef6ed0b90370346e51ba344f580734b5cac7229326afe"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/release_identity.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/release_identity.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 654,
+      "sha256": "8c329ff0676e01c073d02f1ff83958b1dc6793d9cc019f6a0c6a2cc1537c3496"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/retained_resources.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/retained_resources.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 641,
+      "sha256": "0454f70f856dfeafab0b6dd7524211c28f81618baae246c49149afd70ce34cf4"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/role_fixture_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/role_fixture_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 541,
+      "sha256": "af3d7b5702bdb60242dbc2daf5fd8673a4984fd972b7e8076b93b35b3fe7432e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/runtime_3000_3001.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/runtime_3000_3001.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 721,
+      "sha256": "869fa339243a110a8f224b1954d8cbe6eb344853aaf286b5a52ef369b1ed95bd"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/runtime_3000_3001_details.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/runtime_3000_3001_details.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 334,
+      "sha256": "eb1150ba1565ea97af76d18b673b48620b02ef83726320f5b6b349d3d4cb007c"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/runtime_recheck.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/runtime_recheck.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 753,
+      "sha256": "f591368c4efa7edc5743035ec0fde235f24290fdc93f84c2f4a19bd6750ce1bb"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/served_after_outage_ob.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/served_after_outage_ob.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 900,
+      "sha256": "a0ddaa3f180fa967e8c62fc11b36255eaa71f0b3322440595d3edc01ceebb36a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/served_after_outage_pp.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/served_after_outage_pp.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 900,
+      "sha256": "32cb54ce4608a89e82deee31a0e8389cd84fea55aa1f99462cd1a928d421ad7a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/served_ob.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/served_ob.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 945,
+      "sha256": "a78c64f5d81b45bdba5076d4c0aafc240ebf376e308cf2bd9ddac7094f7f9971"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/preflight/served_pp.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/preflight/served_pp.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 945,
+      "sha256": "485ea4443fd57dd952b7adac62efa080cd54ef9f1f45ec6053778d4337f255ad"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/roles/direct_user_boundary.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/roles/direct_user_boundary.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2750,
+      "sha256": "20ed57e672b65d7e8510af3695f72c77cfc8210417dc22289a6dad98eee56bd1"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/roles/invitation_abuse_oldjwt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/roles/invitation_abuse_oldjwt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 596,
+      "sha256": "1ec10e9bc971e971ee1a8f367c337f45e23a87161b3e879325aa35751a0524ed"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/roles/portal_denials.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/roles/portal_denials.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 8476,
+      "sha256": "2bc8b3d400be5b0d3f30aa3713de49297ba532433f5797e22b8f6f910f16694a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/01/roles/portal_denials_followup.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/01/roles/portal_denials_followup.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1811,
+      "sha256": "a376b0a118dfd406e9063dbac3eb58a53297a27d1ff04fced512d6c7471e70e3"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/action_role_matrix.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/action_role_matrix.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 36400,
+      "sha256": "88c3f213ce288a836bbcac06bd2c378bfcfe90e86447cddf71c9f46fe3884246"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/action_role_matrix_fresh.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/action_role_matrix_fresh.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 11299,
+      "sha256": "b2a30e80509faadf19eeab793017e953e15d1b2776a04dcd8c3f3e359cba1f0a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/action_role_matrix_fresh_attempt01.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/action_role_matrix_fresh_attempt01.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 592,
+      "sha256": "4de52403b15a28d23254dce41e270f5df9b5605b2cc4d4975ffa1786ad5f47b2"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/admin_existing_actors.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/admin_existing_actors.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1764,
+      "sha256": "676c935ab11230be9e9c86b9115b24eb29894dcfabdc77d1cf22c0f7285e7973"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/admin_recovery_and_protection.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/admin_recovery_and_protection.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 834,
+      "sha256": "c556e9c5a59f1f12cedc51c8a91d926f5ad1e16c05fe779802f4c9f198088398"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/auth_checkpoint.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/auth_checkpoint.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1191,
+      "sha256": "5bd53a63d0b317b2a512953da85c005d0c14d680dea75e9cdccea39651da49c7"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/automated_completion.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/automated_completion.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1293,
+      "sha256": "9ad410318c8682f6412855d4d11b17205a74b0a8307e0ca5fd3838a57038eeb6"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/automatic_payment_event_correlation.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/automatic_payment_event_correlation.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 29002,
+      "sha256": "f9d30d78330a31a60130c6a887df8704a8532c8fd94eed2cc71ca417c31c06b7"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/automatic_payment_event_correlation_attempt01.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/automatic_payment_event_correlation_attempt01.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 26585,
+      "sha256": "c3e63bdd7dc543c7af87a4ffebb81a5289dad72286966a25173c173f7995b7fe"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/checkpoint_runtime_identity.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/checkpoint_runtime_identity.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2391,
+      "sha256": "9d8257d894e62cee8c54728407b84075e9f519269f670994911935a543056a35"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/checkpoint_runtime_identity_attempt01.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/checkpoint_runtime_identity_attempt01.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1754,
+      "sha256": "8517afab5af3f5453c3c99a1bb2115c281ac8d56beba2209687b50408900ab71"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/director_fresh_signin_requests.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/director_fresh_signin_requests.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 731,
+      "sha256": "09d099cf201554bbaaabbdb36a1db4406ff1a2deda62e2b95215084c9c4ef8cc"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/director_manual_observations.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/director_manual_observations.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2107,
+      "sha256": "3bef5881f321b0e2cf4388655cc741cf0537055142fe8dccc407e66dc49b3dd1"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/expiry_void_race.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/expiry_void_race.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 6250,
+      "sha256": "d65f6605b50cdd55625b40fe0aaf37396defeecc62d0af905579e4f802d69d57"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/final_registration_event_receipts.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/final_registration_event_receipts.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3488,
+      "sha256": "2c3c0698ab6b63829102883808531aa18ca0862338823897515f8d503c1984ab"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/fixture_inventory.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/fixture_inventory.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 7878,
+      "sha256": "52863b45929e6201a30d299852c54f944bb4ea39ac9e40d346a84eb62857524f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/foreign_binding.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/foreign_binding.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 696,
+      "sha256": "22ea0678b786d11f604628a3cd3a5b214d731e3773c4f40f6994f1892a1fc0b2"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/fresh_own_store_reads.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/fresh_own_store_reads.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1014,
+      "sha256": "f6bbc688ed3e90aa07498deade794858ab0f832316d39e7c71a07e05311ff6bf"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/fresh_role_pp_handoffs.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/fresh_role_pp_handoffs.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 477,
+      "sha256": "c60761694ce81263d55374915a9f4d58e7b9aed58082a1cface618b5bb40b1aa"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/fresh_session_cache_instrument_correction.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/fresh_session_cache_instrument_correction.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1034,
+      "sha256": "d31298db76ef5844d3c09e350130ea14c32ebbf79c3a8e7fa7ff9f4336a24090"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/fresh_trusted_boundary.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/fresh_trusted_boundary.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1337,
+      "sha256": "3cfbbeec60a07bca541047b32714bf8d5f1a1af9287290497e4e25062b38f526"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/friday_resume_input_runtime_check.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/friday_resume_input_runtime_check.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2838,
+      "sha256": "1e7c4525015a7246d090a0c7e10717baa8cff2e5ec56440c8f008e7007d4e81a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/grouped_browser_confirmation.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/grouped_browser_confirmation.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2105,
+      "sha256": "d6563f0b68d1ca11f7c48a1a29e92288f6212e586bd1535107edb90ca255e170"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/grouped_session_pending.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/grouped_session_pending.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 545,
+      "sha256": "a71751196cd587125f2fd6e39d6d93a24b9ce0841aee82d273fc4711220b8b2e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/grouped_session_requests.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/grouped_session_requests.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 743,
+      "sha256": "87cfc289667f088f808fc7a574c21c975129e65dae5c28871bc7047be23cb4e8"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/guard_lifecycle.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/guard_lifecycle.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 6714,
+      "sha256": "298c82a11a55c5d1b097758903b3da676c055bac539b2ef0161cb1f0b857d17d"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/history_and_last_store_cancel.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/history_and_last_store_cancel.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2016,
+      "sha256": "d8e4bfdd236caf0c4a5793f2f988be5f3b2a4945e05f9c9567bab3a6fefc5190"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/instrument_followup_corrections.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/instrument_followup_corrections.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 959,
+      "sha256": "25051fb71de26942e05cdc4dabf8228a3a0b0e27bdef81a5588ac2a7bb09b36e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/invitation_controls.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/invitation_controls.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1700,
+      "sha256": "5c5d8f8e084a7f872da52ddd24337791754d305444e29e0caede14ba27d32317"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/local_notice_faults.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/local_notice_faults.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1204,
+      "sha256": "a488cecfb1ee183bc4deef2697c7af76051710e06ea9cfcc4ab1ab9c2d8bf528"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/logout_cross_app.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/logout_cross_app.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 517,
+      "sha256": "2a6ec6c241771df433f51f0788fe5390ec9ca4df41d19e0ff0b7dfc5b368997c"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/migration_preservation_digests.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/migration_preservation_digests.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 5528,
+      "sha256": "c9361cd0a6f3c6c40e9e5b4f9b6d62f39e8ba463fe86c4c02d8447e30bddf3ee"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/notice_dispatch_faults.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/notice_dispatch_faults.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3601,
+      "sha256": "d36bd35db686b3ffa8bbcbf3651dfdafba6631249f1f179e1fdfa9d20efc43df"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/owner_recovery_audit.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/owner_recovery_audit.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 5557,
+      "sha256": "4d118624048668ad1252574ac2cc64ada41964cb09543a3bcfdd9eab9914adda"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/phase_exit_precheck.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/phase_exit_precheck.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1102,
+      "sha256": "3c0f5bfd67e1d3c8d3d6c3ef9875a686ff91551ce0b86868b8997cde9a014327"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/phase_exit_processes.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/phase_exit_processes.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2433,
+      "sha256": "ab035f8e641f654f7b16b454bdda6f8f4749587c1e5f2024b6fbe205ce87abd1"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/pre_exit_candidate_inventory.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/pre_exit_candidate_inventory.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3238,
+      "sha256": "3ec6bef755f26cf1279c52346658d10857d827f851ba48ecd37c9a3ed5f0100b"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/private_questionnaire_preparation.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/private_questionnaire_preparation.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 737,
+      "sha256": "96012ae159bf1514e6242690063608d1b33a7d4d2e4acb9fc092e5e591d75374"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/private_retention_modes.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/private_retention_modes.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 220,
+      "sha256": "44f4b74442ce47ce93d388bf2b307e22a672f14bf88518a27d7a51a6ec9f01e8"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/reactivation_authorization_only.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/reactivation_authorization_only.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 283,
+      "sha256": "f3f1fbb63e2abf93ade2867d3cf7355d79f32e1657158b4413a9185f580a9bac"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/readonly_membership.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/readonly_membership.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3696,
+      "sha256": "2a36ccdf807c19ea2b0af2ff7654e87839fd6b25fb2b6e51a653780720cd5e9a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/reminder_recovery_before_dispatch.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/reminder_recovery_before_dispatch.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 627,
+      "sha256": "4ca6d06c6301100e6a8b339610791be8e332e5151369eff46de68146ba4f0c0c"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/reminder_recovery_followup.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/reminder_recovery_followup.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1030,
+      "sha256": "e647ce1469a88635045a01466261aa45eb02d1c891a500d3e8a89a23d119564e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/reminder_second_cycle_diagnostic.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/reminder_second_cycle_diagnostic.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1097,
+      "sha256": "c4f177e48b56534f1773f297536a8982c37eb010d517e6245c3087aa3a2e7a9a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/resume_binding.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/resume_binding.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 618,
+      "sha256": "014d081e5f89ba62e0d5caa8393b05cbf123cf0df605c5acbb9bc91051f5737e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/role_matrix_a01.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/role_matrix_a01.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 8385,
+      "sha256": "e66bfe5a757312981994a392b5a9876bc6b1dac7c3b18927464d4a9c3446bab0"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/action-role-matrix.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/action-role-matrix.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 41,
+      "sha256": "5f0ab4fae956dfa3baf603555ac0b388564952821853b79b6ab66824a04048a9"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/action-role-matrix_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/action-role-matrix_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 374,
+      "sha256": "cf5cb04ad2cddf8a49fff9939576f0354b5501cfeebdec57cc917d86a8c4f0f4"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/admin-existing-actors.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/admin-existing-actors.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1112,
+      "sha256": "7a4884d24d3a117f547ffb162ebb773af68870ba3157cc3307b2383f43a1aaf1"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/admin-existing-actors_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/admin-existing-actors_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 377,
+      "sha256": "b90d09e3ccfcd9c976863693ffa523abf78442f4aa653b43f8e5a9d13bbe708b"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/cancellation-ownerb.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/cancellation-ownerb.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 560,
+      "sha256": "9199c6acc862fe035ab375a4c6c664cabaedd1a59d3ac64a8982365db870dffe"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/cancellation-ownerb_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/cancellation-ownerb_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 488,
+      "sha256": "1a5b9fe4c555116a95caf158697fd47d943b3696fe05c0ce27878b0cdf772658"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/delivery-correlation-final.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/delivery-correlation-final.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 100,
+      "sha256": "f6a5894134957297538e083b69a2e3ffae789b3150f72f25a2c7776a977f0af6"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/delivery-correlation-final_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/delivery-correlation-final_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 463,
+      "sha256": "250d29c359e37d0cbce6cb0b184ae98aed7025e0d2571818783f6b195fea0d24"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/delivery-correlation.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/delivery-correlation.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 100,
+      "sha256": "01ffe25947ff183fe84758308b0c08aa901dde55a8c5d91ea57a6949ea9d787b"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/delivery-correlation_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/delivery-correlation_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 376,
+      "sha256": "4b9a74a5ea8eb5d57884e94b0a9e0cabd82caa7305a3d9a4055c2ee5c957c147"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/expiry-void-race-current.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/expiry-void-race-current.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3132,
+      "sha256": "41707a45423696fdbf46d6b738667c4e95b3baa183db1f0896627ff266aaa3f1"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/expiry-void-race-current_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/expiry-void-race-current_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 372,
+      "sha256": "7c984a8a2ac57f3a3b8ec13bdc94c251c508c136da1f2b2295080d84e997523f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/final-registration-events.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/final-registration-events.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 63,
+      "sha256": "e18a6ad364af442cd0a7bbd49a0cf80589c94a3226b7aeb1b7e0c0376fb77b12"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/final-registration-events_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/final-registration-events_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 468,
+      "sha256": "c67433bb79bfb878c2562467135a9ba48a903071ee8882a45dc01c4091f1b087"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fixture-inventory-final.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fixture-inventory-final.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 638,
+      "sha256": "f6c948fb6ee933f9afd7ed94e4ba5cc771d9a2eeee2dcad6917b04017b9a12f6"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fixture-inventory-final_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fixture-inventory-final_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 460,
+      "sha256": "9d1103c1fa332645d5d323c3cede5ffd5f4cfa97401f2bb39cb3caedffc21c6b"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fixture-inventory.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fixture-inventory.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 638,
+      "sha256": "a4897f0e3d95847609e107ae86f09fabec1c6221605c15769aca09a716ab69b7"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fixture-inventory_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fixture-inventory_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 373,
+      "sha256": "5697db0dc9a1b3bb995df5aa639ed91b93bd40f6b4e845afe15ce47933ba7eda"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fresh-own-store-live-01.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fresh-own-store-live-01.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 781,
+      "sha256": "4409b6655f81a596cde65049e7568504c2b10e9e2b20367744c9666eac7ab9fb"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fresh-own-store-live-01_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fresh-own-store-live-01_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 464,
+      "sha256": "8e987c1ce7d6e8f9cf75d3ecd1afe7c91f30ce69200805eeab3943d925f4ca0e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fresh-role-handoffs-live-01.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fresh-role-handoffs-live-01.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 406,
+      "sha256": "da390f4e0210cc14632454eb1b426142da6cf84ba86c9abcb4c94fc21d1ae63e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fresh-role-handoffs-live-01_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fresh-role-handoffs-live-01_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 462,
+      "sha256": "0a7754d512d055c20b6931f8b3e1a81557fbfaf5bd6bfd3a244d990c4e3bdbaf"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fresh-role-matrix-live-01.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fresh-role-matrix-live-01.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 50,
+      "sha256": "bdf314c1f4974fec002a4b335e4a617db6527bcce25faa0d7d94b42a510483f9"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fresh-role-matrix-live-01_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fresh-role-matrix-live-01_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 476,
+      "sha256": "ee670ac86b400fba57acdec55d843e5a5aea8e34d4cdc8ae72f7e233d798e4ae"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fresh-role-matrix-live-02.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fresh-role-matrix-live-02.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 39,
+      "sha256": "124c03c09bd39a2f86dd7b6b3180dea1f3d41b33ac55a57ba3c26e6b5a4a7815"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fresh-role-matrix-live-02_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fresh-role-matrix-live-02_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 476,
+      "sha256": "7008a4299038bf4965d5e3da69d22e6fe36a90ecba737ae291c7de3e01e061b1"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fresh-trusted-boundary-live-01.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fresh-trusted-boundary-live-01.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 41,
+      "sha256": "14859b7c139f06ae1a0ce9f185eb727d5974ec2ed10c3e9935af5f85b2275b63"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/fresh-trusted-boundary-live-01_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/fresh-trusted-boundary-live-01_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 465,
+      "sha256": "e44ffc86bafb93a843340d7ed63b55bb40dd1083b9462bd0e3a92a262ab84537"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/grouped-confirm-live-01.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/grouped-confirm-live-01.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1683,
+      "sha256": "3c51f4df2cf1fb68b2e21b25fe8b93c1846cd5f258585c92e9460956553499a3"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/grouped-confirm-live-01_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/grouped-confirm-live-01_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 458,
+      "sha256": "7c1492d4930caba40bdfa796f3c62109fbd1eb62996844f34fbcde8fec76ef39"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/grouped-confirm-status.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/grouped-confirm-status.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 108,
+      "sha256": "585676b13b013c60138679db685aef3fc47afbef3316d547d56697ea63db0280"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/grouped-confirm-status_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/grouped-confirm-status_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 371,
+      "sha256": "1b26461cc71b0104f7ffc4478f0d8a43f04077d2bf76333ef9b6cad66310720d"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/grouped-prepare.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/grouped-prepare.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 519,
+      "sha256": "c87331a862a704243f87a48c6df4627872b7c90f563511b9e5509393ca45d52f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/grouped-prepare_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/grouped-prepare_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 371,
+      "sha256": "c66010a709803cbb4a96814272b0ff0ce9a6c43c210a2f7fd65c2c3ed8bcc897"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/guard-lifecycle-a01.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/guard-lifecycle-a01.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2147,
+      "sha256": "09d33fa19a7b1b578578d83ff4158dd347093a4b8fa56316bc4540dc79da503a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/guard-lifecycle-a01_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/guard-lifecycle-a01_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 371,
+      "sha256": "faf9a3c0e90516ca4b04aa5a4d10c45941bca8046607ea16e1e49cd878dda04e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/guard-lifecycle-settle.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/guard-lifecycle-settle.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1329,
+      "sha256": "edb4895e3f99894ef256a26b6af89c16a9e6c4ff04fd69d067d0a66947c9030c"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/guard-lifecycle-settle_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/guard-lifecycle-settle_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 371,
+      "sha256": "320da80ab83a79f2b25a7f8cf13b70eeb9de5bedc201def145d9c4cf55bccf64"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/history-and-cancel.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/history-and-cancel.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1497,
+      "sha256": "3dfc3f6eb0530c5f701f456639b53d500e6e994afde6b5d0b87d474b2c9d09c4"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/history-and-cancel_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/history-and-cancel_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 374,
+      "sha256": "a21349b2b1c2e1dbb29815d0aed94bd9b96066f1546131b017646bcc04da00a3"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/hosted-payment-crash-s2.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/hosted-payment-crash-s2.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2329,
+      "sha256": "2e6d41a1c4915cf2f9304dc4de394737236f640ca7d6b9fa621f57a9950cfb0f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/hosted-payment-crash-s2_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/hosted-payment-crash-s2_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 494,
+      "sha256": "3c0c84d67165c5a7c1caae0ebc7a63523286e65919a1e15768605319d68c3923"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/inflight-payment-crash-s1.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/inflight-payment-crash-s1.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1981,
+      "sha256": "b2295348abc967445f6acfd0bb3beae848135eeeac6cbc7b4afd8e6bca61c537"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/inflight-payment-crash-s1_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/inflight-payment-crash-s1_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 494,
+      "sha256": "e7124c3a95ddb278054abaa5e450d8aa30d37b6add3a74db93d2ea177887d24e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/invitation-controls-final.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/invitation-controls-final.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1139,
+      "sha256": "b697e56b6086c89b526fd687655ab8ae4e7fbaf3107f79d4108d3c1e3857978b"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/invitation-controls-final_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/invitation-controls-final_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 375,
+      "sha256": "2efcea6b2cbf73a48ec0c84b59a5c9aadf77508721cd5f69169f2cdc049051db"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/local-notice-faults.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/local-notice-faults.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 721,
+      "sha256": "a2d42474dfdce85a713a39ce9ec2b6a551c57e391c03d80a006e714001995425"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/local-notice-faults_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/local-notice-faults_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 375,
+      "sha256": "84b2d2e2589c1fcdc1784cfd659efbf1eda3319ee382a6fa2afc3c6de966cb22"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/logout-final.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/logout-final.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 456,
+      "sha256": "f70b99465d030c38b999710b02d90234020115112383afa4d29c9ae1949f2d99"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/logout-final_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/logout-final_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 368,
+      "sha256": "1a0c8b6068b991b21f7de50aea580fc7cc7ec8a766d128e8ed91ada25d28f5fd"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/migration-preservation-02.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/migration-preservation-02.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 321,
+      "sha256": "1ec8a93ee664771b9d358c19e1e6ccd04f3557aeb9aaa79c8353d997d0d65cfa"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/migration-preservation-02_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/migration-preservation-02_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 378,
+      "sha256": "207512cd10548923a1e87f685fb58652f34d3bf0aad28c028eaf77eb6a7b62bc"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/migration-preservation-03.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/migration-preservation-03.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 43,
+      "sha256": "47d29e925f21314beb274b6d606d11355d9fff34b0601131cc14e579e74d01b6"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/migration-preservation-03_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/migration-preservation-03_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 378,
+      "sha256": "5dc2ccdc777407472e757324d3fff589ec69a9c55a90ca9e274854b643e1df6e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/migration-preservation.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/migration-preservation.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 51,
+      "sha256": "304f34973dfea753a7bfef6ed8aa79d078ab41eea6cb53a1691911a16afcb451"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/migration-preservation_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/migration-preservation_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 386,
+      "sha256": "97b94c7dd56b68d2f00e4cccce324e0cd3d9ba7882134c6e3ef543dd4573b295"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/notice-dispatch-faults.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/notice-dispatch-faults.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 50,
+      "sha256": "ae6c5926ff6a68566bccff34022014e36d669bd3bc55f0aa2ed11c09f201eb01"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/notice-dispatch-faults_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/notice-dispatch-faults_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 378,
+      "sha256": "6b4a0bd2361b67901a0b501f02f6b63fd1abc501903a87a2db542e9881e120f4"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/owner-recovery-eligible-member.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/owner-recovery-eligible-member.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 43,
+      "sha256": "b041e1125cc13e11ae61dc43e486588f517790ce185e8d27d378e5e921d2fa23"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/owner-recovery-eligible-member_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/owner-recovery-eligible-member_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 370,
+      "sha256": "f845553c5b4237737dc4439dd8130b2645376b148950f87ff75c7940dff85769"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/owner-recovery-valid-fixture.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/owner-recovery-valid-fixture.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1221,
+      "sha256": "e8640f42dc097ab042d7b089a66457fffa247ff30a119c039708312ef3e42fa5"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/owner-recovery-valid-fixture_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/owner-recovery-valid-fixture_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 370,
+      "sha256": "c2efe6bf6cb7c04923030ef579a4ffeadec286aedff6f3ea956d446d9a5bd08a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/phase-exit-apply.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/phase-exit-apply.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 114,
+      "sha256": "d80dc282327bcc333c35cf09989a4a7f5d0ac31956373fe81b84e661684b722a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/phase-exit-apply_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/phase-exit-apply_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 468,
+      "sha256": "dbb74806c447a42164d16795c868c78570ab3e1c54b1dfd1e02d99b7b371da4f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/phase-exit-precheck.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/phase-exit-precheck.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 157,
+      "sha256": "91e8f3e35dc16a781053243834a41cea4aa813d56740e30eb4755f2ed5afe0bf"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/phase-exit-precheck_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/phase-exit-precheck_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 453,
+      "sha256": "4ba5c34b46dca5b807553872f7a4be48aee28bde0e8e80f9f80f96d734bb74cb"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/reactivation-authority.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/reactivation-authority.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 244,
+      "sha256": "76f1948716d5bff200f01e268c8b79d30f0ca0e16a4658df401944d8ff2308e3"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/reactivation-authority_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/reactivation-authority_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 378,
+      "sha256": "51c24e213b9cf470eacde5b50768adbb63b6051d222978434ea1e68f87260fee"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/readonly-membership.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/readonly-membership.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2470,
+      "sha256": "3ad10ef38cd70de46bcf5aa98aed895cd1120238006c3376b24b54faaa494eec"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/readonly-membership_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/readonly-membership_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 375,
+      "sha256": "0c708af68caecfd932e8c1696ba637f4ec62d038f15b8d9a3e1c97d2b4513a12"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/record-corrections.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/record-corrections.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 822,
+      "sha256": "4fdf1d5c653b925c3c814ac74abc975fd0d75a03f5082407c6f99858d61065eb"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/record-corrections_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/record-corrections_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 374,
+      "sha256": "7f4158be06459f3a6b973b8e565ce92ec5303dc433a0c838b5f3134267a67fe4"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/reminder-followup.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/reminder-followup.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 921,
+      "sha256": "17da4c67377b19d9fb9ef170c00c2ab393812d66d20539420e0ccaaef009ccd1"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/reminder-followup_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/reminder-followup_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 373,
+      "sha256": "71e5bf07ed484dc7f7f81b2bb6d4686e54195b728c8f13c70c0e7f46c901ee18"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/reminder-recovery-first.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/reminder-recovery-first.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 524,
+      "sha256": "85570af153e29db3b553012ce1ec657ec1fb83da0dcac36eaf77c2b5556c9e39"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/reminder-recovery-first_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/reminder-recovery-first_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 379,
+      "sha256": "3111a00800bd240e3c6b0ad596fcdf817ece49474ca72953713f666bea25dd29"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/screens-final-corrected.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/screens-final-corrected.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 138,
+      "sha256": "558af23f59f7c75de30dac222282c78f63bd0b33b18f93fb4aa875469d9e3202"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/screens-final-corrected_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/screens-final-corrected_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 369,
+      "sha256": "36904ff8f0692d3158f1de624417c4a81968c8ecaf3b365b108807ca6fe6b380"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/screens-final.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/screens-final.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 515,
+      "sha256": "2172e7cf4abba7d7c645d505981c5dd6051f8ccbdd61807e331be2ecc4481a5e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/screens-final_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/screens-final_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 369,
+      "sha256": "77531000fdacf8875109fb7dac5ced7c1e1714dd975f32f689d797d3e7712883"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/signed-in-first-store-live-01.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/signed-in-first-store-live-01.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1013,
+      "sha256": "2256773a82a8aba05c82083c15d9da5623678cd877d43aebd1d232ed2f943430"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/signed-in-first-store-live-01_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/signed-in-first-store-live-01_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 464,
+      "sha256": "d05f4d29e913d18b77ea70de02b6e65264d0dbafbff7e07f4b9724389a11d034"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/skip-link-investigation.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/skip-link-investigation.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 36,
+      "sha256": "300d608dc1734d22c30b5f6ebdfa5b733d5faefe6cf866eb2ae207665840aa29"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/skip-link-investigation_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/skip-link-investigation_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 466,
+      "sha256": "c1bf559c3182fac5bbbea8933d82e4a915a18338a45497c571b5e6bcfccd6f0c"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-cancel-account-buyer.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-cancel-account-buyer.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 706,
+      "sha256": "100dc247faeb3082e935c90cfa8e312aa8fd40508d0b95cc9419c77ed3755bca"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-cancel-account-buyer_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-cancel-account-buyer_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 371,
+      "sha256": "8f504fd66d93e4be337f792777350c82f33968ab8ff7d0defc57bc472eebac19"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-cancel.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-cancel.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 37,
+      "sha256": "3da6a1f4d362898043aa040c6350b5df3166b572900ca910d666bc3fe9b089f2"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-cancel_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-cancel_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 371,
+      "sha256": "150fcf74eebb2ed7ecd2483762bf2d19b5ef0bf1207155425185e3cb2add2707"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-deliver-verify.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-deliver-verify.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1063,
+      "sha256": "bd55d3cb67e399e8ad679e0056d1b62336af1a8bf7030ad05698da44d8311e6c"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-deliver-verify_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-deliver-verify_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 495,
+      "sha256": "92a2a6ab32552acc2f21b8859602e7e177e2d760fff052d4f79dcb44c3491943"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-final-live-01.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-final-live-01.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1402,
+      "sha256": "45046cc9cf56869c6fe64ffdf615ca47b49719dfe841d8cd48f5896d0eeeaa7f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-final-live-01_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-final-live-01_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 464,
+      "sha256": "056282978185506ebbb8cad29f93d1addb2bfba193b657b828d2549bccfbdf75"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-register-a01.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-register-a01.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1164,
+      "sha256": "969204f6d6d760028df473ab909932bda75370d5a528d80ab0bc845be49cca68"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-register-a01_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-register-a01_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 497,
+      "sha256": "36e96ad525ff3937f0e3245a5b6fc5e01ca61d7e895c175052ada66a1493ca9b"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-same-session-completion.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-same-session-completion.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 103,
+      "sha256": "b5da7bdd613fda6881c9e87b09ea4a3f7850a7439895049bc6d723721f9ed055"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/transfer-same-session-completion_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/transfer-same-session-completion_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 515,
+      "sha256": "9bfe26aa25dd458d1c8941e54867b7731db09b32b5ede42bf789cc559333e922"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/webhook-negatives.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/webhook-negatives.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1058,
+      "sha256": "53892c14e9243705653d55a86dfaa419d09aefedf27707af5b7736f8560c9d0a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/runs/webhook-negatives_receipt.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/runs/webhook-negatives_receipt.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 373,
+      "sha256": "e4e19d7e3d98820468497f77e91e4a1328af7511befa57a0ec39a709cc0d8ba6"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/screens/skip-link-fresh.png",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/screens/skip-link-fresh.png",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 35099,
+      "sha256": "2db643666a4a69546f31aa714e8a4ffe0ec0826e7c85749e5aacdd05a1e0769e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/screens/skip-link-one-tab.png",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/screens/skip-link-one-tab.png",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 34223,
+      "sha256": "690484f6481d7e044edb8cdad46d1f994e425ff528725e52b0b8c28da716bb6f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/screens_final.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/screens_final.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 20015,
+      "sha256": "89b4df1a089e1b553958c1e7e2835c41d63cf0a42d0cf8575af53d2f2f10dd73"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/screens_final_corrected.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/screens_final_corrected.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 24936,
+      "sha256": "3c5ac4728c55cee5a765a1356644e5be7fd6cd85e8aed05a7372db83ff596630"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/screenshot_selection.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/screenshot_selection.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1009,
+      "sha256": "f5650f35fa41350da6812e0cf033492ca2824c058dd7867b92166ed2bb7b88f6"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/served_identity_final_controls.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/served_identity_final_controls.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2266,
+      "sha256": "9efa4655b050a03b4a3ced19d3ad66e406ab9c4eb8413bdc9265628c696f038d"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/session_reuse_instrument.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/session_reuse_instrument.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 446,
+      "sha256": "40594eb05744d200a943ea76dfbc5b4606e6f1a46c7a4f785ac251888b30a090"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/signed_in_first_store_browser.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/signed_in_first_store_browser.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1159,
+      "sha256": "080056ea31b0564922a2279f3e0d0d315a25bc3d01ea724fbb56d4c91e70a89c"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/skip_link_investigation.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/skip_link_investigation.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 8657,
+      "sha256": "26b245c35c3ddb5a9334221fa410a63b7f058e738b142676a5c51b49563662e8"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/supplied_links_resume_readiness.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/supplied_links_resume_readiness.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 765,
+      "sha256": "2c1ad31d471847b8dd714c1eaa166450fcf847ea6d19e0851176a213d93247b9"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/support_procedure_review.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/support_procedure_review.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1828,
+      "sha256": "4a11aef633357e1ba03c3c93b6cb521db56400ce2b36aa73d82e7fd8b23d4441"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/transfer_buyer_final.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/transfer_buyer_final.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1586,
+      "sha256": "de49a9e32140533e5035cc300c334c2972cb732ad82a867f83d7e546b1fffa27"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/transfer_cancel_attempt_diagnostic.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/transfer_cancel_attempt_diagnostic.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 262,
+      "sha256": "4dd4faadd16eac431f7c89c754dd29793de03991f1f88931b54766b902636e29"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/transfer_cancel_before_effective.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/transfer_cancel_before_effective.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 828,
+      "sha256": "9622b940149d02632a9d7419bb1b92cfdd236360a06e4f6196c513d8aa542454"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/transfer_checkout_diagnostic.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/transfer_checkout_diagnostic.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 820,
+      "sha256": "c12d29c63ae5355247e525e327ddbade749ba29711e8ce2930eb49b5bec099da"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/transfer_history_before.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/transfer_history_before.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1623,
+      "sha256": "d3b1e5daca6d7b41e6379f48b5dd6e18188b3d762525d0bcc736c13d85cf76d4"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/transfer_provisioning_failure.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/transfer_provisioning_failure.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 227,
+      "sha256": "3cbf93f75a1cddba568c128196666a1e8de6a119a9866df7efd8b77c57842cd4"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/webhook_negative_controls.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/webhook_negative_controls.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1267,
+      "sha256": "3caff8bc5d2605b5a1c7851dff253b177f640679a381d5ff641e82e17d3228e6"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/webkit/attempt1.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/webkit/attempt1.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1577,
+      "sha256": "cdadece9e5da21e62f37837ab7d9e11efddc1d09bd508ef2c277c5fc5b3d3501"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/webkit/attempt2.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/webkit/attempt2.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 364,
+      "sha256": "2a3dadc4caa2730843ab01b8521cdbe9552cf8acef837d0309e552bc5a510481"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/webkit/attempt3.txt",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/webkit/attempt3.txt",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1577,
+      "sha256": "cdadece9e5da21e62f37837ab7d9e11efddc1d09bd508ef2c277c5fc5b3d3501"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/webkit/results.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/webkit/results.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1226,
+      "sha256": "fe46eedff49705f8736443a09e49a8c77cb4abc26aa5cabc62889a71321476d4"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/evidence/Q2/02/workspace_inventory.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q2/02/workspace_inventory.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1631,
+      "sha256": "7fea06e14d69f4a210b35f2eaff80b5d6181ab61777f2ece2e4578330a144924"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/action-role-matrix.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/action-role-matrix.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 5925,
+      "sha256": "e622528fec55a65440a12b7ee57815ff7546dbfc6aacb866e27b7c1537e0506c"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/admin-existing-actors.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/admin-existing-actors.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3789,
+      "sha256": "cb09d63c1114e3e4c8e3ed91a09e1613cc1742960e59e5561895d517c08a8391"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/admin-extended.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/admin-extended.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3786,
+      "sha256": "92043e15bcfdc3f41fa666c1ccaab625f1b12b648839dc1c167013465d6f7016"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/c-qa.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/c-qa.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 12026,
+      "sha256": "3f9cf16c6d886d4504a550bac1f72e4826051fb748915a0044ef482a60dbd215"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/cancellation-qa.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/cancellation-qa.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 8315,
+      "sha256": "5ebd4ba5cb4bfb4d33f2d4a922f730e3875184b0acf3e74fee5d644f9e1c3e72"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/db-readonly.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/db-readonly.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2562,
+      "sha256": "2a40b5661aa68f5b15e814419569a94849427f7da2e0934b585cc1308a48051e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/delivery-correlation.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/delivery-correlation.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2712,
+      "sha256": "17326ff268311ff7388b4499ffd7a9734c65524827006195f9e045eb0158e315"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/direct-roles.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/direct-roles.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2525,
+      "sha256": "2c779bc5d9631f50192fde08797d5b0a7568ef54cd5df600b8f4f26f09eb095f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/expiry-void-race.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/expiry-void-race.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 13196,
+      "sha256": "edf89ac3b2397ece2cb863243cc3863e458aa581af81b5f04d623e12885e8545"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/export-private-scan.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/export-private-scan.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3795,
+      "sha256": "2015b7f22335aaeb11467ecf628f3d0789cf44b36bc80915a6d668e3a80ad0e6"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/final-registration-events.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/final-registration-events.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2627,
+      "sha256": "c7388f6a9f48799555601007a040fc43174fc23f757f727e40c55f5eee5c6ee1"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/first-store-signed-in.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/first-store-signed-in.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 7855,
+      "sha256": "aafb804085aac0907d0d2088adc1841f31a0e4ae59962c01824fe5ba19fdb1c4"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/fixture-inventory.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/fixture-inventory.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2413,
+      "sha256": "9c802ecdc2c6b392f41d3731e5fe36c2535d2b0080d564679a3bd1b62a048731"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/foreign-billing-fixture.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/foreign-billing-fixture.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 5506,
+      "sha256": "6deda706a06486336bd2585be898bb8408fb81a31fcfa39446e52cb52e434182"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/fresh-own-store-reads.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/fresh-own-store-reads.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3032,
+      "sha256": "1ec046ce26136785a8d7d25bb33d9670a4c0050aa18248c990b749cb96d6a810"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/fresh-role-handoffs.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/fresh-role-handoffs.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2404,
+      "sha256": "fc29322d72e6eb94f9fd20cba8e7e5b9153e668e3f443655ebdbb3100f2f0dc0"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/fresh-trusted-boundary.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/fresh-trusted-boundary.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2470,
+      "sha256": "33606331b6dfa2bb0d2c6e8072d07c56f69e57d7186f663debfacc6a5fac5e36"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/grouped-confirm.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/grouped-confirm.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 6384,
+      "sha256": "c03025cb6385826068229302a7748b836e9b79c18c3234dcadaf5a4dda56b5e6"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/grouped-prepare.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/grouped-prepare.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1597,
+      "sha256": "56ef448977e3be841939825537b5c2b5b8b3905a6e83ca7beb43a76a32f9639d"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/guard-lifecycle.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/guard-lifecycle.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 13333,
+      "sha256": "ff2780024701cfd08915f481e224bcc61c3211fcbafb29dd00d7a1d97e4778ea"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/history-and-cancel.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/history-and-cancel.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 4196,
+      "sha256": "b1408cb76d134b57686ce8637155437c504b047a392c001f63d561326aa131c6"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/inflight-crash-qa.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/inflight-crash-qa.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 22800,
+      "sha256": "0000d1d7bb7b9edf24b2d97aac9f20b3377cc51f4237cd010b9fca38fc486273"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/invitation-controls.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/invitation-controls.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 6448,
+      "sha256": "7fee448d1d2e3783835601a990dc2c8afd7c7277aba4f876a3338787abc4cdec"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/invitation-negatives.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/invitation-negatives.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3787,
+      "sha256": "9b15e6ca95f827fab6675566f0288a989ef6cd9038fcbd613b8bf2107b1c72ca"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/invite-existing-qa.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/invite-existing-qa.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 7473,
+      "sha256": "f2822ac7565ac552f4bbb09233366a353722f72bcfef795e12cc214d1726ca79"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/invite-send-qa.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/invite-send-qa.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 6043,
+      "sha256": "16595b323cd16dc67a37d86d090d41d5b8e2beda990af56e36a2bfd53e361c01"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/late-outage-refund.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/late-outage-refund.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 9460,
+      "sha256": "ca222d48e1715361e9eace114c3d31cffcf7a88b329e75947e050fb99c8590a5"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/late-redelivery.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/late-redelivery.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3086,
+      "sha256": "e36403b371d818e311632fa132f0699234b366c522d359e15cf496620ef1fb1e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/ledger.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/ledger.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2258,
+      "sha256": "f1e18095f3679ef053d0cf10fc5cb23ce99ffdb5ae78caa952facfc80e707b31"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/lib/effects.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/lib/effects.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1258,
+      "sha256": "653cf3f9706ce0a88efff91a45402c75db3ae8704be00850b2801d69bd85a466"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/lib/env.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/lib/env.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 5015,
+      "sha256": "949fd6a1d38c1cf4e4f60929dd5b9ce9983ac66a4f68d91dfba7976a6b0051af"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/lib/stripe.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/lib/stripe.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3734,
+      "sha256": "64cd0ac6dbfa74fd4a3ac13721ffe853010251093c2402ad048347516d4bc106"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/local-notice-faults.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/local-notice-faults.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 4835,
+      "sha256": "d15ab3ee3fed6d260224f4e51767672d8c84f5df9bb690397edff0cc4cc0f5bd"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/logout-final.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/logout-final.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2354,
+      "sha256": "b27f148074b197f2e81d95972c1946376c660f8edc494c212ba20b85c5e1b468"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/migration-preservation.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/migration-preservation.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3334,
+      "sha256": "3ba557be71b026aefac10f7f9779fd7f8859035bad4ffea0c4f4c47954b2b02b"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/notice-dispatch-faults.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/notice-dispatch-faults.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 4351,
+      "sha256": "15899958afe4111181e298ef5101e2a77999cbdd4a99474f4849f7733d76440f"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/o1-qa.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/o1-qa.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 25510,
+      "sha256": "d66fc50397ebe856d150d8f4b63c4696e2217dedd4648e07fecf2308150768ca"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/ob-staff-browser.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/ob-staff-browser.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1807,
+      "sha256": "a24ae0a5ab41a3f830d1158a96829bcdca9e70dc0c65decb826abe48df380a1a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/owner-recovery-newadmin-deferred.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/owner-recovery-newadmin-deferred.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 4852,
+      "sha256": "f0723393915f8de0e988f817a1ea8e033da6819ac223870b442221c8a1b173e7"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/owner-recovery.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/owner-recovery.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 5636,
+      "sha256": "dd64a6241be5f6bb176bad1a824b93fbe3b244d4badc42d84b76b922eb9ba0d7"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/pf00-event.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/pf00-event.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 4538,
+      "sha256": "02eecd9ac24ebacc6e00e45dd118f7dd10c08dcccf3fe303392d0bdba2046751"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/phase-exit.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/phase-exit.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 4773,
+      "sha256": "80d3f112e0c31cf6a143496a1e978078f834c7156e0081b41ea5e2590ab472fb"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/portal-browser-attempt02.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/portal-browser-attempt02.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2129,
+      "sha256": "c6cb8c4527d960c7e6cff7c18fcf1190616d751a1c66b652df95dc91be8a7db3"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/portal-browser.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/portal-browser.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2038,
+      "sha256": "c484c6c033c945808a6a3a3d423962ebc8ea6ddeb3f097daa1d0a91c1cef0169"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/proof-serve-qa.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/proof-serve-qa.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 9306,
+      "sha256": "b9c7d134c42433ddab0d82f708a44bd763d07cc253c10c93bda8a4f443bc1729"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/provision-cast.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/provision-cast.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2457,
+      "sha256": "057fb22f6af803831527922663674c43973d7b9840edb28c187dd9b809d95880"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/reactivation-authority.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/reactivation-authority.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1504,
+      "sha256": "d6a8b5e0f10f851c3da2ba39af0835158943d661d59a285c626b63202fc0bc51"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/readonly-browser.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/readonly-browser.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2009,
+      "sha256": "ae17b5fcc8c802ab750f2351447d99bb375f77883e083f3bb51423d3d7df9e86"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/readonly-membership.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/readonly-membership.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 7312,
+      "sha256": "582e4e264b34f593febee1777d8a74da56b5e9fc10f9a6fc3f0ee1266c099928"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/real-resend.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/real-resend.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1727,
+      "sha256": "a40b1fdc41241d5bb2af56f71ba19a6eef5d424e97d86f2464006eeba90a6ad0"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/record-corrections.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/record-corrections.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2354,
+      "sha256": "35f311c893cd04abbb0c28533cb88bc241fce300ed07b25b59f3c3c9fe2b439a"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/reminder-followup.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/reminder-followup.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1555,
+      "sha256": "7d6cc087bbf2cda4d864f49217284e584e76a62e4b54ce860122f6dcfad924a7"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/reminder-recovery-first.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/reminder-recovery-first.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 4012,
+      "sha256": "7275c338c136875af781a92608083565a41305082b8f4fdb7e6579a82e04794d"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/role-api.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/role-api.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3130,
+      "sha256": "36e229128620d8bad1140adfe4cc7addd7901bd2407e2becd43ea0606d47cc17"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/role-followup.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/role-followup.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1626,
+      "sha256": "a0da57a9251899fab4c49b31a377b596ff5c9af32ba7877906c089516cff1bc3"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/run-private.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/run-private.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2088,
+      "sha256": "4b173865945d1a1fb6f75b912aa875651f427a7feb16884833483cf5e437a505"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/runtime.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/runtime.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 5567,
+      "sha256": "070cc8284304e567180a486a91141ba3d3ddf0bc674c6a2e27c7446a60404394"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/screens-final-attempt01.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/screens-final-attempt01.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 3882,
+      "sha256": "c5932bf694694ed2b182738db32a9b0cee107aa94d26740b635d917e3cf2cce6"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/screens-final.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/screens-final.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 4226,
+      "sha256": "b6ba88f5a471996c2f851fc28abca86174c5ad864f6141162df0a874f475bf0d"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/skip-link-investigation.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/skip-link-investigation.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2876,
+      "sha256": "7dd343cea9323a0903a34546231a5b1ef214c88c200b90c8b0c72b2bd8495614"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/start-listener.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/start-listener.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2047,
+      "sha256": "6fbc0a9deed7e6a0ea6990250b12859db0fd99d5cb47ad722761645173b80373"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/transfer-cancel.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/transfer-cancel.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2868,
+      "sha256": "2bbd8b176e05b820da904f6304a04e0ab89c85f362dcb507270542f83392a8de"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/transfer-checkout-complete-qa.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/transfer-checkout-complete-qa.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 5985,
+      "sha256": "e9614a5c0f68343e770dec1539af68192eb4fa763bb469d3eebdd00be02cf6db"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/transfer-final-verify.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/transfer-final-verify.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 5572,
+      "sha256": "6672a3342dea80210e158093baeb57510801d5f3e9310b0d76c13c16e31bcfa7"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/transfer-qa.mjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/transfer-qa.mjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 18007,
+      "sha256": "d8ed7412284887b4e7e5fb825e5805bacbf98ac15a0552b9b6be5846df3f4eae"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/webhook-negatives.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/webhook-negatives.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 1790,
+      "sha256": "f1a4d400486e7690d2d12d2e3daffcd3db64d98628ef0503079bd10a68f33a07"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/AUTOMATION/Q2/webkit-reproduce.cjs",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q2/webkit-reproduce.cjs",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 2223,
+      "sha256": "af46dd61d418ae4cb795e48e426c690a43e9504deccc7d716842f787a84b2a1e"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/HANDOFFS/SOURCE_REFERENCES_Q2_01.json",
+      "source_path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/SOURCE_REFERENCES_Q2_01.json",
+      "purpose": "Final independent Q2 result/evidence, source authority or phase-exit record; no certificate",
+      "bytes": 11550,
+      "sha256": "a52614b6c07ed512cc53fd373b9b2bdc7ff25805bc6c96b4db081e420f883f54"
+    },
+    {
+      "archive_path": "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01/EXPORT_VALIDATION.json",
+      "source_path": "generated QA export validation while private sources retained",
+      "purpose": "Pattern/private-value controls and safe export scan counts; no values or credential hashes",
+      "bytes": 809,
+      "sha256": "8818811ea1fccd5eaf8d150d3a26c7c4926c5bd8b50365911d06015622ef2ad2"
+    }
+  ],
+  "excluded": [
+    {
+      "path": "evidence/Q2/01/campaign/r03/C/qa-20261117-c414/auth_dashboard.png",
+      "reason": "unreviewed/private binary or raw diff, old archive, symlink or transient file; excluded"
+    },
+    {
+      "path": "evidence/Q2/01/campaign/r03/C/qa-20261117-c414/auth_hosted_after.png",
+      "reason": "unreviewed/private binary or raw diff, old archive, symlink or transient file; excluded"
+    },
+    {
+      "path": "evidence/Q2/01/campaign/r03/C/qa-20261117-c414/auth_payment_pending.png",
+      "reason": "unreviewed/private binary or raw diff, old archive, symlink or transient file; excluded"
+    },
+    {
+      "path": "evidence/Q2/01/campaign/r03/C/qa-20261117-c414/decline_abandoned.png",
+      "reason": "unreviewed/private binary or raw diff, old archive, symlink or transient file; excluded"
+    },
+    {
+      "path": "evidence/Q2/01/campaign/r03/C/qa-20261117-c414/decline_payment_pending.png",
+      "reason": "unreviewed/private binary or raw diff, old archive, symlink or transient file; excluded"
+    },
+    {
+      "path": "evidence/Q2/01/campaign/r03/GF/qa-a01-cancel/g_dashboard_after_undo.png",
+      "reason": "unreviewed/private binary or raw diff, old archive, symlink or transient file; excluded"
+    },
+    {
+      "path": "evidence/Q2/01/campaign/r03/GF/qa-a01-cancel/g_dashboard_cancel_scheduled.png",
+      "reason": "unreviewed/private binary or raw diff, old archive, symlink or transient file; excluded"
+    },
+    {
+      "path": "evidence/Q2/01/campaign/r03/GF/qa-a01-cancel/g_portal_after_cancel.png",
+      "reason": "unreviewed/private binary or raw diff, old archive, symlink or transient file; excluded"
+    },
+    {
+      "path": "evidence/Q2/01/preflight/candidate_to_execution_full.diff",
+      "reason": "unreviewed/private binary or raw diff, old archive, symlink or transient file; excluded"
+    }
+  ]
+}

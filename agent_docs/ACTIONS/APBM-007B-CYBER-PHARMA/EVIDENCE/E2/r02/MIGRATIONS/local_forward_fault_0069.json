@@ -1,0 +1,17 @@
+{
+ "command": "forward",
+ "target": "local-rehearsal",
+ "startedAt": "2026-11-17T01:43:55.601Z",
+ "committed": [
+  "0068_007b_identity_compat_fix.sql"
+ ],
+ "status": "FAULT_INJECTED_ROLLED_BACK",
+ "failedMigration": "0069_007b_reactivation_transfer_registration.sql",
+ "errorCode": "22012",
+ "message": "division by zero",
+ "ledger": {
+  "n": 68,
+  "last": "0068_007b_identity_compat_fix.sql"
+ },
+ "finishedAt": "2026-11-17T01:43:55.626Z"
+}

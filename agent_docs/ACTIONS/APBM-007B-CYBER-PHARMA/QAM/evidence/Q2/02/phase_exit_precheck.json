@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-17T11:42:19.829Z",
+  "apps": [
+    {
+      "app": "ob",
+      "pid": 3209772,
+      "alive": true,
+      "cwd": "/tmp/apbm007b-qa-q2-01/proof/ob",
+      "owned": true
+    },
+    {
+      "app": "pp",
+      "pid": 3400261,
+      "alive": true,
+      "cwd": "/tmp/apbm007b-qa-q2-01/proof/pp",
+      "owned": true
+    }
+  ],
+  "listener": {
+    "pid": 3263045,
+    "alive": true,
+    "owned": true
+  },
+  "director_ports": [
+    {
+      "port": 3000,
+      "listening": true,
+      "pids": [
+        3199658
+      ]
+    },
+    {
+      "port": 3001,
+      "listening": true,
+      "pids": [
+        3199884
+      ]
+    },
+    {
+      "port": 3457,
+      "listening": true,
+      "pids": [
+        40320
+      ]
+    }
+  ],
+  "qa_ports": [
+    {
+      "port": 3100,
+      "listening": true,
+      "pids": [
+        3209772
+      ]
+    },
+    {
+      "port": 3101,
+      "listening": true,
+      "pids": [
+        3400261
+      ]
+    }
+  ],
+  "stop_executed": false,
+  "scope": "Only owned3100/3101, listener and two named local containers; all remote/provider/identity fixtures preserved"
+}

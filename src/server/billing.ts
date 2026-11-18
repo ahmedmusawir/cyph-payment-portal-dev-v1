@@ -19,7 +19,8 @@ export interface Overview {
     current_period_start: string | null; current_period_end: string | null; cancel_at: string | null; cancel_at_period_end: boolean;
     paid_through: string | null; latest_invoice_status: string | null; grace_started_at: string | null; verified_at: string | null;
   };
-  stores: { id: string; name: string; npi: string; status: string }[];
+  stores: { id: string; name: string; npi: string; status: string; removal_effective_at?: string | null }[];
+  billable_count?: number;
 }
 
 /** Synthetic fixtures are honoured only where the flag is on (local, DEV, staging). Elsewhere they grant nothing. */

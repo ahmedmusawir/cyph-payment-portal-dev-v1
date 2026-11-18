@@ -1,0 +1,3518 @@
+{
+ "label": "cp1a",
+ "objects": {
+  "O": {
+   "customer": "cus_VdjpPBZeBIK0jR",
+   "subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+   "visa": "pm_1UcSLTGnEQDyu3RRPyFLiGPr"
+  },
+  "P": {
+   "customer": "cus_Vdjsy2HKdLTzLV",
+   "subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+   "visa": "pm_1UcSOdGnEQDyu3RRayg2qZ4Y"
+  }
+ },
+ "steps": [
+  {
+   "name": "BP01_sub_minimum_computation_only",
+   "at": "2026-11-16T16:01:26.578Z",
+   "period_days": 30,
+   "cases": [
+    {
+     "seconds_left": 21600,
+     "amount": 41,
+     "refusal": "below_minimum_charge"
+    },
+    {
+     "seconds_left": 25200,
+     "amount": 48,
+     "refusal": "below_minimum_charge"
+    },
+    {
+     "seconds_left": 28800,
+     "amount": 54,
+     "refusal": null
+    },
+    {
+     "seconds_left": 172800,
+     "amount": 327,
+     "refusal": null
+    },
+    {
+     "seconds_left": 1296000,
+     "amount": 2450,
+     "refusal": null
+    }
+   ],
+   "rule": "refuse when e-t < 90 min OR amount < 50; no invoice created"
+  },
+  {
+   "name": "O:fixture",
+   "at": "2026-11-16T16:01:31.273Z",
+   "subscription": {
+    "id": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+    "status": "active",
+    "quantity": 1,
+    "item": "si_VdjpDRvU7rLjxV",
+    "period": [
+     1794844888,
+     1797436888
+    ],
+    "billing_cycle_anchor": 1794844888,
+    "latest_invoice": "in_1UcSLUGnEQDyu3RRMIqOMWYD",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "first_invoice": {
+    "id": "in_1UcSLUGnEQDyu3RRMIqOMWYD",
+    "status": "paid",
+    "billing_reason": "subscription_create",
+    "subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 9900,
+    "total": 9900,
+    "amount_due": 9900,
+    "amount_paid": 9900,
+    "amount_remaining": 0,
+    "starting_balance": 0,
+    "ending_balance": 0,
+    "attempt_count": 1,
+    "attempted": true,
+    "discounts": [],
+    "total_discount_amounts": [],
+    "customer_email": null,
+    "metadata": {},
+    "hosted_invoice_url_present": true,
+    "lines": [
+     {
+      "amount": 9900,
+      "currency": "usd",
+      "description": "1 × OwedBook — pharmacy stores (Tier 1 at $99.00 / month)",
+      "discountable": true,
+      "discount_amounts": [],
+      "proration": false
+     }
+    ]
+   }
+  },
+  {
+   "name": "O:add1",
+   "at": "2026-11-16T16:01:39.418Z",
+   "quote": {
+    "s": 1794844888,
+    "e": 1797436888,
+    "t": 1794844891,
+    "amount": 4900,
+    "refusal": null,
+    "next_renewal_cents": 14800,
+    "target_quantity": 2
+   },
+   "draft": {
+    "id": "in_1UcSLXGnEQDyu3RRZVWbCfIw",
+    "status": "draft",
+    "billing_reason": "manual",
+    "subscription": null,
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 4900,
+    "total": 4900,
+    "amount_due": 4900,
+    "amount_paid": 0,
+    "amount_remaining": 4900,
+    "starting_balance": 0,
+    "ending_balance": null,
+    "attempt_count": 0,
+    "attempted": false,
+    "discounts": [],
+    "total_discount_amounts": [],
+    "customer_email": null,
+    "metadata": {
+     "apbm_db": "none",
+     "apbm_env": "sandbox_cp1",
+     "apbm_expected_cents": "4900",
+     "apbm_kind": "store_add",
+     "apbm_operation": "add1",
+     "apbm_probe_run": "CP1_cp1a",
+     "apbm_run": "apbm007b_e2"
+    },
+    "hosted_invoice_url_present": false,
+    "lines": [
+     {
+      "amount": 4900,
+      "currency": "usd",
+      "description": "Additional pharmacy store, remaining current period",
+      "discountable": false,
+      "discount_amounts": [],
+      "proration": null
+     }
+    ]
+   },
+   "draft_valid": true,
+   "customer_balance_before_finalize": 0,
+   "pay_error": null,
+   "invoice_after_pay": {
+    "id": "in_1UcSLXGnEQDyu3RRZVWbCfIw",
+    "status": "paid",
+    "billing_reason": "manual",
+    "subscription": null,
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 4900,
+    "total": 4900,
+    "amount_due": 4900,
+    "amount_paid": 4900,
+    "amount_remaining": 0,
+    "starting_balance": 0,
+    "ending_balance": 0,
+    "attempt_count": 1,
+    "attempted": true,
+    "discounts": [],
+    "total_discount_amounts": [],
+    "customer_email": null,
+    "metadata": {
+     "apbm_db": "none",
+     "apbm_env": "sandbox_cp1",
+     "apbm_expected_cents": "4900",
+     "apbm_kind": "store_add",
+     "apbm_operation": "add1",
+     "apbm_probe_run": "CP1_cp1a",
+     "apbm_run": "apbm007b_e2"
+    },
+    "hosted_invoice_url_present": true,
+    "lines": [
+     {
+      "amount": 4900,
+      "currency": "usd",
+      "description": "Additional pharmacy store, remaining current period",
+      "discountable": false,
+      "discount_amounts": [],
+      "proration": null
+     }
+    ]
+   },
+   "payment_intent": {
+    "status": "succeeded",
+    "next_action": null,
+    "last_error": null,
+    "decline_code": null
+   },
+   "paid_ok": true,
+   "period_unchanged_at_activation": true,
+   "subscription_before": {
+    "id": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+    "status": "active",
+    "quantity": 1,
+    "item": "si_VdjpDRvU7rLjxV",
+    "period": [
+     1794844888,
+     1797436888
+    ],
+    "billing_cycle_anchor": 1794844888,
+    "latest_invoice": "in_1UcSLUGnEQDyu3RRMIqOMWYD",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "subscription_after_quantity": {
+    "id": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+    "status": "active",
+    "quantity": 2,
+    "item": "si_VdjpDRvU7rLjxV",
+    "period": [
+     1794844888,
+     1797436888
+    ],
+    "billing_cycle_anchor": 1794844888,
+    "latest_invoice": "in_1UcSLUGnEQDyu3RRMIqOMWYD",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "anchor_unchanged": true,
+   "latest_invoice_unchanged": true,
+   "no_new_invoice_from_quantity_change": true,
+   "customer_invoices": [
+    {
+     "id": "in_1UcSLXGnEQDyu3RRZVWbCfIw",
+     "status": "paid",
+     "billing_reason": "manual",
+     "total": 4900
+    },
+    {
+     "id": "in_1UcSLUGnEQDyu3RRMIqOMWYD",
+     "status": "paid",
+     "billing_reason": "subscription_create",
+     "total": 9900
+    }
+   ],
+   "renewal_preview": {
+    "amount_due": 14800,
+    "total": 14800,
+    "subtotal": 14800,
+    "total_discount_amounts": [],
+    "discounts": [],
+    "lines": [
+     {
+      "amount": 9900,
+      "quantity": 1,
+      "description": "1 × OwedBook — pharmacy stores (Tier 1 at $99.00 / month)",
+      "proration": false
+     },
+     {
+      "amount": 4900,
+      "quantity": 1,
+      "description": "1 × OwedBook — pharmacy stores (Tier 2 at $49.00 / month)",
+      "proration": false
+     }
+    ]
+   },
+   "renewal_expected_cents": 14800,
+   "renewal_ok": true,
+   "pass": true
+  },
+  {
+   "name": "O:decline",
+   "at": "2026-11-16T16:01:46.879Z",
+   "quote": {
+    "s": 1794844888,
+    "e": 1797436888,
+    "t": 1794844901,
+    "amount": 4900,
+    "refusal": null,
+    "next_renewal_cents": 19700,
+    "target_quantity": 3
+   },
+   "pay_error": {
+    "ok": false,
+    "type": "StripeCardError",
+    "code": "card_declined",
+    "decline_code": "generic_decline",
+    "status": 402,
+    "message": "Your card was declined.",
+    "request_id": "req_9VmhNfszIgd8Kq"
+   },
+   "invoice": {
+    "id": "in_1UcSLhGnEQDyu3RRXBhszbZH",
+    "status": "open",
+    "billing_reason": "manual",
+    "subscription": null,
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 4900,
+    "total": 4900,
+    "amount_due": 4900,
+    "amount_paid": 0,
+    "amount_remaining": 4900,
+    "starting_balance": 0,
+    "ending_balance": 0,
+    "attempt_count": 1,
+    "attempted": true,
+    "discounts": [],
+    "total_discount_amounts": [],
+    "customer_email": null,
+    "metadata": {
+     "apbm_db": "none",
+     "apbm_env": "sandbox_cp1",
+     "apbm_expected_cents": "4900",
+     "apbm_kind": "store_add",
+     "apbm_operation": "decline",
+     "apbm_probe_run": "CP1_cp1a",
+     "apbm_run": "apbm007b_e2"
+    },
+    "hosted_invoice_url_present": true,
+    "lines": [
+     {
+      "amount": 4900,
+      "currency": "usd",
+      "description": "Additional pharmacy store, remaining current period",
+      "discountable": false,
+      "discount_amounts": [],
+      "proration": null
+     }
+    ]
+   },
+   "payment_intent": {
+    "status": "requires_payment_method",
+    "next_action": null,
+    "last_error": "card_declined",
+    "decline_code": "generic_decline"
+   },
+   "subscription_before": {
+    "id": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+    "status": "active",
+    "quantity": 2,
+    "item": "si_VdjpDRvU7rLjxV",
+    "period": [
+     1794844888,
+     1797436888
+    ],
+    "billing_cycle_anchor": 1794844888,
+    "latest_invoice": "in_1UcSLUGnEQDyu3RRMIqOMWYD",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "subscription_after": {
+    "id": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+    "status": "active",
+    "quantity": 2,
+    "item": "si_VdjpDRvU7rLjxV",
+    "period": [
+     1794844888,
+     1797436888
+    ],
+    "billing_cycle_anchor": 1794844888,
+    "latest_invoice": "in_1UcSLUGnEQDyu3RRMIqOMWYD",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "customer_balance": 0,
+   "subscription_unchanged": true,
+   "pass": true
+  },
+  {
+   "name": "O:abandon_void_then_late_pay",
+   "at": "2026-11-16T16:01:49.289Z",
+   "void_error": null,
+   "invoice_after_void": {
+    "id": "in_1UcSLhGnEQDyu3RRXBhszbZH",
+    "status": "void",
+    "billing_reason": "manual",
+    "subscription": null,
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 4900,
+    "total": 4900,
+    "amount_due": 4900,
+    "amount_paid": 0,
+    "amount_remaining": 4900,
+    "starting_balance": 0,
+    "ending_balance": 0,
+    "attempt_count": 1,
+    "attempted": true,
+    "discounts": [],
+    "total_discount_amounts": [],
+    "customer_email": null,
+    "metadata": {
+     "apbm_db": "none",
+     "apbm_env": "sandbox_cp1",
+     "apbm_expected_cents": "4900",
+     "apbm_kind": "store_add",
+     "apbm_operation": "decline",
+     "apbm_probe_run": "CP1_cp1a",
+     "apbm_run": "apbm007b_e2"
+    },
+    "hosted_invoice_url_present": true,
+    "lines": [
+     {
+      "amount": 4900,
+      "currency": "usd",
+      "description": "Additional pharmacy store, remaining current period",
+      "discountable": false,
+      "discount_amounts": [],
+      "proration": null
+     }
+    ]
+   },
+   "subscription_after_void": {
+    "id": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+    "status": "active",
+    "quantity": 2,
+    "item": "si_VdjpDRvU7rLjxV",
+    "period": [
+     1794844888,
+     1797436888
+    ],
+    "billing_cycle_anchor": 1794844888,
+    "latest_invoice": "in_1UcSLUGnEQDyu3RRMIqOMWYD",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "subscription_unchanged": true,
+   "late_pay_error": {
+    "ok": false,
+    "type": "StripeInvalidRequestError",
+    "status": 400,
+    "message": "Voided invoices cannot be paid.",
+    "request_id": "req_0jbkSSaHL14Tmh"
+   },
+   "invoice_after_late_pay": {
+    "id": "in_1UcSLhGnEQDyu3RRXBhszbZH",
+    "status": "void",
+    "billing_reason": "manual",
+    "subscription": null,
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 4900,
+    "total": 4900,
+    "amount_due": 4900,
+    "amount_paid": 0,
+    "amount_remaining": 4900,
+    "starting_balance": 0,
+    "ending_balance": 0,
+    "attempt_count": 1,
+    "attempted": true,
+    "discounts": [],
+    "total_discount_amounts": [],
+    "customer_email": null,
+    "metadata": {
+     "apbm_db": "none",
+     "apbm_env": "sandbox_cp1",
+     "apbm_expected_cents": "4900",
+     "apbm_kind": "store_add",
+     "apbm_operation": "decline",
+     "apbm_probe_run": "CP1_cp1a",
+     "apbm_run": "apbm007b_e2"
+    },
+    "hosted_invoice_url_present": true,
+    "lines": [
+     {
+      "amount": 4900,
+      "currency": "usd",
+      "description": "Additional pharmacy store, remaining current period",
+      "discountable": false,
+      "discount_amounts": [],
+      "proration": null
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "name": "O:auth",
+   "at": "2026-11-16T16:01:57.723Z",
+   "quote": {
+    "s": 1794844888,
+    "e": 1797436888,
+    "t": 1794844910,
+    "amount": 4900,
+    "refusal": null,
+    "next_renewal_cents": 19700,
+    "target_quantity": 3
+   },
+   "pay_error": {
+    "ok": false,
+    "type": "StripeCardError",
+    "code": "invoice_payment_intent_requires_action",
+    "decline_code": "",
+    "status": 402,
+    "message": "The invoice payment requires additional action. Retrieve the invoice's PaymentIntent, then use `client_secret` and `next_action` to complete it: https://stripe.com/docs/billing/subscriptions/overview#requires-action",
+    "request_id": "req_vZ2qunoM8FuqjU"
+   },
+   "invoice": {
+    "id": "in_1UcSLqGnEQDyu3RRXIIlbHdv",
+    "status": "open",
+    "billing_reason": "manual",
+    "subscription": null,
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 4900,
+    "total": 4900,
+    "amount_due": 4900,
+    "amount_paid": 0,
+    "amount_remaining": 4900,
+    "starting_balance": 0,
+    "ending_balance": 0,
+    "attempt_count": 0,
+    "attempted": true,
+    "discounts": [],
+    "total_discount_amounts": [],
+    "customer_email": null,
+    "metadata": {
+     "apbm_db": "none",
+     "apbm_env": "sandbox_cp1",
+     "apbm_expected_cents": "4900",
+     "apbm_kind": "store_add",
+     "apbm_operation": "auth",
+     "apbm_probe_run": "CP1_cp1a",
+     "apbm_run": "apbm007b_e2"
+    },
+    "hosted_invoice_url_present": true,
+    "lines": [
+     {
+      "amount": 4900,
+      "currency": "usd",
+      "description": "Additional pharmacy store, remaining current period",
+      "discountable": false,
+      "discount_amounts": [],
+      "proration": null
+     }
+    ]
+   },
+   "payment_intent": {
+    "status": "requires_action",
+    "next_action": "use_stripe_sdk",
+    "last_error": null,
+    "decline_code": null
+   },
+   "subscription_before": {
+    "id": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+    "status": "active",
+    "quantity": 2,
+    "item": "si_VdjpDRvU7rLjxV",
+    "period": [
+     1794844888,
+     1797436888
+    ],
+    "billing_cycle_anchor": 1794844888,
+    "latest_invoice": "in_1UcSLUGnEQDyu3RRMIqOMWYD",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "subscription_after": {
+    "id": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+    "status": "active",
+    "quantity": 2,
+    "item": "si_VdjpDRvU7rLjxV",
+    "period": [
+     1794844888,
+     1797436888
+    ],
+    "billing_cycle_anchor": 1794844888,
+    "latest_invoice": "in_1UcSLUGnEQDyu3RRMIqOMWYD",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "customer_balance": 0,
+   "subscription_unchanged": true,
+   "pass": true
+  },
+  {
+   "name": "O:auth_hosted_complete_then_activate",
+   "at": "2026-11-16T16:03:06.446Z",
+   "browser": {
+    "log": [
+     "clicked Confirm payment",
+     "clicked #test-source-authorize-3ds in testmode-acs.stripe.com"
+    ]
+   },
+   "invoice": {
+    "id": "in_1UcSLqGnEQDyu3RRXIIlbHdv",
+    "status": "open",
+    "billing_reason": "manual",
+    "subscription": null,
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 4900,
+    "total": 4900,
+    "amount_due": 4900,
+    "amount_paid": 0,
+    "amount_remaining": 4900,
+    "starting_balance": 0,
+    "ending_balance": 0,
+    "attempt_count": 0,
+    "attempted": true,
+    "discounts": [],
+    "total_discount_amounts": [],
+    "customer_email": null,
+    "metadata": {
+     "apbm_db": "none",
+     "apbm_env": "sandbox_cp1",
+     "apbm_expected_cents": "4900",
+     "apbm_kind": "store_add",
+     "apbm_operation": "auth",
+     "apbm_probe_run": "CP1_cp1a",
+     "apbm_run": "apbm007b_e2"
+    },
+    "hosted_invoice_url_present": true,
+    "lines": [
+     {
+      "amount": 4900,
+      "currency": "usd",
+      "description": "Additional pharmacy store, remaining current period",
+      "discountable": false,
+      "discount_amounts": [],
+      "proration": null
+     }
+    ]
+   },
+   "payment_intent": {
+    "status": "requires_action",
+    "next_action": "use_stripe_sdk",
+    "last_error": null,
+    "decline_code": null
+   },
+   "subscription_after_quantity": null,
+   "anchor_unchanged": null,
+   "renewal_preview": null,
+   "pass": false
+  },
+  {
+   "name": "O:void_after_paid_refused",
+   "at": "2026-11-16T16:03:07.367Z",
+   "error": {
+    "ok": false,
+    "type": "StripeInvalidRequestError",
+    "status": 400,
+    "message": "Invoices with `paid` payments cannot be voided.",
+    "request_id": "req_jYTIHW7GOTtM1V"
+   },
+   "invoice_status": "paid",
+   "amount_paid": 4900,
+   "pass": true
+  },
+  {
+   "name": "BP01_sub_minimum_computation_only",
+   "at": "2026-11-16T16:04:05.003Z",
+   "period_days": 30,
+   "cases": [
+    {
+     "seconds_left": 21600,
+     "amount": 41,
+     "refusal": "below_minimum_charge"
+    },
+    {
+     "seconds_left": 25200,
+     "amount": 48,
+     "refusal": "below_minimum_charge"
+    },
+    {
+     "seconds_left": 28800,
+     "amount": 54,
+     "refusal": null
+    },
+    {
+     "seconds_left": 172800,
+     "amount": 327,
+     "refusal": null
+    },
+    {
+     "seconds_left": 1296000,
+     "amount": 2450,
+     "refusal": null
+    }
+   ],
+   "rule": "refuse when e-t < 90 min OR amount < 50; no invoice created"
+  },
+  {
+   "name": "O:auth_hosted_complete_then_activate",
+   "at": "2026-11-16T16:04:30.217Z",
+   "browser": {
+    "log": [
+     "clicked Confirm payment",
+     "clicked visible #test-source-authorize-3ds in testmode-acs.stripe.com",
+     "invoice paid after ~2s"
+    ]
+   },
+   "invoice": {
+    "id": "in_1UcSLqGnEQDyu3RRXIIlbHdv",
+    "status": "paid",
+    "billing_reason": "manual",
+    "subscription": null,
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 4900,
+    "total": 4900,
+    "amount_due": 4900,
+    "amount_paid": 4900,
+    "amount_remaining": 0,
+    "starting_balance": 0,
+    "ending_balance": 0,
+    "attempt_count": 1,
+    "attempted": true,
+    "discounts": [],
+    "total_discount_amounts": [],
+    "customer_email": null,
+    "metadata": {
+     "apbm_db": "none",
+     "apbm_env": "sandbox_cp1",
+     "apbm_expected_cents": "4900",
+     "apbm_kind": "store_add",
+     "apbm_operation": "auth",
+     "apbm_probe_run": "CP1_cp1a",
+     "apbm_run": "apbm007b_e2"
+    },
+    "hosted_invoice_url_present": true,
+    "lines": [
+     {
+      "amount": 4900,
+      "currency": "usd",
+      "description": "Additional pharmacy store, remaining current period",
+      "discountable": false,
+      "discount_amounts": [],
+      "proration": null
+     }
+    ]
+   },
+   "payment_intent": {
+    "status": "succeeded",
+    "next_action": null,
+    "last_error": null,
+    "decline_code": null
+   },
+   "subscription_after_quantity": {
+    "id": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+    "status": "active",
+    "quantity": 3,
+    "item": "si_VdjpDRvU7rLjxV",
+    "period": [
+     1794844888,
+     1797436888
+    ],
+    "billing_cycle_anchor": 1794844888,
+    "latest_invoice": "in_1UcSLUGnEQDyu3RRMIqOMWYD",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "anchor_unchanged": true,
+   "renewal_preview": {
+    "amount_due": 19700,
+    "total": 19700,
+    "subtotal": 19700,
+    "total_discount_amounts": [],
+    "discounts": [],
+    "lines": [
+     {
+      "amount": 9900,
+      "quantity": 1,
+      "description": "1 × OwedBook — pharmacy stores (Tier 1 at $99.00 / month)",
+      "proration": false
+     },
+     {
+      "amount": 9800,
+      "quantity": 2,
+      "description": "2 × OwedBook — pharmacy stores (Tier 2 at $49.00 / month)",
+      "proration": false
+     }
+    ]
+   },
+   "pass": true
+  },
+  {
+   "name": "BP01_sub_minimum_computation_only",
+   "at": "2026-11-16T16:04:41.502Z",
+   "period_days": 30,
+   "cases": [
+    {
+     "seconds_left": 21600,
+     "amount": 41,
+     "refusal": "below_minimum_charge"
+    },
+    {
+     "seconds_left": 25200,
+     "amount": 48,
+     "refusal": "below_minimum_charge"
+    },
+    {
+     "seconds_left": 28800,
+     "amount": 54,
+     "refusal": null
+    },
+    {
+     "seconds_left": 172800,
+     "amount": 327,
+     "refusal": null
+    },
+    {
+     "seconds_left": 1296000,
+     "amount": 2450,
+     "refusal": null
+    }
+   ],
+   "rule": "refuse when e-t < 90 min OR amount < 50; no invoice created"
+  },
+  {
+   "name": "O:lost_reply_reconciliation",
+   "at": "2026-11-16T16:04:43.066Z",
+   "enumerated_matches": 0,
+   "replay_returned_same": false,
+   "replay_error": null,
+   "invoices_for_operation_after_replay": 0,
+   "pass": false
+  },
+  {
+   "name": "P:fixture",
+   "at": "2026-11-16T16:04:47.298Z",
+   "subscription": {
+    "id": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+    "status": "active",
+    "quantity": 1,
+    "item": "si_VdjsFkdjo30WEP",
+    "period": [
+     1794845084,
+     1797437084
+    ],
+    "billing_cycle_anchor": 1794845084,
+    "latest_invoice": "in_1UcSOeGnEQDyu3RR4OIiV8NU",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "first_invoice": {
+    "id": "in_1UcSOeGnEQDyu3RR4OIiV8NU",
+    "status": "paid",
+    "billing_reason": "subscription_create",
+    "subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 9900,
+    "total": 8910,
+    "amount_due": 8910,
+    "amount_paid": 8910,
+    "amount_remaining": 0,
+    "starting_balance": 0,
+    "ending_balance": 0,
+    "attempt_count": 1,
+    "attempted": true,
+    "discounts": [
+     "di_1UcSOeGnEQDyu3RRHwbJwbZM"
+    ],
+    "total_discount_amounts": [
+     {
+      "amount": 990,
+      "discount": "di_1UcSOeGnEQDyu3RRHwbJwbZM"
+     }
+    ],
+    "customer_email": null,
+    "metadata": {},
+    "hosted_invoice_url_present": true,
+    "lines": [
+     {
+      "amount": 9900,
+      "currency": "usd",
+      "description": "1 × OwedBook — pharmacy stores (Tier 1 at $99.00 / month)",
+      "discountable": true,
+      "discount_amounts": [
+       {
+        "amount": 990,
+        "discount": "di_1UcSOeGnEQDyu3RRHwbJwbZM"
+       }
+      ],
+      "proration": false
+     }
+    ]
+   }
+  },
+  {
+   "name": "P:discount_state_after_purchase",
+   "at": "2026-11-16T16:04:48.009Z",
+   "subscription_discounts": [],
+   "customer_discount": null,
+   "balance": 0
+  },
+  {
+   "name": "P:add1",
+   "at": "2026-11-16T16:04:56.317Z",
+   "quote": {
+    "s": 1794845084,
+    "e": 1797437084,
+    "t": 1794845088,
+    "amount": 4900,
+    "refusal": null,
+    "next_renewal_cents": 14800,
+    "target_quantity": 2
+   },
+   "draft": {
+    "id": "in_1UcSOiGnEQDyu3RRBOVo2tr6",
+    "status": "draft",
+    "billing_reason": "manual",
+    "subscription": null,
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 4900,
+    "total": 4900,
+    "amount_due": 4900,
+    "amount_paid": 0,
+    "amount_remaining": 4900,
+    "starting_balance": 0,
+    "ending_balance": null,
+    "attempt_count": 0,
+    "attempted": false,
+    "discounts": [],
+    "total_discount_amounts": [],
+    "customer_email": null,
+    "metadata": {
+     "apbm_db": "none",
+     "apbm_env": "sandbox_cp1",
+     "apbm_expected_cents": "4900",
+     "apbm_kind": "store_add",
+     "apbm_operation": "add1",
+     "apbm_probe_run": "CP1_cp1a",
+     "apbm_run": "apbm007b_e2"
+    },
+    "hosted_invoice_url_present": false,
+    "lines": [
+     {
+      "amount": 4900,
+      "currency": "usd",
+      "description": "Additional pharmacy store, remaining current period",
+      "discountable": false,
+      "discount_amounts": [],
+      "proration": null
+     }
+    ]
+   },
+   "draft_valid": true,
+   "customer_balance_before_finalize": 0,
+   "pay_error": null,
+   "invoice_after_pay": {
+    "id": "in_1UcSOiGnEQDyu3RRBOVo2tr6",
+    "status": "paid",
+    "billing_reason": "manual",
+    "subscription": null,
+    "collection_method": "charge_automatically",
+    "auto_advance": false,
+    "currency": "usd",
+    "subtotal": 4900,
+    "total": 4900,
+    "amount_due": 4900,
+    "amount_paid": 4900,
+    "amount_remaining": 0,
+    "starting_balance": 0,
+    "ending_balance": 0,
+    "attempt_count": 1,
+    "attempted": true,
+    "discounts": [],
+    "total_discount_amounts": [],
+    "customer_email": null,
+    "metadata": {
+     "apbm_db": "none",
+     "apbm_env": "sandbox_cp1",
+     "apbm_expected_cents": "4900",
+     "apbm_kind": "store_add",
+     "apbm_operation": "add1",
+     "apbm_probe_run": "CP1_cp1a",
+     "apbm_run": "apbm007b_e2"
+    },
+    "hosted_invoice_url_present": true,
+    "lines": [
+     {
+      "amount": 4900,
+      "currency": "usd",
+      "description": "Additional pharmacy store, remaining current period",
+      "discountable": false,
+      "discount_amounts": [],
+      "proration": null
+     }
+    ]
+   },
+   "payment_intent": {
+    "status": "succeeded",
+    "next_action": null,
+    "last_error": null,
+    "decline_code": null
+   },
+   "paid_ok": true,
+   "period_unchanged_at_activation": true,
+   "subscription_before": {
+    "id": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+    "status": "active",
+    "quantity": 1,
+    "item": "si_VdjsFkdjo30WEP",
+    "period": [
+     1794845084,
+     1797437084
+    ],
+    "billing_cycle_anchor": 1794845084,
+    "latest_invoice": "in_1UcSOeGnEQDyu3RR4OIiV8NU",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "subscription_after_quantity": {
+    "id": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+    "status": "active",
+    "quantity": 2,
+    "item": "si_VdjsFkdjo30WEP",
+    "period": [
+     1794845084,
+     1797437084
+    ],
+    "billing_cycle_anchor": 1794845084,
+    "latest_invoice": "in_1UcSOeGnEQDyu3RR4OIiV8NU",
+    "pending_update": false,
+    "discounts": [],
+    "cancel_at_period_end": false
+   },
+   "anchor_unchanged": true,
+   "latest_invoice_unchanged": true,
+   "no_new_invoice_from_quantity_change": true,
+   "customer_invoices": [
+    {
+     "id": "in_1UcSOiGnEQDyu3RRBOVo2tr6",
+     "status": "paid",
+     "billing_reason": "manual",
+     "total": 4900
+    },
+    {
+     "id": "in_1UcSOeGnEQDyu3RR4OIiV8NU",
+     "status": "paid",
+     "billing_reason": "subscription_create",
+     "total": 8910
+    }
+   ],
+   "renewal_preview": {
+    "amount_due": 14800,
+    "total": 14800,
+    "subtotal": 14800,
+    "total_discount_amounts": [],
+    "discounts": [],
+    "lines": [
+     {
+      "amount": 9900,
+      "quantity": 1,
+      "description": "1 × OwedBook — pharmacy stores (Tier 1 at $99.00 / month)",
+      "proration": false
+     },
+     {
+      "amount": 4900,
+      "quantity": 1,
+      "description": "1 × OwedBook — pharmacy stores (Tier 2 at $49.00 / month)",
+      "proration": false
+     }
+    ]
+   },
+   "renewal_expected_cents": 14800,
+   "renewal_ok": true,
+   "pass": true
+  },
+  {
+   "name": "events_and_delivery",
+   "at": "2026-11-16T16:04:57.682Z",
+   "count": 90,
+   "tally": {
+    "customer.subscription.updated": 3,
+    "invoice.payment_succeeded": 6,
+    "invoice.paid": 6,
+    "invoice.updated": 15,
+    "payment_intent.succeeded": 5,
+    "charge.succeeded": 5,
+    "invoice.finalized": 7,
+    "payment_intent.created": 6,
+    "invoiceitem.created": 4,
+    "invoice.created": 8,
+    "customer.subscription.created": 2,
+    "customer.discount.deleted": 1,
+    "customer.discount.created": 1,
+    "customer.updated": 6,
+    "payment_method.attached": 4,
+    "customer.created": 2,
+    "invoice.payment_action_required": 1,
+    "invoice.payment_failed": 2,
+    "payment_intent.requires_action": 1,
+    "payment_intent.payment_failed": 2,
+    "payment_intent.canceled": 1,
+    "invoice.voided": 1,
+    "charge.failed": 1
+   },
+   "max_pending_webhooks": 0,
+   "delivery_after": {
+    "webhook_endpoints": [],
+    "event_destinations": 0,
+    "local_stripe_listeners": 0
+   },
+   "events": [
+    {
+     "id": "evt_1UcSOoGnEQDyu3RROysLDTCk",
+     "type": "customer.subscription.updated",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOnGnEQDyu3RR6O5D47Bz",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOnGnEQDyu3RRMWtmOpPS",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOnGnEQDyu3RRWkrfjCRg",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOkGnEQDyu3RR17EWyBzS",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOkGnEQDyu3RR11hM8SbI",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOlGnEQDyu3RRaJdzgMFj",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOlGnEQDyu3RROQU6EQsI",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOkGnEQDyu3RR1NrNn1hh",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOjGnEQDyu3RRVu25lT8q",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOjGnEQDyu3RRKxBWVTNy",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOiGnEQDyu3RRuG8AMEam",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRfiQMtI6J",
+     "type": "customer.subscription.created",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRq3eQ6Epg",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RR4gwmYpyR",
+     "type": "invoice.paid",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRdbvHPdUx",
+     "type": "invoice.finalized",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRMUuxH6Np",
+     "type": "invoice.created",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RR0sxwdMW0",
+     "type": "customer.discount.deleted",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRMmcBMR5l",
+     "type": "customer.discount.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRL6lxbeWw",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOfGnEQDyu3RR1YRVGBuZ",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOfGnEQDyu3RR1sK5gW88",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOfGnEQDyu3RR19I7UTjw",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOeGnEQDyu3RRFyXpRWiI",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOeGnEQDyu3RRFOD2ipk3",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOdGnEQDyu3RRZo6lIxUc",
+     "type": "customer.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOQGnEQDyu3RRRmmSCFKG",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOOGnEQDyu3RR86ETq5EO",
+     "type": "customer.subscription.updated",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOIGnEQDyu3RR1WrWSlI2",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOHGnEQDyu3RRKr84r8Er",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOHGnEQDyu3RRacjF1Sx6",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1hvZ8Xrk",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1jNPbhr2",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRh28FWbds",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRAlQMMgT4",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRHiLPeSuh",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRGXyJY561",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN6GnEQDyu3RRZSuK1QcC",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLwGnEQDyu3RRdJEqjbtM",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLvGnEQDyu3RRZRimMHUS",
+     "type": "invoice.payment_action_required",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLvGnEQDyu3RRl4whSqKU",
+     "type": "invoice.payment_failed",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1DCpvjCI",
+     "type": "payment_intent.requires_action",
+     "billing_reason": null,
+     "status": "requires_action",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1Nfco15w",
+     "type": "payment_intent.payment_failed",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLuGnEQDyu3RRyKQ6yTxg",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLuGnEQDyu3RRpXOJGnwL",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1zKmGLZW",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLrGnEQDyu3RRLEYgXl86",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLrGnEQDyu3RRtD9MtIcc",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLrGnEQDyu3RRwcrk0HYa",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLqGnEQDyu3RRuM1yzfVr",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLpGnEQDyu3RRa6shJJb2",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR1nAXdZcq",
+     "type": "payment_intent.canceled",
+     "billing_reason": null,
+     "status": "canceled",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLnGnEQDyu3RRmvbk8CDW",
+     "type": "invoice.voided",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "void",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLnGnEQDyu3RRiGQx4RxT",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "void",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLlGnEQDyu3RR92I66bef",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLlGnEQDyu3RRyVYCn5t6",
+     "type": "invoice.payment_failed",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR18GzHWgE",
+     "type": "payment_intent.payment_failed",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR1LpnWqmg",
+     "type": "charge.failed",
+     "billing_reason": null,
+     "status": "failed",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLkGnEQDyu3RR5rp9WGSH",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLkGnEQDyu3RRNi4hbzXz",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR1JzO2gYQ",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLhGnEQDyu3RRxCNGqnwj",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLiGnEQDyu3RR69yRijuO",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLhGnEQDyu3RRoDJqeoHt",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLgGnEQDyu3RRONDlR0h4",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLgGnEQDyu3RRR7eB2EMO",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLdGnEQDyu3RR3roJPCCv",
+     "type": "customer.subscription.updated",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLcGnEQDyu3RRWEwolLcq",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLcGnEQDyu3RRF2qvq1MF",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLcGnEQDyu3RRHP7i6BAM",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLaGnEQDyu3RR1KCpRjJu",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLaGnEQDyu3RR1IDaSfSO",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLaGnEQDyu3RRtrn9y9b7",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLaGnEQDyu3RR0KiEWWPx",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLaGnEQDyu3RR1F2lk5NY",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLYGnEQDyu3RR3f0SK2Pl",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLYGnEQDyu3RRVC6y6zRh",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLYGnEQDyu3RRhz3XQFLC",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRiV2c9kzm",
+     "type": "customer.subscription.created",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRY435f62W",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRD06dZf0G",
+     "type": "invoice.paid",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRYtQox8zX",
+     "type": "invoice.finalized",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRLSd7866P",
+     "type": "invoice.created",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRoLpfDb4s",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLVGnEQDyu3RR1Ysh7a2L",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLVGnEQDyu3RR1bkiCZf3",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLVGnEQDyu3RR1kmJNVEs",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLUGnEQDyu3RREHDqD0ZM",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLTGnEQDyu3RRCpxBTi1I",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLSGnEQDyu3RR7ZVWwboy",
+     "type": "customer.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    }
+   ],
+   "note": "Customers carry no email address, so the provider has no recipient for any invoice email; Stripe email settings are not readable by API (limitation)."
+  },
+  {
+   "name": "BP01_sub_minimum_computation_only",
+   "at": "2026-11-16T16:05:22.558Z",
+   "period_days": 30,
+   "cases": [
+    {
+     "seconds_left": 21600,
+     "amount": 41,
+     "refusal": "below_minimum_charge"
+    },
+    {
+     "seconds_left": 25200,
+     "amount": 48,
+     "refusal": "below_minimum_charge"
+    },
+    {
+     "seconds_left": 28800,
+     "amount": 54,
+     "refusal": null
+    },
+    {
+     "seconds_left": 172800,
+     "amount": 327,
+     "refusal": null
+    },
+    {
+     "seconds_left": 1296000,
+     "amount": 2450,
+     "refusal": null
+    }
+   ],
+   "rule": "refuse when e-t < 90 min OR amount < 50; no invoice created"
+  },
+  {
+   "name": "O:lost2_leftover_draft_deleted",
+   "at": "2026-11-16T16:05:23.545Z",
+   "invoice": "in_1UcSOQGnEQDyu3RR38LfB1uB",
+   "total": 0
+  },
+  {
+   "name": "O:lost_reply_reconciliation",
+   "at": "2026-11-16T16:05:25.583Z",
+   "enumerated_matches": 1,
+   "replay_returned_same": true,
+   "replay_error": null,
+   "invoices_for_operation_after_replay": 1,
+   "pass": true
+  },
+  {
+   "name": "events_and_delivery",
+   "at": "2026-11-16T16:05:27.616Z",
+   "count": 93,
+   "tally": {
+    "invoice.deleted": 2,
+    "invoice.created": 9,
+    "customer.subscription.updated": 3,
+    "invoice.payment_succeeded": 6,
+    "invoice.paid": 6,
+    "invoice.updated": 15,
+    "payment_intent.succeeded": 5,
+    "charge.succeeded": 5,
+    "invoice.finalized": 7,
+    "payment_intent.created": 6,
+    "invoiceitem.created": 4,
+    "customer.subscription.created": 2,
+    "customer.discount.deleted": 1,
+    "customer.discount.created": 1,
+    "customer.updated": 6,
+    "payment_method.attached": 4,
+    "customer.created": 2,
+    "invoice.payment_action_required": 1,
+    "invoice.payment_failed": 2,
+    "payment_intent.requires_action": 1,
+    "payment_intent.payment_failed": 2,
+    "payment_intent.canceled": 1,
+    "invoice.voided": 1,
+    "charge.failed": 1
+   },
+   "max_pending_webhooks": 1,
+   "delivery_after": {
+    "webhook_endpoints": [],
+    "event_destinations": 0,
+    "local_stripe_listeners": 0
+   },
+   "events": [
+    {
+     "id": "evt_1UcSPJGnEQDyu3RRSmR4xlxj",
+     "type": "invoice.deleted",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "deleted",
+     "pending_webhooks": 1
+    },
+    {
+     "id": "evt_1UcSPIGnEQDyu3RR1au2BPUa",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSPHGnEQDyu3RRhc7H5KEh",
+     "type": "invoice.deleted",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "deleted",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOoGnEQDyu3RROysLDTCk",
+     "type": "customer.subscription.updated",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOnGnEQDyu3RR6O5D47Bz",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOnGnEQDyu3RRMWtmOpPS",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOnGnEQDyu3RRWkrfjCRg",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOkGnEQDyu3RR17EWyBzS",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOkGnEQDyu3RR11hM8SbI",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOlGnEQDyu3RRaJdzgMFj",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOlGnEQDyu3RROQU6EQsI",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOkGnEQDyu3RR1NrNn1hh",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOjGnEQDyu3RRVu25lT8q",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOjGnEQDyu3RRKxBWVTNy",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOiGnEQDyu3RRuG8AMEam",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRfiQMtI6J",
+     "type": "customer.subscription.created",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRq3eQ6Epg",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RR4gwmYpyR",
+     "type": "invoice.paid",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRdbvHPdUx",
+     "type": "invoice.finalized",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRMUuxH6Np",
+     "type": "invoice.created",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RR0sxwdMW0",
+     "type": "customer.discount.deleted",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRMmcBMR5l",
+     "type": "customer.discount.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRL6lxbeWw",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOfGnEQDyu3RR1YRVGBuZ",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOfGnEQDyu3RR1sK5gW88",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOfGnEQDyu3RR19I7UTjw",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOeGnEQDyu3RRFyXpRWiI",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOeGnEQDyu3RRFOD2ipk3",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOdGnEQDyu3RRZo6lIxUc",
+     "type": "customer.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOQGnEQDyu3RRRmmSCFKG",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOOGnEQDyu3RR86ETq5EO",
+     "type": "customer.subscription.updated",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOIGnEQDyu3RR1WrWSlI2",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOHGnEQDyu3RRKr84r8Er",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOHGnEQDyu3RRacjF1Sx6",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1hvZ8Xrk",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1jNPbhr2",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRh28FWbds",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRAlQMMgT4",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRHiLPeSuh",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRGXyJY561",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN6GnEQDyu3RRZSuK1QcC",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLwGnEQDyu3RRdJEqjbtM",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLvGnEQDyu3RRZRimMHUS",
+     "type": "invoice.payment_action_required",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLvGnEQDyu3RRl4whSqKU",
+     "type": "invoice.payment_failed",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1DCpvjCI",
+     "type": "payment_intent.requires_action",
+     "billing_reason": null,
+     "status": "requires_action",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1Nfco15w",
+     "type": "payment_intent.payment_failed",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLuGnEQDyu3RRyKQ6yTxg",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLuGnEQDyu3RRpXOJGnwL",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1zKmGLZW",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLrGnEQDyu3RRLEYgXl86",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLrGnEQDyu3RRtD9MtIcc",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLrGnEQDyu3RRwcrk0HYa",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLqGnEQDyu3RRuM1yzfVr",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLpGnEQDyu3RRa6shJJb2",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR1nAXdZcq",
+     "type": "payment_intent.canceled",
+     "billing_reason": null,
+     "status": "canceled",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLnGnEQDyu3RRmvbk8CDW",
+     "type": "invoice.voided",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "void",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLnGnEQDyu3RRiGQx4RxT",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "void",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLlGnEQDyu3RR92I66bef",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLlGnEQDyu3RRyVYCn5t6",
+     "type": "invoice.payment_failed",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR18GzHWgE",
+     "type": "payment_intent.payment_failed",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR1LpnWqmg",
+     "type": "charge.failed",
+     "billing_reason": null,
+     "status": "failed",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLkGnEQDyu3RR5rp9WGSH",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLkGnEQDyu3RRNi4hbzXz",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR1JzO2gYQ",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLhGnEQDyu3RRxCNGqnwj",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLiGnEQDyu3RR69yRijuO",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLhGnEQDyu3RRoDJqeoHt",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLgGnEQDyu3RRONDlR0h4",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLgGnEQDyu3RRR7eB2EMO",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLdGnEQDyu3RR3roJPCCv",
+     "type": "customer.subscription.updated",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLcGnEQDyu3RRWEwolLcq",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLcGnEQDyu3RRF2qvq1MF",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLcGnEQDyu3RRHP7i6BAM",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLaGnEQDyu3RR1KCpRjJu",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLaGnEQDyu3RR1IDaSfSO",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLaGnEQDyu3RRtrn9y9b7",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLaGnEQDyu3RR0KiEWWPx",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLaGnEQDyu3RR1F2lk5NY",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLYGnEQDyu3RR3f0SK2Pl",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLYGnEQDyu3RRVC6y6zRh",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLYGnEQDyu3RRhz3XQFLC",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRiV2c9kzm",
+     "type": "customer.subscription.created",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRY435f62W",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRD06dZf0G",
+     "type": "invoice.paid",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRYtQox8zX",
+     "type": "invoice.finalized",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRLSd7866P",
+     "type": "invoice.created",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRoLpfDb4s",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLVGnEQDyu3RR1Ysh7a2L",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLVGnEQDyu3RR1bkiCZf3",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLVGnEQDyu3RR1kmJNVEs",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLUGnEQDyu3RREHDqD0ZM",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLTGnEQDyu3RRCpxBTi1I",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLSGnEQDyu3RR7ZVWwboy",
+     "type": "customer.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    }
+   ],
+   "note": "Customers carry no email address, so the provider has no recipient for any invoice email; Stripe email settings are not readable by API (limitation)."
+  },
+  {
+   "name": "BP01_sub_minimum_computation_only",
+   "at": "2026-11-16T16:05:31.592Z",
+   "period_days": 30,
+   "cases": [
+    {
+     "seconds_left": 21600,
+     "amount": 41,
+     "refusal": "below_minimum_charge"
+    },
+    {
+     "seconds_left": 25200,
+     "amount": 48,
+     "refusal": "below_minimum_charge"
+    },
+    {
+     "seconds_left": 28800,
+     "amount": 54,
+     "refusal": null
+    },
+    {
+     "seconds_left": 172800,
+     "amount": 327,
+     "refusal": null
+    },
+    {
+     "seconds_left": 1296000,
+     "amount": 2450,
+     "refusal": null
+    }
+   ],
+   "rule": "refuse when e-t < 90 min OR amount < 50; no invoice created"
+  },
+  {
+   "name": "events_and_delivery",
+   "at": "2026-11-16T16:05:32.900Z",
+   "count": 93,
+   "tally": {
+    "invoice.deleted": 2,
+    "invoice.created": 9,
+    "customer.subscription.updated": 3,
+    "invoice.payment_succeeded": 6,
+    "invoice.paid": 6,
+    "invoice.updated": 15,
+    "payment_intent.succeeded": 5,
+    "charge.succeeded": 5,
+    "invoice.finalized": 7,
+    "payment_intent.created": 6,
+    "invoiceitem.created": 4,
+    "customer.subscription.created": 2,
+    "customer.discount.deleted": 1,
+    "customer.discount.created": 1,
+    "customer.updated": 6,
+    "payment_method.attached": 4,
+    "customer.created": 2,
+    "invoice.payment_action_required": 1,
+    "invoice.payment_failed": 2,
+    "payment_intent.requires_action": 1,
+    "payment_intent.payment_failed": 2,
+    "payment_intent.canceled": 1,
+    "invoice.voided": 1,
+    "charge.failed": 1
+   },
+   "max_pending_webhooks": 0,
+   "delivery_after": {
+    "webhook_endpoints": [],
+    "event_destinations": 0,
+    "local_stripe_listeners": 0
+   },
+   "events": [
+    {
+     "id": "evt_1UcSPJGnEQDyu3RRSmR4xlxj",
+     "type": "invoice.deleted",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "deleted",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSPIGnEQDyu3RR1au2BPUa",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSPHGnEQDyu3RRhc7H5KEh",
+     "type": "invoice.deleted",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "deleted",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOoGnEQDyu3RROysLDTCk",
+     "type": "customer.subscription.updated",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOnGnEQDyu3RR6O5D47Bz",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOnGnEQDyu3RRMWtmOpPS",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOnGnEQDyu3RRWkrfjCRg",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOkGnEQDyu3RR17EWyBzS",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOkGnEQDyu3RR11hM8SbI",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOlGnEQDyu3RRaJdzgMFj",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOlGnEQDyu3RROQU6EQsI",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOkGnEQDyu3RR1NrNn1hh",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOjGnEQDyu3RRVu25lT8q",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOjGnEQDyu3RRKxBWVTNy",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOiGnEQDyu3RRuG8AMEam",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRfiQMtI6J",
+     "type": "customer.subscription.created",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRq3eQ6Epg",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RR4gwmYpyR",
+     "type": "invoice.paid",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRdbvHPdUx",
+     "type": "invoice.finalized",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRMUuxH6Np",
+     "type": "invoice.created",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSOeGnEQDyu3RR8KHk12PR",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RR0sxwdMW0",
+     "type": "customer.discount.deleted",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRMmcBMR5l",
+     "type": "customer.discount.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOhGnEQDyu3RRL6lxbeWw",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOfGnEQDyu3RR1YRVGBuZ",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOfGnEQDyu3RR1sK5gW88",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSOfGnEQDyu3RR19I7UTjw",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOeGnEQDyu3RRFyXpRWiI",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOeGnEQDyu3RRFOD2ipk3",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOdGnEQDyu3RRZo6lIxUc",
+     "type": "customer.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOQGnEQDyu3RRRmmSCFKG",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOOGnEQDyu3RR86ETq5EO",
+     "type": "customer.subscription.updated",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOIGnEQDyu3RR1WrWSlI2",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOHGnEQDyu3RRKr84r8Er",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSOHGnEQDyu3RRacjF1Sx6",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1hvZ8Xrk",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1jNPbhr2",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRh28FWbds",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRAlQMMgT4",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRHiLPeSuh",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN8GnEQDyu3RRGXyJY561",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSN6GnEQDyu3RRZSuK1QcC",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLwGnEQDyu3RRdJEqjbtM",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLvGnEQDyu3RRZRimMHUS",
+     "type": "invoice.payment_action_required",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLvGnEQDyu3RRl4whSqKU",
+     "type": "invoice.payment_failed",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1DCpvjCI",
+     "type": "payment_intent.requires_action",
+     "billing_reason": null,
+     "status": "requires_action",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1Nfco15w",
+     "type": "payment_intent.payment_failed",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLuGnEQDyu3RRyKQ6yTxg",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLuGnEQDyu3RRpXOJGnwL",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLtGnEQDyu3RR1zKmGLZW",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLrGnEQDyu3RRLEYgXl86",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLrGnEQDyu3RRtD9MtIcc",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLrGnEQDyu3RRwcrk0HYa",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLqGnEQDyu3RRuM1yzfVr",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLpGnEQDyu3RRa6shJJb2",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR1nAXdZcq",
+     "type": "payment_intent.canceled",
+     "billing_reason": null,
+     "status": "canceled",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLnGnEQDyu3RRmvbk8CDW",
+     "type": "invoice.voided",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "void",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLnGnEQDyu3RRiGQx4RxT",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "void",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLlGnEQDyu3RR92I66bef",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLlGnEQDyu3RRyVYCn5t6",
+     "type": "invoice.payment_failed",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR18GzHWgE",
+     "type": "payment_intent.payment_failed",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR1LpnWqmg",
+     "type": "charge.failed",
+     "billing_reason": null,
+     "status": "failed",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLkGnEQDyu3RR5rp9WGSH",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLkGnEQDyu3RRNi4hbzXz",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLjGnEQDyu3RR1JzO2gYQ",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLhGnEQDyu3RRxCNGqnwj",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLiGnEQDyu3RR69yRijuO",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLhGnEQDyu3RRoDJqeoHt",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLgGnEQDyu3RRONDlR0h4",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLgGnEQDyu3RRR7eB2EMO",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLdGnEQDyu3RR3roJPCCv",
+     "type": "customer.subscription.updated",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLcGnEQDyu3RRWEwolLcq",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLcGnEQDyu3RRF2qvq1MF",
+     "type": "invoice.paid",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLcGnEQDyu3RRHP7i6BAM",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLaGnEQDyu3RR1KCpRjJu",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLaGnEQDyu3RR1IDaSfSO",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLaGnEQDyu3RRtrn9y9b7",
+     "type": "invoice.finalized",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLaGnEQDyu3RR0KiEWWPx",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "open",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLaGnEQDyu3RR1F2lk5NY",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLYGnEQDyu3RR3f0SK2Pl",
+     "type": "invoice.updated",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLYGnEQDyu3RRVC6y6zRh",
+     "type": "invoiceitem.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLYGnEQDyu3RRhz3XQFLC",
+     "type": "invoice.created",
+     "billing_reason": "manual",
+     "invoice_subscription": null,
+     "status": "draft",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRiV2c9kzm",
+     "type": "customer.subscription.created",
+     "billing_reason": null,
+     "status": "active",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRY435f62W",
+     "type": "invoice.payment_succeeded",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRD06dZf0G",
+     "type": "invoice.paid",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRYtQox8zX",
+     "type": "invoice.finalized",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRLSd7866P",
+     "type": "invoice.created",
+     "billing_reason": "subscription_create",
+     "invoice_subscription": "sub_1UcSLUGnEQDyu3RRzzZaii3j",
+     "status": "paid",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLXGnEQDyu3RRoLpfDb4s",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLVGnEQDyu3RR1Ysh7a2L",
+     "type": "payment_intent.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLVGnEQDyu3RR1bkiCZf3",
+     "type": "charge.succeeded",
+     "billing_reason": null,
+     "status": "succeeded",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_3UcSLVGnEQDyu3RR1kmJNVEs",
+     "type": "payment_intent.created",
+     "billing_reason": null,
+     "status": "requires_payment_method",
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLUGnEQDyu3RREHDqD0ZM",
+     "type": "customer.updated",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLTGnEQDyu3RRCpxBTi1I",
+     "type": "payment_method.attached",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    },
+    {
+     "id": "evt_1UcSLSGnEQDyu3RR7ZVWwboy",
+     "type": "customer.created",
+     "billing_reason": null,
+     "status": null,
+     "pending_webhooks": 0
+    }
+   ],
+   "note": "Customers carry no email address, so the provider has no recipient for any invoice email; Stripe email settings are not readable by API (limitation)."
+  }
+ ],
+ "preflight": {
+  "sdk": "22.1.0",
+  "api_version": "2026-04-22.dahlia",
+  "account_matches": true,
+  "account_suffix": "u3RR",
+  "price": {
+   "id": "price_1UavqdGnEQDyu3RRcj32U2Ob",
+   "livemode": false,
+   "active": true,
+   "currency": "usd",
+   "tiers_mode": "graduated",
+   "tiers": [
+    {
+     "up_to": 1,
+     "unit_amount": 9900
+    },
+    {
+     "up_to": null,
+     "unit_amount": 4900
+    }
+   ]
+  },
+  "catalogue_ok": true,
+  "apa": {
+   "id": "promo_1UavqfGnEQDyu3RRZMN3whuY",
+   "active": true,
+   "times_redeemed": 6,
+   "coupon": {
+    "id": "zJilviUO",
+    "percent_off": 10,
+    "duration": "once"
+   }
+  },
+  "delivery": {
+   "webhook_endpoints": [],
+   "event_destinations": 0,
+   "local_stripe_listeners": 0
+  },
+  "effects_remaining": {
+   "scratch_chain_cycles": {
+    "ceiling": 12,
+    "used": 0,
+    "left": 12
+   },
+   "scratch_auth_identities": {
+    "ceiling": 14,
+    "used": 0,
+    "left": 14
+   },
+   "dev_auth_identities": {
+    "ceiling": 0,
+    "used": 0,
+    "left": 0
+   },
+   "stripe_customers": {
+    "ceiling": 12,
+    "used": 2,
+    "left": 10
+   },
+   "stripe_subscriptions": {
+    "ceiling": 12,
+    "used": 2,
+    "left": 10
+   },
+   "test_clocks": {
+    "ceiling": 4,
+    "used": 0,
+    "left": 4
+   },
+   "test_clock_advances": {
+    "ceiling": 30,
+    "used": 0,
+    "left": 30
+   },
+   "invoice_create": {
+    "ceiling": 30,
+    "used": 12,
+    "left": 18
+   },
+   "invoiceitem_create": {
+    "ceiling": 30,
+    "used": 4,
+    "left": 26
+   },
+   "invoice_finalize": {
+    "ceiling": 30,
+    "used": 5,
+    "left": 25
+   },
+   "invoice_void": {
+    "ceiling": 30,
+    "used": 6,
+    "left": 24
+   },
+   "invoice_pay_or_hosted": {
+    "ceiling": 24,
+    "used": 7,
+    "left": 17
+   },
+   "payment_attempts": {
+    "ceiling": 60,
+    "used": 9,
+    "left": 51
+   },
+   "payment_attempt_cents": {
+    "ceiling": 300000,
+    "used": 53110,
+    "left": 246890
+   },
+   "subscription_mutations": {
+    "ceiling": 50,
+    "used": 3,
+    "left": 47
+   },
+   "payment_method_attach": {
+    "ceiling": 24,
+    "used": 4,
+    "left": 20
+   },
+   "default_card_changes": {
+    "ceiling": 30,
+    "used": 4,
+    "left": 26
+   },
+   "apa_redemptions": {
+    "ceiling": 3,
+    "used": 1,
+    "left": 2
+   },
+   "email_dispatch": {
+    "ceiling": 24,
+    "used": 0,
+    "left": 24
+   },
+   "fixture_app_mutations": {
+    "ceiling": 400,
+    "used": 0,
+    "left": 400
+   },
+   "dev_live_apply": {
+    "ceiling": 1,
+    "used": 0,
+    "left": 1
+   },
+   "dev_forward_fix": {
+    "ceiling": 1,
+    "used": 0,
+    "left": 1
+   }
+  },
+  "delivery_isolated": true,
+  "result": "PASS"
+ },
+ "started": "2026-11-16T16:01:26.578Z"
+}

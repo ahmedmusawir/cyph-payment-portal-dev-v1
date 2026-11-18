@@ -1,0 +1,32 @@
+{
+  "3000": {
+    "pid": 3199658,
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-v1-dev",
+    "disk_build_id": "UmcTyZbWkYJBA9sHyEXTy",
+    "compiled_supabase_refs": [
+      "yrsuwikjnbmvpznrgydb"
+    ],
+    "build_info": {
+      "app": "ob",
+      "revision": "unrecorded",
+      "artifactId": "unlabelled-build"
+    }
+  },
+  "3001": {
+    "pid": 3199884,
+    "cwd": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1",
+    "disk_build_id": "QFQse1v8q3lUiuyHF_ZsO",
+    "compiled_supabase_refs": [],
+    "build_info": {
+      "app": "pp",
+      "revision": "unrecorded",
+      "artifactId": "unlabelled-build"
+    }
+  },
+  "listeners": [
+    {
+      "pid": 3173001,
+      "forward_to": "http://localhost:3001/api/webhooks/stripe"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "old": "c8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea",
+  "repaired": "1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d",
+  "head": "1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d",
+  "branch": "qa/apbm-007b",
+  "files": [
+    "scripts/apbm007b/sql-proof.mjs",
+    "src/__tests__/admin-portal/LiveStaffPanel.hydration.test.tsx",
+    "src/__tests__/auth/LoginForm.hydration.test.tsx",
+    "src/components/admin-portal/LiveStaffPanel.tsx",
+    "src/components/auth/LoginForm.tsx",
+    "supabase/migrations/0070_007b_consent_deadline_paid_time.sql"
+  ],
+  "complete_diff_sha256": "f00fe2191fc800cce2bb5c98cfe591cfa1fcd04a888911d84abacef111337714"
+}

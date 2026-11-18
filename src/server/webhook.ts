@@ -9,6 +9,7 @@
 import type Stripe from 'stripe';
 import { admin, rpc } from '@/server/db';
 import { logServer } from '@/server/errors';
+import { advanceStoreOperation } from '@/server/storeOperations';
 import { advanceOperation, type AdvanceResult } from '@/server/provisioning';
 import { ENV_TAG, idOf, mirrorPayload, RUN_TAG } from '@/server/stripeMirror';
 import { stripe, stripeCall, stripeNames } from '@/server/stripeClient';
@@ -150,7 +151,19 @@ export async function decide(event: Stripe.Event): Promise<Disposition> {
       const details = invoice.parent?.subscription_details;
       const subscriptionId = idOf(details?.subscription as string | { id: string } | null | undefined);
       const customerId = idOf(invoice.customer as string | { id: string } | null);
-      if (!subscriptionId) return { kind: 'ignored', code: 'no_subscription' };   // not a subscription invoice: nothing here to apply
+      // APBM-007B: an Add Store invoice is found by its unique invoice→operation mapping first (BILLING.md webhook order).
+      const storeOp = await storeOperationForInvoice(invoice.id!);
+      if (storeOp) {
+        const r = await advanceStoreOperation(storeOp);
+        if (r === 'busy') return { kind: 'retry', code: 'busy' };
+        return { kind: 'processed', note: `store_${r}` };
+      }
+      if (!subscriptionId) {
+        // A standalone invoice carrying our Add Store marker but not yet mapped stays retryable (mapping is saved before
+        // collection, so this is a short race); anything else is not ours to apply.
+        if (invoice.metadata?.apbm_kind === 'store_add') return { kind: 'retry', code: 'awaiting_mapping' };
+        return { kind: 'ignored', code: 'no_subscription' };
+      }
       const evidence = { subscriptionId, customerId, metadata: [details?.metadata] };
       if (invoice.billing_reason === 'subscription_create') {
         // First payment: provisioning is decided by the operation, from authoritative facts. A failed first invoice provisions nothing.
@@ -160,12 +173,24 @@ export async function decide(event: Stripe.Event): Promise<Disposition> {
       }
       const known = await mirror(subscriptionId);
       if (known === 'unknown_subscription') return classifyUnmapped(evidence);
+      // APBM-007B: only a renewal (subscription_cycle) invoice can start or clear grace. Any other subscription invoice
+      // (e.g. subscription_update) updates the mirror only; latest_invoice open/void is never delinquency by itself.
+      if (invoice.billing_reason !== 'subscription_cycle') return { kind: 'processed', note: 'mirror_only' };
       // Grace follows the invoice's CURRENT state, so a late failure event for an invoice that has since been paid opens nothing.
       if (invoice.status === 'paid') {
         await rpc<string>('subscription_grace_clear', { p_stripe_subscription_id: subscriptionId, p_invoice: invoice.id });
+        await rpc<number>('notice_suppress_for_invoice', { p_invoice: invoice.id, p_reason: 'renewal_paid' });
       } else if (invoice.status === 'open' && invoice.attempted) {
-        await rpc<string>('subscription_grace_start', { p_stripe_subscription_id: subscriptionId, p_invoice: invoice.id, p_failed_at: new Date(event.created * 1000).toISOString() });
-        await recordRenewalReminder(subscriptionId, invoice.id!);   // also on a retry, so a failed first write is completed
+        // Grace starts at the invoice's own failure time in the provider timeline (a test clock's time on SCRATCH),
+        // never at worker processing time; retries of the same invoice never move it.
+        const failedAt = invoice.status_transitions?.finalized_at ?? invoice.created;
+        const started = await rpc<string>('subscription_grace_start', { p_stripe_subscription_id: subscriptionId, p_invoice: invoice.id, p_failed_at: new Date(failedAt * 1000).toISOString() });
+        const graceStart = await admin().from('subscriptions').select('grace_started_at,grace_invoice_id').eq('stripe_subscription_id', subscriptionId).maybeSingle();
+        const g = graceStart.data as { grace_started_at: string | null; grace_invoice_id: string | null } | null;
+        if (g?.grace_started_at && g.grace_invoice_id === invoice.id) {
+          await rpc<string>('notice_schedule_for_failure', { p_stripe_subscription_id: subscriptionId, p_invoice: invoice.id, p_grace_started: g.grace_started_at, p_amount_due: invoice.amount_due });
+        }
+        void started;
       }
       return { kind: 'processed', note: 'renewal' };
     }
@@ -186,26 +211,8 @@ export async function decide(event: Stripe.Event): Promise<Disposition> {
   }
 }
 
-/**
- * Amendment A1-3 (G5): a failed renewal records one reminder notification for the account owner, beside the in-app
- * banner that OwedBook computes from the grace state. Reminder email delivery is deferred to 007B, so the record stays
- * `pending` with that reason; nothing is sent. One record per invoice (dedupe key), however many events arrive.
- */
-async function recordRenewalReminder(subscriptionId: string, invoiceId: string): Promise<void> {
-  const sub = await admin().from('subscriptions').select('account_id').eq('stripe_subscription_id', subscriptionId).maybeSingle();
-  if (sub.error) throw new Error(`reminder subscription ${sub.error.code}`);
-  const accountId = (sub.data as { account_id?: string } | null)?.account_id;
-  if (!accountId) return;
-  const acct = await admin().from('accounts').select('owner_user_id').eq('id', accountId).maybeSingle();
-  if (acct.error) throw new Error(`reminder account ${acct.error.code}`);
-  const ownerId = (acct.data as { owner_user_id?: string } | null)?.owner_user_id;
-  if (!ownerId) return;
-  const ins = await admin().from('notification_operations').insert({
-    kind: 'renewal_reminder', dedupe_key: `renewal_reminder:${invoiceId}`, account_id: accountId, user_id: ownerId,
-    status: 'pending', last_error_code: 'email_deferred_007b',
-  });
-  if (ins.error && ins.error.code !== '23505') throw new Error(`reminder insert ${ins.error.code}`);
-}
+// APBM-007B: the 007A deferred renewal_reminder record is superseded by the notice ledger (migration 0065,
+// src/server/billingNotices.ts); legacy pending rows are suppressed with history kept.
 
 type Metadata = Record<string, string> | null | undefined;
 interface Evidence { sessionId?: string; subscriptionId?: string | null; customerId?: string | null; metadata?: Metadata[] }
@@ -299,4 +306,11 @@ async function mirrorRead(subscriptionId: string): Promise<{ result: 'applied' |
 }
 export async function mirror(subscriptionId: string): Promise<'applied' | 'stale' | 'unknown_subscription'> {
   return (await mirrorRead(subscriptionId)).result;
+}
+
+/** APBM-007B: the Add Store operation that owns this invoice, by the unique mapping saved before collection. */
+async function storeOperationForInvoice(invoiceId: string): Promise<string | null> {
+  const r = await admin().from('provider_invoice_operations').select('operation_id').eq('invoice_id', invoiceId).maybeSingle();
+  if (r.error) throw new Error(`store invoice lookup ${r.error.code}`);
+  return (r.data as { operation_id: string } | null)?.operation_id ?? null;
 }

@@ -1,0 +1,68 @@
+{
+  "at": "2026-11-18T07:12:27.470Z",
+  "served_before_exit": {
+    "pp": {
+      "base": "http://localhost:3101",
+      "http": {
+        "app": "pp",
+        "revision": "ba6653435136+qa-product",
+        "artifactId": "3289f99c95d0a7f486b9118783d4ec60"
+      },
+      "manifest": {
+        "app": "pp",
+        "artifact_id": "3289f99c95d0a7f486b9118783d4ec60",
+        "revision": "ba6653435136+qa-product",
+        "next_build_id": "aH0nR1DyQGbZVwVFkkUNh"
+      },
+      "process": {
+        "pid": 293267,
+        "cwd": "/tmp/apbm007b-qa-q4-02/proof/pp",
+        "started": "Wed Nov 18 12:24:40 2026",
+        "disk_build_id": "aH0nR1DyQGbZVwVFkkUNh",
+        "build_id_mtime": "2026-11-18T06:22:23.974Z"
+      },
+      "match": true
+    },
+    "ob": {
+      "base": "http://localhost:3100",
+      "http": {
+        "app": "ob",
+        "revision": "855e0ad2e22a+qa-product",
+        "artifactId": "34dc2489eb46124662d8d1ad8a75752e"
+      },
+      "manifest": {
+        "app": "ob",
+        "artifact_id": "34dc2489eb46124662d8d1ad8a75752e",
+        "revision": "855e0ad2e22a+qa-product",
+        "next_build_id": "3KO3peIFqtmaBal4bkzBU"
+      },
+      "process": {
+        "pid": 293266,
+        "cwd": "/tmp/apbm007b-qa-q4-02/proof/ob",
+        "started": "Wed Nov 18 12:24:40 2026",
+        "disk_build_id": "3KO3peIFqtmaBal4bkzBU",
+        "build_id_mtime": "2026-11-18T06:21:34.549Z"
+      },
+      "match": true
+    }
+  },
+  "owned_app_pids": {
+    "ob": 293266,
+    "pp": 293267
+  },
+  "owned_listener_pid": 292825,
+  "owned_listener_running": false,
+  "owned_ports_unbound": true,
+  "all_owned_stopped": true,
+  "director_before": [
+    "LISTEN 0      511                *:3457        *:* users:((\"next-server (v1\",pid=40320,fd=21)) "
+  ],
+  "director_after": [
+    "LISTEN 0      511                *:3457        *:* users:((\"next-server (v1\",pid=40320,fd=21))"
+  ],
+  "director_unchanged_since_late_snapshot": false,
+  "director_processes_touched": false,
+  "containers_started_stopped_or_deleted": 0,
+  "remote_fixtures_cleaned_or_refunded": false,
+  "all_remote_fixtures_retained": true
+}

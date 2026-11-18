@@ -1,5 +1,10 @@
 # Recovery State — cyph-stripe-subscription-portal-v1
 
+## ▶ APBM007B CLOSEOUT PREPARED — Director merge pending in both repos (updated 2026-11-18, Asia/Dhaka) — read this first
+- **Status:** Gate Q PASS WITH KNOWN RISK (Friday) on Portal `ba66534` / OwedBook `855e0ad`. KR-1 to KR-6 Director-accepted; cleanup accepted; QA records `1a07c63` pushed. SCRATCH at migration 70, DEV at 69. Gate D pending.
+- **Record:** module `agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/CLOSEOUT_REPORT.md`; Git handoff `…/EVIDENCE/CLOSEOUT/commit/GIT_HANDOFF.md`; DEV 0070 release sheet `…/EVIDENCE/CLOSEOUT/DEV_APPLY_0070/DEV_APPLY_0070_RELEASE.md`.
+- **WAITING FOR TONY:** (1) Portal closeout records commit and push; (2) on the merge release: Portal `--no-ff` merge and push, OwedBook PR merge commit; (3) separate releases: DEV 0070 apply, then deployment and Gate D. Do not delete the QA branches.
+
 ## ▶ APBM007A CLOSEOUT PREPARED — Director merge/push pending (updated 2026-11-16, Asia/Dhaka) — read this first
 - **Status:** Gate Q PASS WITH KNOWN RISK (Friday) on OwedBook `c976968` / portal `54a56b5` (product `6ed09ff`). r06 U-1/U-2/U-3 committed and Director-accepted, not QA-certified. Q5 cleanup complete (`af1b4af` in OwedBook). Both checkouts clean on `qa/apbm-007a`: OwedBook `af1b4af`, portal `1a39132`.
 - **Record:** OwedBook module `CLOSEOUT_REPORT.md`; Git handoff `EVIDENCE/CLOSEOUT/commit/COMMIT_HANDOFF.md`.

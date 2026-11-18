@@ -1,0 +1,23 @@
+
+node:internal/modules/cjs/loader:1401
+  const err = new Error(message);
+              ^
+
+Error: Cannot find module '../ledger.cjs'
+Require stack:
+- /tmp/apbm007b-qa-q4-01/proof/pp/package.json
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at file:///home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4/lib/stripe.mjs:57:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:329:25) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/tmp/apbm007b-qa-q4-01/proof/pp/package.json' ]
+}
+
+Node.js v22.17.0

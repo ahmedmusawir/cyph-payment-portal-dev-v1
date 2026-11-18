@@ -1,0 +1,64 @@
+[
+  {
+    "role": "NEW_ADMIN",
+    "check": "direct businesses RLS uses current per-account memberships",
+    "row_count": 1,
+    "error": null,
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_ADMIN",
+    "check": "billing mapping deny-all to customer JWT",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_ADMIN",
+    "check": "billing_test_context_enable",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_ADMIN",
+    "check": "billing_test_context_sync",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_ADMIN",
+    "check": "billing_test_context_disable",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "check": "direct businesses RLS uses current per-account memberships",
+    "row_count": 2,
+    "error": null,
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "check": "billing mapping deny-all to customer JWT",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "check": "billing_test_context_enable",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "check": "billing_test_context_sync",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "check": "billing_test_context_disable",
+    "error": "42501",
+    "result": "PASS"
+  }
+]

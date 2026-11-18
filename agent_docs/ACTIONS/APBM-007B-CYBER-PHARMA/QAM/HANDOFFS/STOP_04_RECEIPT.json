@@ -1,0 +1,28 @@
+{
+  "status": "Q4 PARTIAL \u2014 STOP-PRIVACY",
+  "path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/APBM-007B-CYBER-PHARMA_STOP_REVIEW_04.zip",
+  "downloads": "/home/moose/Downloads/APBM-007B-CYBER-PHARMA_STOP_REVIEW_04.zip",
+  "members": 209,
+  "indexed_entries": 208,
+  "sha256": "f15850f8f947f5a36ef22a2451dc60f67e71d895ef0beafe73d7fe61e76c81b7",
+  "validated": true,
+  "expanded_privacy_gates": [
+    {
+      "dir": "/tmp/APBM007B_STOP04_EXPANDED",
+      "hits": [],
+      "skipped_binary": 4
+    },
+    {
+      "controls": {
+        "poison": true,
+        "clean": true
+      },
+      "files": 209,
+      "private_values_checked": 87,
+      "hits": [],
+      "credential_values_or_hashes_printed": false
+    }
+  ],
+  "no_further_test_effects_after_privacy_stop": true,
+  "decision": "Friday/Tony privacy recovery: rotate affected SCRATCH QA passwords and revoke sessions, preserving identities/fixtures, or explicitly adjudicate contained local-artifact risk; Q4 resume release required"
+}

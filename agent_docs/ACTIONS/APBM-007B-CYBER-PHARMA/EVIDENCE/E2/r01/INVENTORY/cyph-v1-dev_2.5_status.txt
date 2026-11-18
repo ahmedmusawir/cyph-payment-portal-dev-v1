@@ -1,0 +1,24 @@
+ M next.config.js
+ M scripts/rls-harness/lib/env.mjs
+ M src/__tests__/apbm007a-auth.test.ts
+ M src/__tests__/apbm007a-boundaries.test.ts
+ M src/components/admin-portal/InviteScreen.tsx
+ M src/lib/appIdentity.ts
+?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/
+?? scripts/apbm007b/
+?? src/app/api/build-info/
+?? src/app/api/invitations/
+?? src/app/api/stores/
+?? src/app/invitations/
+?? src/components/admin-portal/LiveStaffPanel.tsx
+?? src/components/invitations/
+?? src/server/invitationMail.ts
+?? src/server/mailGuard.ts
+?? src/server/staff.ts
+?? supabase/migrations/0061_007b_identity_clock_foundation.sql
+?? supabase/migrations/0062_007b_store_operations.sql
+?? supabase/migrations/0063_007b_lifecycle_transfers.sql
+?? supabase/migrations/0064_007b_invitations.sql
+?? supabase/migrations/0065_007b_notices.sql
+?? supabase/migrations/0066_007b_operator_audit.sql
+?? supabase/migrations/0067_007b_reads_privileges.sql

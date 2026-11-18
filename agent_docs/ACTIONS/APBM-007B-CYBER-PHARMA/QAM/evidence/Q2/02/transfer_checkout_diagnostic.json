@@ -1,0 +1,31 @@
+{
+  "operation": {
+    "id": "69b001d2-e33f-4ba3-bd23-74a5c10a6bb1",
+    "status": "checkout_open",
+    "stripe_customer_id": "cus_Ve0hHqFExjMSdp",
+    "stripe_checkout_session_id": "cs_test_a0h8cbnB0ZG9rYfB1aCOiwdkjtG22rd1HoVhsS0tXCFUIyt4c3wPWEwfR5",
+    "stripe_subscription_id": null
+  },
+  "session": {
+    "id": "cs_test_a0h8cbnB0ZG9rYfB1aCOiwdkjtG22rd1HoVhsS0tXCFUIyt4c3wPWEwfR5",
+    "status": "open",
+    "payment_status": "unpaid",
+    "amount_total": 9900,
+    "subscription": null
+  },
+  "charges": [
+    {
+      "id": "ch_3UcigpGnEQDyu3RR0KsI3bvJ",
+      "status": "failed",
+      "paid": false,
+      "amount": 9900,
+      "failure_code": "card_declined",
+      "card_last4": "9995"
+    }
+  ],
+  "transfer": {
+    "status": "buyer_reserved",
+    "buyer_account_id": null,
+    "buyer_business_id": null
+  }
+}

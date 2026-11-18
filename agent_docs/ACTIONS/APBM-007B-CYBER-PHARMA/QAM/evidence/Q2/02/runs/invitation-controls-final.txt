@@ -1,0 +1,8 @@
+{"name":"admin-member-invite","http":201,"delivery":"sent","invitation_id":"e96de813-0e14-4432-914e-71058b13ffcc","attempts":1,"result":"FAIL"}
+{"name":"duplicate-and-cooldown","duplicate_status":409,"duplicate_code":"invitation_pending","immediate_status":422,"immediate_code":"invalid_input","attempts_unchanged":true,"result":"PASS"}
+{"name":"eligible-resend","status":200,"delivery":"sent","actual_dispatches_this_case":2,"stored_attempts":2,"result":"PASS"}
+{"name":"five-attempt-limit-fixture","status":409,"code":"attempts_exhausted","seeded_prior_counter":5,"actual_emails_this_case":2,"additional_send_attempted":false,"result":"PASS"}
+{"name":"expired-acceptance","status":410,"code":"expired","fixture":"expiry timestamp deliberately seeded; no Auth time settings changed","result":"PASS"}
+{"name":"revoke-replay-altered-csrf","fixture":"authenticated-role direct SQL unsent invitation; actual product revoke/accept API","revoke":200,"replayed_accept":410,"altered_id":404,"wrong_origin":403,"result":"PASS"}
+{"name":"existing-identity-password-preserved","same_auth_id":true,"original_password_login_ok":true,"result":"PASS"}
+

@@ -4,10 +4,7 @@
 import { createHash, randomBytes, timingSafeEqual } from 'node:crypto';
 import { NextResponse, type NextRequest } from 'next/server';
 import { createClient as createMemoryClient } from '@supabase/supabase-js';
-import {
-  APP_ID, PEER_ID, appEnv, authorizeCookieName, DEFAULT_RETURN, handoffCookieName, isSecureOrigin, ownOrigin, peerOrigin,
-  safePeerReturnPath, safeReturnPath, siteOriginMatches,
-} from '@/lib/appIdentity';
+import { APP_ID, PEER_ID, authorizeCookieName, DEFAULT_RETURN, handoffCookieName, isSecureOrigin, ownOrigin, peerOrigin, safePeerReturnPath, safeReturnPath, siteOriginMatches, handoffEnv } from '@/lib/appIdentity';
 import { admin, type Admin } from '@/server/db';
 import { createClient } from '@/utils/supabase/server';
 
@@ -105,7 +102,7 @@ export async function authorizeHandoff(request: NextRequest): Promise<NextRespon
   }
   const code = b64u(randomBytes(32));
   const { data, error } = await admin().rpc('handoff_issue', {
-    p_user: me.userId, p_session: me.sessionId, p_source: APP_ID, p_dest: PEER_ID, p_env: appEnv(), p_challenge: challenge,
+    p_user: me.userId, p_session: me.sessionId, p_source: APP_ID, p_dest: PEER_ID, p_env: handoffEnv(), p_challenge: challenge,
     p_state_hash: bytea(sha(state)), p_return: returnPath, p_code_hash: bytea(sha(code)), p_attempt: Number(attempt),
   });
   if (error) { log('authorize', `issue failed ${error.code}`); return done(page('/auth/handoff-recovery')); }
@@ -131,7 +128,7 @@ export async function callbackHandoff(request: NextRequest): Promise<NextRespons
   if (!code || !B64.test(code)) return recovery('no code');
 
   const service = admin();
-  const claimed = await service.rpc('handoff_claim', { p_code_hash: bytea(sha(code)), p_verifier: t.v, p_state_hash: bytea(sha(t.s)), p_dest: APP_ID, p_env: appEnv() });
+  const claimed = await service.rpc('handoff_claim', { p_code_hash: bytea(sha(code)), p_verifier: t.v, p_state_hash: bytea(sha(t.s)), p_dest: APP_ID, p_env: handoffEnv() });
   const claim = (claimed.data as { outcome: string; claim_id: string; user_id: string; return_path: string; attempt: number }[] | null)?.[0];
   if (claimed.error || !claim || claim.outcome !== 'claimed') return recovery('claim rejected');
   const fail = async (reason: string): Promise<void> => { await service.rpc('handoff_fail', { p_claim_id: claim.claim_id, p_reason: reason }); };

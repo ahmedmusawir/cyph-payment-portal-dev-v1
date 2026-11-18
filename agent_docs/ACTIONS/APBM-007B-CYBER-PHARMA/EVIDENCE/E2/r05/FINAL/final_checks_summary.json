@@ -1,0 +1,11 @@
+{
+ "at": "2026-11-17 Asia/Dhaka ~11:20-11:40",
+ "unit": {"portal": "482/482 (25 suites)", "owedbook": "312/312 (45 suites)"},
+ "typecheck": {"portal": "clean", "owedbook": "clean"},
+ "lint": {"portal": "0 errors, 27 warnings", "owedbook": "0 errors, 36 warnings"},
+ "build_scan": {"selftest": "PASS 23/23 poison detected, 0 clean hits", "portal": "build 0, client scan clean, no hits", "owedbook": "build 0, client scan clean; only the documented auth-js generateLink baseline exception (1 file)"},
+ "sql_proof": {"scratch": "130/130 (rolled back)", "local_fresh": "134/134 incl. committed concurrency races", "note": "first SCRATCH run 129/130: the backfill check asserted identities >= ownership rows, which a completed transfer (check E, AC-022) legitimately breaks; check corrected to the real invariants (no orphan, one live ownership per identity, shared identity only via a completed transfer). First-run output kept as sql_proof_scratch_final_first_run_129of130.json"},
+ "local_rehearsal": "fresh 0001-0069 PASS (ledger 69) after rebuilding the disposable local DB, which still held r02 committed race rows",
+ "browser_final": {"owedbook_staff_journey": "6/6 Chromium/Firefox/WebKit on the running proof build (product source byte-identical to the repos)", "portal_regression": "not re-run: every Stripe-backed fixture owner was cleaned up, and the dashboard's live card read for a deleted customer degrades to 'unknown' after 2-6.5 s (fixture condition, beyond the spec's 5 s wait); last full run r02 9/9 on three engines; Portal product files changed since that run: src/server/operator007b.ts only (operator audit), exercised live in check F"},
+ "served_identity": "running proof pair source equals repository product source (diff of src/, public/, next.config.js, package files: identical); final clean-build artifact ids differ only because scripts/e2e files changed: portal 8c6a308a74ec2a06d8c2f5826ef413ac, owedbook 5b3c3b13ab5f58935fe7f806040ea98f"
+}

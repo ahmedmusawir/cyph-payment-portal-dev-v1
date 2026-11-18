@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-18T02:40:28.173698+00:00",
+  "stop": "STOP-PRIVACY",
+  "phase": "Q4 partial",
+  "initial_observation": {
+    "Q4_lane_mode_before_containment": "0775",
+    "credential_bearing_context_file_mode": "0664",
+    "password_field": "ROLE_OWNER_A_PASSWORD",
+    "current_lane_mode": "0700",
+    "current_file_mode": "0600"
+  },
+  "affected_retained_artifacts": [
+    {
+      "lane": "apbm007b-qa-q4-01",
+      "path": "proof/pp/test-results/apbm007b.o1-state-Portal-d-5f2bd--the-owner-s-billing-action-apbm007b-webkit/error-context.md",
+      "affected_password_fields": [
+        "ROLE_OWNER_A_PASSWORD"
+      ],
+      "mode_at_this_followup": "0o600",
+      "current_mode": "0600",
+      "parent_mode": "0700",
+      "raw_artifact_kept_private": true
+    },
+    {
+      "lane": "apbm007b-qa-q2-01",
+      "path": "proof/ob/test-results/apbm007b.staff-owner-invit-33ff1--sees-it-pending-revokes-it-apbm007b-webkit/error-context.md",
+      "affected_password_fields": [
+        "ROLE_OWNER_B_PASSWORD"
+      ],
+      "mode_at_this_followup": "0o664",
+      "current_mode": "0600",
+      "parent_mode": "0700",
+      "raw_artifact_kept_private": true
+    }
+  ],
+  "credential_values_or_hashes_written_to_this_receipt": false,
+  "credential_bearing_contexts_exported": false,
+  "known_external_access": "Not established; no access or non-access claim inferred from chmod",
+  "controller_processes_terminated": [],
+  "credential_rotation_performed": false,
+  "owner_decision_required": "Friday/Tony: permit affected SCRATCH QA password rotation or explicitly accept contained local-artifact exposure risk; retention currently prohibits credential changes. No new identity/address required.",
+  "Q2_prior_path_reachability": "Follow-up found ROLE_OWNER_B_PASSWORD in a retained Q2 diagnostic with file mode0664. Parent mode before the follow-up chmod was not retained in this receipt; prior reachability is not independently asserted. Parent and file now restricted. Rotate both fields as a bounded precaution.",
+  "prevention": {
+    "Q4_lane_mode": "0700",
+    "Q2_lane_mode": "0700",
+    "existing_diagnostic_files": "0600",
+    "QA_child_umask_now": "0077",
+    "runner_source_observation": "Installed Playwright writes error-context.md for failures independently of trace/video/screenshot settings. Do not infer those settings disable credential-bearing accessibility snapshots.",
+    "raw_diagnostics_exported": false
+  }
+}

@@ -1,0 +1,13 @@
+
+Running 8 tests using 1 worker
+
+[1A[2K[1/8] [apbm007b-webkit] › e2e/apbm007b.addstore.spec.ts:24:5 › owner adds a store: server quote, three consents, payment, activated; dashboard shows it
+[1A[2K[2/8] [apbm007b-webkit] › e2e/apbm007b.addstore.spec.ts:51:5 › owner schedules a period-end removal and undoes it; no charge either way
+[1A[2K[3/8] [apbm007b-webkit] › e2e/apbm007b.addstore.spec.ts:66:5 › narrow viewport (375): dashboard and Add Store form fit with no horizontal scroll
+[1A[2K[4/8] [apbm007b-webkit] › e2e/apbm007b.o1-state.spec.ts:13:5 › Portal dashboard shows the active state with the owner's billing action
+[1A[2K[5/8] [apbm007b-webkit] › e2e/apbm007b.o1-state.spec.ts:26:5 › OwedBook shows the active banner
+[1A[2K[6/8] [apbm007b-webkit] › e2e/apbm007b.regression.spec.ts:29:5 › dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action
+[1A[2K[7/8] [apbm007b-webkit] › e2e/apbm007b.regression.spec.ts:38:5 › handoff Portal → OwedBook keeps the same user; OwedBook → Portal billing returns
+[1A[2K[8/8] [apbm007b-webkit] › e2e/apbm007b.regression.spec.ts:50:5 › Add Store quote screen: keyboard-only, dark theme, server quote shown, confirm disabled until all three consents
+[1A[2K  8 passed (1.1m)
+

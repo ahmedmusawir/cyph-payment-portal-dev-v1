@@ -1,0 +1,45 @@
+{
+  "at": "2026-11-18T08:06:27.937008+00:00",
+  "credential_source_absent": true,
+  "controls": {
+    "self_test": "PASS",
+    "rules": 10,
+    "poison_rules_hit": 10,
+    "clean_hits": 0
+  },
+  "raw_pattern_hits": [
+    {
+      "file": "records/evidence/Q2/01/preflight/candidate_to_execution_full.diff",
+      "rule": "email",
+      "count": 7
+    },
+    {
+      "file": "records/evidence/Q4/01/entry/portal_complete.diff",
+      "rule": "email",
+      "count": 14
+    }
+  ],
+  "classified_historical_exceptions": [
+    {
+      "file": "records/evidence/Q2/01/preflight/candidate_to_execution_full.diff",
+      "rule": "email",
+      "count": 7,
+      "original": "evidence/Q2/01/preflight/candidate_to_execution_full.diff",
+      "sha256": "97473fd06dbef554e178c65023446d2a21dc5ddf6528a8f2b79c790c35db1fa5",
+      "reason": "Historical source diff: public support/sender copy and email-shaped Python decorator tokens, not private QA values. Original contents preserved; both actual-value scans passed. Exact file hash only, no general email exemption."
+    },
+    {
+      "file": "records/evidence/Q4/01/entry/portal_complete.diff",
+      "rule": "email",
+      "count": 14,
+      "original": "evidence/Q4/01/entry/portal_complete.diff",
+      "sha256": "531c6a779686bcb54462a5b4e406dd4d9d384c29585a2c27aa4ae53941a8847f",
+      "reason": "Historical source diff: public support/sender copy and email-shaped Python decorator tokens, not private QA values. Original contents preserved; both actual-value scans passed. Exact file hash only, no general email exemption."
+    }
+  ],
+  "blocking_hits": [],
+  "skipped_binary": 28,
+  "archives_expanded": 9,
+  "PASS": true,
+  "no_new_actual_value_scan_claimed": true
+}

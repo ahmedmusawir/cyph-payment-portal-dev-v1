@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-18T08:05:52.174664+00:00",
+  "listeners": [],
+  "port_snapshot": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\nLISTEN 0      511                *:3457            *:*    users:((\"next-server (v1\",pid=40320,fd=21))\n",
+  "docker_exit": 0,
+  "container_names": [],
+  "owned_ports_3100_3101_absent": true,
+  "no_owned_listener": true,
+  "no_owned_containers": true,
+  "director_processes_or_files_mutated": false,
+  "note": "No services restarted or processes killed during final cleanup; Director ports are observational only. Already absent is not newly stopped."
+}

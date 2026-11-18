@@ -1,0 +1,402 @@
+{
+  "at": "2026-11-18T07:05:24.060Z",
+  "private_root_mode": "700",
+  "QA_lane_mode": "700",
+  "files": [
+    {
+      "file": ".env.qa.local",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "qa_cast.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402_auth_links.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "fill_q402_transfer_link.py",
+      "mode": "600",
+      "restricted": true
+    }
+  ],
+  "diagnostics": [
+    {
+      "file": "q402-browser-add-chromium/apbm007b.addstore-narrow-v-9bec8-t-with-no-horizontal-scroll-apbm007b/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-chromium/apbm007b.addstore-owner-ad-b07b2-ctivated-dashboard-shows-it-apbm007b/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-chromium/apbm007b.addstore-owner-sc-5f413-oes-it-no-charge-either-way-apbm007b/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-chromium/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-chromium/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-firefox/apbm007b.addstore-narrow-v-9bec8-t-with-no-horizontal-scroll-apbm007b-firefox/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-firefox/apbm007b.addstore-owner-ad-b07b2-ctivated-dashboard-shows-it-apbm007b-firefox/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-firefox/apbm007b.addstore-owner-sc-5f413-oes-it-no-charge-either-way-apbm007b-firefox/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-firefox/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-firefox/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-1/apbm007b.addstore-narrow-v-9bec8-t-with-no-horizontal-scroll-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-1/apbm007b.addstore-owner-ad-b07b2-ctivated-dashboard-shows-it-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-1/apbm007b.addstore-owner-sc-5f413-oes-it-no-charge-either-way-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-1/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-1/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-2/apbm007b.addstore-narrow-v-9bec8-t-with-no-horizontal-scroll-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-2/apbm007b.addstore-owner-ad-b07b2-ctivated-dashboard-shows-it-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-2/apbm007b.addstore-owner-sc-5f413-oes-it-no-charge-either-way-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-2/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-2/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-3/apbm007b.addstore-owner-ad-b07b2-ctivated-dashboard-shows-it-apbm007b-webkit/error-context.md",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-3/apbm007b.addstore-owner-ad-b07b2-ctivated-dashboard-shows-it-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-3/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-3/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-4/apbm007b.addstore-narrow-v-9bec8-t-with-no-horizontal-scroll-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-4/apbm007b.addstore-owner-ad-b07b2-ctivated-dashboard-shows-it-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-4/apbm007b.addstore-owner-sc-5f413-oes-it-no-charge-either-way-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-4/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-4/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-5/apbm007b.addstore-narrow-v-9bec8-t-with-no-horizontal-scroll-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-5/apbm007b.addstore-owner-ad-b07b2-ctivated-dashboard-shows-it-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-5/apbm007b.addstore-owner-sc-5f413-oes-it-no-charge-either-way-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-5/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-add-webkit-5/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-1/apbm007b.addstore-narrow-v-9bec8-t-with-no-horizontal-scroll-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-1/apbm007b.addstore-owner-ad-b07b2-ctivated-dashboard-shows-it-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-1/apbm007b.addstore-owner-sc-5f413-oes-it-no-charge-either-way-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-1/apbm007b.o1-state-OwedBook-shows-the-active-banner-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-1/apbm007b.o1-state-Portal-d-5f2bd--the-owner-s-billing-action-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-1/apbm007b.regression-Add-St-07db4-ed-until-all-three-consents-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-1/apbm007b.regression-dashbo-3f0b8-s-one-Manage-billing-action-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-1/apbm007b.regression-handof-b4a1e-ok-→-Portal-billing-returns-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-1/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-1/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-2/apbm007b.addstore-narrow-v-9bec8-t-with-no-horizontal-scroll-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-2/apbm007b.addstore-owner-ad-b07b2-ctivated-dashboard-shows-it-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-2/apbm007b.addstore-owner-sc-5f413-oes-it-no-charge-either-way-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-2/apbm007b.o1-state-OwedBook-shows-the-active-banner-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-2/apbm007b.o1-state-Portal-d-5f2bd--the-owner-s-billing-action-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-2/apbm007b.regression-Add-St-07db4-ed-until-all-three-consents-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-2/apbm007b.regression-dashbo-3f0b8-s-one-Manage-billing-action-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-2/apbm007b.regression-handof-b4a1e-ok-→-Portal-billing-returns-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-2/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-full-order-webkit-2/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-1/apbm007b.o1-state-OwedBook-shows-the-active-banner-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-1/apbm007b.o1-state-Portal-d-5f2bd--the-owner-s-billing-action-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-1/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-1/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-2/apbm007b.o1-state-OwedBook-shows-the-active-banner-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-2/apbm007b.o1-state-Portal-d-5f2bd--the-owner-s-billing-action-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-2/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-2/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-3/apbm007b.o1-state-OwedBook-shows-the-active-banner-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-3/apbm007b.o1-state-Portal-d-5f2bd--the-owner-s-billing-action-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-3/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-3/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-4/apbm007b.o1-state-OwedBook-shows-the-active-banner-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-4/apbm007b.o1-state-Portal-d-5f2bd--the-owner-s-billing-action-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-4/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-4/test-times.json",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-5/apbm007b.o1-state-OwedBook-shows-the-active-banner-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-5/apbm007b.o1-state-Portal-d-5f2bd--the-owner-s-billing-action-apbm007b-webkit/trace.zip",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-5/raw.log",
+      "mode": "600",
+      "restricted": true
+    },
+    {
+      "file": "q402-browser-o1-alone-webkit-5/test-times.json",
+      "mode": "600",
+      "restricted": true
+    }
+  ],
+  "all_restricted": true,
+  "credential_values_or_hashes_exported": false,
+  "raw_private_artifacts_exported": false
+}

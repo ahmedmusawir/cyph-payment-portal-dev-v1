@@ -1,0 +1,18 @@
+{
+ "command": "forward",
+ "target": "local-rehearsal",
+ "startedAt": "2026-11-16T16:52:54.299Z",
+ "committed": [
+  "0061_007b_identity_clock_foundation.sql",
+  "0062_007b_store_operations.sql"
+ ],
+ "status": "FAULT_INJECTED_ROLLED_BACK",
+ "failedMigration": "0063_007b_lifecycle_transfers.sql",
+ "errorCode": "22012",
+ "message": "division by zero",
+ "ledger": {
+  "n": 62,
+  "last": "0062_007b_store_operations.sql"
+ },
+ "finishedAt": "2026-11-16T16:52:54.387Z"
+}

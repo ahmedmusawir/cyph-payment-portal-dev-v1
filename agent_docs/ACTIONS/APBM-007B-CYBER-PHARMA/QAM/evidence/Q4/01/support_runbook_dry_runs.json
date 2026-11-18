@@ -1,0 +1,254 @@
+[
+  {
+    "action": "store-transfer-authorize",
+    "command": [
+      "node",
+      "scripts/operator-007b.mjs",
+      "store-transfer-authorize",
+      "--base",
+      "http://localhost:3101",
+      "--source-business-id",
+      "ead021ba-ac2e-4daa-bffb-55595f93d761",
+      "--buyer-account-id",
+      "baaa602f-7c79-49a6-bd13-aa1e2cf8051e",
+      "--key-source",
+      "scratch"
+    ],
+    "mode": "Dry run by omitting --apply as documented in runbook§0; no apply attempted",
+    "exit": 0,
+    "http": 200,
+    "phase": "dry_run",
+    "result": "planned",
+    "audit_id": 56,
+    "typed_inputs_documented": true,
+    "approver": true,
+    "before": true,
+    "after": true,
+    "partial_failure_and_resume": true,
+    "possession_statement": true,
+    "output": {
+      "http": 200,
+      "action": "store-transfer-authorize",
+      "phase": "dry_run",
+      "result": "planned",
+      "target": {
+        "source": "ead021ba-ac2e-4daa-bffb-55595f93d761",
+        "buyer": "baaa602f-7c79-49a6-bd13-aa1e2cf8051e",
+        "buyer_email_given": false
+      },
+      "before": {
+        "seller_quantity": 3,
+        "effective_at": "2026-12-17T09:19:21.000Z",
+        "hold_hours": 48
+      },
+      "auditId": 56
+    }
+  },
+  {
+    "action": "store-transfer-complete",
+    "command": [
+      "node",
+      "scripts/operator-007b.mjs",
+      "store-transfer-complete",
+      "--base",
+      "http://localhost:3101",
+      "--transfer-id",
+      "0c0b22ce-9ad9-48fd-9b26-9fea8dfd51f9",
+      "--key-source",
+      "scratch"
+    ],
+    "mode": "Dry run by omitting --apply as documented in runbook§0; no apply attempted",
+    "exit": 0,
+    "http": 200,
+    "phase": "dry_run",
+    "result": "planned",
+    "audit_id": 57,
+    "typed_inputs_documented": true,
+    "approver": true,
+    "before": true,
+    "after": true,
+    "partial_failure_and_resume": true,
+    "possession_statement": true,
+    "output": {
+      "http": 200,
+      "action": "store-transfer-complete",
+      "phase": "dry_run",
+      "result": "planned",
+      "target": {
+        "transfer": "0c0b22ce-9ad9-48fd-9b26-9fea8dfd51f9"
+      },
+      "before": {
+        "status": "canceled",
+        "source_business_id": "ead021ba-ac2e-4daa-bffb-55595f93d761",
+        "effective_at": "2026-11-17T11:16:50.386+00:00"
+      },
+      "auditId": 57
+    }
+  },
+  {
+    "action": "store-transfer-cancel",
+    "command": [
+      "node",
+      "scripts/operator-007b.mjs",
+      "store-transfer-cancel",
+      "--base",
+      "http://localhost:3101",
+      "--transfer-id",
+      "0c0b22ce-9ad9-48fd-9b26-9fea8dfd51f9",
+      "--key-source",
+      "scratch"
+    ],
+    "mode": "Dry run by omitting --apply as documented in runbook§0; no apply attempted",
+    "exit": 0,
+    "http": 200,
+    "phase": "dry_run",
+    "result": "planned",
+    "audit_id": 58,
+    "typed_inputs_documented": true,
+    "approver": true,
+    "before": true,
+    "after": true,
+    "partial_failure_and_resume": true,
+    "possession_statement": true,
+    "output": {
+      "http": 200,
+      "action": "store-transfer-cancel",
+      "phase": "dry_run",
+      "result": "planned",
+      "target": {
+        "transfer": "0c0b22ce-9ad9-48fd-9b26-9fea8dfd51f9"
+      },
+      "before": {
+        "status": "canceled",
+        "source_account_id": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+        "effective_at": "2026-11-17T11:16:50.386+00:00"
+      },
+      "auditId": 58
+    }
+  },
+  {
+    "action": "removed-store-reactivate",
+    "command": [
+      "node",
+      "scripts/operator-007b.mjs",
+      "removed-store-reactivate",
+      "--base",
+      "http://localhost:3101",
+      "--business-id",
+      "df6b8514-8cc2-4341-a05c-552e4674f919",
+      "--key-source",
+      "scratch"
+    ],
+    "mode": "Dry run by omitting --apply as documented in runbook§0; no apply attempted",
+    "exit": 0,
+    "http": 200,
+    "phase": "dry_run",
+    "result": "planned",
+    "audit_id": 59,
+    "typed_inputs_documented": true,
+    "approver": true,
+    "before": true,
+    "after": true,
+    "partial_failure_and_resume": true,
+    "possession_statement": true,
+    "output": {
+      "http": 200,
+      "action": "removed-store-reactivate",
+      "phase": "dry_run",
+      "result": "planned",
+      "target": {
+        "business": "df6b8514-8cc2-4341-a05c-552e4674f919"
+      },
+      "before": {
+        "note": "authorization only; the owner then pays through Add Store and, after payment, gets the ORIGINAL record and history back (Director decision 9, approved 17 Nov 2026)"
+      },
+      "auditId": 59
+    }
+  },
+  {
+    "action": "owner-replace",
+    "command": [
+      "node",
+      "scripts/operator-007b.mjs",
+      "owner-replace",
+      "--base",
+      "http://localhost:3101",
+      "--account-id",
+      "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+      "--new-owner-user-id",
+      "6505e859-3e7a-47ee-9681-ec3c5a81ed8c",
+      "--key-source",
+      "scratch"
+    ],
+    "mode": "Dry run by omitting --apply as documented in runbook§0; no apply attempted",
+    "exit": 0,
+    "http": 200,
+    "phase": "dry_run",
+    "result": "planned",
+    "audit_id": 60,
+    "typed_inputs_documented": true,
+    "approver": true,
+    "before": true,
+    "after": true,
+    "partial_failure_and_resume": true,
+    "possession_statement": true,
+    "output": {
+      "http": 200,
+      "action": "owner-replace",
+      "phase": "dry_run",
+      "result": "planned",
+      "target": {
+        "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+        "newOwner": "6505e859-3e7a-47ee-9681-ec3c5a81ed8c"
+      },
+      "before": {
+        "owner": "49e40e80-055d-40f4-a2b3-0130c45df6b6"
+      },
+      "auditId": 60
+    }
+  },
+  {
+    "action": "store-admin-set",
+    "command": [
+      "node",
+      "scripts/operator-007b.mjs",
+      "store-admin-set",
+      "--base",
+      "http://localhost:3101",
+      "--business-id",
+      "8a888060-6e49-4ade-bf81-7e9d82705be1",
+      "--user-id",
+      "3bf1d010-d726-4d65-8649-2802b98bfd67",
+      "--former-admin-disposition",
+      "member",
+      "--key-source",
+      "scratch"
+    ],
+    "mode": "Dry run by omitting --apply as documented in runbook§0; no apply attempted",
+    "exit": 0,
+    "http": 200,
+    "phase": "dry_run",
+    "result": "planned",
+    "audit_id": 61,
+    "typed_inputs_documented": true,
+    "approver": true,
+    "before": true,
+    "after": true,
+    "partial_failure_and_resume": true,
+    "possession_statement": true,
+    "output": {
+      "http": 200,
+      "action": "store-admin-set",
+      "phase": "dry_run",
+      "result": "planned",
+      "target": {
+        "business": "8a888060-6e49-4ade-bf81-7e9d82705be1",
+        "user": "3bf1d010-d726-4d65-8649-2802b98bfd67"
+      },
+      "before": {
+        "disposition": "member"
+      },
+      "auditId": 61
+    }
+  }
+]

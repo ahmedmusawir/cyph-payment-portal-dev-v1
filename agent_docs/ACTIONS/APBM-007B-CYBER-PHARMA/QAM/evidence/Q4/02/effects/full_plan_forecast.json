@@ -1,0 +1,76 @@
+{
+  "at": "2026-11-18T06:22:26.620579+00:00",
+  "whole_remaining_plan": true,
+  "before": {
+    "reads": 3101,
+    "provider_mutations": 383,
+    "new_identities": 12,
+    "test_clocks": 3,
+    "customers": 8,
+    "subscriptions": 8,
+    "attempted_cents": 591178,
+    "sign_ins": 167,
+    "pay_or_hosted": 64,
+    "email_attempts": 18,
+    "unique_identities": 8,
+    "refunds": 2,
+    "scratch_cycles": 1
+  },
+  "remaining_upper_bounds_including_contingency": {
+    "provider_mutations": 145,
+    "customers": 2,
+    "subscriptions": 2,
+    "test_clocks": 0,
+    "pay_or_hosted": 28,
+    "attempted_cents": 400000,
+    "email_attempts": 10,
+    "sign_ins": 125,
+    "new_identities": 0,
+    "unique_identities": 0,
+    "scratch_cycles": 0,
+    "reads": 4000
+  },
+  "projected": {
+    "provider_mutations": 528,
+    "customers": 10,
+    "subscriptions": 10,
+    "test_clocks": 3,
+    "pay_or_hosted": 92,
+    "attempted_cents": 991178,
+    "email_attempts": 28,
+    "sign_ins": 292,
+    "new_identities": 12,
+    "unique_identities": 8,
+    "scratch_cycles": 1,
+    "reads": 7101
+  },
+  "caps": {
+    "provider_mutations": 560,
+    "customers": 16,
+    "subscriptions": 16,
+    "test_clocks": 7,
+    "pay_or_hosted": 100,
+    "attempted_cents": 1000000,
+    "email_attempts": 40,
+    "sign_ins": 300,
+    "new_identities": 14,
+    "unique_identities": 10,
+    "scratch_cycles": 3,
+    "reads": 8000
+  },
+  "cleanup_reserved": {
+    "provider_mutations": 20,
+    "email_attempts": 8
+  },
+  "pass": true,
+  "counter_reset": false,
+  "basis": [
+    "All touched-form intercepted probes3engines; no network submits counted as mail.",
+    "7unchanged AddStorespec runs plus2full-suite-order campaigns, confirm timings and bounded one-time fixture effects.",
+    "5O1alone/2fullorder,3staff, newunits/type/lint/bundles.",
+    "Bothapps3engine actual password/real Authlink verification and cross-appsignout; three controlled QA password changes.",
+    "Existing-user SCRATCHAuthgenerated links for isolated browser authentication are not inbox delivery; no new identities; real mail/link from Director only in final transfer lane.",
+    "Last live transfer/cutoff/buyer/payment/email proof plus contingency; no refund and no protectedF001 mutation.",
+    "Actual provider-clock renewal at transfer cutoff is included in attempted cents; forecast no remote migrations/reset."
+  ]
+}

@@ -1,0 +1,598 @@
+diff --git a/scripts/apbm007b/sql-proof.mjs b/scripts/apbm007b/sql-proof.mjs
+index 8bf6950..dd2f605 100644
+--- a/scripts/apbm007b/sql-proof.mjs
++++ b/scripts/apbm007b/sql-proof.mjs
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env node
+-// APBM-007B database proof (0061–0067). cwd: OwedBook repository root.
++// APBM-007B database proof (0061–0070). cwd: OwedBook repository root.
+ //
+ //   node scripts/apbm007b/sql-proof.mjs --help
+ //   node scripts/apbm007b/sql-proof.mjs --local <url>       # local rehearsal DB: rolled-back scenarios + committed concurrency
+@@ -178,7 +178,8 @@ await scenario('add store saga', async (db) => {
+   check('invoice mapping with wrong amount refused', (await db.svc(`select public.store_operation_map_invoice($1,'w1',$2,'in_proof1',$3,1) r`, [op, ep, p.c]))[0].r === 'binding_mismatch');
+   check('invoice mapped', (await db.svc(`select public.store_operation_map_invoice($1,'w1',$2,'in_proof1',$3,$4) r`, [op, ep, p.c, q.quote.amount_cents]))[0].r === 'mapped');
+   await db.svc(`select public.store_operation_transition($1,'w1',$2,'payment_pending',null,'in_proof1',null)`, [op, ep]);
+-  await db.svc(`select public.store_operation_transition($1,'w1',$2,'paid_pending_activation',null,null,null)`, [op, ep]);
++  // 0070: a paid invoice is recorded with the provider paid time (on time here) instead of a direct transition.
++  await db.svc(`select public.store_operation_payment_observed($1,'w1',$2,'in_proof1',$3,'usd',now())`, [op, ep, q.quote.amount_cents]);
+   check('activation refused on amount mismatch → attention', (await db.svc(`select public.store_add_activate($1,'in_proof1',1,'usd',3,$2,$3) r`, [op, p.s, p.e]))[0].r.code === 'payment_mismatch');
+   await db.raw(`update public.store_operations set state = 'paid_pending_activation', last_error_code = null where id = $1`, [op]);
+   check('activation refused on changed period → attention', (await db.svc(`select public.store_add_activate($1,'in_proof1',$2,'usd',3,$3,$4) r`, [op, q.quote.amount_cents, p.s, new Date(new Date(p.e).getTime() + 1000)]))[0].r.code === 'period_changed');
+@@ -293,7 +294,7 @@ await scenario('transfer and seller history', async (db) => {
+   const ep = (await db.svc(`select public.store_operation_lease($1,'w',30) e`, [op]))[0].e;
+   await db.svc(`select public.store_operation_map_invoice($1,'w',$2,'in_proofT',$3,$4)`, [op, ep, pB.c, q.quote.amount_cents]);
+   await db.svc(`select public.store_operation_transition($1,'w',$2,'payment_pending',null,'in_proofT',null)`, [op, ep]);
+-  await db.svc(`select public.store_operation_transition($1,'w',$2,'paid_pending_activation',null,null,null)`, [op, ep]);
++  await db.svc(`select public.store_operation_payment_observed($1,'w',$2,'in_proofT',$3,'usd',now())`, [op, ep, q.quote.amount_cents]);
+   const act = (await db.svc(`select public.store_add_activate($1,'in_proofT',$2,'usd',2,$3,$4) r`, [op, q.quote.amount_cents, q.quote.period_start, q.quote.period_end]))[0].r;
+   check('buyer activation: new ownership row under the same canonical identity', act.outcome === 'activated'
+     && (await db.raw('select pharmacy_id from public.businesses where id=$1', [act.business_id]))[0].pharmacy_id === w.s.A1, JSON.stringify(act));
+@@ -319,7 +320,7 @@ await scenario('decision 9: same-owner paid re-add restores the original record'
+   const ep = (await db.svc(`select public.store_operation_lease($1,'w',30) e`, [op]))[0].e;
+   await db.svc(`select public.store_operation_map_invoice($1,'w',$2,'in_react',$3,$4)`, [op, ep, p.c, q.quote.amount_cents]);
+   await db.svc(`select public.store_operation_transition($1,'w',$2,'payment_pending',null,'in_react',null)`, [op, ep]);
+-  await db.svc(`select public.store_operation_transition($1,'w',$2,'paid_pending_activation',null,null,null)`, [op, ep]);
++  await db.svc(`select public.store_operation_payment_observed($1,'w',$2,'in_react',$3,'usd',now())`, [op, ep, q.quote.amount_cents]);
+   const act = (await db.svc(`select public.store_add_activate($1,'in_react',$2,'usd',2,$3,$4) r`, [op, q.quote.amount_cents, p.s, p.e]))[0].r;
+   check('after payment the ORIGINAL ownership record is restored (same business id)', act.outcome === 'activated' && act.business_id === w.s.A2 && act.reactivated === true, JSON.stringify(act));
+   check('original history is back for the owner (claims RPC answers)', !(await db.as(w.u.ownerA, 'select public.owedbook_pbm_options($1)', [w.s.A2])).error && ids(await db.as(w.u.ownerA, 'select public.my_business_ids()')).includes(w.s.A2));
+@@ -390,6 +391,121 @@ await scenario('operator commands', async (db) => {
+   check('reactivation of a non-removed store refused', !!(await db.svc('select public.store_reactivation_authorize($1,$2) r', [w.s.B1, 'x']))[0].r.error);
+ });
+ 
++// ---------------------------------------------------------------- 0070 consent deadline (F-Q2-001, F-Q2-004)
++// Six cases, each on REAL time (no test context: billing_now = now()) and on SIMULATED time (SCRATCH identity + enabled
++// test context frozen 5 days in the real past). "Processed at deadline+k" is reached by moving the simulated clock forward
++// (simulated) or by placing the stored deadline k seconds before now() (real; now() is fixed inside the transaction).
++// The provider paid time is given relative to the stored deadline. Quantity is the local mirror (SQL activation sets it).
++async function deadlineFixture(db, mode) {
++  const w = await world(db); const p = await period(db, w.acct.A); const clock = 'clock_proofdl';
++  if (mode === 'simulated') {
++    if ((await db.raw('select count(*)::int n from public.billing_deployment'))[0].n === 0) await db.svc('select public.billing_deployment_bind($1)', [SCRATCH_REF]);
++    await db.svc(`select public.billing_test_context_enable($1,'proof-deadline',$2, now() - interval '5 days')`, [w.acct.A, clock]);
++  }
++  const q = (await db.svc(`select public.store_quote_create($1,$2,'Deadline Store',$3,null,$4,$5,$6,'price_proof',4900,$7,$8,$9,'terms-v1') r`, [w.acct.A, w.u.ownerA, NPI[4], p.c, p.sub, p.it, p.q, p.s, p.e]))[0].r;
++  const op = (await db.svc(`select public.store_operation_claim($1,$2,$3,'terms-v1') r`, [q.quote.id, w.u.ownerA, 'intent_' + randomUUID().replace(/-/g, '')]))[0].r.operation.id;
++  const ep = (await db.svc(`select public.store_operation_lease($1,'w1',30) e`, [op]))[0].e;
++  await db.svc(`select public.store_operation_map_invoice($1,'w1',$2,'in_deadline',$3,$4)`, [op, ep, p.c, q.quote.amount_cents]);
++  await db.svc(`select public.store_operation_transition($1,'w1',$2,'payment_pending',null,'in_deadline',null)`, [op, ep]);
++  const deadline = async () => new Date((await db.raw('select payment_deadline d from public.store_operations where id = $1', [op]))[0].d);
++  const processAt = async (k) => {   // the billing clock now reads deadline + k seconds
++    if (mode === 'simulated') { const d = await deadline(); return db.svc('select public.billing_test_context_sync($1,$2,$3)', [w.acct.A, clock, new Date(d.getTime() + k * 1000).toISOString()]); }
++    return db.raw(`update public.store_operations set payment_deadline = now() - make_interval(secs => $2) where id = $1`, [op, k]);
++  };
++  const paidAt = async (k) => new Date((await deadline()).getTime() + k * 1000).toISOString();
++  const observe = async (owner, epoch, k) => (await db.svc(`select public.store_operation_payment_observed($1,$2,$3,'in_deadline',$4,'usd',$5) r`, [op, owner, epoch, q.quote.amount_cents, await paidAt(k)]))[0].r;
++  const activate = async () => (await db.svc(`select public.store_add_activate($1,'in_deadline',$2,'usd',3,$3,$4) r`, [op, q.quote.amount_cents, p.s, p.e]))[0].r;
++  const passed = async () => (await db.svc('select public.store_operation_deadline_passed($1) v', [op]))[0].v;
++  const due = async () => (await db.svc('select public.store_operations_due() id')).some((r) => r.id === op);
++  const facts = async () => (await db.raw(`select o.state, o.last_error_code code, (select count(*)::int from public.businesses where npi = $2) stores,
++      (select quantity from public.subscriptions where account_id = $3) qty, (select status from public.npi_reservations where store_operation_id = $1) hold
++     from public.store_operations o where o.id = $1`, [op, NPI[4], w.acct.A]))[0];
++  return { w, q, op, ep, processAt, observe, activate, passed, due, facts };
++}
++for (const mode of ['real', 'simulated']) {
++  const T = (s) => `0070 ${mode}: ${s}`;
++  await scenario(T('on time and prompt'), async (db) => {
++    const f = await deadlineFixture(db, mode); await f.processAt(-1500);
++    const notPassed = (await f.passed()) === false;
++    const o = await f.observe('w1', f.ep, -1560);
++    const a = await f.activate(); const s = await f.facts();
++    check(T('on time and prompt: activates once, quantity +1'), notPassed && o === 'paid_pending_activation' && a.outcome === 'activated' && s.state === 'activated' && s.stores === 1 && s.qty === 3 && s.hold === 'consumed', JSON.stringify({ notPassed, o, a, s }));
++  });
++  await scenario(T('on time and delayed within the deadline'), async (db) => {
++    const f = await deadlineFixture(db, mode); await f.processAt(-300);
++    const notPassed = (await f.passed()) === false;
++    const o = await f.observe('w1', f.ep, -1200);
++    const a = await f.activate(); const s = await f.facts();
++    check(T('on time, processed 15 min later but before the deadline: activates once'), notPassed && o === 'paid_pending_activation' && a.outcome === 'activated' && s.stores === 1 && s.qty === 3, JSON.stringify({ notPassed, o, a, s }));
++  });
++  await scenario(T('on time and processed after the deadline'), async (db) => {
++    const f = await deadlineFixture(db, mode); await f.processAt(3600);
++    const late = await f.passed();
++    const o = await f.observe('w1', f.ep, -60);
++    const a = await f.activate(); const again = await f.activate(); const s = await f.facts();
++    check(T('paid 1 min before the deadline, processed 1 h after it (outage/crash/redelivery): activates exactly once'),
++      late === true && o === 'paid_pending_activation' && a.outcome === 'activated' && again.outcome === 'already_activated' && s.stores === 1 && s.qty === 3, JSON.stringify({ late, o, a, again, s }));
++  });
++  await scenario(T('late and prompt'), async (db) => {
++    const f = await deadlineFixture(db, mode); await f.processAt(61);
++    const o = await f.observe('w1', f.ep, 60);
++    const a = await f.activate(); const s = await f.facts();
++    check(T('paid 1 min after the deadline, processed promptly: attention, no activation, no quantity change, hold kept'),
++      o === 'attention' && s.code === 'paid_after_deadline' && a.outcome === 'not_paid_pending' && s.stores === 0 && s.qty === 2 && s.hold === 'op_held', JSON.stringify({ o, a, s }));
++  });
++  await scenario(T('late after crash'), async (db) => {
++    const f = await deadlineFixture(db, mode); await f.processAt(600);
++    // The worker holding the lease dies before recording anything; its lease lapses; a restarted worker takes over.
++    await db.raw(`update public.store_operations set lease_until = now() - interval '1 second' where id = $1`, [f.op]);
++    const ep2 = (await db.svc(`select public.store_operation_lease($1,'w2',30) e`, [f.op]))[0].e;
++    const stale = await f.observe('w1', f.ep, 30);
++    const o = await f.observe('w2', ep2, 30);
++    const a = await f.activate(); const s = await f.facts();
++    check(T('late payment recovered after a crash/restart: stale worker fenced, attention, no activation, no quantity change'),
++      stale === 'lease_lost' && o === 'attention' && s.code === 'paid_after_deadline' && a.outcome === 'not_paid_pending' && s.stores === 0 && s.qty === 2, JSON.stringify({ stale, o, a, s }));
++    const r = (await db.svc(`select public.store_operation_resume($1,$2,'owner-reconfirmed-ref') r`, [f.op, f.q.quote.amount_cents]))[0].r;
++    const a2 = await f.activate(); const s2 = await f.facts();
++    check(T('operator path from attention still works: resume after recorded owner reconfirmation, then one activation'),
++      r.outcome === 'resumed' && a2.outcome === 'activated' && s2.stores === 1 && s2.qty === 3, JSON.stringify({ r, a2, s2 }));
++  });
++  await scenario(T('unpaid expiry by the minute job'), async (db) => {
++    const f = await deadlineFixture(db, mode); await f.processAt(-60);
++    const beforeWall = (await db.raw('select payment_deadline < now() v from public.store_operations where id = $1', [f.op]))[0].v;
++    const before = { passed: await f.passed(), due: await f.due() };
++    if (mode === 'simulated') check(T('before the simulated deadline: wall clock says passed, billing clock says not (the app now asks the database)'), beforeWall === true && before.passed === false && before.due === false, JSON.stringify({ beforeWall, before }));
++    else check(T('before the deadline: not due'), before.passed === false && before.due === false, JSON.stringify(before));
++    await f.processAt(60);
++    const after = { passed: await f.passed(), due: await f.due() };
++    const t = (await db.svc(`select public.store_operation_transition($1,'w1',$2,'expired_unpaid','deadline_passed',null,null) r`, [f.op, f.ep]))[0].r;
++    const s = await f.facts();
++    check(T('at the deadline the due queue and the application check agree; verified-unpaid close expires it and releases the hold'),
++      after.passed === true && after.due === true && t === 'expired_unpaid' && s.state === 'expired_unpaid' && s.hold === 'released' && s.stores === 0 && s.qty === 2, JSON.stringify({ after, t, s }));
++  });
++}
++await scenario('0070 guards', async (db) => {
++  const f = await deadlineFixture(db, 'real'); await f.processAt(-600);
++  check('0070: the direct payment_pending → paid_pending_activation transition is refused', (await db.svc(`select public.store_operation_transition($1,'w1',$2,'paid_pending_activation',null,null,null) r`, [f.op, f.ep]))[0].r === 'transition_refused');
++  check('0070: wrong amount → attention payment_mismatch', (await db.svc(`select public.store_operation_payment_observed($1,'w1',$2,'in_deadline',1,'usd',now()) r`, [f.op, f.ep]))[0].r === 'attention' && (await f.facts()).code === 'payment_mismatch');
++  await db.raw(`update public.store_operations set state = 'payment_pending', last_error_code = null where id = $1`, [f.op]);
++  check('0070: no provider paid time → attention paid_time_unverified', (await db.svc(`select public.store_operation_payment_observed($1,'w1',$2,'in_deadline',$3,'usd',null) r`, [f.op, f.ep, f.q.quote.amount_cents]))[0].r === 'attention' && (await f.facts()).code === 'paid_time_unverified');
++  await db.raw(`update public.store_operations set state = 'payment_pending', last_error_code = null where id = $1`, [f.op]);
++  check('0070: paid exactly at the deadline is on time', (await f.observe('w1', f.ep, 0)) === 'paid_pending_activation');
++  await db.raw(`update public.store_operations set provider_paid_at = null where id = $1`, [f.op]);
++  const legacy = await f.activate();
++  check('0070: activation backstop — paid_pending_activation without a recorded paid time cannot activate', legacy.outcome === 'attention' && legacy.code === 'paid_time_unverified' && (await f.facts()).stores === 0, JSON.stringify(legacy));
++  check('0070: customers cannot call the new functions', !!(await db.as(f.w.u.ownerA, 'select public.store_operation_deadline_passed($1)', [f.op])).error
++    && !!(await db.as(f.w.u.ownerA, `select public.store_operation_payment_observed($1,'w1',1,'in_deadline',1,'usd',now())`, [f.op])).error);
++});
++await scenario('0070 paid-versus-void race', async (db) => {
++  const f = await deadlineFixture(db, 'real'); await f.processAt(30);
++  // The job saw the invoice open after the deadline and voided; the void lost to a payment completed after the deadline.
++  const o = await f.observe('w1', f.ep, 20); const a = await f.activate(); const s = await f.facts();
++  check('0070: paid-versus-void race after the deadline → attention, no store, no quantity change', o === 'attention' && s.code === 'paid_after_deadline' && a.outcome === 'not_paid_pending' && s.stores === 0 && s.qty === 2, JSON.stringify({ o, a, s }));
++  await db.raw(`update public.store_operations set state = 'payment_pending', last_error_code = null, provider_paid_at = null where id = $1`, [f.op]);
++  check('0070: owner abandon then paid → attention paid_after_abandon', (await db.svc('select public.store_operation_cancel_request($1,$2) r', [f.op, f.w.u.ownerA]))[0].r === 'cancel_requested'
++    && (await f.observe('w1', f.ep, -1000)) === 'attention' && (await f.facts()).code === 'paid_after_abandon');
++});
++
+ // ---------------------------------------------------------------- committed concurrency (local only)
+ if (target === 'local') {
+   const setup = new pg.Client({ connectionString: url }); await setup.connect();
+diff --git a/src/__tests__/admin-portal/LiveStaffPanel.hydration.test.tsx b/src/__tests__/admin-portal/LiveStaffPanel.hydration.test.tsx
+new file mode 100644
+index 0000000..0b5900a
+--- /dev/null
++++ b/src/__tests__/admin-portal/LiveStaffPanel.hydration.test.tsx
+@@ -0,0 +1,70 @@
++/** @jest-environment jsdom */
++// APBM-007B F-Q2-002 — the staff invitation screen keeps what was typed while the page was still hydrating. In WebKit the
++// fill landed on the server-rendered field without React seeing the change event; with the controlled field, the next
++// re-render (the member/invitation list load) wiped it and Send stayed disabled, so no status ever appeared.
++import { act } from "react";
++import { renderToString } from "react-dom/server";
++import { hydrateRoot, type Root } from "react-dom/client";
++import { fireEvent, screen, waitFor } from "@testing-library/react";
++import LiveStaffPanel from "@/components/admin-portal/LiveStaffPanel";
++
++jest.mock("@/services/adminDemo", () => ({
++  storeMemberService: { listMembers: () => new Promise((r) => setTimeout(() => r([{ memberId: "u1", name: "", email: "owner@x.invalid", role: "admin" }]), 20)) },
++}));
++
++const STORE = "6a6a650d-844e-4734-9674-e91a831d73f8";
++let posts: unknown[] = [];
++type Res = { ok: boolean; json: () => Promise<unknown> };
++const reply = (body: unknown, ok = true): Res => ({ ok, json: async () => body });
++let postImpl: () => Promise<Res>;
++beforeEach(() => {
++  posts = []; postImpl = async () => reply({ data: { delivery: "blocked" } });
++  global.fetch = jest.fn(async (url: RequestInfo | URL, init?: RequestInit) => {
++    if (init?.method === "POST") { posts.push(JSON.parse(String(init.body))); return postImpl(); }
++    return reply({ data: [] });
++  }) as unknown as typeof fetch;
++});
++
++async function serverRenderThenHydrate(typedBeforeHydration: string | null) {
++  const container = document.createElement("div");
++  container.innerHTML = renderToString(<LiveStaffPanel storeId={STORE} canAppointAdmin={false} />);
++  document.body.appendChild(container);
++  const ssrButton = container.querySelector("button[type=submit]") as HTMLButtonElement;
++  const ssrDisabled = ssrButton.disabled;
++  const field = container.querySelector("#invite-email") as HTMLInputElement;
++  if (typedBeforeHydration !== null) field.value = typedBeforeHydration;   // no input event: React never sees it
++  let root: Root | undefined;
++  await act(async () => { root = hydrateRoot(container, <LiveStaffPanel storeId={STORE} canAppointAdmin={false} />); });
++  await waitFor(() => expect(screen.getByText(/owner@x\.invalid/)).toBeTruthy());   // the list load re-rendered the panel
++  return { container, field, ssrDisabled, root: root as Root };
++}
++
++afterEach(() => { document.body.innerHTML = ""; });
++
++it("Send is disabled in the server HTML, so a click before hydration cannot become a native form submission", async () => {
++  const { ssrDisabled, container, root } = await serverRenderThenHydrate(null);
++  expect(ssrDisabled).toBe(true);
++  expect((container.querySelector("button[type=submit]") as HTMLButtonElement).disabled).toBe(false);
++  act(() => root.unmount());
++});
++
++it("text typed while hydrating survives the next re-render, and Send posts it and shows the delivery status", async () => {
++  const { field, container, root } = await serverRenderThenHydrate("late-typed@x.invalid");
++  expect(field.value).toBe("late-typed@x.invalid");
++  const send = container.querySelector("button[type=submit]") as HTMLButtonElement;
++  expect(send.disabled).toBe(false);
++  await act(async () => { fireEvent.submit(send.closest("form") as HTMLFormElement); });
++  expect(posts).toEqual([{ email: "late-typed@x.invalid", role: "member" }]);
++  await waitFor(() => expect(screen.getByRole("status").textContent).toContain("Email delivery is disabled for this address"));
++  act(() => root.unmount());
++});
++
++it("a failed request never leaves Send stuck: a message appears and the button is enabled again", async () => {
++  postImpl = async () => { throw new TypeError("Load failed"); };
++  const { field, container, root } = await serverRenderThenHydrate(null);
++  field.value = "someone@x.invalid";
++  await act(async () => { fireEvent.submit(container.querySelector("form") as HTMLFormElement); });
++  await waitFor(() => expect(screen.getByRole("status").textContent).toContain("That did not work"));
++  expect((container.querySelector("button[type=submit]") as HTMLButtonElement).disabled).toBe(false);
++  act(() => root.unmount());
++});
+diff --git a/src/__tests__/auth/LoginForm.hydration.test.tsx b/src/__tests__/auth/LoginForm.hydration.test.tsx
+new file mode 100644
+index 0000000..c38fc09
+--- /dev/null
++++ b/src/__tests__/auth/LoginForm.hydration.test.tsx
+@@ -0,0 +1,46 @@
++/** @jest-environment jsdom */
++// APBM-007B F-Q2-002 (bounds extension approved by the Director, 17 Nov 2026) — the sign-in form keeps credentials typed
++// while the page was still hydrating. In WebKit the fill landed without React seeing the change event; the controlled
++// field was then wiped and Login answered "Email is required".
++import { act } from "react";
++import { renderToString } from "react-dom/server";
++import { hydrateRoot, type Root } from "react-dom/client";
++import { fireEvent, screen, waitFor } from "@testing-library/react";
++import LoginForm from "@/components/auth/LoginForm";
++
++const mockLogin = jest.fn(async () => "/admin-portal");
++jest.mock("@/store/useAuthStore", () => ({
++  useAuthStore: (selector: (s: { login: typeof mockLogin }) => unknown) => selector({ login: mockLogin }),
++}));
++jest.mock("@/components/auth/LinkRequestForm", () => ({ LinkRequestForm: () => null }));
++
++async function serverRenderThenHydrate(typed: { email: string; password: string } | null) {
++  const container = document.createElement("div");
++  container.innerHTML = renderToString(<LoginForm />);
++  document.body.appendChild(container);
++  const ssrLoginDisabled = (screen.getByRole("button", { name: "Login" }) as HTMLButtonElement).disabled;
++  if (typed) {   // no input events: React never sees these
++    (container.querySelector("input[name=email]") as HTMLInputElement).value = typed.email;
++    (container.querySelector("input[name=password]") as HTMLInputElement).value = typed.password;
++  }
++  let root: Root | undefined;
++  await act(async () => { root = hydrateRoot(container, <LoginForm />); });
++  return { container, ssrLoginDisabled, root: root as Root };
++}
++afterEach(() => { document.body.innerHTML = ""; mockLogin.mockClear(); });
++
++it("Login is disabled in the server HTML (no native submit of credentials before hydration) and enabled after", async () => {
++  const { ssrLoginDisabled, root } = await serverRenderThenHydrate(null);
++  expect(ssrLoginDisabled).toBe(true);
++  expect((screen.getByRole("button", { name: "Login" }) as HTMLButtonElement).disabled).toBe(false);
++  act(() => root.unmount());
++});
++
++it("credentials typed while hydrating survive and are the ones submitted", async () => {
++  const { container, root } = await serverRenderThenHydrate({ email: "owner@x.invalid", password: "typed-early" });
++  await act(async () => { fireEvent.submit(container.querySelector("form") as HTMLFormElement); });
++  await waitFor(() => expect(mockLogin).toHaveBeenCalledWith("owner@x.invalid", "typed-early"));
++  expect((container.querySelector("input[name=email]") as HTMLInputElement).value).toBe("owner@x.invalid");
++  expect(screen.queryByText("Email is required")).toBeNull();
++  act(() => root.unmount());
++});
+diff --git a/src/components/admin-portal/LiveStaffPanel.tsx b/src/components/admin-portal/LiveStaffPanel.tsx
+index fd86c79..1b2b34e 100644
+--- a/src/components/admin-portal/LiveStaffPanel.tsx
++++ b/src/components/admin-portal/LiveStaffPanel.tsx
+@@ -1,7 +1,7 @@
+ "use client";
+ // APBM-007B — live staff management for one store (owner: members and admin replacement; store admin: members only).
+ // Every decision is made by the server (SQL re-derives authority from the session); this panel only shows outcomes.
+-import { useCallback, useEffect, useState } from "react";
++import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+ import { Button } from "@/components/ui/button";
+ import { Input } from "@/components/ui/input";
+ import { Label } from "@/components/ui/label";
+@@ -17,10 +17,17 @@ const post = async (url: string, body: unknown = {}) => {
+ const deliveryText = (d: string | undefined) =>
+   d === "sent" ? "Invitation email sent." : d === "blocked" ? "Invitation saved. Email delivery is disabled for this address in this environment." : "Invitation saved. The email could not be sent; use Resend.";
+ 
++// false on the server and while hydrating, true once React owns the page (no effect, no extra render).
++const noSubscribe = () => () => {};
++const useHydrated = () => useSyncExternalStore(noSubscribe, () => true, () => false);
++
+ export default function LiveStaffPanel({ storeId, canAppointAdmin }: { storeId: string; canAppointAdmin: boolean }) {
+   const [members, setMembers] = useState<StoreMember[]>([]);
+   const [invites, setInvites] = useState<Invite[]>([]);
+-  const [email, setEmail] = useState("");
++  // F-Q2-002: the email field is uncontrolled. Text typed while the page is still hydrating (seen in WebKit) is never
++  // overwritten by React, and Send reads the field itself, so the button cannot be stuck behind a missed change event.
++  const emailRef = useRef<HTMLInputElement>(null);
++  const hydrated = useHydrated();
+   const [role, setRole] = useState<"member" | "admin">("member");
+   const [disposition, setDisposition] = useState<"member" | "remove">("member");
+   const [message, setMessage] = useState<string | null>(null);
+@@ -37,8 +44,9 @@ export default function LiveStaffPanel({ storeId, canAppointAdmin }: { storeId:
+ 
+   const run = async (fn: () => Promise<{ ok: boolean; data?: { delivery?: string }; message?: string }>, success: (d?: { delivery?: string }) => string) => {
+     setBusy(true); setMessage(null);
+-    const r = await fn();
+-    setBusy(false);
++    let r: Awaited<ReturnType<typeof fn>>;
++    try { r = await fn(); } catch { r = { ok: false, message: "That did not work. Check your connection and try again." }; }
++    finally { setBusy(false); }
+     setMessage(r.ok ? success(r.data) : r.message ?? "That did not work.");
+     await load();
+   };
+@@ -48,12 +56,12 @@ export default function LiveStaffPanel({ storeId, canAppointAdmin }: { storeId:
+       {message && <p role="status" className="text-sm text-foreground">{message}</p>}
+       <form
+         className="space-y-3 rounded-md border border-border bg-card p-4"
+-        onSubmit={(e) => { e.preventDefault(); void run(() => post(`/api/stores/${storeId}/invitations`, role === "admin" ? { email, role, formerAdminDisposition: disposition } : { email, role }), (d) => deliveryText(d?.delivery)); }}
++        onSubmit={(e) => { e.preventDefault(); const email = emailRef.current?.value.trim() ?? ""; if (!email) return; void run(() => post(`/api/stores/${storeId}/invitations`, role === "admin" ? { email, role, formerAdminDisposition: disposition } : { email, role }), (d) => deliveryText(d?.delivery)); }}
+       >
+         <h2 className="font-semibold text-foreground">Invite someone</h2>
+         <div className="space-y-1">
+           <Label htmlFor="invite-email">Email address</Label>
+-          <Input id="invite-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="off" />
++          <Input id="invite-email" ref={emailRef} type="email" required defaultValue="" autoComplete="off" />
+         </div>
+         <fieldset className="space-y-1">
+           <legend className="text-sm font-medium text-foreground">Role</legend>
+@@ -67,7 +75,8 @@ export default function LiveStaffPanel({ storeId, canAppointAdmin }: { storeId:
+             <label className="text-sm text-foreground"><input type="radio" name="disp" checked={disposition === "remove"} onChange={() => setDisposition("remove")} /> Be removed from this store</label>
+           </fieldset>
+         )}
+-        <Button type="submit" disabled={busy || !email}>Send invitation</Button>
++        {/* Disabled until hydrated, so a click can never fall through to a native form submission. */}
++        <Button type="submit" disabled={busy || !hydrated}>Send invitation</Button>
+       </form>
+ 
+       <section aria-labelledby="pending-title">
+diff --git a/src/components/auth/LoginForm.tsx b/src/components/auth/LoginForm.tsx
+index 77371d9..518f138 100644
+--- a/src/components/auth/LoginForm.tsx
++++ b/src/components/auth/LoginForm.tsx
+@@ -23,7 +23,7 @@ import {
+   CardHeader,
+   CardTitle,
+ } from "../ui/card";
+-import { useState } from "react";
++import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+ import { useAuthStore } from "@/store/useAuthStore";
+ import { LinkRequestForm } from "@/components/auth/LinkRequestForm";
+ 
+@@ -41,6 +41,10 @@ const formSchema = z.object({
+   }),
+ });
+ 
++// false on the server and while hydrating, true once React owns the page (no effect, no extra render).
++const noSubscribe = () => () => {};
++const useHydrated = () => useSyncExternalStore(noSubscribe, () => true, () => false);
++
+ const LoginForm = () => {
+   const [error, setError] = useState<string | null>(null);
+   const [isLoading, setIsLoading] = useState(false);
+@@ -54,6 +58,17 @@ const LoginForm = () => {
+     },
+   });
+ 
++  // F-Q2-002: text typed while the page was still hydrating (seen in WebKit) never reached these controlled fields, and
++  // the next render wiped it ("Email is required"). Adopt whatever the fields already hold once React owns them.
++  const formRef = useRef<HTMLFormElement>(null);
++  const hydrated = useHydrated();
++  useEffect(() => {
++    for (const name of ["email", "password"] as const) {
++      const el = formRef.current?.elements.namedItem(name);
++      if (el instanceof HTMLInputElement && el.value && el.value !== form.getValues(name)) form.setValue(name, el.value);
++    }
++  }, [form]);
++
+   const handleSubmit = async (data: z.infer<typeof formSchema>) => {
+     setError(null);
+     setIsLoading(true);
+@@ -91,6 +106,7 @@ const LoginForm = () => {
+         <CardContent className="space-y-2">
+           <Form {...form}>
+             <form
++              ref={formRef}
+               onSubmit={form.handleSubmit(handleSubmit)}
+               className="space-y-8"
+             >
+@@ -141,8 +157,10 @@ const LoginForm = () => {
+                 </div>
+               )}
+               {isLoading && <Spinner />}
++              {/* Disabled until hydrated, so a click can never fall through to a native form submission (which would put
++                  the typed credentials in the address bar). */}
+               <Button
+-                disabled={isLoading}
++                disabled={isLoading || !hydrated}
+                 className="w-full disabled:opacity-70"
+               >
+                 Login
+diff --git a/supabase/migrations/0070_007b_consent_deadline_paid_time.sql b/supabase/migrations/0070_007b_consent_deadline_paid_time.sql
+new file mode 100644
+index 0000000..16e2ce2
+--- /dev/null
++++ b/supabase/migrations/0070_007b_consent_deadline_paid_time.sql
+@@ -0,0 +1,172 @@
++-- APBM-007B 0070: the Add Store consent deadline (CONTRACTS/BILLING.md) is decided on the account billing clock and by the
++-- provider's paid time, and is enforced in the database (QA findings F-Q2-001 and F-Q2-004, repair ruled 17 November 2026).
++-- 0061–0069 are applied and never rewritten; this file only adds and replaces.
++--  * The application asks the database whether an operation's deadline has passed. billing_now(account) is real now() for
++--    every real account and simulated time only in the verified SCRATCH test context, so the application never compares
++--    the deadline with its own wall clock.
++--  * A paid invoice is recorded through store_operation_payment_observed with the provider's paid timestamp. Paid at or
++--    before the stored deadline → paid_pending_activation, whenever the payment is processed (outage, crash, redelivery).
++--    Paid after it → attention 'paid_after_deadline'. No paid time → attention 'paid_time_unverified'.
++--  * The direct payment_pending → paid_pending_activation transition is no longer allowed; activation refuses a payment
++--    that is not proven on time, unless the operator resumed it after a recorded owner reconfirmation (close_reference).
++
++-- 1. The provider paid time of the operation's invoice.
++alter table public.store_operations add column provider_paid_at timestamptz;
++
++-- 2. The deadline on the account's billing clock (the same clock store_operations_due uses).
++create function public.store_operation_deadline_passed(p_operation uuid) returns boolean
++language sql stable security definer set search_path = '' as $$
++ select o.payment_deadline is not null and o.payment_deadline <= public.billing_now(o.account_id)
++  from public.store_operations o where o.id = p_operation;
++$$;
++
++-- 3. Record a paid invoice and route the operation by the provider's paid time against the stored deadline. Fenced.
++create function public.store_operation_payment_observed(p_operation uuid, p_owner text, p_epoch bigint, p_invoice text,
++  p_paid_cents integer, p_currency text, p_paid_at timestamptz)
++returns text language plpgsql security definer set search_path = '' as $$
++declare o public.store_operations%rowtype; v_to text; v_code text;
++begin
++ select * into o from public.store_operations x where x.id = p_operation for update;
++ if not found or o.kind <> 'store_add' then return 'unknown_operation'; end if;
++ if o.lease_owner is distinct from p_owner or o.fencing_epoch <> p_epoch or o.lease_until <= now() then return 'lease_lost'; end if;
++ -- Already decided (or resumed by the operator after owner reconfirmation): nothing to re-decide.
++ if o.state = 'paid_pending_activation' and (o.provider_paid_at is not null or o.close_reference is not null) then return o.state; end if;
++ if o.state not in ('payment_pending', 'cancel_requested', 'paid_pending_activation') then return 'transition_refused'; end if;
++ if o.invoice_id is distinct from p_invoice or p_paid_cents is distinct from o.amount_cents or p_currency is distinct from 'usd'
++    or not exists (select 1 from public.provider_invoice_operations m where m.invoice_id = p_invoice and m.operation_id = o.id) then
++  v_to := 'attention'; v_code := 'payment_mismatch';
++ elsif o.state = 'cancel_requested' then v_to := 'attention'; v_code := 'paid_after_abandon';
++ elsif p_paid_at is null then v_to := 'attention'; v_code := 'paid_time_unverified';
++ elsif p_paid_at > o.payment_deadline then v_to := 'attention'; v_code := 'paid_after_deadline';
++ else v_to := 'paid_pending_activation'; v_code := null;
++ end if;
++ update public.store_operations x set state = v_to, last_error_code = v_code, provider_paid_at = coalesce(p_paid_at, x.provider_paid_at)
++  where x.id = o.id;
++ return v_to;
++end $$;
++
++-- 4. Saga transitions (0062) without the direct payment_pending → paid_pending_activation pair; a paid invoice goes
++-- through store_operation_payment_observed. Every other pair and effect is unchanged.
++create or replace function public.store_operation_transition(p_operation uuid, p_owner text, p_epoch bigint, p_to text, p_error text,
++  p_invoice text, p_hosted_url text)
++returns text language plpgsql security definer set search_path = '' as $$
++declare o public.store_operations%rowtype;
++begin
++ select * into o from public.store_operations x where x.id = p_operation for update;
++ if not found then return 'unknown_operation'; end if;
++ if o.lease_owner is distinct from p_owner or o.fencing_epoch <> p_epoch or o.lease_until <= now() then return 'lease_lost'; end if;
++ if not ((o.state, p_to) in (('payment_setup','payment_pending'), ('payment_setup','attention'), ('payment_setup','expired_unpaid'),
++   ('payment_pending','attention'), ('payment_pending','expired_unpaid'), ('payment_pending','payment_pending'),
++   ('cancel_requested','expired_unpaid'), ('cancel_requested','attention'), ('cancel_requested','paid_pending_activation'),
++   ('paid_pending_activation','attention'), ('payment_setup','payment_setup'))) then
++  return 'transition_refused'; end if;
++ if p_to = 'paid_pending_activation' and o.state = 'cancel_requested' then p_to := 'attention'; p_error := coalesce(p_error, 'paid_after_abandon'); end if;
++ update public.store_operations x set state = p_to, last_error_code = p_error,
++   invoice_id = coalesce(x.invoice_id, p_invoice), hosted_invoice_url = coalesce(p_hosted_url, x.hosted_invoice_url),
++   closed_at = case when p_to = 'expired_unpaid' then now() else x.closed_at end
++  where x.id = p_operation;
++ if p_to = 'expired_unpaid' then
++  update public.npi_reservations r set status = 'released' where r.store_operation_id = p_operation and r.status = 'op_held';
++ end if;
++ return p_to;
++end $$;
++
++-- 5. Atomic activation (0069 body) with the deadline backstop: only an on-time provider payment, or an operator resume
++-- after a recorded owner reconfirmation, may activate.
++create or replace function public.store_add_activate(p_operation uuid, p_invoice text, p_paid_cents integer, p_currency text,
++  p_quantity integer, p_period_start timestamptz, p_period_end timestamptz)
++returns jsonb language plpgsql security definer set search_path = '' as $$
++declare o public.store_operations%rowtype; a public.accounts%rowtype; v_identity uuid; v_business uuid; v_now timestamptz; t public.store_transfers%rowtype;
++begin
++ select * into o from public.store_operations x where x.id = p_operation for update;
++ if not found or o.kind <> 'store_add' then return jsonb_build_object('outcome', 'unknown_operation'); end if;
++ if o.state = 'activated' then return jsonb_build_object('outcome', 'already_activated', 'business_id', o.business_id); end if;
++ if o.state <> 'paid_pending_activation' then return jsonb_build_object('outcome', 'not_paid_pending'); end if;
++ -- 0070: consent deadline backstop (provider paid time on or before the stored deadline, or an operator resume).
++ if o.close_reference is null and (o.provider_paid_at is null or o.provider_paid_at > o.payment_deadline) then
++  update public.store_operations x set state = 'attention',
++    last_error_code = case when o.provider_paid_at is null then 'paid_time_unverified' else 'paid_after_deadline' end where x.id = o.id;
++  return jsonb_build_object('outcome', 'attention', 'code', case when o.provider_paid_at is null then 'paid_time_unverified' else 'paid_after_deadline' end); end if;
++ select * into a from public.accounts x where x.id = o.account_id for update;
++ if not exists (select 1 from public.provider_invoice_operations m where m.invoice_id = p_invoice and m.operation_id = o.id)
++    or o.invoice_id is distinct from p_invoice or p_paid_cents <> o.amount_cents or p_currency <> 'usd' then
++  update public.store_operations x set state = 'attention', last_error_code = 'payment_mismatch' where x.id = o.id;
++  return jsonb_build_object('outcome', 'attention', 'code', 'payment_mismatch'); end if;
++ if p_period_start <> o.period_start or p_period_end <> o.period_end then
++  update public.store_operations x set state = 'attention', last_error_code = 'period_changed' where x.id = o.id;
++  return jsonb_build_object('outcome', 'attention', 'code', 'period_changed'); end if;
++ if p_quantity <> o.target_quantity or public.account_billable_count(o.account_id) + 1 <> o.target_quantity then
++  update public.store_operations x set state = 'attention', last_error_code = 'quantity_mismatch' where x.id = o.id;
++  return jsonb_build_object('outcome', 'attention', 'code', 'quantity_mismatch'); end if;
++ perform pg_advisory_xact_lock(hashtextextended('apbm007a:npi:' || o.npi, 0));
++ v_now := public.billing_now(o.account_id);
++ if o.reactivation_business_id is not null then
++  if not exists (select 1 from public.npi_reservations r where r.store_operation_id = o.id and r.npi = o.npi and r.status = 'op_held')
++     or not exists (select 1 from public.store_reactivations r join public.businesses b on b.id = r.business_id where r.business_id = o.reactivation_business_id
++       and r.status = 'authorized' and b.status = 'removed' and b.account_id = o.account_id)
++     or exists (select 1 from public.businesses b where b.npi = o.npi and b.ownership_ended_at is null) then
++   update public.store_operations x set state = 'attention', last_error_code = 'reactivation_state' where x.id = o.id;
++   return jsonb_build_object('outcome', 'attention', 'code', 'reactivation_state'); end if;
++  -- Decision 9: only now, after payment and quantity reconciliation, the original record and its history return.
++  update public.businesses b set status = 'active', ownership_ended_at = null, removal_requested_at = null, removal_effective_at = null,
++    reactivated_at = v_now where b.id = o.reactivation_business_id;
++  insert into public.user_businesses (user_id, business_id, role, is_primary) values (a.owner_user_id, o.reactivation_business_id, 'admin', false)
++   on conflict (user_id, business_id) do update set role = 'admin';
++  update public.npi_reservations r set status = 'consumed' where r.store_operation_id = o.id and r.status = 'op_held';
++  update public.store_reactivations r set status = 'used' where r.business_id = o.reactivation_business_id and r.status = 'authorized';
++  update public.subscriptions s set quantity = p_quantity where s.account_id = o.account_id and s.stripe_subscription_id = o.stripe_subscription_id;
++  update public.provider_invoice_operations m set outcome = 'paid', verified_at = now() where m.invoice_id = p_invoice;
++  update public.store_operations x set state = 'activated', business_id = o.reactivation_business_id, activated_at = now(),
++    lease_owner = null, lease_until = null, last_error_code = null where x.id = o.id;
++  return jsonb_build_object('outcome', 'activated', 'business_id', o.reactivation_business_id, 'reactivated', true);
++ elsif o.transfer_id is null then
++  if not exists (select 1 from public.npi_reservations r where r.store_operation_id = o.id and r.npi = o.npi and r.status = 'op_held') then
++   update public.store_operations x set state = 'attention', last_error_code = 'reservation_lost' where x.id = o.id;
++   return jsonb_build_object('outcome', 'attention', 'code', 'reservation_lost'); end if;
++  if exists (select 1 from public.pharmacy_identities i where i.npi = o.npi) then
++   update public.store_operations x set state = 'attention', last_error_code = 'npi_registered' where x.id = o.id;
++   return jsonb_build_object('outcome', 'attention', 'code', 'npi_registered'); end if;
++  insert into public.pharmacy_identities (npi) values (o.npi) returning id into v_identity;
++ else
++  select * into t from public.store_transfers x where x.id = o.transfer_id for update;
++  if t.status not in ('buyer_reserved', 'attention') or t.buyer_account_id <> o.account_id
++     or exists (select 1 from public.businesses b where b.pharmacy_id = t.pharmacy_id and b.ownership_ended_at is null)
++     or not exists (select 1 from public.npi_reservations r where r.transfer_id = t.id and r.status = 'transfer_held') then
++   update public.store_operations x set state = 'attention', last_error_code = 'transfer_state' where x.id = o.id;
++   return jsonb_build_object('outcome', 'attention', 'code', 'transfer_state'); end if;
++  v_identity := t.pharmacy_id;
++ end if;
++ insert into public.businesses (account_id, pharmacy_id, npi, ncpdp, pharmacy_name, status, date_of_registration, ownership_started_at)
++  values (o.account_id, v_identity, o.npi, o.ncpdp, o.store_name, 'active', v_now, v_now) returning id into v_business;
++ insert into public.user_businesses (user_id, business_id, role, is_primary) values (a.owner_user_id, v_business, 'admin', false);
++ update public.npi_reservations r set status = 'consumed' where (r.store_operation_id = o.id and r.status = 'op_held') or (o.transfer_id is not null and r.transfer_id = o.transfer_id and r.status = 'transfer_held');
++ if o.transfer_id is not null then update public.store_transfers x set status = 'completed', buyer_business_id = v_business where x.id = o.transfer_id; end if;
++ update public.subscriptions s set quantity = p_quantity where s.account_id = o.account_id and s.stripe_subscription_id = o.stripe_subscription_id;
++ update public.provider_invoice_operations m set outcome = 'paid', verified_at = now() where m.invoice_id = p_invoice;
++ update public.store_operations x set state = 'activated', business_id = v_business, pharmacy_id = v_identity, activated_at = now(),
++   lease_owner = null, lease_until = null, last_error_code = null where x.id = o.id;
++ return jsonb_build_object('outcome', 'activated', 'business_id', v_business);
++end $$;
++
++-- 6. Grants and assertions.
++revoke all on function public.store_operation_deadline_passed(uuid),
++ public.store_operation_payment_observed(uuid, text, bigint, text, integer, text, timestamptz) from public, anon, authenticated;
++grant execute on function public.store_operation_deadline_passed(uuid),
++ public.store_operation_payment_observed(uuid, text, bigint, text, integer, text, timestamptz) to service_role;
++do $$
++declare bad text;
++begin
++ select string_agg(p.oid::regprocedure::text || ':' || r, ', ') into bad
++  from pg_proc p join pg_namespace n on n.oid = p.pronamespace cross join unnest(array['anon','authenticated']) r
++  where n.nspname = 'public' and p.proname in ('store_operation_deadline_passed','store_operation_payment_observed','store_operation_transition','store_add_activate')
++    and has_function_privilege(r, p.oid, 'EXECUTE');
++ if bad is not null then raise exception 'APBM007B/0070 ASSERT: executable by customers: %', bad; end if;
++ select string_agg(p.oid::regprocedure::text, ', ') into bad
++  from pg_proc p join pg_namespace n on n.oid = p.pronamespace
++  where n.nspname = 'public' and p.proname in ('store_operation_deadline_passed','store_operation_payment_observed','store_operation_transition','store_add_activate')
++    and not has_function_privilege('service_role', p.oid, 'EXECUTE');
++ if bad is not null then raise exception 'APBM007B/0070 ASSERT: not executable by service_role: %', bad; end if;
++ if (select count(*) from pg_proc p join pg_namespace n on n.oid = p.pronamespace
++      where n.nspname = 'public' and p.proname in ('store_operation_transition','store_add_activate')) <> 2 then
++  raise exception 'APBM007B/0070 ASSERT: replaced functions must not gain overloads'; end if;
++end $$;

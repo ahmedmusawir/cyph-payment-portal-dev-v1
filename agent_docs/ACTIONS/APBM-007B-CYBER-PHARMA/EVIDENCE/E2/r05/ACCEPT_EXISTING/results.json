@@ -1,0 +1,40 @@
+{
+ "label": "inv-existing-r05",
+ "before": {
+  "identity_exists": true,
+  "memberships": 2,
+  "owns_account": 1
+ },
+ "send_ui": "Invitation email sent.",
+ "sent_at": "2026-11-17T05:23:40.044Z",
+ "invitation_after_send": {
+  "status": "pending",
+  "role": "member",
+  "dispatch_attempts": 1
+ },
+ "identity_after_send_unchanged": false,
+ "invitations_listed_for_invitee": 1,
+ "after_accept_url_path": "/owedbook",
+ "invitation_final": {
+  "status": "accepted",
+  "accepted_by_invitee": true
+ },
+ "memberships_after": [
+  {
+   "store": "own account store",
+   "role": "admin"
+  },
+  {
+   "store": "other",
+   "role": "admin"
+  },
+  {
+   "store": "A1",
+   "role": "member"
+  }
+ ],
+ "owns_account_after": 1,
+ "identity_unchanged_after_accept": true,
+ "note_identity_after_send": "false only because auth.users.updated_at changes when the provider issues the sign-in link; the auth user id and password-hash digest are unchanged before send and after acceptance (identity_unchanged_after_accept=true): reused with no password reset.",
+ "note_memberships": "'own account store' = OWNER_B's account store B1; 'other' = OWNER_B's second store in their own account (added mid-period in O-1); 'A1' = the new member role."
+}

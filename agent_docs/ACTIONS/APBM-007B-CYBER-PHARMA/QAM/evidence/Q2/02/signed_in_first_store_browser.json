@@ -1,0 +1,32 @@
+{
+  "expected": {
+    "cents": 9900,
+    "currency": "usd",
+    "basis": "approved graduated catalogue first-store no promotion",
+    "recorded_before_checkout": "2026-11-17T11:13:52.995Z"
+  },
+  "actual_paid": 9900,
+  "payment_status": "paid",
+  "activation_heading": "You're all set",
+  "final_path": "/dashboard",
+  "operation": {
+    "id": "5717c444-c890-44f6-989a-289a88520d0e",
+    "status": "provisioned",
+    "account_id": "82a2d611-4ed4-402f-8082-531749b2a523",
+    "business_id": "c00c0cf1-a335-42e0-8d81-a6b4eaab1079",
+    "stripe_customer_id": "cus_Ve2PY4BIOkhh4R",
+    "stripe_subscription_id": "sub_1UckKtGnEQDyu3RRzSsOMNyj",
+    "stripe_checkout_session_id": "cs_test_a0rkQDGnBU1vNg1twzEMqr3fSBZQCe4i8ppktzEn5WNs9BUe3bCu0VAG7E"
+  },
+  "business": {
+    "id": "c00c0cf1-a335-42e0-8d81-a6b4eaab1079",
+    "status": "active",
+    "account_id": "82a2d611-4ed4-402f-8082-531749b2a523",
+    "npi": "1705408973"
+  },
+  "correct_existing_identity": true,
+  "additional_identity_created": false,
+  "additional_access_email_needed": false,
+  "delivery_lane": "automatic Stripe CLI + actual browser Checkout and activation rendering",
+  "result": "PASS"
+}

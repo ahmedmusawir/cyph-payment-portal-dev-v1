@@ -1,0 +1,324 @@
+{
+  "at": "2026-11-18T01:41:32.431Z",
+  "target": "SCRATCH",
+  "steps": [],
+  "before": {
+    "aac_reference": {
+      "n": 2,
+      "digest": "957ca92042ec9c03af92d9fa9d45de11"
+    },
+    "accounts": {
+      "n": 27,
+      "digest": "f3a7129a0935b0b963f1793228d23f3a"
+    },
+    "apa_memberships": {
+      "n": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "audit_logs": {
+      "n": 2096,
+      "digest": "b156e9a9d2d0a324c78ac29361ec6f2f"
+    },
+    "billing_customers": {
+      "n": 22,
+      "digest": "9be4db0bb4159deef20d5177b94a187b"
+    },
+    "billing_deployment": {
+      "n": 1,
+      "digest": "c64fcea747cce501dbe4e63a2a4d86e8"
+    },
+    "billing_test_contexts": {
+      "n": 6,
+      "digest": "223bcc0a6cc2d638ac09fb92e9784b94"
+    },
+    "businesses": {
+      "n": 51,
+      "digest": "43befbf47636c77c8d3120777df13074"
+    },
+    "checkout_operations": {
+      "n": 18,
+      "digest": "fdecd284b44f7716989e5733dc6716ba"
+    },
+    "ful_reference": {
+      "n": 1,
+      "digest": "68d5ee54207c405a89c60e6672a20de7"
+    },
+    "notification_operations": {
+      "n": 16,
+      "digest": "cd938503d33fe56ef76c506710f3b7fa"
+    },
+    "npi_reservations": {
+      "n": 45,
+      "digest": "297ef085beb27a0502266eb232c70db6"
+    },
+    "operator_actions": {
+      "n": 49,
+      "digest": "2311a2f332eb022c577ab1527b3f07c9"
+    },
+    "pbm_info": {
+      "n": 3,
+      "digest": "ef4f3cf82367b2cadcf644c1552f3d60"
+    },
+    "pending_registrations": {
+      "n": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "pharmacy_identities": {
+      "n": 49,
+      "digest": "922d076e50727072fd53642746eec2a9"
+    },
+    "profiles": {
+      "n": 38,
+      "digest": "ee70c69685e32d964a48e28b814a3ac7"
+    },
+    "provider_call_intents": {
+      "n": 132,
+      "digest": "404c40211a865931f0b213285b1cdffd"
+    },
+    "provider_invoice_operations": {
+      "n": 24,
+      "digest": "197ef76f7a34f588b8818dcd32910e76"
+    },
+    "reference_dataset_versions": {
+      "n": 4,
+      "digest": "fcb07f389ef95c3383b898b220c3ade5"
+    },
+    "registration_drafts": {
+      "n": 30,
+      "digest": "0ecbc65f2f28fc147fd331f01bc02ffe"
+    },
+    "report_files": {
+      "n": 1,
+      "digest": "bd005d30131c074f1eb2a59990bb3988"
+    },
+    "store_invitations": {
+      "n": 25,
+      "digest": "e6a687b287fb5650f2b76a64d1e2e57f"
+    },
+    "store_operations": {
+      "n": 37,
+      "digest": "e9c02fff876ec806a8d5405077586dfd"
+    },
+    "store_quotes": {
+      "n": 29,
+      "digest": "ff81e265ac4fb903fdac53089fb5e5b4"
+    },
+    "store_reactivations": {
+      "n": 3,
+      "digest": "8df38dbe5356148b18579fcc11617750"
+    },
+    "store_transfers": {
+      "n": 4,
+      "digest": "877bef5aa5e67f4893ad414842c61f23"
+    },
+    "stripe_events": {
+      "n": 246,
+      "digest": "ecf4fff979f3c8827db1460e448e7a48"
+    },
+    "subscriptions": {
+      "n": 25,
+      "digest": "be5936692186837cf386cf28ee499b9e"
+    },
+    "system_config": {
+      "n": 2,
+      "digest": "49354add22200ce58fb3b89327cfcfe1"
+    },
+    "user_businesses": {
+      "n": 60,
+      "digest": "6bd50e3b34dbc397f399626ed0b7fed3"
+    },
+    "user_data": {
+      "n": 360,
+      "digest": "2475d9013abdd8276ea16d7f8590ab3c"
+    },
+    "user_roles": {
+      "n": 38,
+      "digest": "64c18abd9525ff4194afabd5b5658d83"
+    },
+    "wac_reference": {
+      "n": 4,
+      "digest": "80c8848b93425f37bffb3ed1b6ff6f66"
+    },
+    "auth_users": {
+      "n": 46,
+      "digest": "6e9a2d2fbd072e984480ed2269dacd13"
+    },
+    "protected_operation": {
+      "id": "ecd48478-6721-415f-9387-836d0331a64e",
+      "sha256": "d8e57431b5a036df3d2cc1a949b014d4cc538083fef319134d15f57c6b821d5e",
+      "state": "activated"
+    },
+    "protected_store": {
+      "id": "93632de4-1ae4-4191-9a02-9381d84fbb2a",
+      "sha256": "193f261584fb82c86625447e1eecc5ff467ddfece115c95463e22e539e60b8e9",
+      "state": "active"
+    }
+  },
+  "before_ledger_count": 69,
+  "forward_applied": true,
+  "after": {
+    "aac_reference": {
+      "n": 2,
+      "digest": "957ca92042ec9c03af92d9fa9d45de11"
+    },
+    "accounts": {
+      "n": 27,
+      "digest": "f3a7129a0935b0b963f1793228d23f3a"
+    },
+    "apa_memberships": {
+      "n": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "audit_logs": {
+      "n": 2096,
+      "digest": "b156e9a9d2d0a324c78ac29361ec6f2f"
+    },
+    "billing_customers": {
+      "n": 22,
+      "digest": "9be4db0bb4159deef20d5177b94a187b"
+    },
+    "billing_deployment": {
+      "n": 1,
+      "digest": "c64fcea747cce501dbe4e63a2a4d86e8"
+    },
+    "billing_test_contexts": {
+      "n": 6,
+      "digest": "223bcc0a6cc2d638ac09fb92e9784b94"
+    },
+    "businesses": {
+      "n": 51,
+      "digest": "43befbf47636c77c8d3120777df13074"
+    },
+    "checkout_operations": {
+      "n": 18,
+      "digest": "fdecd284b44f7716989e5733dc6716ba"
+    },
+    "ful_reference": {
+      "n": 1,
+      "digest": "68d5ee54207c405a89c60e6672a20de7"
+    },
+    "notification_operations": {
+      "n": 16,
+      "digest": "cd938503d33fe56ef76c506710f3b7fa"
+    },
+    "npi_reservations": {
+      "n": 45,
+      "digest": "297ef085beb27a0502266eb232c70db6"
+    },
+    "operator_actions": {
+      "n": 49,
+      "digest": "2311a2f332eb022c577ab1527b3f07c9"
+    },
+    "pbm_info": {
+      "n": 3,
+      "digest": "ef4f3cf82367b2cadcf644c1552f3d60"
+    },
+    "pending_registrations": {
+      "n": 0,
+      "digest": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "pharmacy_identities": {
+      "n": 49,
+      "digest": "922d076e50727072fd53642746eec2a9"
+    },
+    "profiles": {
+      "n": 38,
+      "digest": "ee70c69685e32d964a48e28b814a3ac7"
+    },
+    "provider_call_intents": {
+      "n": 132,
+      "digest": "404c40211a865931f0b213285b1cdffd"
+    },
+    "provider_invoice_operations": {
+      "n": 24,
+      "digest": "197ef76f7a34f588b8818dcd32910e76"
+    },
+    "reference_dataset_versions": {
+      "n": 4,
+      "digest": "fcb07f389ef95c3383b898b220c3ade5"
+    },
+    "registration_drafts": {
+      "n": 30,
+      "digest": "0ecbc65f2f28fc147fd331f01bc02ffe"
+    },
+    "report_files": {
+      "n": 1,
+      "digest": "bd005d30131c074f1eb2a59990bb3988"
+    },
+    "store_invitations": {
+      "n": 25,
+      "digest": "e6a687b287fb5650f2b76a64d1e2e57f"
+    },
+    "store_operations": {
+      "n": 37,
+      "digest": "e9c02fff876ec806a8d5405077586dfd"
+    },
+    "store_quotes": {
+      "n": 29,
+      "digest": "ff81e265ac4fb903fdac53089fb5e5b4"
+    },
+    "store_reactivations": {
+      "n": 3,
+      "digest": "8df38dbe5356148b18579fcc11617750"
+    },
+    "store_transfers": {
+      "n": 4,
+      "digest": "877bef5aa5e67f4893ad414842c61f23"
+    },
+    "stripe_events": {
+      "n": 246,
+      "digest": "ecf4fff979f3c8827db1460e448e7a48"
+    },
+    "subscriptions": {
+      "n": 25,
+      "digest": "be5936692186837cf386cf28ee499b9e"
+    },
+    "system_config": {
+      "n": 2,
+      "digest": "49354add22200ce58fb3b89327cfcfe1"
+    },
+    "user_businesses": {
+      "n": 60,
+      "digest": "6bd50e3b34dbc397f399626ed0b7fed3"
+    },
+    "user_data": {
+      "n": 360,
+      "digest": "2475d9013abdd8276ea16d7f8590ab3c"
+    },
+    "user_roles": {
+      "n": 38,
+      "digest": "64c18abd9525ff4194afabd5b5658d83"
+    },
+    "wac_reference": {
+      "n": 4,
+      "digest": "80c8848b93425f37bffb3ed1b6ff6f66"
+    },
+    "auth_users": {
+      "n": 46,
+      "digest": "6e9a2d2fbd072e984480ed2269dacd13"
+    },
+    "protected_operation": {
+      "id": "ecd48478-6721-415f-9387-836d0331a64e",
+      "sha256": "d8e57431b5a036df3d2cc1a949b014d4cc538083fef319134d15f57c6b821d5e",
+      "state": "activated"
+    },
+    "protected_store": {
+      "id": "93632de4-1ae4-4191-9a02-9381d84fbb2a",
+      "sha256": "193f261584fb82c86625447e1eecc5ff467ddfece115c95463e22e539e60b8e9",
+      "state": "active"
+    }
+  },
+  "after_ledger_count": 70,
+  "fixtures_unchanged": true,
+  "result": "PASS",
+  "DEV": {
+    "transaction": "BEGIN READ ONLY / ROLLBACK",
+    "ledger_count": 69,
+    "unchanged_prefix_0001_0069": true,
+    "catalogue": {
+      "tables": 34,
+      "policies": 14,
+      "functions": 99
+    }
+  }
+}

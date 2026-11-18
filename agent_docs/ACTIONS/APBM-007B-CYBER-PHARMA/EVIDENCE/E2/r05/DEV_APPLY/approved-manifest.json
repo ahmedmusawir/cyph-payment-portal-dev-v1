@@ -1,0 +1,281 @@
+{
+  "files": [
+    {
+      "name": "0001_baseline_acknowledge.sql",
+      "sha256": "c2eb94604534c8b787bf435579ab45e0ae87a768f9ff607e7a81621010264461"
+    },
+    {
+      "name": "0002_accounts.sql",
+      "sha256": "46d39e8925b35e8af72c7a6509242facedb8b8062f306e6c2eb5f9e7a2fc7b11"
+    },
+    {
+      "name": "0003_businesses.sql",
+      "sha256": "b7a4e193060e7d3df6d62c85f0fe189b6079a1ebea95ab8fe84c17169018591d"
+    },
+    {
+      "name": "0004_user_businesses.sql",
+      "sha256": "5bda37d78efa2a53d436c0400319875aeb6ef3285243046c73afdab9e3420ecb"
+    },
+    {
+      "name": "0005_pending_registrations.sql",
+      "sha256": "0634ef1cf5943f867e0d44c8a88e345f3a54fc7f534af969b0b913cb3ff116a2"
+    },
+    {
+      "name": "0006_subscriptions.sql",
+      "sha256": "e6b98a6c4f3bbbedc00d8ec1a86f50d2ab529ff59d09bc74aa86ddcde1c386ed"
+    },
+    {
+      "name": "0007_apa_memberships.sql",
+      "sha256": "f0196fd16467f20e37f16520cf79abf07e8dba8fd1c0744bde09bddddcf9d0bf"
+    },
+    {
+      "name": "0008_reference_dataset_versions.sql",
+      "sha256": "c5335defa023d771546681cdade811a87b4ad13edf3b30b3182ad7d2a5fc1058"
+    },
+    {
+      "name": "0009_aac_reference.sql",
+      "sha256": "dc1f94d22aa07c80b3f99ee3583004e586a928ee346e6382450906dc0a80f5ef"
+    },
+    {
+      "name": "0010_wac_reference.sql",
+      "sha256": "6b0d8690fddc92f73ba74d6d63d8a49500673afbaf2d263b1cb97f9f654d2790"
+    },
+    {
+      "name": "0011_ful_reference.sql",
+      "sha256": "a5beaa5942e54c553a104d207c91bb411cdb7236b88b71773843397252c23ce9"
+    },
+    {
+      "name": "0012_pbm_info.sql",
+      "sha256": "7b9ff099bd6ad9fbc4af86decc0e05920d4e87cb68a590fbb4a7985a8722cab4"
+    },
+    {
+      "name": "0013_user_data.sql",
+      "sha256": "621fb4b344ad2b0b2806fc5980975ef39bc1569609d3d59cad7b247cb578d338"
+    },
+    {
+      "name": "0014_report_files.sql",
+      "sha256": "2512e555cf53c9f060d20f6490b77f95256e944e2a9ebed403810cb64099b1da"
+    },
+    {
+      "name": "0015_audit_logs.sql",
+      "sha256": "610f588805c8cf8ad04b604923c4e7b67d895d75333152ecf9debeb24aea796f"
+    },
+    {
+      "name": "0016_rls_helpers.sql",
+      "sha256": "8fd63a19e6f088ccb895da5d1c8d88a93aa588e3719701e1c5498858f0b24084"
+    },
+    {
+      "name": "0017_rls_user_businesses.sql",
+      "sha256": "a3b062e2a08b662af705b5d01aef4241a4b5c475c3d2d584cd5afca727d035cf"
+    },
+    {
+      "name": "0018_rls_accounts.sql",
+      "sha256": "643737798ebd9febbc64bc71a162eca4d7ca9e3ab86a479e499cf41abcce629e"
+    },
+    {
+      "name": "0019_rls_businesses.sql",
+      "sha256": "0c95375a5d66d4080ba9b54c6ae13e5ce82e73d893de969953d50357ad466383"
+    },
+    {
+      "name": "0020_rls_subscriptions.sql",
+      "sha256": "bd2b0605b117edde9af9c0b669bf35b6d861e5f8b937fb5802b2c799710f7242"
+    },
+    {
+      "name": "0021_rls_user_data.sql",
+      "sha256": "d57d4970e2c017abcd22694f9be51fd0e7359bde27303e05fd453d685072ca6a"
+    },
+    {
+      "name": "0022_rls_report_files.sql",
+      "sha256": "92cc3555eca51c63bcd8abc3b0594aeab840bca0fb61db1d571b2e147f6ab943"
+    },
+    {
+      "name": "0023_rls_aac_reference.sql",
+      "sha256": "1792f0968291e378c2bd929fbdba8b06156cdd23892fedc09d21ecd445084124"
+    },
+    {
+      "name": "0024_rls_wac_reference.sql",
+      "sha256": "2254d3a79b7a5d851545977c807467b26b02fca2d9c323cdf837a0b1e09de8df"
+    },
+    {
+      "name": "0025_rls_ful_reference.sql",
+      "sha256": "9f0dadbcbe9797e6f3f396575fc497782ca9340f45e9f47f8e59e55a5fc93b2d"
+    },
+    {
+      "name": "0026_rls_pbm_info.sql",
+      "sha256": "d821b2cb83b8f95e0aef23b77c592d2165f77245a09407acf453c56d0664641c"
+    },
+    {
+      "name": "0027_rls_reference_dataset_versions.sql",
+      "sha256": "e2edec0090d4b019554efab3457a130d965fd3c3caa0c49897e8c56069400bb9"
+    },
+    {
+      "name": "0028_audit_logs_reshape.sql",
+      "sha256": "b295ef59b9f55c981f7f446d1a90bd97ddcd604de023dfd9b438fcac34fd3899"
+    },
+    {
+      "name": "0029_rls_audit_logs.sql",
+      "sha256": "41d25734bfc647ef411e5896d2b3b8dbf12efdd3451e8c9ab4ea5fdae2ad2226"
+    },
+    {
+      "name": "0030_audit_write.sql",
+      "sha256": "e8ac2181c265d16e3b1253b5ba328ad7a86e5d2907e65a8e2e1890fe1d9f4f9f"
+    },
+    {
+      "name": "0031_audit_stamp_businesses.sql",
+      "sha256": "d0126208f941ca7b147aacf95f14e69936933cddd5f2ee220f0a34af9dda15ab"
+    },
+    {
+      "name": "0032_audit_stamp_user_businesses.sql",
+      "sha256": "7f405fcb74ad0f247e6c14cb8e5a1ddb2c87c81e01c7a720e2bb16fed87b0193"
+    },
+    {
+      "name": "0033_audit_stamp_pending_registrations.sql",
+      "sha256": "3f583b40b90f6814bb5d5d39b892470018c0ddfd4dac985fd35e5d9d83e65fd6"
+    },
+    {
+      "name": "0034_audit_stamp_user_data.sql",
+      "sha256": "26912146ac8dccf0a983ee3c644c24dece9bf4cd403e775ddd2ca6b2f6de944a"
+    },
+    {
+      "name": "0035_audit_stamp_report_files.sql",
+      "sha256": "3ce3dcfdfed8744f9cd87893575c9e4a3ec24db614ec25ba51b9cc33874d4ab0"
+    },
+    {
+      "name": "0036_audit_stamp_accounts.sql",
+      "sha256": "c285e8700e987051f79ed979489778e352efc26d3e3da0606853cfb1053ac982"
+    },
+    {
+      "name": "0037_audit_stamp_subscriptions.sql",
+      "sha256": "61c6a3b1f7343ca9ecb7572a851ea3960f56407f5dcbdce8f648ace301afe7e9"
+    },
+    {
+      "name": "0038_audit_stamp_apa_memberships.sql",
+      "sha256": "91b234c4cff90a0105f0a4604d8140f6ecbc0c18cf4b3636372d3394920a70d1"
+    },
+    {
+      "name": "0039_audit_stamp_reference_dataset_versions.sql",
+      "sha256": "f3a338f73db5c0757b7b65e40128beb570f41ac059599fb55d0cede543e043e2"
+    },
+    {
+      "name": "0040_audit_stamp_aac_reference.sql",
+      "sha256": "7de203f360b11de5f0c39b982fe8a8e6518d5fc4c96c4f0c8bb991ea075aa22b"
+    },
+    {
+      "name": "0041_audit_stamp_wac_reference.sql",
+      "sha256": "5bfffc5696e7a2bb3b45387275c9aec045b0766c18e842b590bd51cc6c8a3402"
+    },
+    {
+      "name": "0042_audit_stamp_ful_reference.sql",
+      "sha256": "ed85fc8c9db3722e260808965a7e0419d99e3817df0de13c27afdeb733e1c18f"
+    },
+    {
+      "name": "0043_audit_stamp_pbm_info.sql",
+      "sha256": "358bd392053d1d77bf8835aa29594a7bc40cb267cb4bf929be63b5bf7ad00435"
+    },
+    {
+      "name": "0044_owedbook_kpis.sql",
+      "sha256": "ef6799653f1182818f67b92d7731240f535992cbeb5cbebe0cc8c6d78fe25007"
+    },
+    {
+      "name": "0045_owedbook_rows.sql",
+      "sha256": "346392f525ed33ed6786232972e2c07e26cfe91581cad551d27bbdd76be98a6d"
+    },
+    {
+      "name": "0046_owedbook_summary.sql",
+      "sha256": "8bef6f5da5a8586ccbcdde85157846d3caea25fa9d3c65ce4daaa648e29dd209"
+    },
+    {
+      "name": "0047_owedbook_pbm_options.sql",
+      "sha256": "40128d08ede7bc485c05a4cfda11d660a8ab6225e03dd9f53932267113be7977"
+    },
+    {
+      "name": "0048_ownership.sql",
+      "sha256": "4fb42b38703102a812ea4d4626aaa2acc4f3ee47327fea6bffe06f071ba68086"
+    },
+    {
+      "name": "0049_signup_member.sql",
+      "sha256": "e545b923cc4cd5e737a7113695718eb65bd8fbc17d916a68dc6ad9f84a1f2a79"
+    },
+    {
+      "name": "0050_claim_read_fence.sql",
+      "sha256": "33458719f15586b74197bd320b1520966a526affe71324caf7498d10bcb87a23"
+    },
+    {
+      "name": "0051_admin_reads.sql",
+      "sha256": "9b90aa47791e1c92447d72b1446c154325afb637709770ee17f9a2087bf10528"
+    },
+    {
+      "name": "0052_system_config.sql",
+      "sha256": "8b2a1aaf9632f6724a6f5c6e18d04eab9e3969d25aec72109c2f9b8f5fffcaf6"
+    },
+    {
+      "name": "0053_privilege_hardening.sql",
+      "sha256": "c79b20d48eaa0b4907a2733da7ec3025ab8eaa6ccc218679b88665b340b0239e"
+    },
+    {
+      "name": "0054_store_identifiers.sql",
+      "sha256": "a2fd2ba1e1f58cb455325921c481011f3942d994ae3abe1a5e639fa2447c37ae"
+    },
+    {
+      "name": "0055_billing_mirror.sql",
+      "sha256": "3059cd2f81c4bdfef5fb829908cabb065ec31ae70d2b8744b1d1ad1e2cba8fea"
+    },
+    {
+      "name": "0056_registration.sql",
+      "sha256": "f64e70f804923f2376a49dc5d3d0751721d04c545f66410f987c2bc58176f172"
+    },
+    {
+      "name": "0057_operations_events.sql",
+      "sha256": "dd8d844b7c04cd52def51a17e7b3ee9cb5b8a60eb6b3f4159e696cb3c0df3281"
+    },
+    {
+      "name": "0058_provisioning.sql",
+      "sha256": "09464fe4c0feb45e82a79ce16e0a84c5846f28eef250b29c472556ce508c6126"
+    },
+    {
+      "name": "0059_handoff_codes.sql",
+      "sha256": "33462cdaef2e466b68575c8c31a20f682c8af3438f8267c67b4f5974237394b7"
+    },
+    {
+      "name": "0060_billing_reads.sql",
+      "sha256": "85e9715e9faa5cb1b52981b83d7467fcc817a91e3d35d8f247a841e0be1940a6"
+    },
+    {
+      "name": "0061_007b_identity_clock_foundation.sql",
+      "sha256": "97ab60b20365add56fcc9da4c8c69d6f92879a8a1f2b847d2a665cac86780043"
+    },
+    {
+      "name": "0062_007b_store_operations.sql",
+      "sha256": "a47d459ad3d1bb86e19a28da82747827ee5d0a7a2577a29698facae47370d5ce"
+    },
+    {
+      "name": "0063_007b_lifecycle_transfers.sql",
+      "sha256": "3adef5ca840b4ce1a4ee8df705c8b239c14693401dc4080fa993c34ef1baba88"
+    },
+    {
+      "name": "0064_007b_invitations.sql",
+      "sha256": "b104a17f0dc97020b7cfa6ec93cd3d2e94fdb1b4fb419d38fe3fd6c8920d2b11"
+    },
+    {
+      "name": "0065_007b_notices.sql",
+      "sha256": "9eca9725a36bdadd064201ac3bbe774edffecc6c574a6194858d3699d8e9b55d"
+    },
+    {
+      "name": "0066_007b_operator_audit.sql",
+      "sha256": "3c9bae80614af88ffa205e6401548c6dbb9db5e183876c2155141c8b3b11c85c"
+    },
+    {
+      "name": "0067_007b_reads_privileges.sql",
+      "sha256": "9668bb9d73fc4323c55242e36aef94574788d20ada990dadc2c4ae10b8e90bde"
+    },
+    {
+      "name": "0068_007b_identity_compat_fix.sql",
+      "sha256": "aa567f2d48a13abf85085e610ce0c64d0c749c765acf7a54f980d69faf4db847"
+    },
+    {
+      "name": "0069_007b_reactivation_transfer_registration.sql",
+      "sha256": "c173249ad7706392f26da57ab32011b641e7dee9ebdf39ad613e9137d74668ad"
+    }
+  ],
+  "bootstrapSHA256": "52324e91e877079ef26861d6fb7b74df394a4baf1901dc45a37f312d608fd144"
+}

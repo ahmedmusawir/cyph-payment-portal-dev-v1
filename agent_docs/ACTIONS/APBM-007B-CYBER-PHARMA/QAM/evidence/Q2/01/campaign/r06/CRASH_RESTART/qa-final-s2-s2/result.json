@@ -1,0 +1,190 @@
+{
+ "label": "qa-final-s2",
+ "scenario": "s2",
+ "timeline": [
+  {
+   "t": "2026-11-17T10:25:46.489Z",
+   "event": "independent_expected_before_confirm",
+   "period_start": 1794907161,
+   "period_end": 1797499161,
+   "quote_computed_at": "2026-11-17T10:25:46.011Z",
+   "expected_cents": 4892,
+   "application_helper_used": false
+  },
+  {
+   "t": "2026-11-17T10:25:46.490Z",
+   "event": "quote",
+   "cents": 4892,
+   "qty_before": 2
+  },
+  {
+   "t": "2026-11-17T10:25:55.952Z",
+   "event": "confirm:client",
+   "http": 200,
+   "state": "payment_pending"
+  },
+  {
+   "t": "2026-11-17T10:26:00.007Z",
+   "event": "pending",
+   "state": "payment_pending",
+   "hosted_link": true
+  },
+  {
+   "t": "2026-11-17T10:26:01.832Z",
+   "event": "capture:before_kill",
+   "op": "payment_pending",
+   "lease_live": null,
+   "invoices": [
+    "open"
+   ],
+   "charges_ok": 0,
+   "qty": 2,
+   "stores": 0,
+   "scope": 0
+  },
+  {
+   "t": "2026-11-17T10:26:01.886Z",
+   "event": "kill:issue",
+   "killStage": "payment_pending (idle server)",
+   "out": "{\"stopped\":\"pp\",\"pid\":3344502,\"signal\":\"SIGKILL\",\"at\":\"2026-11-17T10:26:01.873Z\"}"
+  },
+  {
+   "t": "2026-11-17T10:26:05.250Z",
+   "event": "capture:down_immediately",
+   "op": "payment_pending",
+   "lease_live": null,
+   "invoices": [
+    "open"
+   ],
+   "charges_ok": 0,
+   "qty": 2,
+   "stores": 0,
+   "scope": 0
+  },
+  {
+   "t": "2026-11-17T10:26:32.287Z",
+   "event": "capture:down_poll",
+   "op": "payment_pending",
+   "lease_live": null,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 2,
+   "stores": 0,
+   "scope": 0
+  },
+  {
+   "t": "2026-11-17T10:26:32.313Z",
+   "event": "hosted:paid_while_down",
+   "paid": true,
+   "portal_listening": false
+  },
+  {
+   "t": "2026-11-17T10:26:37.813Z",
+   "event": "capture:down_settled",
+   "op": "payment_pending",
+   "lease_live": null,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 2,
+   "stores": 0,
+   "scope": 0
+  },
+  {
+   "t": "2026-11-17T10:26:37.897Z",
+   "event": "restart:start",
+   "out": "{\"started\":{\"ob\":3209772,\"pp\":3400261},\"mail\":\"live (private allowlist in memory)\"}"
+  },
+  {
+   "t": "2026-11-17T10:26:38.998Z",
+   "event": "restart:ready",
+   "app": "pp",
+   "revision": "427bec6267b9+qa-product",
+   "artifactId": "96225fced4ca5c93096231bc125fbc81"
+  },
+  {
+   "t": "2026-11-17T10:26:44.801Z",
+   "event": "recovery:polls",
+   "polls": [
+    "10:26:44 200 activated"
+   ]
+  },
+  {
+   "t": "2026-11-17T10:26:46.428Z",
+   "event": "capture:after_recovery",
+   "op": "activated",
+   "lease_live": null,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 3,
+   "stores": 1,
+   "scope": 1
+  },
+  {
+   "t": "2026-11-17T10:26:57.672Z",
+   "event": "events:real_CLI_redelivery",
+   "method": "provider events resend → owned Stripe CLI; no manual signer",
+   "results": {
+    "evt_1UcjamGnEQDyu3RRSqMmbIg7": {
+     "type": "invoice.paid",
+     "delivery_lane": "real provider resend to existing Stripe CLI",
+     "manual_signer": false
+    },
+    "evt_1UcjaJGnEQDyu3RRLPH2m3yU": {
+     "type": "invoice.payment_failed",
+     "delivery_lane": "real provider resend to existing Stripe CLI",
+     "manual_signer": false
+    }
+   }
+  },
+  {
+   "t": "2026-11-17T10:26:59.675Z",
+   "event": "jobs",
+   "store_operations": "Not invoked in crash case; expiry driver tests scope-guarded minute jobs separately"
+  },
+  {
+   "t": "2026-11-17T10:27:01.388Z",
+   "event": "capture:final",
+   "op": "activated",
+   "lease_live": null,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 3,
+   "stores": 1,
+   "scope": 1
+  }
+ ],
+ "cents": 4892,
+ "qty_before": 2,
+ "kill_stage": "payment_pending (idle server)",
+ "killed_at": "2026-11-17T10:26:01.887Z",
+ "confirm_client": {
+  "http": 200,
+  "state": "payment_pending"
+ },
+ "recovery_polls": [
+  {
+   "t": "2026-11-17T10:26:44.801Z",
+   "http": 200,
+   "state": "activated"
+  }
+ ],
+ "checks": {
+  "killed_while_operation_unfinished": true,
+  "no_access_while_down": true,
+  "recovered_state_activated": true,
+  "exactly_one_invoice": true,
+  "paid_exactly_once": true,
+  "quantity_plus_one_exactly": true,
+  "exactly_one_store_and_membership": true,
+  "replayed_events_added_nothing": true
+ },
+ "pass": true
+}

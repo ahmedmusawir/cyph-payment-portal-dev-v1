@@ -1,0 +1,164 @@
+{
+ "label": "cr-r06",
+ "scenario": "s2",
+ "timeline": [
+  {
+   "t": "2026-11-17T06:03:46.352Z",
+   "event": "finish-only",
+   "note": "interrupted run finished; nothing repeated",
+   "op_state": "activated",
+   "activated_at": "2026-11-17T05:59:35.984Z",
+   "invoice_events_recorded_before_finish": [
+    {
+     "type": "invoice.created",
+     "status": "ignored",
+     "error_code": "unsupported",
+     "received_at": "2026-11-17T05:59:43.863Z"
+    }
+   ],
+   "recovery_path": "owner status polling after restart (the interrupted run reached activation before its manual event delivery began)"
+  },
+  {
+   "t": "2026-11-17T06:03:52.420Z",
+   "event": "capture:after_recovery",
+   "op": "activated",
+   "lease_live": null,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 4,
+   "stores": 1,
+   "scope": 1
+  },
+  {
+   "t": "2026-11-17T06:04:05.774Z",
+   "event": "events:MANUAL_controlled_signed_delivery",
+   "method": "Engineering script read the real events from Stripe, signed them with the Portal webhook secret and POSTed them to the proof Portal AFTER recovery; NOT automatic webhook delivery (no endpoint or listener exists)",
+   "results": {
+    "customer.created": [
+     "200:duplicate"
+    ],
+    "customer.updated": [
+     "200:duplicate",
+     "200:duplicate",
+     "200:duplicate"
+    ],
+    "payment_method.attached": [
+     "200:duplicate",
+     "200:duplicate"
+    ],
+    "payment_intent.created": [
+     "200:duplicate",
+     "200:duplicate",
+     "200:ignored"
+    ],
+    "charge.succeeded": [
+     "200:duplicate",
+     "200:duplicate",
+     "200:ignored"
+    ],
+    "customer.subscription.created": [
+     "200:duplicate"
+    ],
+    "invoice.payment_succeeded": [
+     "200:duplicate",
+     "200:duplicate",
+     "200:ignored"
+    ],
+    "invoice.paid": [
+     "503:",
+     "200:duplicate",
+     "200:store_activated"
+    ],
+    "invoice.finalized": [
+     "200:duplicate",
+     "200:duplicate",
+     "200:ignored"
+    ],
+    "invoice.created": [
+     "200:duplicate",
+     "200:duplicate",
+     "200:duplicate"
+    ],
+    "payment_intent.succeeded": [
+     "200:duplicate",
+     "200:duplicate",
+     "200:ignored"
+    ],
+    "invoice.updated": [
+     "200:duplicate",
+     "200:duplicate",
+     "200:duplicate",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored"
+    ],
+    "invoiceitem.created": [
+     "200:duplicate",
+     "200:ignored"
+    ],
+    "customer.subscription.updated": [
+     "200:duplicate",
+     "200:applied"
+    ],
+    "invoice.payment_action_required": [
+     "200:ignored"
+    ],
+    "invoice.payment_failed": [
+     "200:store_activated"
+    ],
+    "payment_intent.requires_action": [
+     "200:ignored"
+    ],
+    "payment_intent.payment_failed": [
+     "200:ignored"
+    ]
+   }
+  },
+  {
+   "t": "2026-11-17T06:04:08.136Z",
+   "event": "jobs",
+   "store_operations": {}
+  },
+  {
+   "t": "2026-11-17T06:04:09.844Z",
+   "event": "capture:final",
+   "op": "activated",
+   "lease_live": null,
+   "invoices": [
+    "paid"
+   ],
+   "charges_ok": 1,
+   "qty": 4,
+   "stores": 1,
+   "scope": 1
+  }
+ ],
+ "cents": 4900,
+ "qty_before": 3,
+ "kill_stage": "payment_pending (idle server)",
+ "killed_at": "2026-11-17T05:58:55.260Z",
+ "confirm_client": {
+  "http": 200,
+  "state": "payment_pending"
+ },
+ "recovery_polls": [
+  {
+   "note": "polls not saved by the interrupted run; activation time from the operation row",
+   "activated_at": "2026-11-17T05:59:35.984Z"
+  }
+ ],
+ "checks": {
+  "killed_while_operation_unfinished": true,
+  "no_access_while_down": true,
+  "recovered_state_activated": true,
+  "exactly_one_invoice": true,
+  "paid_exactly_once": true,
+  "quantity_plus_one_exactly": true,
+  "exactly_one_store_and_membership": true,
+  "replayed_events_added_nothing": true
+ },
+ "pass": true
+}

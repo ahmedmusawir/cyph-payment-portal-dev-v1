@@ -1,0 +1,157 @@
+{
+ "label": "e-r03",
+ "done": [
+  "seed",
+  "authorize",
+  "complete",
+  "register",
+  "deliver",
+  "verify"
+ ],
+ "log": [
+  {
+   "step": "seed",
+   "at": "2026-11-17T03:33:14.305Z",
+   "source_store": "9d495691-3e9d-4871-828d-270fc7fde742",
+   "seller_history_rows": 2,
+   "seller_quantity_before": 3
+  },
+  {
+   "step": "authorize",
+   "at": "2026-11-17T03:33:20.143Z",
+   "plan": "planned",
+   "apply": "applied",
+   "refusal": null,
+   "transfer_status": "authorized",
+   "seller_quantity_after": {
+    "before": 3,
+    "after": 2
+   }
+  },
+  {
+   "step": "complete",
+   "at": "2026-11-17T03:34:51.767Z",
+   "operator": "applied",
+   "finalize": "transferred",
+   "refusal": null,
+   "transfer": {
+    "status": "buyer_reserved",
+    "buyer_account_id": null,
+    "buyer_business_id": null
+   },
+   "npi_holds": [
+    "transfer_held"
+   ],
+   "source_store": {
+    "status": "transferred",
+    "ownership_ended_at": "2026-11-17T03:34:44.306+00:00"
+   }
+  },
+  {
+   "step": "register",
+   "at": "2026-11-17T04:55:28.149Z",
+   "due_today": "$99.00",
+   "checkout": {
+    "status": "complete",
+    "payment_status": "paid",
+    "amount_total": 9900,
+    "currency": "usd"
+   },
+   "returned_to": "/register/activation",
+   "heading": null,
+   "note": "first browser run reached Checkout and stopped before card entry (card choice not yet rendered); the same session was completed once by e-checkout-complete.mjs"
+  },
+  {
+   "step": "deliver",
+   "at": "2026-11-17T04:55:50.601Z",
+   "checkout_status_before": "checkout_open",
+   "events": 12,
+   "results": {
+    "customer.created": [
+     "200:ignored"
+    ],
+    "payment_intent.created": [
+     "200:ignored"
+    ],
+    "customer.updated": [
+     "200:ignored"
+    ],
+    "payment_intent.succeeded": [
+     "200:ignored"
+    ],
+    "payment_method.attached": [
+     "200:ignored"
+    ],
+    "charge.succeeded": [
+     "200:ignored"
+    ],
+    "customer.subscription.created": [
+     "200:provisioned"
+    ],
+    "invoice.payment_succeeded": [
+     "200:ignored"
+    ],
+    "invoice.paid": [
+     "200:provisioned"
+    ],
+    "invoice.finalized": [
+     "200:ignored"
+    ],
+    "invoice.created": [
+     "200:ignored"
+    ],
+    "checkout.session.completed": [
+     "200:provisioned"
+    ]
+   },
+   "checkout_status_after": "provisioned",
+   "other_recent_ops": 5
+  },
+  {
+   "step": "verify",
+   "at": "2026-11-17T04:55:53.324Z",
+   "transfer_status": "completed",
+   "buyer_business_is_new": true,
+   "same_pharmacy_identity": true,
+   "buyer_store_status": "active",
+   "buyer_access": "active",
+   "buyer_scope_excludes_source": true,
+   "buyer_read_of_source_store": "denied P0001",
+   "buyer_sees_seller_history_in_own_store": false,
+   "buyer_own_store_rows": 0,
+   "seller_quantity": {
+    "before": 3,
+    "now": 2
+   },
+   "checkout_operation": null
+  },
+  {
+   "step": "verify-extra",
+   "at": "2026-11-17T04:56:24.547Z",
+   "checkout_operation": "provisioned",
+   "access_notifications": [
+    {
+     "status": "sent",
+     "attempts": 1,
+     "sent": true
+    }
+   ],
+   "seller_account_current_owner_history_lists_source": true,
+   "original_fixture_owner_history_lists_source": false,
+   "buyer_history_lists_source": false
+  }
+ ],
+ "src": {
+  "id": "9d495691-3e9d-4871-828d-270fc7fde742",
+  "npi": "1446581740",
+  "pharmacy_id": "2d860a64-c151-474d-a388-e0b926c6b547",
+  "pharmacy_name": "c-r03 South"
+ },
+ "qtyBefore": 3,
+ "transfer": "899dd6b7-3d58-40b1-a204-38df242169d0",
+ "effectiveAt": "2026-11-17T03:34:44.306Z",
+ "registerHeading": null,
+ "checkoutOp": "cca861a7-cca9-4b52-9974-cc0fb8983270",
+ "customer": "cus_VdwFF7hfwZgQIg",
+ "buyerUser": "1a1ecbe1-76d3-414f-b5bb-870618719a38"
+}

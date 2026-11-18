@@ -1,0 +1,23 @@
+{
+  "purpose": "Local synthetic privacy-instrument poison/clean control, not product QA execution",
+  "network_target": "about:blank only",
+  "real_credentials_used": false,
+  "flag": "PLAYWRIGHT_NO_COPY_PROMPT=1",
+  "installed_runner_guard": "playwright/lib/index.js _takePageSnapshot returns immediately when flag set",
+  "results": [
+    {
+      "mode": "poison",
+      "intentional_test_exit": 1,
+      "error_contexts": 1,
+      "synthetic_value_in_artifacts": true
+    },
+    {
+      "mode": "protected",
+      "intentional_test_exit": 1,
+      "error_contexts": 1,
+      "synthetic_value_in_artifacts": false
+    }
+  ],
+  "result": "PASS",
+  "synthetic_value_or_hash_printed": false
+}

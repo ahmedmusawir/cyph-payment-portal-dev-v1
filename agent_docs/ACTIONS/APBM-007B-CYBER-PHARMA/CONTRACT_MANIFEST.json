@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "status": "FROZEN_v1_0_GATE_Q_PASS_WITH_KNOWN_RISK_2026-11-18_HASHES_CORRECTED_AT_CLOSEOUT",
+  "hash_correction": {
+    "date": "2026-11-18",
+    "by": "Claudy (Engineering) for JARVIS (Chief Architect) closeout, authorized by the closeout instruction of 18 November 2026",
+    "reason": "Q1 found all 12 recorded hashes differed from the repository files (QAM_RECON_REPORT.md). The old values are the frozen v1.0 pack bytes. Since then line 1 (the build-contract status header) was updated on 17 November 2026 under Director ruling 5 in all 12 files, and APBM_RULINGS.md and ENVIRONMENT_AND_EFFECTS.md also carry append-only Director records of 17 November 2026. No line after the header was changed in any file. Friday cleared contract identity 12/12 on that basis (QAM_APPROVAL.md, QL-01). sha256 now records the governing repository bytes; sha256_frozen_pack_v1_0 keeps the original value. The contract files themselves are unchanged by this correction.",
+    "evidence": "EVIDENCE/CLOSEOUT/CONTRACT_HASH_CORRECTION.json",
+    "manifest_before_sha256": "05464df00db071946f7cf561b12a419f4cda4faae351129600447cdbb20165ba"
+  },
+  "files": [
+    {
+      "path": "ACCEPTANCE_SPEC.md",
+      "sha256": "b9a0a7ceda9c323e1203b18b4d946835e54b66d39a69f27e3438887e01596410",
+      "sha256_frozen_pack_v1_0": "bffa97cdb72943ea62847655cbbc2c6f34dd91fc3be0d33b8a215c7012878c26",
+      "difference": "status header line (line 1) only"
+    },
+    {
+      "path": "APBM_RULINGS.md",
+      "sha256": "37cd7851ae2bf11da88c03fa1f811036d5bb792c23245221831321d3a26318df",
+      "sha256_frozen_pack_v1_0": "76b3feba2eaf93465131eb08f3b4c2c31af5dad5a886fe75df31eaeb50964786",
+      "difference": "status header line (line 1) + 47 appended lines (Director records of 17 November 2026); lines 2-32 unchanged"
+    },
+    {
+      "path": "EXECUTION_PLAN.md",
+      "sha256": "95e0b88c98ef2f7c8d111227f8cbec1c5a5cb7c72ab875477d918766182af602",
+      "sha256_frozen_pack_v1_0": "b5232ed9987fce109eb2128daf34dd5ddfee72d6fb001a2f69731a04aeca8a44",
+      "difference": "status header line (line 1) only"
+    },
+    {
+      "path": "ENVIRONMENT_AND_EFFECTS.md",
+      "sha256": "efa755fa4f3a036848532378ff59e9d07a737f30aa1e11d98b8071d3b6fbabf3",
+      "sha256_frozen_pack_v1_0": "18bfe4a0d2ff1191d720f09c567e4bad2d8f29289db14934ff3e1a479c06bc73",
+      "difference": "status header line (line 1) + 5 appended lines (Director records of 17 November 2026); lines 2-44 unchanged"
+    },
+    {
+      "path": "ALLOWED_PATHS.md",
+      "sha256": "0d82228f3d4ea1505ecabb0298cda49f598785e17af3b67a7842ec7b81cdfc6e",
+      "sha256_frozen_pack_v1_0": "14a1a692d53650322f8f80b2bdf8cfee6a9941878877ec2ddb86288b7f722edd",
+      "difference": "status header line (line 1) only"
+    },
+    {
+      "path": "CONTRACTS/API_ROLE_MATRIX.md",
+      "sha256": "17160511466061db17f667aaa88871c251a44e36ae23a09cf2f5007a32554b84",
+      "sha256_frozen_pack_v1_0": "16c51c54c430c2dbac76e55c8c892dfa472de7575d3e45ae78507ca3e9b116ff",
+      "difference": "status header line (line 1) only"
+    },
+    {
+      "path": "CONTRACTS/BILLING.md",
+      "sha256": "6adacd9517ccd516dad5a2e8a9368188ea1c1df14b9ea4e4fa084ad649b6b9ae",
+      "sha256_frozen_pack_v1_0": "08b5dc10928a7fbc6fc0c8850ffe444114a09895a07ffe709db7b578b1ec3109",
+      "difference": "status header line (line 1) only"
+    },
+    {
+      "path": "CONTRACTS/CLOCK_AND_NOTICES.md",
+      "sha256": "9ac05758ec05fece457d15072fd16eacfc27cc88c8f0c1a3cfa6d9e6bea7debd",
+      "sha256_frozen_pack_v1_0": "6f3812b060c0351d8d5fccfb7943e8d3ee9e08f136f5dadd8ef5afc07dbc0ee8",
+      "difference": "status header line (line 1) only"
+    },
+    {
+      "path": "CONTRACTS/DATA_AND_API_SHAPES.md",
+      "sha256": "ab14d850f10df2a8844752d3ec5700d973922e76ac120988d537ad1dcc095b55",
+      "sha256_frozen_pack_v1_0": "03f8b853a09445901bc8bbc1386d87e08c9f932c514719320e4f9befe0d439cb",
+      "difference": "status header line (line 1) only"
+    },
+    {
+      "path": "CONTRACTS/IDENTITY_AND_MEMBERSHIP.md",
+      "sha256": "a5bc25172a1a6804bf111563413a0c639834d9bfdd348d269bba426f8a2ac165",
+      "sha256_frozen_pack_v1_0": "71cbccc543343e603bcfa94298e25ea0390d5bda7707ea990b1db5a13021dc19",
+      "difference": "status header line (line 1) only"
+    },
+    {
+      "path": "CONTRACTS/LIFECYCLE_AND_TRANSFER.md",
+      "sha256": "0f88e33bd84df232ccedaffda4e1d2c836b5dbb6681a5c3883b4874f788219ce",
+      "sha256_frozen_pack_v1_0": "3eee59faa8aa558d409cf84bcd5335f0e23b35ce4e45e4bd471b9f82c81870d9",
+      "difference": "status header line (line 1) only"
+    },
+    {
+      "path": "CONTRACTS/MIGRATIONS.md",
+      "sha256": "a7134f9273097f8038276732990b7a2e18df6572c933a388f96308dbd241aaf4",
+      "sha256_frozen_pack_v1_0": "9bdce5341d73d00f1a9ac66ff91f829b93615ff49a9050b1b8243c5b86578bde",
+      "difference": "status header line (line 1) only"
+    }
+  ]
+}

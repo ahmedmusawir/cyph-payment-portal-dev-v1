@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-17T11:26:06.293291+00:00",
+  "status": "AUTOMATED EXECUTION COMPLETE; human observations pending",
+  "candidate_pair": {
+    "portal": "427bec6267b9777e9cb44f81c22d1396a495bc14",
+    "owedbook": "c8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea"
+  },
+  "completed_latest": {
+    "grouped_actual_email_confirmation": 7,
+    "transfer_history_assertions": 12,
+    "fresh_role_API": 40,
+    "fresh_own_store_cases": 2,
+    "fresh_trusted_boundary": 10,
+    "signed_in_first_store_cents": 9900,
+    "final_registration_events_processed": 6
+  },
+  "human_observation_policy": "Supplied real links prove receipt/use of those three fresh sign-in messages only; no billing-notice, original invitation-content or screen-review result inferred.",
+  "counters": {
+    "reads": 1220,
+    "provider_mutations": 166,
+    "new_identities": 12,
+    "test_clocks": 3,
+    "customers": 7,
+    "subscriptions": 7,
+    "attempted_cents": 342479,
+    "sign_ins": 95,
+    "pay_or_hosted": 21,
+    "email_attempts": 16,
+    "unique_identities": 8,
+    "refunds": 1
+  },
+  "findings": [
+    "F-Q2-001",
+    "F-Q2-002",
+    "F-Q2-003",
+    "F-Q2-004",
+    "F-Q2-005",
+    "F-Q2-006"
+  ],
+  "runtime_stop": "Not executed yet; phase-exit hygiene remains after final human evidence and record consolidation."
+}

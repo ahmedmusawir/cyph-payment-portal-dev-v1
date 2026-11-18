@@ -1,0 +1,53 @@
+{
+  "source": "QA integer arithmetic, contract formula; provider period ends and clock origin from current run setup",
+  "cases": [
+    {
+      "owner": "A",
+      "provider_start": 1794903569,
+      "provider_end": 1797495569,
+      "time_midpoint": 1796199569,
+      "expected_midpoint_cents": 2450,
+      "APA_earned_discount_preserved": false,
+      "new_store_basis_cents": 4900,
+      "guard_cases": [
+        {
+          "remaining_seconds": 26184,
+          "expected_cents": 49,
+          "add_removal_undo": "REFUSE; no invoice/balance"
+        },
+        {
+          "remaining_seconds": 26185,
+          "expected_cents": 50,
+          "add_removal_undo": "ALLOW if all other guards hold"
+        }
+      ],
+      "consent_expiry_seconds": 1800,
+      "expiry_expected": "void only after authoritative no-paid verification",
+      "late_payment_expected": "attention, no activation"
+    },
+    {
+      "owner": "B",
+      "provider_start": 1794903569,
+      "provider_end": 1797495569,
+      "time_midpoint": 1796199569,
+      "expected_midpoint_cents": 2450,
+      "APA_earned_discount_preserved": true,
+      "new_store_basis_cents": 4900,
+      "guard_cases": [
+        {
+          "remaining_seconds": 26184,
+          "expected_cents": 49,
+          "add_removal_undo": "REFUSE; no invoice/balance"
+        },
+        {
+          "remaining_seconds": 26185,
+          "expected_cents": 50,
+          "add_removal_undo": "ALLOW if all other guards hold"
+        }
+      ],
+      "consent_expiry_seconds": 1800,
+      "expiry_expected": "void only after authoritative no-paid verification",
+      "late_payment_expected": "attention, no activation"
+    }
+  ]
+}

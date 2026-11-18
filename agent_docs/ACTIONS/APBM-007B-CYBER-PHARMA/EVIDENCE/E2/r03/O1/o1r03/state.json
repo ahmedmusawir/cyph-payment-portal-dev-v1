@@ -1,0 +1,673 @@
+{
+ "label": "o1r03",
+ "done": [
+  "setup",
+  "midpoint",
+  "removal",
+  "renewal",
+  "day2",
+  "day5",
+  "day7",
+  "recovery",
+  "reactivate"
+ ],
+ "log": [
+  {
+   "step": "setup",
+   "at": "2026-11-17T03:17:06.340Z",
+   "clock": "clock_1Ucct5GnEQDyu3RREACMu7AP",
+   "A": {
+    "stores": 2
+   },
+   "B": {
+    "stores": 1,
+    "apa": true
+   }
+  },
+  {
+   "step": "midpoint:A",
+   "at": "2026-11-17T03:17:22.581Z",
+   "clock_fraction_remaining": 0.5,
+   "quote_cents": 2450,
+   "invoice_total": 2450,
+   "paid": 2450,
+   "quote_equals_invoice": true,
+   "below_full": true,
+   "state": "activated",
+   "renewal_quoted": 19700
+  },
+  {
+   "step": "midpoint:B",
+   "at": "2026-11-17T03:17:34.223Z",
+   "clock_fraction_remaining": 0.5,
+   "quote_cents": 2450,
+   "invoice_total": 2450,
+   "paid": 2450,
+   "quote_equals_invoice": true,
+   "below_full": true,
+   "state": "activated",
+   "renewal_quoted": 14800
+  },
+  {
+   "step": "removal",
+   "at": "2026-11-17T03:17:37.729Z",
+   "state": "completed",
+   "renewal_preview_cents": 14800,
+   "removal_effective_at": "2026-12-17T03:16:51+00:00"
+  },
+  {
+   "step": "forward:renewal",
+   "at": "2026-11-17T03:18:12.104Z",
+   "delivered": 75,
+   "results": {
+    "customer.created": [
+     "200:ignored",
+     "200:ignored"
+    ],
+    "customer.updated": [
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored"
+    ],
+    "payment_method.attached": [
+     "200:ignored",
+     "200:ignored",
+     "200:ignored"
+    ],
+    "payment_intent.created": [
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored"
+    ],
+    "charge.succeeded": [
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored"
+    ],
+    "customer.subscription.created": [
+     "200:applied",
+     "200:applied"
+    ],
+    "invoice.payment_succeeded": [
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored"
+    ],
+    "invoice.paid": [
+     "503:not_finished",
+     "503:not_finished",
+     "200:store_activated",
+     "200:store_activated",
+     "200:renewal"
+    ],
+    "invoice.finalized": [
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored"
+    ],
+    "invoice.created": [
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored"
+    ],
+    "payment_intent.succeeded": [
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored"
+    ],
+    "customer.discount.deleted": [
+     "200:ignored"
+    ],
+    "customer.discount.created": [
+     "200:ignored"
+    ],
+    "invoice.updated": [
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored",
+     "200:ignored"
+    ],
+    "invoiceitem.created": [
+     "200:ignored",
+     "200:ignored"
+    ],
+    "customer.subscription.updated": [
+     "200:applied",
+     "200:applied",
+     "200:applied",
+     "200:applied",
+     "200:applied",
+     "200:applied"
+    ],
+    "invoice.upcoming": [
+     "200:ignored",
+     "200:ignored"
+    ],
+    "payment_intent.payment_failed": [
+     "200:ignored"
+    ],
+    "charge.failed": [
+     "200:ignored"
+    ],
+    "invoice.payment_failed": [
+     "200:renewal"
+    ]
+   }
+  },
+  {
+   "step": "renewal",
+   "at": "2026-11-17T03:18:14.093Z",
+   "A_access": {
+    "state": "grace",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": "2026-12-24T04:16:51+00:00",
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "A_sub": {
+    "status": "past_due",
+    "quantity": 2,
+    "grace_started_at": "2026-12-17T04:16:51+00:00",
+    "grace_invoice_id": "in_1UccttGnEQDyu3RRRG9LOFN3",
+    "latest_invoice_status": "open"
+   },
+   "B_access": {
+    "state": "active",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": null,
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "notices": [
+    {
+     "notice_kind": "renewal_read_only_warning",
+     "status": "pending",
+     "attempts": 0,
+     "due_at": "2026-12-22T04:16:51+00:00",
+     "provider_message_id": null,
+     "suppression_reason": null,
+     "attention_reason": null
+    },
+    {
+     "notice_kind": "renewal_payment_failed",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-17T04:16:51+00:00",
+     "provider_message_id": "01a1e783-2325-785c-9b3e-fcc71f516732",
+     "suppression_reason": null,
+     "attention_reason": null
+    }
+   ],
+   "emails_reserved": 1,
+   "jobs": {
+    "at": "2026-11-17T03:18:12.286Z",
+    "store_operations": {},
+    "lifecycle": {},
+    "removals": {
+     "2c936001-60c9-43b3-a203-dc8ae4579483": "removed"
+    },
+    "transfers": {},
+    "notices": {
+     "claimed": 1,
+     "sent": 1,
+     "retry": 0,
+     "attention": 0,
+     "blocked": 0,
+     "suppressed": 0
+    }
+   },
+   "A2": {
+    "status": "removed",
+    "ownership_ended_at": "2026-12-17T03:16:51+00:00"
+   }
+  },
+  {
+   "step": "forward:day2",
+   "at": "2026-11-17T03:18:28.648Z",
+   "delivered": 7,
+   "results": {
+    "invoice.paid": [
+     "503:not_finished",
+     "503:not_finished"
+    ],
+    "payment_intent.payment_failed": [
+     "200:ignored"
+    ],
+    "charge.failed": [
+     "200:ignored"
+    ],
+    "invoice.updated": [
+     "200:ignored",
+     "200:ignored"
+    ],
+    "invoice.payment_failed": [
+     "200:renewal"
+    ]
+   }
+  },
+  {
+   "step": "day2",
+   "at": "2026-11-17T03:18:29.194Z",
+   "A_access": {
+    "state": "grace",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": "2026-12-24T04:16:51+00:00",
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "A_sub": {
+    "status": "past_due",
+    "quantity": 2,
+    "grace_started_at": "2026-12-17T04:16:51+00:00",
+    "grace_invoice_id": "in_1UccttGnEQDyu3RRRG9LOFN3",
+    "latest_invoice_status": "open"
+   },
+   "notices": [
+    {
+     "notice_kind": "renewal_read_only_warning",
+     "status": "pending",
+     "attempts": 0,
+     "due_at": "2026-12-22T04:16:51+00:00",
+     "provider_message_id": null,
+     "suppression_reason": null,
+     "attention_reason": null
+    },
+    {
+     "notice_kind": "renewal_payment_failed",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-17T04:16:51+00:00",
+     "provider_message_id": "01a1e783-2325-785c-9b3e-fcc71f516732",
+     "suppression_reason": null,
+     "attention_reason": null
+    }
+   ]
+  },
+  {
+   "step": "forward:day5",
+   "at": "2026-11-17T03:19:20.744Z",
+   "delivered": 7,
+   "results": {
+    "invoice.paid": [
+     "503:not_finished",
+     "503:not_finished"
+    ],
+    "payment_intent.payment_failed": [
+     "200:ignored"
+    ],
+    "charge.failed": [
+     "200:ignored"
+    ],
+    "invoice.updated": [
+     "200:ignored",
+     "200:ignored"
+    ],
+    "invoice.payment_failed": [
+     "200:renewal"
+    ]
+   }
+  },
+  {
+   "step": "day5",
+   "at": "2026-11-17T03:19:22.807Z",
+   "A_access": {
+    "state": "grace",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": "2026-12-24T04:16:51+00:00",
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "notices": [
+    {
+     "notice_kind": "renewal_payment_failed",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-17T04:16:51+00:00",
+     "provider_message_id": "01a1e783-2325-785c-9b3e-fcc71f516732",
+     "suppression_reason": null,
+     "attention_reason": null
+    },
+    {
+     "notice_kind": "renewal_read_only_warning",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-22T04:16:51+00:00",
+     "provider_message_id": "01a1e784-3041-7955-acef-a25b307c8695",
+     "suppression_reason": null,
+     "attention_reason": null
+    }
+   ],
+   "emails_reserved": 1,
+   "jobs_notices": {
+    "claimed": 1,
+    "sent": 1,
+    "retry": 0,
+    "attention": 0,
+    "blocked": 0,
+    "suppressed": 0
+   }
+  },
+  {
+   "step": "forward:day7",
+   "at": "2026-11-17T03:19:35.105Z",
+   "delivered": 7,
+   "results": {
+    "invoice.paid": [
+     "503:not_finished",
+     "503:not_finished"
+    ],
+    "payment_intent.payment_failed": [
+     "200:ignored"
+    ],
+    "charge.failed": [
+     "200:ignored"
+    ],
+    "invoice.updated": [
+     "200:ignored",
+     "200:ignored"
+    ],
+    "invoice.payment_failed": [
+     "200:renewal"
+    ]
+   }
+  },
+  {
+   "step": "day7",
+   "at": "2026-11-17T03:19:39.872Z",
+   "A_access": {
+    "state": "read_only",
+    "origin": "stripe",
+    "read_only": true,
+    "grace_ends_at": "2026-12-24T04:16:51+00:00",
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "A_sub": {
+    "status": "past_due",
+    "quantity": 2,
+    "grace_started_at": "2026-12-17T04:16:51+00:00",
+    "grace_invoice_id": "in_1UccttGnEQDyu3RRRG9LOFN3",
+    "latest_invoice_status": "open"
+   },
+   "app_quote": {
+    "status": 409,
+    "reason": "account_in_grace"
+   },
+   "sql_new_grant": "denied 42501",
+   "sql_reads_still_allowed": true,
+   "owner_billing_reachable": true,
+   "notices": [
+    {
+     "notice_kind": "renewal_payment_failed",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-17T04:16:51+00:00",
+     "provider_message_id": "01a1e783-2325-785c-9b3e-fcc71f516732",
+     "suppression_reason": null,
+     "attention_reason": null
+    },
+    {
+     "notice_kind": "renewal_read_only_warning",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-22T04:16:51+00:00",
+     "provider_message_id": "01a1e784-3041-7955-acef-a25b307c8695",
+     "suppression_reason": null,
+     "attention_reason": null
+    }
+   ]
+  },
+  {
+   "step": "forward:recovery",
+   "at": "2026-11-17T03:20:10.639Z",
+   "delivered": 7,
+   "results": {
+    "invoice.paid": [
+     "503:not_finished",
+     "503:not_finished",
+     "200:renewal"
+    ],
+    "customer.updated": [
+     "200:ignored",
+     "200:ignored"
+    ],
+    "payment_intent.succeeded": [
+     "200:ignored"
+    ],
+    "charge.succeeded": [
+     "200:ignored"
+    ]
+   }
+  },
+  {
+   "step": "recovery",
+   "at": "2026-11-17T03:20:12.111Z",
+   "invoice_paid": "paid",
+   "A_access": {
+    "state": "active",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": null,
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "A_sub": {
+    "status": "active",
+    "quantity": 2,
+    "grace_started_at": null,
+    "grace_invoice_id": "in_1UccttGnEQDyu3RRRG9LOFN3",
+    "latest_invoice_status": "paid"
+   },
+   "replay_old_failure": "200:duplicate",
+   "A_access_after_replay": {
+    "state": "active",
+    "origin": "stripe",
+    "read_only": false,
+    "grace_ends_at": null,
+    "policy_version": "access-v1",
+    "cancel_scheduled": false
+   },
+   "notices": [
+    {
+     "notice_kind": "renewal_payment_failed",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-17T04:16:51+00:00",
+     "provider_message_id": "01a1e783-2325-785c-9b3e-fcc71f516732",
+     "suppression_reason": null,
+     "attention_reason": null
+    },
+    {
+     "notice_kind": "renewal_read_only_warning",
+     "status": "sent",
+     "attempts": 1,
+     "due_at": "2026-12-22T04:16:51+00:00",
+     "provider_message_id": "01a1e784-3041-7955-acef-a25b307c8695",
+     "suppression_reason": null,
+     "attention_reason": null
+    }
+   ],
+   "events_delivered": 7,
+   "ignore": 93
+  },
+  {
+   "step": "reactivate",
+   "at": "2026-11-17T03:20:31.934Z",
+   "operator": "applied",
+   "quote_cents": 3774,
+   "state": "activated",
+   "activated_business_is_original": true,
+   "store": {
+    "id": "2c936001-60c9-43b3-a203-dc8ae4579483",
+    "status": "active",
+    "reactivated_at": "2026-12-24T06:16:51+00:00"
+   },
+   "owner_history_rows_before_payment": "42501",
+   "owner_history_rows_after_payment": "42501"
+  },
+  {
+   "step": "cleanup",
+   "at": "2026-11-17T03:43:15.289Z",
+   "clock_deleted": true,
+   "contexts_disabled": true,
+   "scratch_rows": "retained (labelled)"
+  }
+ ],
+ "forwarded": [
+  "evt_1Ucct6GnEQDyu3RRSJXo52EZ",
+  "evt_1Ucct7GnEQDyu3RR8bdH9lti",
+  "evt_1Ucct7GnEQDyu3RRMtGXjBRe",
+  "evt_3Ucct8GnEQDyu3RR098eVO2A",
+  "evt_3Ucct8GnEQDyu3RR0HSm0YC2",
+  "evt_1UcctBGnEQDyu3RRnIYM0cOb",
+  "evt_1UcctBGnEQDyu3RRHW4U6MYW",
+  "evt_1UcctAGnEQDyu3RRrpxhLY7L",
+  "evt_1UcctBGnEQDyu3RRJGug5C5T",
+  "evt_1UcctBGnEQDyu3RRiqTuqWFW",
+  "evt_3Ucct8GnEQDyu3RR0jnZ4Laf",
+  "evt_1UcctDGnEQDyu3RRscua75h2",
+  "evt_1UcctEGnEQDyu3RRS4SuKFve",
+  "evt_1UcctEGnEQDyu3RRPu6L4tCQ",
+  "evt_3UcctFGnEQDyu3RR0isX5ILQ",
+  "evt_3UcctFGnEQDyu3RR08nMEjOl",
+  "evt_3UcctFGnEQDyu3RR0hg2CcXG",
+  "evt_1UcctIGnEQDyu3RRL9alE3Es",
+  "evt_1UcctIGnEQDyu3RRgMkBhgNI",
+  "evt_1UcctIGnEQDyu3RRD4qrMIA9",
+  "evt_1UcctHGnEQDyu3RRIY397eiR",
+  "evt_1UcctHGnEQDyu3RR5eOWJatC",
+  "evt_1UcctHGnEQDyu3RR5QT1k61E",
+  "evt_1UcctHGnEQDyu3RRlbqF5w25",
+  "evt_1UcctRGnEQDyu3RRaEg8DheC",
+  "evt_1UcctSGnEQDyu3RRjcvJQ3eR",
+  "evt_1UcctSGnEQDyu3RRXD8kbL3S",
+  "evt_1UcctUGnEQDyu3RR047K9PRQ",
+  "evt_1UcctUGnEQDyu3RRj4tpgrPV",
+  "evt_3UcctUGnEQDyu3RR1aVrDhez",
+  "evt_1UcctXGnEQDyu3RRa4Y6PHvZ",
+  "evt_1UcctXGnEQDyu3RRQJFc3TN8",
+  "evt_1UcctXGnEQDyu3RR8PidMK9W",
+  "evt_3UcctUGnEQDyu3RR1N7zrmIL",
+  "evt_3UcctUGnEQDyu3RR1nXCMOFb",
+  "evt_1UcctZGnEQDyu3RRdkAXiZCe",
+  "evt_1UcctdGnEQDyu3RRMzciFmFI",
+  "evt_1UccteGnEQDyu3RRQ7QC8L02",
+  "evt_1UccteGnEQDyu3RRwcWg5Lx1",
+  "evt_1UcctgGnEQDyu3RRqc2Gy0AU",
+  "evt_1UcctgGnEQDyu3RRJdnmtNjZ",
+  "evt_3UcctgGnEQDyu3RR0fXHPGrs",
+  "evt_1UcctjGnEQDyu3RRSoEGfXXb",
+  "evt_1UcctjGnEQDyu3RR2mE1aXSm",
+  "evt_1UcctjGnEQDyu3RRDJddA5a7",
+  "evt_3UcctgGnEQDyu3RR0q0eL1Di",
+  "evt_3UcctgGnEQDyu3RR0G5rqALY",
+  "evt_1UcctlGnEQDyu3RR0pwYcf7C",
+  "evt_1UcctoGnEQDyu3RROSv9yWJ0",
+  "evt_1UcctqGnEQDyu3RR9ShcfENb",
+  "evt_1UcctqGnEQDyu3RR8teLPYNN",
+  "evt_1UcctsGnEQDyu3RRigsjIEfe",
+  "evt_1UcctsGnEQDyu3RRoObk8s3o",
+  "evt_1UcctuGnEQDyu3RRylhR59M6",
+  "evt_1UcctuGnEQDyu3RRbHiVICok",
+  "evt_1UcctvGnEQDyu3RRpeUDZMpA",
+  "evt_1UcctvGnEQDyu3RRNS6iYh0c",
+  "evt_3UcctwGnEQDyu3RR0hdWwcGb",
+  "evt_3UcctwGnEQDyu3RR0rLTMLnX",
+  "evt_1UcctzGnEQDyu3RRWe6FKijv",
+  "evt_1UcctzGnEQDyu3RRh0L3x8Cl",
+  "evt_1UcctzGnEQDyu3RR5TFLE9Rn",
+  "evt_1UcctzGnEQDyu3RRRShrAV4y",
+  "evt_1UcctzGnEQDyu3RRvvl71seO",
+  "evt_1UcctzGnEQDyu3RRTK4O5tAv",
+  "evt_3UcctwGnEQDyu3RR0JiDeDGl",
+  "evt_1Uccu3GnEQDyu3RRpV9r6RSO",
+  "evt_1Uccu3GnEQDyu3RRKOtLnBLZ",
+  "evt_1Uccu3GnEQDyu3RRNpWJ4opU",
+  "evt_1Uccu3GnEQDyu3RRVHCRe8Ck",
+  "evt_3Uccu0GnEQDyu3RR0pSDZqq7",
+  "evt_3Uccu0GnEQDyu3RR0wJgPt7h",
+  "evt_3Uccu0GnEQDyu3RR054OPQKi",
+  "evt_3UcctwGnEQDyu3RR0xqBIsb9",
+  "evt_3UcctwGnEQDyu3RR0WjwvVyC",
+  "evt_1UccuTGnEQDyu3RRQyCeGszb",
+  "evt_1UccuUGnEQDyu3RRFfmy2V8H",
+  "evt_1UccuUGnEQDyu3RRlAaWwH5R",
+  "evt_3UcctwGnEQDyu3RR0UOIegor",
+  "evt_3UcctwGnEQDyu3RR0LM2T01K",
+  "evt_1UccvIGnEQDyu3RR34q6Y0a0",
+  "evt_1UccvJGnEQDyu3RRl7eoxl9f",
+  "evt_1UccvJGnEQDyu3RRjdaCF19z",
+  "evt_3UcctwGnEQDyu3RR0IyCXXIq",
+  "evt_3UcctwGnEQDyu3RR0xFaU9mq",
+  "evt_1UccvZGnEQDyu3RRdKGPxdFv",
+  "evt_1UccvbGnEQDyu3RRSAWcm3e4",
+  "evt_1UccvaGnEQDyu3RRdbUWftav",
+  "evt_1Uccw8GnEQDyu3RRDRvP66Bm",
+  "evt_1UccwBGnEQDyu3RRJ3YHfjrR",
+  "evt_3UcctwGnEQDyu3RR0qUTPBUU",
+  "evt_3UcctwGnEQDyu3RR0h9Y7XR0",
+  "evt_1UccwBGnEQDyu3RRTc6ncyWU"
+ ],
+ "startedReal": 1794885411,
+ "clock": "clock_1Ucct5GnEQDyu3RREACMu7AP",
+ "A": {
+  "customer": "cus_VduiLjEKexBSpd",
+  "sub": "sub_1Ucct8GnEQDyu3RR2CYozB1s",
+  "visa": "pm_1Ucct7GnEQDyu3RR1NfTLQhs",
+  "account": "a5801144-759d-4c7b-b314-9a4fd01f9ba8",
+  "stores": [
+   {
+    "name": "A1",
+    "id": "e47e9d11-a46d-46e1-b387-ad67a3eea4b5",
+    "npi": "1411391406"
+   },
+   {
+    "name": "A2",
+    "id": "2c936001-60c9-43b3-a203-dc8ae4579483",
+    "npi": "1659827384"
+   }
+  ],
+  "R": 1797477411
+ },
+ "B": {
+  "customer": "cus_VduiPdXLOeZgvR",
+  "sub": "sub_1UcctFGnEQDyu3RRu4UjGKqu",
+  "visa": "pm_1UcctDGnEQDyu3RRGLYbjYK3",
+  "account": "36547ce7-4a0e-4f26-b92f-b961570a7d8a",
+  "stores": [
+   {
+    "name": "B1",
+    "id": "8ea72bd1-614f-4d16-b509-ef50c0590c1f",
+    "npi": "1577059615"
+   }
+  ],
+  "R": 1797477411
+ }
+}

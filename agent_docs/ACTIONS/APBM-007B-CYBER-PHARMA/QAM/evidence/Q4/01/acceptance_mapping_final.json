@@ -1,0 +1,733 @@
+{
+  "status": "Q4 COMPLETE \u2014 AWAITING ADJUDICATION",
+  "at": "2026-11-18T03:52:22.010441+00:00",
+  "candidate_pair": {
+    "portal": "00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d",
+    "owedbook": "1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d"
+  },
+  "entries": [
+    {
+      "AC": "AC-001",
+      "executor_result": "PASS",
+      "observation_and_limits": "Fresh existing-role API131/131, fresh-role40/40 and final actual-JWT48/48; expected reach derived from current ownership/memberships, active dates and billing clock.",
+      "evidence": [
+        "evidence/Q4/01/action_role_matrix.json",
+        "evidence/Q4/01/action_role_matrix_fresh.json",
+        "evidence/Q4/01/direct_jwt_boundaries_final.json"
+      ]
+    },
+    {
+      "AC": "AC-002",
+      "executor_result": "PASS, scoped",
+      "observation_and_limits": "Fresh0070 local two-connection/identity invariants and original-record paid re-add; unchanged transfer authority/history paths carried with original Q2pair and exact source hashes.",
+      "evidence": [
+        "evidence/Q4/01/local/sql_upgraded.txt",
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-003",
+      "executor_result": "PASS",
+      "observation_and_limits": "QA independent provider-period integer calculation before confirm: ordinary2450c and active-APA2450c;4900c basis, preserved active discount. Original empty-discount attempt explicitly insufficient; active promotion is disclosed sandbox fixture grant, not redemption proof.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json"
+      ]
+    },
+    {
+      "AC": "AC-004",
+      "executor_result": "PASS server/payment; FAIL UI",
+      "observation_and_limits": "Fresh seven deadline cases in each clock mode; real waits and no clock/timestamp edits. Payment/activation state results below. WebKit rendered AddStore result timed out despite backend activation F-Q4-002; no blanket AC pass.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/final_real_redelivery.json",
+        "evidence/Q4/01/browser_extra_results.json"
+      ]
+    },
+    {
+      "AC": "AC-005",
+      "executor_result": "PASS",
+      "observation_and_limits": "Fresh actual declined additional payment and verified unpaid abandon/void: no new store or quantity, paid0; hosted3DS separately completed.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json"
+      ]
+    },
+    {
+      "AC": "AC-006",
+      "executor_result": "PASS",
+      "observation_and_limits": "Fresh database concurrency/fencing proof, actual in-flight hard kill and real duplicate/redelivery: one paid invoice/store/member/quantity grant; outage receipt and duplicate leave state unchanged.",
+      "evidence": [
+        "evidence/Q4/01/local/sql_upgraded.txt",
+        "evidence/Q4/01/campaign/r06/CRASH_RESTART/qa-q4-s1-s1/result.json",
+        "evidence/Q4/01/final_real_redelivery.json"
+      ]
+    },
+    {
+      "AC": "AC-007",
+      "executor_result": "PASS",
+      "observation_and_limits": "Fresh fourteen selected deadline cases including real-time payment/void race; minute-job unpaid expiry without owner action; late attention and operator resume only after recorded owner reconfirmation. Both real crash scenarios; naturally paid/unactivated full second refund/proof closure. Interrupted old unpaid race is NOT RUN as paid race, retained void closure, replaced by fresh full-wait consent.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/campaign/r06/CRASH_RESTART/qa-q4-s1-s1/result.json"
+      ]
+    },
+    {
+      "AC": "AC-008",
+      "executor_result": "PASS, scoped",
+      "observation_and_limits": "Fresh provider quantities before/after actual paid adds, both crashes, removal next invoice and paid re-add. Historical unchanged last-store whole-account lifecycle carried explicitly.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-009",
+      "executor_result": "PASS, scoped",
+      "observation_and_limits": "Actual graduated recurring next invoice68700c, no removal credit/proration and active APA preservation. Unchanged first-store/cancel paths carried from Q2 with original pair; no new first-store activation claim.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-010",
+      "executor_result": "PASS, unchanged-path carry",
+      "observation_and_limits": "Invite send authority/no role grant carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json"
+      ]
+    },
+    {
+      "AC": "AC-011",
+      "executor_result": "PASS, unchanged-path carry",
+      "observation_and_limits": "Exact recipient acceptance and original real-inbox observations carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json"
+      ]
+    },
+    {
+      "AC": "AC-012",
+      "executor_result": "PASS, unchanged-path carry",
+      "observation_and_limits": "Explicit confirmation, wrong recipient/replay/expired/revoked negatives carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json"
+      ]
+    },
+    {
+      "AC": "AC-013",
+      "executor_result": "PASS, unchanged-path carry",
+      "observation_and_limits": "Resend cooldown/deduplication and bounded exhaustion fixture carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json"
+      ]
+    },
+    {
+      "AC": "AC-014",
+      "executor_result": "PASS, unchanged-path carry",
+      "observation_and_limits": "Atomic admin replacement and owner unchanged carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json"
+      ]
+    },
+    {
+      "AC": "AC-015",
+      "executor_result": "PASS, unchanged-path carry",
+      "observation_and_limits": "Immediate old-JWT membership revocation including read-only account carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json"
+      ]
+    },
+    {
+      "AC": "AC-016",
+      "executor_result": "PASS, unchanged-path carry",
+      "observation_and_limits": "Last-admin protection and operator restoration carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json"
+      ]
+    },
+    {
+      "AC": "AC-017",
+      "executor_result": "PASS",
+      "observation_and_limits": "Current independent role matrix:131+40 API checks, final48 direct JWT checks including new0070 privileged RPC denial. No DEV identity reused.",
+      "evidence": [
+        "evidence/Q4/01/action_role_matrix.json",
+        "evidence/Q4/01/action_role_matrix_fresh.json",
+        "evidence/Q4/01/direct_jwt_boundaries_final.json"
+      ]
+    },
+    {
+      "AC": "AC-018",
+      "executor_result": "PASS with guard qualification",
+      "observation_and_limits": "Fresh removal schedule/current unchanged quantity, actual next invoice68700c and cutoff;50c allowed/49c refused. 5401/5400/5399/1seconds refused under stricter50c minimum; not isolated proof of independent90-minute rule. New local SQL checks complementary.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/local/sql_upgraded.txt",
+        "evidence/Q4/01/browser_final_serial_skips.json"
+      ]
+    },
+    {
+      "AC": "AC-019",
+      "executor_result": "PASS with guard qualification",
+      "observation_and_limits": "Fresh undo50c/49c and actual rendered remove/undo;90-minute both sides blocked by minimum and separately qualified, stale period SQL negative.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/local/sql_upgraded.txt",
+        "evidence/Q4/01/browser_final_serial_skips.json"
+      ]
+    },
+    {
+      "AC": "AC-020",
+      "executor_result": "PASS, scoped",
+      "observation_and_limits": "Fresh reactivation authorization alone leaves removed/no access/quantity. Paid re-add restores original business ID and original claim through real owner owedbook_rows JWT. Only unchanged last-store/cancel code carried.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-021",
+      "executor_result": "PASS, scoped software + new procedure",
+      "observation_and_limits": "Six exact documented commands dry_run/planned; required inputs/Director approver/before/after/resume/possession present. Unchanged operator authority retained; changed activation/resume freshly exercised. Shared credential is not individual operator authentication.",
+      "evidence": [
+        "evidence/Q4/01/support_runbook_dry_runs.json",
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-022",
+      "executor_result": "PASS, scoped software + new procedure",
+      "observation_and_limits": "Fresh0070 transfer/activation SQL proof and runbook dry runs. Source-identical seller cutoff/buyer authority/billing evidence carried from original Q2; old buyer live payment is historical only, not new Q4 changed-gate live proof.",
+      "evidence": [
+        "evidence/Q4/01/local/sql_upgraded.txt",
+        "evidence/Q4/01/support_runbook_dry_runs.json",
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-023",
+      "executor_result": "PASS, scoped software + new procedure",
+      "observation_and_limits": "Fresh original-record paid re-add/history RPC and0070 proofs; unchanged seller-readonly/buyer-denied structural history path carried from Q2. Seller-history screen absent per approvedQL09; no new screen claim.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/local/sql_upgraded.txt",
+        "evidence/Q4/01/support_runbook_dry_runs.json",
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-024",
+      "executor_result": "PASS, scoped software + new procedure",
+      "observation_and_limits": "New owner/admin commands dry-run and all required procedure fields; source-identical recovery/audit failure/resume tests carried with original pair. No new individual-authentication assertion.",
+      "evidence": [
+        "evidence/Q4/01/support_runbook_dry_runs.json",
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-025",
+      "executor_result": "PASS, scoped",
+      "observation_and_limits": "New deadline/no-unproven-grant privilege and live cases freshly tested; source-identical renewal grace/read-only/recovery software and real provider-clock timeline carried, original limitations preserved.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/direct_jwt_boundaries_final.json",
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-026",
+      "executor_result": "PASS, unchanged-path carry",
+      "observation_and_limits": "Notice dispatch/content source identical. Q2 actual provider receipts and separate Tony manual inbox observations retained; UTC-only deadline remains Director backlog. No new Q4 inbox/automated access claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-027",
+      "executor_result": "PASS, unchanged-path carry",
+      "observation_and_limits": "Unchanged notice idempotency/recovery/local timeout/backoff/lease scenarios retained with original limits. Local fault injection does not prove permanent provider outage/native retry.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-028",
+      "executor_result": "FAIL",
+      "observation_and_limits": "Fresh Portal regression9/9 and OBstaff6/6 across3engines, five extra unchanged WebKitstaff runs10/10. Full AddStore/O1WebKit retains3 failures; two serial skips attempted individually and bothPASS. F-Q4-001 form typing/submit-state loss and F-Q4-002/003 unadjudicated. U1\u2013U3 remain Director-accepted, not QA-certified.",
+      "evidence": [
+        "evidence/Q4/01/browser_extra_results.json",
+        "evidence/Q4/01/browser_final_serial_skips.json",
+        "evidence/Q4/01/hydration_forms_extended.json",
+        "evidence/Q4/01/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-029",
+      "executor_result": "PASS",
+      "observation_and_limits": "Fresh0001\u20130070 and upgrade0069\u21920070 SQL158/158 each; SCRATCH70 before/after retained legacy digests identical including F001; DEV read-only69 exact prefix/catalogue, no DEV clock or writes.",
+      "evidence": [
+        "evidence/Q4/01/entry/migration0070.json",
+        "evidence/Q4/01/local/sql_fresh.txt",
+        "evidence/Q4/01/local/sql_upgraded.txt"
+      ]
+    },
+    {
+      "AC": "AC-030",
+      "executor_result": "FAIL",
+      "observation_and_limits": "Repaired staff five unchanged WebKit runsPASS and all3engines; obsolete dashboard wording removed, only dashboard diff,26 gallery states and4 focus-BODY images. Adjacent link/password hydration and WebKit regressions F-Q4-001/002/003 remain. New findings do not silently reopen/close Friday dispositions.",
+      "evidence": [
+        "evidence/Q4/01/browser/ob_results.json",
+        "evidence/Q4/01/screens_gallery_q4.json",
+        "evidence/Q4/01/hydration_forms_extended.json",
+        "evidence/Q4/01/browser_extra_results.json"
+      ]
+    },
+    {
+      "AC": "AC-031",
+      "executor_result": "PASS, product bundle lane",
+      "observation_and_limits": "New production bundles pattern/poison controls and actual-private-value scans clean. Only exact approved OBauth-js.generateLink baseline exception. QA diagnostic privacy incident separate F-Q4-004, recovered under Director authority; no product-bundle failure inferred.",
+      "evidence": [
+        "evidence/Q4/01/local/client_bundle_scan.json",
+        "evidence/Q4/01/local/actual_private_values_bundle_scan_final.json",
+        "evidence/Q4/01/privacy_recovery.json"
+      ]
+    }
+  ],
+  "deadline_family": [
+    {
+      "name": "clock_on_time_prompt",
+      "result": "PASS",
+      "expected": "activated exactly once, one store/member, quantity+1",
+      "expected_cents": 4893,
+      "expected_written_at": "2026-11-18T01:52:59.387Z",
+      "deadline": "2027-01-17T11:11:53+00:00",
+      "operation": "a7b704d1-b186-4d59-8c61-604334441f30",
+      "invoice": "in_1Ucy3VGnEQDyu3RRFhrnRROV",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-01-17T10:41:53+00:00",
+        "deadline": "2027-01-17T11:11:53+00:00",
+        "business_id": "1c3aa81d-1f62-489b-8f95-2afc2eb4abc0",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4893,
+        "provider_quantity": 2,
+        "target_quantity": 2,
+        "observed_wall": "2026-11-18T01:53:13.594Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "race": null,
+      "resume": null
+    },
+    {
+      "name": "clock_on_time_delayed_within",
+      "result": "PASS",
+      "expected": "activated exactly once, one store/member, quantity+1",
+      "expected_cents": 4893,
+      "expected_written_at": "2026-11-18T01:53:18.682Z",
+      "deadline": "2027-01-17T11:11:53+00:00",
+      "operation": "abec5dd8-eaaf-4c37-8545-11c376e18925",
+      "invoice": "in_1Ucy3qGnEQDyu3RRe7Fl3O7n",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-01-17T10:41:53+00:00",
+        "deadline": "2027-01-17T11:11:53+00:00",
+        "business_id": "4b7fd52a-4d77-4d77-b341-75d987e81a1d",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4893,
+        "provider_quantity": 3,
+        "target_quantity": 3,
+        "observed_wall": "2026-11-18T01:53:37.794Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "race": null,
+      "resume": null
+    },
+    {
+      "name": "clock_on_time_processed_after_deadline",
+      "result": "PASS",
+      "expected": "activated exactly once, one store/member, quantity+1",
+      "expected_cents": 4891,
+      "expected_written_at": "2026-11-18T01:53:38.388Z",
+      "deadline": "2027-01-17T11:31:53+00:00",
+      "operation": "a971818c-2afc-4d8c-8fa7-fecdfbe56581",
+      "invoice": "in_1Ucy48GnEQDyu3RRYLLsq7sK",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2027-01-17T11:01:53+00:00",
+        "deadline": "2027-01-17T11:31:53+00:00",
+        "business_id": "58af1229-7ed8-4016-a262-e66849d46a67",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4891,
+        "provider_quantity": 4,
+        "target_quantity": 4,
+        "observed_wall": "2026-11-18T01:53:55.914Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "race": null,
+      "resume": null
+    },
+    {
+      "name": "clock_late_prompt",
+      "result": "PASS",
+      "expected": "attention/no store/no quantity grant",
+      "expected_cents": 4888,
+      "expected_written_at": "2026-11-18T01:53:56.995Z",
+      "deadline": "2027-01-17T12:01:55+00:00",
+      "operation": "5b9b5014-478c-47b0-916e-00254a674e51",
+      "invoice": "in_1Ucy4QGnEQDyu3RRPwKILfNd",
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2027-01-17T12:01:57+00:00",
+        "deadline": "2027-01-17T12:01:55+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 4888,
+        "provider_quantity": 4,
+        "target_quantity": 5,
+        "observed_wall": "2026-11-18T01:54:11.453Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "race": null,
+      "resume": {
+        "without_reconfirmation": "refused",
+        "dry": "planned",
+        "apply": "applied",
+        "final": "activated",
+        "owner_reconfirmation": "Controlled QA owner reconfirmation recorded before apply; Director Q4scope authorizes the test"
+      }
+    },
+    {
+      "name": "clock_late_after_crash",
+      "result": "PASS",
+      "expected": "attention/no store/no quantity grant",
+      "expected_cents": 4885,
+      "expected_written_at": "2026-11-18T01:54:15.062Z",
+      "deadline": "2027-01-17T12:31:57+00:00",
+      "operation": "9f6e2865-f0f5-4858-8041-43506caa2c9f",
+      "invoice": "in_1Ucy4mGnEQDyu3RR6dCAw1vH",
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2027-01-17T12:31:59+00:00",
+        "deadline": "2027-01-17T12:31:57+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 4885,
+        "provider_quantity": 5,
+        "target_quantity": 6,
+        "observed_wall": "2026-11-18T01:54:36.212Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "race": null,
+      "resume": null
+    },
+    {
+      "name": "clock_unpaid_expiry",
+      "result": "PASS",
+      "expected": "expired_unpaid/void/zero paid/no owner action",
+      "expected_cents": 2450,
+      "expected_written_at": "2026-11-18T02:22:59.916Z",
+      "deadline": "2027-02-01T22:11:53+00:00",
+      "operation": "50555d10-5335-416e-90a0-0b852f6e3520",
+      "invoice": "in_1UcyWXGnEQDyu3RRfBYKlfcZ",
+      "final": {
+        "http": 200,
+        "state": "expired_unpaid",
+        "code": "deadline_passed",
+        "paid_at": null,
+        "deadline": "2027-02-01T22:11:53+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "void",
+        "amount_paid": 0,
+        "provider_quantity": 11,
+        "target_quantity": 12,
+        "observed_wall": "2026-11-18T02:23:21.192Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "race": null,
+      "resume": null
+    },
+    {
+      "name": "clock_paid_void_race",
+      "result": "PASS",
+      "expected": "attention/no store/no quantity grant",
+      "expected_cents": 2447,
+      "expected_written_at": "2026-11-18T02:23:23.310Z",
+      "deadline": "2027-02-01T22:41:54+00:00",
+      "operation": "f2907e06-a7af-4545-87ec-60a5dad6b26f",
+      "invoice": "in_1UcyWvGnEQDyu3RR0SMSbz8g",
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2027-02-01T22:41:55+00:00",
+        "deadline": "2027-02-01T22:41:54+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 2447,
+        "provider_quantity": 11,
+        "target_quantity": 12,
+        "observed_wall": "2026-11-18T02:23:41.166Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "race": {
+        "pay": "fulfilled",
+        "pay_code": null,
+        "job": "fulfilled",
+        "controlled_signer": false
+      },
+      "resume": {
+        "without_reconfirmation": "refused",
+        "dry": "planned",
+        "apply": "applied",
+        "final": "activated",
+        "owner_reconfirmation": "Controlled QA owner reconfirmation recorded before apply; Director Q4scope authorizes the test"
+      }
+    },
+    {
+      "name": "real_on_time_prompt",
+      "result": "PASS",
+      "expected": "activated exactly once, one store/member, quantity+1",
+      "expected_cents": 4789,
+      "expected_written_at": "2026-11-18T01:52:10.720Z",
+      "deadline": "2026-11-18T02:22:14.307212+00:00",
+      "operation": "1528ffb5-9e5f-4ddb-b134-6ec283578a13",
+      "invoice": "in_1Ucy2lGnEQDyu3RRLz3g3mKB",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2026-11-18T01:52:24+00:00",
+        "deadline": "2026-11-18T02:22:14.307212+00:00",
+        "business_id": "d0d908f8-997c-4739-b5e7-596371920054",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4789,
+        "provider_quantity": 2,
+        "target_quantity": 2,
+        "observed_wall": "2026-11-18T01:52:30.513Z",
+        "delivery_lane": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "race": null,
+      "resume": null
+    },
+    {
+      "name": "real_on_time_delayed_within",
+      "result": "PASS",
+      "expected": "activated exactly once, one store/member, quantity+1",
+      "expected_cents": 4787,
+      "expected_written_at": "2026-11-18T01:52:30.833Z",
+      "deadline": "2026-11-18T02:22:32.272755+00:00",
+      "operation": "2214085d-fd46-4d4e-965c-5c142bb51ba1",
+      "invoice": "in_1Ucy32GnEQDyu3RRcTkl3Ril",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2026-11-18T01:52:55+00:00",
+        "deadline": "2026-11-18T02:22:32.272755+00:00",
+        "business_id": "be9d6dba-b1cd-4055-8400-e2c6e67744a8",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4787,
+        "provider_quantity": 4,
+        "target_quantity": 4,
+        "observed_wall": "2026-11-18T01:53:18.095Z",
+        "delivery_lane": "Corrected: real sandbox payment; owned CLI was intentionally stopped; owner status/restart reconciliation, no controlled signer",
+        "delivery_lane_original_label": "Real sandbox event forwarded by owned Stripe CLI; explicit owner status poll labelled; causal delivery receipt correlated separately"
+      },
+      "race": null,
+      "resume": null
+    },
+    {
+      "name": "real_on_time_processed_after_deadline",
+      "result": "PASS",
+      "expected": "activated exactly once, one store/member, quantity+1",
+      "expected_cents": 4800,
+      "expected_written_at": "2026-11-18T01:52:39.362Z",
+      "deadline": "2026-11-18T02:22:40.755773+00:00",
+      "operation": "1ded9052-5f79-4f88-aad3-03c1be776d8a",
+      "invoice": "in_1Ucy3BGnEQDyu3RROu5Uei9n",
+      "final": {
+        "http": 200,
+        "state": "activated",
+        "code": null,
+        "paid_at": "2026-11-18T01:52:57+00:00",
+        "deadline": "2026-11-18T02:22:40.755773+00:00",
+        "business_id": "98c57048-7ed5-4ed3-888f-140a89b2bd96",
+        "stores": 1,
+        "invoice_status": "paid",
+        "amount_paid": 4800,
+        "provider_quantity": 2,
+        "target_quantity": 2,
+        "observed_wall": "2026-11-18T02:22:58.934Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "race": null,
+      "resume": null
+    },
+    {
+      "name": "real_late_prompt",
+      "result": "PASS",
+      "expected": "attention/no store/no quantity grant",
+      "expected_cents": 4788,
+      "expected_written_at": "2026-11-18T02:01:38.111Z",
+      "deadline": "2026-11-18T02:31:41.38437+00:00",
+      "operation": "b2ca62af-753e-45a9-8a14-72b5293ac433",
+      "invoice": "in_1UcyBuGnEQDyu3RRZHCLtPOP",
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2026-11-18T02:31:52+00:00",
+        "deadline": "2026-11-18T02:31:41.38437+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 4788,
+        "provider_quantity": 2,
+        "target_quantity": 3,
+        "observed_wall": "2026-11-18T02:31:58.423Z",
+        "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+      },
+      "race": null,
+      "resume": {
+        "without_reconfirmation": "refused",
+        "dry": "planned",
+        "apply": "applied",
+        "final": "activated",
+        "owner_reconfirmation": "Controlled QA owner reconfirmation recorded before apply; Director Q4scope authorizes the test"
+      }
+    },
+    {
+      "name": "real_late_after_crash",
+      "result": "PASS",
+      "expected": "attention/no store/no quantity grant",
+      "expected_cents": 4786,
+      "expected_written_at": "2026-11-18T02:01:48.751Z",
+      "deadline": "2026-11-18T02:31:50.102566+00:00",
+      "operation": "7f9b7583-131c-4f53-bc00-0aeb62e95de6",
+      "invoice": "in_1UcyC2GnEQDyu3RRhF5aVZGx",
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2026-11-18T02:31:59+00:00",
+        "deadline": "2026-11-18T02:31:50.102566+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 4786,
+        "provider_quantity": 4,
+        "target_quantity": 5,
+        "observed_wall": "2026-11-18T02:32:05.887Z",
+        "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+      },
+      "race": null,
+      "resume": null
+    },
+    {
+      "name": "real_unpaid_expiry",
+      "result": "PASS",
+      "expected": "expired_unpaid/void/zero paid/no owner action",
+      "expected_cents": 4900,
+      "expected_written_at": "2026-11-18T01:52:47.824Z",
+      "deadline": "2026-11-18T02:22:49.098041+00:00",
+      "operation": "073d7b1d-658c-4bdd-a474-d5ba4eab64dc",
+      "invoice": "in_1Ucy3JGnEQDyu3RRKsX2jyMZ",
+      "final": {
+        "http": 200,
+        "state": "expired_unpaid",
+        "code": "deadline_passed",
+        "paid_at": null,
+        "deadline": "2026-11-18T02:22:49.098041+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "void",
+        "amount_paid": 0,
+        "provider_quantity": 1,
+        "target_quantity": 2,
+        "observed_wall": "2026-11-18T02:23:22.730Z",
+        "delivery_lane": "Real sandbox provider payment; owned CLI intentionally stopped for delivery outage; explicit owner status poll/restart reconciliation, no controlled signer"
+      },
+      "race": null,
+      "resume": null
+    },
+    {
+      "name": "real_paid_void_race_final",
+      "result": "PASS",
+      "expected": "attention/no store/no quantity grant",
+      "expected_cents": 4779,
+      "expected_written_at": "2026-11-18T03:19:53.917Z",
+      "deadline": "2026-11-18T03:49:56.205744+00:00",
+      "operation": "87a71548-3cac-4cb2-af27-b2fb87630f2f",
+      "invoice": "in_1UczPcGnEQDyu3RR3B0o01Lq",
+      "final": {
+        "http": 200,
+        "state": "attention",
+        "code": "paid_after_deadline",
+        "paid_at": "2026-11-18T03:49:58+00:00",
+        "deadline": "2026-11-18T03:49:56.205744+00:00",
+        "business_id": null,
+        "stores": 0,
+        "invoice_status": "paid",
+        "amount_paid": 4779,
+        "provider_quantity": 3,
+        "target_quantity": 4,
+        "observed_wall": "2026-11-18T03:50:07.767Z",
+        "delivery_lane": "Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"
+      },
+      "race": {
+        "launched_at": "2026-11-18T03:49:58.326Z",
+        "deadline": "2026-11-18T03:49:56.205744+00:00",
+        "actual_wait_ms": 1796334,
+        "no_test_clock": true,
+        "no_timestamp_edits": true,
+        "pay": "fulfilled",
+        "pay_code": null,
+        "job": "fulfilled",
+        "controlled_signer": false,
+        "listener": "Owned automatic CLI remains running; provider delivery and minute job race naturally",
+        "provider_paid_at": 1794973798
+      },
+      "resume": null
+    }
+  ],
+  "interrupted_case": {
+    "name": "real_paid_void_race",
+    "status": "NOT RUN as paid race; interruption before payment, safely expired and retained",
+    "mechanical_result_not_product_failure": "FAIL",
+    "replacement": "real_paid_void_race_final"
+  },
+  "GD-001": "NOT RUN; separate Gate D public HTTPS revision binding/permanent native retry/deployed scheduler/Auth/security/rollback; local CLI forwarding/resend does not certify native endpoint retry",
+  "timing_qualifications": "evidence/Q4/01/deadline_timing_qualifications.json",
+  "certificate": "Not issued; Friday adjudicates all findings and retention"
+}

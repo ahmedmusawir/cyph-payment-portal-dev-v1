@@ -1,0 +1,38 @@
+{
+ "admins_on_store": 1,
+ "ENGINEERING_MEMBER": {
+  "signed_in_after_resend": true,
+  "accepted_by_this_identity": [
+   "member"
+  ],
+  "sees_A1": true,
+  "sees_A2": false,
+  "reads_A1_records": "allowed",
+  "can_create_member_invite": "denied 42501",
+  "can_create_admin_invite": "denied 42501",
+  "owner_billing": "denied 42501"
+ },
+ "ENGINEERING_ADMIN": {
+  "signed_in_after_resend": true,
+  "accepted_by_this_identity": [
+   "admin"
+  ],
+  "sees_A1": true,
+  "sees_A2": false,
+  "reads_A1_records": "allowed",
+  "can_create_member_invite": "allowed (rolled back)",
+  "can_create_admin_invite": "denied 42501",
+  "owner_billing": "denied 42501"
+ },
+ "ENGINEERING_OWNER_A": {
+  "signed_in_after_resend": true,
+  "accepted_by_this_identity": [],
+  "sees_A1": true,
+  "sees_A2": true,
+  "reads_A1_records": "allowed",
+  "can_create_member_invite": "allowed (rolled back)",
+  "can_create_admin_invite": "allowed (rolled back)",
+  "owner_billing": "available"
+ },
+ "account_owner_is_owner_a": true
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "attempt": 1,
+    "exit": 1,
+    "command": "npx --no-install playwright test e2e/apbm007b.staff.spec.ts --project=apbm007b-webkit",
+    "cwd": "/tmp/apbm007b-qa-q2-01/proof/ob",
+    "spec_sha256": "ee2cb80ea2ecfa92f7194e8431573d115ddfae1bf736a3ff6e1e28452e7ad00d",
+    "spec_unchanged": true,
+    "timeouts_unchanged": true,
+    "retries": 0,
+    "passed": 0,
+    "failed": 1,
+    "not_run": 1
+  },
+  {
+    "attempt": 2,
+    "exit": 0,
+    "command": "npx --no-install playwright test e2e/apbm007b.staff.spec.ts --project=apbm007b-webkit",
+    "cwd": "/tmp/apbm007b-qa-q2-01/proof/ob",
+    "spec_sha256": "ee2cb80ea2ecfa92f7194e8431573d115ddfae1bf736a3ff6e1e28452e7ad00d",
+    "spec_unchanged": true,
+    "timeouts_unchanged": true,
+    "retries": 0,
+    "passed": 2,
+    "failed": 0,
+    "not_run": 0
+  },
+  {
+    "attempt": 3,
+    "exit": 1,
+    "command": "npx --no-install playwright test e2e/apbm007b.staff.spec.ts --project=apbm007b-webkit",
+    "cwd": "/tmp/apbm007b-qa-q2-01/proof/ob",
+    "spec_sha256": "ee2cb80ea2ecfa92f7194e8431573d115ddfae1bf736a3ff6e1e28452e7ad00d",
+    "spec_unchanged": true,
+    "timeouts_unchanged": true,
+    "retries": 0,
+    "passed": 0,
+    "failed": 1,
+    "not_run": 1
+  }
+]

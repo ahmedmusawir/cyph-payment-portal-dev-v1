@@ -1,0 +1,369 @@
+{
+  "status": "Q4/02 COMPLETE \u2014 AWAITING ADJUDICATION",
+  "candidate_pair": {
+    "portal": "ba66534351368b4b67b9e61d6f0278866950c850",
+    "owedbook": "855e0ad2e22a37e633ab5a55b8459e9bcc6bd871"
+  },
+  "plan_sha256": "c06196aa44ab3cee181e101a175106a96b7f24e1e941f5754aa0bd38124bbdbb",
+  "entries": [
+    {
+      "AC": "AC-001",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Fresh existing-role API131/131, fresh-role40/40 and final actual-JWT48/48; expected reach derived from current ownership/memberships, active dates and billing clock.",
+      "evidence": [
+        "evidence/Q4/01/action_role_matrix.json",
+        "evidence/Q4/01/action_role_matrix_fresh.json",
+        "evidence/Q4/01/direct_jwt_boundaries_final.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-002",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, scoped",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Fresh0070 local two-connection/identity invariants and original-record paid re-add; unchanged transfer authority/history paths carried with original Q2pair and exact source hashes.",
+      "evidence": [
+        "evidence/Q4/01/local/sql_upgraded.txt",
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-003",
+      "executor_result": "PASS, scoped carry + new details/amount evidence",
+      "original_executor_result": "PASS",
+      "observation": "Fresh details probe and nine real AddStore confirms with independently precomputed4893c each. Earlier ordinary/activeAPA/money-boundary proofs carried only for source-identical math/payment paths; no new APA redemption assertion.",
+      "evidence": [
+        "evidence/Q4/02/loading_probes.json",
+        "evidence/Q4/02/browser_reproductions.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-004",
+      "executor_result": "PASS server/payment carry; acceptance-evidence failure retained",
+      "original_executor_result": "PASS server/payment; FAIL UI",
+      "observation": "All nine new confirmsHTTP200 and corresponding storesactivated. Third dedicatedWebKit repetition exhausted unchanged30s at final dashboard count assertion; no backend unpaid/late grant failure. Exact current timings and old activation bound retained for Friday adjudication.",
+      "evidence": [
+        "evidence/Q4/02/browser_reproductions.json",
+        "evidence/Q4/02/original_failure_bounds_followup.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-005",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Fresh actual declined additional payment and verified unpaid abandon/void: no new store or quantity, paid0; hosted3DS separately completed.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-006",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Fresh database concurrency/fencing proof, actual in-flight hard kill and real duplicate/redelivery: one paid invoice/store/member/quantity grant; outage receipt and duplicate leave state unchanged.",
+      "evidence": [
+        "evidence/Q4/01/local/sql_upgraded.txt",
+        "evidence/Q4/01/campaign/r06/CRASH_RESTART/qa-q4-s1-s1/result.json",
+        "evidence/Q4/01/final_real_redelivery.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-007",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Fresh fourteen selected deadline cases including real-time payment/void race; minute-job unpaid expiry without owner action; late attention and operator resume only after recorded owner reconfirmation. Both real crash scenarios; naturally paid/unactivated full second refund/proof closure. Interrupted old unpaid race is NOT RUN as paid race, retained void closure, replaced by fresh full-wait consent.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/campaign/r06/CRASH_RESTART/qa-q4-s1-s1/result.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-008",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, scoped",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Fresh provider quantities before/after actual paid adds, both crashes, removal next invoice and paid re-add. Historical unchanged last-store whole-account lifecycle carried explicitly.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-009",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, scoped",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Actual graduated recurring next invoice68700c, no removal credit/proration and active APA preservation. Unchanged first-store/cancel paths carried from Q2 with original pair; no new first-store activation claim.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-010",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, unchanged-path carry",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Invite send authority/no role grant carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-011",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, unchanged-path carry",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Exact recipient acceptance and original real-inbox observations carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-012",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, unchanged-path carry",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Explicit confirmation, wrong recipient/replay/expired/revoked negatives carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-013",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, unchanged-path carry",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Resend cooldown/deduplication and bounded exhaustion fixture carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-014",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, unchanged-path carry",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Atomic admin replacement and owner unchanged carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-015",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, unchanged-path carry",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Immediate old-JWT membership revocation including read-only account carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-016",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, unchanged-path carry",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Last-admin protection and operator restoration carried only for source-identical APIs/SQL. Changed staff UI freshly passed all3engines and five unchanged WebKit repetitions; original human observations remain attributed Q2, no Q4 mail claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/01/browser/ob_results.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-017",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Current independent role matrix:131+40 API checks, final48 direct JWT checks including new0070 privileged RPC denial. No DEV identity reused.",
+      "evidence": [
+        "evidence/Q4/01/action_role_matrix.json",
+        "evidence/Q4/01/action_role_matrix_fresh.json",
+        "evidence/Q4/01/direct_jwt_boundaries_final.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-018",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS with guard qualification",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Fresh removal schedule/current unchanged quantity, actual next invoice68700c and cutoff;50c allowed/49c refused. 5401/5400/5399/1seconds refused under stricter50c minimum; not isolated proof of independent90-minute rule. New local SQL checks complementary.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/local/sql_upgraded.txt",
+        "evidence/Q4/01/browser_final_serial_skips.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-019",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS with guard qualification",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Fresh undo50c/49c and actual rendered remove/undo;90-minute both sides blocked by minimum and separately qualified, stale period SQL negative.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/local/sql_upgraded.txt",
+        "evidence/Q4/01/browser_final_serial_skips.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-020",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, scoped",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Fresh reactivation authorization alone leaves removed/no access/quantity. Paid re-add restores original business ID and original claim through real owner owedbook_rows JWT. Only unchanged last-store/cancel code carried.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-021",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, scoped software + new procedure",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Six exact documented commands dry_run/planned; required inputs/Director approver/before/after/resume/possession present. Unchanged operator authority retained; changed activation/resume freshly exercised. Shared credential is not individual operator authentication.",
+      "evidence": [
+        "evidence/Q4/01/support_runbook_dry_runs.json",
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-022",
+      "executor_result": "SCOPED carry; final new buyer NOT RUN",
+      "original_executor_result": "PASS, scoped software + new procedure",
+      "observation": "Original server/SQL/history paths unchanged and carried with originalpair. New real-time seller fixture paid/authorized/cutoff, exactexistingbuyerhold prepared last. New buyer result: NOT RUN. Director copied link was not provided during the final optional input window (more than six minutes after the instruction sheet/request); no decline or approval inferred. Q402D8 authorizes finishing with this availability limitation. No baseline source fixture or F001 changed.",
+      "evidence": [
+        "evidence/Q4/02/transfer_live.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-023",
+      "executor_result": "SCOPED carry; final new buyer NOT RUN",
+      "original_executor_result": "PASS, scoped software + new procedure",
+      "observation": "Original server/SQL/history paths unchanged and carried with originalpair. New real-time seller fixture paid/authorized/cutoff, exactexistingbuyerhold prepared last. New buyer result: NOT RUN. Director copied link was not provided during the final optional input window (more than six minutes after the instruction sheet/request); no decline or approval inferred. Q402D8 authorizes finishing with this availability limitation. No baseline source fixture or F001 changed.",
+      "evidence": [
+        "evidence/Q4/02/transfer_live.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-024",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, scoped software + new procedure",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. New owner/admin commands dry-run and all required procedure fields; source-identical recovery/audit failure/resume tests carried with original pair. No new individual-authentication assertion.",
+      "evidence": [
+        "evidence/Q4/01/support_runbook_dry_runs.json",
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-025",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, scoped",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. New deadline/no-unproven-grant privilege and live cases freshly tested; source-identical renewal grace/read-only/recovery software and real provider-clock timeline carried, original limitations preserved.",
+      "evidence": [
+        "evidence/Q4/01/live_campaign.json",
+        "evidence/Q4/01/direct_jwt_boundaries_final.json",
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-026",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, unchanged-path carry",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Notice dispatch/content source identical. Q2 actual provider receipts and separate Tony manual inbox observations retained; UTC-only deadline remains Director backlog. No new Q4 inbox/automated access claim.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-027",
+      "executor_result": "CARRIED \u2014 unchanged paths, scoped",
+      "original_executor_result": "PASS, unchanged-path carry",
+      "observation": "Q4/01 independently tested pair 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d / 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d. Exact unchanged-source proof and original evidence hashes in carry_forward_provenance.json. Policy/behavior evidence carried, not a claim live fixture counts or sessions are frozen. Unchanged notice idempotency/recovery/local timeout/backoff/lease scenarios retained with original limits. Local fault injection does not prove permanent provider outage/native retry.",
+      "evidence": [
+        "evidence/Q4/01/carry_forward_provenance.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-028",
+      "executor_result": "MIXED \u2014 repaired forms PASS; timing failure retained",
+      "original_executor_result": "FAIL",
+      "observation": "Selected15/15 normal-click loading probes and18/18 real password/link/change/cross-appsignout checks passed across3engines. Staff3runs6/6; O1fivealone+2fullorder all14checksPASS. UnchangedAddStoreWebKit5runs4PASS/1FAIL, Chromium/FirefoxPASS; fullorder8/8each. One30s finaldashboardcount failure and its2serialskips retained; those two assertions passed in otherfreshrepetitions. GeneratedAuthlinks prove realtoken/browserflow, notinboxdelivery. Original authcauseunproven: Authaudit tableempty, no QAledgerrevocation then. U1\u2013U3 remainDirectoraccepted, notQAcertified.",
+      "evidence": [
+        "evidence/Q4/02/loading_probes.json",
+        "evidence/Q4/02/loading_probes_profile_followup.json",
+        "evidence/Q4/02/signin_regression.json",
+        "evidence/Q4/02/staff_repetitions.json",
+        "evidence/Q4/02/browser_reproductions.json",
+        "evidence/Q4/02/original_failure_bounds_followup.json"
+      ]
+    },
+    {
+      "AC": "AC-029",
+      "executor_result": "PASS fresh ledger identity; migration proof carried",
+      "original_executor_result": "PASS",
+      "observation": "SCRATCHstill70, full filename/checksum equality verifiedread-only. No migration/DEV access thisround. All70migrations unchanged; Q4/01fresh+upgrade158/158 and preservationdigests carried at originalpair.",
+      "evidence": [
+        "evidence/Q4/02/entry/runtime_and_ledger.json",
+        "evidence/Q4/02/carry_forward_provenance.json"
+      ]
+    },
+    {
+      "AC": "AC-030",
+      "executor_result": "MIXED \u2014 repaired forms PASS; timing failure retained",
+      "original_executor_result": "FAIL",
+      "observation": "Selected15/15 normal-click loading probes and18/18 real password/link/change/cross-appsignout checks passed across3engines. Staff3runs6/6; O1fivealone+2fullorder all14checksPASS. UnchangedAddStoreWebKit5runs4PASS/1FAIL, Chromium/FirefoxPASS; fullorder8/8each. One30s finaldashboardcount failure and its2serialskips retained; those two assertions passed in otherfreshrepetitions. GeneratedAuthlinks prove realtoken/browserflow, notinboxdelivery. Original authcauseunproven: Authaudit tableempty, no QAledgerrevocation then. U1\u2013U3 remainDirectoraccepted, notQAcertified.",
+      "evidence": [
+        "evidence/Q4/02/loading_probes.json",
+        "evidence/Q4/02/loading_probes_profile_followup.json",
+        "evidence/Q4/02/signin_regression.json",
+        "evidence/Q4/02/staff_repetitions.json",
+        "evidence/Q4/02/browser_reproductions.json",
+        "evidence/Q4/02/original_failure_bounds_followup.json"
+      ]
+    },
+    {
+      "AC": "AC-031",
+      "executor_result": "PASS new production bundles",
+      "original_executor_result": "PASS, product bundle lane",
+      "observation": "Newbuild23pattern poison/cleancontrolsPASS; exactsingleOwedBookauth-js.generateLinkexception only. Actual current/retired privatevalues scanned, no new0070privilegednames. Private HAR/diagnostics0600fromcreation and neverexported; processprivacy is separate fromproductbundleAC.",
+      "evidence": [
+        "evidence/Q4/02/local/bundle_scan.json",
+        "evidence/Q4/02/local/actual_private_values_final.json",
+        "evidence/Q4/02/privacy_modes_final.json"
+      ]
+    }
+  ],
+  "last_buyer_result": {
+    "result": "NOT RUN",
+    "reason": "Director copied link was not provided during the final optional input window (more than six minutes after the instruction sheet/request); no decline or approval inferred. Q402D8 authorizes finishing with this availability limitation.",
+    "human_observation": "No new Director inbox observation or copied-link verification recorded",
+    "no_buyer_payment": true,
+    "retention": "Fresh paid seller source, history rows and buyer-reserved transfer retained; no cancellation/refund/cleanup",
+    "recorded_at": "2026-11-18T07:04:14.551Z"
+  },
+  "GateD": "NOT RUN: permanent nativeHTTPS retry/outage,deployed revision/scheduler/Auth/security/rollback; localCLI/adminAuthlinks are not deployed/inboxproof",
+  "certificate": "Not issued; Friday owns adjudication/verdict/retention"
+}

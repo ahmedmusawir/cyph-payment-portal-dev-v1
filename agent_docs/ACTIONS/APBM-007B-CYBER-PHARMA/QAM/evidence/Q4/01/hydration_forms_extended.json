@@ -1,0 +1,188 @@
+[
+  {
+    "engine": "chromium",
+    "app": "ob",
+    "fixture": "Synthetic typed values before delayed production JS released; no credential, Auth or email effect",
+    "before": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": "qa-link-hydration@proof.invalid"
+    },
+    "after": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": ""
+    },
+    "sign_in_fields_preserved": true,
+    "link_field_preserved": false,
+    "password_signin_disabled_despite_typed_values": false,
+    "password_before_show_toggle": "qa-hydration-value",
+    "password_after_show_toggle": "qa-hydration-value",
+    "password_show_toggle_preserves_typed_value": true,
+    "link_submit_disabled_despite_typed_value": true,
+    "submits": [
+      {
+        "lane": "intercepted browser-only diagnostic; no delivery",
+        "body": {
+          "email": ""
+        }
+      }
+    ],
+    "link_after_mocked_diagnostic": ""
+  },
+  {
+    "engine": "chromium",
+    "app": "pp",
+    "fixture": "Synthetic typed values before delayed production JS released; no credential, Auth or email effect",
+    "before": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": "qa-link-hydration@proof.invalid"
+    },
+    "after": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": "qa-link-hydration@proof.invalid"
+    },
+    "sign_in_fields_preserved": true,
+    "link_field_preserved": true,
+    "password_signin_disabled_despite_typed_values": true,
+    "password_before_show_toggle": "qa-hydration-value",
+    "password_after_show_toggle": "",
+    "password_show_toggle_preserves_typed_value": false,
+    "link_submit_disabled_despite_typed_value": true,
+    "submits": [
+      {
+        "lane": "intercepted browser-only diagnostic; no delivery",
+        "body": {
+          "email": ""
+        }
+      }
+    ],
+    "link_after_mocked_diagnostic": ""
+  },
+  {
+    "engine": "firefox",
+    "app": "ob",
+    "fixture": "Synthetic typed values before delayed production JS released; no credential, Auth or email effect",
+    "before": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": "qa-link-hydration@proof.invalid"
+    },
+    "after": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": ""
+    },
+    "sign_in_fields_preserved": true,
+    "link_field_preserved": false,
+    "password_signin_disabled_despite_typed_values": false,
+    "password_before_show_toggle": "qa-hydration-value",
+    "password_after_show_toggle": "qa-hydration-value",
+    "password_show_toggle_preserves_typed_value": true,
+    "link_submit_disabled_despite_typed_value": true,
+    "submits": [
+      {
+        "lane": "intercepted browser-only diagnostic; no delivery",
+        "body": {
+          "email": ""
+        }
+      }
+    ],
+    "link_after_mocked_diagnostic": ""
+  },
+  {
+    "engine": "firefox",
+    "app": "pp",
+    "fixture": "Synthetic typed values before delayed production JS released; no credential, Auth or email effect",
+    "before": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": "qa-link-hydration@proof.invalid"
+    },
+    "after": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": "qa-link-hydration@proof.invalid"
+    },
+    "sign_in_fields_preserved": true,
+    "link_field_preserved": true,
+    "password_signin_disabled_despite_typed_values": true,
+    "password_before_show_toggle": "qa-hydration-value",
+    "password_after_show_toggle": "",
+    "password_show_toggle_preserves_typed_value": false,
+    "link_submit_disabled_despite_typed_value": true,
+    "submits": [
+      {
+        "lane": "intercepted browser-only diagnostic; no delivery",
+        "body": {
+          "email": ""
+        }
+      }
+    ],
+    "link_after_mocked_diagnostic": ""
+  },
+  {
+    "engine": "webkit",
+    "app": "ob",
+    "fixture": "Synthetic typed values before delayed production JS released; no credential, Auth or email effect",
+    "before": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": "qa-link-hydration@proof.invalid"
+    },
+    "after": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": ""
+    },
+    "sign_in_fields_preserved": true,
+    "link_field_preserved": false,
+    "password_signin_disabled_despite_typed_values": false,
+    "password_before_show_toggle": "qa-hydration-value",
+    "password_after_show_toggle": "qa-hydration-value",
+    "password_show_toggle_preserves_typed_value": true,
+    "link_submit_disabled_despite_typed_value": true,
+    "submits": [
+      {
+        "lane": "intercepted browser-only diagnostic; no delivery",
+        "body": {
+          "email": ""
+        }
+      }
+    ],
+    "link_after_mocked_diagnostic": ""
+  },
+  {
+    "engine": "webkit",
+    "app": "pp",
+    "fixture": "Synthetic typed values before delayed production JS released; no credential, Auth or email effect",
+    "before": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": "qa-link-hydration@proof.invalid"
+    },
+    "after": {
+      "email": "qa-hydration@proof.invalid",
+      "password": "qa-hydration-value",
+      "link": "qa-link-hydration@proof.invalid"
+    },
+    "sign_in_fields_preserved": true,
+    "link_field_preserved": true,
+    "password_signin_disabled_despite_typed_values": true,
+    "password_before_show_toggle": "qa-hydration-value",
+    "password_after_show_toggle": "",
+    "password_show_toggle_preserves_typed_value": false,
+    "link_submit_disabled_despite_typed_value": true,
+    "submits": [
+      {
+        "lane": "intercepted browser-only diagnostic; no delivery",
+        "body": {
+          "email": ""
+        }
+      }
+    ],
+    "link_after_mocked_diagnostic": ""
+  }
+]

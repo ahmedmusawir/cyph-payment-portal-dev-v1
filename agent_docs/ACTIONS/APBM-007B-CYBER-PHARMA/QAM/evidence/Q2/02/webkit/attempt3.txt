@@ -1,0 +1,32 @@
+
+Running 2 tests using 1 worker
+
+  ✘  1 [apbm007b-webkit] › e2e/apbm007b.staff.spec.ts:23:5 › owner invites a member (guarded send), sees it pending, revokes it (30.1s)
+  -  2 [apbm007b-webkit] › e2e/apbm007b.staff.spec.ts:37:5 › /invitations lists only invitations addressed to the signed-in person; viewing grants nothing
+
+
+  1) [apbm007b-webkit] › e2e/apbm007b.staff.spec.ts:23:5 › owner invites a member (guarded send), sees it pending, revokes it 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: page.waitForURL: Test timeout of 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      15 |   await page.getByPlaceholder("Please Enter password").fill(cast!.password);
+      16 |   await page.getByRole("button", { name: /log ?in|sign in/i }).first().click();
+    > 17 |   await page.waitForURL((u) => !u.pathname.startsWith("/auth"), { timeout: 30000 });
+         |              ^
+      18 | }
+      19 |
+      20 | test.describe.configure({ mode: "serial" });
+        at signIn (/tmp/apbm007b-qa-q2-01/proof/ob/e2e/apbm007b.staff.spec.ts:17:14)
+        at /tmp/apbm007b-qa-q2-01/proof/ob/e2e/apbm007b.staff.spec.ts:24:3
+
+    Error Context: test-results/apbm007b.staff-owner-invit-33ff1--sees-it-pending-revokes-it-apbm007b-webkit/error-context.md
+
+  1 failed
+    [apbm007b-webkit] › e2e/apbm007b.staff.spec.ts:23:5 › owner invites a member (guarded send), sees it pending, revokes it 
+  1 did not run
+

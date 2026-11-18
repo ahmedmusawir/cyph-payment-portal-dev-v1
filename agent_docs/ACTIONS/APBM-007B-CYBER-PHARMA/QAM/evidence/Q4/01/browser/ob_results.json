@@ -1,0 +1,130 @@
+[
+  {
+    "app": "ob",
+    "label": "webkit-1",
+    "exit": 0,
+    "passed": 2,
+    "failed": 0,
+    "not_run": 0,
+    "spec_sha256": "ee2cb80ea2ecfa92f7194e8431573d115ddfae1bf736a3ff6e1e28452e7ad00d",
+    "unchanged": true,
+    "retries": 0,
+    "timeouts_unchanged": true,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.staff.spec.ts",
+      "--project=apbm007b-webkit"
+    ],
+    "guard": "All synthetic unallowlisted recipients blocked, no mail"
+  },
+  {
+    "app": "ob",
+    "label": "webkit-2",
+    "exit": 0,
+    "passed": 2,
+    "failed": 0,
+    "not_run": 0,
+    "spec_sha256": "ee2cb80ea2ecfa92f7194e8431573d115ddfae1bf736a3ff6e1e28452e7ad00d",
+    "unchanged": true,
+    "retries": 0,
+    "timeouts_unchanged": true,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.staff.spec.ts",
+      "--project=apbm007b-webkit"
+    ],
+    "guard": "All synthetic unallowlisted recipients blocked, no mail"
+  },
+  {
+    "app": "ob",
+    "label": "webkit-3",
+    "exit": 0,
+    "passed": 2,
+    "failed": 0,
+    "not_run": 0,
+    "spec_sha256": "ee2cb80ea2ecfa92f7194e8431573d115ddfae1bf736a3ff6e1e28452e7ad00d",
+    "unchanged": true,
+    "retries": 0,
+    "timeouts_unchanged": true,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.staff.spec.ts",
+      "--project=apbm007b-webkit"
+    ],
+    "guard": "All synthetic unallowlisted recipients blocked, no mail"
+  },
+  {
+    "app": "ob",
+    "label": "webkit-4",
+    "exit": 0,
+    "passed": 2,
+    "failed": 0,
+    "not_run": 0,
+    "spec_sha256": "ee2cb80ea2ecfa92f7194e8431573d115ddfae1bf736a3ff6e1e28452e7ad00d",
+    "unchanged": true,
+    "retries": 0,
+    "timeouts_unchanged": true,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.staff.spec.ts",
+      "--project=apbm007b-webkit"
+    ],
+    "guard": "All synthetic unallowlisted recipients blocked, no mail"
+  },
+  {
+    "app": "ob",
+    "label": "webkit-5",
+    "exit": 0,
+    "passed": 2,
+    "failed": 0,
+    "not_run": 0,
+    "spec_sha256": "ee2cb80ea2ecfa92f7194e8431573d115ddfae1bf736a3ff6e1e28452e7ad00d",
+    "unchanged": true,
+    "retries": 0,
+    "timeouts_unchanged": true,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.staff.spec.ts",
+      "--project=apbm007b-webkit"
+    ],
+    "guard": "All synthetic unallowlisted recipients blocked, no mail"
+  },
+  {
+    "app": "ob",
+    "label": "all-engines",
+    "exit": 0,
+    "passed": 6,
+    "failed": 0,
+    "not_run": 0,
+    "spec_sha256": "ee2cb80ea2ecfa92f7194e8431573d115ddfae1bf736a3ff6e1e28452e7ad00d",
+    "unchanged": true,
+    "retries": 0,
+    "timeouts_unchanged": true,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.staff.spec.ts",
+      "--project=apbm007b",
+      "--project=apbm007b-firefox",
+      "--project=apbm007b-webkit"
+    ],
+    "guard": "All synthetic unallowlisted recipients blocked, no mail"
+  }
+]

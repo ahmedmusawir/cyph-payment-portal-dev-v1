@@ -1,0 +1,97 @@
+{
+  "command": "post",
+  "projectRef": "yrsuwikjnbmvpznrgydb",
+  "at": "2026-11-17T05:21:33.581Z",
+  "inventory_equals_manifest": true,
+  "inventory_count": 69,
+  "transaction_read_only": "on",
+  "ledger_count": 69,
+  "ledger_is_unchanged_prefix": true,
+  "ledger_last": "0069_007b_reactivation_transfer_registration.sql",
+  "preservation": {
+    "businesses": {
+      "count": 9,
+      "ids_sha256": "32f98f1b9be2fc4d68533ea75e335a7b81b1d44f8f9052df10b72b4c24a0fb74"
+    },
+    "accounts": {
+      "count": 7,
+      "id_owner_sha256": "4054f24713b573d15d19eec86f89314a746f8c65172e6863ecd7bce4566f68e2"
+    },
+    "user_businesses.business_id": {
+      "rows": 12,
+      "per_key_sha256": "ee156ce75ac2abf11e1eddb24c5a39bdeee0c19f738b7dd7673a97532d1c7e49"
+    },
+    "user_data.business_id": {
+      "rows": 250,
+      "per_key_sha256": "285321651ccb003f810e716d11c389285a00f3e9f4561c857d32a098fa38840f"
+    },
+    "report_files.business_id": {
+      "rows": 0,
+      "per_key_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit_logs.business_id": {
+      "rows": 1814,
+      "per_key_sha256": "f2c61fa7a9c5f95b3d4577914a2919d98eb7fea12e6fae7efa9776fd9d1b651b"
+    },
+    "pending_registrations.business_id": {
+      "rows": 0,
+      "per_key_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "checkout_operations.business_id": {
+      "rows": 10,
+      "per_key_sha256": "b4f4ef4d75b6f7f4837f2c8526a74b2194c44601a8254b6d3e3bb34c7dac54da"
+    },
+    "businesses.account_id": {
+      "rows": 9,
+      "per_key_sha256": "c0f5ffc9cb08fd57fe23179cd3f97fb285795b88d7e74302b256e52a92d9efb0"
+    },
+    "subscriptions.account_id": {
+      "rows": 7,
+      "per_key_sha256": "df1626c7224ce5c52c26e83e3fb4d80251a621d796ba0a06e35fd9d575e179a5"
+    },
+    "billing_customers.account_id": {
+      "rows": 4,
+      "per_key_sha256": "9bca7004524bc94801368d612f591910618b4584858b2b517f00e9f9322ab3c3"
+    },
+    "notification_operations.account_id": {
+      "rows": 4,
+      "per_key_sha256": "84eac259b3cc2eec72665d5100e86efc31bc6c4c75e879b3ad389334fa3f2e69"
+    }
+  },
+  "ledger_69_equals_manifest": true,
+  "deployment_identity": [
+    "yrsuwikjnbmvpznrgydb"
+  ],
+  "test_project_ref_constant": true,
+  "enabled_test_contexts": 0,
+  "billing_now_is_real_time": true,
+  "tables_without_rls": [],
+  "new_tables_with_anon_or_authenticated_privilege": [],
+  "security_definer_without_pinned_search_path": [],
+  "compat_007a_functions_present": {
+    "my_business_ids": 1,
+    "account_access_state": 1,
+    "owner_billing_overview": 1,
+    "provision_paid_registration": 1,
+    "owedbook_rows": 1,
+    "owedbook_summary": 1
+  },
+  "businesses_without_identity": 0,
+  "identities": 9,
+  "distinct_business_npis": 9,
+  "preservation_equal": {
+    "businesses": true,
+    "accounts": true,
+    "user_businesses.business_id": true,
+    "user_data.business_id": true,
+    "report_files.business_id": true,
+    "audit_logs.business_id": false,
+    "pending_registrations.business_id": true,
+    "checkout_operations.business_id": true,
+    "businesses.account_id": true,
+    "subscriptions.account_id": true,
+    "billing_customers.account_id": true,
+    "notification_operations.account_id": true
+  },
+  "test_context_enable_on_dev": "refused 42501"
+}

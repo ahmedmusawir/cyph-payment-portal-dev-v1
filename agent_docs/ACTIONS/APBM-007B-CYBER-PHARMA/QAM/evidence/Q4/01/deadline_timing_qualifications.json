@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-18T03:51:13.740026+00:00",
+  "source": "deadline_independent_final_audit.json",
+  "real_time_case": {
+    "name": "real_paid_void_race_final",
+    "server_created_at": "2026-11-18T03:19:56.205744+00:00",
+    "original_deadline": "2026-11-18T03:49:56.205744+00:00",
+    "consent_window_ms": 1800000,
+    "actual_race_launch_elapsed_ms": 1802121,
+    "full_server_consent_wait_proven": true
+  },
+  "clock_rows_qualification": "created_at is a wall-clock storage timestamp and is NOT the logical provider billing clock. server_consent_window_ms and race_launch_elapsed_since_server_creation_ms apply to real-time rows only; simulated-clock timing is established by the recorded frozen provider time/advances and stored deadline, not wall-clock created_at.",
+  "race_scope": "Actual provider pay and authenticated expiry minute-job launched concurrently; payment won before any provider void intent. Four durable intents observed (invoice_create,item_create,finalize,pay), no provider void request. Result proves late-payment/expiry-worker convergence to attention, not simultaneous successful payment and void.",
+  "wait_measurement": "Raw race.actual_wait_ms starts after the confirm HTTP/provider round trip; it is shorter than the full original server consent interval. No original timestamp or deadline edited."
+}

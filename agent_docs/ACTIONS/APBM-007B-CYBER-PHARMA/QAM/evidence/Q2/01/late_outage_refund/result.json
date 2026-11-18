@@ -1,0 +1,55 @@
+{
+  "scenario": "late paid during owned runtime/listener outage, full-refund close",
+  "delivery_lane": "real sandbox events / Stripe CLI provider resend",
+  "steps": [
+    {
+      "step": "expected-before-action",
+      "at": "2026-11-17T08:47:57.877Z",
+      "period_start": 1797495569,
+      "period_end": 1800173969,
+      "provider_clock_now": 1798111169,
+      "expected_cents": 3774,
+      "late_expected": "attention; no activation",
+      "quantity_before": 4
+    },
+    {
+      "step": "pending",
+      "at": "2026-11-17T08:48:11.616Z",
+      "operation_id": "ecd48478-6721-415f-9387-836d0331a64e",
+      "invoice_id": "in_1Uci3dGnEQDyu3RRKAP7VnOd",
+      "state": "payment_pending",
+      "payment_deadline": "2026-12-24T11:49:29+00:00"
+    },
+    {
+      "step": "owned-server-crash",
+      "at": "2026-11-17T08:48:11.670Z",
+      "process": "{\"stopped\":\"pp\",\"pid\":3209773,\"signal\":\"SIGKILL\",\"at\":\"2026-11-17T08:48:11.657Z\"}"
+    },
+    {
+      "step": "owned-listener-outage",
+      "at": "2026-11-17T08:48:11.672Z",
+      "pid": 3207218
+    },
+    {
+      "step": "paid-while-down",
+      "at": "2026-11-17T08:48:23.119Z",
+      "invoice_status": "paid",
+      "amount_paid": 3774
+    },
+    {
+      "step": "listener-restarted",
+      "at": "2026-11-17T08:48:27.019Z",
+      "owned": true,
+      "private_session_secret_refreshed": true
+    },
+    {
+      "step": "server-restarted",
+      "at": "2026-11-17T08:48:27.107Z",
+      "process": "{\"started\":{\"ob\":3209772,\"pp\":3263086},\"mail\":\"live (private allowlist in memory)\"}"
+    }
+  ],
+  "operation_id": "ecd48478-6721-415f-9387-836d0331a64e",
+  "result": "FAIL: late paid operation activated, expected attention",
+  "refund_subcase": "NOT RUN: fixture activated unexpectedly; no refund authority extended to this state",
+  "finding": "F-Q2-001"
+}

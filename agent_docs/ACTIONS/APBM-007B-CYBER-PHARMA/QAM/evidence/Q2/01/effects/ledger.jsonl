@@ -1,0 +1,1145 @@
+{"seq":1,"at":"2026-11-17T08:11:37.556Z","operation":"PF00 sandbox account read","charges":{"reads":1},"cleanup":false}
+{"seq":2,"at":"2026-11-17T08:11:38.204Z","operation":"PF00 checkout setup create","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":2,"at":"2026-11-17T08:11:38.612Z","result":{"ok":true,"session_id":"cs_test_c0RXNNRSSrqkDFRmniGcXOpgzUA6cVf3eeGoLpu73DRCVFUU7BQCJm7lgw"}}
+{"seq":3,"at":"2026-11-17T08:11:38.612Z","operation":"PF00 checkout setup expire","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":3,"at":"2026-11-17T08:11:38.978Z","result":{"ok":true}}
+{"seq":4,"at":"2026-11-17T08:11:39.980Z","operation":"PF00 provider event read","charges":{"reads":1},"cleanup":false}
+{"seq":5,"at":"2026-11-17T08:11:41.355Z","operation":"PF00 durable event receipt read","charges":{"reads":1},"cleanup":false}
+{"seq":6,"at":"2026-11-17T08:12:59.741Z","operation":"cast Auth metadata read","charges":{"reads":1},"cleanup":false}
+{"seq":7,"at":"2026-11-17T08:13:00.249Z","operation":"create SCRATCH QA identity OWNER_A","charges":{"new_identities":1},"cleanup":false}
+{"seq":7,"at":"2026-11-17T08:13:00.508Z","result":{"ok":true}}
+{"seq":8,"at":"2026-11-17T08:13:00.509Z","operation":"create SCRATCH QA identity OWNER_B","charges":{"new_identities":1},"cleanup":false}
+{"seq":8,"at":"2026-11-17T08:13:00.668Z","result":{"ok":true}}
+{"seq":9,"at":"2026-11-17T08:13:00.668Z","operation":"create SCRATCH QA identity STORE_ADMIN","charges":{"new_identities":1},"cleanup":false}
+{"seq":9,"at":"2026-11-17T08:13:00.825Z","result":{"ok":true}}
+{"seq":10,"at":"2026-11-17T08:13:00.826Z","operation":"create SCRATCH QA identity MEMBER","charges":{"new_identities":1},"cleanup":false}
+{"seq":10,"at":"2026-11-17T08:13:00.978Z","result":{"ok":true}}
+{"seq":11,"at":"2026-11-17T08:13:00.979Z","operation":"create SCRATCH QA identity FOREIGN_OWNER","charges":{"new_identities":1},"cleanup":false}
+{"seq":11,"at":"2026-11-17T08:13:01.131Z","result":{"ok":true}}
+{"seq":12,"at":"2026-11-17T08:13:01.131Z","operation":"create SCRATCH QA identity EXISTING_INVITEE","charges":{"new_identities":1},"cleanup":false}
+{"seq":12,"at":"2026-11-17T08:13:01.275Z","result":{"ok":true}}
+{"seq":13,"at":"2026-11-17T08:19:29.314Z","operation":"o1:qa-20261117-c414: testClocks.create","charges":{"test_clocks":1,"provider_mutations":1},"cleanup":false}
+{"seq":13,"at":"2026-11-17T08:19:31.936Z","result":{"ok":true,"request_id":"req_VUtyn0LBMQ4g9B","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"ready","frozen_time":1794903569}}}
+{"seq":14,"at":"2026-11-17T08:19:31.937Z","operation":"o1:qa-20261117-c414: A customers.create on clock (no email)","charges":{"customers":1,"provider_mutations":1},"cleanup":false}
+{"seq":14,"at":"2026-11-17T08:19:32.332Z","result":{"ok":true,"request_id":"req_nSdHyNcLQ0ec8w","object":{"id":"cus_VdzbFhbYulqAOe","object":"customer"}}}
+{"seq":15,"at":"2026-11-17T08:19:32.332Z","operation":"o1:qa-20261117-c414: A attach visa","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":15,"at":"2026-11-17T08:19:33.073Z","result":{"ok":true,"request_id":"req_2p6DdHff5b8TFq","object":{"id":"pm_1Uchc0GnEQDyu3RRlSkM6Xel","object":"payment_method","customer":"cus_VdzbFhbYulqAOe"}}}
+{"seq":16,"at":"2026-11-17T08:19:33.073Z","operation":"o1:qa-20261117-c414: A default visa","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":16,"at":"2026-11-17T08:19:33.463Z","result":{"ok":true,"request_id":"req_xBfA6cNttWV9gO","object":{"id":"cus_VdzbFhbYulqAOe","object":"customer"}}}
+{"seq":17,"at":"2026-11-17T08:19:33.464Z","operation":"o1:qa-20261117-c414: A subscriptions.create","charges":{"subscriptions":1,"attempted_cents":14800,"provider_mutations":1},"cleanup":false}
+{"seq":17,"at":"2026-11-17T08:19:35.711Z","result":{"ok":true,"request_id":"req_QwJlSQUSzH91sw","object":{"id":"sub_1Uchc1GnEQDyu3RRyZ7Lns7W","object":"subscription","status":"active","customer":"cus_VdzbFhbYulqAOe","quantity":2}}}
+{"seq":18,"at":"2026-11-17T08:19:38.152Z","operation":"o1:qa-20261117-c414: B customers.create on clock (no email)","charges":{"customers":1,"provider_mutations":1},"cleanup":false}
+{"seq":18,"at":"2026-11-17T08:19:38.528Z","result":{"ok":true,"request_id":"req_iHow6lhMDnLxYM","object":{"id":"cus_VdzbotJE2rHxEt","object":"customer"}}}
+{"seq":19,"at":"2026-11-17T08:19:38.528Z","operation":"o1:qa-20261117-c414: B attach visa","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":19,"at":"2026-11-17T08:19:39.198Z","result":{"ok":true,"request_id":"req_ygmNygR2hl8Pku","object":{"id":"pm_1Uchc6GnEQDyu3RR9EJgXbxg","object":"payment_method","customer":"cus_VdzbotJE2rHxEt"}}}
+{"seq":20,"at":"2026-11-17T08:19:39.199Z","operation":"o1:qa-20261117-c414: B default visa","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":20,"at":"2026-11-17T08:19:39.565Z","result":{"ok":true,"request_id":"req_CXYLWyF1cdp2wl","object":{"id":"cus_VdzbotJE2rHxEt","object":"customer"}}}
+{"seq":21,"at":"2026-11-17T08:19:39.848Z","operation":"o1:qa-20261117-c414: promotionCodes.list","charges":{"reads":1},"cleanup":false}
+{"seq":21,"at":"2026-11-17T08:19:39.848Z","result":{"ok":true,"request_id":"req_hTUkooH8C9qETR","object":{"object":"list"}}}
+{"seq":22,"at":"2026-11-17T08:19:39.849Z","operation":"o1:qa-20261117-c414: B subscriptions.create","charges":{"subscriptions":1,"attempted_cents":8910,"provider_mutations":1},"cleanup":false}
+{"seq":22,"at":"2026-11-17T08:19:42.398Z","result":{"ok":true,"request_id":"req_We6Po5ewwnlYVq","object":{"id":"sub_1Uchc8GnEQDyu3RR4dPvjODp","object":"subscription","status":"active","customer":"cus_VdzbotJE2rHxEt","quantity":1}}}
+{"seq":23,"at":"2026-11-17T08:20:04.241Z","operation":"readonly DEV catalogue/ledger","charges":{"reads":5},"cleanup":false}
+{"seq":24,"at":"2026-11-17T08:20:11.699Z","operation":"readonly SCRATCH catalogue/ledger","charges":{"reads":5},"cleanup":false}
+{"seq":25,"at":"2026-11-17T08:21:40.087Z","operation":"Portal regression 3 tests x3 engines password signins","charges":{"sign_ins":9,"reads":60},"cleanup":false}
+{"seq":26,"at":"2026-11-17T08:24:15.156Z","operation":"Portal regression blocked Firefox/WebKit 3 tests x2 engines password signins","charges":{"sign_ins":6,"reads":60},"cleanup":false}
+{"seq":27,"at":"2026-11-17T08:24:52.414Z","operation":"o1:qa-20261117-c414: testClocks.advance mid","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":27,"at":"2026-11-17T08:24:52.991Z","result":{"ok":true,"request_id":"req_yu69x958zkLuio","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"advancing","frozen_time":1794903569}}}
+{"seq":28,"at":"2026-11-17T08:24:55.541Z","operation":"o1:qa-20261117-c414: testClocks.retrieve","charges":{"reads":1},"cleanup":false}
+{"seq":28,"at":"2026-11-17T08:24:55.541Z","result":{"ok":true,"request_id":"req_mrmcIFzTFour8w","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"ready","frozen_time":1796199569}}}
+{"seq":29,"at":"2026-11-17T08:24:55.766Z","operation":"campaign password sign-in A","charges":{"sign_ins":1},"cleanup":false}
+{"seq":30,"at":"2026-11-17T08:24:57.244Z","operation":"o1:qa-20261117-c414: A product Add Store at clock midpoint (invoice/item/finalize/pay, qty +1)","charges":{"pay_or_hosted":1,"attempted_cents":2450,"provider_mutations":5},"cleanup":false}
+{"seq":31,"at":"2026-11-17T08:25:05.740Z","operation":"role-matrix app password login OWNER_A","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":32,"at":"2026-11-17T08:25:06.003Z","operation":"role-matrix app password login OWNER_B","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":33,"at":"2026-11-17T08:25:06.221Z","operation":"role-matrix app password login STORE_ADMIN","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":34,"at":"2026-11-17T08:25:06.446Z","operation":"role-matrix app password login MEMBER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":35,"at":"2026-11-17T08:25:06.653Z","operation":"role-matrix app password login FOREIGN_OWNER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":36,"at":"2026-11-17T08:25:06.875Z","operation":"role-matrix app password login EXISTING_INVITEE","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":37,"at":"2026-11-17T08:25:07.085Z","operation":"role-matrix request OWNER_A operations","charges":{"reads":1},"cleanup":false}
+{"seq":38,"at":"2026-11-17T08:25:07.280Z","operation":"role-matrix request OWNER_A jobs","charges":{"reads":1},"cleanup":false}
+{"seq":39,"at":"2026-11-17T08:25:07.348Z","operation":"role-matrix request OWNER_A operator","charges":{"reads":1},"cleanup":false}
+{"seq":40,"at":"2026-11-17T08:25:07.421Z","operation":"role-matrix request OWNER_B operations","charges":{"reads":1},"cleanup":false}
+{"seq":41,"at":"2026-11-17T08:25:07.601Z","operation":"role-matrix request OWNER_B jobs","charges":{"reads":1},"cleanup":false}
+{"seq":42,"at":"2026-11-17T08:25:07.673Z","operation":"role-matrix request OWNER_B operator","charges":{"reads":1},"cleanup":false}
+{"seq":43,"at":"2026-11-17T08:25:07.743Z","operation":"role-matrix request OWNER_B foreign removal","charges":{"reads":1},"cleanup":false}
+{"seq":44,"at":"2026-11-17T08:25:07.822Z","operation":"role-matrix request OWNER_B foreign undo","charges":{"reads":1},"cleanup":false}
+{"seq":45,"at":"2026-11-17T08:25:08.448Z","operation":"role-matrix request STORE_ADMIN operations","charges":{"reads":1},"cleanup":false}
+{"seq":46,"at":"2026-11-17T08:25:08.666Z","operation":"role-matrix request STORE_ADMIN jobs","charges":{"reads":1},"cleanup":false}
+{"seq":47,"at":"2026-11-17T08:25:08.748Z","operation":"role-matrix request STORE_ADMIN operator","charges":{"reads":1},"cleanup":false}
+{"seq":30,"at":"2026-11-17T08:25:08.797Z","result":{"ok":true,"state":"activated"}}
+{"seq":48,"at":"2026-11-17T08:25:08.813Z","operation":"role-matrix request STORE_ADMIN quote","charges":{"reads":1},"cleanup":false}
+{"seq":49,"at":"2026-11-17T08:25:08.988Z","operation":"role-matrix request STORE_ADMIN foreign removal","charges":{"reads":1},"cleanup":false}
+{"seq":50,"at":"2026-11-17T08:25:09.168Z","operation":"role-matrix request STORE_ADMIN foreign undo","charges":{"reads":1},"cleanup":false}
+{"seq":51,"at":"2026-11-17T08:25:09.212Z","operation":"o1:qa-20261117-c414: A invoice","charges":{"reads":1},"cleanup":false}
+{"seq":51,"at":"2026-11-17T08:25:09.212Z","result":{"ok":true,"request_id":"req_xiJeDHIcBOm2of","object":{"id":"in_1UchhGGnEQDyu3RRUYfimn3W","object":"invoice","status":"paid","customer":"cus_VdzbFhbYulqAOe","amount_due":2450,"amount_paid":2450,"total":2450}}}
+{"seq":52,"at":"2026-11-17T08:25:09.214Z","operation":"campaign password sign-in B","charges":{"sign_ins":1},"cleanup":false}
+{"seq":53,"at":"2026-11-17T08:25:09.340Z","operation":"role-matrix request MEMBER operations","charges":{"reads":1},"cleanup":false}
+{"seq":54,"at":"2026-11-17T08:25:09.519Z","operation":"role-matrix request MEMBER jobs","charges":{"reads":1},"cleanup":false}
+{"seq":55,"at":"2026-11-17T08:25:09.584Z","operation":"role-matrix request MEMBER operator","charges":{"reads":1},"cleanup":false}
+{"seq":56,"at":"2026-11-17T08:25:09.644Z","operation":"role-matrix request MEMBER quote","charges":{"reads":1},"cleanup":false}
+{"seq":57,"at":"2026-11-17T08:25:09.840Z","operation":"role-matrix request MEMBER foreign removal","charges":{"reads":1},"cleanup":false}
+{"seq":58,"at":"2026-11-17T08:25:09.904Z","operation":"role-matrix request MEMBER foreign undo","charges":{"reads":1},"cleanup":false}
+{"seq":59,"at":"2026-11-17T08:25:10.078Z","operation":"role-matrix request FOREIGN_OWNER operations","charges":{"reads":1},"cleanup":false}
+{"seq":60,"at":"2026-11-17T08:25:10.265Z","operation":"role-matrix request FOREIGN_OWNER jobs","charges":{"reads":1},"cleanup":false}
+{"seq":61,"at":"2026-11-17T08:25:10.329Z","operation":"role-matrix request FOREIGN_OWNER operator","charges":{"reads":1},"cleanup":false}
+{"seq":62,"at":"2026-11-17T08:25:10.407Z","operation":"role-matrix request FOREIGN_OWNER foreign removal","charges":{"reads":1},"cleanup":false}
+{"seq":63,"at":"2026-11-17T08:25:10.590Z","operation":"role-matrix request FOREIGN_OWNER foreign undo","charges":{"reads":1},"cleanup":false}
+{"seq":64,"at":"2026-11-17T08:25:10.732Z","operation":"o1:qa-20261117-c414: B product Add Store at clock midpoint (invoice/item/finalize/pay, qty +1)","charges":{"pay_or_hosted":1,"attempted_cents":2450,"provider_mutations":5},"cleanup":false}
+{"seq":65,"at":"2026-11-17T08:25:10.771Z","operation":"role-matrix request EXISTING_INVITEE operations","charges":{"reads":1},"cleanup":false}
+{"seq":66,"at":"2026-11-17T08:25:10.953Z","operation":"role-matrix request EXISTING_INVITEE jobs","charges":{"reads":1},"cleanup":false}
+{"seq":67,"at":"2026-11-17T08:25:11.016Z","operation":"role-matrix request EXISTING_INVITEE operator","charges":{"reads":1},"cleanup":false}
+{"seq":68,"at":"2026-11-17T08:25:11.077Z","operation":"role-matrix request EXISTING_INVITEE quote","charges":{"reads":1},"cleanup":false}
+{"seq":69,"at":"2026-11-17T08:25:11.252Z","operation":"role-matrix request EXISTING_INVITEE foreign removal","charges":{"reads":1},"cleanup":false}
+{"seq":70,"at":"2026-11-17T08:25:11.443Z","operation":"role-matrix request EXISTING_INVITEE foreign undo","charges":{"reads":1},"cleanup":false}
+{"seq":71,"at":"2026-11-17T08:25:11.620Z","operation":"role-matrix request SIGNED_OUT operations","charges":{"reads":1},"cleanup":false}
+{"seq":72,"at":"2026-11-17T08:25:11.627Z","operation":"role-matrix request SIGNED_OUT jobs","charges":{"reads":1},"cleanup":false}
+{"seq":73,"at":"2026-11-17T08:25:11.633Z","operation":"role-matrix request SIGNED_OUT operator","charges":{"reads":1},"cleanup":false}
+{"seq":74,"at":"2026-11-17T08:25:11.639Z","operation":"role-matrix request SIGNED_OUT quote","charges":{"reads":1},"cleanup":false}
+{"seq":75,"at":"2026-11-17T08:25:11.644Z","operation":"role-matrix request SIGNED_OUT foreign removal","charges":{"reads":1},"cleanup":false}
+{"seq":76,"at":"2026-11-17T08:25:11.649Z","operation":"role-matrix request SIGNED_OUT foreign undo","charges":{"reads":1},"cleanup":false}
+{"seq":64,"at":"2026-11-17T08:25:29.267Z","result":{"ok":true,"state":"activated"}}
+{"seq":77,"at":"2026-11-17T08:25:29.681Z","operation":"o1:qa-20261117-c414: B invoice","charges":{"reads":1},"cleanup":false}
+{"seq":77,"at":"2026-11-17T08:25:29.682Z","result":{"ok":true,"request_id":"req_Oa3cbc7prxhYHr","object":{"id":"in_1UchhVGnEQDyu3RRiOVZLrvt","object":"invoice","status":"paid","customer":"cus_VdzbotJE2rHxEt","amount_due":2450,"amount_paid":2450,"total":2450}}}
+{"seq":78,"at":"2026-11-17T08:26:56.735Z","operation":"o1:qa-20261117-c414: A schedule removal of A2 (qty -1, no proration)","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":79,"at":"2026-11-17T08:26:56.736Z","operation":"campaign password sign-in A","charges":{"sign_ins":1},"cleanup":false}
+{"seq":78,"at":"2026-11-17T08:27:01.700Z","result":{"ok":true,"state":"completed"}}
+{"seq":80,"at":"2026-11-17T08:27:02.390Z","operation":"o1:qa-20261117-c414: A createPreview renewal","charges":{"reads":1},"cleanup":false}
+{"seq":80,"at":"2026-11-17T08:27:02.390Z","result":{"ok":true,"request_id":"req_oFS0rvu0m99Zx8","object":{"id":"upcoming_in_1UchjGGnEQDyu3RR3AnfWAjl","object":"invoice","status":"draft","customer":"cus_VdzbFhbYulqAOe","amount_due":14800,"amount_paid":0,"total":14800}}}
+{"seq":81,"at":"2026-11-17T08:27:04.569Z","operation":"o1:qa-20261117-c414: A attach failing card","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":81,"at":"2026-11-17T08:27:05.238Z","result":{"ok":true,"request_id":"req_5op35VoqC1Yi7l","object":{"id":"pm_1UchjIGnEQDyu3RRyjb6kmW6","object":"payment_method","customer":"cus_VdzbFhbYulqAOe"}}}
+{"seq":82,"at":"2026-11-17T08:27:05.238Z","operation":"o1:qa-20261117-c414: A default failing","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":82,"at":"2026-11-17T08:27:05.629Z","result":{"ok":true,"request_id":"req_blTvc9IQ9USdzM","object":{"id":"cus_VdzbFhbYulqAOe","object":"customer"}}}
+{"seq":83,"at":"2026-11-17T08:27:05.630Z","operation":"o1:qa-20261117-c414: PREDICTED automatic provider attempts on advance renewal: A renewal attempt 1 (14,800, fails) + B renewal (14,800, succeeds)","charges":{"attempted_cents":29600},"cleanup":false}
+{"seq":83,"at":"2026-11-17T08:27:05.630Z","result":{"ok":true,"kind":"prediction"}}
+{"seq":84,"at":"2026-11-17T08:27:05.630Z","operation":"o1:qa-20261117-c414: testClocks.advance renewal","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":84,"at":"2026-11-17T08:27:05.998Z","result":{"ok":true,"request_id":"req_2N3Qy4K4NzdWCn","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"advancing","frozen_time":1796199569}}}
+{"seq":85,"at":"2026-11-17T08:27:24.581Z","operation":"o1:qa-20261117-c414: testClocks.retrieve","charges":{"reads":1},"cleanup":false}
+{"seq":85,"at":"2026-11-17T08:27:24.581Z","result":{"ok":true,"request_id":"req_9wAanwioCsuYCU","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"ready","frozen_time":1797499169}}}
+{"seq":86,"at":"2026-11-17T08:27:26.130Z","operation":"role followup valid input OWNER_B removal","charges":{"reads":1},"cleanup":false}
+{"seq":87,"at":"2026-11-17T08:27:26.971Z","operation":"role followup valid input OWNER_B removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":88,"at":"2026-11-17T08:27:27.839Z","operation":"role followup valid input MEMBER removal","charges":{"reads":1},"cleanup":false}
+{"seq":89,"at":"2026-11-17T08:27:28.068Z","operation":"role followup valid input MEMBER removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":90,"at":"2026-11-17T08:27:28.252Z","operation":"role followup valid input FOREIGN_OWNER removal","charges":{"reads":1},"cleanup":false}
+{"seq":91,"at":"2026-11-17T08:27:28.464Z","operation":"role followup valid input FOREIGN_OWNER removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":92,"at":"2026-11-17T08:28:36.371Z","operation":"direct user password session OWNER_A","charges":{"sign_ins":1},"cleanup":false}
+{"seq":93,"at":"2026-11-17T08:28:37.043Z","operation":"direct role RLS reads OWNER_A","charges":{"reads":3},"cleanup":false}
+{"seq":94,"at":"2026-11-17T08:28:37.999Z","operation":"direct user password session OWNER_B","charges":{"sign_ins":1},"cleanup":false}
+{"seq":95,"at":"2026-11-17T08:28:38.252Z","operation":"direct role RLS reads OWNER_B","charges":{"reads":3},"cleanup":false}
+{"seq":96,"at":"2026-11-17T08:28:38.650Z","operation":"direct user password session STORE_ADMIN","charges":{"sign_ins":1},"cleanup":false}
+{"seq":97,"at":"2026-11-17T08:28:38.818Z","operation":"direct role RLS reads STORE_ADMIN","charges":{"reads":3},"cleanup":false}
+{"seq":98,"at":"2026-11-17T08:28:39.201Z","operation":"direct user password session MEMBER","charges":{"sign_ins":1},"cleanup":false}
+{"seq":99,"at":"2026-11-17T08:28:39.361Z","operation":"direct role RLS reads MEMBER","charges":{"reads":3},"cleanup":false}
+{"seq":100,"at":"2026-11-17T08:28:39.597Z","operation":"direct user password session FOREIGN_OWNER","charges":{"sign_ins":1},"cleanup":false}
+{"seq":101,"at":"2026-11-17T08:28:39.757Z","operation":"direct role RLS reads FOREIGN_OWNER","charges":{"reads":3},"cleanup":false}
+{"seq":102,"at":"2026-11-17T08:28:40.011Z","operation":"direct user password session EXISTING_INVITEE","charges":{"sign_ins":1},"cleanup":false}
+{"seq":103,"at":"2026-11-17T08:28:40.168Z","operation":"direct role RLS reads EXISTING_INVITEE","charges":{"reads":3},"cleanup":false}
+{"seq":104,"at":"2026-11-17T08:29:06.649Z","operation":"diagnose automatic event","charges":{"reads":3},"cleanup":false}
+{"seq":105,"at":"2026-11-17T08:30:15.058Z","operation":"o1:qa-20261117-c414: testClocks.retrieve","charges":{"reads":1},"cleanup":false}
+{"seq":105,"at":"2026-11-17T08:30:15.058Z","result":{"ok":true,"request_id":"req_EAkaAeKqdJrwDS","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"ready","frozen_time":1797499169}}}
+{"seq":106,"at":"2026-11-17T08:30:21.982Z","operation":"o1:qa-20261117-c414: email dispatch (Resend) renewal_payment_failed → OWNER_A controlled inbox","charges":{"email_attempts":1},"cleanup":false}
+{"seq":106,"at":"2026-11-17T08:30:21.982Z","result":{"ok":true,"kind":"pre-reservation"}}
+{"seq":107,"at":"2026-11-17T08:30:43.257Z","operation":"o1:qa-20261117-c414: PREDICTED automatic provider attempts on advance day2: A retry ~R+1.8d (fails)","charges":{"attempted_cents":14800},"cleanup":false}
+{"seq":107,"at":"2026-11-17T08:30:43.258Z","result":{"ok":true,"kind":"prediction"}}
+{"seq":108,"at":"2026-11-17T08:30:43.259Z","operation":"o1:qa-20261117-c414: testClocks.advance day2","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":108,"at":"2026-11-17T08:30:43.894Z","result":{"ok":true,"request_id":"req_tmBq6PI33mLS3q","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"advancing","frozen_time":1797499169}}}
+{"seq":109,"at":"2026-11-17T08:30:53.275Z","operation":"o1:qa-20261117-c414: testClocks.retrieve","charges":{"reads":1},"cleanup":false}
+{"seq":109,"at":"2026-11-17T08:30:53.275Z","result":{"ok":true,"request_id":"req_kqdgwkIOneTJIW","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"ready","frozen_time":1797671969}}}
+{"seq":110,"at":"2026-11-17T08:30:55.170Z","operation":"o1:qa-20261117-c414: PREDICTED automatic provider attempts on advance day5: A retry ~R+3.6d (fails)","charges":{"attempted_cents":14800},"cleanup":false}
+{"seq":110,"at":"2026-11-17T08:30:55.170Z","result":{"ok":true,"kind":"prediction"}}
+{"seq":111,"at":"2026-11-17T08:30:55.170Z","operation":"o1:qa-20261117-c414: testClocks.advance day5","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":111,"at":"2026-11-17T08:30:55.553Z","result":{"ok":true,"request_id":"req_KnvybTmkAHGaCv","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"advancing","frozen_time":1797671969}}}
+{"seq":112,"at":"2026-11-17T08:31:02.652Z","operation":"o1:qa-20261117-c414: testClocks.retrieve","charges":{"reads":1},"cleanup":false}
+{"seq":112,"at":"2026-11-17T08:31:02.653Z","result":{"ok":true,"request_id":"req_aFLOk8G8OlaplV","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"ready","frozen_time":1797938369}}}
+{"seq":113,"at":"2026-11-17T08:31:03.590Z","operation":"o1:qa-20261117-c414: email dispatch (Resend) renewal_read_only_warning → OWNER_A controlled inbox","charges":{"email_attempts":1},"cleanup":false}
+{"seq":113,"at":"2026-11-17T08:31:03.590Z","result":{"ok":true,"kind":"pre-reservation"}}
+{"seq":114,"at":"2026-11-17T08:31:05.985Z","operation":"o1:qa-20261117-c414: PREDICTED automatic provider attempts on advance day7: A retry ~R+5.4d (fails)","charges":{"attempted_cents":14800},"cleanup":false}
+{"seq":114,"at":"2026-11-17T08:31:05.985Z","result":{"ok":true,"kind":"prediction"}}
+{"seq":115,"at":"2026-11-17T08:31:05.985Z","operation":"o1:qa-20261117-c414: testClocks.advance day7","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":115,"at":"2026-11-17T08:31:06.350Z","result":{"ok":true,"request_id":"req_FUOr0HhWYCyazz","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"advancing","frozen_time":1797938369}}}
+{"seq":116,"at":"2026-11-17T08:31:13.445Z","operation":"o1:qa-20261117-c414: testClocks.retrieve","charges":{"reads":1},"cleanup":false}
+{"seq":116,"at":"2026-11-17T08:31:13.445Z","result":{"ok":true,"request_id":"req_72EXZDGCrBTRmw","object":{"id":"clock_1UchbzGnEQDyu3RRdTw6kZ0j","object":"test_helpers.test_clock","status":"ready","frozen_time":1798111169}}}
+{"seq":117,"at":"2026-11-17T08:31:15.198Z","operation":"campaign password sign-in A","charges":{"sign_ins":1},"cleanup":false}
+{"seq":118,"at":"2026-11-17T08:32:58.013Z","operation":"readonly rendered reused session OWNER_A","charges":{"reads":6},"cleanup":false}
+{"seq":119,"at":"2026-11-17T08:33:03.091Z","operation":"readonly rendered reused session MEMBER","charges":{"reads":6},"cleanup":false}
+{"seq":120,"at":"2026-11-17T08:33:43.694Z","operation":"OB guarded staff browser 2tests x3engines","charges":{"sign_ins":6,"reads":50},"cleanup":false}
+{"seq":121,"at":"2026-11-17T08:34:36.265Z","operation":"live invitation ownerB browser session","charges":{"sign_ins":1},"cleanup":false}
+{"seq":122,"at":"2026-11-17T08:34:45.528Z","operation":"INV:qa-20261117-c414: ownerB browser password sign-in","charges":{},"cleanup":false}
+{"seq":123,"at":"2026-11-17T08:34:45.529Z","operation":"INV:qa-20261117-c414: NEW_MEMBER: invitation (member) via OwedBook staff panel → new identity + sign-in link by SCRATCH Supabase Auth","charges":{"email_attempts":1,"new_identities":1},"cleanup":false}
+{"seq":123,"at":"2026-11-17T08:34:57.246Z","result":{"ok":true,"ui":"Invitation email sent."}}
+{"seq":124,"at":"2026-11-17T08:35:01.507Z","operation":"INV:qa-20261117-c414: ownerB browser password sign-in","charges":{},"cleanup":false}
+{"seq":125,"at":"2026-11-17T08:35:01.507Z","operation":"INV:qa-20261117-c414: NEW_ADMIN: invitation (admin) via OwedBook staff panel → new identity + sign-in link by SCRATCH Supabase Auth","charges":{"email_attempts":1,"new_identities":1},"cleanup":false}
+{"seq":125,"at":"2026-11-17T08:35:20.071Z","result":{"ok":true,"ui":"Invitation email sent."}}
+{"seq":126,"at":"2026-11-17T08:35:54.446Z","operation":"o1:qa-20261117-c414: A sub","charges":{"reads":1},"cleanup":false}
+{"seq":126,"at":"2026-11-17T08:35:54.446Z","result":{"ok":true,"request_id":"req_UGBT6b6pjfqL86","object":{"id":"sub_1Uchc1GnEQDyu3RRyZ7Lns7W","object":"subscription","status":"past_due","customer":"cus_VdzbFhbYulqAOe","quantity":2}}}
+{"seq":127,"at":"2026-11-17T08:35:54.447Z","operation":"o1:qa-20261117-c414: A default visa (recovery)","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":127,"at":"2026-11-17T08:35:54.819Z","result":{"ok":true,"request_id":"req_O7XnioIuPBbSRY","object":{"id":"cus_VdzbFhbYulqAOe","object":"customer"}}}
+{"seq":128,"at":"2026-11-17T08:35:54.820Z","operation":"o1:qa-20261117-c414: A owner pays the SAME delinquent renewal invoice","charges":{"pay_or_hosted":1,"attempted_cents":14800,"provider_mutations":1},"cleanup":false}
+{"seq":128,"at":"2026-11-17T08:35:56.644Z","result":{"ok":true,"request_id":"req_at1R4Tn8GPP1CT","object":{"id":"in_1UchjNGnEQDyu3RRR4t8xZqp","object":"invoice","status":"paid","customer":"cus_VdzbFhbYulqAOe","amount_due":14800,"amount_paid":14800,"total":14800}}}
+{"seq":129,"at":"2026-11-17T08:37:06.985Z","operation":"existing invitation separate owner/recipient browsers","charges":{"sign_ins":2},"cleanup":false}
+{"seq":130,"at":"2026-11-17T08:37:22.000Z","operation":"campaign password sign-in A","charges":{"sign_ins":1},"cleanup":false}
+{"seq":131,"at":"2026-11-17T08:37:23.524Z","operation":"INV:qa-20261117-c414: EXISTING_INVITEE (EXISTING identity): member invitation via OwedBook staff panel → sign-in link by SCRATCH Supabase Auth","charges":{"email_attempts":1,"new_identities":1},"cleanup":false}
+{"seq":132,"at":"2026-11-17T08:37:26.288Z","operation":"o1:qa-20261117-c414: A paid re-add of removed A2 (decision 9)","charges":{"pay_or_hosted":1,"attempted_cents":3774,"provider_mutations":5},"cleanup":false}
+{"seq":131,"at":"2026-11-17T08:37:28.910Z","result":{"ok":true,"ui":"Invitation email sent."}}
+{"seq":132,"at":"2026-11-17T08:37:37.326Z","result":{"ok":true}}
+{"seq":133,"at":"2026-11-17T08:40:45.992Z","operation":"C:qa-20261117-c414: subscription","charges":{"reads":1},"cleanup":false}
+{"seq":133,"at":"2026-11-17T08:40:45.992Z","result":{"ok":true,"request_id":"req_8RX2ZXdChHyLai","object":{"id":"sub_1Uchc1GnEQDyu3RRyZ7Lns7W","object":"subscription","status":"active","customer":"cus_VdzbFhbYulqAOe","quantity":3}}}
+{"seq":134,"at":"2026-11-17T08:40:46.323Z","operation":"C:qa-20261117-c414: subscription","charges":{"reads":1},"cleanup":false}
+{"seq":134,"at":"2026-11-17T08:40:46.323Z","result":{"ok":true,"request_id":"req_HoEeDM0JpdyH1r","object":{"id":"sub_1Uchc1GnEQDyu3RRyZ7Lns7W","object":"subscription","status":"active","customer":"cus_VdzbFhbYulqAOe","quantity":3}}}
+{"seq":135,"at":"2026-11-17T08:40:46.525Z","operation":"C:qa-20261117-c414: attach decline","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":135,"at":"2026-11-17T08:40:47.178Z","result":{"ok":true,"request_id":"req_spprae1mDEFuZD","object":{"id":"pm_1UchwYGnEQDyu3RRNSxtz7gl","object":"payment_method","customer":"cus_VdzbFhbYulqAOe"}}}
+{"seq":136,"at":"2026-11-17T08:40:47.178Z","operation":"C:qa-20261117-c414: default decline","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":136,"at":"2026-11-17T08:40:47.571Z","result":{"ok":true,"request_id":"req_PuKJDdRb9GgWvd","object":{"id":"cus_VdzbFhbYulqAOe","object":"customer"}}}
+{"seq":137,"at":"2026-11-17T08:40:52.253Z","operation":"C:qa-20261117-c414: decline: product confirm → invoice create/item/finalize + ONE API pay attempt (3774)","charges":{"pay_or_hosted":1,"attempted_cents":3774,"provider_mutations":4},"cleanup":false}
+{"seq":137,"at":"2026-11-17T08:41:00.675Z","result":{"ok":true,"state":"payment_pending"}}
+{"seq":138,"at":"2026-11-17T08:41:04.390Z","operation":"C:qa-20261117-c414: decline invoice","charges":{"reads":1},"cleanup":false}
+{"seq":138,"at":"2026-11-17T08:41:04.390Z","result":{"ok":true,"request_id":"req_sKM75v5W0uKRDv","object":{"id":"in_1UchwgGnEQDyu3RRejcoyzmD","object":"invoice","status":"void","customer":"cus_VdzbFhbYulqAOe","amount_due":3774,"amount_paid":0,"total":3774}}}
+{"seq":139,"at":"2026-11-17T08:41:04.718Z","operation":"C:qa-20261117-c414: subscription","charges":{"reads":1},"cleanup":false}
+{"seq":139,"at":"2026-11-17T08:41:04.718Z","result":{"ok":true,"request_id":"req_cJDwV8MNpzuXyd","object":{"id":"sub_1Uchc1GnEQDyu3RRyZ7Lns7W","object":"subscription","status":"active","customer":"cus_VdzbFhbYulqAOe","quantity":3}}}
+{"seq":140,"at":"2026-11-17T08:41:04.718Z","operation":"C:qa-20261117-c414: decline: product voided the invoice on abandon (counted)","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":140,"at":"2026-11-17T08:41:04.718Z","result":{"ok":true}}
+{"seq":141,"at":"2026-11-17T08:41:04.719Z","operation":"C:qa-20261117-c414: attach auth","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":141,"at":"2026-11-17T08:41:05.390Z","result":{"ok":true,"request_id":"req_kHEyDnOvguVTeN","object":{"id":"pm_1UchwqGnEQDyu3RR74b70Zy0","object":"payment_method","customer":"cus_VdzbFhbYulqAOe"}}}
+{"seq":142,"at":"2026-11-17T08:41:05.392Z","operation":"C:qa-20261117-c414: default auth","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":142,"at":"2026-11-17T08:41:05.806Z","result":{"ok":true,"request_id":"req_t1MNrZgdi9pMHo","object":{"id":"cus_VdzbFhbYulqAOe","object":"customer"}}}
+{"seq":143,"at":"2026-11-17T08:41:08.440Z","operation":"C:qa-20261117-c414: auth: product confirm → invoice create/item/finalize + ONE API pay attempt (3774)","charges":{"pay_or_hosted":1,"attempted_cents":3774,"provider_mutations":4},"cleanup":false}
+{"seq":143,"at":"2026-11-17T08:41:15.335Z","result":{"ok":true,"state":"payment_pending"}}
+{"seq":144,"at":"2026-11-17T08:41:22.366Z","operation":"C:qa-20261117-c414: auth: BROWSER hosted invoice submission + 3DS test challenge (3774)","charges":{"pay_or_hosted":1,"attempted_cents":3774,"provider_mutations":1},"cleanup":false}
+{"seq":145,"at":"2026-11-17T08:41:22.561Z","operation":"3DS hosted paid activation absolute quantity update contingency","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":145,"at":"2026-11-17T08:41:22.561Z","result":{"reserved":true}}
+{"seq":144,"at":"2026-11-17T08:41:35.816Z","result":{"ok":true,"challenge_clicked":true}}
+{"seq":146,"at":"2026-11-17T08:41:41.575Z","operation":"C:qa-20261117-c414: subscription","charges":{"reads":1},"cleanup":false}
+{"seq":146,"at":"2026-11-17T08:41:41.575Z","result":{"ok":true,"request_id":"req_ObN1RRXrp0vC1k","object":{"id":"sub_1Uchc1GnEQDyu3RRyZ7Lns7W","object":"subscription","status":"active","customer":"cus_VdzbFhbYulqAOe","quantity":4}}}
+{"seq":147,"at":"2026-11-17T08:42:21.134Z","operation":"pending operation state read","charges":{"reads":2},"cleanup":false}
+{"seq":148,"at":"2026-11-17T08:44:58.391Z","operation":"provider CLI resend real PF00 event (duplicate)","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":148,"at":"2026-11-17T08:44:59.847Z","result":{"exit":0}}
+{"seq":149,"at":"2026-11-17T08:47:55.034Z","operation":"late-case provider expectation reads","charges":{"reads":3},"cleanup":false}
+{"seq":150,"at":"2026-11-17T08:47:57.878Z","operation":"late-case HTTP /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":151,"at":"2026-11-17T08:48:01.182Z","operation":"late-case product confirm invoice/item/finalize/pay attempt","charges":{"provider_mutations":4,"pay_or_hosted":1,"attempted_cents":3774},"cleanup":false}
+{"seq":152,"at":"2026-11-17T08:48:01.183Z","operation":"late-case HTTP /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":151,"at":"2026-11-17T08:48:11.494Z","result":{"status":200,"state":"payment_pending"}}
+{"seq":153,"at":"2026-11-17T08:48:11.672Z","operation":"late-case clock advance beyond consent","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":153,"at":"2026-11-17T08:48:12.039Z","result":{"ok":true}}
+{"seq":154,"at":"2026-11-17T08:48:21.413Z","operation":"late-case explicit pay while both owned processes down","charges":{"provider_mutations":1,"pay_or_hosted":1,"attempted_cents":3774},"cleanup":false}
+{"seq":154,"at":"2026-11-17T08:48:23.119Z","result":{"ok":true,"status":"paid","amount_paid":3774}}
+{"seq":155,"at":"2026-11-17T08:48:28.219Z","operation":"late-case HTTP /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":156,"at":"2026-11-17T08:48:43.859Z","operation":"late-case HTTP /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":157,"at":"2026-11-17T08:48:59.887Z","operation":"late-case HTTP /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":158,"at":"2026-11-17T08:49:15.529Z","operation":"late-case HTTP /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":159,"at":"2026-11-17T08:49:56.777Z","operation":"OB role session OWNER_B","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":160,"at":"2026-11-17T08:50:00.046Z","operation":"OB role session EXISTING_INVITEE","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":161,"at":"2026-11-17T08:50:00.522Z","operation":"invitation negative request EXISTING_INVITEE","charges":{"reads":1},"cleanup":false}
+{"seq":162,"at":"2026-11-17T08:50:00.797Z","operation":"invitation negative request EXISTING_INVITEE","charges":{"reads":1},"cleanup":false}
+{"seq":163,"at":"2026-11-17T08:50:01.157Z","operation":"old JWT store request","charges":{"reads":1},"cleanup":false}
+{"seq":164,"at":"2026-11-17T08:50:01.266Z","operation":"invitation negative request OWNER_B","charges":{"reads":1},"cleanup":false}
+{"seq":165,"at":"2026-11-17T08:50:01.501Z","operation":"old JWT store request","charges":{"reads":1},"cleanup":false}
+{"seq":166,"at":"2026-11-17T08:53:14.941Z","operation":"RECONCILIATION unexpected late activation quantity update (product defect)","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":166,"at":"2026-11-17T08:53:14.941Z","result":{"reconciled":true,"operation_id":"ecd48478-6721-415f-9387-836d0331a64e","note":"Not anticipated by late-attention case; retrospectively counted, no counters reset. Stop new billing cases at cleanup reserve."}}
+{"seq":167,"at":"2026-11-17T08:53:15.632Z","operation":"real provider redelivery after owned listener outage","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":167,"at":"2026-11-17T08:53:16.957Z","result":{"exit":0}}
+{"seq":168,"at":"2026-11-17T09:16:24.426Z","operation":"Friday unchanged WebKit staff reproduction 1","charges":{"sign_ins":2,"reads":20},"cleanup":false}
+{"seq":169,"at":"2026-11-17T09:16:56.678Z","operation":"Friday unchanged WebKit staff reproduction 2","charges":{"sign_ins":2,"reads":20},"cleanup":false}
+{"seq":170,"at":"2026-11-17T09:17:14.206Z","operation":"Friday unchanged WebKit staff reproduction 3","charges":{"sign_ins":2,"reads":20},"cleanup":false}
+{"seq": 171, "operation": "a01 observational baseline: eight actual unique QA identities already established", "charges": {}, "unique_identity_baseline": 8, "existing_counters_preserved": true}
+{"seq":172,"at":"2026-11-17T09:19:19.771Z","operation":"foreign fixture customer","charges":{"provider_mutations":1,"customers":1},"cleanup":false}
+{"seq":172,"at":"2026-11-17T09:19:20.398Z","result":{"ok":true,"id":"cus_Ve0Z5kYb2AIQYm"}}
+{"seq":173,"at":"2026-11-17T09:19:20.399Z","operation":"foreign fixture visa","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":173,"at":"2026-11-17T09:19:21.086Z","result":{"ok":true,"id":"pm_1UciXsGnEQDyu3RRQG1alGK8"}}
+{"seq":174,"at":"2026-11-17T09:19:21.087Z","operation":"foreign fixture default_card","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":174,"at":"2026-11-17T09:19:21.445Z","result":{"ok":true,"id":"cus_Ve0Z5kYb2AIQYm"}}
+{"seq":175,"at":"2026-11-17T09:19:21.446Z","operation":"foreign fixture subscription","charges":{"provider_mutations":1,"subscriptions":1,"attempted_cents":14800},"cleanup":false}
+{"seq":175,"at":"2026-11-17T09:19:23.931Z","result":{"ok":true,"id":"sub_1UciXtGnEQDyu3RR69YGmVyL"}}
+{"seq":176,"at":"2026-11-17T09:22:06.128Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":177,"at":"2026-11-17T09:22:09.193Z","operation":"QA password login ob:OWNER_A","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":178,"at":"2026-11-17T09:22:12.510Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":179,"at":"2026-11-17T09:22:12.926Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/history","charges":{"reads":1},"cleanup":false}
+{"seq":180,"at":"2026-11-17T09:22:13.258Z","operation":"QA app POST /api/invitations/6b78b827-4380-440b-ad64-b62d81ba8cc4/accept","charges":{"reads":1},"cleanup":false}
+{"seq":181,"at":"2026-11-17T09:22:13.613Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":182,"at":"2026-11-17T09:22:13.880Z","operation":"QA password login pp:OWNER_A","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":183,"at":"2026-11-17T09:22:14.415Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":184,"at":"2026-11-17T09:22:14.675Z","operation":"QA password login ob:OWNER_B","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":185,"at":"2026-11-17T09:22:15.244Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":186,"at":"2026-11-17T09:22:15.727Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/history","charges":{"reads":1},"cleanup":false}
+{"seq":187,"at":"2026-11-17T09:22:16.701Z","operation":"QA app POST /api/invitations/6b78b827-4380-440b-ad64-b62d81ba8cc4/accept","charges":{"reads":1},"cleanup":false}
+{"seq":188,"at":"2026-11-17T09:22:18.385Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":189,"at":"2026-11-17T09:22:19.666Z","operation":"QA password login pp:OWNER_B","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":190,"at":"2026-11-17T09:22:21.188Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":191,"at":"2026-11-17T09:22:22.746Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":192,"at":"2026-11-17T09:22:22.947Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal","charges":{"reads":1},"cleanup":false}
+{"seq":193,"at":"2026-11-17T09:22:25.710Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":194,"at":"2026-11-17T09:22:26.660Z","operation":"QA password login ob:STORE_ADMIN","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":195,"at":"2026-11-17T09:22:26.952Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":196,"at":"2026-11-17T09:22:27.182Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/history","charges":{"reads":1},"cleanup":false}
+{"seq":197,"at":"2026-11-17T09:22:27.387Z","operation":"QA app POST /api/invitations/6b78b827-4380-440b-ad64-b62d81ba8cc4/accept","charges":{"reads":1},"cleanup":false}
+{"seq":198,"at":"2026-11-17T09:22:27.608Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":199,"at":"2026-11-17T09:22:27.811Z","operation":"QA password login pp:STORE_ADMIN","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":200,"at":"2026-11-17T09:22:28.067Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":201,"at":"2026-11-17T09:22:28.138Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal","charges":{"reads":1},"cleanup":false}
+{"seq":202,"at":"2026-11-17T09:22:28.333Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":203,"at":"2026-11-17T09:22:28.546Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":204,"at":"2026-11-17T09:22:28.753Z","operation":"QA password login ob:MEMBER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":205,"at":"2026-11-17T09:22:28.997Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":206,"at":"2026-11-17T09:22:29.186Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/history","charges":{"reads":1},"cleanup":false}
+{"seq":207,"at":"2026-11-17T09:22:29.390Z","operation":"QA app POST /api/invitations/6b78b827-4380-440b-ad64-b62d81ba8cc4/accept","charges":{"reads":1},"cleanup":false}
+{"seq":208,"at":"2026-11-17T09:22:29.593Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":209,"at":"2026-11-17T09:22:29.789Z","operation":"QA password login pp:MEMBER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":210,"at":"2026-11-17T09:22:30.109Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":211,"at":"2026-11-17T09:22:30.175Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal","charges":{"reads":1},"cleanup":false}
+{"seq":212,"at":"2026-11-17T09:22:30.365Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":213,"at":"2026-11-17T09:22:30.558Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":214,"at":"2026-11-17T09:22:30.769Z","operation":"QA password login ob:FOREIGN_OWNER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":215,"at":"2026-11-17T09:22:30.981Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":216,"at":"2026-11-17T09:22:31.170Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/history","charges":{"reads":1},"cleanup":false}
+{"seq":217,"at":"2026-11-17T09:22:31.370Z","operation":"QA app POST /api/invitations/6b78b827-4380-440b-ad64-b62d81ba8cc4/accept","charges":{"reads":1},"cleanup":false}
+{"seq":218,"at":"2026-11-17T09:22:31.547Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":219,"at":"2026-11-17T09:22:31.733Z","operation":"QA password login pp:FOREIGN_OWNER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":220,"at":"2026-11-17T09:22:31.947Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":221,"at":"2026-11-17T09:22:32.015Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal","charges":{"reads":1},"cleanup":false}
+{"seq":222,"at":"2026-11-17T09:22:32.637Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":223,"at":"2026-11-17T09:22:33.215Z","operation":"QA password login ob:EXISTING_INVITEE","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":224,"at":"2026-11-17T09:22:33.426Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":225,"at":"2026-11-17T09:22:33.605Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/history","charges":{"reads":1},"cleanup":false}
+{"seq":226,"at":"2026-11-17T09:22:33.785Z","operation":"QA app POST /api/invitations/6b78b827-4380-440b-ad64-b62d81ba8cc4/accept","charges":{"reads":1},"cleanup":false}
+{"seq":227,"at":"2026-11-17T09:22:33.965Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":228,"at":"2026-11-17T09:22:34.148Z","operation":"QA password login pp:EXISTING_INVITEE","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":229,"at":"2026-11-17T09:22:34.375Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":230,"at":"2026-11-17T09:22:34.437Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal","charges":{"reads":1},"cleanup":false}
+{"seq":231,"at":"2026-11-17T09:22:34.619Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":232,"at":"2026-11-17T09:22:34.792Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":233,"at":"2026-11-17T09:22:34.991Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":234,"at":"2026-11-17T09:22:34.998Z","operation":"QA app GET /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/history","charges":{"reads":1},"cleanup":false}
+{"seq":235,"at":"2026-11-17T09:22:35.005Z","operation":"QA app POST /api/invitations/6b78b827-4380-440b-ad64-b62d81ba8cc4/accept","charges":{"reads":1},"cleanup":false}
+{"seq":236,"at":"2026-11-17T09:22:35.009Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":237,"at":"2026-11-17T09:22:35.015Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":238,"at":"2026-11-17T09:22:35.022Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal","charges":{"reads":1},"cleanup":false}
+{"seq":239,"at":"2026-11-17T09:22:35.034Z","operation":"QA app POST /api/stores/589a39d0-8969-4b1c-bd0f-22e23b57a919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":240,"at":"2026-11-17T09:22:35.042Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":241,"at":"2026-11-17T09:23:05.227Z","operation":"QA exact-ID operator store-admin-set","charges":{"reads":1},"cleanup":false}
+{"seq":242,"at":"2026-11-17T09:23:05.263Z","operation":"QA exact-ID operator store-admin-set","charges":{"reads":1},"cleanup":false}
+{"seq":243,"at":"2026-11-17T09:23:07.602Z","operation":"QA exact-ID operator store-admin-set","charges":{"reads":1},"cleanup":false}
+{"seq":244,"at":"2026-11-17T09:23:07.713Z","operation":"QA exact-ID operator store-admin-set","charges":{"reads":1},"cleanup":false}
+{"seq":245,"at":"2026-11-17T09:23:07.972Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":246,"at":"2026-11-17T09:23:08.141Z","operation":"QA app GET /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":247,"at":"2026-11-17T09:23:10.474Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":248,"at":"2026-11-17T09:23:10.738Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":249,"at":"2026-11-17T09:23:10.935Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":250,"at":"2026-11-17T09:24:22.788Z","operation":"E:qa-a01-transfer: seller subscription","charges":{"reads":1},"cleanup":false}
+{"seq":250,"at":"2026-11-17T09:24:22.789Z","result":{"ok":true,"request_id":"req_Tpy2D62CfOe6OX","object":{"id":"sub_1UciXtGnEQDyu3RR69YGmVyL","object":"subscription","status":"active","customer":"cus_Ve0Z5kYb2AIQYm","quantity":2}}}
+{"seq":251,"at":"2026-11-17T09:24:24.035Z","operation":"E:qa-a01-transfer: operator transfer authorize → seller quantity sync (subscription quantity −1, no proration)","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":251,"at":"2026-11-17T09:24:26.179Z","result":{"ok":true,"result":"applied"}}
+{"seq":252,"at":"2026-11-17T09:26:15.030Z","operation":"OwnerB Billing Portal browser sign-in","charges":{"sign_ins":1},"cleanup":false}
+{"seq":253,"at":"2026-11-17T09:26:21.675Z","operation":"GF:qa-a01-cancel: owner creates Stripe Billing Portal session","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":253,"at":"2026-11-17T09:26:27.066Z","result":{"attempted":true}}
+{"seq":254,"at":"2026-11-17T09:26:34.593Z","operation":"GF:qa-a01-cancel: G: owner cancels at period end in Stripe Billing Portal","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":255,"at":"2026-11-17T09:26:45.711Z","operation":"GF:qa-a01-cancel: subscription","charges":{"reads":1},"cleanup":false}
+{"seq":255,"at":"2026-11-17T09:26:45.711Z","result":{"ok":true,"request_id":"req_ig1pVyRpwr0uav","object":{"id":"sub_1Uchc8GnEQDyu3RR4dPvjODp","object":"subscription","status":"active","customer":"cus_VdzbotJE2rHxEt","quantity":2}}}
+{"seq":254,"at":"2026-11-17T09:26:45.712Z","result":{"ok":true}}
+{"seq":256,"at":"2026-11-17T09:26:50.789Z","operation":"GF:qa-a01-cancel: G: owner presses Undo cancellation (one or two subscription updates)","charges":{"provider_mutations":2},"cleanup":false}
+{"seq":257,"at":"2026-11-17T09:26:55.135Z","operation":"GF:qa-a01-cancel: subscription","charges":{"reads":1},"cleanup":false}
+{"seq":257,"at":"2026-11-17T09:26:55.136Z","result":{"ok":true,"request_id":"req_mdNckqrjQT7C31","object":{"id":"sub_1Uchc8GnEQDyu3RR4dPvjODp","object":"subscription","status":"active","customer":"cus_VdzbotJE2rHxEt","quantity":2}}}
+{"seq":256,"at":"2026-11-17T09:26:55.136Z","result":{"ok":true}}
+{"seq":258,"at":"2026-11-17T09:27:05.104Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":259,"at":"2026-11-17T09:27:07.333Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":260,"at":"2026-11-17T09:27:07.419Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":261,"at":"2026-11-17T09:27:07.523Z","operation":"QA exact-ID operator sql","charges":{"reads":1},"cleanup":false}
+{"seq":262,"at":"2026-11-17T09:27:07.532Z","operation":"QA exact-ID operator store-transfer-authorize","charges":{"reads":1},"cleanup":false}
+{"seq":263,"at":"2026-11-17T09:27:09.713Z","operation":"QA exact-ID operator store-admin-set","charges":{"reads":1},"cleanup":false}
+{"seq":264,"at":"2026-11-17T09:27:10.264Z","operation":"duplicate exact transfer authorization no duplicate quantity reduction","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":265,"at":"2026-11-17T09:27:10.265Z","operation":"QA exact-ID operator store-transfer-authorize","charges":{"reads":1},"cleanup":false}
+{"seq":264,"at":"2026-11-17T09:27:10.900Z","result":{"ok":true,"id":null,"status":409}}
+{"seq":266,"at":"2026-11-17T09:27:58.212Z","operation":"E:qa-a01-transfer: registration → Stripe Checkout (customer, subscription, one hosted submission $99.00) + access email via SCRATCH Auth","charges":{"customers":1,"subscriptions":1,"pay_or_hosted":1,"attempted_cents":9900,"email_attempts":1,"new_identities":1,"provider_mutations":4},"cleanup":false}
+{"seq":267,"at":"2026-11-17T09:28:34.587Z","operation":"E:qa-a01-transfer: buyer declined hosted submission, same Checkout retained","charges":{"pay_or_hosted":1,"attempted_cents":9900,"provider_mutations":1},"cleanup":false}
+{"seq":268,"at":"2026-11-17T09:30:52.662Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":269,"at":"2026-11-17T09:30:55.770Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":270,"at":"2026-11-17T09:30:56.953Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":271,"at":"2026-11-17T09:32:36.822Z","operation":"guard clock create","charges":{"provider_mutations":1,"test_clocks":1},"cleanup":false}
+{"seq":271,"at":"2026-11-17T09:32:37.397Z","result":{"ok":true,"id":"clock_1UcikjGnEQDyu3RRyDjN9as0","status":"ready"}}
+{"seq":272,"at":"2026-11-17T09:32:37.399Z","operation":"guard customer create","charges":{"provider_mutations":1,"customers":1},"cleanup":false}
+{"seq":272,"at":"2026-11-17T09:32:37.799Z","result":{"ok":true,"id":"cus_Ve0mgpfF0Ib3yh","status":null}}
+{"seq":273,"at":"2026-11-17T09:32:37.800Z","operation":"guard visa attach","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":273,"at":"2026-11-17T09:32:38.470Z","result":{"ok":true,"id":"pm_1UcikjGnEQDyu3RRF5jcJJTV","status":null}}
+{"seq":274,"at":"2026-11-17T09:32:38.470Z","operation":"guard default visa","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":274,"at":"2026-11-17T09:32:38.833Z","result":{"ok":true,"id":"cus_Ve0mgpfF0Ib3yh","status":null}}
+{"seq":275,"at":"2026-11-17T09:32:38.833Z","operation":"guard subscription create quantity3","charges":{"provider_mutations":1,"subscriptions":1,"attempted_cents":19700},"cleanup":false}
+{"seq":275,"at":"2026-11-17T09:32:41.101Z","result":{"ok":true,"id":"sub_1UciklGnEQDyu3RRiTtSmwcF","status":"active"}}
+{"seq":276,"at":"2026-11-17T09:32:41.411Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":277,"at":"2026-11-17T09:32:44.349Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":278,"at":"2026-11-17T09:32:44.668Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":279,"at":"2026-11-17T09:32:45.097Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":280,"at":"2026-11-17T09:32:45.263Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":281,"at":"2026-11-17T09:32:45.512Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":282,"at":"2026-11-17T09:32:45.701Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":283,"at":"2026-11-17T09:32:45.808Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":284,"at":"2026-11-17T09:32:45.928Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":285,"at":"2026-11-17T09:32:45.994Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":286,"at":"2026-11-17T09:32:46.059Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":287,"at":"2026-11-17T09:32:46.148Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":288,"at":"2026-11-17T09:32:46.220Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":289,"at":"2026-11-17T09:32:46.300Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":290,"at":"2026-11-17T09:32:46.391Z","operation":"guard clock advance allow50","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":290,"at":"2026-11-17T09:32:46.755Z","result":{"ok":true,"id":"clock_1UcikjGnEQDyu3RRyDjN9as0","status":"advancing"}}
+{"seq":291,"at":"2026-11-17T09:32:49.572Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":292,"at":"2026-11-17T09:32:49.636Z","operation":"guard product removal-allowed50","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":293,"at":"2026-11-17T09:32:49.638Z","operation":"QA app POST /api/stores/df6b8514-8cc2-4341-a05c-552e4674f919/removal","charges":{"reads":1},"cleanup":false}
+{"seq":292,"at":"2026-11-17T09:32:52.817Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":294,"at":"2026-11-17T09:32:52.818Z","operation":"guard product undo-allowed50","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":295,"at":"2026-11-17T09:32:52.818Z","operation":"QA app POST /api/stores/df6b8514-8cc2-4341-a05c-552e4674f919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":294,"at":"2026-11-17T09:32:55.663Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":296,"at":"2026-11-17T09:32:55.664Z","operation":"guard product removal-again50","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":297,"at":"2026-11-17T09:32:55.664Z","operation":"QA app POST /api/stores/df6b8514-8cc2-4341-a05c-552e4674f919/removal","charges":{"reads":1},"cleanup":false}
+{"seq":296,"at":"2026-11-17T09:32:58.332Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":298,"at":"2026-11-17T09:32:58.334Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":299,"at":"2026-11-17T09:32:59.311Z","operation":"exact50 consent invoice/item/finalize/pay/quantity","charges":{"provider_mutations":5,"pay_or_hosted":1,"attempted_cents":50},"cleanup":false}
+{"seq":300,"at":"2026-11-17T09:32:59.311Z","operation":"QA app POST /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":299,"at":"2026-11-17T09:33:10.476Z","result":{"status":200,"state":"activated"}}
+{"seq":301,"at":"2026-11-17T09:33:10.478Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":302,"at":"2026-11-17T09:33:10.892Z","operation":"guard clock advance refuse49","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":302,"at":"2026-11-17T09:33:11.254Z","result":{"ok":true,"id":"clock_1UcikjGnEQDyu3RRyDjN9as0","status":"advancing"}}
+{"seq":303,"at":"2026-11-17T09:33:15.340Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":304,"at":"2026-11-17T09:33:16.103Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":305,"at":"2026-11-17T09:33:25.965Z","operation":"QA app POST /api/stores/d425aae5-939a-4e16-869e-136ef11882c5/removal","charges":{"reads":1},"cleanup":false}
+{"seq":306,"at":"2026-11-17T09:33:28.006Z","operation":"QA app POST /api/stores/df6b8514-8cc2-4341-a05c-552e4674f919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":307,"at":"2026-11-17T09:33:29.764Z","operation":"guard clock advance guard5401","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":307,"at":"2026-11-17T09:33:30.132Z","result":{"ok":true,"id":"clock_1UcikjGnEQDyu3RRyDjN9as0","status":"advancing"}}
+{"seq":308,"at":"2026-11-17T09:33:31.675Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":309,"at":"2026-11-17T09:33:31.894Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":310,"at":"2026-11-17T09:33:33.059Z","operation":"QA app POST /api/stores/d425aae5-939a-4e16-869e-136ef11882c5/removal","charges":{"reads":1},"cleanup":false}
+{"seq":311,"at":"2026-11-17T09:33:33.822Z","operation":"QA app POST /api/stores/df6b8514-8cc2-4341-a05c-552e4674f919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":312,"at":"2026-11-17T09:33:34.551Z","operation":"guard clock advance guard5400","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":312,"at":"2026-11-17T09:33:34.908Z","result":{"ok":true,"id":"clock_1UcikjGnEQDyu3RRyDjN9as0","status":"advancing"}}
+{"seq":313,"at":"2026-11-17T09:33:37.732Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":314,"at":"2026-11-17T09:33:37.882Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":315,"at":"2026-11-17T09:33:39.025Z","operation":"QA app POST /api/stores/d425aae5-939a-4e16-869e-136ef11882c5/removal","charges":{"reads":1},"cleanup":false}
+{"seq":316,"at":"2026-11-17T09:33:39.767Z","operation":"QA app POST /api/stores/df6b8514-8cc2-4341-a05c-552e4674f919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":317,"at":"2026-11-17T09:33:40.439Z","operation":"guard clock advance guard5399","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":317,"at":"2026-11-17T09:33:40.798Z","result":{"ok":true,"id":"clock_1UcikjGnEQDyu3RRyDjN9as0","status":"advancing"}}
+{"seq":318,"at":"2026-11-17T09:33:43.602Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":319,"at":"2026-11-17T09:33:43.699Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":320,"at":"2026-11-17T09:33:44.733Z","operation":"QA app POST /api/stores/d425aae5-939a-4e16-869e-136ef11882c5/removal","charges":{"reads":1},"cleanup":false}
+{"seq":321,"at":"2026-11-17T09:33:45.606Z","operation":"QA app POST /api/stores/df6b8514-8cc2-4341-a05c-552e4674f919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":322,"at":"2026-11-17T09:33:46.391Z","operation":"guard clock advance guard1","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":322,"at":"2026-11-17T09:33:46.734Z","result":{"ok":true,"id":"clock_1UcikjGnEQDyu3RRyDjN9as0","status":"advancing"}}
+{"seq":323,"at":"2026-11-17T09:33:48.266Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":324,"at":"2026-11-17T09:33:48.360Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":325,"at":"2026-11-17T09:33:49.462Z","operation":"QA app POST /api/stores/d425aae5-939a-4e16-869e-136ef11882c5/removal","charges":{"reads":1},"cleanup":false}
+{"seq":326,"at":"2026-11-17T09:33:50.217Z","operation":"QA app POST /api/stores/df6b8514-8cc2-4341-a05c-552e4674f919/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":327,"at":"2026-11-17T09:33:51.123Z","operation":"predicted automatic renewal on nextperiod","charges":{"attempted_cents":19700},"cleanup":false}
+{"seq":327,"at":"2026-11-17T09:33:51.123Z","result":{"predicted":true}}
+{"seq":328,"at":"2026-11-17T09:33:51.123Z","operation":"guard clock advance nextperiod","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":328,"at":"2026-11-17T09:33:51.478Z","result":{"ok":true,"id":"clock_1UcikjGnEQDyu3RRyDjN9as0","status":"advancing"}}
+{"seq":329,"at":"2026-11-17T09:33:55.567Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":330,"at":"2026-11-17T09:35:44.259Z","operation":"guard clock advance nextperiod-settle","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":330,"at":"2026-11-17T09:35:44.605Z","result":{"ok":true,"id":"clock_1UcikjGnEQDyu3RRyDjN9as0","status":"advancing"}}
+{"seq":331,"at":"2026-11-17T09:35:53.801Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":332,"at":"2026-11-17T09:35:56.048Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":333,"at":"2026-11-17T09:35:56.116Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":266,"at":"2026-11-17T09:35:56.987Z","result":{"ok":true,"submitted":true,"returned":true,"session_status":"complete","payment_status":"paid","note":"completed the same open session (first run stopped before card entry; nothing had been submitted)"}}
+{"seq":334,"at":"2026-11-17T09:35:58.289Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":335,"at":"2026-11-17T09:35:58.359Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":336,"at":"2026-11-17T09:35:58.436Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":337,"at":"2026-11-17T09:35:58.506Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":338,"at":"2026-11-17T09:35:58.577Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":339,"at":"2026-11-17T09:35:59.078Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":340,"at":"2026-11-17T09:35:59.147Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":341,"at":"2026-11-17T09:35:59.218Z","operation":"QA app GET /api/stores/df6b8514-8cc2-4341-a05c-552e4674f919/history","charges":{"reads":1},"cleanup":false}
+{"seq":342,"at":"2026-11-17T09:36:01.612Z","operation":"guard product schedule-third-store","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":343,"at":"2026-11-17T09:36:01.614Z","operation":"QA app POST /api/stores/d425aae5-939a-4e16-869e-136ef11882c5/removal","charges":{"reads":1},"cleanup":false}
+{"seq":342,"at":"2026-11-17T09:36:04.099Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":344,"at":"2026-11-17T09:36:04.100Z","operation":"guard schedule fourth store","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":345,"at":"2026-11-17T09:36:04.100Z","operation":"QA app POST /api/stores/9c003f29-7702-4f09-92a7-ab2b70bacfb4/removal","charges":{"reads":1},"cleanup":false}
+{"seq":344,"at":"2026-11-17T09:36:06.613Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":346,"at":"2026-11-17T09:36:06.613Z","operation":"QA app POST /api/stores/cc4241e6-55a2-49e3-bbf1-1e5554303b12/removal","charges":{"reads":1},"cleanup":false}
+{"seq":347,"at":"2026-11-17T09:36:07.763Z","operation":"QA app GET /api/billing/overview","charges":{"reads":1},"cleanup":false}
+{"seq":348,"at":"2026-11-17T09:37:49.650Z","operation":"E:qa-a01-transfer: seller subscription","charges":{"reads":1},"cleanup":false}
+{"seq":348,"at":"2026-11-17T09:37:49.650Z","result":{"ok":true,"request_id":"req_KswwggSEjusCxx","object":{"id":"sub_1UciXtGnEQDyu3RR69YGmVyL","object":"subscription","status":"active","customer":"cus_Ve0Z5kYb2AIQYm","quantity":1}}}
+{"seq":349,"at":"2026-11-17T09:38:33.363Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":350,"at":"2026-11-17T09:38:33.886Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":351,"at":"2026-11-17T09:38:56.230Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":352,"at":"2026-11-17T09:38:56.535Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":353,"at":"2026-11-17T09:39:10.578Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":354,"at":"2026-11-17T09:39:10.783Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":355,"at":"2026-11-17T09:41:53.935Z","operation":"expiry isolated clock create","charges":{"provider_mutations":1,"test_clocks":1},"cleanup":false}
+{"seq":355,"at":"2026-11-17T09:41:56.566Z","result":{"ok":true,"id":"clock_1UcitkGnEQDyu3RR1xFBf7ZT","status":"ready"}}
+{"seq":356,"at":"2026-11-17T09:41:56.567Z","operation":"expiry fixture customer","charges":{"provider_mutations":1,"customers":1},"cleanup":false}
+{"seq":356,"at":"2026-11-17T09:41:56.930Z","result":{"ok":true,"id":"cus_Ve0v0K7v4FPDJq","status":null}}
+{"seq":357,"at":"2026-11-17T09:41:56.931Z","operation":"expiry baseline visa attach","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":357,"at":"2026-11-17T09:41:57.543Z","result":{"ok":true,"id":"pm_1UcitlGnEQDyu3RRmEryphZP","status":null}}
+{"seq":358,"at":"2026-11-17T09:41:57.545Z","operation":"expiry baseline default card","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":358,"at":"2026-11-17T09:41:57.939Z","result":{"ok":true,"id":"cus_Ve0v0K7v4FPDJq","status":null}}
+{"seq":359,"at":"2026-11-17T09:41:57.940Z","operation":"expiry baseline subscription qty1","charges":{"provider_mutations":1,"subscriptions":1,"attempted_cents":9900},"cleanup":false}
+{"seq":359,"at":"2026-11-17T09:42:00.188Z","result":{"ok":true,"id":"sub_1UcitmGnEQDyu3RRftoi8saR","status":"active"}}
+{"seq":360,"at":"2026-11-17T09:42:00.490Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":361,"at":"2026-11-17T09:42:03.723Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":362,"at":"2026-11-17T09:42:06.088Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":363,"at":"2026-11-17T09:42:06.278Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":364,"at":"2026-11-17T09:42:06.458Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":365,"at":"2026-11-17T09:42:06.552Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":366,"at":"2026-11-17T09:42:06.621Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":367,"at":"2026-11-17T09:42:06.701Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":368,"at":"2026-11-17T09:42:06.769Z","operation":"expiry attach auth-required card","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":368,"at":"2026-11-17T09:42:07.392Z","result":{"ok":true,"id":"pm_1UcituGnEQDyu3RRZ32EvBp9","status":null}}
+{"seq":369,"at":"2026-11-17T09:42:07.393Z","operation":"expiry select auth-required card","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":369,"at":"2026-11-17T09:42:07.782Z","result":{"ok":true,"id":"cus_Ve0v0K7v4FPDJq","status":null}}
+{"seq":370,"at":"2026-11-17T09:42:08.360Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":371,"at":"2026-11-17T09:42:10.213Z","operation":"expiry/race consent-expiry invoice/item/finalize/pay attempt","charges":{"provider_mutations":4,"pay_or_hosted":1,"attempted_cents":4900},"cleanup":false}
+{"seq":372,"at":"2026-11-17T09:42:10.214Z","operation":"QA app POST /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":371,"at":"2026-11-17T09:42:25.292Z","result":{"status":200,"state":"payment_pending"}}
+{"seq":373,"at":"2026-11-17T09:42:25.292Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":374,"at":"2026-11-17T09:42:25.396Z","operation":"expiry clock before-deadline","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":374,"at":"2026-11-17T09:42:25.759Z","result":{"ok":true,"id":"clock_1UcitkGnEQDyu3RR1xFBf7ZT","status":"advancing"}}
+{"seq":375,"at":"2026-11-17T09:42:28.575Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":376,"at":"2026-11-17T09:42:28.692Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":377,"at":"2026-11-17T09:42:28.827Z","operation":"expiry clock at-deadline","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":377,"at":"2026-11-17T09:42:29.185Z","result":{"ok":true,"id":"clock_1UcitkGnEQDyu3RR1xFBf7ZT","status":"advancing"}}
+{"seq":378,"at":"2026-11-17T09:42:30.740Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":379,"at":"2026-11-17T09:42:30.823Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":380,"at":"2026-11-17T09:42:30.905Z","operation":"expiry minute worker expected void reservation 0","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":381,"at":"2026-11-17T09:42:30.907Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":382,"at":"2026-11-17T09:42:30.970Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":383,"at":"2026-11-17T09:42:31.042Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":384,"at":"2026-11-17T09:42:31.107Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":385,"at":"2026-11-17T09:42:31.172Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":386,"at":"2026-11-17T09:42:31.256Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":380,"at":"2026-11-17T09:42:36.592Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":387,"at":"2026-11-17T09:42:36.593Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":388,"at":"2026-11-17T09:43:38.149Z","operation":"expiry minute worker expected void reservation 1","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":389,"at":"2026-11-17T09:43:38.149Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":390,"at":"2026-11-17T09:43:38.733Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":391,"at":"2026-11-17T09:43:39.066Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":392,"at":"2026-11-17T09:43:39.413Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":393,"at":"2026-11-17T09:43:39.705Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":394,"at":"2026-11-17T09:43:40.021Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":388,"at":"2026-11-17T09:43:41.747Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":395,"at":"2026-11-17T09:43:41.749Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":396,"at":"2026-11-17T09:43:42.152Z","operation":"explicit owner abandon after observed expiry failure","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":397,"at":"2026-11-17T09:43:42.154Z","operation":"QA app POST /api/stores/add/abandon","charges":{"reads":1},"cleanup":false}
+{"seq":396,"at":"2026-11-17T09:43:44.708Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":398,"at":"2026-11-17T09:43:45.603Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":399,"at":"2026-11-17T09:43:46.585Z","operation":"expiry/race paid-void-race invoice/item/finalize/pay attempt","charges":{"provider_mutations":4,"pay_or_hosted":1,"attempted_cents":4897},"cleanup":false}
+{"seq":400,"at":"2026-11-17T09:43:46.585Z","operation":"QA app POST /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":399,"at":"2026-11-17T09:43:53.295Z","result":{"status":200,"state":"payment_pending"}}
+{"seq":401,"at":"2026-11-17T09:43:53.295Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":402,"at":"2026-11-17T09:43:53.397Z","operation":"expiry clock race-deadline","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":402,"at":"2026-11-17T09:43:53.752Z","result":{"ok":true,"id":"clock_1UcitkGnEQDyu3RR1xFBf7ZT","status":"advancing"}}
+{"seq":403,"at":"2026-11-17T09:43:56.909Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":404,"at":"2026-11-17T09:43:56.971Z","operation":"race invoice void/pay plus unexpected activation contingency","charges":{"provider_mutations":3,"pay_or_hosted":1,"attempted_cents":4897},"cleanup":false}
+{"seq":405,"at":"2026-11-17T09:43:56.971Z","operation":"QA app POST /api/stores/add/abandon","charges":{"reads":1},"cleanup":false}
+{"seq":404,"at":"2026-11-17T09:43:59.592Z","result":{"abandon":"fulfilled","pay":"fulfilled","pay_error":null}}
+{"seq":406,"at":"2026-11-17T09:44:04.594Z","operation":"QA app POST /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":407,"at":"2026-11-17T09:44:05.022Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":408,"at":"2026-11-17T09:44:05.462Z","operation":"QA exact-ID operator store-operation-close","charges":{"reads":1},"cleanup":false}
+{"seq":409,"at":"2026-11-17T09:44:06.525Z","operation":"QA exact-ID operator store-operation-close","charges":{"reads":1},"cleanup":false}
+{"seq":410,"at":"2026-11-17T09:44:08.020Z","operation":"one approved full sandbox refund for naturally unactivated race","charges":{"provider_mutations":1,"refunds":1},"cleanup":false}
+{"seq":410,"at":"2026-11-17T09:44:08.987Z","result":{"ok":true,"id":"re_3UcivZGnEQDyu3RR11ykRwCN","status":"succeeded"}}
+{"seq":411,"at":"2026-11-17T09:44:08.988Z","operation":"QA exact-ID operator store-operation-close","charges":{"reads":1},"cleanup":false}
+{"seq":412,"at":"2026-11-17T09:44:10.100Z","operation":"QA exact-ID operator store-operation-close","charges":{"reads":1},"cleanup":false}
+{"seq":413,"at":"2026-11-17T09:44:11.225Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":414,"at":"2026-11-17T09:44:11.317Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":415,"at":"2026-11-17T09:46:42.304Z","operation":"S1 two explicit password sessions before and after restart","charges":{"sign_ins":2},"cleanup":false}
+{"seq":416,"at":"2026-11-17T09:46:49.232Z","operation":"CR:qa-final-s1:s1: s1: product confirm → invoice/item/finalize + ONE API pay attempt (4897)","charges":{"pay_or_hosted":1,"attempted_cents":4897,"provider_mutations":5},"cleanup":false}
+{"seq":416,"at":"2026-11-17T09:46:54.847Z","result":{"ok":true,"scenario":"s1","kill_stage":"pay intent recorded (op state payment_pending)","confirm_client":{"error":"UND_ERR_SOCKET"}}}
+{"seq":417,"at":"2026-11-17T09:48:00.145Z","operation":"CR:qa-final-s1:s1: provider real event resend after owned crash","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":417,"at":"2026-11-17T09:48:01.465Z","result":{"exit":0}}
+{"seq":418,"at":"2026-11-17T09:51:22.832Z","operation":"admin sends controlled existing-recipient member invitation","charges":{"email_attempts":1,"new_identities":1},"cleanup":false}
+{"seq":419,"at":"2026-11-17T09:51:22.833Z","operation":"QA password login ob:STORE_ADMIN","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":420,"at":"2026-11-17T09:51:24.174Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":418,"at":"2026-11-17T09:51:29.610Z","result":{"ok":true,"id":null,"status":201}}
+{"seq":421,"at":"2026-11-17T09:51:29.612Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":422,"at":"2026-11-17T09:51:30.025Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":423,"at":"2026-11-17T09:51:30.393Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":424,"at":"2026-11-17T09:51:31.501Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":425,"at":"2026-11-17T09:52:26.593Z","operation":"one eligible real resend after actual61second cooldown","charges":{"email_attempts":1,"new_identities":1},"cleanup":false}
+{"seq":426,"at":"2026-11-17T09:52:26.593Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":425,"at":"2026-11-17T09:52:31.313Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":427,"at":"2026-11-17T09:52:31.315Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":428,"at":"2026-11-17T09:52:32.251Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":429,"at":"2026-11-17T09:52:33.241Z","operation":"QA password login ob:EXISTING_INVITEE","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":430,"at":"2026-11-17T09:52:33.661Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/accept","charges":{"reads":1},"cleanup":false}
+{"seq":431,"at":"2026-11-17T09:52:34.228Z","operation":"QA app POST /api/invitations/2e497d41-b51c-4dd6-a7a0-433a78ab9b42/revoke","charges":{"reads":1},"cleanup":false}
+{"seq":432,"at":"2026-11-17T09:52:34.482Z","operation":"QA app POST /api/invitations/2e497d41-b51c-4dd6-a7a0-433a78ab9b42/accept","charges":{"reads":1},"cleanup":false}
+{"seq":433,"at":"2026-11-17T09:52:34.719Z","operation":"QA app POST /api/invitations/00000000-0000-4000-8000-000000000123/accept","charges":{"reads":1},"cleanup":false}
+{"seq":434,"at":"2026-11-17T09:52:34.948Z","operation":"QA app POST /api/invitations/2e497d41-b51c-4dd6-a7a0-433a78ab9b42/accept","charges":{"reads":1},"cleanup":false}
+{"seq":435,"at":"2026-11-17T09:52:35.061Z","operation":"existing password still works after sign-in resend","charges":{"sign_ins":1},"cleanup":false}
+{"seq":436,"at":"2026-11-17T10:01:34.696Z","operation":"real sign-in link for existing NEW_ADMIN (ob)","charges":{"email_attempts":1},"cleanup":false}
+{"seq":437,"at":"2026-11-17T10:01:34.697Z","operation":"QA app POST /api/auth/link","charges":{"reads":1},"cleanup":false}
+{"seq":436,"at":"2026-11-17T10:01:40.265Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":438,"at":"2026-11-17T10:01:40.266Z","operation":"real sign-in link for existing NEW_MEMBER (ob)","charges":{"email_attempts":1},"cleanup":false}
+{"seq":439,"at":"2026-11-17T10:01:40.266Z","operation":"QA app POST /api/auth/link","charges":{"reads":1},"cleanup":false}
+{"seq":438,"at":"2026-11-17T10:01:42.440Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":440,"at":"2026-11-17T10:01:42.442Z","operation":"real sign-in link for existing MEMBER (pp)","charges":{"email_attempts":1},"cleanup":false}
+{"seq":441,"at":"2026-11-17T10:01:42.443Z","operation":"QA app POST /api/auth/link","charges":{"reads":1},"cleanup":false}
+{"seq":440,"at":"2026-11-17T10:01:45.059Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":442,"at":"2026-11-17T10:02:28.587Z","operation":"actual JWT history login OWNER_A","charges":{"sign_ins":1},"cleanup":false}
+{"seq":443,"at":"2026-11-17T10:02:33.484Z","operation":"approved history normal RPC OWNER_A","charges":{"reads":1},"cleanup":false}
+{"seq":444,"at":"2026-11-17T10:02:36.765Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":445,"at":"2026-11-17T10:02:38.279Z","operation":"actual JWT history login STORE_ADMIN","charges":{"sign_ins":1},"cleanup":false}
+{"seq":446,"at":"2026-11-17T10:02:39.738Z","operation":"approved history normal RPC STORE_ADMIN","charges":{"reads":1},"cleanup":false}
+{"seq":447,"at":"2026-11-17T10:02:41.634Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":448,"at":"2026-11-17T10:02:42.592Z","operation":"QA password login ob:FOREIGN_OWNER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":449,"at":"2026-11-17T10:02:46.307Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":450,"at":"2026-11-17T10:02:47.372Z","operation":"QA password login ob:OWNER_A","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":451,"at":"2026-11-17T10:02:50.151Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":452,"at":"2026-11-17T10:02:51.756Z","operation":"QA password login ob:OWNER_B","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":453,"at":"2026-11-17T10:02:52.768Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":454,"at":"2026-11-17T10:02:53.398Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":455,"at":"2026-11-17T10:02:54.045Z","operation":"QA password login ob:MEMBER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":456,"at":"2026-11-17T10:02:54.651Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":457,"at":"2026-11-17T10:02:54.976Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":458,"at":"2026-11-17T10:02:55.325Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":459,"at":"2026-11-17T10:02:55.329Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":460,"at":"2026-11-17T10:02:57.608Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":461,"at":"2026-11-17T10:02:59.051Z","operation":"last-store whole-account cancellation provider schedule","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":461,"at":"2026-11-17T10:02:59.637Z","result":{"ok":true,"id":"sub_1UciklGnEQDyu3RRiTtSmwcF","status":"active"}}
+{"seq":462,"at":"2026-11-17T10:02:59.638Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":463,"at":"2026-11-17T10:03:05.386Z","operation":"QA password login pp:OWNER_A","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":464,"at":"2026-11-17T10:03:08.998Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":465,"at":"2026-11-17T10:03:13.697Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":466,"at":"2026-11-17T10:03:17.257Z","operation":"QA password login pp:EXISTING_INVITEE","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":467,"at":"2026-11-17T10:03:21.408Z","operation":"QA app GET /api/portal/dashboard","charges":{"reads":1},"cleanup":false}
+{"seq":468,"at":"2026-11-17T10:03:21.709Z","operation":"QA app GET /api/portal/billing","charges":{"reads":1},"cleanup":false}
+{"seq":469,"at":"2026-11-17T10:03:22.101Z","operation":"actual owner Undo cancellation last store","charges":{"provider_mutations":2},"cleanup":false}
+{"seq":470,"at":"2026-11-17T10:03:22.102Z","operation":"QA app POST /api/billing/undo-cancel","charges":{"reads":1},"cleanup":false}
+{"seq":471,"at":"2026-11-17T10:03:31.757Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":469,"at":"2026-11-17T10:03:39.194Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":472,"at":"2026-11-17T10:04:59.377Z","operation":"QA exact-ID operator store-admin-set","charges":{"reads":1},"cleanup":false}
+{"seq":473,"at":"2026-11-17T10:05:07.968Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":474,"at":"2026-11-17T10:05:11.674Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":475,"at":"2026-11-17T10:05:13.794Z","operation":"readonly failing card attach","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":475,"at":"2026-11-17T10:05:14.432Z","result":{"ok":true,"id":"pm_1UcjGHGnEQDyu3RRbBLno8hw","status":null}}
+{"seq":476,"at":"2026-11-17T10:05:14.433Z","operation":"readonly default failing card","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":476,"at":"2026-11-17T10:05:14.799Z","result":{"ok":true,"id":"cus_Ve0v0K7v4FPDJq","status":null}}
+{"seq":477,"at":"2026-11-17T10:05:14.800Z","operation":"readonly clock advance renewal","charges":{"provider_mutations":1,"attempted_cents":9900},"cleanup":false}
+{"seq":477,"at":"2026-11-17T10:05:15.150Z","result":{"ok":true,"id":"clock_1UcitkGnEQDyu3RR1xFBf7ZT","status":"advancing"}}
+{"seq":478,"at":"2026-11-17T10:05:20.004Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":479,"at":"2026-11-17T10:05:24.352Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":480,"at":"2026-11-17T10:05:24.960Z","operation":"QA app GET /api/billing/overview","charges":{"reads":1},"cleanup":false}
+{"seq":481,"at":"2026-11-17T10:05:28.758Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":482,"at":"2026-11-17T10:05:43.233Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":483,"at":"2026-11-17T10:05:46.911Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":484,"at":"2026-11-17T10:05:49.549Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":485,"at":"2026-11-17T10:05:50.765Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":486,"at":"2026-11-17T10:05:51.100Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":487,"at":"2026-11-17T10:05:51.288Z","operation":"actual due billing notice controlled QA recipient","charges":{"email_attempts":1},"cleanup":false}
+{"seq":488,"at":"2026-11-17T10:05:55.193Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":489,"at":"2026-11-17T10:05:57.446Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":490,"at":"2026-11-17T10:05:57.582Z","operation":"readonly clock advance day5","charges":{"provider_mutations":1,"attempted_cents":19800},"cleanup":false}
+{"seq":490,"at":"2026-11-17T10:05:57.942Z","result":{"ok":true,"id":"clock_1UcitkGnEQDyu3RR1xFBf7ZT","status":"advancing"}}
+{"seq":491,"at":"2026-11-17T10:06:12.262Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":492,"at":"2026-11-17T10:06:14.949Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":493,"at":"2026-11-17T10:06:15.196Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":494,"at":"2026-11-17T10:06:18.619Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":495,"at":"2026-11-17T10:06:19.240Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":496,"at":"2026-11-17T10:06:19.997Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":497,"at":"2026-11-17T10:06:20.294Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":498,"at":"2026-11-17T10:06:20.587Z","operation":"actual due billing notice controlled QA recipient","charges":{"email_attempts":1},"cleanup":false}
+{"seq":499,"at":"2026-11-17T10:06:23.100Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":500,"at":"2026-11-17T10:06:23.166Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":501,"at":"2026-11-17T10:06:23.225Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":502,"at":"2026-11-17T10:06:23.288Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":503,"at":"2026-11-17T10:06:23.350Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":504,"at":"2026-11-17T10:06:23.411Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":505,"at":"2026-11-17T10:06:23.847Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":506,"at":"2026-11-17T10:06:23.921Z","operation":"readonly clock advance day7","charges":{"provider_mutations":1,"attempted_cents":19800},"cleanup":false}
+{"seq":506,"at":"2026-11-17T10:06:24.278Z","result":{"ok":true,"id":"clock_1UcitkGnEQDyu3RR1xFBf7ZT","status":"advancing"}}
+{"seq":507,"at":"2026-11-17T10:06:33.475Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":508,"at":"2026-11-17T10:06:38.259Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":509,"at":"2026-11-17T10:06:38.330Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":510,"at":"2026-11-17T10:06:38.437Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":511,"at":"2026-11-17T10:06:38.510Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":512,"at":"2026-11-17T10:06:38.593Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":513,"at":"2026-11-17T10:06:39.011Z","operation":"real member userJWT readonly proof","charges":{"sign_ins":1},"cleanup":false}
+{"seq":514,"at":"2026-11-17T10:06:39.504Z","operation":"QA app POST /api/stores/a8298a96-2316-4193-956a-b7306d9829fc/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":515,"at":"2026-11-17T10:06:39.860Z","operation":"QA app POST /api/stores/a8298a96-2316-4193-956a-b7306d9829fc/members/3bf1d010-d726-4d65-8649-2802b98bfd67/remove","charges":{"reads":1},"cleanup":false}
+{"seq":516,"at":"2026-11-17T10:06:40.277Z","operation":"QA password login pp:STORE_ADMIN","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":517,"at":"2026-11-17T10:06:40.523Z","operation":"QA app GET /api/billing/overview","charges":{"reads":1},"cleanup":false}
+{"seq":518,"at":"2026-11-17T10:06:41.618Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":519,"at":"2026-11-17T10:06:42.042Z","operation":"readonly recovery default visa","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":519,"at":"2026-11-17T10:06:42.430Z","result":{"ok":true,"id":"cus_Ve0v0K7v4FPDJq","status":null}}
+{"seq":520,"at":"2026-11-17T10:06:42.431Z","operation":"readonly recovery SAME invoice","charges":{"provider_mutations":1,"pay_or_hosted":1,"attempted_cents":9900},"cleanup":false}
+{"seq":520,"at":"2026-11-17T10:06:44.377Z","result":{"ok":true,"id":"in_1UcjGLGnEQDyu3RRtvWLEuNB","status":"paid"}}
+{"seq":521,"at":"2026-11-17T10:06:44.377Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":522,"at":"2026-11-17T10:06:45.474Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":523,"at":"2026-11-17T10:06:46.559Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":524,"at":"2026-11-17T10:06:47.629Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":525,"at":"2026-11-17T10:06:48.699Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":526,"at":"2026-11-17T10:06:49.759Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":527,"at":"2026-11-17T10:06:50.830Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":528,"at":"2026-11-17T10:06:51.914Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":529,"at":"2026-11-17T10:06:53.041Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":530,"at":"2026-11-17T10:06:54.110Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":531,"at":"2026-11-17T10:06:55.177Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":532,"at":"2026-11-17T10:06:56.270Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":533,"at":"2026-11-17T10:06:57.343Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":534,"at":"2026-11-17T10:06:58.405Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":535,"at":"2026-11-17T10:06:59.480Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":536,"at":"2026-11-17T10:07:00.557Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":537,"at":"2026-11-17T10:07:01.628Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":538,"at":"2026-11-17T10:07:02.696Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":539,"at":"2026-11-17T10:07:03.760Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":540,"at":"2026-11-17T10:07:04.831Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":541,"at":"2026-11-17T10:07:05.894Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":542,"at":"2026-11-17T10:07:05.958Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":543,"at":"2026-11-17T10:07:08.187Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":544,"at":"2026-11-17T10:07:08.270Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":545,"at":"2026-11-17T10:07:08.364Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":546,"at":"2026-11-17T10:07:10.993Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":547,"at":"2026-11-17T10:07:11.071Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":548,"at":"2026-11-17T10:07:12.590Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":549,"at":"2026-11-17T10:07:15.254Z","operation":"QA exact-ID operator removed-store-reactivate","charges":{"reads":1},"cleanup":false}
+{"seq":550,"at":"2026-11-17T10:07:15.415Z","operation":"QA exact-ID operator removed-store-reactivate","charges":{"reads":1},"cleanup":false}
+{"seq":551,"at":"2026-11-17T10:07:15.651Z","operation":"QA exact-ID operator removed-store-reactivate","charges":{"reads":1},"cleanup":false}
+{"seq":552,"at":"2026-11-17T10:07:15.891Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":553,"at":"2026-11-17T10:08:59.761Z","operation":"second failure fixture card attach","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":553,"at":"2026-11-17T10:09:00.403Z","result":{"ok":true,"id":"pm_1UcjJvGnEQDyu3RRZ8zqQFsb","status":null}}
+{"seq":554,"at":"2026-11-17T10:09:00.404Z","operation":"second failure fixture select fail","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":554,"at":"2026-11-17T10:09:00.795Z","result":{"ok":true,"id":"cus_Ve0v0K7v4FPDJq","status":null}}
+{"seq":555,"at":"2026-11-17T10:09:00.796Z","operation":"second renewal clock advance, predicted9900failed","charges":{"provider_mutations":1,"attempted_cents":9900},"cleanup":false}
+{"seq":555,"at":"2026-11-17T10:09:01.168Z","result":{"ok":true,"id":"clock_1UcitkGnEQDyu3RR1xFBf7ZT","status":"advancing"}}
+{"seq":556,"at":"2026-11-17T10:09:14.427Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":557,"at":"2026-11-17T10:09:15.059Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":558,"at":"2026-11-17T10:09:15.182Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":559,"at":"2026-11-17T10:09:15.271Z","operation":"second recovery default visa","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":559,"at":"2026-11-17T10:09:15.668Z","result":{"ok":true,"id":"cus_Ve0v0K7v4FPDJq","status":null}}
+{"seq":560,"at":"2026-11-17T10:09:15.669Z","operation":"second recovery pays SAME delinquent invoice9900","charges":{"provider_mutations":1,"pay_or_hosted":1,"attempted_cents":9900},"cleanup":false}
+{"seq":560,"at":"2026-11-17T10:09:19.389Z","result":{"ok":true,"id":"in_1UcjK3GnEQDyu3RR06WbyVWc","status":"paid"}}
+{"seq":561,"at":"2026-11-17T10:09:19.390Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":562,"at":"2026-11-17T10:09:20.700Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":563,"at":"2026-11-17T10:09:21.114Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":564,"at":"2026-11-17T10:09:22.095Z","operation":"real old failure provider event redelivery after recovery","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":564,"at":"2026-11-17T10:09:23.578Z","result":{"ok":true,"id":null,"status":null}}
+{"seq":565,"at":"2026-11-17T10:09:27.584Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":566,"at":"2026-11-17T10:09:27.707Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":567,"at":"2026-11-17T10:10:52.385Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":568,"at":"2026-11-17T10:10:53.328Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":569,"at":"2026-11-17T10:12:25.685Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":570,"at":"2026-11-17T10:12:26.810Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":571,"at":"2026-11-17T10:12:57.362Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":572,"at":"2026-11-17T10:14:34.784Z","operation":"QA password login pp:OWNER_A","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":573,"at":"2026-11-17T10:15:49.607Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":574,"at":"2026-11-17T10:15:50.391Z","operation":"pre-effective transfer authorize absolute quantity decrement","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":575,"at":"2026-11-17T10:15:50.393Z","operation":"QA exact-ID operator store-transfer-authorize","charges":{"reads":1},"cleanup":false}
+{"seq":574,"at":"2026-11-17T10:15:51.258Z","result":{"ok":true,"id":null,"status":409}}
+{"seq":576,"at":"2026-11-17T10:15:51.259Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":577,"at":"2026-11-17T10:16:33.815Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":578,"at":"2026-11-17T10:16:47.433Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":579,"at":"2026-11-17T10:16:50.387Z","operation":"pre-effective transfer authorize absolute quantity decrement","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":580,"at":"2026-11-17T10:16:50.388Z","operation":"QA exact-ID operator store-transfer-authorize","charges":{"reads":1},"cleanup":false}
+{"seq":579,"at":"2026-11-17T10:16:53.357Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":581,"at":"2026-11-17T10:16:53.360Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":582,"at":"2026-11-17T10:16:53.735Z","operation":"QA exact-ID operator store-transfer-complete","charges":{"reads":1},"cleanup":false}
+{"seq":583,"at":"2026-11-17T10:16:53.957Z","operation":"pre-effective transfer cancel quantity restoration","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":584,"at":"2026-11-17T10:16:53.957Z","operation":"QA exact-ID operator store-transfer-cancel","charges":{"reads":1},"cleanup":false}
+{"seq":583,"at":"2026-11-17T10:16:55.541Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":585,"at":"2026-11-17T10:16:55.542Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":586,"at":"2026-11-17T10:16:55.873Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":587,"at":"2026-11-17T10:18:01.624Z","operation":"controlled negative webhook missing signature","charges":{"reads":1},"cleanup":false}
+{"seq":588,"at":"2026-11-17T10:18:01.659Z","operation":"controlled negative webhook wrong secret","charges":{"reads":1},"cleanup":false}
+{"seq":589,"at":"2026-11-17T10:18:01.668Z","operation":"controlled negative webhook mutated body","charges":{"reads":1},"cleanup":false}
+{"seq":590,"at":"2026-11-17T10:18:01.673Z","operation":"controlled negative webhook stale timestamp","charges":{"reads":1},"cleanup":false}
+{"seq":591,"at":"2026-11-17T10:18:01.679Z","operation":"controlled negative webhook live mode rejected before durable receipt","charges":{"reads":1},"cleanup":false}
+{"seq":592,"at":"2026-11-17T10:18:01.684Z","operation":"controlled negative webhook wrong sandbox account rejected before durable receipt","charges":{"reads":1},"cleanup":false}
+{"seq":593,"at":"2026-11-17T10:18:01.690Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":594,"at":"2026-11-17T10:25:32.806Z","operation":"S2 crash helper actual password login and bounded direct-read slots","charges":{"sign_ins":1,"reads":100},"cleanup":false}
+{"seq":595,"at":"2026-11-17T10:25:46.492Z","operation":"CR:qa-final-s2:s2: s2 attach 3DS card","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":595,"at":"2026-11-17T10:25:47.135Z","result":{"ok":true,"request_id":"req_cwK0ohVkOKa7lA","object":{"id":"pm_1UcjaAGnEQDyu3RRu8JhTukE","object":"payment_method","customer":"cus_Ve0Z5kYb2AIQYm"}}}
+{"seq":596,"at":"2026-11-17T10:25:47.136Z","operation":"CR:qa-final-s2:s2: s2 default 3DS card","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":596,"at":"2026-11-17T10:25:47.505Z","result":{"ok":true,"request_id":"req_TT5J5cE25MZjH6","object":{"id":"cus_Ve0Z5kYb2AIQYm","object":"customer"}}}
+{"seq":597,"at":"2026-11-17T10:25:47.505Z","operation":"CR:qa-final-s2:s2: s2: product confirm → invoice/item/finalize + ONE API pay attempt (4892)","charges":{"pay_or_hosted":1,"attempted_cents":4892,"provider_mutations":5},"cleanup":false}
+{"seq":597,"at":"2026-11-17T10:26:01.887Z","result":{"ok":true,"scenario":"s2","kill_stage":"payment_pending (idle server)","confirm_client":{"http":200,"state":"payment_pending"}}}
+{"seq":598,"at":"2026-11-17T10:26:05.252Z","operation":"CR:qa-final-s2:s2: s2: BROWSER hosted invoice submission + 3DS test challenge while the Portal is DOWN (4892)","charges":{"pay_or_hosted":1,"attempted_cents":4892,"provider_mutations":1},"cleanup":false}
+{"seq":598,"at":"2026-11-17T10:26:32.305Z","result":{"ok":true,"challenge_clicked":true,"portal_listening_during_payment":false}}
+{"seq":599,"at":"2026-11-17T10:26:48.087Z","operation":"CR:qa-final-s2:s2: provider real event resend after owned crash","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":599,"at":"2026-11-17T10:26:50.273Z","result":{"exit":0}}
+{"seq":600,"at":"2026-11-17T10:26:53.279Z","operation":"CR:qa-final-s2:s2: provider real event resend after owned crash","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":600,"at":"2026-11-17T10:26:54.667Z","result":{"exit":0}}
+{"seq":601,"at":"2026-11-17T10:28:42.120Z","operation":"one existing QA actor password login plus cross-app minted session","charges":{"sign_ins":2,"reads":30},"cleanup":false}
+{"seq":602,"at":"2026-11-17T10:29:10.158Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":603,"at":"2026-11-17T10:29:12.519Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":604,"at":"2026-11-17T10:29:12.630Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":605,"at":"2026-11-17T10:29:12.734Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":606,"at":"2026-11-17T10:29:12.834Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":607,"at":"2026-11-17T10:29:12.917Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":608,"at":"2026-11-17T10:29:13.062Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":609,"at":"2026-11-17T10:29:13.135Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":610,"at":"2026-11-17T10:29:13.200Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":611,"at":"2026-11-17T10:29:13.272Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":612,"at":"2026-11-17T10:29:13.346Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":613,"at":"2026-11-17T10:29:13.408Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":614,"at":"2026-11-17T10:29:13.478Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":615,"at":"2026-11-17T10:29:13.551Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":616,"at":"2026-11-17T10:29:13.616Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":617,"at":"2026-11-17T10:29:13.676Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":618,"at":"2026-11-17T10:29:13.741Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":619,"at":"2026-11-17T10:29:13.809Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":620,"at":"2026-11-17T10:29:13.875Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":621,"at":"2026-11-17T10:29:13.937Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":622,"at":"2026-11-17T10:29:14.001Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":623,"at":"2026-11-17T10:29:14.079Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":624,"at":"2026-11-17T10:29:14.141Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":625,"at":"2026-11-17T10:29:14.203Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":626,"at":"2026-11-17T10:29:14.260Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":627,"at":"2026-11-17T10:29:14.374Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":628,"at":"2026-11-17T10:29:14.461Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":629,"at":"2026-11-17T10:29:14.534Z","operation":"retained late operation provider refund-read proof","charges":{"reads":3},"cleanup":false}
+{"seq":630,"at":"2026-11-17T10:30:51.236Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":631,"at":"2026-11-17T10:30:53.253Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":632,"at":"2026-11-17T10:30:53.462Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":633,"at":"2026-11-17T10:30:53.752Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":634,"at":"2026-11-17T10:30:54.062Z","operation":"QA exact-ID operator owner-replace","charges":{"reads":1},"cleanup":false}
+{"seq":635,"at":"2026-11-17T10:30:54.723Z","operation":"QA exact-ID operator owner-replace","charges":{"reads":1},"cleanup":false}
+{"seq":636,"at":"2026-11-17T10:30:55.055Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":637,"at":"2026-11-17T10:30:55.173Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":638,"at":"2026-11-17T10:31:33.622Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":639,"at":"2026-11-17T10:31:36.918Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":640,"at":"2026-11-17T10:31:37.159Z","operation":"QA password login ob:STORE_ADMIN","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":641,"at":"2026-11-17T10:31:38.081Z","operation":"QA app POST /api/invitations/73236bf3-3bda-4191-8e22-91d9c7779289/accept","charges":{"reads":1},"cleanup":false}
+{"seq":642,"at":"2026-11-17T10:31:38.503Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":643,"at":"2026-11-17T10:31:39.757Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":644,"at":"2026-11-17T10:31:39.913Z","operation":"QA password login ob:FOREIGN_OWNER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":645,"at":"2026-11-17T10:31:40.302Z","operation":"QA app POST /api/invitations/26816a4d-7384-46b1-9ebe-ae8747c6c64f/accept","charges":{"reads":1},"cleanup":false}
+{"seq":646,"at":"2026-11-17T10:31:40.616Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":647,"at":"2026-11-17T10:31:40.973Z","operation":"QA exact-ID operator store-admin-set","charges":{"reads":1},"cleanup":false}
+{"seq":648,"at":"2026-11-17T10:31:41.251Z","operation":"QA password login ob:MEMBER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":649,"at":"2026-11-17T10:31:41.513Z","operation":"QA app POST /api/invitations/4237f144-ccf0-4f1d-ac5f-192f08fa724b/accept","charges":{"reads":1},"cleanup":false}
+{"seq":650,"at":"2026-11-17T10:31:41.725Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":651,"at":"2026-11-17T10:31:41.794Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":652,"at":"2026-11-17T10:31:43.931Z","operation":"QA password login ob:OWNER_B","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":653,"at":"2026-11-17T10:31:44.175Z","operation":"QA app POST /api/stores/7ceb8ce6-c2a2-4055-aed0-98c94d919d65/members/f589730b-9547-4f0c-bae2-a827f8ea492a/remove","charges":{"reads":1},"cleanup":false}
+{"seq":654,"at":"2026-11-17T10:31:44.433Z","operation":"QA app POST /api/stores/7ceb8ce6-c2a2-4055-aed0-98c94d919d65/members/f589730b-9547-4f0c-bae2-a827f8ea492a/remove","charges":{"reads":1},"cleanup":false}
+{"seq":655,"at":"2026-11-17T10:31:44.679Z","operation":"QA app POST /api/stores/7ceb8ce6-c2a2-4055-aed0-98c94d919d65/members/f589730b-9547-4f0c-bae2-a827f8ea492a/remove","charges":{"reads":1},"cleanup":false}
+{"seq":656,"at":"2026-11-17T10:31:44.883Z","operation":"QA app POST /api/stores/7ceb8ce6-c2a2-4055-aed0-98c94d919d65/members/f589730b-9547-4f0c-bae2-a827f8ea492a/remove","charges":{"reads":1},"cleanup":false}
+{"seq":657,"at":"2026-11-17T10:32:47.621Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":658,"at":"2026-11-17T10:33:00.217Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":659,"at":"2026-11-17T10:33:02.592Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":660,"at":"2026-11-17T10:33:02.832Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":661,"at":"2026-11-17T10:33:03.058Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":662,"at":"2026-11-17T10:33:03.259Z","operation":"QA exact-ID operator owner-replace","charges":{"reads":1},"cleanup":false}
+{"seq":663,"at":"2026-11-17T10:33:08.006Z","operation":"QA exact-ID operator owner-replace","charges":{"reads":1},"cleanup":false}
+{"seq":664,"at":"2026-11-17T10:33:08.168Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":665,"at":"2026-11-17T10:33:08.288Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":666,"at":"2026-11-17T10:33:08.416Z","operation":"owner-replace provider update intentional missing customer","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":667,"at":"2026-11-17T10:33:08.416Z","operation":"QA exact-ID operator owner-replace","charges":{"reads":1},"cleanup":false}
+{"seq":666,"at":"2026-11-17T10:33:09.493Z","result":{"ok":true,"id":null,"status":502}}
+{"seq":668,"at":"2026-11-17T10:33:09.494Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":669,"at":"2026-11-17T10:33:09.566Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":670,"at":"2026-11-17T10:33:09.628Z","operation":"QA password login pp:FOREIGN_OWNER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":671,"at":"2026-11-17T10:33:10.057Z","operation":"QA app GET /api/billing/overview","charges":{"reads":1},"cleanup":false}
+{"seq":672,"at":"2026-11-17T10:33:10.332Z","operation":"owner-replace provider step resume after binding restored","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":673,"at":"2026-11-17T10:33:10.333Z","operation":"QA exact-ID operator owner-replace","charges":{"reads":1},"cleanup":false}
+{"seq":672,"at":"2026-11-17T10:33:11.032Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":674,"at":"2026-11-17T10:33:11.514Z","operation":"restore QA foreign owner via exact authorized recovery","charges":{"provider_mutations":1},"cleanup":false}
+{"seq":675,"at":"2026-11-17T10:33:11.516Z","operation":"QA exact-ID operator owner-replace","charges":{"reads":1},"cleanup":false}
+{"seq":674,"at":"2026-11-17T10:33:12.256Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":676,"at":"2026-11-17T10:33:12.257Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":677,"at":"2026-11-17T10:33:12.321Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":678,"at":"2026-11-17T10:33:13.215Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":679,"at":"2026-11-17T10:33:13.283Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":680,"at":"2026-11-17T10:36:17.900Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":681,"at":"2026-11-17T10:36:26.287Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":682,"at":"2026-11-17T10:36:26.635Z","operation":"QA app GET /api/stores/operations","charges":{"reads":1},"cleanup":false}
+{"seq":683,"at":"2026-11-17T10:36:27.175Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":684,"at":"2026-11-17T10:36:27.819Z","operation":"read-only provider validation of existing QA session ob:OWNER_A","charges":{"reads":1},"cleanup":false}
+{"seq":685,"at":"2026-11-17T10:36:28.464Z","operation":"QA app GET /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":686,"at":"2026-11-17T10:36:29.303Z","operation":"QA app GET /api/invitations/mine","charges":{"reads":1},"cleanup":false}
+{"seq":687,"at":"2026-11-17T10:36:29.831Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":688,"at":"2026-11-17T10:36:30.223Z","operation":"QA app POST /api/webhooks/stripe","charges":{"reads":1},"cleanup":false}
+{"seq":689,"at":"2026-11-17T10:36:30.296Z","operation":"QA app POST /api/internal/jobs/run","charges":{"reads":1},"cleanup":false}
+{"seq":690,"at":"2026-11-17T10:36:30.374Z","operation":"QA app GET /api/operator/operations","charges":{"reads":1},"cleanup":false}
+{"seq":691,"at":"2026-11-17T10:36:30.688Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":692,"at":"2026-11-17T10:36:30.817Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":693,"at":"2026-11-17T10:36:31.380Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":694,"at":"2026-11-17T10:36:31.868Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/revoke","charges":{"reads":1},"cleanup":false}
+{"seq":695,"at":"2026-11-17T10:36:32.248Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/accept","charges":{"reads":1},"cleanup":false}
+{"seq":696,"at":"2026-11-17T10:36:32.683Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/decline","charges":{"reads":1},"cleanup":false}
+{"seq":697,"at":"2026-11-17T10:36:33.131Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":698,"at":"2026-11-17T10:36:33.559Z","operation":"QA password login pp:OWNER_B","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":699,"at":"2026-11-17T10:36:34.108Z","operation":"QA app GET /api/stores/operations","charges":{"reads":1},"cleanup":false}
+{"seq":700,"at":"2026-11-17T10:36:34.330Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":701,"at":"2026-11-17T10:36:34.518Z","operation":"QA app GET /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":702,"at":"2026-11-17T10:36:34.747Z","operation":"QA app GET /api/invitations/mine","charges":{"reads":1},"cleanup":false}
+{"seq":703,"at":"2026-11-17T10:36:34.976Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":704,"at":"2026-11-17T10:36:35.194Z","operation":"QA app POST /api/webhooks/stripe","charges":{"reads":1},"cleanup":false}
+{"seq":705,"at":"2026-11-17T10:36:35.261Z","operation":"QA app POST /api/internal/jobs/run","charges":{"reads":1},"cleanup":false}
+{"seq":706,"at":"2026-11-17T10:36:35.328Z","operation":"QA app GET /api/operator/operations","charges":{"reads":1},"cleanup":false}
+{"seq":707,"at":"2026-11-17T10:36:35.400Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":708,"at":"2026-11-17T10:36:35.471Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":709,"at":"2026-11-17T10:36:35.684Z","operation":"QA app POST /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":710,"at":"2026-11-17T10:36:36.408Z","operation":"QA app POST /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":711,"at":"2026-11-17T10:36:36.756Z","operation":"QA app POST /api/stores/add/abandon","charges":{"reads":1},"cleanup":false}
+{"seq":712,"at":"2026-11-17T10:36:37.099Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal","charges":{"reads":1},"cleanup":false}
+{"seq":713,"at":"2026-11-17T10:36:40.287Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":714,"at":"2026-11-17T10:36:40.920Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":715,"at":"2026-11-17T10:36:41.128Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":716,"at":"2026-11-17T10:36:41.321Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":717,"at":"2026-11-17T10:36:41.514Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/revoke","charges":{"reads":1},"cleanup":false}
+{"seq":718,"at":"2026-11-17T10:36:41.698Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/accept","charges":{"reads":1},"cleanup":false}
+{"seq":719,"at":"2026-11-17T10:36:41.894Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/decline","charges":{"reads":1},"cleanup":false}
+{"seq":720,"at":"2026-11-17T10:36:42.102Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":721,"at":"2026-11-17T10:36:42.265Z","operation":"read-only provider validation of existing QA session pp:STORE_ADMIN","charges":{"reads":1},"cleanup":false}
+{"seq":722,"at":"2026-11-17T10:36:44.410Z","operation":"QA app GET /api/stores/operations","charges":{"reads":1},"cleanup":false}
+{"seq":723,"at":"2026-11-17T10:36:44.667Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":724,"at":"2026-11-17T10:36:44.780Z","operation":"QA app GET /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":725,"at":"2026-11-17T10:36:45.040Z","operation":"QA app GET /api/invitations/mine","charges":{"reads":1},"cleanup":false}
+{"seq":726,"at":"2026-11-17T10:36:45.292Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":727,"at":"2026-11-17T10:36:45.615Z","operation":"QA app POST /api/webhooks/stripe","charges":{"reads":1},"cleanup":false}
+{"seq":728,"at":"2026-11-17T10:36:45.679Z","operation":"QA app POST /api/internal/jobs/run","charges":{"reads":1},"cleanup":false}
+{"seq":729,"at":"2026-11-17T10:36:45.738Z","operation":"QA app GET /api/operator/operations","charges":{"reads":1},"cleanup":false}
+{"seq":730,"at":"2026-11-17T10:36:45.802Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":731,"at":"2026-11-17T10:36:45.869Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":732,"at":"2026-11-17T10:36:46.076Z","operation":"QA app POST /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":733,"at":"2026-11-17T10:36:46.423Z","operation":"QA app POST /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":734,"at":"2026-11-17T10:36:46.760Z","operation":"QA app POST /api/stores/add/abandon","charges":{"reads":1},"cleanup":false}
+{"seq":735,"at":"2026-11-17T10:36:47.076Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal","charges":{"reads":1},"cleanup":false}
+{"seq":736,"at":"2026-11-17T10:36:47.728Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":737,"at":"2026-11-17T10:36:48.401Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":738,"at":"2026-11-17T10:36:48.603Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":739,"at":"2026-11-17T10:36:48.794Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/revoke","charges":{"reads":1},"cleanup":false}
+{"seq":740,"at":"2026-11-17T10:36:48.976Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/accept","charges":{"reads":1},"cleanup":false}
+{"seq":741,"at":"2026-11-17T10:36:49.180Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/decline","charges":{"reads":1},"cleanup":false}
+{"seq":742,"at":"2026-11-17T10:36:49.377Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":743,"at":"2026-11-17T10:36:51.524Z","operation":"QA password login pp:MEMBER","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":744,"at":"2026-11-17T10:36:51.792Z","operation":"QA app GET /api/stores/operations","charges":{"reads":1},"cleanup":false}
+{"seq":745,"at":"2026-11-17T10:36:51.983Z","operation":"QA app GET /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":746,"at":"2026-11-17T10:36:52.186Z","operation":"QA app GET /api/invitations/mine","charges":{"reads":1},"cleanup":false}
+{"seq":747,"at":"2026-11-17T10:36:52.378Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":748,"at":"2026-11-17T10:36:52.569Z","operation":"QA app POST /api/webhooks/stripe","charges":{"reads":1},"cleanup":false}
+{"seq":749,"at":"2026-11-17T10:36:52.640Z","operation":"QA app POST /api/internal/jobs/run","charges":{"reads":1},"cleanup":false}
+{"seq":750,"at":"2026-11-17T10:36:52.699Z","operation":"QA app GET /api/operator/operations","charges":{"reads":1},"cleanup":false}
+{"seq":751,"at":"2026-11-17T10:36:52.765Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":752,"at":"2026-11-17T10:36:52.830Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":753,"at":"2026-11-17T10:36:53.014Z","operation":"QA app POST /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":754,"at":"2026-11-17T10:36:53.215Z","operation":"QA app POST /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":755,"at":"2026-11-17T10:36:53.415Z","operation":"QA app POST /api/stores/add/abandon","charges":{"reads":1},"cleanup":false}
+{"seq":756,"at":"2026-11-17T10:36:53.607Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal","charges":{"reads":1},"cleanup":false}
+{"seq":757,"at":"2026-11-17T10:36:53.783Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":758,"at":"2026-11-17T10:36:53.970Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":759,"at":"2026-11-17T10:36:54.160Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":760,"at":"2026-11-17T10:36:54.343Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":761,"at":"2026-11-17T10:36:54.539Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/revoke","charges":{"reads":1},"cleanup":false}
+{"seq":762,"at":"2026-11-17T10:36:54.727Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/accept","charges":{"reads":1},"cleanup":false}
+{"seq":763,"at":"2026-11-17T10:36:54.912Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/decline","charges":{"reads":1},"cleanup":false}
+{"seq":764,"at":"2026-11-17T10:36:55.099Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":765,"at":"2026-11-17T10:36:55.161Z","operation":"QA app GET /api/stores/operations","charges":{"reads":1},"cleanup":false}
+{"seq":766,"at":"2026-11-17T10:36:55.341Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":767,"at":"2026-11-17T10:36:55.410Z","operation":"QA app GET /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":768,"at":"2026-11-17T10:36:55.590Z","operation":"QA app GET /api/invitations/mine","charges":{"reads":1},"cleanup":false}
+{"seq":769,"at":"2026-11-17T10:36:55.779Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":770,"at":"2026-11-17T10:36:55.965Z","operation":"QA app POST /api/webhooks/stripe","charges":{"reads":1},"cleanup":false}
+{"seq":771,"at":"2026-11-17T10:36:56.026Z","operation":"QA app POST /api/internal/jobs/run","charges":{"reads":1},"cleanup":false}
+{"seq":772,"at":"2026-11-17T10:36:56.095Z","operation":"QA app GET /api/operator/operations","charges":{"reads":1},"cleanup":false}
+{"seq":773,"at":"2026-11-17T10:36:56.171Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":774,"at":"2026-11-17T10:36:56.233Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":775,"at":"2026-11-17T10:36:56.442Z","operation":"QA app POST /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":776,"at":"2026-11-17T10:36:56.761Z","operation":"QA app POST /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":777,"at":"2026-11-17T10:36:57.088Z","operation":"QA app POST /api/stores/add/abandon","charges":{"reads":1},"cleanup":false}
+{"seq":778,"at":"2026-11-17T10:36:57.409Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal","charges":{"reads":1},"cleanup":false}
+{"seq":779,"at":"2026-11-17T10:36:58.036Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":780,"at":"2026-11-17T10:36:58.626Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":781,"at":"2026-11-17T10:36:58.813Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":782,"at":"2026-11-17T10:36:59.009Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":783,"at":"2026-11-17T10:36:59.191Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/revoke","charges":{"reads":1},"cleanup":false}
+{"seq":784,"at":"2026-11-17T10:36:59.486Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/accept","charges":{"reads":1},"cleanup":false}
+{"seq":785,"at":"2026-11-17T10:36:59.678Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/decline","charges":{"reads":1},"cleanup":false}
+{"seq":786,"at":"2026-11-17T10:36:59.870Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":787,"at":"2026-11-17T10:36:59.961Z","operation":"QA password login pp:EXISTING_INVITEE","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":788,"at":"2026-11-17T10:37:00.203Z","operation":"QA app GET /api/stores/operations","charges":{"reads":1},"cleanup":false}
+{"seq":789,"at":"2026-11-17T10:37:00.398Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":790,"at":"2026-11-17T10:37:00.457Z","operation":"QA password login ob:EXISTING_INVITEE","charges":{"sign_ins":1,"reads":1},"cleanup":false}
+{"seq":791,"at":"2026-11-17T10:37:00.672Z","operation":"QA app GET /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":792,"at":"2026-11-17T10:37:00.861Z","operation":"QA app GET /api/invitations/mine","charges":{"reads":1},"cleanup":false}
+{"seq":793,"at":"2026-11-17T10:37:01.046Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":794,"at":"2026-11-17T10:37:01.244Z","operation":"QA app POST /api/webhooks/stripe","charges":{"reads":1},"cleanup":false}
+{"seq":795,"at":"2026-11-17T10:37:01.315Z","operation":"QA app POST /api/internal/jobs/run","charges":{"reads":1},"cleanup":false}
+{"seq":796,"at":"2026-11-17T10:37:01.376Z","operation":"QA app GET /api/operator/operations","charges":{"reads":1},"cleanup":false}
+{"seq":797,"at":"2026-11-17T10:37:01.442Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":798,"at":"2026-11-17T10:37:01.529Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":799,"at":"2026-11-17T10:37:01.716Z","operation":"QA app POST /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":800,"at":"2026-11-17T10:37:02.029Z","operation":"QA app POST /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":801,"at":"2026-11-17T10:37:02.343Z","operation":"QA app POST /api/stores/add/abandon","charges":{"reads":1},"cleanup":false}
+{"seq":802,"at":"2026-11-17T10:37:02.666Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal","charges":{"reads":1},"cleanup":false}
+{"seq":803,"at":"2026-11-17T10:37:03.287Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":804,"at":"2026-11-17T10:37:03.922Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":805,"at":"2026-11-17T10:37:04.117Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":806,"at":"2026-11-17T10:37:04.305Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":807,"at":"2026-11-17T10:37:04.490Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/revoke","charges":{"reads":1},"cleanup":false}
+{"seq":808,"at":"2026-11-17T10:37:04.677Z","operation":"QA app GET /api/stores/operations","charges":{"reads":1},"cleanup":false}
+{"seq":809,"at":"2026-11-17T10:37:04.688Z","operation":"QA app GET /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":810,"at":"2026-11-17T10:37:04.694Z","operation":"QA app GET /api/invitations/mine","charges":{"reads":1},"cleanup":false}
+{"seq":811,"at":"2026-11-17T10:37:04.699Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":812,"at":"2026-11-17T10:37:04.703Z","operation":"QA app POST /api/webhooks/stripe","charges":{"reads":1},"cleanup":false}
+{"seq":813,"at":"2026-11-17T10:37:04.712Z","operation":"QA app POST /api/internal/jobs/run","charges":{"reads":1},"cleanup":false}
+{"seq":814,"at":"2026-11-17T10:37:04.719Z","operation":"QA app GET /api/operator/operations","charges":{"reads":1},"cleanup":false}
+{"seq":815,"at":"2026-11-17T10:37:04.728Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":816,"at":"2026-11-17T10:37:04.735Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":817,"at":"2026-11-17T10:37:04.740Z","operation":"QA app POST /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":818,"at":"2026-11-17T10:37:04.748Z","operation":"QA app POST /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":819,"at":"2026-11-17T10:37:04.755Z","operation":"QA app POST /api/stores/add/abandon","charges":{"reads":1},"cleanup":false}
+{"seq":820,"at":"2026-11-17T10:37:04.764Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal","charges":{"reads":1},"cleanup":false}
+{"seq":821,"at":"2026-11-17T10:37:04.773Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":822,"at":"2026-11-17T10:37:04.780Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":823,"at":"2026-11-17T10:37:04.787Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":824,"at":"2026-11-17T10:37:04.794Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":825,"at":"2026-11-17T10:37:04.799Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/revoke","charges":{"reads":1},"cleanup":false}
+{"seq":826,"at":"2026-11-17T10:37:04.806Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/accept","charges":{"reads":1},"cleanup":false}
+{"seq":827,"at":"2026-11-17T10:37:04.811Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/decline","charges":{"reads":1},"cleanup":false}
+{"seq":828,"at":"2026-11-17T10:37:04.818Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/decline","charges":{"reads":1},"cleanup":false}
+{"seq":829,"at":"2026-11-17T10:37:05.025Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":830,"at":"2026-11-17T10:39:09.047Z","operation":"checkpoint sandbox-account read","charges":{"reads":1},"cleanup":false}
+{"seq":831,"at":"2026-11-17T10:52:38.906Z","operation":"Friday grouped-session resume expected sandbox account read","charges":{"reads":1},"cleanup":false}
+{"seq":832,"at":"2026-11-17T10:58:20.784Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":833,"at":"2026-11-17T11:00:14.836Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":834,"at":"2026-11-17T11:00:17.373Z","operation":"Director requested fresh existing-user sign-in link NEW_ADMIN ob","charges":{"email_attempts":1},"cleanup":false}
+{"seq":835,"at":"2026-11-17T11:00:17.377Z","operation":"QA app POST /api/auth/link","charges":{"reads":1},"cleanup":false}
+{"seq":834,"at":"2026-11-17T11:00:20.424Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":836,"at":"2026-11-17T11:00:20.425Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":837,"at":"2026-11-17T11:00:20.504Z","operation":"Director requested fresh existing-user sign-in link NEW_MEMBER ob","charges":{"email_attempts":1},"cleanup":false}
+{"seq":838,"at":"2026-11-17T11:00:20.505Z","operation":"QA app POST /api/auth/link","charges":{"reads":1},"cleanup":false}
+{"seq":837,"at":"2026-11-17T11:00:23.408Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":839,"at":"2026-11-17T11:00:23.409Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":840,"at":"2026-11-17T11:00:23.477Z","operation":"Director requested fresh existing-user sign-in link MEMBER pp","charges":{"email_attempts":1},"cleanup":false}
+{"seq":841,"at":"2026-11-17T11:00:23.477Z","operation":"QA app POST /api/auth/link","charges":{"reads":1},"cleanup":false}
+{"seq":840,"at":"2026-11-17T11:00:27.690Z","result":{"ok":true,"id":null,"status":200}}
+{"seq":842,"at":"2026-11-17T11:00:27.691Z","operation":"read email subject/send metadata for Director checklist","charges":{"reads":1},"cleanup":false}
+{"seq":843,"at":"2026-11-17T11:02:07.425Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":844,"at":"2026-11-17T11:02:07.596Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":845,"at":"2026-11-17T11:02:07.662Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":846,"at":"2026-11-17T11:02:36.398Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":847,"at":"2026-11-17T11:02:36.847Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":848,"at":"2026-11-17T11:02:36.950Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":849,"at":"2026-11-17T11:07:33.921Z","operation":"supplied link resume sandbox account identity read","charges":{"reads":1},"cleanup":false}
+{"seq":850,"at":"2026-11-17T11:07:35.611Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":851,"at":"2026-11-17T11:07:36.566Z","operation":"actual real inbox explicit sign-in NEW_ADMIN","charges":{"sign_ins":1},"cleanup":false}
+{"seq":852,"at":"2026-11-17T11:07:39.864Z","operation":"read-only provider validation of existing QA session ob:OWNER_B","charges":{"reads":1},"cleanup":false}
+{"seq":853,"at":"2026-11-17T11:07:40.559Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":854,"at":"2026-11-17T11:07:40.832Z","operation":"actual real inbox explicit sign-in NEW_MEMBER","charges":{"sign_ins":1},"cleanup":false}
+{"seq":855,"at":"2026-11-17T11:07:41.733Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":856,"at":"2026-11-17T11:07:41.909Z","operation":"actual real inbox explicit sign-in MEMBER","charges":{"sign_ins":1},"cleanup":false}
+{"seq":857,"at":"2026-11-17T11:07:49.582Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":858,"at":"2026-11-17T11:07:54.448Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":859,"at":"2026-11-17T11:07:54.525Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":860,"at":"2026-11-17T11:07:54.595Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":861,"at":"2026-11-17T11:07:54.657Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":862,"at":"2026-11-17T11:09:04.535Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":863,"at":"2026-11-17T11:09:05.326Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":864,"at":"2026-11-17T11:09:05.524Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":865,"at":"2026-11-17T11:09:05.748Z","operation":"actual buyer JWT verify and scoped RPC reads","charges":{"reads":4},"cleanup":false}
+{"seq":866,"at":"2026-11-17T11:09:06.572Z","operation":"read-only provider validation of existing QA session ob:FOREIGN_OWNER","charges":{"reads":1},"cleanup":false}
+{"seq":867,"at":"2026-11-17T11:09:06.897Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":868,"at":"2026-11-17T11:09:07.264Z","operation":"read-only provider validation of existing QA session ob:MEMBER","charges":{"reads":1},"cleanup":false}
+{"seq":869,"at":"2026-11-17T11:09:07.337Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":870,"at":"2026-11-17T11:09:07.596Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":871,"at":"2026-11-17T11:09:07.826Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":872,"at":"2026-11-17T11:09:09.653Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":873,"at":"2026-11-17T11:09:40.282Z","operation":"actual existing recipient cross-app minted PP session NEW_ADMIN","charges":{"sign_ins":1},"cleanup":false}
+{"seq":874,"at":"2026-11-17T11:09:43.197Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":875,"at":"2026-11-17T11:09:43.631Z","operation":"actual existing recipient cross-app minted PP session NEW_MEMBER","charges":{"sign_ins":1},"cleanup":false}
+{"seq":876,"at":"2026-11-17T11:09:45.023Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":877,"at":"2026-11-17T11:10:05.724Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":878,"at":"2026-11-17T11:10:08.086Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":879,"at":"2026-11-17T11:10:10.290Z","operation":"QA app GET /api/stores/operations","charges":{"reads":1},"cleanup":false}
+{"seq":880,"at":"2026-11-17T11:11:49.385Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":881,"at":"2026-11-17T11:11:52.128Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":882,"at":"2026-11-17T11:11:52.230Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":883,"at":"2026-11-17T11:11:52.309Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":884,"at":"2026-11-17T11:11:52.588Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":885,"at":"2026-11-17T11:11:55.226Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":886,"at":"2026-11-17T11:11:55.516Z","operation":"QA app GET /api/stores/operations","charges":{"reads":1},"cleanup":false}
+{"seq":887,"at":"2026-11-17T11:11:55.885Z","operation":"QA app GET /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":888,"at":"2026-11-17T11:11:56.279Z","operation":"QA app GET /api/invitations/mine","charges":{"reads":1},"cleanup":false}
+{"seq":889,"at":"2026-11-17T11:11:56.617Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":890,"at":"2026-11-17T11:11:56.888Z","operation":"QA app POST /api/webhooks/stripe","charges":{"reads":1},"cleanup":false}
+{"seq":891,"at":"2026-11-17T11:11:56.971Z","operation":"QA app POST /api/internal/jobs/run","charges":{"reads":1},"cleanup":false}
+{"seq":892,"at":"2026-11-17T11:11:57.049Z","operation":"QA app GET /api/operator/operations","charges":{"reads":1},"cleanup":false}
+{"seq":893,"at":"2026-11-17T11:11:57.127Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":894,"at":"2026-11-17T11:11:57.198Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":895,"at":"2026-11-17T11:11:57.425Z","operation":"QA app POST /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":896,"at":"2026-11-17T11:11:57.656Z","operation":"QA app POST /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":897,"at":"2026-11-17T11:11:57.903Z","operation":"QA app POST /api/stores/add/abandon","charges":{"reads":1},"cleanup":false}
+{"seq":898,"at":"2026-11-17T11:11:58.138Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal","charges":{"reads":1},"cleanup":false}
+{"seq":899,"at":"2026-11-17T11:11:58.355Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":900,"at":"2026-11-17T11:11:58.576Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":901,"at":"2026-11-17T11:11:58.834Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":902,"at":"2026-11-17T11:11:59.058Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":903,"at":"2026-11-17T11:11:59.369Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/revoke","charges":{"reads":1},"cleanup":false}
+{"seq":904,"at":"2026-11-17T11:11:59.588Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/accept","charges":{"reads":1},"cleanup":false}
+{"seq":905,"at":"2026-11-17T11:11:59.789Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/decline","charges":{"reads":1},"cleanup":false}
+{"seq":906,"at":"2026-11-17T11:12:00.013Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":907,"at":"2026-11-17T11:12:00.170Z","operation":"QA app GET /api/stores/operations","charges":{"reads":1},"cleanup":false}
+{"seq":908,"at":"2026-11-17T11:12:00.378Z","operation":"QA app GET /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":909,"at":"2026-11-17T11:12:00.583Z","operation":"QA app GET /api/invitations/mine","charges":{"reads":1},"cleanup":false}
+{"seq":910,"at":"2026-11-17T11:12:00.794Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/members/f9021dee-2ecd-4052-ab49-e415d79078b1/remove","charges":{"reads":1},"cleanup":false}
+{"seq":911,"at":"2026-11-17T11:12:00.997Z","operation":"QA app POST /api/webhooks/stripe","charges":{"reads":1},"cleanup":false}
+{"seq":912,"at":"2026-11-17T11:12:01.067Z","operation":"QA app POST /api/internal/jobs/run","charges":{"reads":1},"cleanup":false}
+{"seq":913,"at":"2026-11-17T11:12:01.129Z","operation":"QA app GET /api/operator/operations","charges":{"reads":1},"cleanup":false}
+{"seq":914,"at":"2026-11-17T11:12:01.287Z","operation":"QA app POST /api/operator/007b","charges":{"reads":1},"cleanup":false}
+{"seq":915,"at":"2026-11-17T11:12:01.368Z","operation":"QA app GET /api/stores/214d5d76-b1f8-4166-94dd-5fdd6ef1c9d6/history","charges":{"reads":1},"cleanup":false}
+{"seq":916,"at":"2026-11-17T11:12:01.584Z","operation":"QA app POST /api/stores/add/confirm","charges":{"reads":1},"cleanup":false}
+{"seq":917,"at":"2026-11-17T11:12:01.809Z","operation":"QA app POST /api/stores/add/status","charges":{"reads":1},"cleanup":false}
+{"seq":918,"at":"2026-11-17T11:12:02.004Z","operation":"QA app POST /api/stores/add/abandon","charges":{"reads":1},"cleanup":false}
+{"seq":919,"at":"2026-11-17T11:12:02.219Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal","charges":{"reads":1},"cleanup":false}
+{"seq":920,"at":"2026-11-17T11:12:02.416Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/removal/undo","charges":{"reads":1},"cleanup":false}
+{"seq":921,"at":"2026-11-17T11:12:02.626Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":922,"at":"2026-11-17T11:12:02.827Z","operation":"QA app POST /api/stores/99cbe279-2a2d-413c-b45e-76ed87b21021/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":923,"at":"2026-11-17T11:12:03.028Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/resend","charges":{"reads":1},"cleanup":false}
+{"seq":924,"at":"2026-11-17T11:12:03.245Z","operation":"QA app POST /api/invitations/e96de813-0e14-4432-914e-71058b13ffcc/revoke","charges":{"reads":1},"cleanup":false}
+{"seq":925,"at":"2026-11-17T11:12:03.447Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/accept","charges":{"reads":1},"cleanup":false}
+{"seq":926,"at":"2026-11-17T11:12:03.630Z","operation":"QA app POST /api/invitations/afe804ab-0792-49d2-b88f-51188eb2fbfb/decline","charges":{"reads":1},"cleanup":false}
+{"seq":927,"at":"2026-11-17T11:13:03.967Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":928,"at":"2026-11-17T11:13:05.189Z","operation":"QA app GET /api/stores/8a888060-6e49-4ade-bf81-7e9d82705be1/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":929,"at":"2026-11-17T11:13:05.844Z","operation":"QA app GET /api/billing/overview","charges":{"reads":1},"cleanup":false}
+{"seq":930,"at":"2026-11-17T11:13:06.177Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":931,"at":"2026-11-17T11:13:06.463Z","operation":"fresh actual userJWT own-store scope/rows reads NEW_ADMIN","charges":{"reads":2},"cleanup":false}
+{"seq":932,"at":"2026-11-17T11:13:08.238Z","operation":"QA app GET /api/stores/8a888060-6e49-4ade-bf81-7e9d82705be1/invitations","charges":{"reads":1},"cleanup":false}
+{"seq":933,"at":"2026-11-17T11:13:08.491Z","operation":"QA app GET /api/billing/overview","charges":{"reads":1},"cleanup":false}
+{"seq":934,"at":"2026-11-17T11:13:08.746Z","operation":"QA app POST /api/stores/add/quote","charges":{"reads":1},"cleanup":false}
+{"seq":935,"at":"2026-11-17T11:13:09.006Z","operation":"fresh actual userJWT own-store scope/rows reads NEW_MEMBER","charges":{"reads":2},"cleanup":false}
+{"seq":936,"at":"2026-11-17T11:13:52.599Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":937,"at":"2026-11-17T11:13:52.996Z","operation":"signed-in actual first-store checkout and single hosted submission","charges":{"provider_mutations":5,"customers":1,"subscriptions":1,"pay_or_hosted":1,"attempted_cents":9900},"cleanup":false}
+{"seq":938,"at":"2026-11-17T11:14:10.246Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":939,"at":"2026-11-17T11:14:10.766Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":940,"at":"2026-11-17T11:14:10.832Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":941,"at":"2026-11-17T11:14:11.953Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":937,"at":"2026-11-17T11:14:12.013Z","result":{"status":"provisioned","paid":9900}}
+{"seq":942,"at":"2026-11-17T11:17:44.164Z","operation":"fresh JWT direct service-only boundary reads NEW_ADMIN","charges":{"reads":5},"cleanup":false}
+{"seq":943,"at":"2026-11-17T11:17:47.965Z","operation":"fresh JWT direct service-only boundary reads NEW_MEMBER","charges":{"reads":5},"cleanup":false}
+{"seq":944,"at":"2026-11-17T11:17:52.394Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":945,"at":"2026-11-17T11:19:16.391Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":946,"at":"2026-11-17T11:19:16.706Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":947,"at":"2026-11-17T11:19:17.378Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":948,"at":"2026-11-17T11:19:17.863Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":949,"at":"2026-11-17T11:19:18.498Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":950,"at":"2026-11-17T11:19:18.700Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":951,"at":"2026-11-17T11:19:18.883Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":952,"at":"2026-11-17T11:19:18.959Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":953,"at":"2026-11-17T11:19:19.130Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":954,"at":"2026-11-17T11:19:19.296Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":955,"at":"2026-11-17T11:19:19.366Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":956,"at":"2026-11-17T11:19:19.466Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":957,"at":"2026-11-17T11:19:19.547Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":958,"at":"2026-11-17T11:19:19.615Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":959,"at":"2026-11-17T11:19:19.688Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":960,"at":"2026-11-17T11:19:19.774Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":961,"at":"2026-11-17T11:19:19.836Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":962,"at":"2026-11-17T11:19:19.911Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":963,"at":"2026-11-17T11:19:19.985Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":964,"at":"2026-11-17T11:19:20.080Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":965,"at":"2026-11-17T11:19:20.164Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":966,"at":"2026-11-17T11:19:20.243Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":967,"at":"2026-11-17T11:19:20.309Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":968,"at":"2026-11-17T11:19:20.371Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":969,"at":"2026-11-17T11:19:20.443Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":970,"at":"2026-11-17T11:19:20.534Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":971,"at":"2026-11-17T11:19:20.602Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":972,"at":"2026-11-17T11:19:20.680Z","operation":"retained late operation provider refund-read proof","charges":{"reads":3},"cleanup":false}
+{"seq":973,"at":"2026-11-17T11:20:05.758Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":974,"at":"2026-11-17T11:20:09.001Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":975,"at":"2026-11-17T11:20:09.125Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":976,"at":"2026-11-17T11:20:09.216Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":977,"at":"2026-11-17T11:20:09.307Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":978,"at":"2026-11-17T11:20:09.373Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":979,"at":"2026-11-17T11:20:09.450Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":980,"at":"2026-11-17T11:20:09.522Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":981,"at":"2026-11-17T11:20:09.588Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":982,"at":"2026-11-17T11:20:09.660Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":983,"at":"2026-11-17T11:20:09.725Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":984,"at":"2026-11-17T11:20:09.798Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":985,"at":"2026-11-17T11:20:09.857Z","operation":"QA direct SCRATCH data request","charges":{"reads":1},"cleanup":false}
+{"seq":986,"at":"2026-11-17T11:38:10.564Z","operation":"six signed-out browser/theme public screen read slots","charges":{"reads":48},"cleanup":false}

@@ -1,0 +1,408 @@
+[
+  {
+    "role": "OWNER_A",
+    "action": "list own-or-foreign staff",
+    "status": 200,
+    "expect": "allow",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_A",
+    "action": "foreign seller history",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_A",
+    "action": "cross-recipient accept",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_A",
+    "action": "membership effective admin protection",
+    "status": 200,
+    "expect": "protected",
+    "result": "FAIL"
+  },
+  {
+    "role": "OWNER_A",
+    "action": "operator customer denial",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "list own-or-foreign staff",
+    "status": 403,
+    "code": "not_permitted",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "foreign seller history",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "cross-recipient accept",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "membership effective admin protection",
+    "status": 403,
+    "code": "not_permitted",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "operator customer denial",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "foreign removal",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "action": "foreign removal undo",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "list own-or-foreign staff",
+    "status": 403,
+    "code": "not_permitted",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "foreign seller history",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "cross-recipient accept",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "membership effective admin protection",
+    "status": 403,
+    "code": "not_permitted",
+    "expect": "protected",
+    "result": "FAIL"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "operator customer denial",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "foreign removal",
+    "status": 403,
+    "code": "not_owner",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "foreign removal undo",
+    "status": 403,
+    "code": "not_owner",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "action": "owner-only quote",
+    "status": 403,
+    "code": "not_owner",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "action": "list own-or-foreign staff",
+    "status": 403,
+    "code": "not_permitted",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "action": "foreign seller history",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "action": "cross-recipient accept",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "action": "membership effective admin protection",
+    "status": 403,
+    "code": "not_permitted",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "action": "operator customer denial",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "action": "foreign removal",
+    "status": 403,
+    "code": "not_owner",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "action": "foreign removal undo",
+    "status": 403,
+    "code": "not_owner",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "action": "owner-only quote",
+    "status": 403,
+    "code": "not_owner",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "list own-or-foreign staff",
+    "status": 403,
+    "code": "not_permitted",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "foreign seller history",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "cross-recipient accept",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "membership effective admin protection",
+    "status": 403,
+    "code": "not_permitted",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "operator customer denial",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "foreign removal",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "action": "foreign removal undo",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "list own-or-foreign staff",
+    "status": 403,
+    "code": "not_permitted",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "foreign seller history",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "cross-recipient accept",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "membership effective admin protection",
+    "status": 403,
+    "code": "not_permitted",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "operator customer denial",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "foreign removal",
+    "status": 403,
+    "code": "not_owner",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "foreign removal undo",
+    "status": 403,
+    "code": "not_owner",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "action": "owner-only quote",
+    "status": 403,
+    "code": "not_owner",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "list own-or-foreign staff",
+    "status": 401,
+    "code": "sign_in_required",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "foreign seller history",
+    "status": 401,
+    "code": "sign_in_required",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "cross-recipient accept",
+    "status": 401,
+    "code": "sign_in_required",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "membership effective admin protection",
+    "status": 401,
+    "code": "sign_in_required",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "operator customer denial",
+    "status": 404,
+    "code": "not_found",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "foreign removal",
+    "status": 401,
+    "code": "sign_in_required",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "foreign removal undo",
+    "status": 401,
+    "code": "sign_in_required",
+    "expect": "deny",
+    "result": "PASS"
+  },
+  {
+    "role": "SIGNED_OUT",
+    "action": "owner-only quote",
+    "status": 401,
+    "code": "sign_in_required",
+    "expect": "deny",
+    "result": "PASS"
+  }
+]

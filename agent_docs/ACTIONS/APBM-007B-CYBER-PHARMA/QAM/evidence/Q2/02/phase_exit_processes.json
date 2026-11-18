@@ -1,0 +1,127 @@
+{
+  "before": {
+    "at": "2026-11-17T11:42:19.829Z",
+    "apps": [
+      {
+        "app": "ob",
+        "pid": 3209772,
+        "alive": true,
+        "cwd": "/tmp/apbm007b-qa-q2-01/proof/ob",
+        "owned": true
+      },
+      {
+        "app": "pp",
+        "pid": 3400261,
+        "alive": true,
+        "cwd": "/tmp/apbm007b-qa-q2-01/proof/pp",
+        "owned": true
+      }
+    ],
+    "listener": {
+      "pid": 3263045,
+      "alive": true,
+      "owned": true
+    },
+    "director_ports": [
+      {
+        "port": 3000,
+        "listening": true,
+        "pids": [
+          3199658
+        ]
+      },
+      {
+        "port": 3001,
+        "listening": true,
+        "pids": [
+          3199884
+        ]
+      },
+      {
+        "port": 3457,
+        "listening": true,
+        "pids": [
+          40320
+        ]
+      }
+    ],
+    "qa_ports": [
+      {
+        "port": 3100,
+        "listening": true,
+        "pids": [
+          3209772
+        ]
+      },
+      {
+        "port": 3101,
+        "listening": true,
+        "pids": [
+          3400261
+        ]
+      }
+    ]
+  },
+  "after": {
+    "at": "2026-11-17T11:42:21.732Z",
+    "qa_ports": [
+      {
+        "port": 3100,
+        "listening": false,
+        "pids": []
+      },
+      {
+        "port": 3101,
+        "listening": false,
+        "pids": []
+      }
+    ],
+    "director_ports": [
+      {
+        "port": 3000,
+        "listening": true,
+        "pids": [
+          3199658
+        ]
+      },
+      {
+        "port": 3001,
+        "listening": true,
+        "pids": [
+          3199884
+        ]
+      },
+      {
+        "port": 3457,
+        "listening": true,
+        "pids": [
+          40320
+        ]
+      }
+    ],
+    "listener_alive": false,
+    "owned_app_alive": [],
+    "containers": [
+      {
+        "name": "apbm007b-qa-q2-auth",
+        "running": false,
+        "retained": true
+      },
+      {
+        "name": "apbm007b-qa-q2-db",
+        "running": false,
+        "retained": true
+      }
+    ]
+  },
+  "stop_executed": true,
+  "escalated": [],
+  "all_owned_stopped": true,
+  "director_port_pids_unchanged": true,
+  "remote_scratch_mutations": 0,
+  "sandbox_mutations": 0,
+  "identities_removed": 0,
+  "fixture_cleanup": false,
+  "retention": "All SCRATCH/sandbox/Auth/local container data and private0600 inputs retained pending Friday retention ruling; no context disable/refund/deletion",
+  "Director_can_restart_listener": true
+}

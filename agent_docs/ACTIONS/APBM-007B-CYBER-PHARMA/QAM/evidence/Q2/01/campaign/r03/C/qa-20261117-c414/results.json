@@ -1,0 +1,30 @@
+{
+ "decline": {
+  "quote_cents": 3774,
+  "state_after_confirm": "payment_pending",
+  "heading": "Payment needs your action",
+  "hosted_link_shown": true,
+  "final_state": "expired_unpaid",
+  "error_code": "abandoned",
+  "final_text": "The store was not added and nothing was charged (you cancelled).",
+  "store_created": false,
+  "invoice_status": "void",
+  "amount_paid": 0,
+  "quantity_unchanged": true
+ },
+ "auth": {
+  "quote_cents": 3774,
+  "state_after_confirm": "payment_pending",
+  "hosted_link_shown": true,
+  "challenge_clicked": true,
+  "invoice_status": "paid",
+  "final_state": "activated",
+  "store_created": true,
+  "dashboard_shows_store": true,
+  "quantity": {
+   "before": 3,
+   "after": 4
+  },
+  "anchor_unchanged": true
+ }
+}

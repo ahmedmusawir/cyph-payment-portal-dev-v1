@@ -1,0 +1,161 @@
+[
+  {
+    "name": "target-already-owner-refused",
+    "result": "refused",
+    "error": "new_owner_has_account"
+  },
+  {
+    "name": "dry-run-no-change",
+    "result": "planned",
+    "owner_unchanged": true
+  },
+  {
+    "name": "committed-database-provider-failure",
+    "operator_result": "failed",
+    "error": "provider_or_database_failure",
+    "database_new_owner": true,
+    "old_owner_billing_denied": true,
+    "declared_fault": "run-owned billing customer temporarily mapped to nonexistent sandbox resource; restored in finally",
+    "result": "PASS"
+  },
+  {
+    "name": "resume-provider-step",
+    "operator_result": "applied",
+    "provider_email_matches_new_owner": true,
+    "result": "PASS"
+  },
+  {
+    "name": "restore-own-fixture-owner",
+    "result": "applied",
+    "owner_restored": true
+  },
+  {
+    "name": "durable-honest-audit",
+    "records": [
+      {
+        "id": 48,
+        "action": "owner-replace",
+        "authenticated_as": "shared_operator_v1",
+        "declared_actor": "Cody QA",
+        "reason": "QA same-account identity recovery; controlled invalid binding fault tests provider-step resume; restore after observations",
+        "ticket": "APBM007B-Q2-RECOVERY",
+        "phase": "apply",
+        "target": {
+          "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+          "newOwner": "bc30ca1c-6950-4c65-b541-384b618bf718"
+        },
+        "result": "refused",
+        "error_code": "new_owner_has_account"
+      },
+      {
+        "id": 49,
+        "action": "owner-replace",
+        "authenticated_as": "shared_operator_v1",
+        "declared_actor": "Cody QA",
+        "reason": "QA same-account identity recovery; controlled invalid binding fault tests provider-step resume; restore after observations",
+        "ticket": "APBM007B-Q2-RECOVERY",
+        "phase": "dry_run",
+        "target": {
+          "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+          "newOwner": "3bf1d010-d726-4d65-8649-2802b98bfd67"
+        },
+        "result": "planned",
+        "error_code": null
+      },
+      {
+        "id": 51,
+        "action": "owner-replace",
+        "authenticated_as": "shared_operator_v1",
+        "declared_actor": "Cody QA",
+        "reason": "QA same-account identity recovery; controlled invalid binding fault tests provider-step resume; restore after observations",
+        "ticket": "APBM007B-Q2-RECOVERY",
+        "phase": "apply",
+        "target": {
+          "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+          "newOwner": "bc30ca1c-6950-4c65-b541-384b618bf718"
+        },
+        "result": "refused",
+        "error_code": "new_owner_has_account"
+      },
+      {
+        "id": 52,
+        "action": "owner-replace",
+        "authenticated_as": "shared_operator_v1",
+        "declared_actor": "Cody QA",
+        "reason": "QA same-account identity recovery; controlled invalid binding fault tests provider-step resume; restore after observations",
+        "ticket": "APBM007B-Q2-RECOVERY",
+        "phase": "dry_run",
+        "target": {
+          "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+          "newOwner": "3bf1d010-d726-4d65-8649-2802b98bfd67"
+        },
+        "result": "planned",
+        "error_code": null
+      },
+      {
+        "id": 53,
+        "action": "owner-replace",
+        "authenticated_as": "shared_operator_v1",
+        "declared_actor": "Cody QA",
+        "reason": "QA same-account identity recovery; controlled invalid binding fault tests provider-step resume; restore after observations",
+        "ticket": "APBM007B-Q2-RECOVERY",
+        "phase": "apply",
+        "target": {
+          "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+          "newOwner": "3bf1d010-d726-4d65-8649-2802b98bfd67"
+        },
+        "result": "failed",
+        "error_code": "provider_or_database_failure"
+      },
+      {
+        "id": 54,
+        "action": "owner-replace",
+        "authenticated_as": "shared_operator_v1",
+        "declared_actor": "Cody QA",
+        "reason": "QA same-account identity recovery; controlled invalid binding fault tests provider-step resume; restore after observations",
+        "ticket": "APBM007B-Q2-RECOVERY",
+        "phase": "apply",
+        "target": {
+          "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+          "newOwner": "3bf1d010-d726-4d65-8649-2802b98bfd67"
+        },
+        "result": "applied",
+        "error_code": null
+      },
+      {
+        "id": 55,
+        "action": "owner-replace",
+        "authenticated_as": "shared_operator_v1",
+        "declared_actor": "Cody QA",
+        "reason": "Restore QA fixture owner after real partial-failure recovery evidence",
+        "ticket": "APBM007B-Q2-RECOVERY-RESTORE",
+        "phase": "apply",
+        "target": {
+          "account": "e9ace24f-88c6-4e11-8db8-9c66184582ec",
+          "newOwner": "49e40e80-055d-40f4-a2b3-0130c45df6b6"
+        },
+        "result": "applied",
+        "error_code": null
+      }
+    ],
+    "individual_authentication": false,
+    "authentication_boundary": "shared_operator_v1 credential + required declared_actor/reason/ticket; human support identity-verification procedure is separate"
+  },
+  {
+    "name": "audit-update-denied-rollback",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "name": "audit-delete-denied-rollback",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "name": "isolated-eligible-confirmed-actor-restored",
+    "actor_role": "MEMBER",
+    "new_invitees_unused": true,
+    "other_memberships_preserved": true,
+    "pending_buyer_checkout_unchanged": true
+  }
+]

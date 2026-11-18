@@ -1,0 +1,28 @@
+{
+  "status": "Q4 COMPLETE \u2014 AWAITING ADJUDICATION",
+  "path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/APBM-007B-CYBER-PHARMA_Q4_REVIEW_01.zip",
+  "downloads": "/home/moose/Downloads/APBM-007B-CYBER-PHARMA_Q4_REVIEW_01.zip",
+  "members": 281,
+  "indexed_entries": 280,
+  "sha256": "ec99c079406250551abd02f1d5e4403f6f101a3bbc24c0cdd9b8b52a029400a5",
+  "validated": true,
+  "expanded_privacy_gates": [
+    {
+      "dir": "/tmp/APBM007B_Q4_REVIEW01_EXPANDED",
+      "hits": [],
+      "skipped_binary": 4
+    },
+    {
+      "controls": {
+        "poison": true,
+        "clean": true
+      },
+      "files": 281,
+      "private_values_checked": 85,
+      "hits": [],
+      "credential_values_or_hashes_printed": false
+    }
+  ],
+  "privacy_recovery_authorized_and_completed": true,
+  "decision": "Friday: adjudicate Q4 findings, repaired Q2 findings and limitations, then issue verdict and retention instructions. No certificate or product release composed by Cody."
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "role": "OWNER_A",
+    "test": "businesses direct authenticated RLS",
+    "result": "PASS",
+    "row_count": 2,
+    "cross_tenant_rows": false
+  },
+  {
+    "role": "OWNER_A",
+    "test": "privileged billing customer table deny-all to authenticated",
+    "result": "PASS",
+    "http_error_code": "42501"
+  },
+  {
+    "role": "OWNER_A",
+    "test": "user cannot enable clock context",
+    "result": "PASS",
+    "http_error_code": "42501"
+  },
+  {
+    "role": "OWNER_B",
+    "test": "businesses direct authenticated RLS",
+    "result": "PASS",
+    "row_count": 2,
+    "cross_tenant_rows": false
+  },
+  {
+    "role": "OWNER_B",
+    "test": "privileged billing customer table deny-all to authenticated",
+    "result": "PASS",
+    "http_error_code": "42501"
+  },
+  {
+    "role": "OWNER_B",
+    "test": "user cannot enable clock context",
+    "result": "PASS",
+    "http_error_code": "42501"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "test": "businesses direct authenticated RLS",
+    "result": "PASS",
+    "row_count": 0,
+    "cross_tenant_rows": false
+  },
+  {
+    "role": "STORE_ADMIN",
+    "test": "privileged billing customer table deny-all to authenticated",
+    "result": "PASS",
+    "http_error_code": "42501"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "test": "user cannot enable clock context",
+    "result": "PASS",
+    "http_error_code": "42501"
+  },
+  {
+    "role": "MEMBER",
+    "test": "businesses direct authenticated RLS",
+    "result": "PASS",
+    "row_count": 1,
+    "cross_tenant_rows": false
+  },
+  {
+    "role": "MEMBER",
+    "test": "privileged billing customer table deny-all to authenticated",
+    "result": "PASS",
+    "http_error_code": "42501"
+  },
+  {
+    "role": "MEMBER",
+    "test": "user cannot enable clock context",
+    "result": "PASS",
+    "http_error_code": "42501"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "test": "businesses direct authenticated RLS",
+    "result": "PASS",
+    "row_count": 1,
+    "cross_tenant_rows": false
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "test": "privileged billing customer table deny-all to authenticated",
+    "result": "PASS",
+    "http_error_code": "42501"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "test": "user cannot enable clock context",
+    "result": "PASS",
+    "http_error_code": "42501"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "test": "businesses direct authenticated RLS",
+    "result": "PASS",
+    "row_count": 0,
+    "cross_tenant_rows": false
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "test": "privileged billing customer table deny-all to authenticated",
+    "result": "PASS",
+    "http_error_code": "42501"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "test": "user cannot enable clock context",
+    "result": "PASS",
+    "http_error_code": "42501"
+  }
+]

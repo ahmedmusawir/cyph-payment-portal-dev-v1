@@ -1,0 +1,254 @@
+{
+  "done": [
+    "setup",
+    "allowed_50",
+    "refused_49",
+    "ninety_minute",
+    "renewal_and_remove",
+    "last_store"
+  ],
+  "observations": [
+    {
+      "name": "setup",
+      "at": "2026-11-17T09:32:46.387Z",
+      "account": "fd478c52-4c94-413e-86a9-a0e7cf36dd19",
+      "clock": "clock_1UcikjGnEQDyu3RRyDjN9as0",
+      "quantity": 3,
+      "period_start": 1794907956,
+      "period_end": 1797499956,
+      "boundary_seconds": 26185,
+      "fixture_only": true
+    },
+    {
+      "name": "expected-before-50",
+      "at": "2026-11-17T09:32:46.389Z",
+      "now": 1797473771,
+      "remaining": 26185,
+      "expected_cents": 50,
+      "add": "allowed",
+      "removal": "allowed",
+      "undo": "allowed",
+      "source": "QA contract arithmetic before request"
+    },
+    {
+      "name": "removal-allowed50",
+      "at": "2026-11-17T09:32:52.817Z",
+      "status": 200,
+      "state": "completed",
+      "expected_status": 200
+    },
+    {
+      "name": "undo-allowed50",
+      "at": "2026-11-17T09:32:55.663Z",
+      "status": 200,
+      "state": "completed",
+      "expected_status": 200
+    },
+    {
+      "name": "removal-again50",
+      "at": "2026-11-17T09:32:58.333Z",
+      "status": 200,
+      "state": "completed",
+      "expected_status": 200
+    },
+    {
+      "name": "exact50-paid",
+      "at": "2026-11-17T09:33:10.891Z",
+      "expected_cents": 50,
+      "quote_cents": 50,
+      "invoice_paid": 50,
+      "total": 50,
+      "state": "activated"
+    },
+    {
+      "name": "expected-before-49",
+      "at": "2026-11-17T09:33:16.100Z",
+      "remaining": 26184,
+      "expected_cents": 49,
+      "all_three_actions": "refused with no new invoice/balance"
+    },
+    {
+      "name": "removal-refused49",
+      "at": "2026-11-17T09:33:28.005Z",
+      "status": 409,
+      "error": "below_minimum_charge",
+      "expected_status": 409
+    },
+    {
+      "name": "undo-refused49",
+      "at": "2026-11-17T09:33:29.093Z",
+      "status": 409,
+      "error": "below_minimum_charge",
+      "expected_status": 409
+    },
+    {
+      "name": "under-minimum",
+      "at": "2026-11-17T09:33:29.762Z",
+      "quote_status": 409,
+      "error": "below_minimum_charge",
+      "no_new_invoice": true,
+      "no_balance": true
+    },
+    {
+      "name": "boundary-5401",
+      "at": "2026-11-17T09:33:34.550Z",
+      "expected": "common guard refuses; hypothetical price already below50",
+      "quote": 409,
+      "removal": 409,
+      "undo": 409,
+      "quote_error": "below_minimum_charge"
+    },
+    {
+      "name": "boundary-5400",
+      "at": "2026-11-17T09:33:40.437Z",
+      "expected": "common guard refuses; hypothetical price already below50",
+      "quote": 409,
+      "removal": 409,
+      "undo": 409,
+      "quote_error": "below_minimum_charge"
+    },
+    {
+      "name": "boundary-5399",
+      "at": "2026-11-17T09:33:46.390Z",
+      "expected": "common guard refuses; hypothetical price already below50",
+      "quote": 409,
+      "removal": 409,
+      "undo": 409,
+      "quote_error": "period_end_window"
+    },
+    {
+      "name": "boundary-1",
+      "at": "2026-11-17T09:33:51.118Z",
+      "expected": "common guard refuses; hypothetical price already below50",
+      "quote": 409,
+      "removal": 409,
+      "undo": 409,
+      "quote_error": "period_end_window"
+    },
+    {
+      "name": "expected-before-next-invoice",
+      "at": "2026-11-17T09:33:51.121Z",
+      "billable_stores": 3,
+      "expected_cents": 19700,
+      "source": "9900+4900*(3-1)",
+      "paid_access_before": 4
+    },
+    {
+      "name": "next-real-invoice",
+      "at": "2026-11-17T09:33:56.028Z",
+      "invoice_id": "in_1UcilxGnEQDyu3RRnkwDXODE",
+      "amount_paid": 0,
+      "expected_cents": 19700,
+      "quantity": 3,
+      "proration_lines": 0
+    },
+    {
+      "name": "expected-before-next-invoice",
+      "at": "2026-11-17T09:35:43.393Z",
+      "billable_stores": 3,
+      "expected_cents": 19700,
+      "source": "9900+4900*(3-1)",
+      "paid_access_before": 4
+    },
+    {
+      "name": "renewal-resume",
+      "at": "2026-11-17T09:35:43.917Z",
+      "clock_already_advanced": true,
+      "prior_19700_attempt_reservation_preserved": true
+    },
+    {
+      "name": "invoice-not-yet-finalized",
+      "at": "2026-11-17T09:35:44.258Z",
+      "status": "draft",
+      "amount_paid": 0,
+      "not_graded_as_price_failure": true
+    },
+    {
+      "name": "next-real-invoice",
+      "at": "2026-11-17T09:35:56.045Z",
+      "invoice_id": "in_1UcilxGnEQDyu3RRnkwDXODE",
+      "amount_paid": 19700,
+      "expected_cents": 19700,
+      "quantity": 3,
+      "proration_lines": 0
+    },
+    {
+      "name": "await-automatic-renewal-mirror",
+      "at": "2026-11-17T09:35:56.114Z",
+      "polls": [
+        {
+          "at": "2026-11-17T09:35:56.114Z",
+          "current_period_start": "2026-12-17T09:32:36+00:00",
+          "latest_invoice_status": "paid"
+        }
+      ]
+    },
+    {
+      "name": "ordinary-removal-data-kept-no-archive",
+      "at": "2026-11-17T09:36:01.608Z",
+      "store": {
+        "id": "df6b8514-8cc2-4341-a05c-552e4674f919",
+        "status": "removed"
+      },
+      "original_claim_retained": true,
+      "history_status": 404,
+      "jobs": {
+        "at": "2026-11-17T09:35:58.658Z",
+        "store_operations": {},
+        "lifecycle": {},
+        "removals": {
+          "df6b8514-8cc2-4341-a05c-552e4674f919": "removed"
+        },
+        "transfers": {},
+        "notices": {
+          "claimed": 0,
+          "sent": 0,
+          "retry": 0,
+          "attention": 0,
+          "blocked": 0,
+          "suppressed": 0
+        }
+      }
+    },
+    {
+      "name": "schedule-third-store",
+      "at": "2026-11-17T09:36:04.099Z",
+      "status": 200,
+      "state": "completed",
+      "expected_status": 200
+    },
+    {
+      "name": "last-store-no-zero",
+      "at": "2026-11-17T09:36:08.842Z",
+      "status": 409,
+      "error": "last_store",
+      "quantity": 1,
+      "expected_quantity": 1,
+      "owner_recovery_billing": 200
+    }
+  ],
+  "clock": "clock_1UcikjGnEQDyu3RRyDjN9as0",
+  "customer": "cus_Ve0mgpfF0Ib3yh",
+  "visa": "pm_1UcikjGnEQDyu3RRF5jcJJTV",
+  "subscription": "sub_1UciklGnEQDyu3RRiTtSmwcF",
+  "account": "fd478c52-4c94-413e-86a9-a0e7cf36dd19",
+  "stores": [
+    {
+      "id": "cc4241e6-55a2-49e3-bbf1-1e5554303b12",
+      "npi": "1679529481"
+    },
+    {
+      "id": "df6b8514-8cc2-4341-a05c-552e4674f919",
+      "npi": "1692076189"
+    },
+    {
+      "id": "d425aae5-939a-4e16-869e-136ef11882c5",
+      "npi": "1244569574"
+    }
+  ],
+  "removed_claim_id": "9369ca76-9538-42c5-b4cc-c7fab9bbbbad",
+  "period_start": 1794907956,
+  "period_end": 1797499956,
+  "boundary": 26185,
+  "new_store_id": "9c003f29-7702-4f09-92a7-ab2b70bacfb4"
+}
