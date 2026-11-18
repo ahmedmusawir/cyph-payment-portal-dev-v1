@@ -1,0 +1,151 @@
+{
+ "record": "APBM-007B contract manifest hash correction (closeout, 18 November 2026, Claudy for JARVIS closeout)",
+ "source_of_old_bytes": {
+  "archive": "~/Downloads/_ARCHIVE/APBM007B_BUILD_PACK_v1.zip",
+  "archive_sha256": "08d5448b60d2410d08f25c5addfc73c842971db4a0bac9242c4a7d8d6ac31f01",
+  "note": "frozen v1.0 pack as used for E2; every old manifest hash equals the pack bytes"
+ },
+ "current_bytes": "Portal qa/apbm-007b at certified product commit ba66534351368b4b67b9e61d6f0278866950c850 and records head 1a07c635eddc62edafa53fd85643b49aa6d831c1 (identical for all 12 files; also identical at the Q1 candidate 427bec6267b9777e9cb44f81c22d1396a495bc14)",
+ "manifest_before_sha256": "05464df00db071946f7cf561b12a419f4cda4faae351129600447cdbb20165ba",
+ "qa_references": [
+  "QAM/QAM_RECON_REPORT.md (12/12 mismatch at Q1)",
+  "QAM/evidence/preflight/01/contract_hashes.json",
+  "QAM/QAM_APPROVAL.md QL-01 adjudication: CLEARED 12/12, current repository files govern; correction deferred to closeout",
+  "EVIDENCE/E2/r02_header_hash_changes.json (Engineering record of the header correction, 17 Nov)"
+ ],
+ "contract_files_changed_by_this_correction": 0,
+ "files": [
+  {
+   "path": "ACCEPTANCE_SPEC.md",
+   "old_sha256_frozen_pack_v1_0": "bffa97cdb72943ea62847655cbbc2c6f34dd91fc3be0d33b8a215c7012878c26",
+   "corrected_sha256": "b9a0a7ceda9c323e1203b18b4d946835e54b66d39a69f27e3438887e01596410",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 0,
+   "difference": "status header line (line 1) only"
+  },
+  {
+   "path": "APBM_RULINGS.md",
+   "old_sha256_frozen_pack_v1_0": "76b3feba2eaf93465131eb08f3b4c2c31af5dad5a886fe75df31eaeb50964786",
+   "corrected_sha256": "37cd7851ae2bf11da88c03fa1f811036d5bb792c23245221831321d3a26318df",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 47,
+   "difference": "status header line (line 1) + 47 appended lines (Director records of 17 November 2026); lines 2-32 unchanged"
+  },
+  {
+   "path": "EXECUTION_PLAN.md",
+   "old_sha256_frozen_pack_v1_0": "b5232ed9987fce109eb2128daf34dd5ddfee72d6fb001a2f69731a04aeca8a44",
+   "corrected_sha256": "95e0b88c98ef2f7c8d111227f8cbec1c5a5cb7c72ab875477d918766182af602",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 0,
+   "difference": "status header line (line 1) only"
+  },
+  {
+   "path": "ENVIRONMENT_AND_EFFECTS.md",
+   "old_sha256_frozen_pack_v1_0": "18bfe4a0d2ff1191d720f09c567e4bad2d8f29289db14934ff3e1a479c06bc73",
+   "corrected_sha256": "efa755fa4f3a036848532378ff59e9d07a737f30aa1e11d98b8071d3b6fbabf3",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 5,
+   "difference": "status header line (line 1) + 5 appended lines (Director records of 17 November 2026); lines 2-44 unchanged"
+  },
+  {
+   "path": "ALLOWED_PATHS.md",
+   "old_sha256_frozen_pack_v1_0": "14a1a692d53650322f8f80b2bdf8cfee6a9941878877ec2ddb86288b7f722edd",
+   "corrected_sha256": "0d82228f3d4ea1505ecabb0298cda49f598785e17af3b67a7842ec7b81cdfc6e",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 0,
+   "difference": "status header line (line 1) only"
+  },
+  {
+   "path": "CONTRACTS/API_ROLE_MATRIX.md",
+   "old_sha256_frozen_pack_v1_0": "16c51c54c430c2dbac76e55c8c892dfa472de7575d3e45ae78507ca3e9b116ff",
+   "corrected_sha256": "17160511466061db17f667aaa88871c251a44e36ae23a09cf2f5007a32554b84",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 0,
+   "difference": "status header line (line 1) only"
+  },
+  {
+   "path": "CONTRACTS/BILLING.md",
+   "old_sha256_frozen_pack_v1_0": "08b5dc10928a7fbc6fc0c8850ffe444114a09895a07ffe709db7b578b1ec3109",
+   "corrected_sha256": "6adacd9517ccd516dad5a2e8a9368188ea1c1df14b9ea4e4fa084ad649b6b9ae",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 0,
+   "difference": "status header line (line 1) only"
+  },
+  {
+   "path": "CONTRACTS/CLOCK_AND_NOTICES.md",
+   "old_sha256_frozen_pack_v1_0": "6f3812b060c0351d8d5fccfb7943e8d3ee9e08f136f5dadd8ef5afc07dbc0ee8",
+   "corrected_sha256": "9ac05758ec05fece457d15072fd16eacfc27cc88c8f0c1a3cfa6d9e6bea7debd",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 0,
+   "difference": "status header line (line 1) only"
+  },
+  {
+   "path": "CONTRACTS/DATA_AND_API_SHAPES.md",
+   "old_sha256_frozen_pack_v1_0": "03f8b853a09445901bc8bbc1386d87e08c9f932c514719320e4f9befe0d439cb",
+   "corrected_sha256": "ab14d850f10df2a8844752d3ec5700d973922e76ac120988d537ad1dcc095b55",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 0,
+   "difference": "status header line (line 1) only"
+  },
+  {
+   "path": "CONTRACTS/IDENTITY_AND_MEMBERSHIP.md",
+   "old_sha256_frozen_pack_v1_0": "71cbccc543343e603bcfa94298e25ea0390d5bda7707ea990b1db5a13021dc19",
+   "corrected_sha256": "a5bc25172a1a6804bf111563413a0c639834d9bfdd348d269bba426f8a2ac165",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 0,
+   "difference": "status header line (line 1) only"
+  },
+  {
+   "path": "CONTRACTS/LIFECYCLE_AND_TRANSFER.md",
+   "old_sha256_frozen_pack_v1_0": "3eee59faa8aa558d409cf84bcd5335f0e23b35ce4e45e4bd471b9f82c81870d9",
+   "corrected_sha256": "0f88e33bd84df232ccedaffda4e1d2c836b5dbb6681a5c3883b4874f788219ce",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 0,
+   "difference": "status header line (line 1) only"
+  },
+  {
+   "path": "CONTRACTS/MIGRATIONS.md",
+   "old_sha256_frozen_pack_v1_0": "9bdce5341d73d00f1a9ac66ff91f829b93615ff49a9050b1b8243c5b86578bde",
+   "corrected_sha256": "a7134f9273097f8038276732990b7a2e18df6572c933a388f96308dbd241aaf4",
+   "pack_bytes_equal_old": true,
+   "line1_old": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Frozen for Friday review; E2 NOT RELEASED.**",
+   "line1_new": "**Build contract v1.0 · 16 November 2026, Asia/Dhaka · JARVIS. Friday: ACCEPT WITH EXACT AMENDMENTS (BP-01…BP-09 applied in this successor; Friday's successor diff confirmation NOT received). E2 RELEASED by Tony (Director), 16 November 2026 — verbatim in APBM_JOURNAL.md. Header status updated 17 November 2026 by Claudy on Director ruling 5; contract text unchanged.**",
+   "lines_after_header_unchanged": true,
+   "appended_line_count": 0,
+   "difference": "status header line (line 1) only"
+  }
+ ]
+}

@@ -2,6 +2,8 @@
 
 # Current state
 
+> **18 November 2026: CLOSEOUT PREPARED, Director merge pending.** See "Closeout state (18 November 2026)" at the end of this file. The table below is the 17 November engineering record and is kept as written.
+
 | Item | Fact |
 |---|---|
 | Stage | ENGINEERING COMPLETE — AWAITING QA BRANCH (17 Nov 2026): Director to commit candidates and create `qa/apbm-007b`; automatic webhook delivery untested → QA planning and staging verification |
@@ -25,3 +27,20 @@ Gates are actual records, not inferred from filenames. No provider run is ordere
 ## Successor intake status
 
 BP01–09 contract additions applied in this working successor. Director default9 APPROVED 17 November 2026. Original v0.1 pre-E2 review bytes still MISSING (transcription and disclosure preserved). Friday diff confirmation: stated supplied by Tony 17 Nov 2026; its text/hash has not reached Engineering, so no match is claimed (installed pack verified = `APBM007B_BUILD_PACK_v1.zip` `08d5448b…`). Prior original archive remains unchanged. 17 Nov: 0069 APPROVED; envelope amended (USD 4,800; pay/hosted 30); checkpoint r03 returned (`EVIDENCE/E2/r03/CHECKPOINT_REPORT_r03.md`). Later 17 Nov: customers/subscriptions ceilings 13; invitation acceptance on real inboxes PASS after the OwedBook link fix; check E PASS; provider cleanup done; checkpoint r04 returned (`EVIDENCE/E2/r04/CHECKPOINT_REPORT_r04.md`), final DEV-apply manifest `EVIDENCE/E2/r04/DEV_APPLY_MANIFEST_FINAL.md`. Later 17 Nov: DEV apply released and executed (PASS); existing-identity invitation accepted; final checks; final handoff r05 (`EVIDENCE/E2/r05/FINAL_REPORT_r05.md`). Completion 17 Nov: blockers closed (crash/restart S1/S2 PASS; OWNER_B inbox receipt); crash fixture cleaned; ENGINEERING COMPLETE — AWAITING QA BRANCH (`EVIDENCE/E2/r06/ADDENDUM_r06.md`). Candidate preparation 17 Nov: Friday diff confirmation received and retained; state markers in CONTRACT_MANIFEST.json and QAM/AC_EVIDENCE_MATRIX.md corrected (`EVIDENCE/E2/r07_state_header_changes.json`); pre-commit lists `EVIDENCE/E2/r07/COMMIT_PREP/`. Later 17 Nov: Director ruled the hash-verified v0.1 attachment satisfies R-3 (full SHA-256 verified).
+
+## Closeout state (18 November 2026, appended by Claudy for JARVIS closeout)
+
+| Item | Fact |
+|---|---|
+| Stage | **CLOSEOUT PREPARED: DIRECTOR MERGE PENDING (both repositories).** Not CLOSED until both merges are pushed and verified |
+| Gate Q | **PASS WITH KNOWN RISK** (QA Lead, 18 Nov; certificate `3d897cf9…e70f`) |
+| Known risks | KR-1 to KR-6 **Director-accepted** (18 Nov 2026, 13:40) |
+| Cleanup | **ACCEPTED** by the QA Lead with the recorded exceptions (release `bae72eec…0a868`); released to Architect closeout on the Director's records commit |
+| Certified pair | Portal `ba66534351368b4b67b9e61d6f0278866950c850`; OwedBook `855e0ad2e22a37e633ab5a55b8459e9bcc6bd871`; branch `qa/apbm-007b` |
+| Final QA records commit | Portal `1a07c635eddc62edafa53fd85643b49aa6d831c1` (QAM only; pushed). OwedBook: none above `855e0ad` |
+| Repair rounds | Two, both issued by the QA Lead under the Director ruling of 17 Nov: round 1 → `00a9e0e` / `1fd5a61`; round 2 → `ba66534` / `855e0ad` |
+| Databases | SCRATCH at migration 70; **DEV at 69**. The 0070 DEV apply is prepared, not applied (`EVIDENCE/CLOSEOUT/DEV_APPLY_0070/`) |
+| Contract manifest | Hashes corrected to the governing bytes, old values kept (`EVIDENCE/CLOSEOUT/CONTRACT_HASH_CORRECTION.json`); contract files unchanged |
+| Gate D | **PENDING** (`GATE_D_HANDOFF.md`) |
+| Awaiting separate releases | Merge to `main` (both repositories; `EVIDENCE/CLOSEOUT/commit/GIT_HANDOFF.md`); DEV 0070 apply; deployment |
+| Records | `CLOSEOUT_REPORT.md`, `CARRY_FORWARD.md`, `GATE_D_HANDOFF.md` |

@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026-11-18 08:55 UTC — [CC] Claude Code
+- **Updated:**
+  - module `agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/`: `CONTRACT_MANIFEST.json` (hash correction, old values kept), `APBM_STATE.md`, `APBM_JOURNAL.md`, `QAM/HANDOFFS/ENGINEERING_HANDOFF.md` (dated closeout entries appended)
+  - new: `CLOSEOUT_REPORT.md`, `CARRY_FORWARD.md`, `GATE_D_HANDOFF.md`, and `EVIDENCE/CLOSEOUT/` (hash correction record, DEV 0070 release sheet and manifest, Git handoff)
+  - root: `RECOVERY.md`, `agent_docs/RESPONSES/response_2026-11-18_145500_apbm007b-closeout.md` (new)
+- **Reason:** JARVIS architect closeout instruction for APBM-007B. Documentation only: no product, contract-file or migration change. Status: closeout prepared; Director merge pending.
+
 ## 2026-11-16 09:55 UTC — [CC] Claude Code
 - **Updated:** `RECOVERY.md`, `agent_docs/SESSIONS/session_2026-11-16.md`, `agent_docs/ACTIONS/APBM-007A-CYBER-PHARMA_POINTER.md`, `agent_docs/RESPONSES/response_2026-11-16_155500_apbm007a-closeout.md` (new) — APBM-007A closeout records: Gate Q PASS WITH KNOWN RISK, Q5 cleanup, carried risks and obligations, Director merge/push commands.
 - **Reason:** JARVIS final closeout instruction; documentation only, no product change. Status: closeout prepared; Director merge/push pending.

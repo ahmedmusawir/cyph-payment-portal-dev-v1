@@ -1,0 +1,10 @@
+APBM-007B: multi-store billing, store lifecycle and invitations, Gate Q closeout
+
+Gate Q PASS WITH KNOWN RISK (QA Lead, 18 Nov 2026). Certified product ba66534351368b4b67b9e61d6f0278866950c850
+(paired OwedBook 855e0ad2e22a37e633ab5a55b8459e9bcc6bd871); QA records 1a07c63; architect closeout records on
+top. KR-1 to KR-6 Director-accepted. Two repair rounds routed by the QA Lead under the Director ruling of 17 Nov.
+
+DEV is at migration 69: migration 0070 must be applied to DEV under its separate release before this code runs
+against DEV. No deployment. Gate D not run.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

@@ -235,3 +235,16 @@ No independent QA approval or certification is implied.
 
 - Director ruling: the hash-verified v0.1 attachment satisfies R-3. Full SHA-256 verified (as received + one restored final newline = `37a0993a…d50d48`); as-received file unchanged; current statuses updated (SUCCESSOR_INPUTS, GOVERNING_INDEX, APBM_STATE, handoff); historical missing-file entries preserved; ruling appended to APBM_RULINGS and SOURCE_REGISTER.
 - Preparation package `agent_docs/PACKAGES/APBM007B_PREPARATION_v0_3/` excluded from the candidate commits (Director). Lists and privacy check regenerated in `EVIDENCE/E2/r07/COMMIT_PREP/`. Nothing staged or committed by Engineering.
+
+## 17–18 November 2026 — QA campaign and two repair rounds (summary recorded at closeout, Claudy)
+
+- Candidate pair Portal `427bec6` / OwedBook `c8a2ed9` on `qa/apbm-007b`. Q1: 12/12 manifest hash mismatch (STOP-CONTRACT) → QA Lead QL-01 CLEARED 12/12; correction deferred to closeout. Q2 complete with F-Q2-001, -002, -004, -005, -006 (F-Q2-003 QA instrument).
+- After Q1 the QA Lead instructed the QA Executor directly and, under the Director ruling of 17 Nov, issued both repair rounds to Engineering. Round 1 (A–D, migration 0070) → `00a9e0e` / `1fd5a61`, verified in Q4/01. Round 2 (E, F, then the Add Store details extension) → `ba66534` / `855e0ad`, verified in Q4/02. Engineering's factual records are in `QAM/QAM_MANIFEST.md` §8.
+
+## 18 November 2026 — Gate Q PASS WITH KNOWN RISK; cleanup accepted; architect closeout prepared (Claudy for JARVIS)
+
+- Certificate `3d897cf9…e70f` and cleanup release `bae72eec…0a868` hash-verified. The certificate import gap is closed (§§1–6 verbatim in `QAM/QAM_CERTIFICATION.md`). Director accepted KR-1 to KR-6 at 13:40. QA records committed by the Director: `1a07c63`.
+- Read-only identity check (fetch only): both repos clean on `qa/apbm-007b` = origin. The certified commits are ancestors of the merge tips. Portal changes above `ba66534` are QAM-only (199 paths; secret-shaped scan 0). OwedBook HEAD = `855e0ad`. Isolated `git merge-tree` against `origin/main`: no conflict; merged trees equal the QA trees.
+- Contract manifest hashes corrected (header line in all 12; +47 / +5 appended Director lines in `APBM_RULINGS.md` / `ENVIRONMENT_AND_EFFECTS.md`); old hashes kept; contract files unchanged.
+- Prepared, not executed: DEV 0070 release (0070 `de0b51c6…` = expected; 70-entry manifest `134d815d…`), Git handoff (Portal local `--no-ff`; OwedBook PR because `main` is protected), carry-forward list and Gate D handoff. No GitHub workflows or deployments in either repo. GCP Cloud Build triggers could not be read (gcloud needs re-authentication); a read-only check is in the handoff.
+- No commit, push, merge, deployment, DEV apply, database or provider write, cleanup or refund. DEV stays at 69. Gate D pending.

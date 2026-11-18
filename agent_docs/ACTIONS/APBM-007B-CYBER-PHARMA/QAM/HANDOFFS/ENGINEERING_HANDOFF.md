@@ -140,3 +140,12 @@ database (`/home/moose/APBM007B_E2_WORK/localdb`, Docker, now stopped) and priva
 | Effects | `E2/r06/EFFECTS/counters.json` (cents 464,104/480,000; customers 14/14; subscriptions 14/14; pay/hosted 28/30; attempts 51/60; emails 10/24; DEV apply 1/1). Interrupted S2 call reconciled against Stripe/SCRATCH/ledger: every effect reserved, none extra (`E2/r06/CRASH_RESTART/interrupted_s2_reconciliation.json`) |
 | Owned processes | Proof servers 3100/3101 stopped after the crash/restart proof (06:04:55Z); local rehearsal containers stopped; Director's 3000/3001/3457 untouched throughout (only the owned Portal 3101 process group was killed) |
 | Provider cleanup | Crash fixture: subscription canceled, customer deleted (`E2/r06/CRASH_RESTART/cleanup_receipt.json`); 0 live E2-owned subscriptions / test clocks; 007A-marked subscriptions left alone |
+
+## Closeout addendum — 18 November 2026 (Engineer; appended, earlier sections unchanged)
+
+| Field | Value |
+|---|---|
+| Final product | Gate Q PASS WITH KNOWN RISK on Portal `ba66534351368b4b67b9e61d6f0278866950c850` / OwedBook `855e0ad2e22a37e633ab5a55b8459e9bcc6bd871`. This supersedes the candidate identities above for integration. The repairs since the candidate are recorded in `QAM/QAM_MANIFEST.md` §8 (rounds 1 and 2, issued by the QA Lead) |
+| DEV | Still 0001–0069. 0070 (`de0b51c6…edce81`) is prepared for a separate Director release: `../../EVIDENCE/CLOSEOUT/DEV_APPLY_0070/DEV_APPLY_0070_RELEASE.md`. The DEV row above is the 17 Nov fact |
+| Machine-dependent items in §5 | The local rehearsal database and private cast files from E2 are not needed for closeout. The E2 cast files `/tmp/apbm007b-o1-cast.json` (cleanup exception 4) and `~/.apbm007b/engineering_cast.json` both still exist (listed, not opened). Removing them needs the Director's cleanup authority |
+| Follow-ups | `../../CARRY_FORWARD.md`; Gate D: `../../GATE_D_HANDOFF.md`; closeout: `../../CLOSEOUT_REPORT.md` |

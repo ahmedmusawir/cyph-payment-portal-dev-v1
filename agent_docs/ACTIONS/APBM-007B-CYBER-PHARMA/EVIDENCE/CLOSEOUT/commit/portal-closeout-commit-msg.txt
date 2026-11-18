@@ -1,0 +1,11 @@
+docs(apbm-007b): architect closeout records, contract manifest hash correction, DEV 0070 and Gate D preparation
+
+Gate Q PASS WITH KNOWN RISK (QA Lead, 18 Nov 2026) on Portal ba66534351368b4b67b9e61d6f0278866950c850 /
+OwedBook 855e0ad2e22a37e633ab5a55b8459e9bcc6bd871; KR-1 to KR-6 Director-accepted; cleanup accepted with
+recorded exceptions; QA records 1a07c635eddc62edafa53fd85643b49aa6d831c1.
+
+Records only. No product, test, contract-file, migration, dependency or configuration change. Contract
+manifest hashes corrected to the governing bytes (status header plus append-only Director records), old
+values kept. DEV migration 0070 apply, merge and deployment remain separate Director releases; Gate D pending.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
