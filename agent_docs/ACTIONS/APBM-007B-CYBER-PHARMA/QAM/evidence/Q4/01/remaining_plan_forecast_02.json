@@ -1,0 +1,48 @@
+{
+  "used": {
+    "reads": 2286,
+    "provider_mutations": 292,
+    "new_identities": 12,
+    "test_clocks": 3,
+    "customers": 8,
+    "subscriptions": 8,
+    "attempted_cents": 476469,
+    "sign_ins": 136,
+    "pay_or_hosted": 49,
+    "email_attempts": 16,
+    "unique_identities": 8,
+    "refunds": 2,
+    "scratch_cycles": 1
+  },
+  "remaining": {
+    "provider_mutations": 81,
+    "pay_or_hosted": 16,
+    "attempted_cents": 140000,
+    "sign_ins": 30,
+    "reads": 1250
+  },
+  "projected": {
+    "provider_mutations": 373,
+    "pay_or_hosted": 65,
+    "attempted_cents": 616469,
+    "sign_ins": 166,
+    "reads": 3536
+  },
+  "caps": {
+    "provider_mutations": 400,
+    "customers": 16,
+    "subscriptions": 16,
+    "test_clocks": 7,
+    "pay_or_hosted": 80,
+    "attempted_cents": 1000000,
+    "email_attempts": 40,
+    "sign_ins": 176,
+    "new_identities": 14,
+    "unique_identities": 10,
+    "scratch_cycles": 3,
+    "reads": 5000,
+    "refunds": 2
+  },
+  "reason": "Portal trackedAPBM inventory includes addstore and O1state in addition to already-run regression. Scope unchanged; all3included. Jobs reserve known due operations, not a fixed4; no counter reset/reclaim. No new resource/address.",
+  "pass": true
+}

@@ -1,0 +1,242 @@
+{
+  "original_pair": {
+    "portal": "427bec6267b9777e9cb44f81c22d1396a495bc14",
+    "owedbook": "c8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea"
+  },
+  "repaired_pair": {
+    "portal": "00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d",
+    "owedbook": "1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d"
+  },
+  "original_Q2_zip_sha256": "befa782288fe05ead925399d268dd6e218d6fb87e37000884fc144b66c7cfb9b",
+  "groups": [
+    {
+      "acs": [
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "015",
+        "016"
+      ],
+      "reason": "Invitation API, explicit email-confirm/accept, token, atomic membership and revocation functions unchanged. Changed LiveStaffPanel typing/render behavior is re-executed on Q4 in all3engines and5unchangedWebKit repetitions; no UI pass carried. Q2 human mail observations stay original, not new Q4 mail proof.",
+      "evidence": [
+        {
+          "path": "evidence/Q2/02/director_manual_observations.json",
+          "exists": true,
+          "sha256": "3bef5881f321b0e2cf4388655cc741cf0537055142fe8dccc407e66dc49b3dd1"
+        },
+        {
+          "path": "evidence/Q2/02/grouped_browser_confirmation.json",
+          "exists": true,
+          "sha256": "d6563f0b68d1ca11f7c48a1a29e92288f6212e586bd1535107edb90ca255e170"
+        },
+        {
+          "path": "evidence/Q2/02/invitation_controls.json",
+          "exists": true,
+          "sha256": "5c5d8f8e084a7f872da52ddd24337791754d305444e29e0caede14ba27d32317"
+        },
+        {
+          "path": "evidence/Q2/02/admin_existing_actors.json",
+          "exists": true,
+          "sha256": "676c935ab11230be9e9c86b9115b24eb29894dcfabdc77d1cf22c0f7285e7973"
+        },
+        {
+          "path": "evidence/Q2/02/readonly_membership.json",
+          "exists": true,
+          "sha256": "2a36ccdf807c19ea2b0af2ff7654e87839fd6b25fb2b6e51a653780720cd5e9a"
+        }
+      ],
+      "source_proof": [
+        {
+          "app": "ob",
+          "path": "src/server/invitationMail.ts",
+          "unchanged": true,
+          "sha256": "fd6abcb361329834280c1bab2ba5a346cdd70f3ffcd459b720c54e494ca244de"
+        },
+        {
+          "app": "ob",
+          "path": "src/app/api/invitations/[id]/accept/route.ts",
+          "unchanged": true,
+          "sha256": "474bc84c543abd208472bce500e0c175f86515f9f62a41242f3d77197fa9d2f4"
+        },
+        {
+          "app": "ob",
+          "path": "supabase/migrations/0064_007b_invitations.sql",
+          "unchanged": true,
+          "sha256": "b104a17f0dc97020b7cfa6ec93cd3d2e94fdb1b4fb419d38fe3fd6c8920d2b11"
+        },
+        {
+          "app": "ob",
+          "path": "supabase/migrations/0067_007b_reads_privileges.sql",
+          "unchanged": true,
+          "sha256": "9668bb9d73fc4323c55242e36aef94574788d20ada990dadc2c4ae10b8e90bde"
+        }
+      ]
+    },
+    {
+      "acs": [
+        "021",
+        "022",
+        "023",
+        "024"
+      ],
+      "reason": "Operator authorization, transfer authority/cutoff/history and owner/admin recovery functions unchanged; carry only these unchanged software paths. New support runbook is freshly reviewed/executed six dry runs. Shared paid-activation guard is NOT carried: new0070transfer/reactivation SQL scenarios and fresh Q4live deadline/readd evidence cover the changed gate. Old real buyer payment is historical evidence, not a Q4 changed-path live run.",
+      "evidence": [
+        {
+          "path": "evidence/Q2/02/transfer_buyer_final.json",
+          "exists": true,
+          "sha256": "de49a9e32140533e5035cc300c334c2972cb732ad82a867f83d7e546b1fffa27"
+        },
+        {
+          "path": "evidence/Q2/02/transfer_cancel_before_effective.json",
+          "exists": true,
+          "sha256": "9622b940149d02632a9d7419bb1b92cfdd236360a06e4f6196c513d8aa542454"
+        },
+        {
+          "path": "evidence/Q2/02/owner_recovery_audit.json",
+          "exists": true,
+          "sha256": "4d118624048668ad1252574ac2cc64ada41964cb09543a3bcfdd9eab9914adda"
+        }
+      ],
+      "source_proof": [
+        {
+          "app": "pp",
+          "path": "src/server/operator007b.ts",
+          "unchanged": true,
+          "sha256": "065eeaf3ad2bdaa7adc14d1a4564eb0d8186d72f9a97584f0d80bf6cd17e231a"
+        },
+        {
+          "app": "ob",
+          "path": "supabase/migrations/0066_007b_operator_audit.sql",
+          "unchanged": true,
+          "sha256": "3c9bae80614af88ffa205e6401548c6dbb9db5e183876c2155141c8b3b11c85c"
+        },
+        {
+          "app": "ob",
+          "path": "supabase/migrations/0069_007b_reactivation_transfer_registration.sql",
+          "unchanged": true,
+          "sha256": "c173249ad7706392f26da57ab32011b641e7dee9ebdf39ad613e9137d74668ad"
+        }
+      ]
+    },
+    {
+      "acs": [
+        "025",
+        "026",
+        "027"
+      ],
+      "reason": "Renewal grace/read-only, reminder dispatch, payloads, mail and recovery-policy paths unchanged. Carry actual Q2clock/inbox plus isolated fault evidence with their original limitations. New grant/activation gates and service-only privileges are freshly tested in Q4; no add-store deadline result carried.",
+      "evidence": [
+        {
+          "path": "evidence/Q2/02/director_manual_observations.json",
+          "exists": true,
+          "sha256": "3bef5881f321b0e2cf4388655cc741cf0537055142fe8dccc407e66dc49b3dd1"
+        },
+        {
+          "path": "evidence/Q2/02/readonly_membership.json",
+          "exists": true,
+          "sha256": "2a36ccdf807c19ea2b0af2ff7654e87839fd6b25fb2b6e51a653780720cd5e9a"
+        },
+        {
+          "path": "evidence/Q2/02/local_notice_faults.json",
+          "exists": true,
+          "sha256": "a488cecfb1ee183bc4deef2697c7af76051710e06ea9cfcc4ab1ab9c2d8bf528"
+        },
+        {
+          "path": "evidence/Q2/02/notice_dispatch_faults.json",
+          "exists": true,
+          "sha256": "d36bd35db686b3ffa8bbcbf3651dfdafba6631249f1f179e1fdfa9d20efc43df"
+        },
+        {
+          "path": "evidence/Q2/02/reminder_recovery_followup.json",
+          "exists": true,
+          "sha256": "e647ce1469a88635045a01466261aa45eb02d1c891a500d3e8a89a23d119564e"
+        }
+      ],
+      "source_proof": [
+        {
+          "app": "pp",
+          "path": "src/server/billingNotices.ts",
+          "unchanged": true,
+          "sha256": "1c94e43fd529bb036ca46d7a0f1f3f5f21316f1c041a40b7ecf050b23ec66249"
+        },
+        {
+          "app": "ob",
+          "path": "supabase/migrations/0065_007b_notices.sql",
+          "unchanged": true,
+          "sha256": "9eca9725a36bdadd064201ac3bbe774edffecc6c574a6194858d3699d8e9b55d"
+        },
+        {
+          "app": "pp",
+          "path": "src/server/billing.ts",
+          "unchanged": true,
+          "sha256": "5f14701906d1879ca9fcb620f9134ae345c3cfbfe7bf7ad16955177c393192d3"
+        },
+        {
+          "app": "pp",
+          "path": "src/server/webhook.ts",
+          "unchanged": true,
+          "sha256": "43dd8817edecdc62b41e4f32f1836a057de126ccb371b67a6dd63f317f5b1ef3"
+        }
+      ]
+    },
+    {
+      "acs": [
+        "009",
+        "020",
+        "028"
+      ],
+      "reason": "First-store registration/provision, explicit Authconfirm, handoffs/logout and whole-account cancel/undo paths unchanged. Fresh candidate3enginePortal regression, role checks and hydration screens are separate Q4evidence; U1\u2013U3 stayDirectoraccepted, notQA-certified. No Q2add-store payment/crash/money/gallery/runbook outcome carried for Q4scopeF1\u2013F4.",
+      "evidence": [
+        {
+          "path": "evidence/Q2/02/signed_in_first_store_browser.json",
+          "exists": true,
+          "sha256": "080056ea31b0564922a2279f3e0d0d315a25bc3d01ea724fbb56d4c91e70a89c"
+        },
+        {
+          "path": "evidence/Q2/02/logout_cross_app.json",
+          "exists": true,
+          "sha256": "2a6ec6c241771df433f51f0788fe5390ec9ca4df41d19e0ff0b7dfc5b368997c"
+        },
+        {
+          "path": "evidence/Q2/02/grouped_browser_confirmation.json",
+          "exists": true,
+          "sha256": "d6563f0b68d1ca11f7c48a1a29e92288f6212e586bd1535107edb90ca255e170"
+        },
+        {
+          "path": "evidence/Q2/02/history_and_last_store_cancel.json",
+          "exists": true,
+          "sha256": "d8e4bfdd236caf0c4a5793f2f988be5f3b2a4945e05f9c9567bab3a6fefc5190"
+        }
+      ],
+      "source_proof": [
+        {
+          "app": "pp",
+          "path": "src/server/registration.ts",
+          "unchanged": true,
+          "sha256": "65bb6cc1266f614a59ec2fe8446f6fe2dfffdc34ec9a8e76617aad1410851c74"
+        },
+        {
+          "app": "pp",
+          "path": "src/server/checkout.ts",
+          "unchanged": true,
+          "sha256": "7e049cf88b8f3bab60b6b15fce54dfc284a6164d4b463189422515e1cb097a76"
+        },
+        {
+          "app": "pp",
+          "path": "src/server/handoff.ts",
+          "unchanged": true,
+          "sha256": "72afdfd7f42bccf8a46d299170af931b62a921d07683bab7d7cd265c014f5aaa"
+        },
+        {
+          "app": "ob",
+          "path": "src/app/api/auth/confirm/route.ts",
+          "unchanged": true,
+          "sha256": "9125426152ad632db1e00463355954ed836dbfa5550a6b860a0ce5d284268cc2"
+        }
+      ]
+    }
+  ],
+  "rule": "Carry only the explicitly unchanged path portions. No carry for Q4scopeF1\u2013F4; newguard,activation,money,screens,runbook tested fresh. Historical evidence remains tied to originalpair and limits."
+}

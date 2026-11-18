@@ -1,0 +1,54 @@
+{
+  "at": "2026-11-17T14:44:34.851812+00:00",
+  "containers": [
+    {
+      "name": "apbm007b-qa-q4-db",
+      "running": false,
+      "status": "exited",
+      "retained": true
+    },
+    {
+      "name": "apbm007b-qa-q4-auth",
+      "running": false,
+      "status": "exited",
+      "retained": true
+    },
+    {
+      "name": "apbm007b-qa-q2-db",
+      "running": false,
+      "status": "exited",
+      "retained": true
+    },
+    {
+      "name": "apbm007b-qa-q2-auth",
+      "running": false,
+      "status": "exited",
+      "retained": true
+    }
+  ],
+  "ports": {
+    "3000": {
+      "listening": true
+    },
+    "3001": {
+      "listening": true
+    },
+    "3457": {
+      "listening": true
+    },
+    "3100": {
+      "listening": false
+    },
+    "3101": {
+      "listening": false
+    }
+  },
+  "owned_apps_started": false,
+  "owned_listener_started": false,
+  "owned_listener_running": false,
+  "Director_listener_observed_pid": 3556606,
+  "Director_listener_touched": false,
+  "remote_fixture_cleanup": false,
+  "provider_refunds": 0,
+  "no_remote_effects_in_Q4": true
+}

@@ -1,0 +1,306 @@
+[
+  {
+    "role": "OWNER_A",
+    "test": "Direct businesses RLS independently derived from actual ownership, membership, live dates and account billing clocks",
+    "expected_count": 5,
+    "actual_count": 5,
+    "error": null,
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_A",
+    "test": "Billing mapping is deny-all to customer JWT",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_A",
+    "test": "store_operation_deadline_passed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_A",
+    "test": "store_operation_payment_observed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_A",
+    "test": "billing_test_context_enable not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_A",
+    "test": "store_add_activate not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "test": "Direct businesses RLS independently derived from actual ownership, membership, live dates and account billing clocks",
+    "expected_count": 4,
+    "actual_count": 4,
+    "error": null,
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "test": "Billing mapping is deny-all to customer JWT",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "test": "store_operation_deadline_passed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "test": "store_operation_payment_observed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "test": "billing_test_context_enable not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "OWNER_B",
+    "test": "store_add_activate not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "test": "Direct businesses RLS independently derived from actual ownership, membership, live dates and account billing clocks",
+    "expected_count": 8,
+    "actual_count": 8,
+    "error": null,
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "test": "Billing mapping is deny-all to customer JWT",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "test": "store_operation_deadline_passed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "test": "store_operation_payment_observed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "test": "billing_test_context_enable not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "STORE_ADMIN",
+    "test": "store_add_activate not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "test": "Direct businesses RLS independently derived from actual ownership, membership, live dates and account billing clocks",
+    "expected_count": 3,
+    "actual_count": 3,
+    "error": null,
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "test": "Billing mapping is deny-all to customer JWT",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "test": "store_operation_deadline_passed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "test": "store_operation_payment_observed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "test": "billing_test_context_enable not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "MEMBER",
+    "test": "store_add_activate not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "test": "Direct businesses RLS independently derived from actual ownership, membership, live dates and account billing clocks",
+    "expected_count": 6,
+    "actual_count": 6,
+    "error": null,
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "test": "Billing mapping is deny-all to customer JWT",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "test": "store_operation_deadline_passed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "test": "store_operation_payment_observed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "test": "billing_test_context_enable not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "FOREIGN_OWNER",
+    "test": "store_add_activate not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_ADMIN",
+    "test": "Direct businesses RLS independently derived from actual ownership, membership, live dates and account billing clocks",
+    "expected_count": 2,
+    "actual_count": 2,
+    "error": null,
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_ADMIN",
+    "test": "Billing mapping is deny-all to customer JWT",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_ADMIN",
+    "test": "store_operation_deadline_passed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_ADMIN",
+    "test": "store_operation_payment_observed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_ADMIN",
+    "test": "billing_test_context_enable not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_ADMIN",
+    "test": "store_add_activate not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "test": "Direct businesses RLS independently derived from actual ownership, membership, live dates and account billing clocks",
+    "expected_count": 2,
+    "actual_count": 2,
+    "error": null,
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "test": "Billing mapping is deny-all to customer JWT",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "test": "store_operation_deadline_passed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "test": "store_operation_payment_observed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "test": "billing_test_context_enable not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "NEW_MEMBER",
+    "test": "store_add_activate not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "test": "Direct businesses RLS independently derived from actual ownership, membership, live dates and account billing clocks",
+    "expected_count": 3,
+    "actual_count": 3,
+    "error": null,
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "test": "Billing mapping is deny-all to customer JWT",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "test": "store_operation_deadline_passed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "test": "store_operation_payment_observed not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "test": "billing_test_context_enable not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  },
+  {
+    "role": "EXISTING_INVITEE",
+    "test": "store_add_activate not callable by customer",
+    "error": "42501",
+    "result": "PASS"
+  }
+]

@@ -1,0 +1,9 @@
+{"name":"real_late_prompt","status":"paid","amount_paid":4788,"paid_at":1794969112,"wall":"2026-11-18T02:31:54.034Z"}
+{"name":"real-late-before-owner-poll","state":"payment_pending","code":null,"automatic_receipt_path":52858}
+{"name":"real_late_prompt","result":"PASS","http":200,"state":"attention","code":"paid_after_deadline","paid_at":"2026-11-18T02:31:52+00:00","deadline":"2026-11-18T02:31:41.38437+00:00","business_id":null,"stores":0,"invoice_status":"paid","amount_paid":4788,"provider_quantity":2,"target_quantity":3,"observed_wall":"2026-11-18T02:31:58.423Z","delivery_lane":"Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"}
+{"name":"owned-runtime-stop","args":["--only","pp","--signal","KILL"],"exit":0}
+{"name":"real_late_after_crash","status":"paid","amount_paid":4786,"paid_at":1794969119,"wall":"2026-11-18T02:32:00.625Z"}
+{"name":"owned-runtime-start","args":["--only","pp"],"exit":0}
+{"name":"real_late_after_crash","result":"PASS","http":200,"state":"attention","code":"paid_after_deadline","paid_at":"2026-11-18T02:31:59+00:00","deadline":"2026-11-18T02:31:50.102566+00:00","business_id":null,"stores":0,"invoice_status":"paid","amount_paid":4786,"provider_quantity":4,"target_quantity":5,"observed_wall":"2026-11-18T02:32:05.887Z","delivery_lane":"Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"}
+{"name":"real-late-crash-result","result":"PASS","paid_after_real_deadline_while_owned_process_down":true,"no_test_clock":true,"state_while_down":"payment_pending","stores_while_down":0,"quantity_before":4,"quantity_while_down":4,"at":"2026-11-18T02:32:01.058Z"}
+

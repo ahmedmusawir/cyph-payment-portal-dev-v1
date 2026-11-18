@@ -1,0 +1,45 @@
+[
+  {
+    "finding": "F-Q2-001",
+    "executor_retest_observation": "Late provider paid time now attention/no grant in both clock modes, actual late crash included; on-time paid processed after deadline activates once. Original defective activated fixture remains unrefunded.",
+    "evidence": [
+      "evidence/Q4/01/live_campaign.json",
+      "evidence/Q4/01/deadline_independent_final_audit.json"
+    ],
+    "QA_Lead_disposition": "Pending; original Q2 ruling unchanged"
+  },
+  {
+    "finding": "F-Q2-004",
+    "executor_retest_observation": "Verified unpaid expiry by minute job in both modes, real30-minute wait and no owner action; interrupted old unpaid operation also voided on resume.",
+    "evidence": [
+      "evidence/Q4/01/live_campaign.json"
+    ],
+    "QA_Lead_disposition": "Pending; original Q2 ruling unchanged"
+  },
+  {
+    "finding": "F-Q2-002",
+    "executor_retest_observation": "Prescribed five unchanged WebKit staff runsPASS,2checks each, plus3engine staff6/6. New WebKit authentication/render failures remain separate F-Q4-002/003; relation not inferred.",
+    "evidence": [
+      "evidence/Q4/01/browser/ob_results.json",
+      "evidence/Q4/01/browser_extra_results.json"
+    ],
+    "QA_Lead_disposition": "Pending; original Q2 ruling unchanged"
+  },
+  {
+    "finding": "F-Q2-005",
+    "executor_retest_observation": "Obsolete capability sentence absent in phone/desktop light/dark; dashboard diff changes only that sentence.",
+    "evidence": [
+      "evidence/Q4/01/screens_gallery_q4.json",
+      "evidence/Q4/01/entry/portal_repair_only.diff"
+    ],
+    "QA_Lead_disposition": "Pending; original Q2 ruling unchanged"
+  },
+  {
+    "finding": "F-Q2-006",
+    "executor_retest_observation": "Six exact commands dry_run/planned and required procedure fields/approver/possession verified; no destructive operator apply implied by dry-run.",
+    "evidence": [
+      "evidence/Q4/01/support_runbook_dry_runs.json"
+    ],
+    "QA_Lead_disposition": "Pending; original Q2 ruling unchanged"
+  }
+]

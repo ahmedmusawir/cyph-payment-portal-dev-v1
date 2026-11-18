@@ -1,0 +1,1 @@
+const C=require('./live-common.cjs');(async()=>{const x=C.st.cases.real_late_prompt;if(!x.resume&&x.result==='PASS'&&(await C.op(x.operation)).state==='attention')await C.ownerResume('real_late_prompt')})().catch(e=>{console.error(C.R.sanitize(e.message));process.exitCode=1});

@@ -1,0 +1,17 @@
+{
+  "authority": "Director Tony via Friday,18November2026, current message",
+  "limits": [
+    {
+      "counter": "provider_mutations",
+      "before": 400,
+      "after": 440,
+      "increase_percent": 10,
+      "uses_of_this_limit_authority": 1,
+      "cleanup_reserve_unchanged": 20,
+      "reason": "Whole remaining forecast includes conservatively counted Auth recovery/revocation requests, fresh real consent-race after interrupted deadline, expiry and real redelivery/duplicate checks;13ordinary requests remained under400, forecast20.440provides bounded contingency without touching cleanup reserve."
+    }
+  ],
+  "counter_reset": false,
+  "all_other_caps_unchanged": true,
+  "forecast_clarification": "Original reason summary says20; actual before-effect whole-plan dry-run reserved forecast24provider requests, as recorded in remaining_plan_after_privacy_release.json. Both exceed13ordinary remaining under400 and fit440 with20cleanup reserved. No counter reset."
+}

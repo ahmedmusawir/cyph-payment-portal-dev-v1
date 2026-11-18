@@ -1,0 +1,67 @@
+{
+  "authority": "Director order via Friday,18November2026",
+  "at": "2026-11-18T03:10:03.946Z",
+  "diagnostics": [
+    {
+      "path": "apbm007b-qa-q4-01/proof/pp/test-results/apbm007b.o1-state-Portal-d-5f2bd--the-owner-s-billing-action-apbm007b-webkit/error-context.md",
+      "matched_field_names": [
+        "ROLE_OWNER_A_PASSWORD"
+      ],
+      "deleted": true
+    },
+    {
+      "path": "apbm007b-qa-q2-01/proof/ob/test-results/apbm007b.staff-owner-invit-33ff1--sees-it-pending-revokes-it-apbm007b-webkit/error-context.md",
+      "matched_field_names": [
+        "ROLE_OWNER_B_PASSWORD"
+      ],
+      "deleted": true
+    }
+  ],
+  "rotations": [
+    {
+      "field": "ROLE_OWNER_A_PASSWORD",
+      "auth_id": "bc30ca1c-6950-4c65-b541-384b618bf718",
+      "before": {
+        "sessions": 43,
+        "active_refresh": 43
+      },
+      "update_attempted": true,
+      "new_value_location": ".env.qa.local (ignored/private0600; no value in report)",
+      "new_signin_verified": true,
+      "retired_password_refused": true,
+      "after": {
+        "sessions": 0,
+        "active_refresh": 0
+      },
+      "auth_id_unchanged": true,
+      "sessions_revoked": true,
+      "access_token_limit": "Global revoke removes server sessions/refresh authority; previously issued direct JWTs may remain cryptographically valid until expiry. No instant-JWT-invalidity claim."
+    },
+    {
+      "field": "ROLE_OWNER_B_PASSWORD",
+      "auth_id": "f589730b-9547-4f0c-bae2-a827f8ea492a",
+      "before": {
+        "sessions": 40,
+        "active_refresh": 40
+      },
+      "update_attempted": true,
+      "new_value_location": ".env.qa.local (ignored/private0600; no value in report)",
+      "new_signin_verified": true,
+      "retired_password_refused": true,
+      "after": {
+        "sessions": 0,
+        "active_refresh": 0
+      },
+      "auth_id_unchanged": true,
+      "sessions_revoked": true,
+      "access_token_limit": "Global revoke removes server sessions/refresh authority; previously issued direct JWTs may remain cryptographically valid until expiry. No instant-JWT-invalidity claim."
+    }
+  ],
+  "other_secret_names": [],
+  "nonsecret_identifier_names": [],
+  "credential_values_or_hashes_printed": false,
+  "additional_QA_password_fields": [],
+  "business_provider_fixtures_changed": false,
+  "completed_at": "2026-11-18T03:10:09.163Z",
+  "result": "PASS"
+}

@@ -24,3 +24,7 @@ Every result NOT RUN. First row must execute first in Q1 and Q2: verify both run
 | PF-15 | Exporter --self-test and state recovery check | exact safe member hashes and CRC; durable attempt folders | local synthetic QA lane only | PASS exporter controls; final archive verification in external receipt | HANDOFFS/README.md; evidence/Q2/01/preflight/privacy_controls.json; final EXPORT_VALIDATION.json and external Q2_01_RECEIPT.json |
 
 Aggregate independent gaps with owner/enabler. At Q2/Q4 recheck PF00–04,06–09,12,14 and any changed prerequisite; valid unchanged instrument evidence can carry with provenance. A connectivity HTTP code is not readiness for payment/mail. Do not perform a generic live sign-in probe without explicit allowance.
+
+## Executor Q4 runtime/target recheck —18November2026
+
+Q4 entry result PASS: full paired repairedSHA/declared scope verified; production served-identity matches manifests on3100/3101; runtime isSCRATCH and sandbox; fresh ownedCLIsecret matches Portal and real automatically-forwarded eventHTTP200/durableignored-foreign receipt provestransport. Migration0070exacthash, fresh/upgrade158SQL each, SCRATCH70forward/fixturelegacydigests equal; DEV69read-onlyexactprefix. Evidence/Q4/01/entry/*.json. Ownedlistener then intentionallystopped for actual30minute outage/deferred-processing case; this is plannedteststate, notreadinessfailure. No Director processes touched. Q4newlimits forecastpassed beforeeffects; strict perattemptreservesandwindowremain.

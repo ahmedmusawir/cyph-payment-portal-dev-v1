@@ -1,0 +1,139 @@
+[
+  {
+    "project": "apbm007b",
+    "exit": 0,
+    "passed": 5,
+    "failed": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "e2e/apbm007b.o1-state.spec.ts",
+      "--project=apbm007b"
+    ],
+    "expected": {
+      "project": "apbm007b",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "provider_clock": 1801518113,
+      "expected_cents": 2450,
+      "expected_quantity_after": 9,
+      "written_before_run": "2026-11-18T02:18:52.484Z"
+    },
+    "operations": [
+      {
+        "id": "a3199474-1f20-4223-bedc-1fb932fb71ff",
+        "invoice_id": null,
+        "state": "completed",
+        "business_id": "a8298a96-2316-4193-956a-b7306d9829fc",
+        "amount_cents": null,
+        "target_quantity": 9
+      },
+      {
+        "id": "8d2b7d1f-42f8-449c-b466-d06a19114b0f",
+        "invoice_id": null,
+        "state": "completed",
+        "business_id": "a8298a96-2316-4193-956a-b7306d9829fc",
+        "amount_cents": null,
+        "target_quantity": 8
+      },
+      {
+        "id": "e6fc547b-adcf-4b91-a506-d192f889f00a",
+        "invoice_id": "in_1UcyShGnEQDyu3RRQ3yjxtA4",
+        "state": "activated",
+        "business_id": "5cd0f921-59cc-4ff1-b3d3-a3df790e957e",
+        "amount_cents": 2450,
+        "target_quantity": 9
+      }
+    ],
+    "mode": "Active O1screens freshly checked; unchanged grace/readonly subpaths carried with exactQ2provenance; full AddStore happy path including rendered dashboard plus remove/undo on all3engines"
+  },
+  {
+    "project": "apbm007b-firefox",
+    "exit": 0,
+    "passed": 5,
+    "failed": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "e2e/apbm007b.o1-state.spec.ts",
+      "--project=apbm007b-firefox"
+    ],
+    "expected": {
+      "project": "apbm007b-firefox",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "provider_clock": 1801518113,
+      "expected_cents": 2450,
+      "expected_quantity_after": 10,
+      "written_before_run": "2026-11-18T02:19:38.444Z"
+    },
+    "operations": [
+      {
+        "id": "42b3ed7a-f201-4b4a-bf04-ea4bb1cbf9d7",
+        "invoice_id": null,
+        "state": "completed",
+        "business_id": "a8298a96-2316-4193-956a-b7306d9829fc",
+        "amount_cents": null,
+        "target_quantity": 9
+      },
+      {
+        "id": "fe2365f3-6450-4361-a983-174c1cc39e7c",
+        "invoice_id": "in_1UcyTRGnEQDyu3RRRV2i2Dh4",
+        "state": "activated",
+        "business_id": "3855f741-21f8-4859-8fec-10af5e3278d0",
+        "amount_cents": 2450,
+        "target_quantity": 10
+      },
+      {
+        "id": "b1b838fd-faa8-40d4-9cdb-ff9d576afca3",
+        "invoice_id": null,
+        "state": "completed",
+        "business_id": "a8298a96-2316-4193-956a-b7306d9829fc",
+        "amount_cents": null,
+        "target_quantity": 10
+      }
+    ],
+    "mode": "Active O1screens freshly checked; unchanged grace/readonly subpaths carried with exactQ2provenance; full AddStore happy path including rendered dashboard plus remove/undo on all3engines"
+  },
+  {
+    "project": "apbm007b-webkit",
+    "exit": 1,
+    "passed": 0,
+    "failed": 3,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "e2e/apbm007b.o1-state.spec.ts",
+      "--project=apbm007b-webkit"
+    ],
+    "expected": {
+      "project": "apbm007b-webkit",
+      "period_start": 1800178913,
+      "period_end": 1802857313,
+      "provider_clock": 1801518113,
+      "expected_cents": 2450,
+      "expected_quantity_after": 11,
+      "written_before_run": "2026-11-18T02:20:38.310Z"
+    },
+    "operations": [
+      {
+        "id": "f80277f8-8d46-49e5-857e-a179707a4852",
+        "invoice_id": "in_1UcyUjGnEQDyu3RRMe0HpLjo",
+        "state": "activated",
+        "business_id": "08b4165e-0cf5-4eea-8f10-3506eff8808b",
+        "amount_cents": 2450,
+        "target_quantity": 11
+      }
+    ],
+    "mode": "Active O1screens freshly checked; unchanged grace/readonly subpaths carried with exactQ2provenance; full AddStore happy path including rendered dashboard plus remove/undo on all3engines"
+  }
+]

@@ -1,0 +1,12 @@
+
+Running 6 tests using 1 worker
+
+  ✓  1 [apbm007b] › e2e/apbm007b.staff.spec.ts:23:5 › owner invites a member (guarded send), sees it pending, revokes it (2.4s)
+  ✓  2 [apbm007b] › e2e/apbm007b.staff.spec.ts:37:5 › /invitations lists only invitations addressed to the signed-in person; viewing grants nothing (1.2s)
+  ✓  3 [apbm007b-firefox] › e2e/apbm007b.staff.spec.ts:23:5 › owner invites a member (guarded send), sees it pending, revokes it (2.9s)
+  ✓  4 [apbm007b-firefox] › e2e/apbm007b.staff.spec.ts:37:5 › /invitations lists only invitations addressed to the signed-in person; viewing grants nothing (1.3s)
+  ✓  5 [apbm007b-webkit] › e2e/apbm007b.staff.spec.ts:23:5 › owner invites a member (guarded send), sees it pending, revokes it (2.4s)
+  ✓  6 [apbm007b-webkit] › e2e/apbm007b.staff.spec.ts:37:5 › /invitations lists only invitations addressed to the signed-in person; viewing grants nothing (1.6s)
+
+  6 passed (14.7s)
+

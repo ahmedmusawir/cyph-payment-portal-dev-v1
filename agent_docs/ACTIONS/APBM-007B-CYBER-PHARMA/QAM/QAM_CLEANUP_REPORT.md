@@ -61,3 +61,12 @@ Do not preserve credential values or their hashes as evidence. After deletion, d
 Friday/Director's current release explicitly requires stopping only owned apps/listener/local containers and keeping every Scratch/sandbox/identity fixture, including F001, until retention is ruled. Executed process hygiene only; phase_exit_processes.json all_owned_stopped=true, Director ports/PIDs unchanged, remote/provider/Auth fixture mutations0. Containers stopped and data kept; no SQL context disable, provider deletion or further refund. Protected F001 verified amount_refunded0 in fixture_inventory.json.
 
 Credential/auth-state final removal and formal cleanup sequence in section2 remain NOT RUN pending owning-seat authority; their existing Decision/Acceptance fields remain unfilled. Actual-value and pattern scans of selected retained QA outputs/export performed while private sources exist, with poison/clean controls; exporter validation supplies safe counts/locations only, no credential hashes. Raw private logs/states remain0700/0600, excluded from archive. This entry is an execution record, not retention decision, cleanup acceptance or certificate.
+
+## Executor Q4 STOP-PRIVACY hygiene —18November2026
+
+Only owned apps3100/3101, listener52858 and already-owned local containers stopped; Director3000/3001/3457 left running. Verified evidence/Q4/01/privacy_stop_process_exit.json. No SCRATCH/provider/Auth fixture cleanup, password change or session revocation. All fixtures retained including protectedF001unrefunded, read-only proof fixture_inventory_stop04.json. Diagnostic permission containment0700/0600 and futureQAumask0077 performed; this is not retention disposal or formalcleanupacceptance. QA Lead retention/acceptance cells remain unchanged.
+
+## Cody Q4 phase-exit execution —18November2026
+
+Evidence evidence/Q4/01/phase_exit_final.json verifies only owned3100/3101apps/listener and named localQ4containers stopped, Director3000/3001/3457 untouched. Remote/Auth/business/provider fixtures retained; protectedF001amount_refunded0 in fixture_inventory_final.json. Director authorized exception only for two QA password/session recoveries and diagnostic deletion; no other retention disposal. Containers/builds/private states remain retained0700/0600. This is execution hygiene, not formal cleanup acceptance or a retention/verdict decision; owning-seat cells remain unchanged.
+

@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-18T03:51:38.135Z",
+  "owned_app_pids": {
+    "ob": 90838,
+    "pp": 90839
+  },
+  "owned_listener_pid": 90771,
+  "owned_listener_running": false,
+  "ports": [
+    "LISTEN 0      511                *:3000        *:* users:((\"next-server (v1\",pid=3199658,fd=23))",
+    "LISTEN 0      511                *:3001        *:* users:((\"next-server (v1\",pid=3199884,fd=23))",
+    "LISTEN 0      511                *:3457        *:* users:((\"next-server (v1\",pid=40320,fd=21))  "
+  ],
+  "owned_ports_unbound": true,
+  "containers": [
+    {
+      "name": "apbm007b-qa-q4-db",
+      "running": false,
+      "removed": false
+    },
+    {
+      "name": "apbm007b-qa-q4-auth",
+      "running": false,
+      "removed": false
+    }
+  ],
+  "director_processes_before": [
+    "LISTEN 0      511                *:3000        *:* users:((\"next-server (v1\",pid=3199658,fd=23))",
+    "LISTEN 0      511                *:3001        *:* users:((\"next-server (v1\",pid=3199884,fd=23))",
+    "LISTEN 0      511                *:3457        *:* users:((\"next-server (v1\",pid=40320,fd=21))  "
+  ],
+  "director_processes_after": [
+    "LISTEN 0      511                *:3000        *:* users:((\"next-server (v1\",pid=3199658,fd=23))",
+    "LISTEN 0      511                *:3001        *:* users:((\"next-server (v1\",pid=3199884,fd=23))",
+    "LISTEN 0      511                *:3457        *:* users:((\"next-server (v1\",pid=40320,fd=21))  "
+  ],
+  "director_processes_unchanged": true,
+  "director_processes_touched": false,
+  "fixtures_removed_or_refunded": false,
+  "all_owned_stopped": true
+}

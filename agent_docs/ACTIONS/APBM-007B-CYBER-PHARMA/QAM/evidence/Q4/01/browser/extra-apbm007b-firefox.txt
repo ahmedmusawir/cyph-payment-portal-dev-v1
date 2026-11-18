@@ -1,0 +1,11 @@
+
+Running 5 tests using 1 worker
+
+  ✓  1 [apbm007b-firefox] › e2e/apbm007b.addstore.spec.ts:24:5 › owner adds a store: server quote, three consents, payment, activated; dashboard shows it (19.3s)
+  ✓  2 [apbm007b-firefox] › e2e/apbm007b.addstore.spec.ts:51:5 › owner schedules a period-end removal and undoes it; no charge either way (10.9s)
+  ✓  3 [apbm007b-firefox] › e2e/apbm007b.addstore.spec.ts:66:5 › narrow viewport (375): dashboard and Add Store form fit with no horizontal scroll (4.8s)
+  ✓  4 [apbm007b-firefox] › e2e/apbm007b.o1-state.spec.ts:13:5 › Portal dashboard shows the active state with the owner's billing action (6.7s)
+  ✓  5 [apbm007b-firefox] › e2e/apbm007b.o1-state.spec.ts:26:5 › OwedBook shows the active banner (9.4s)
+
+  5 passed (53.3s)
+

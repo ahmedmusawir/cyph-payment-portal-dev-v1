@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "removal-undo",
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "--project=apbm007b-webkit",
+      "--grep",
+      "owner schedules a period-end removal"
+    ],
+    "exit": 0,
+    "passed": 1,
+    "failed": 0,
+    "unchanged_spec": true,
+    "unchanged_timeouts": true,
+    "original_serial_skip_preserved": true
+  },
+  {
+    "slug": "narrow-viewport",
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "--project=apbm007b-webkit",
+      "--grep",
+      "narrow viewport"
+    ],
+    "exit": 0,
+    "passed": 1,
+    "failed": 0,
+    "unchanged_spec": true,
+    "unchanged_timeouts": true,
+    "original_serial_skip_preserved": true
+  }
+]

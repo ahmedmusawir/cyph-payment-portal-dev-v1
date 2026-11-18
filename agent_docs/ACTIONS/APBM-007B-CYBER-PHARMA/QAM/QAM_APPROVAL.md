@@ -50,6 +50,54 @@ Plan after release record lines SHA-256: 794c4d9c7877d585a47abb6630e03984d6a038f
 |---|---|---|---|---|
 | | NOT RECORDED | | NOT RECORDED | |
 
+### Q4 release — Friday and Tony, 17 November 2026; transcribed by Cody
+
+Source: QA_LEAD_Q4_BINDING_APBM007B_2026-11-17.md, supplied SHA-256 345553689d5d5825ee80093ca73c5d735a4286500bd630e88924f0a5ad0bf324. Exact supplied approval/release follows:
+
+2026-11-17 | QA LEAD (Friday): retest scope approved per QA_LEAD_Q4_BINDING_APBM007B_2026-11-17.md section 4 | Repaired candidate: Portal 00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d; OwedBook 1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d | DIRECTOR (Tony): Q4 released 17 November 2026; Q4 budget approved (provider 400, sign-ins 176, clocks 7, refunds 2, customers 16)
+
+Recorded plan identity after section7 transcription: SHA-256 `49e0ca36b3ba39a47346162fb736880d07950bc9e36478391f3a6c50d18f8305`. Director decision also explicitly raises subscriptions to16; all other limits unchanged, counters preserved. Source attachment identity is attributed as supplied, not independently verified.
+
+### Q4 budget amendment and resume — 18 November 2026
+
+Transcribed by Cody from Friday's current message, approved by Director Tony by sending it, 18 November 2026. STOP_REVIEW_03 SHA-256 926e6c424501c2cc5f08b7d5c33a7185b9cf7c6cb3c19056d12cd4648ac77233 reviewed; STOP-AUTHORITY correct. Original repaired pair and Q4 scope unchanged.
+
+Director budget amendment, counters preserved, nothing reset:
+- pay_or_hosted:32→80 cumulative.
+- Attempted simulated charges:500000→1000000 cents.
+- Read requests:2400→5000.
+- Campaign window extended to20 November2026 23:59 Asia/Dhaka (2026-11-20T17:59:00Z).
+- Unchanged: provider mutations400(last20cleanup), sign-ins176, test clocks7, refunds2, customers/subscriptions16, email attempts40(8reserved), identity attempts14, unique identities10, SCRATCH cycles as planned.
+
+Before any effect, dry-run the whole remaining Q4 plan against EVERY limit; if any limit would be exceeded, return the required numbers in one message before starting. Director stopping listenerPID3556606→3001; verify before first payment and report any remaining listener in one line, continuing non-provider-event work. Resume per QA_Q4_RESUME and Q4 release; failures are findings, no repair/rebind, all effectsSCRATCH/sandbox, retain everyfixture. Return Q4 COMPLETE indexedpackage or playbookstop.
+
+### Director order via Friday — 18 November 2026: privacy recovery and standing Q4 authority
+
+Transcribed by Cody from the current Director-sent message, attributed to Friday (QA Lead) and Tony (Director). STOP-PRIVACY is resolved. Authorized now: rotate ROLE_OWNER_A_PASSWORD and ROLE_OWNER_B_PASSWORD on SCRATCH, revoke those two identities' QA sessions, keep replacements only in the private0600file, delete the diagnostic, create future diagnostics0600, record as QA instrument issue and resume. If other QA-only SCRATCH test credentials are found in the diagnostic, rotate them similarly and list additional names only.
+
+Standing authority for the remainder of Q4: QA-instrument/file-hygiene problems on QA-only material are fixed, recorded and execution continues. For an approaching sandbox effects limit, Cody may raise that limit by at most50percent of its current value, once per limit, recording before/after/reason; counters never reset. Product failures are findings and execution continues.
+
+Hard stops remain: real money; any write to DEV or outside SCRATCH/Stripe sandbox; product-code/candidate-pair/contract changes; a non-QA-only secret exposed outside this machine; inability to save evidence with integrity; inability to sign in at all. Otherwise decide, record and continue. Finish Q4, indexed package, stop only owned apps/listener, keep fixtures. This authorization overrides the earlier no-credential-change retention restriction only for the stated QA recovery. Existing repaired pair and Q4 scope stay fixed; no repair/rebind.
+
+Executor receipt — Cody,18November2026 (exercise of supplied standing authority, not a new composed Director approval): provider_mutations400→440,10percent, one use for this limit; cleanup20 unchanged. Before-effect remaining whole-plan forecast24 exceeded13ordinary remaining under400, including authorized Auth recovery and final real consent/race/redelivery contingency. Counters never reset. Exact reason/forecast/caps in evidence/Q4/01/effects/standing_authority_limit_use.json and remaining_plan_after_privacy_release.json. All other limits unchanged.
+
+### Next-retest budget — Director Tony, 18 November 2026; transcribed by Cody
+
+Friday Q4/01 adjudication, Director Tony chose one more repair round. Source supplied in the Director conversation: `QA_LEAD_ADJUDICATION_APBM007B_Q4_01_2026-11-18.md`, SHA-256 `c675e9e3aa3fddd373ff88d7fabd8d47183e0a046249dd45d0f0646ffe1f10d4` (attributed supplied reference; no independent attachment verification claimed). Friday read Q4_REVIEW_01 SHA-256 `ec99c079406250551abd02f1d5e4403f6f101a3bbc24c0cdd9b8b52a029400a5`; index verified280of280.
+
+**BUDGET FOR THE NEXT RETEST (Director, 18 November 2026), counters preserved, nothing reset:**
+
+| Limit | Previous cumulative cap | Next-retest cumulative cap |
+|---|---:|---:|
+| Sign-ins | 176 | 300 |
+| Provider mutations | 440 | 560 (last20cleanup) |
+| pay_or_hosted | 80 | 100 |
+| Read requests | 5,000 | 8,000 |
+
+All other limits unchanged. Standing authority from this morning continues for the next retest. This records the supplied budget; no ledger counters or executable caps changed during this docs-only step, and no new retest scope or release is inferred.
+
+Keep every fixture as is. Do not start apps or a listener. Engineering now has the QA branch. When the Director provides the repaired pair, Friday will send the bound retest scope. Current state **REPAIR RULED — AWAITING COMMIT**; nobody retests in this state.
+
 `RELEASED FOR Q4` requires all three: the repaired candidate identity, the QA Lead's retest-scope approval and the Director's release (`QAM_ENTRY.md` §5).
 
 *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*

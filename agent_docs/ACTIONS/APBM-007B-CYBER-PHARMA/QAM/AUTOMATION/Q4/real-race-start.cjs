@@ -1,0 +1,1 @@
+const C=require('./live-common.cjs');(async()=>{await C.confirm('real_paid_void_race','NEW_MEMBER');C.log('final-real-race-wait-started',{deadline:C.st.cases.real_paid_void_race.deadline,clock:null,actual_wait_required:true});})().catch(e=>{console.error(C.R.sanitize(e.message));process.exitCode=1});

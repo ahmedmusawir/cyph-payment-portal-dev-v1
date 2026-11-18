@@ -1,0 +1,15 @@
+
+Running 9 tests using 1 worker
+
+  ✓  1 [apbm007b] › e2e/apbm007b.regression.spec.ts:29:5 › dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action (5.4s)
+  ✓  2 [apbm007b] › e2e/apbm007b.regression.spec.ts:38:5 › handoff Portal → OwedBook keeps the same user; OwedBook → Portal billing returns (4.2s)
+  ✓  3 [apbm007b] › e2e/apbm007b.regression.spec.ts:50:5 › Add Store quote screen: keyboard-only, dark theme, server quote shown, confirm disabled until all three consents (1.6s)
+  ✓  4 [apbm007b-firefox] › e2e/apbm007b.regression.spec.ts:29:5 › dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action (4.9s)
+  ✓  5 [apbm007b-firefox] › e2e/apbm007b.regression.spec.ts:38:5 › handoff Portal → OwedBook keeps the same user; OwedBook → Portal billing returns (4.3s)
+  ✓  6 [apbm007b-firefox] › e2e/apbm007b.regression.spec.ts:50:5 › Add Store quote screen: keyboard-only, dark theme, server quote shown, confirm disabled until all three consents (1.8s)
+  ✓  7 [apbm007b-webkit] › e2e/apbm007b.regression.spec.ts:29:5 › dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action (4.4s)
+  ✓  8 [apbm007b-webkit] › e2e/apbm007b.regression.spec.ts:38:5 › handoff Portal → OwedBook keeps the same user; OwedBook → Portal billing returns (4.6s)
+  ✓  9 [apbm007b-webkit] › e2e/apbm007b.regression.spec.ts:50:5 › Add Store quote screen: keyboard-only, dark theme, server quote shown, confirm disabled until all three consents (1.8s)
+
+  9 passed (35.0s)
+

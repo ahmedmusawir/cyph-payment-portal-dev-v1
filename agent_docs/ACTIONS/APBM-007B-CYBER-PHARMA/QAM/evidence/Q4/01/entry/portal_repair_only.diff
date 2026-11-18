@@ -1,0 +1,823 @@
+diff --git a/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_MANIFEST.md b/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_MANIFEST.md
+index 6b891af..e144040 100644
+--- a/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_MANIFEST.md
++++ b/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_MANIFEST.md
+@@ -108,6 +108,15 @@ Paths outside the authorized scope: none known. Local-only, never to be committe
+ 
+ | Date | Owner | Field amended | Old → new | Reason |
+ |---|---|---|---|---|
+-| | | | | |
++| 2026-11-17 | Claudy (Engineering) | §1 Candidate | `PENDING` → tested candidate Portal `427bec6267b9777e9cb44f81c22d1396a495bc14`, OwedBook `c8a2ed9bbfdfecbfc536b941b3d2f8bfacbb6cea`, branch `qa/apbm-007b` | A commit cannot contain its own SHA; the Director committed and pushed both, and the SHAs are restated in the Q2 repair instruction |
++| 2026-11-17 | Claudy (Engineering) | §2 Change inventory — repair on `qa/apbm-007b` (uncommitted; the Director commits) | Q2 candidate → repaired working tree. **Portal (head 821f139):** `src/server/storeOperations.ts` M; `src/components/portal/account/DashboardView.tsx` M (one sentence); `agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/SUPPORT_PROCEDURES.md` M (runbook added, earlier text unchanged); `src/__tests__/apbm007b-consent-deadline.test.ts` A; `src/integration/apbm007b-deadline.localdb.itest.ts` A; this manifest. **OwedBook (head c8a2ed9):** `supabase/migrations/0070_007b_consent_deadline_paid_time.sql` A (SHA-256 `de0b51c61c4ef255934fc20b6c7abdc5d4b69e1129bbce4a8a15111905edce81`); `scripts/apbm007b/sql-proof.mjs` M (0070 scenarios; three fixtures moved off the removed transition); `src/components/admin-portal/LiveStaffPanel.tsx` M; `src/components/auth/LoginForm.tsx` M; `src/__tests__/admin-portal/LiveStaffPanel.hydration.test.tsx` A; `src/__tests__/auth/LoginForm.hydration.test.tsx` A. No contract file, other QAM record, applied migration 0061–0069, lockfile or dependency changed | Repair ruled by the QA Lead (Q2 adjudication SHA-256 `37b8747c…6e12`) and released by the Director, 17 Nov 2026 |
++| 2026-11-17 | Claudy (Engineering) | Repair A — F-Q2-001, F-Q2-004 (cause and fix) | **Cause (confirmed):** (1) The Portal decided "deadline passed" with its own wall clock (`Date.now()`), while the deadline is set and queued on the account billing clock (`billing_now`). (2) A paid invoice became `paid_pending_activation` with no deadline check in either SQL transition or activation (0062, 0069), and the Portal judged lateness by processing time. **Fix:** Lateness is now the provider's paid time (`status_transitions.paid_at`) against the stored deadline, decided in SQL by new `store_operation_payment_observed`; every deadline decision in the app asks new `store_operation_deadline_passed` (billing clock). The direct `payment_pending → paid_pending_activation` transition is removed. Activation refuses a payment not proven on time unless the operator resumed it (`close_reference`). New column `store_operations.provider_paid_at`. 0070 applies forward on 0069 and fresh from 0001; ready for SCRATCH apply at Q4 entry | The six required cases, on real and simulated time |
++| 2026-11-17 | Claudy (Engineering) | Repair A — tests (local only; no SCRATCH, DEV or Stripe effect) | **SQL proof on a fresh local DB (0069 → forward 0070):** 158/158 PASS, including the six cases × {real, simulated}, guards, paid-versus-void race and operator resume. **Portal saga + minute-job route against the real local SQL** (Stripe double), seven cases × {real, simulated}: repaired 14/14 PASS. The same tests on the candidate `storeOperations.ts` against a 0069 DB fail 6 of 14, reproducing F-Q2-001 and F-Q2-004. **Portal unit test (no DB):** 18/18 PASS | Evidence: `/home/moose/APBM007B_REPAIR_Q2/EVIDENCE/repair_A/` (outside Git) |
++| 2026-11-17 | Claudy (Engineering) | Repair A — the current candidate on REAL time, no test clock (evidence: `deadline_candidate_0069.json`) | (a) **Late payment after an outage or crash:** attention `paid_after_deadline`, no store or quantity change. Correct. (b) **On-time payment processed after the deadline:** attention `paid_after_deadline`, no activation. Defect: it should activate once. (c) **Unpaid expiry:** the minute job voids and expires it, hold released. Correct. Also: a paid-versus-void race where the void loses to a payment completed after the deadline **activated** (store +1, quantity 2→3). Defect; the repair gives attention. On simulated time the candidate activated late payments (F-Q2-001) and the job left unpaid operations `payment_pending` with the invoice open (F-Q2-004). The repair fixes all of these in both modes | Required real-time statement |
++| 2026-11-17 | Claudy (Engineering) | Repair B — F-Q2-002 (cause and fix) | **Cause (product):** In WebKit the spec's fill can land while React is still hydrating. The change event is dropped, and the controlled field (`value={email}`) is wiped on the next render (the list load), so Send stays disabled (`!email`) and no status appears. The same race in the sign-in form (`LoginForm`, react-hook-form `Controller`) dropped the typed email ("Email is required"); this is the a01 sign-in timeout. **Fix:** `LiveStaffPanel` email field uncontrolled (read at submit); Send disabled until hydrated, not on React email state; `run()` exception-safe. `LoginForm` adopts values typed during hydration; Login disabled until hydrated. **Bounds extension:** `LoginForm.tsx` is outside the ruled area; the Director approved the extension in session before it was touched | Proven in jsdom: the candidate components fail the new hydration tests (typed text → `""`); repaired pass 3/3 and 2/2 |
++| 2026-11-17 | Claudy (Engineering) | Repair B — WebKit runs (owned local OwedBook build on 3100 against the local DB; mail disabled; spec SHA-256 `ee2cb80e…ad00d` and config unchanged) | Candidate: WebKit 2 of 5 failed (Send disabled; sign-in). Repaired: **WebKit 5/5 PASS**; Firefox and Chrome PASS. The app fixes its local-proof origin to `localhost:3100`; on another port every send is refused. QA processes were stopped; nothing of QA's was used | Evidence: `/home/moose/APBM007B_REPAIR_Q2/EVIDENCE/repair_B/` |
++| 2026-11-17 | Claudy (Engineering) | Repairs C and D | **C (F-Q2-005):** removed "Inviting staff and adding stores are not available yet." from the owner dashboard; the billing-owner sentence is kept. No other dashboard change. **D (F-Q2-006):** `SUPPORT_PROCEDURES.md` gains the runbook for the six actions: exact command, inputs, requester and approver, before, after, partial failure and resume. It states that the shared credential proves possession, not identity. The contract names no approver role; the runbook uses the Director until one is named | Ruled repairs |
++| 2026-11-17 | Claudy (Engineering) | Required checks | Portal: jest 26 suites, 500/500; `tsc` clean; eslint 0 errors (27 warnings, none new). OwedBook: jest 47 suites, 317/317; `tsc` clean; eslint 0 errors (36 warnings, none new) | Evidence: `/home/moose/APBM007B_REPAIR_Q2/EVIDENCE/checks/` |
++| 2026-11-17 | Claudy (Engineering) | Engineering state | → **ENGINEERING REPAIR COMPLETE — AWAITING COMMIT**. No commit, push, merge, SCRATCH or DEV write, Stripe effect or QA fixture change. Local Supabase stack and the owned 3100 server stopped. Noted, not changed: the operator SQL `store_reactivation_authorize` still returns the older "pending Director decision 9" policy text (applied 0066); `LinkRequestForm` (same page as sign-in) was not examined | Repair ruling: record and stop |
+ 
+ *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*
+diff --git a/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/SUPPORT_PROCEDURES.md b/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/SUPPORT_PROCEDURES.md
+index 1b016a3..ffaf4dc 100644
+--- a/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/SUPPORT_PROCEDURES.md
++++ b/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/SUPPORT_PROCEDURES.md
+@@ -9,3 +9,309 @@ Support verifies seller and buyer through the organization's controlled channel;
+ ## Paid store operation not activated — external refund and closure
+ 
+ Support verifies the same owner, operation, paid invoice and request not to activate. Director/authorized finance operator decides the external refund/credit disposition under organizational policy, performs it separately in the provider dashboard, and retains evidence outside Git. Software does not issue a refund. Support records ticket and provider evidence reference, then dry-runs/applies store-operation-close on exact operation ID. Command verifies full provider refund/credit proof before terminal closure and release; partial/uncertain proof remains attention. Verify provider outcome, closed operation, released exact slot/hold, preserved history and no new store grant. No unrelated card/subscription changes. Escalate unresolved payment evidence, never erase it.
++
++---
++
++# Operator runbook — six support actions
++
++*Added 17 November 2026 by Claudy (Engineering) under the F-Q2-006 repair ruling. The text above is unchanged. Every command
++and refusal code below is taken from the implemented code: `scripts/operator-007b.mjs --help`, `src/server/operator007b.ts`,
++and the SQL functions in OwedBook migrations 0063, 0066 and 0069.*
++
++## 0. Applies to every action
++
++**Credential.** The shared operator credential proves possession of the credential, not who the person is. Every call is
++audited with `authenticated_as = 'shared_operator_v1'` and the `--actor` name the operator declares. That name is a
++declaration, not a verified individual identity. Individual operator sign-in is a production prerequisite.
++
++**Command form.** Run from the Portal repository root on the operator machine.
++
++```bash
++node scripts/operator-007b.mjs --help
++# dry run (default; changes nothing, audited)
++node scripts/operator-007b.mjs <action> --base <portal origin> <inputs>
++# apply (audited)
++node scripts/operator-007b.mjs <action> --base <portal origin> <inputs> --apply --actor "<your name>" --reason "<why>" --ticket <TICKET-ID>
++```
++
++- `--base` is the Portal origin, for example `https://<portal host>` (staging) or `http://localhost:3101` (SCRATCH proof pair).
++- Add `--key-source scratch` only for the SCRATCH proof pair.
++- Inputs are exact UUIDs. There are no names, prefixes, amounts or SQL.
++- `--ticket` must match `^[A-Za-z0-9][A-Za-z0-9_.:#/-]{1,79}$`.
++- An apply without actor, reason and ticket is refused, and the refusal is audited.
++
++**Output.** One JSON object: `http`, `action`, `phase` (`dry_run` or `apply`), `result`, `target`, `before`, `after`, `error`
++and `auditId`. The `result` value means:
++
++| Result | Meaning |
++|---|---|
++| `planned` | Dry run |
++| `applied` | Done |
++| `refused` | A rule stopped it; nothing changed unless the step notes below say so |
++| `failed` | Provider or database error; follow the action's partial-failure step |
++
++Record `auditId` on the ticket. Audit rows (`public.operator_actions`) are append-only.
++
++**Fixed sequence for every action:**
++
++1. Ticket open.
++2. Requester verified out of band.
++3. Approval recorded on the ticket.
++4. Dry run.
++5. Compare the dry-run `before` with the ticket.
++6. Apply.
++7. After-checks.
++8. Ticket closed with every `auditId`.
++
++Never apply without a matching dry run made in the same session.
++
++**Who approves.** The contract names no approver role. Until the Director names one in writing:
++
++- **Requester:** the account owner or the seller/buyer, verified by Support through the organisation's controlled channel.
++- **Approver:** the Director, recorded on the ticket before the apply.
++- **Operator:** the person running the command, named in `--actor`. The operator must not approve their own request.
++
++**Evidence and retention.**
++
++- Identity, ownership and sale documents stay outside Git, in the organisation's controlled ticket store.
++- Only the ticket ID, evidence reference and `auditId`s are recorded.
++- No patient documents.
++
++**Never:** refunds or card moves through these commands, Stripe-dashboard quantity edits, re-running a refused apply with
++changed inputs to "make it pass", or SQL.
++
++**Quantity check.** This is read-only and is used in the before- and after-checks below:
++
++```bash
++node scripts/operator-007b.mjs quantity-check --base <origin> --account-id <account uuid>
++```
++
++It reports `provider_quantity`, `billable_count`, `mirror_quantity`, `unresolved_operations` and `consistent`. **Consistent**
++means `provider_quantity = billable_count` and there are no unresolved operations.
++
++## 1. store-transfer-authorize — sale of one store to another legal owner
++
++**Command:**
++```bash
++node scripts/operator-007b.mjs store-transfer-authorize --base <origin> --source-business-id <store uuid> \
++  (--buyer-account-id <buyer account uuid> | --buyer-email <buyer email>) [--effective-at <ISO time>] [--hold-hours <1-168>] \
++  --apply --actor "<name>" --reason "<sale reference>" --ticket <ID>
++```
++
++**Inputs:**
++- The seller's store ID.
++- Either the buyer's existing account ID or, for a buyer with no account, the exact email the buyer will register with.
++- Optional effective time. Default: the end of the seller's paid period.
++- Optional hold, 1–168 hours (default 48). This is how long the NPI stays reserved for the buyer after the effective time.
++
++**Requester:** the seller (account owner) and the buyer, each verified out of band. **Approver:** see §0.
++
++**Before:**
++- The dry run shows `seller_quantity`, `effective_at` and `hold_hours`.
++- The store is live, and it is not the seller's only store.
++- `quantity-check` on the seller account is `consistent`, with no unresolved operations.
++- No other transfer is open for this pharmacy.
++
++**Refusals (nothing changed):**
++
++| Code | Meaning or next step |
++|---|---|
++| `source_not_live` | Store is not live |
++| `source_last_store` | It is the seller's only store |
++| `removal_already_scheduled` | Store already has a removal scheduled |
++| `transfer_open` | Another transfer is open for this pharmacy |
++| `operation_unresolved` | The seller has an operation in progress; finish it first |
++| `effective_in_past` | The effective time has already passed |
++| `invalid_buyer` | Buyer details are not usable |
++| `buyer_has_account` | The email already owns an account. Re-run with `--buyer-account-id` set to the returned `buyer_account_id` |
++
++**After (`result: applied`):**
++- `after.transfer.status = authorized` and `after.seller_quantity.after = billable_count`.
++- `quantity-check` on the seller is `consistent`.
++- The seller still has access until `effective_at`.
++- The buyer sees nothing yet.
++
++**Partial failure (`result: failed` after the transfer row exists):** the provider quantity sync failed.
++
++1. Run `quantity-check` on the seller.
++2. If `consistent` is false, and the time is still before `effective_at`:
++   1. Run **store-transfer-cancel** (§3). Its quantity sync runs again.
++   2. Dry-run and apply **store-transfer-authorize** again.
++3. If the effective time has passed, escalate to Engineering. Do not edit the quantity in Stripe.
++
++Re-running authorize over an open transfer is refused (`transfer_open`). That refusal is safe.
++
++## 2. store-transfer-complete — end the seller's ownership at the effective time
++
++**Command:**
++```bash
++node scripts/operator-007b.mjs store-transfer-complete --base <origin> --transfer-id <transfer uuid> --apply --actor "<name>" --reason "<why>" --ticket <ID>
++```
++
++**Input:** the transfer ID, taken from the authorize output.
++
++**When to use it:** the minute job finalizes due removals and transfers automatically. Use this command only when the job did
++not run, or to confirm completion.
++
++**Before:**
++- The dry run shows `status = authorized`, the `source_business_id` and `effective_at`.
++- The current time is at or after `effective_at`.
++
++**Outcomes:**
++
++| Outcome | Meaning |
++|---|---|
++| `effective_time_not_reached` | Refused; nothing changed. Wait for the effective time |
++| `after.finalize = transferred` | Completed now |
++| `after.finalize = already_final` | The job already completed it; this is normal |
++
++**After:**
++- The seller and the seller's staff no longer see the store.
++- The pharmacy NPI is held for the exact buyer until the hold expires. The transfer status is `buyer_reserved`.
++- The buyer adds the store through Add Store, or registers with the exact email.
++- If the hold expires without buyer payment, the job marks the transfer `attention`. Escalate.
++
++**Partial failure:** one database transaction, so there is no partial state. On `failed`, re-run. It is idempotent
++(`already_final`).
++
++## 3. store-transfer-cancel — withdraw a sale before it takes effect
++
++**Command:**
++```bash
++node scripts/operator-007b.mjs store-transfer-cancel --base <origin> --transfer-id <transfer uuid> --apply --actor "<name>" --reason "<why>" --ticket <ID>
++```
++
++**Input:** the transfer ID. **Requester:** the seller, or both parties. **Approver:** see §0.
++
++**Before:**
++- The dry run shows `status = authorized`.
++- The time is before `effective_at`.
++- The buyer has not paid.
++
++**Refusals (nothing changed):**
++
++| Code | Meaning |
++|---|---|
++| `not_cancellable` | Status is not `authorized` (already effective, reserved or canceled) |
++| `effective_time_passed` | The effective time has passed |
++| `unknown_transfer` | No transfer with that ID |
++
++**After (`result: applied`):**
++- `after.status = canceled`.
++- The seller's scheduled removal is cleared.
++- `after.seller_quantity.after = billable_count`, and `quantity-check` on the seller is `consistent`.
++
++**Partial failure (`failed` after the cancel committed):** the provider quantity sync failed, and a re-run is refused
++(`not_cancellable`).
++
++1. Run `quantity-check` on the seller.
++2. If `consistent` is false, escalate to Engineering with the `auditId`. No operator command re-runs only the sync.
++3. Do not edit the quantity in Stripe.
++
++## 4. removed-store-reactivate — owner wants a removed store back
++
++**Command:**
++```bash
++node scripts/operator-007b.mjs removed-store-reactivate --base <origin> --business-id <removed store uuid> --apply --actor "<name>" --reason "<why>" --ticket <ID>
++```
++
++**Input:** the removed store's ID. **Requester:** the same account owner. **Approver:** see §0.
++
++**Before:**
++- The store status is `removed`. A store that was transferred, or sold, can never be reactivated.
++- The NPI is not active on any other store.
++
++**Refusals:**
++
++| Code | Meaning |
++|---|---|
++| `not_removed` | The store is not removed |
++| `transferred_store` | The store was transferred (sold) |
++| `npi_active_elsewhere` | The NPI is active on another store |
++| `unknown_store` | No store with that ID |
++
++**After (`result: applied`):**
++- `after.outcome = authorized`. This grants **no access and no quantity**.
++- The `after.policy` field still carries the older SQL text "pending Director decision 9". Decision 9 was approved on
++  17 November 2026, and the dry-run note states the current rule.
++- Tell the owner to use **Add a pharmacy** with the same NPI and pay. After payment and quantity reconciliation, the original
++  store record and its history return, the authorization is used, and `quantity-check` is `consistent`.
++
++**Partial failure:** one transaction, and it is idempotent. Re-running returns `authorized` again with no duplicate.
++
++**If the owner's Add Store payment ends in `attention`:** use `store-operation-reconcile` or `store-operation-close` (top of
++this document). Never re-authorize to force it.
++
++## 5. owner-replace — verified identity recovery for the same account (not a sale)
++
++**Command:**
++```bash
++node scripts/operator-007b.mjs owner-replace --base <origin> --account-id <account uuid> --new-owner-user-id <user uuid> --apply --actor "<name>" --reason "<why>" --ticket <ID>
++```
++
++**Inputs:**
++- The account ID.
++- The new owner's existing, email-confirmed sign-in ID. They must sign up first; Support obtains the ID from that sign-in.
++
++**Requester:** the legal account holder, with identity and authority verified out of band. Documents are retained outside Git.
++**Approver:** see §0.
++
++**Before:**
++- The dry run shows the current `owner`.
++- The new identity owns no other account.
++- The billing account stays the same: no subscription or card moves.
++
++**Refusals:**
++
++| Code | Meaning |
++|---|---|
++| `unknown_account` | No account with that ID |
++| `new_owner_not_confirmed` | The new identity's email is not confirmed |
++| `new_owner_has_account` | The new identity already owns an account |
++
++**After (`result: applied`, `after.outcome = replaced`, `after.provider = customer_email_updated`):**
++- The new owner signs in and sees the account's stores and billing.
++- The old identity has no access to this account.
++- The old owner's pending invitations are revoked.
++- Handoff links are invalidated.
++- The Stripe customer email is the new owner's.
++
++**Partial failure (`failed` after the ownership change, provider email not updated):** re-run the same apply. SQL returns
++`already_owner`, and the provider email step repeats with the same idempotency key. If `after.provider = skipped` (no email or
++no mapped customer), escalate.
++
++## 6. store-admin-set — appoint a store admin when the owner cannot
++
++**Command:**
++```bash
++node scripts/operator-007b.mjs store-admin-set --base <origin> --business-id <store uuid> --user-id <user uuid> [--former-admin-disposition member|remove] --apply --actor "<name>" --reason "<why>" --ticket <ID>
++```
++
++**Inputs:**
++- The store ID.
++- The new admin's confirmed sign-in ID.
++- What happens to the current admin: `member` (default) or `remove`. The account owner is never removed from their own store;
++  an owner who was admin becomes a member.
++
++**Requester:** the account owner, or, if the owner cannot act, the store's verified representative. **Approver:** see §0.
++
++**Before:**
++- The dry run shows the disposition.
++- The store is live.
++- The user's email is confirmed.
++
++**Refusals:**
++
++| Code | Meaning |
++|---|---|
++| `store_not_live` | The store is not live |
++| `user_not_confirmed` | The user's email is not confirmed |
++| `invalid_disposition` | The disposition is not `member` or `remove` |
++
++**After (`result: applied`, `after.outcome = admin_set` or `already_admin`):**
++- Exactly one admin: the new user.
++- The previous admin is now a member, or removed, as chosen.
++- Pending admin invitations for the store are revoked.
++- The new admin sees the store's staff panel.
++
++**Partial failure:** one transaction, so there is no partial state. On `failed`, re-run. It is idempotent (`already_admin`).
+diff --git a/src/__tests__/apbm007b-consent-deadline.test.ts b/src/__tests__/apbm007b-consent-deadline.test.ts
+new file mode 100644
+index 0000000..0a5376a
+--- /dev/null
++++ b/src/__tests__/apbm007b-consent-deadline.test.ts
+@@ -0,0 +1,153 @@
++/** @jest-environment node */
++// APBM-007B repair (F-Q2-001, F-Q2-004) — unit level. The Portal never compares the consent deadline with its own wall
++// clock: it asks the database (store_operation_deadline_passed, on the account billing clock) and hands every paid invoice
++// to the database with the provider's paid time (store_operation_payment_observed). The database double below applies the
++// 0070 rules; the wall clock is either equal to the billing clock ("real") or 37 days BEHIND it ("simulated", the shape of
++// QA's test clock), so any wall-clock comparison would decide wrongly. The same cases run against the real SQL in
++// src/integration/apbm007b-deadline.localdb.itest.ts and OwedBook scripts/apbm007b/sql-proof.mjs.
++import { NextRequest } from 'next/server';
++
++type Op = { id: string; account_id: string; kind: 'store_add'; state: string; last_error_code: string | null; payment_deadline: string; invoice_id: string; amount_cents: number;
++  stripe_customer_id: string; stripe_subscription_id: string; stripe_item_id: string; period_start: string; period_end: string; target_quantity: number;
++  hosted_invoice_url: string; created_at: string; fencing_epoch: number; provider_paid_at: string | null; close_reference: string | null; store_name: string; npi: string };
++const PS = Date.parse('2026-12-01T00:00:00Z'), PE = Date.parse('2026-12-31T00:00:00Z'), DEADLINE = Date.parse('2026-12-24T11:49:29Z');
++const mockS = {
++  billingNow: 0, leaseFree: true, op: null as Op | null, intents: new Set<string>(), rpcs: [] as { fn: string; args: Record<string, unknown> }[],
++  inv: { status: 'open', paid_at: null as number | null, amount: 3774 }, card: '3ds' as 'ok' | '3ds', raceOnVoid: null as number | null,
++  quantity: 2, quantityUpdates: [] as number[], pay: 0, void: 0,
++};
++const mockInvoice = () => ({ id: 'in_unit', customer: 'cus_unit', currency: 'usd', status: mockS.inv.status, amount_due: mockS.inv.amount, total: mockS.inv.amount,
++  amount_paid: mockS.inv.status === 'paid' ? mockS.inv.amount : 0, metadata: { apbm_operation: 'op' }, hosted_invoice_url: 'https://invoice.invalid/x',
++  status_transitions: { paid_at: mockS.inv.paid_at }, lines: { data: [{ amount: mockS.inv.amount }] } });
++const mockPaid = (sec: number) => { mockS.inv.status = 'paid'; mockS.inv.paid_at = sec; };
++// The database double: the 0070 rules, decided on the billing clock and the provider paid time.
++const mockRpc = async (fn: string, args: Record<string, unknown>): Promise<unknown> => {
++  mockS.rpcs.push({ fn, args }); const o = mockS.op as Op; const deadline = Date.parse(o.payment_deadline);
++  switch (fn) {
++    case 'store_operation_lease': if (!mockS.leaseFree) return null; o.fencing_epoch += 1; return o.fencing_epoch;
++    case 'store_operation_release': return true;
++    case 'store_operation_intent': mockS.intents.add(String(args.p_stage)); return 'recorded';
++    case 'store_operation_intent_outcome': return null;
++    case 'store_operation_deadline_passed': return deadline <= mockS.billingNow;
++    case 'store_operations_due': return ['payment_setup', 'payment_pending'].includes(o.state) && deadline <= mockS.billingNow ? [{ id: o.id }] : [];
++    case 'store_lifecycle_due': case 'store_removals_due': case 'store_transfers_expired': return [];
++    case 'store_operation_payment_observed': {
++      const paid = args.p_paid_at ? Date.parse(String(args.p_paid_at)) : null;
++      [o.state, o.last_error_code] = paid === null ? ['attention', 'paid_time_unverified'] : paid > deadline ? ['attention', 'paid_after_deadline'] : ['paid_pending_activation', null];
++      o.provider_paid_at = paid === null ? null : new Date(paid).toISOString(); return o.state;
++    }
++    case 'store_operation_transition': {
++      const to = String(args.p_to);
++      if (o.state === 'payment_pending' && to === 'paid_pending_activation') return 'transition_refused';   // removed by 0070
++      o.state = to; o.last_error_code = (args.p_error as string | null) ?? null; return to;
++    }
++    case 'store_add_activate': {
++      if (o.state !== 'paid_pending_activation') return { outcome: 'not_paid_pending' };
++      if (!o.close_reference && (!o.provider_paid_at || Date.parse(o.provider_paid_at) > deadline)) { o.state = 'attention'; return { outcome: 'attention' }; }
++      o.state = 'activated'; return { outcome: 'activated' };
++    }
++    default: throw new Error(`unexpected rpc ${fn}`);
++  }
++};
++jest.mock('@/server/db', () => ({
++  rpc: (fn: string, args: Record<string, unknown>) => mockRpc(fn, args),
++  admin: () => ({ from: (table: string) => {
++    const filters: Record<string, unknown> = {};
++    const q = { select: () => q, eq: (k: string, v: unknown) => { filters[k] = v; return q; },
++      maybeSingle: async () => (table === 'store_operations' ? { data: { ...(mockS.op as Op) }, error: null }
++        : { data: mockS.intents.has(String(filters.stage)) ? { created_at: new Date().toISOString() } : null, error: null }) };
++    return q;
++  } }),
++}));
++jest.mock('@/server/stripeClient', () => ({
++  stripeCall: (_n: string, fn: () => unknown) => fn(), assertStripeAccount: async () => undefined,
++  stripeNames: () => ({ priceId: 'price_unit', portalConfiguration: 'x', expectedAccount: 'x', webhookSecret: 'x' }),
++  stripe: () => ({
++    invoices: {
++      retrieve: async () => ({ ...mockInvoice(), metadata: { apbm_operation: (mockS.op as Op).id } }),
++      pay: async () => { mockS.pay++; if (mockS.card === '3ds') throw Object.assign(new Error('requires action'), { code: 'invoice_payment_intent_requires_action' }); mockPaid(Math.floor(mockS.billingNow / 1000)); return {}; },
++      voidInvoice: async () => { mockS.void++; if (mockS.raceOnVoid !== null) mockPaid(mockS.raceOnVoid); if (mockS.inv.status !== 'open') throw Object.assign(new Error('not open'), { code: 'invoice_not_open' }); mockS.inv.status = 'void'; return {}; },
++    },
++    subscriptions: {
++      retrieve: async () => ({ id: 'sub_unit', status: 'active', items: { data: [{ id: 'si_unit', quantity: mockS.quantity, price: { id: 'price_unit' }, current_period_start: PS / 1000, current_period_end: PE / 1000 }] } }),
++      update: async (_id: string, p: { items: { quantity: number }[] }) => { mockS.quantityUpdates.push(p.items[0].quantity); mockS.quantity = p.items[0].quantity; return {}; },
++    },
++  }),
++}));
++jest.mock('@/server/operator', () => ({ operatorAuthorized: () => true }));
++jest.mock('@/server/billingNotices', () => ({ dispatchDueNotices: async () => ({}) }));
++
++import { advanceStoreOperation } from '@/server/storeOperations';
++import { POST as runJobs } from '@/app/api/internal/jobs/run/route';
++
++type Mode = 'real' | 'simulated';
++const WALL_BEHIND_MS = 37 * 86400_000;
++function setup(mode: Mode, opts: { payIntentRecorded: boolean }) {
++  mockS.op = { id: '00000000-0000-4000-8000-000000000070', account_id: 'acct', kind: 'store_add', state: 'payment_pending', last_error_code: null, payment_deadline: new Date(DEADLINE).toISOString(),
++    invoice_id: 'in_unit', amount_cents: 3774, stripe_customer_id: 'cus_unit', stripe_subscription_id: 'sub_unit', stripe_item_id: 'si_unit', period_start: new Date(PS).toISOString(),
++    period_end: new Date(PE).toISOString(), target_quantity: 3, hosted_invoice_url: 'https://invoice.invalid/x', created_at: new Date(DEADLINE - 1800_000).toISOString(), fencing_epoch: 0,
++    provider_paid_at: null, close_reference: null, store_name: 'Unit Store', npi: '1003000118' };
++  Object.assign(mockS, { leaseFree: true, rpcs: [], inv: { status: 'open', paid_at: null, amount: 3774 }, card: '3ds', raceOnVoid: null, quantity: 2, quantityUpdates: [], pay: 0, void: 0 });
++  mockS.intents = new Set(opts.payIntentRecorded ? ['pay'] : []);
++  /** Billing clock (and the provider clock in a test context) at deadline + k seconds; the wall clock follows the mode. */
++  const at = (k: number) => { mockS.billingNow = DEADLINE + k * 1000; jest.spyOn(Date, 'now').mockReturnValue(mode === 'simulated' ? mockS.billingNow - WALL_BEHIND_MS : mockS.billingNow); };
++  const paidAt = (k: number) => mockPaid(Math.floor((DEADLINE + k * 1000) / 1000));
++  return { at, paidAt };
++}
++const jobs = async () => (await (await runJobs(new NextRequest('http://127.0.0.1/api/internal/jobs/run', { method: 'POST', headers: { authorization: 'Bearer unit' } }))).json()) as { store_operations: Record<string, string> };
++const observedPaidAt = () => mockS.rpcs.filter((r) => r.fn === 'store_operation_payment_observed').map((r) => r.args.p_paid_at);
++afterEach(() => jest.restoreAllMocks());
++
++describe.each<Mode>(['real', 'simulated'])('consent deadline (%s time)', (mode) => {
++  it('1. on time and prompt: pays once, records the provider paid time, activates once', async () => {
++    const t = setup(mode, { payIntentRecorded: false }); mockS.card = 'ok'; t.at(-1500);
++    expect(await advanceStoreOperation((mockS.op as Op).id)).toBe('activated');
++    expect([mockS.pay, mockS.quantityUpdates]).toEqual([1, [3]]);
++    expect(observedPaidAt()).toEqual([new Date(DEADLINE - 1500_000).toISOString()]);
++  });
++  it('2. on time and delayed within the deadline: activates once, no second charge', async () => {
++    const t = setup(mode, { payIntentRecorded: true }); t.paidAt(-1200); t.at(-300);
++    expect(await advanceStoreOperation((mockS.op as Op).id)).toBe('activated');
++    expect([mockS.pay, mockS.quantityUpdates]).toEqual([0, [3]]);
++  });
++  it('3. on time, processed one hour after the deadline: activates exactly once', async () => {
++    const t = setup(mode, { payIntentRecorded: true }); t.paidAt(-60); t.at(3600);
++    expect(await advanceStoreOperation((mockS.op as Op).id)).toBe('activated');
++    expect(await advanceStoreOperation((mockS.op as Op).id)).toBe('activated');
++    expect([mockS.pay, mockS.quantityUpdates]).toEqual([0, [3]]);
++  });
++  it('4. late and prompt: attention, no activation, no quantity change, no charge', async () => {
++    const t = setup(mode, { payIntentRecorded: true }); t.paidAt(60); t.at(61);
++    expect(await advanceStoreOperation((mockS.op as Op).id)).toBe('attention');
++    expect([(mockS.op as Op).last_error_code, mockS.pay, mockS.quantityUpdates]).toEqual(['paid_after_deadline', 0, []]);
++  });
++  it('5. late after a crash: busy while the dead lease lives, then attention after restart', async () => {
++    const t = setup(mode, { payIntentRecorded: true }); t.paidAt(30); t.at(600);
++    mockS.leaseFree = false;
++    expect(await advanceStoreOperation((mockS.op as Op).id, { waitMs: 0 })).toBe('busy');
++    mockS.leaseFree = true;
++    expect(await advanceStoreOperation((mockS.op as Op).id)).toBe('attention');
++    expect([(mockS.op as Op).last_error_code, mockS.pay, mockS.quantityUpdates]).toEqual(['paid_after_deadline', 0, []]);
++  });
++  it('6. unpaid at the deadline: the minute job voids after verifying unpaid and expires it', async () => {
++    const t = setup(mode, { payIntentRecorded: true }); t.at(60);
++    expect((await jobs()).store_operations).toEqual({ [(mockS.op as Op).id]: 'expired_unpaid' });
++    expect([mockS.void, mockS.inv.status, mockS.pay, mockS.quantityUpdates]).toEqual([1, 'void', 0, []]);
++  });
++  it('6b. before the deadline the job does nothing and no void happens, whatever the wall clock says', async () => {
++    const t = setup(mode, { payIntentRecorded: true }); t.at(-60);
++    expect((await jobs()).store_operations).toEqual({});
++    expect(await advanceStoreOperation((mockS.op as Op).id)).toBe('payment_pending');
++    expect([mockS.void, mockS.pay]).toEqual([0, 0]);
++  });
++  it('7. paid-versus-void race: attention, no activation', async () => {
++    const t = setup(mode, { payIntentRecorded: true }); t.at(60); mockS.raceOnVoid = Math.floor((DEADLINE + 55_000) / 1000);
++    await jobs();
++    expect([(mockS.op as Op).state, (mockS.op as Op).last_error_code, mockS.quantityUpdates]).toEqual(['attention', 'paid_after_deadline', []]);
++  });
++  it('never uses the removed direct transition into paid_pending_activation', async () => {
++    const t = setup(mode, { payIntentRecorded: true }); t.paidAt(-60); t.at(10);
++    await advanceStoreOperation((mockS.op as Op).id);
++    expect(mockS.rpcs.some((r) => r.fn === 'store_operation_transition' && r.args.p_to === 'paid_pending_activation')).toBe(false);
++  });
++});
+diff --git a/src/components/portal/account/DashboardView.tsx b/src/components/portal/account/DashboardView.tsx
+index 933e337..7f1eda0 100644
+--- a/src/components/portal/account/DashboardView.tsx
++++ b/src/components/portal/account/DashboardView.tsx
+@@ -359,7 +359,7 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
+       {sub !== null || stores.length > 0 ? storesSection : null}
+ 
+       <p className="mt-8 text-xs text-muted-foreground">
+-        Inviting staff and adding stores are not available yet. Only the billing owner can manage billing; to change the billing owner, contact <Placeholder>{BRAND.supportEmail}</Placeholder>.
++        Only the billing owner can manage billing; to change the billing owner, contact <Placeholder>{BRAND.supportEmail}</Placeholder>.
+       </p>
+     </PageContainer>
+   );
+diff --git a/src/integration/apbm007b-deadline.localdb.itest.ts b/src/integration/apbm007b-deadline.localdb.itest.ts
+new file mode 100644
+index 0000000..75400c6
+--- /dev/null
++++ b/src/integration/apbm007b-deadline.localdb.itest.ts
+@@ -0,0 +1,205 @@
++/** @jest-environment node */
++// APBM-007B repair proof (F-Q2-001, F-Q2-004): the Portal's REAL Add Store saga (storeOperations.ts) and the REAL minute
++// job route against the REAL SQL functions of a LOCAL disposable Supabase (PostgREST at 127.0.0.1:54321), with an
++// in-memory Stripe double. Never SCRATCH, DEV or Stripe. Run only through:
++//   APBM_ITEST_LOCALDB=1 NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:54321 SUPABASE_SECRET_KEY=<local stack key> \
++//     npx jest --testMatch '**/src/integration/apbm007b-deadline.localdb.itest.ts' --runInBand
++// Optional: APBM_SAGA_IMPL=<path to another storeOperations.ts> (e.g. the candidate's, against a 0069 database) and
++// APBM_DEADLINE_OUT=<json path> for the per-case facts. Fixtures are synthetic rows in the local database only.
++// Seven consent-deadline cases, each on REAL time (no test context) and on SIMULATED time (a test context frozen 37 days
++// ahead of the wall clock, the shape QA used). Real time "processed at deadline+k" places the stored deadline k seconds
++// before now(); simulated time moves the account clock (and the provider clock) forward to deadline+k.
++import { execFileSync } from 'node:child_process';
++import { randomUUID } from 'node:crypto';
++import { writeFileSync } from 'node:fs';
++import { NextRequest } from 'next/server';
++
++if (!process.env.APBM_ITEST_LOCALDB || new URL(process.env.NEXT_PUBLIC_SUPABASE_URL ?? 'http://invalid').host !== '127.0.0.1:54321') {
++  throw new Error('REFUSED: runs only against the local disposable Supabase at 127.0.0.1:54321');
++}
++jest.setTimeout(60_000);   // cold module compile + local PostgREST warm-up
++const CONTAINER = process.env.APBM_LOCALDB_CONTAINER ?? 'supabase_db_apbm007b-rehearsal';
++const SCRATCH_REF = 'ihgcsrypblqkwommrkgj';   // the only identity under which billing_now honours a test context
++const sql = (q: string): string => execFileSync('docker', ['exec', '-i', CONTAINER, 'psql', '-U', 'postgres', '-d', 'postgres', '-v', 'ON_ERROR_STOP=1', '-tAq', '-c', q], { encoding: 'utf8' }).trim();
++const lit = (v: string | number | null) => (v === null ? 'null' : typeof v === 'number' ? String(v) : `'${String(v).replace(/'/g, "''")}'`);
++const iso = (ms: number) => new Date(ms).toISOString();
++
++// ---------------------------------------------------------------- Stripe double (one subscription + invoices per world)
++type Inv = { id: string; customer: string; currency: string; status: string; auto_advance: boolean; parent: null; lines: { data: { amount: number }[] };
++  total: number; amount_due: number; amount_paid: number; total_discount_amounts: never[]; discounts: never[]; starting_balance: number;
++  metadata: Record<string, string>; hosted_invoice_url: string; status_transitions: { paid_at: number | null } };
++type Sub = { id: string; status: string; customer: string; items: { data: { id: string; quantity: number; price: { id: string }; current_period_start: number; current_period_end: number }[] } };
++const mockP = {
++  providerNow: () => Date.now(), card: 'ok' as 'ok' | '3ds', invoices: new Map<string, Inv>(), keys: new Map<string, string>(), sub: null as Sub | null,
++  raceOnVoid: null as number | null,   // when set: the void loses to a payment completed at this provider time (seconds)
++  calls: { pay: 0, void: 0, quantity: [] as number[], refund: 0 },
++};
++const clone = <T,>(x: T): T => JSON.parse(JSON.stringify(x)) as T;
++const markPaid = (inv: Inv, atSec: number) => { inv.status = 'paid'; inv.amount_paid = inv.amount_due; inv.status_transitions.paid_at = atSec; };
++const mockStripe = {
++  invoices: {
++    create: async (p: { customer: string; metadata: Record<string, string> }, o: { idempotencyKey: string }) => {
++      const known = mockP.keys.get(o.idempotencyKey); if (known) return clone(mockP.invoices.get(known) as Inv);
++      const inv: Inv = { id: `in_${randomUUID().replace(/-/g, '').slice(0, 20)}`, customer: p.customer, currency: 'usd', status: 'draft', auto_advance: false, parent: null,
++        lines: { data: [] }, total: 0, amount_due: 0, amount_paid: 0, total_discount_amounts: [], discounts: [], starting_balance: 0, metadata: p.metadata,
++        hosted_invoice_url: 'https://invoice.stripe.invalid/x', status_transitions: { paid_at: null } };
++      mockP.invoices.set(inv.id, inv); mockP.keys.set(o.idempotencyKey, inv.id); return clone(inv);
++    },
++    retrieve: async (id: string) => clone(mockP.invoices.get(id) as Inv),
++    list: (q: { customer: string }) => ({ async *[Symbol.asyncIterator]() { for (const i of mockP.invoices.values()) if (i.customer === q.customer) yield clone(i); } }),
++    finalizeInvoice: async (id: string) => { const i = mockP.invoices.get(id) as Inv; if (i.status === 'draft') i.status = 'open'; return clone(i); },
++    pay: async (id: string) => {
++      mockP.calls.pay++; const i = mockP.invoices.get(id) as Inv;
++      if (mockP.card === '3ds') throw Object.assign(new Error('requires action'), { code: 'invoice_payment_intent_requires_action' });
++      markPaid(i, Math.floor(mockP.providerNow() / 1000)); return clone(i);
++    },
++    voidInvoice: async (id: string) => {
++      mockP.calls.void++; const i = mockP.invoices.get(id) as Inv;
++      if (mockP.raceOnVoid !== null && i.status === 'open') markPaid(i, mockP.raceOnVoid);
++      if (i.status !== 'open') throw Object.assign(new Error('invoice is not open'), { code: 'invoice_not_open' });
++      i.status = 'void'; return clone(i);
++    },
++    del: async () => ({}),
++  },
++  invoiceItems: { create: async (p: { invoice: string; amount: number }) => { const i = mockP.invoices.get(p.invoice) as Inv; i.lines.data = [{ amount: p.amount }]; i.total = p.amount; i.amount_due = p.amount; return {}; } },
++  customers: { retrieve: async (id: string) => ({ id, balance: 0 }) },
++  subscriptions: {
++    retrieve: async () => clone(mockP.sub as Sub),
++    update: async (_id: string, p: { items: { quantity: number }[] }) => { mockP.calls.quantity.push(p.items[0].quantity); (mockP.sub as Sub).items.data[0].quantity = p.items[0].quantity; return clone(mockP.sub as Sub); },
++  },
++  refunds: { create: async () => { mockP.calls.refund++; return {}; } },
++};
++jest.mock('@/server/stripeClient', () => ({
++  stripe: () => mockStripe, stripeCall: (_n: string, fn: () => unknown) => fn(), assertStripeAccount: async () => undefined,
++  stripeNames: () => ({ priceId: 'price_proof', portalConfiguration: 'bpc_x', expectedAccount: 'acct_x', webhookSecret: 'whsec_x' }),
++}));
++jest.mock('@/server/operator', () => ({ operatorAuthorized: () => true }));
++jest.mock('@/server/billingNotices', () => ({ dispatchDueNotices: async () => ({}) }));
++if (process.env.APBM_SAGA_IMPL) jest.mock('@/server/storeOperations', () => jest.requireActual(process.env.APBM_SAGA_IMPL as string));
++
++type Saga = { advanceStoreOperation: (id: string, o?: { waitMs?: number }) => Promise<string> };
++const saga = (): Saga => require('@/server/storeOperations') as Saga;   // eslint-disable-line @typescript-eslint/no-require-imports
++const jobs = async (): Promise<Record<string, Record<string, string>>> => {
++  const { POST } = require('@/app/api/internal/jobs/run/route') as { POST: (r: NextRequest) => Promise<Response> };   // eslint-disable-line @typescript-eslint/no-require-imports
++  const res = await POST(new NextRequest('http://127.0.0.1/api/internal/jobs/run', { method: 'POST', headers: { authorization: 'Bearer local-proof' } }));
++  expect(res.status).toBe(200);
++  return (await res.json()) as Record<string, Record<string, string>>;
++};
++
++// ---------------------------------------------------------------- local world: owner, account (2 stores, quantity 2), one Add Store operation
++const npiValid = (n: string) => { let sum = 0; const d = `80840${n}`; for (let i = 0; i < 15; i++) { let x = Number(d[14 - i]); if (i % 2 === 1) { x *= 2; if (x > 9) x -= 9; } sum += x; } return sum % 10 === 0; };
++const freshNpi = () => { for (;;) { const n = String(1000000000 + Math.floor(Math.random() * 899999999)); if (npiValid(n)) return n; } };
++type Mode = 'real' | 'simulated';
++async function world(mode: Mode) {
++  const u = randomUUID(), a = randomUUID(), b1 = randomUUID(), b2 = randomUUID(), tag = a.replace(/-/g, '').slice(0, 12);
++  const npi = [freshNpi(), freshNpi(), freshNpi()];
++  let simNow = Math.floor((Date.now() + 37 * 86400_000) / 1000) * 1000;   // test clock ahead of the wall clock, like QA's
++  const center = mode === 'simulated' ? simNow : Math.floor(Date.now() / 1000) * 1000;
++  const ps = center - 10 * 86400_000, pe = center + 20 * 86400_000;
++  const cus = `cus_l${tag}`, sub = `sub_l${tag}`, item = `si_l${tag}`;
++  sql(`insert into auth.users (id, email, aud, role, instance_id, email_confirmed_at, created_at, updated_at) values (${lit(u)}, ${lit(`owner-${tag}@proof.invalid`)}, 'authenticated', 'authenticated', '00000000-0000-0000-0000-000000000000', now(), now(), now());
++    insert into public.accounts (id, name, owner_user_id) values (${lit(a)}, 'Deadline proof', ${lit(u)});
++    insert into public.pharmacy_identities (id, npi) values (${lit(b1)}, ${lit(npi[0])}), (${lit(b2)}, ${lit(npi[1])});
++    insert into public.businesses (id, account_id, pharmacy_id, npi, pharmacy_name, status, state) values (${lit(b1)}, ${lit(a)}, ${lit(b1)}, ${lit(npi[0])}, 'Proof 1', 'active', 'NY'), (${lit(b2)}, ${lit(a)}, ${lit(b2)}, ${lit(npi[1])}, 'Proof 2', 'active', 'NY');
++    insert into public.user_businesses (user_id, business_id, role, is_primary) values (${lit(u)}, ${lit(b1)}, 'admin', false), (${lit(u)}, ${lit(b2)}, 'admin', false);
++    insert into public.billing_customers (account_id, stripe_customer_id) values (${lit(a)}, ${lit(cus)});
++    insert into public.subscriptions (account_id, origin, stripe_customer_id, stripe_subscription_id, status, raw_status, quantity, stripe_price_id, stripe_subscription_item_id, current_period_start, current_period_end, cancel_at_period_end, verified_at, policy_version)
++      values (${lit(a)}, 'stripe', ${lit(cus)}, ${lit(sub)}, 'active', 'active', 2, 'price_proof', ${lit(item)}, ${lit(iso(ps))}, ${lit(iso(pe))}, false, now(), 'v1');`);
++  const clock = `clock_l${tag}`;
++  if (mode === 'simulated') sql(`select public.billing_test_context_enable(${lit(a)}, 'proof-0070', ${lit(clock)}, ${lit(iso(simNow))})`);
++  const q = JSON.parse(sql(`select public.store_quote_create(${lit(a)}, ${lit(u)}, 'Deadline Store', ${lit(npi[2])}, null, ${lit(cus)}, ${lit(sub)}, ${lit(item)}, 'price_proof', 4900, 2, ${lit(iso(ps))}, ${lit(iso(pe))}, 'add-store-v1')`)) as { quote?: { id: string }; error?: string };
++  if (!q.quote) throw new Error(`quote ${q.error}`);
++  const terms = sql(`select terms_version from public.store_quotes where id = ${lit(q.quote.id)}`);
++  const c = JSON.parse(sql(`select public.store_operation_claim(${lit(q.quote.id)}, ${lit(u)}, ${lit(`it_${tag}${'x'.repeat(8)}`)}, ${lit(terms)})`)) as { operation?: { id: string }; error?: string };
++  if (!c.operation) throw new Error(`claim ${c.error}`);
++  const op = c.operation.id;
++  mockP.invoices.clear(); mockP.keys.clear(); mockP.raceOnVoid = null; mockP.card = 'ok'; mockP.calls = { pay: 0, void: 0, quantity: [], refund: 0 };
++  mockP.sub = { id: sub, status: 'active', customer: cus, items: { data: [{ id: item, quantity: 2, price: { id: 'price_proof' }, current_period_start: ps / 1000, current_period_end: pe / 1000 }] } };
++  mockP.providerNow = mode === 'simulated' ? () => simNow : () => Date.now();
++  const deadline = () => Date.parse(sql(`select to_json(payment_deadline) #>> '{}' from public.store_operations where id = ${lit(op)}`));
++  /** The account billing clock (and, in simulated mode, the provider test clock) now reads deadline + k seconds. */
++  const processAt = (k: number) => {
++    if (mode === 'simulated') { simNow = deadline() + k * 1000; sql(`select public.billing_test_context_sync(${lit(a)}, ${lit(clock)}, ${lit(iso(simNow))})`); }
++    else sql(`update public.store_operations set payment_deadline = now() - make_interval(secs => ${k}) where id = ${lit(op)}`);
++  };
++  const payHosted = (kFromDeadline: number) => { const i = [...mockP.invoices.values()][0]; markPaid(i, Math.floor((deadline() + kFromDeadline * 1000) / 1000)); };
++  const facts = () => ({ ...(JSON.parse(sql(`select json_build_object('state', o.state, 'code', o.last_error_code,
++      'stores', (select count(*)::int from public.businesses x where x.account_id = o.account_id), 'mirror_quantity', (select quantity from public.subscriptions s where s.account_id = o.account_id),
++      'hold', (select status from public.npi_reservations r where r.store_operation_id = o.id)) from public.store_operations o where o.id = ${lit(op)}`)) as Record<string, unknown>),
++    provider_quantity_updates: [...mockP.calls.quantity], pay_calls: mockP.calls.pay, void_calls: mockP.calls.void, refunds: mockP.calls.refund,
++    invoice: [...mockP.invoices.values()].map((i) => i.status)[0] ?? null });
++  return { op, processAt, payHosted, facts, deadline };
++}
++
++const OUT: Record<string, unknown> = { impl: process.env.APBM_SAGA_IMPL ?? 'src/server/storeOperations.ts', at: new Date().toISOString(), cases: {} };
++const record = (name: string, f: Record<string, unknown>) => { (OUT.cases as Record<string, unknown>)[name] = f; return f; };
++beforeAll(() => {
++  if (!sql('select project_ref from public.billing_deployment')) sql(`select public.billing_deployment_bind(${lit(SCRATCH_REF)})`);
++  if (sql('select project_ref from public.billing_deployment') !== SCRATCH_REF) throw new Error('local deployment identity must allow the simulated mode');
++  sql(`notify pgrst, 'reload schema'`);
++});
++afterAll(() => { if (process.env.APBM_DEADLINE_OUT) writeFileSync(process.env.APBM_DEADLINE_OUT, JSON.stringify(OUT, null, 1)); });
++
++const activatedOnce = (f: Record<string, unknown>) => { expect(f).toMatchObject({ state: 'activated', stores: 3, mirror_quantity: 3, provider_quantity_updates: [3], refunds: 0 }); };
++const heldInAttention = (f: Record<string, unknown>) => { expect(f).toMatchObject({ state: 'attention', code: 'paid_after_deadline', stores: 2, mirror_quantity: 2, provider_quantity_updates: [], refunds: 0, hold: 'op_held', invoice: 'paid' }); };
++
++describe.each<Mode>(['real', 'simulated'])('consent deadline on %s time', (mode) => {
++  const name = (s: string) => `${mode}: ${s}`;
++  test('1. paid on time, processed promptly → activates once', async () => {
++    const w = await world(mode);
++    const r = await saga().advanceStoreOperation(w.op);
++    activatedOnce(record(name('on time and prompt'), { advance: r, ...w.facts() }));
++  });
++  test('2. paid on time on the hosted page, processed later but before the deadline → activates once', async () => {
++    const w = await world(mode); mockP.card = '3ds';
++    const r1 = await saga().advanceStoreOperation(w.op);
++    w.processAt(-300); w.payHosted(-1200);
++    const r2 = await saga().advanceStoreOperation(w.op);
++    const f = record(name('on time and delayed within the deadline'), { first: r1, advance: r2, ...w.facts() });
++    expect(r1).toBe('payment_pending'); activatedOnce(f); expect(f.pay_calls).toBe(1);
++  });
++  test('3. paid on time, processed one hour after the deadline (outage/restart/redelivery) → activates exactly once', async () => {
++    const w = await world(mode); mockP.card = '3ds';
++    await saga().advanceStoreOperation(w.op);
++    w.processAt(3600); w.payHosted(-60);   // the payment happened 1 min before the deadline; processing happens 1 h after it
++    const r = await saga().advanceStoreOperation(w.op);
++    const j = await jobs(); const again = await saga().advanceStoreOperation(w.op);
++    const f = record(name('on time and processed after the deadline'), { advance: r, job: j.store_operations?.[w.op] ?? null, again, ...w.facts() });
++    activatedOnce(f); expect(f.pay_calls).toBe(1);
++  });
++  test('4. paid after the deadline, processed promptly → attention, no activation, no quantity change, no second charge', async () => {
++    const w = await world(mode); mockP.card = '3ds';
++    await saga().advanceStoreOperation(w.op);
++    w.processAt(61); w.payHosted(60);
++    const r = await saga().advanceStoreOperation(w.op);
++    const f = record(name('late and prompt'), { advance: r, ...w.facts() });
++    heldInAttention(f); expect(f.pay_calls).toBe(1);
++  });
++  test('5. paid after the deadline while the Portal was down; restart after the crashed lease lapses → attention', async () => {
++    const w = await world(mode); mockP.card = '3ds';
++    await saga().advanceStoreOperation(w.op);
++    sql(`select public.store_operation_lease(${lit(w.op)}, 'crashed-worker', 60)`);   // the process died holding the lease
++    w.processAt(600); w.payHosted(30);
++    const whileHeld = await saga().advanceStoreOperation(w.op, { waitMs: 300 });
++    sql(`update public.store_operations set lease_until = now() - interval '1 second' where id = ${lit(w.op)}`);
++    const r = await saga().advanceStoreOperation(w.op);
++    const f = record(name('late after crash'), { while_crashed_lease_live: whileHeld, advance: r, ...w.facts() });
++    expect(whileHeld).toBe('busy'); heldInAttention(f); expect(f.pay_calls).toBe(1);
++  });
++  test('6. unpaid at the deadline → the minute job voids after verifying nothing was paid; expired, hold released', async () => {
++    const w = await world(mode); mockP.card = '3ds';
++    await saga().advanceStoreOperation(w.op);
++    w.processAt(60);
++    const j = await jobs();
++    const f = record(name('unpaid expiry by the minute job'), { job: j.store_operations?.[w.op] ?? null, ...w.facts() });
++    expect(f).toMatchObject({ job: 'expired_unpaid', state: 'expired_unpaid', hold: 'released', stores: 2, mirror_quantity: 2, provider_quantity_updates: [], invoice: 'void', void_calls: 1, pay_calls: 1, refunds: 0 });
++  });
++  test('7. paid-versus-void race at expiry → attention, no activation', async () => {
++    const w = await world(mode); mockP.card = '3ds';
++    await saga().advanceStoreOperation(w.op);
++    w.processAt(60); mockP.raceOnVoid = Math.floor((w.deadline() + 55_000) / 1000);
++    const j = await jobs();
++    const f = record(name('paid-versus-void race'), { job: j.store_operations?.[w.op] ?? null, ...w.facts() });
++    heldInAttention(f); expect(f.void_calls).toBe(1);
++  });
++});
+diff --git a/src/server/storeOperations.ts b/src/server/storeOperations.ts
+index 581b592..eb20331 100644
+--- a/src/server/storeOperations.ts
++++ b/src/server/storeOperations.ts
+@@ -21,8 +21,9 @@ export interface OperationRow {
+   payment_deadline: string | null; stripe_customer_id: string | null; stripe_subscription_id: string | null; stripe_item_id: string | null;
+   period_start: string | null; period_end: string | null; target_quantity: number | null; invoice_id: string | null; hosted_invoice_url: string | null;
+   last_error_code: string | null; transfer_id: string | null; created_at: string; fencing_epoch: number;
++  provider_paid_at: string | null; close_reference: string | null;
+ }
+-const OP_COLUMNS = 'id,account_id,kind,state,intent_key,actor_user_id,quote_id,business_id,store_name,npi,amount_cents,currency,payment_deadline,stripe_customer_id,stripe_subscription_id,stripe_item_id,period_start,period_end,target_quantity,invoice_id,hosted_invoice_url,last_error_code,transfer_id,created_at,fencing_epoch';
++const OP_COLUMNS = 'id,account_id,kind,state,intent_key,actor_user_id,quote_id,business_id,store_name,npi,amount_cents,currency,payment_deadline,stripe_customer_id,stripe_subscription_id,stripe_item_id,period_start,period_end,target_quantity,invoice_id,hosted_invoice_url,last_error_code,transfer_id,created_at,fencing_epoch,provider_paid_at,close_reference';
+ 
+ // ---------------------------------------------------------------- refusals (safe, named)
+ const REFUSAL: Record<string, [ConstructorParameters<typeof StoreRefusal>[0], string]> = {
+@@ -154,8 +155,9 @@ export async function loadStoreOperation(id: string): Promise<OperationRow | nul
+ async function statusFor(ctx: OwnerContext, id: string): Promise<StatusView> {
+   const op = await loadStoreOperation(id);
+   if (!op || op.account_id !== ctx.accountId) throw new PortalError('not_found', 'operation');
+-  // The hosted page is an owner-only capability, offered only while that exact invoice is open and awaiting payment.
+-  const showHosted = op.kind === 'store_add' && op.state === 'payment_pending' && !!op.hosted_invoice_url && !!op.payment_deadline && Date.parse(op.payment_deadline) > Date.now();
++  // The hosted page is an owner-only capability, offered only while that exact invoice is open and awaiting payment
++  // before the deadline on the account's billing clock (the database decides; never this server's wall clock).
++  const showHosted = op.kind === 'store_add' && op.state === 'payment_pending' && !!op.hosted_invoice_url && !!op.payment_deadline && !(await deadlinePassed(op.id));
+   return { operationId: op.id, kind: op.kind, state: op.state, errorCode: op.last_error_code, paymentDeadline: op.payment_deadline, amountCents: op.amount_cents,
+     paymentRequired: op.state === 'payment_pending', hostedPaymentUrl: showHosted ? op.hosted_invoice_url : null, businessId: op.state === 'activated' ? op.business_id : null,
+     storeName: op.store_name, effectiveAt: op.kind === 'store_removal' && op.state === 'completed' ? op.period_end : null };
+@@ -202,6 +204,19 @@ async function intent(op: OperationRow, l: Lease, stage: string, key: string, pa
+   const r = await rpc<string>('store_operation_intent', { p_operation: op.id, p_owner: l.owner, p_epoch: l.epoch, p_stage: stage, p_attempt: 1, p_key: key, p_params: params });
+   if (r === 'lease_lost') throw new LeaseLost();
+ }
++/** The consent deadline on the account's billing clock (0070): real time, or simulated only in the verified SCRATCH test context. */
++async function deadlinePassed(id: string): Promise<boolean> {
++  return (await rpc<boolean | null>('store_operation_deadline_passed', { p_operation: id })) === true;
++}
++/** A paid invoice: the database routes it by the provider's paid time against the stored deadline (0070), never by when
++ * this event, poll or restart is processed. On time → paid_pending_activation; late or unproven → attention. */
++async function paymentObserved(op: OperationRow, l: Lease, inv: Stripe.Invoice): Promise<string> {
++  const paidAt = inv.status_transitions?.paid_at;
++  const r = await rpc<string>('store_operation_payment_observed', { p_operation: op.id, p_owner: l.owner, p_epoch: l.epoch, p_invoice: inv.id,
++    p_paid_cents: inv.amount_paid, p_currency: inv.currency, p_paid_at: typeof paidAt === 'number' ? iso(paidAt) : null });
++  if (r === 'lease_lost') throw new LeaseLost();
++  return r;
++}
+ const outcome = (op: OperationRow, stage: string, value: string) => rpc('store_operation_intent_outcome', { p_operation: op.id, p_stage: stage, p_attempt: 1, p_outcome: value });
+ async function intentRecorded(op: OperationRow, stage: string): Promise<{ created_at: string } | null> {
+   const r = await admin().from('provider_call_intents').select('created_at').eq('operation_id', op.id).eq('stage', stage).eq('attempt', 1).maybeSingle();
+@@ -246,7 +261,7 @@ export async function advanceStoreOperation(id: string, opts: { waitMs?: number
+       const op = await loadStoreOperation(id);
+       if (!op) return 'unknown_operation';
+       if (op.kind !== 'store_add') return await advanceLifecycle(op, l);
+-      const due = op.payment_deadline ? Date.parse(op.payment_deadline) <= Date.now() : false;
++      const due = (op.state === 'payment_setup' || op.state === 'payment_pending') && !!op.payment_deadline && (await deadlinePassed(op.id));
+       if (op.state === 'payment_setup') { if (due) { await closeUnpaid(op, l); continue; } await setupInvoice(op, l); continue; }
+       if (op.state === 'payment_pending') { await settlePayment(op, l, due); const after = await loadStoreOperation(id); if (after?.state === 'payment_pending') return 'payment_pending'; continue; }
+       if (op.state === 'cancel_requested') { await closeUnpaid(op, l); continue; }
+@@ -306,7 +321,7 @@ async function setupInvoice(op: OperationRow, l: Lease): Promise<void> {
+   await transition(op, l, 'attention', `invoice_${inv.status}`);
+ }
+ 
+-/** Attempt payment ONCE, then only read. Paid → activation; void/uncollectible → verified close; open → wait. */
++/** Attempt payment ONCE (only before the deadline), then only read. Paid → routed by paid time; due and unpaid → verified close; open → wait. */
+ async function settlePayment(op: OperationRow, l: Lease, due: boolean): Promise<void> {
+   const s = stripe();
+   let inv = await stripeCall('invoice read', () => s.invoices.retrieve(op.invoice_id as string));
+@@ -318,9 +333,9 @@ async function settlePayment(op: OperationRow, l: Lease, due: boolean): Promise<
+   }
+   if (inv.status === 'paid') {
+     if (inv.amount_paid !== op.amount_cents || inv.currency !== 'usd' || inv.metadata?.apbm_operation !== op.id) { await transition(op, l, 'attention', 'payment_mismatch'); return; }
+-    // Paid after the deadline: preserved and routed to attention by the transition; never silently activated.
+-    if (due) { await transition(op, l, 'attention', 'paid_after_deadline'); return; }
+-    await transition(op, l, 'paid_pending_activation');
++    // Lateness is the provider's paid time against the stored deadline, decided in SQL: a late payment is preserved in
++    // attention (no activation, no quantity change, no refund); an on-time payment processed late still activates.
++    await paymentObserved(op, l, inv);
+     return;
+   }
+   if (due) { await closeUnpaid(op, l); return; }
+@@ -347,14 +362,14 @@ async function closeUnpaid(op: OperationRow, l: Lease): Promise<void> {
+   }
+   if (invoiceId) {
+     let inv = await stripeCall('invoice read', () => s.invoices.retrieve(invoiceId as string));
+-    if (inv.status === 'paid') { await transition(op, l, 'paid_pending_activation'); return; }   // SQL routes a paid abandon/late payment to attention
++    if (inv.status === 'paid') { await paymentObserved(op, l, inv); return; }   // SQL routes a paid abandon/late payment to attention
+     if (inv.status === 'draft') { await stripeCall('invoice delete draft', () => s.invoices.del(invoiceId as string, {}, { idempotencyKey: `${op.id}:delete` })); }
+     else if (inv.status === 'open') {
+       if (!(await intentRecorded(op, 'void'))) await intent(op, l, 'void', `${op.id}:void`, { invoice: invoiceId });
+       try { await s.invoices.voidInvoice(invoiceId, {}, { idempotencyKey: `${op.id}:void` }); await outcome(op, 'void', 'void'); }
+       catch (e) { await outcome(op, 'void', (e as { code?: string }).code ?? 'error'); }
+       inv = await stripeCall('invoice read', () => s.invoices.retrieve(invoiceId as string));
+-      if (inv.status === 'paid') { await transition(op, l, 'paid_pending_activation'); return; }
++      if (inv.status === 'paid') { await paymentObserved(op, l, inv); return; }   // paid-versus-void race: routed by paid time
+       if (inv.status !== 'void' || inv.amount_paid !== 0) { await transition(op, l, 'attention', 'void_unverified'); return; }
+     } else if (inv.status !== 'void' || inv.amount_paid !== 0) { await transition(op, l, 'attention', `close_${inv.status}`); return; }
+   }
+@@ -366,6 +381,9 @@ async function activate(op: OperationRow, l: Lease): Promise<void> {
+   const s = stripe();
+   const inv = await stripeCall('invoice read', () => s.invoices.retrieve(op.invoice_id as string));
+   if (inv.status !== 'paid' || inv.amount_paid !== op.amount_cents) { await transition(op, l, 'attention', 'payment_not_verified'); return; }
++  // Paid time not yet recorded (reached paid_pending_activation before 0070) and not an operator resume: decide it now,
++  // before any quantity change.
++  if (!op.provider_paid_at && !op.close_reference && (await paymentObserved(op, l, inv)) !== 'paid_pending_activation') return;
+   let sub = await stripeCall('subscription read', () => s.subscriptions.retrieve(op.stripe_subscription_id as string));
+   const item = sub.items.data[0];
+   const samePeriod = item.current_period_start === secs(op.period_start) && item.current_period_end === secs(op.period_end);

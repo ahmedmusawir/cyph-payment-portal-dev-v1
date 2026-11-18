@@ -1,0 +1,128 @@
+{
+  "at": "2026-11-18T03:21:37.278Z",
+  "event": "evt_1Ucy3SGnEQDyu3RRffYPIsgI",
+  "type": "invoice.paid",
+  "listeners": [
+    {
+      "pid": 90771,
+      "target": "http://localhost:3101/api/webhooks/stripe"
+    }
+  ],
+  "account_matches": true,
+  "delivery_lane": "Real provider events resend through existing owned Stripe CLI, no manual signature; permanent endpoint retry remains Gate D",
+  "before": {
+    "operation": {
+      "id": "1ded9052-5f79-4f88-aad3-03c1be776d8a",
+      "state": "activated",
+      "business_id": "98c57048-7ed5-4ed3-888f-140a89b2bd96",
+      "target_quantity": 2,
+      "npi": "1382068660",
+      "provider_paid_at": "2026-11-18T01:52:57+00:00",
+      "payment_deadline": "2026-11-18T02:22:40.755773+00:00"
+    },
+    "stores": [
+      {
+        "id": "98c57048-7ed5-4ed3-888f-140a89b2bd96"
+      }
+    ],
+    "members": [
+      {
+        "user_id": "92196ac1-7a44-4ff1-a606-61f17a9a3489",
+        "role": "admin"
+      }
+    ],
+    "quantity": 2,
+    "invoice": "in_1Ucy3BGnEQDyu3RROu5Uei9n",
+    "paid_cents": 4800,
+    "successful_payments": 1,
+    "receipt": null
+  },
+  "attempts": [
+    {
+      "label": "outage-redelivery",
+      "exit": 0,
+      "after": {
+        "operation": {
+          "id": "1ded9052-5f79-4f88-aad3-03c1be776d8a",
+          "state": "activated",
+          "business_id": "98c57048-7ed5-4ed3-888f-140a89b2bd96",
+          "target_quantity": 2,
+          "npi": "1382068660",
+          "provider_paid_at": "2026-11-18T01:52:57+00:00",
+          "payment_deadline": "2026-11-18T02:22:40.755773+00:00"
+        },
+        "stores": [
+          {
+            "id": "98c57048-7ed5-4ed3-888f-140a89b2bd96"
+          }
+        ],
+        "members": [
+          {
+            "user_id": "92196ac1-7a44-4ff1-a606-61f17a9a3489",
+            "role": "admin"
+          }
+        ],
+        "quantity": 2,
+        "invoice": "in_1Ucy3BGnEQDyu3RROu5Uei9n",
+        "paid_cents": 4800,
+        "successful_payments": 1,
+        "receipt": {
+          "event_id": "evt_1Ucy3SGnEQDyu3RRffYPIsgI",
+          "status": "processed",
+          "error_code": null,
+          "attempts": 0
+        }
+      },
+      "listener_lines": [
+        "2026-11-18 09:21:24   --> invoice.paid [evt_1Ucy3SGnEQDyu3RRffYPIsgI]",
+        "2026-11-18 09:21:25  <--  [200] POST http://localhost:3101/api/webhooks/stripe [evt_1Ucy3SGnEQDyu3RRffYPIsgI]"
+      ],
+      "forwarded_http200": true,
+      "state_unchanged": true
+    },
+    {
+      "label": "duplicate-redelivery",
+      "exit": 0,
+      "after": {
+        "operation": {
+          "id": "1ded9052-5f79-4f88-aad3-03c1be776d8a",
+          "state": "activated",
+          "business_id": "98c57048-7ed5-4ed3-888f-140a89b2bd96",
+          "target_quantity": 2,
+          "npi": "1382068660",
+          "provider_paid_at": "2026-11-18T01:52:57+00:00",
+          "payment_deadline": "2026-11-18T02:22:40.755773+00:00"
+        },
+        "stores": [
+          {
+            "id": "98c57048-7ed5-4ed3-888f-140a89b2bd96"
+          }
+        ],
+        "members": [
+          {
+            "user_id": "92196ac1-7a44-4ff1-a606-61f17a9a3489",
+            "role": "admin"
+          }
+        ],
+        "quantity": 2,
+        "invoice": "in_1Ucy3BGnEQDyu3RROu5Uei9n",
+        "paid_cents": 4800,
+        "successful_payments": 1,
+        "receipt": {
+          "event_id": "evt_1Ucy3SGnEQDyu3RRffYPIsgI",
+          "status": "processed",
+          "error_code": null,
+          "attempts": 0
+        }
+      },
+      "listener_lines": [
+        "2026-11-18 09:21:24   --> invoice.paid [evt_1Ucy3SGnEQDyu3RRffYPIsgI]",
+        "2026-11-18 09:21:25  <--  [200] POST http://localhost:3101/api/webhooks/stripe [evt_1Ucy3SGnEQDyu3RRffYPIsgI]",
+        "2026-11-18 09:21:31   --> invoice.paid [evt_1Ucy3SGnEQDyu3RRffYPIsgI]",
+        "2026-11-18 09:21:31  <--  [200] POST http://localhost:3101/api/webhooks/stripe [evt_1Ucy3SGnEQDyu3RRffYPIsgI]"
+      ],
+      "forwarded_http200": true,
+      "state_unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{"name":"minute-job-before","label":"expire retained interrupted unpaid real-race invoice before fresh consent","due":[{"fn":"store_operations_due","count":1}]}
+{"name":"minute-job-result","label":"expire retained interrupted unpaid real-race invoice before fresh consent","status":200,"body":{"at":"2026-11-18T03:19:48.735Z","store_operations":{"c3cb985d-d49b-427a-b843-3571524a5897":"expired_unpaid"},"lifecycle":{},"removals":{},"transfers":{},"notices":{"claimed":0,"sent":0,"retry":0,"attention":0,"blocked":0,"suppressed":0}}}
+{"name":"real_paid_void_race","result":"FAIL","http":200,"state":"expired_unpaid","code":"deadline_passed","paid_at":null,"deadline":"2026-11-18T02:53:46.609796+00:00","business_id":null,"stores":0,"invoice_status":"void","amount_paid":0,"provider_quantity":2,"target_quantity":3,"observed_wall":"2026-11-18T03:19:53.610Z","delivery_lane":"Real sandbox automatic owned CLI delivery plus explicitly labelled owner status poll; causal receipt correlated separately"}
+{"name":"real_paid_void_race_final","operation":"87a71548-3cac-4cb2-af27-b2fb87630f2f","initial_state":"payment_pending","deadline":"2026-11-18T03:49:56.205744+00:00","cents":4779}
+{"name":"final-real-race-new-consent-wait","deadline":"2026-11-18T03:49:56.205744+00:00","real_wait":true,"original_interrupted_case_retained":true}
+

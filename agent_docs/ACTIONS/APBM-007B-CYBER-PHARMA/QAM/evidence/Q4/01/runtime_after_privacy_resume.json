@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-18T03:16:23.007Z",
+  "served": {
+    "ob": {
+      "base": "http://localhost:3100",
+      "http": {
+        "app": "ob",
+        "revision": "1fd5a61073e8+qa-product",
+        "artifactId": "c65151cb86cb0fb3282fc92c660b537f"
+      },
+      "manifest": {
+        "app": "ob",
+        "artifact_id": "c65151cb86cb0fb3282fc92c660b537f",
+        "revision": "1fd5a61073e8+qa-product",
+        "next_build_id": "A_PF6g059dAVcijXNscWe"
+      },
+      "process": {
+        "pid": 90838,
+        "cwd": "/tmp/apbm007b-qa-q4-01/proof/ob",
+        "started": "Wed Nov 18 09:13:08 2026",
+        "disk_build_id": "A_PF6g059dAVcijXNscWe",
+        "build_id_mtime": "2026-11-17T14:39:59.524Z"
+      },
+      "match": true
+    },
+    "pp": {
+      "base": "http://localhost:3101",
+      "http": {
+        "app": "pp",
+        "revision": "00a9e0e98aad+qa-product",
+        "artifactId": "b4491268b384abb17294d4e593f73875"
+      },
+      "manifest": {
+        "app": "pp",
+        "artifact_id": "b4491268b384abb17294d4e593f73875",
+        "revision": "00a9e0e98aad+qa-product",
+        "next_build_id": "RJoBqGM9zZvHRaIeETP47"
+      },
+      "process": {
+        "pid": 90839,
+        "cwd": "/tmp/apbm007b-qa-q4-01/proof/pp",
+        "started": "Wed Nov 18 09:13:08 2026",
+        "disk_build_id": "RJoBqGM9zZvHRaIeETP47",
+        "build_id_mtime": "2026-11-17T14:40:48.943Z"
+      },
+      "match": true
+    }
+  },
+  "secret_matches": true,
+  "scratch": true,
+  "production": true,
+  "mail_blocked": true
+}

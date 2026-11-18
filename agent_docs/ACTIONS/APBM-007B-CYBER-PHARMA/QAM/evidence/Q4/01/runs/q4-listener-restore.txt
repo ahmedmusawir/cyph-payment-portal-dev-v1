@@ -1,0 +1,4 @@
+{"name":"owned-runtime-stop","args":["--only","pp"],"exit":0}
+{"name":"owned-runtime-start","args":["--only","pp"],"exit":0}
+{"name":"owned-listener-restored","at":"2026-11-18T02:25:16.042Z","pid":52858,"account_matches":true,"forward_to":"http://localhost:3101/api/webhooks/stripe","secret_matches":true,"served_identity":{"base":"http://localhost:3101","http":{"app":"pp","revision":"00a9e0e98aad+qa-product","artifactId":"b4491268b384abb17294d4e593f73875"},"manifest":{"app":"pp","artifact_id":"b4491268b384abb17294d4e593f73875","revision":"00a9e0e98aad+qa-product","next_build_id":"RJoBqGM9zZvHRaIeETP47"},"process":{"pid":52944,"cwd":"/tmp/apbm007b-qa-q4-01/proof/pp","started":"Wed Nov 18 08:25:13 2026","disk_build_id":"RJoBqGM9zZvHRaIeETP47","build_id_mtime":"2026-11-17T14:40:48.943Z"},"match":true},"mail":"blocked"}
+

@@ -34,6 +34,43 @@ Friday lifted the earlier dependent holds and stopped Engineering during Q2. Bot
 
 Additional QA instrument corrections are disclosed separately: initial visual driver used wrong cookie HttpOnly attributes/network-idle and a wrong handoff destination; table/route/201 assumptions corrected in read-only follow-up. Later a stale in-memory cache overwrote NEW_ADMIN's stored cache entry, while actual browser sessions remained valid. Restoring only provider-verified existing sessions and merging cache keys fixed the QA helper; affected fresh-role matrix rerun40/40, no extra sign-in. All failed attempts preserved. See evidence/Q2/02/instrument_followup_corrections.json, screens_final_corrected.json and fresh_session_cache_instrument_correction.json. These corrections do not remove any product observation or reset counters.
 
+### Q4 findings — Executor proposals,18November2026
+
+| ID | Phase / attempt | AC(s) | Observation (what was seen) | Expected (independently derived) | Reproduction | Evidence | Proposed class | Proposed severity | Blocks other checks? |
+|---|---|---|---|---|---|---|---|---|---|
+
+| F-Q4-001 | Q4/01 | AC-028, AC-030 | In all3engines, email typed into OwedBook Email me a sign-in link before delayed production JS hydrates is wiped. Portal link form keeps visible text but its button remains disabled; a separately labelled intercepted diagnostic reveals empty React email state and wipes it on re-render. Password sign-in fields preserved on bothapps. | Typed sign-in-link email survives loading and the enabled form uses that value. | AUTOMATION/Q4/hydration-forms.cjs: delay production JS, type synthetic emails, release JS; inspect values/button. Diagnostic requestSubmit bypass is separate from normal-user result and intercepts all network submits. | evidence/Q4/01/hydration_forms.json; runs/q4-hydration-forms* | acceptance failure (proposed; untouched adjacent forms tested under explicit Q4scope) | Medium (proposed) | No; record and continue; no repair/rebind authorized. |
+
+
+### Additional Q4 observations/findings —18November2026, Executor proposals
+
+| ID | AC(s) | Observation / expected | Evidence | Proposed class / severity | Blocks other checks? |
+|---|---|---|---|---|---|
+| F-Q4-002 | AC-004 UI, AC-028, AC-030 | Unchanged full AddStore WebKit spec timed out at outer30s waiting for status panel after confirm. Exact provider invoice in_1UcyUjGnEQDyu3RRMe0HpLjo and operation f80277f8-8d46-49e5-857e-a179707a4852 were paid/activated, business08b4165e-0cf5-4eea-8f10-3506eff8808b,2450c,quantity11. UI error-context still showed disabled Pay/Change details. Expected truthful activated feedback/destination. Chrome/Firefox same suite each5/5pass. Two following serial WebKit tests did not run. Outer30s vs inner60s timeout is disclosed; root/performance/test-budget classification not inferred. No retry or timeout edit. | evidence/Q4/01/browser/extra-apbm007b-webkit.txt; browser_extra_results.json; sanitized contexts | PENDING final classification; acceptance evidence failure (proposed), Medium provisional | No; keep testing, no repair. |
+| F-Q4-003 | AC-028, AC-030 | Unchanged WebKit O1active OwedBook login/next navigation was interrupted by redirect to /auth. Same run Portal O1active Sign in button stayed disabled after fill, extending F-Q4-001 diagnostic scope. Original repaired staff spec5/5passes retained separately; relation to F-Q2-002 not inferred. | evidence/Q4/01/browser/extra-apbm007b-webkit.txt; sanitized contexts; independent hydration evidence | PENDING; intermittent auth/navigation observation, Medium provisional | No; further isolated reproduction may refine, no repair/rebind. |
+
+F-Q4-001 supplemental evidence: Portal password form keeps DOM values in the isolated delayed-JS probe, but that alone does not establish correct React submit state. The unchanged WebKit O1active run showed an empty Work email field after the fill and a disabled Sign in button. Password value is private and excluded/redacted. Treat original field-preservation facts and actual submit-state failure as separate observations; no pre-existing-risk acceptance is inferred from unchanged source.
+
+
+### Q4 privacy/process stop —18November2026, Executor proposal
+
+| ID | Lane | Observation | Evidence | Proposed class / severity | Stop / owner |
+|---|---|---|---|---|---|
+| F-Q4-004 | QA process; outside productAC031 | Playwright failure error-context included ROLE_OWNER_A_PASSWORD in the Q4disposable lane with parent0775/file0664. Values were not printed or exported; raw artifact locally readable before containment. Follow-up found ROLE_OWNER_B_PASSWORD in a retained Q2diagnostic with file0664; prior parent reachability was not retained, so no broader access assertion. Prior unauthorized access is unknown. All affected lanes now0700/files0600; futureQAchildumask0077. No credential/session change due retention ruling. | evidence/Q4/01/privacy_stop_2026-11-18.json; privacy_stop_process_exit.json; privacy_snapshot_control.json | instrument/privacy issue (proposed), High (proposed); not a productbundle-secret finding | STOP-PRIVACY; Friday/Tony decide affectedQApasswordrotation/sessionrevocation vs explicit risk acceptance. |
+
+F-Q4-001 stronger fresh diagnostic: all3engines show Portal password Sign in disabled after typing before hydration; normal Show password action clears the previously typed synthetic password. OwedBook repaired password form remains enabled and preserves its synthetic password. Link-form loss/state mismatch remains on bothapps. All submits intercepted; no real credentials or email used. Evidence hydration_forms_extended.json. This refines observations; no QA Lead disposition is composed.
+
+### Q4 completion supplements — Cody Executor,18November2026 (§1 factual continuation)
+
+F-Q4-002: both originally serial-skipped WebKit removal/undo and375viewport tests passed individually with unchanged specs/timeouts (browser_final_serial_skips.json). Original AddStore/O1 failures remain; no failure erased or performance root inferred. F-Q4-003 remains unadjudicated despite original repaired staff protocol5/5PASS. No separate failure is inferred from the old interrupted unpaid race helper's generic FAIL: it never received a payment, safely expired after the privacy stop, and has a separately executed fresh full-wait replacement.
+
+F-Q4-004: Director-authorized recovery completed, privacy_recovery.json: two named password rotations, session/refresh revocations, unchangedAuthIDs; two diagnostics deleted, no additional affected credential fields; current values only ignored0600input. Prior unauthorized access remains unknown. New artifacts have restrictive creation controls/synthetic self-test. No new credential values/hashes exported and no instantJWTrevocation claim. This factual supplement leaves Friday's original dispositions and the supplied Director instrument-issue instruction unchanged.
+
+O-Q4-001 (observation, unranked): applied operator SQL still returns “paid re-add pending Director decision9; no access or quantity granted.” New runbook describes approved9 correctly. Evidence operator_legacy_wording_observation.json and paid re-add in live_campaign.json. Recorded under explicit Q4scopeF7; no unilateral product/contract repair.
+
+Repair retest observations with paths: evidence/Q4/01/finding_retests_final.json. All findings, proposed classes/severity, original attempts and uncertainty are retained for Friday; no Engineer routing or new verdict composed by Cody.
+
+
 ## 2. Dispositions (QA Lead only)
 
 | Finding | Class (final) | Severity (final) | Disposition | Inherited condition evidence (if claimed pre-existing) | Affects verdict? | Routed to |
@@ -73,6 +110,35 @@ Identifier cross-reference only: O-001 skip link refers to the existing Executor
 
 Retention, Friday: keep every SCRATCH, sandbox and sign-in fixture exactly as is through Q4, including the F-Q2-001 store, unrefunded. No cleanup. State: **REPAIR RULED — AWAITING COMMIT**; nobody retests in this state. No apps or listener are to be started; no pull or rebind. Engineering now has the QA branch. The Director supplies the repaired commit pair; Friday will supply the bound Q4 scope and Q4 budget.
 
+### Director/QA Lead recovery instruction —18November2026, transcribed by Cody
+
+Friday via Director Tony: STOP-PRIVACY resolved; rotate the two QA passwords and revoke their sessions, delete the diagnostic, make future diagnostics0600, "note it as a QA instrument issue, and resume immediately." Standing authority: fix and record QA-only instrument/file-hygiene issues and continue. This supplied instruction classifies F-Q4-004 as a QA instrument issue; no product verdict or other finding disposition is composed here. Recovery execution receipt: evidence/Q4/01/privacy_recovery.json (PASS, same Auth IDs, old passwords refused, server sessions/refresh authority revoked, two diagnostics deleted, no additional credentials found). New values only in ignored0600 .env.qa.local. Previously issued direct access JWT expiry limitations are disclosed. Business/provider fixtures retained.
+
+### Friday Q4/01 adjudication — 18 November 2026, transcribed by Cody
+
+Attributed to Friday (QA Lead),18November2026. Director Tony chose one more repair round. Source supplied in the Director conversation: `QA_LEAD_ADJUDICATION_APBM007B_Q4_01_2026-11-18.md`, SHA-256 `c675e9e3aa3fddd373ff88d7fabd8d47183e0a046249dd45d0f0646ffe1f10d4` (attributed supplied reference; no independent attachment verification claimed). Friday read Q4_REVIEW_01 SHA-256 `ec99c079406250551abd02f1d5e4403f6f101a3bbc24c0cdd9b8b52a029400a5`; index verified280of280.
+
+The following supplied dispositions supersede earlier rows for these identifiers; all earlier observations and decisions remain history.
+
+| Finding | Disposition |
+|---|---|
+| F-Q2-001 | CLOSED — repaired and verified (Q4/01) |
+| F-Q2-004 | CLOSED — repaired and verified (Q4/01) |
+| F-Q2-002 | CLOSED — repaired and verified (Q4/01) |
+| F-Q2-005 | CLOSED — repaired and verified (Q4/01) |
+| F-Q2-006 | CLOSED — repaired and verified (Q4/01) |
+| F-Q2-003 | remains ACCEPTED AS DISCLOSED |
+
+| Finding / observation | Class | Severity | Disposition | Affects verdict? |
+|---|---|---|---|---|
+| F-Q4-001 | acceptance failure | Medium | PRODUCT DEFECT — repair round 2 | Yes (AC-028, AC-030) |
+| F-Q4-002 | acceptance evidence failure | Medium provisional | INVESTIGATE, repair if product cause — round 2 | Yes |
+| F-Q4-003 | acceptance evidence failure | Medium provisional | INVESTIGATE with F-Q4-002 — round 2 | Yes |
+| F-Q4-004 | QA instrument and privacy issue | Medium | CLOSED — rotated, revoked, deleted, controls fixed; prior access unknown | No |
+| O-Q4-001 | follow-up | Low | NOT IN THIS CAMPAIGN — Director backlog | No |
+
+Friday's instruction: state **REPAIR RULED — AWAITING COMMIT**; nobody retests in this state. Keep every fixture as is. Do not start apps or a listener. Engineering now has the QA branch. Director supplies the repaired pair; Friday then supplies the bound retest scope. No next retest is released by this adjudication.
+
 ## 3. Conditional repair routing (only when §2 dispositions a genuine product defect)
 
 ### 3.1 Repair proposal (QA Executor draft; a proposal, not a work order)
@@ -99,3 +165,4 @@ Created only when at least one product AC is FAIL with a product-defect disposit
 Repairs stay on the QA branch; nothing is transferred back to the engineering branch (RUL-02). All prior attempts are preserved under `evidence/`.
 
 *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*
+
