@@ -2,7 +2,7 @@
 // APBM-007B — paid Add Store (owner). Server quote → explicit three-part consent → durable operation → payment status.
 // The browser never reports a payment result: it only asks the server for the operation's state. The provider-hosted
 // payment page is offered only when the server says that exact invoice needs the owner (e.g. bank authentication).
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,6 +22,7 @@ async function post<T>(url: string, body: unknown): Promise<{ ok: true; data: T 
   return { ok: false, message: json?.message ?? "That did not work. Nothing was charged.", fieldErrors: json?.fieldErrors };
 }
 const newIntent = () => `add_${crypto.randomUUID().replace(/-/g, "")}`;
+const noSubscribe = () => () => {};   // useSyncExternalStore: false on the server and while hydrating, true once React owns the page
 
 export function AddStoreFlow() {
   const [storeName, setStoreName] = useState(""); const [npi, setNpi] = useState(""); const [ncpdp, setNcpdp] = useState("");
@@ -31,6 +32,17 @@ export function AddStoreFlow() {
   const [error, setError] = useState<{ message: string; fieldErrors?: Record<string, string> } | null>(null);
   const [busy, setBusy] = useState(false);
   const intent = useRef<string | null>(null);   // one intent per confirmation: a double click or retry resumes, never charges twice
+
+  // F-Q4-001 (round 2 extension): details typed or filled before the page finished loading never reached this state, and
+  // the next re-render wiped them. Adopt what the fields hold once React owns them (with the same digit rules as typing);
+  // "See the price" stays disabled until then, so an early click cannot become a native form submission.
+  const nameRef = useRef<HTMLInputElement>(null); const npiRef = useRef<HTMLInputElement>(null); const ncpdpRef = useRef<HTMLInputElement>(null);
+  const hydrated = useSyncExternalStore(noSubscribe, () => true, () => false);
+  useEffect(() => {
+    if (nameRef.current?.value) setStoreName(nameRef.current.value);
+    if (npiRef.current?.value) setNpi(npiRef.current.value.replace(/\D/g, "").slice(0, 10));
+    if (ncpdpRef.current?.value) setNcpdp(ncpdpRef.current.value.replace(/\D/g, "").slice(0, 7));
+  }, []);
 
   const getQuote = async () => {
     setBusy(true); setError(null);
@@ -63,10 +75,10 @@ export function AddStoreFlow() {
 
       {!quote && !status && (
         <form className="mt-6 space-y-4 border border-border bg-card p-4 sm:p-5" onSubmit={(e) => { e.preventDefault(); void getQuote(); }} data-testid="add-store-form">
-          <div className="space-y-1"><Label htmlFor="sn">Pharmacy name</Label><Input id="sn" value={storeName} onChange={(e) => setStoreName(e.target.value)} required maxLength={200} aria-invalid={!!error?.fieldErrors?.storeName} />{error?.fieldErrors?.storeName && <p className="text-sm text-destructive">{error.fieldErrors.storeName}</p>}</div>
-          <div className="space-y-1"><Label htmlFor="npi">NPI</Label><Input id="npi" inputMode="numeric" value={npi} onChange={(e) => setNpi(e.target.value.replace(/\D/g, "").slice(0, 10))} required aria-invalid={!!error?.fieldErrors?.npi} />{error?.fieldErrors?.npi && <p className="text-sm text-destructive">{error.fieldErrors.npi}</p>}</div>
-          <div className="space-y-1"><Label htmlFor="ncpdp">NCPDP (optional)</Label><Input id="ncpdp" inputMode="numeric" value={ncpdp} onChange={(e) => setNcpdp(e.target.value.replace(/\D/g, "").slice(0, 7))} /></div>
-          <Button type="submit" disabled={busy}>See the price</Button>
+          <div className="space-y-1"><Label htmlFor="sn">Pharmacy name</Label><Input ref={nameRef} id="sn" value={storeName} onChange={(e) => setStoreName(e.target.value)} required maxLength={200} aria-invalid={!!error?.fieldErrors?.storeName} />{error?.fieldErrors?.storeName && <p className="text-sm text-destructive">{error.fieldErrors.storeName}</p>}</div>
+          <div className="space-y-1"><Label htmlFor="npi">NPI</Label><Input ref={npiRef} id="npi" inputMode="numeric" value={npi} onChange={(e) => setNpi(e.target.value.replace(/\D/g, "").slice(0, 10))} required aria-invalid={!!error?.fieldErrors?.npi} />{error?.fieldErrors?.npi && <p className="text-sm text-destructive">{error.fieldErrors.npi}</p>}</div>
+          <div className="space-y-1"><Label htmlFor="ncpdp">NCPDP (optional)</Label><Input ref={ncpdpRef} id="ncpdp" inputMode="numeric" value={ncpdp} onChange={(e) => setNcpdp(e.target.value.replace(/\D/g, "").slice(0, 7))} /></div>
+          <Button type="submit" disabled={busy || !hydrated}>See the price</Button>
         </form>
       )}
 
