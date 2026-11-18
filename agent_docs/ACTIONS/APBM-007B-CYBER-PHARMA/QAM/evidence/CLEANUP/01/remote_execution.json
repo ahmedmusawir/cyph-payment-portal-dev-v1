@@ -1,0 +1,429 @@
+{
+  "at": "2026-11-18T07:58:26.468Z",
+  "actions": [
+    {
+      "kind": "subscription",
+      "id": "sub_1Ucy1GGnEQDyu3RRvzi7OUrP",
+      "result": "canceled",
+      "marker": "canonical",
+      "refunds": 0
+    },
+    {
+      "kind": "subscription",
+      "id": "sub_1Uchc8GnEQDyu3RR4dPvjODp",
+      "result": "canceled",
+      "marker": "canonical",
+      "refunds": 0
+    },
+    {
+      "kind": "subscription",
+      "id": "sub_1UciklGnEQDyu3RRiTtSmwcF",
+      "result": "canceled",
+      "marker": "canonical",
+      "refunds": 0
+    },
+    {
+      "kind": "subscription",
+      "id": "sub_1Uchc1GnEQDyu3RRyZ7Lns7W",
+      "result": "canceled",
+      "marker": "documented legacy QA campaign",
+      "refunds": 0
+    },
+    {
+      "kind": "subscription",
+      "id": "sub_1UcitmGnEQDyu3RRftoi8saR",
+      "result": "canceled",
+      "marker": "canonical",
+      "refunds": 0
+    },
+    {
+      "kind": "subscription",
+      "id": "sub_1UciXtGnEQDyu3RR69YGmVyL",
+      "result": "canceled",
+      "marker": "canonical",
+      "refunds": 0
+    },
+    {
+      "kind": "checkout_session",
+      "id": "cs_test_c0Oryg5oMT15rj93H9YfsmpETowp2qDiXmWsinA62cz1M7FIuYml866T2I",
+      "result": "already_expired",
+      "limitation": "Stripe provides no deletion API for terminal Checkout history"
+    },
+    {
+      "kind": "checkout_session",
+      "id": "cs_test_c0g22ZYVrSQvgFpP64kayqYK7UKV3Kzfe50Qgi5WADIsXkI1I8lzwdLOzu",
+      "result": "already_expired",
+      "limitation": "Stripe provides no deletion API for terminal Checkout history"
+    },
+    {
+      "kind": "checkout_session",
+      "id": "cs_test_c0RXNNRSSrqkDFRmniGcXOpgzUA6cVf3eeGoLpu73DRCVFUU7BQCJm7lgw",
+      "result": "already_expired",
+      "limitation": "Stripe provides no deletion API for terminal Checkout history"
+    },
+    {
+      "kind": "checkout_session",
+      "id": "cs_test_c0Oryg5oMT15rj93H9YfsmpETowp2qDiXmWsinA62cz1M7FIuYml866T2I",
+      "result": "already_expired",
+      "limitation": "Stripe provides no deletion API for terminal Checkout history"
+    },
+    {
+      "kind": "checkout_session",
+      "id": "cs_test_c0g22ZYVrSQvgFpP64kayqYK7UKV3Kzfe50Qgi5WADIsXkI1I8lzwdLOzu",
+      "result": "already_expired",
+      "limitation": "Stripe provides no deletion API for terminal Checkout history"
+    },
+    {
+      "kind": "checkout_session",
+      "id": "cs_test_c0RXNNRSSrqkDFRmniGcXOpgzUA6cVf3eeGoLpu73DRCVFUU7BQCJm7lgw",
+      "result": "already_expired",
+      "limitation": "Stripe provides no deletion API for terminal Checkout history"
+    }
+  ],
+  "left": [
+    {
+      "kind": "subscription",
+      "id": "sub_1UcinNGnEQDyu3RRRIn3qrzB",
+      "reason": "Known QA checkout fixture but object carries apbm007a/operation metadata, not this QA run marker; hard limit forbids modification"
+    },
+    {
+      "kind": "subscription",
+      "id": "sub_1UckKtGnEQDyu3RRzSsOMNyj",
+      "reason": "Known QA checkout fixture but object carries apbm007a/operation metadata, not this QA run marker; hard limit forbids modification"
+    },
+    {
+      "kind": "customer",
+      "id": "cus_VeGY4NupjibtEo",
+      "reason": "Deleting tagged parent would remove/detach untagged payment methods; hard limit prohibits changing untagged objects",
+      "untagged_children": [
+        "pm_1Ucy1IGnEQDyu3RRW7tPJjV1",
+        "pm_1Ucy1EGnEQDyu3RRMAM24qBy"
+      ]
+    },
+    {
+      "kind": "customer",
+      "id": "cus_Ve0hHqFExjMSdp",
+      "reason": "No QA run marker on object; ownership association alone does not override hard limit"
+    },
+    {
+      "kind": "customer",
+      "id": "cus_VdzbotJE2rHxEt",
+      "reason": "Deleting tagged parent would remove/detach untagged payment methods; hard limit prohibits changing untagged objects",
+      "untagged_children": [
+        "pm_1Uchc6GnEQDyu3RR9EJgXbxg"
+      ]
+    },
+    {
+      "kind": "customer",
+      "id": "cus_Ve0mgpfF0Ib3yh",
+      "reason": "Deleting tagged parent would remove/detach untagged payment methods; hard limit prohibits changing untagged objects",
+      "untagged_children": [
+        "pm_1UcikjGnEQDyu3RRF5jcJJTV"
+      ]
+    },
+    {
+      "kind": "customer",
+      "id": "cus_VdzbFhbYulqAOe",
+      "reason": "Deleting tagged parent would remove/detach untagged payment methods; hard limit prohibits changing untagged objects",
+      "untagged_children": [
+        "pm_1UchwqGnEQDyu3RR74b70Zy0",
+        "pm_1UchwYGnEQDyu3RRNSxtz7gl",
+        "pm_1UchjIGnEQDyu3RRyjb6kmW6",
+        "pm_1Uchc0GnEQDyu3RRlSkM6Xel"
+      ]
+    },
+    {
+      "kind": "customer",
+      "id": "cus_Ve0v0K7v4FPDJq",
+      "reason": "Deleting tagged parent would remove/detach untagged payment methods; hard limit prohibits changing untagged objects",
+      "untagged_children": [
+        "pm_1Ucy8oGnEQDyu3RRE9wH7ynw",
+        "pm_1Ucy1KGnEQDyu3RRLghisGfB",
+        "pm_1UcjJvGnEQDyu3RRZ8zqQFsb",
+        "pm_1UcjGHGnEQDyu3RRbBLno8hw",
+        "pm_1UcituGnEQDyu3RRZ32EvBp9",
+        "pm_1UcitlGnEQDyu3RRmEryphZP"
+      ]
+    },
+    {
+      "kind": "customer",
+      "id": "cus_Ve0Z5kYb2AIQYm",
+      "reason": "Deleting tagged parent would remove/detach untagged payment methods; hard limit prohibits changing untagged objects",
+      "untagged_children": [
+        "pm_1Ucy1BGnEQDyu3RRM4sWYIwx",
+        "pm_1UcjaAGnEQDyu3RRu8JhTukE",
+        "pm_1UciXsGnEQDyu3RRQG1alGK8"
+      ]
+    },
+    {
+      "kind": "customer",
+      "id": "cus_Ve2PY4BIOkhh4R",
+      "reason": "No QA run marker on object; ownership association alone does not override hard limit"
+    },
+    {
+      "kind": "test_clock",
+      "id": "clock_1UchbzGnEQDyu3RRdTw6kZ0j",
+      "reason": "Deleting clock cascades through customers into untagged payment methods; retained to obey hard limit"
+    },
+    {
+      "kind": "test_clock",
+      "id": "clock_1UcikjGnEQDyu3RRyDjN9as0",
+      "reason": "Deleting clock cascades through customers into untagged payment methods; retained to obey hard limit"
+    },
+    {
+      "kind": "test_clock",
+      "id": "clock_1UcitkGnEQDyu3RR1xFBf7ZT",
+      "reason": "Clock name lacks canonical/documented QA run marker; not deleted even though QA context references it"
+    }
+  ],
+  "no_refunds": true,
+  "QA_RUN_ID": "apbm007b-qa-20261117T074504611Z-c414c4af",
+  "legacy_marker_binding": {
+    "marker": "qa-20261117-c414",
+    "source": "evidence/Q2/01/campaign/r03/O1/qa-20261117-c414/state.json",
+    "known_fixture_IDs_only": true,
+    "reason": "Canonical run uses this documented bounded O1 campaign label; includes specifically authorized F-Q2-001 subscription. Other apbm007a or unmarked resources are excluded."
+  },
+  "business_claim_digest_before": [
+    {
+      "table": "businesses",
+      "n": 82,
+      "digest": "846eba8daf47cca2330a3c8b92b060ab"
+    },
+    {
+      "table": "user_data",
+      "n": 363,
+      "digest": "2afa82d7df20f77e3384393802d88fc0"
+    },
+    {
+      "table": "report_files",
+      "n": 1,
+      "digest": "771a526a39017a8dbf1764423c113ffc"
+    },
+    {
+      "table": "pharmacy_identities",
+      "n": 80,
+      "digest": "c3093f04092161488f0e348399326f75"
+    }
+  ],
+  "scratch_contexts": [
+    {
+      "account_id": "91bf8e6f-1782-4721-a5a2-c52435336c37",
+      "run_label": "o1-qa-20261117-c414",
+      "stripe_test_clock_id": "clock_1UchbzGnEQDyu3RRdTw6kZ0j",
+      "enabled": true,
+      "result": "disabled",
+      "error": null
+    },
+    {
+      "account_id": "fd478c52-4c94-413e-86a9-a0e7cf36dd19",
+      "run_label": "apbm007b-qa-20261117T074504611Z-c414c4af-guard",
+      "stripe_test_clock_id": "clock_1UcikjGnEQDyu3RRyDjN9as0",
+      "enabled": true,
+      "result": "disabled",
+      "error": null
+    },
+    {
+      "account_id": "2ecdcb60-633d-4b6a-a4ff-462399a00152",
+      "run_label": "o1-qa-20261117-c414",
+      "stripe_test_clock_id": "clock_1UchbzGnEQDyu3RRdTw6kZ0j",
+      "enabled": true,
+      "result": "disabled",
+      "error": null
+    },
+    {
+      "account_id": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "run_label": "apbm007b-qa-20261117T074504611Z-c414c4af-expiry",
+      "stripe_test_clock_id": "clock_1UcitkGnEQDyu3RR1xFBf7ZT",
+      "enabled": true,
+      "result": "disabled",
+      "error": null
+    }
+  ],
+  "transfer": {
+    "id": "b254f723-9774-494d-9096-e50672ad323c",
+    "before": "buyer_reserved",
+    "after": "canceled",
+    "buyer_reservations_released": [
+      {
+        "id": "9a37c780-670d-45d3-93d0-d75fafe4111f",
+        "status": "released"
+      }
+    ],
+    "direct_SQL_reason": "Supported cancel function only accepts pre-effective authorized transfers and edits business rows. Explicit cleanup authority permits this exact post-cutoff status/reservation cancellation while keeping business/claim rows unchanged."
+  },
+  "sessions": [
+    {
+      "role": "OWNER_A",
+      "auth_id": "bc30ca1c-6950-4c65-b541-384b618bf718",
+      "before": {
+        "sessions": 15,
+        "active_refresh": 15
+      },
+      "after": {
+        "sessions": 0,
+        "active_refresh": 0
+      },
+      "verified_zero": true,
+      "identity_kept": true,
+      "access_token_limit": "Server sessions/refresh authority revoked; no assertion of instant cryptographic JWT invalidation before expiry"
+    },
+    {
+      "role": "OWNER_B",
+      "auth_id": "f589730b-9547-4f0c-bae2-a827f8ea492a",
+      "before": {
+        "sessions": 7,
+        "active_refresh": 7
+      },
+      "after": {
+        "sessions": 0,
+        "active_refresh": 0
+      },
+      "verified_zero": true,
+      "identity_kept": true,
+      "access_token_limit": "Server sessions/refresh authority revoked; no assertion of instant cryptographic JWT invalidation before expiry"
+    },
+    {
+      "role": "STORE_ADMIN",
+      "auth_id": "f9021dee-2ecd-4052-ab49-e415d79078b1",
+      "before": {
+        "sessions": 56,
+        "active_refresh": 56
+      },
+      "after": {
+        "sessions": 0,
+        "active_refresh": 0
+      },
+      "verified_zero": true,
+      "identity_kept": true,
+      "access_token_limit": "Server sessions/refresh authority revoked; no assertion of instant cryptographic JWT invalidation before expiry"
+    },
+    {
+      "role": "MEMBER",
+      "auth_id": "3bf1d010-d726-4d65-8649-2802b98bfd67",
+      "before": {
+        "sessions": 12,
+        "active_refresh": 12
+      },
+      "after": {
+        "sessions": 0,
+        "active_refresh": 0
+      },
+      "verified_zero": true,
+      "identity_kept": true,
+      "access_token_limit": "Server sessions/refresh authority revoked; no assertion of instant cryptographic JWT invalidation before expiry"
+    },
+    {
+      "role": "FOREIGN_OWNER",
+      "auth_id": "49e40e80-055d-40f4-a2b3-0130c45df6b6",
+      "before": {
+        "sessions": 14,
+        "active_refresh": 14
+      },
+      "after": {
+        "sessions": 0,
+        "active_refresh": 0
+      },
+      "verified_zero": true,
+      "identity_kept": true,
+      "access_token_limit": "Server sessions/refresh authority revoked; no assertion of instant cryptographic JWT invalidation before expiry"
+    },
+    {
+      "role": "NEW_ADMIN",
+      "auth_id": "6505e859-3e7a-47ee-9681-ec3c5a81ed8c",
+      "before": {
+        "sessions": 2,
+        "active_refresh": 2
+      },
+      "after": {
+        "sessions": 0,
+        "active_refresh": 0
+      },
+      "verified_zero": true,
+      "identity_kept": true,
+      "access_token_limit": "Server sessions/refresh authority revoked; no assertion of instant cryptographic JWT invalidation before expiry"
+    },
+    {
+      "role": "NEW_MEMBER",
+      "auth_id": "92196ac1-7a44-4ff1-a606-61f17a9a3489",
+      "before": {
+        "sessions": 2,
+        "active_refresh": 2
+      },
+      "after": {
+        "sessions": 0,
+        "active_refresh": 0
+      },
+      "verified_zero": true,
+      "identity_kept": true,
+      "access_token_limit": "Server sessions/refresh authority revoked; no assertion of instant cryptographic JWT invalidation before expiry"
+    },
+    {
+      "role": "EXISTING_INVITEE",
+      "auth_id": "1c7b6b2a-68fe-47b6-b672-05f9d1ab89ee",
+      "before": {
+        "sessions": 0,
+        "active_refresh": 0
+      },
+      "after": {
+        "sessions": 0,
+        "active_refresh": 0
+      },
+      "result": "already_revoked",
+      "verified_zero": true
+    }
+  ],
+  "business_claim_digest_after": [
+    {
+      "table": "businesses",
+      "n": 82,
+      "digest": "846eba8daf47cca2330a3c8b92b060ab"
+    },
+    {
+      "table": "user_data",
+      "n": 363,
+      "digest": "2afa82d7df20f77e3384393802d88fc0"
+    },
+    {
+      "table": "report_files",
+      "n": 1,
+      "digest": "771a526a39017a8dbf1764423c113ffc"
+    },
+    {
+      "table": "pharmacy_identities",
+      "n": 80,
+      "digest": "c3093f04092161488f0e348399326f75"
+    }
+  ],
+  "business_claim_rows_unchanged": true,
+  "context_verification": [
+    {
+      "account_id": "91bf8e6f-1782-4721-a5a2-c52435336c37",
+      "run_label": "o1-qa-20261117-c414",
+      "enabled": false
+    },
+    {
+      "account_id": "fd478c52-4c94-413e-86a9-a0e7cf36dd19",
+      "run_label": "apbm007b-qa-20261117T074504611Z-c414c4af-guard",
+      "enabled": false
+    },
+    {
+      "account_id": "2ecdcb60-633d-4b6a-a4ff-462399a00152",
+      "run_label": "o1-qa-20261117-c414",
+      "enabled": false
+    },
+    {
+      "account_id": "62e52966-6eb4-41a7-b2ab-ac29ef092c4e",
+      "run_label": "apbm007b-qa-20261117T074504611Z-c414c4af-expiry",
+      "enabled": false
+    }
+  ],
+  "finished_at": "2026-11-18T08:01:18.788Z",
+  "recovered_instrument_errors": [
+    {
+      "at": "2026-11-18T07:58:50.480Z",
+      "code": "42883",
+      "message": "operator does not exist: text = uuid"
+    }
+  ]
+}

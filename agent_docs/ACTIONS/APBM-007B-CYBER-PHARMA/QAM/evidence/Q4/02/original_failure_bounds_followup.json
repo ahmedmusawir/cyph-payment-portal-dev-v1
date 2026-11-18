@@ -1,0 +1,20 @@
+{
+  "original_test_start_exact": "Unavailable; retained pre-spawn marker is a lower bound only",
+  "original_test_started_before_operation_creation": true,
+  "operation_created_at": "2026-11-18T02:21:05.295Z",
+  "operation_activated_at": "2026-11-18T02:21:45.392Z",
+  "created_to_activated_ms": 40097,
+  "latest_possible_30s_deadline": "2026-11-18T02:21:35.295Z",
+  "activation_beyond_even_latest_possible_30s_deadline": true,
+  "activation_beyond_latest_bound_ms": 10097,
+  "reason": "The unchanged first test creates this operation from its confirm request; test start strictly precedes operation creation, so even created_at+30s is an upper bound on the test deadline.",
+  "historical_auth_audit_availability": {
+    "total": 0,
+    "first_at": null,
+    "last_at": null,
+    "entries_in_original_interval": 0
+  },
+  "QA_revocation_entries_in_original_interval": 0,
+  "causal_limit": "No simultaneous QA global revocation recorded. An absent server audit entry cannot rule out a client-local SIGNED_OUT event; no exact old browser event stream exists.",
+  "new_repetitions": "Fresh onTestBegin, unchanged30s defaults and private HAR confirm timing recorded separately"
+}

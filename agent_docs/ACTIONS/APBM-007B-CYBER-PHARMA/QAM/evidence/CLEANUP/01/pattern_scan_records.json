@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-18T08:03:59.109514+00:00",
+  "after_credential_removal": true,
+  "result": {
+    "dir": "agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM",
+    "hits": [
+      {
+        "file": "evidence/Q2/01/preflight/candidate_to_execution_full.diff",
+        "rule": "email",
+        "count": 7
+      },
+      {
+        "file": "evidence/Q4/01/entry/portal_complete.diff",
+        "rule": "email",
+        "count": 14
+      }
+    ],
+    "skipped_binary": 23
+  },
+  "exit": 1
+}

@@ -1,0 +1,1370 @@
+[
+  {
+    "label": "add-webkit-1",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.addstore.spec.ts"
+    ],
+    "add": true,
+    "sign": 3,
+    "start": "2026-11-18T06:31:35.985Z",
+    "end": "2026-11-18T06:33:29.764Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-add-webkit-1",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "186cb30c0057c56c8132-345aec871069e94f2c6a",
+        "title": "owner adds a store: server quote, three consents, payment, activated; dashboard shows it",
+        "start": "2026-11-18T06:31:38.078Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 29652,
+        "end": "2026-11-18T06:32:08.189Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-5d35860377fb7eb64265",
+        "title": "owner schedules a period-end removal and undoes it; no charge either way",
+        "start": "2026-11-18T06:32:08.190Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 14493,
+        "end": "2026-11-18T06:32:22.860Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-3ea9e9200b2585bbe7a4",
+        "title": "narrow viewport (375): dashboard and Add Store form fit with no horizontal scroll",
+        "start": "2026-11-18T06:32:22.861Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 4820,
+        "end": "2026-11-18T06:32:27.855Z"
+      }
+    ],
+    "confirm_requests": [
+      {
+        "method": "POST",
+        "path": "/api/stores/add/confirm",
+        "started_at": "2026-11-18T06:31:54.171Z",
+        "duration_ms": 10155.613,
+        "response_status": 200,
+        "failure": null,
+        "trace_private": true,
+        "request_body_or_credentials_exported": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "7b338e3f-58e2-42b9-89ad-b79b789c941a",
+        "state": "activated",
+        "created_at": "2026-11-18T06:31:54.725192+00:00",
+        "activated_at": "2026-11-18T06:32:03.976018+00:00",
+        "invoice_id": "in_1Ud2PPGnEQDyu3RRY5zupT6z",
+        "business_id": "de20039e-3d41-4776-94b5-26ae9f388d9a",
+        "amount_cents": 4893
+      },
+      {
+        "id": "e1f69b88-78d9-441d-96bd-1a12f15541e0",
+        "state": "completed",
+        "created_at": "2026-11-18T06:32:16.714954+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      },
+      {
+        "id": "61484e1c-6969-4420-8a5b-84919f24020d",
+        "state": "completed",
+        "created_at": "2026-11-18T06:32:11.98847+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      }
+    ],
+    "expected": {
+      "written_before_attempt": "2026-11-18T06:31:35.984Z",
+      "period_start": 1802857313,
+      "period_end": 1805276513,
+      "provider_frozen_at": 1802860913,
+      "cents": 4893,
+      "quantity_before": 14,
+      "formula": "round-half-up(4900*(period_end-provider_clock)/(period_end-period_start))"
+    },
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "add-webkit-2",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.addstore.spec.ts"
+    ],
+    "add": true,
+    "sign": 3,
+    "start": "2026-11-18T06:33:30.537Z",
+    "end": "2026-11-18T06:35:12.483Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-add-webkit-2",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "186cb30c0057c56c8132-345aec871069e94f2c6a",
+        "title": "owner adds a store: server quote, three consents, payment, activated; dashboard shows it",
+        "start": "2026-11-18T06:33:32.415Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 21529,
+        "end": "2026-11-18T06:33:54.304Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-5d35860377fb7eb64265",
+        "title": "owner schedules a period-end removal and undoes it; no charge either way",
+        "start": "2026-11-18T06:33:54.305Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 10542,
+        "end": "2026-11-18T06:34:05.006Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-3ea9e9200b2585bbe7a4",
+        "title": "narrow viewport (375): dashboard and Add Store form fit with no horizontal scroll",
+        "start": "2026-11-18T06:34:05.007Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 4717,
+        "end": "2026-11-18T06:34:09.900Z"
+      }
+    ],
+    "confirm_requests": [
+      {
+        "method": "POST",
+        "path": "/api/stores/add/confirm",
+        "started_at": "2026-11-18T06:33:39.439Z",
+        "duration_ms": 11665.351,
+        "response_status": 200,
+        "failure": null,
+        "trace_private": true,
+        "request_body_or_credentials_exported": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "e4e7e90d-c40d-42d0-8790-89c5c2a636e1",
+        "state": "activated",
+        "created_at": "2026-11-18T06:33:39.78624+00:00",
+        "activated_at": "2026-11-18T06:33:50.687687+00:00",
+        "invoice_id": "in_1Ud2R6GnEQDyu3RRaSutiLFe",
+        "business_id": "dd87e9ad-d220-4193-aa8d-45bfd4801b9f",
+        "amount_cents": 4893
+      },
+      {
+        "id": "311aeb50-cc8b-4b61-999c-f59a2fd356af",
+        "state": "completed",
+        "created_at": "2026-11-18T06:33:57.589416+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      },
+      {
+        "id": "37492be6-1dcb-4b9c-bf1a-503280fc3f5e",
+        "state": "completed",
+        "created_at": "2026-11-18T06:34:01.471797+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      }
+    ],
+    "expected": {
+      "written_before_attempt": "2026-11-18T06:33:30.537Z",
+      "period_start": 1802857313,
+      "period_end": 1805276513,
+      "provider_frozen_at": 1802860913,
+      "cents": 4893,
+      "quantity_before": 15,
+      "formula": "round-half-up(4900*(period_end-provider_clock)/(period_end-period_start))"
+    },
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "add-webkit-3",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.addstore.spec.ts"
+    ],
+    "add": true,
+    "sign": 3,
+    "start": "2026-11-18T06:35:17.256Z",
+    "end": "2026-11-18T06:35:50.852Z",
+    "exit": 1,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-add-webkit-3",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 0,
+    "failed": 1,
+    "not_run": 2,
+    "test_times": [
+      {
+        "id": "186cb30c0057c56c8132-345aec871069e94f2c6a",
+        "title": "owner adds a store: server quote, three consents, payment, activated; dashboard shows it",
+        "start": "2026-11-18T06:35:19.223Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "timedOut",
+        "duration_ms": 30592,
+        "end": "2026-11-18T06:35:50.263Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-5d35860377fb7eb64265",
+        "title": "owner schedules a period-end removal and undoes it; no charge either way",
+        "start": "2026-11-18T06:35:50.265Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "skipped",
+        "duration_ms": 0,
+        "end": "2026-11-18T06:35:50.266Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-3ea9e9200b2585bbe7a4",
+        "title": "narrow viewport (375): dashboard and Add Store form fit with no horizontal scroll",
+        "start": "2026-11-18T06:35:50.267Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "skipped",
+        "duration_ms": 0,
+        "end": "2026-11-18T06:35:50.267Z"
+      }
+    ],
+    "confirm_requests": [
+      {
+        "method": "POST",
+        "path": "/api/stores/add/confirm",
+        "started_at": "2026-11-18T06:35:33.862Z",
+        "duration_ms": 14671.991000000002,
+        "response_status": 200,
+        "failure": null,
+        "trace_private": true,
+        "request_body_or_credentials_exported": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "19a86b4e-b551-49c7-85be-9e7fe9f8bdff",
+        "state": "activated",
+        "created_at": "2026-11-18T06:35:34.266893+00:00",
+        "activated_at": "2026-11-18T06:35:48.23089+00:00",
+        "invoice_id": "in_1Ud2SxGnEQDyu3RR12KbzJLk",
+        "business_id": "92fb441b-0141-4a9e-805f-5b6ffe089e48",
+        "amount_cents": 4893
+      }
+    ],
+    "expected": {
+      "written_before_attempt": "2026-11-18T06:35:17.255Z",
+      "period_start": 1802857313,
+      "period_end": 1805276513,
+      "provider_frozen_at": 1802860913,
+      "cents": 4893,
+      "quantity_before": 16,
+      "formula": "round-half-up(4900*(period_end-provider_clock)/(period_end-period_start))"
+    },
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "add-webkit-4",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.addstore.spec.ts"
+    ],
+    "add": true,
+    "sign": 3,
+    "start": "2026-11-18T06:35:51.442Z",
+    "end": "2026-11-18T06:37:36.498Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-add-webkit-4",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "186cb30c0057c56c8132-345aec871069e94f2c6a",
+        "title": "owner adds a store: server quote, three consents, payment, activated; dashboard shows it",
+        "start": "2026-11-18T06:35:53.425Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 22104,
+        "end": "2026-11-18T06:36:15.885Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-5d35860377fb7eb64265",
+        "title": "owner schedules a period-end removal and undoes it; no charge either way",
+        "start": "2026-11-18T06:36:15.886Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 13623,
+        "end": "2026-11-18T06:36:29.701Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-3ea9e9200b2585bbe7a4",
+        "title": "narrow viewport (375): dashboard and Add Store form fit with no horizontal scroll",
+        "start": "2026-11-18T06:36:29.702Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 4960,
+        "end": "2026-11-18T06:36:34.859Z"
+      }
+    ],
+    "confirm_requests": [
+      {
+        "method": "POST",
+        "path": "/api/stores/add/confirm",
+        "started_at": "2026-11-18T06:35:59.939Z",
+        "duration_ms": 11968.627,
+        "response_status": 200,
+        "failure": null,
+        "trace_private": true,
+        "request_body_or_credentials_exported": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "4f1658c4-0e20-4241-be5a-ab31a0aac50c",
+        "state": "completed",
+        "created_at": "2026-11-18T06:36:21.715098+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      },
+      {
+        "id": "ef22ec95-d0bd-4776-8873-0ca2a3646f85",
+        "state": "completed",
+        "created_at": "2026-11-18T06:36:26.096627+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      },
+      {
+        "id": "29222951-afc9-4933-949f-b7b7cb3bba90",
+        "state": "activated",
+        "created_at": "2026-11-18T06:36:00.278981+00:00",
+        "activated_at": "2026-11-18T06:36:11.565975+00:00",
+        "invoice_id": "in_1Ud2TNGnEQDyu3RRq0dUIY7c",
+        "business_id": "131b9ad5-7f6a-44d0-821e-f4983f110330",
+        "amount_cents": 4893
+      }
+    ],
+    "expected": {
+      "written_before_attempt": "2026-11-18T06:35:51.441Z",
+      "period_start": 1802857313,
+      "period_end": 1805276513,
+      "provider_frozen_at": 1802860913,
+      "cents": 4893,
+      "quantity_before": 17,
+      "formula": "round-half-up(4900*(period_end-provider_clock)/(period_end-period_start))"
+    },
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "add-webkit-5",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.addstore.spec.ts"
+    ],
+    "add": true,
+    "sign": 3,
+    "start": "2026-11-18T06:37:39.304Z",
+    "end": "2026-11-18T06:39:23.536Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-add-webkit-5",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "186cb30c0057c56c8132-345aec871069e94f2c6a",
+        "title": "owner adds a store: server quote, three consents, payment, activated; dashboard shows it",
+        "start": "2026-11-18T06:37:41.137Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 22148,
+        "end": "2026-11-18T06:38:03.601Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-5d35860377fb7eb64265",
+        "title": "owner schedules a period-end removal and undoes it; no charge either way",
+        "start": "2026-11-18T06:38:03.602Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 11056,
+        "end": "2026-11-18T06:38:14.852Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-3ea9e9200b2585bbe7a4",
+        "title": "narrow viewport (375): dashboard and Add Store form fit with no horizontal scroll",
+        "start": "2026-11-18T06:38:14.853Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 6211,
+        "end": "2026-11-18T06:38:21.254Z"
+      }
+    ],
+    "confirm_requests": [
+      {
+        "method": "POST",
+        "path": "/api/stores/add/confirm",
+        "started_at": "2026-11-18T06:37:49.612Z",
+        "duration_ms": 9947.248,
+        "response_status": 200,
+        "failure": null,
+        "trace_private": true,
+        "request_body_or_credentials_exported": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "eb909d72-75a4-4eb6-b018-536d0578addb",
+        "state": "completed",
+        "created_at": "2026-11-18T06:38:07.359652+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      },
+      {
+        "id": "7fa5de1d-1119-4685-8586-520f50e3dba8",
+        "state": "activated",
+        "created_at": "2026-11-18T06:37:49.911134+00:00",
+        "activated_at": "2026-11-18T06:37:59.207297+00:00",
+        "invoice_id": "in_1Ud2V8GnEQDyu3RR6dO0le5g",
+        "business_id": "718bacd5-bb8b-4d0b-ae7d-18f7c74fd62e",
+        "amount_cents": 4893
+      },
+      {
+        "id": "59a42138-8ae5-44a8-a4df-a90ebfda4a15",
+        "state": "completed",
+        "created_at": "2026-11-18T06:38:11.224977+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      }
+    ],
+    "expected": {
+      "written_before_attempt": "2026-11-18T06:37:39.303Z",
+      "period_start": 1802857313,
+      "period_end": 1805276513,
+      "provider_frozen_at": 1802860913,
+      "cents": 4893,
+      "quantity_before": 18,
+      "formula": "round-half-up(4900*(period_end-provider_clock)/(period_end-period_start))"
+    },
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "add-chromium",
+    "project": "apbm007b",
+    "specs": [
+      "apbm007b.addstore.spec.ts"
+    ],
+    "add": true,
+    "sign": 3,
+    "start": "2026-11-18T06:39:24.322Z",
+    "end": "2026-11-18T06:41:01.333Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "--project=apbm007b",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-add-chromium",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "186cb30c0057c56c8132-62de8c2f1c1a2f63ca8e",
+        "title": "owner adds a store: server quote, three consents, payment, activated; dashboard shows it",
+        "start": "2026-11-18T06:39:26.201Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b",
+        "status": "passed",
+        "duration_ms": 17837,
+        "end": "2026-11-18T06:39:44.501Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-031e8c9dd84b57d5f9b3",
+        "title": "owner schedules a period-end removal and undoes it; no charge either way",
+        "start": "2026-11-18T06:39:44.502Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b",
+        "status": "passed",
+        "duration_ms": 10107,
+        "end": "2026-11-18T06:39:54.786Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-386da4c87b2f3235de6b",
+        "title": "narrow viewport (375): dashboard and Add Store form fit with no horizontal scroll",
+        "start": "2026-11-18T06:39:54.787Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b",
+        "status": "passed",
+        "duration_ms": 4507,
+        "end": "2026-11-18T06:39:59.458Z"
+      }
+    ],
+    "confirm_requests": [
+      {
+        "method": "POST",
+        "path": "/api/stores/add/confirm",
+        "started_at": "2026-11-18T06:39:31.836Z",
+        "duration_ms": 9435.199,
+        "response_status": 200,
+        "failure": null,
+        "trace_private": true,
+        "request_body_or_credentials_exported": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "4d457b98-2e82-474a-82fc-797ee50c13fa",
+        "state": "activated",
+        "created_at": "2026-11-18T06:39:32.145094+00:00",
+        "activated_at": "2026-11-18T06:39:40.942638+00:00",
+        "invoice_id": "in_1Ud2WmGnEQDyu3RRbd1AvW35",
+        "business_id": "e68ee8f5-32ff-4fe0-8348-5a51e744e3c1",
+        "amount_cents": 4893
+      },
+      {
+        "id": "4cd3e7a3-4729-4253-b924-b4e7f2995926",
+        "state": "completed",
+        "created_at": "2026-11-18T06:39:47.390138+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      },
+      {
+        "id": "d7b9f044-8fba-40a7-b1d1-c8fc1d47925d",
+        "state": "completed",
+        "created_at": "2026-11-18T06:39:51.293289+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      }
+    ],
+    "expected": {
+      "written_before_attempt": "2026-11-18T06:39:24.321Z",
+      "period_start": 1802857313,
+      "period_end": 1805276513,
+      "provider_frozen_at": 1802860913,
+      "cents": 4893,
+      "quantity_before": 19,
+      "formula": "round-half-up(4900*(period_end-provider_clock)/(period_end-period_start))"
+    },
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "add-firefox",
+    "project": "apbm007b-firefox",
+    "specs": [
+      "apbm007b.addstore.spec.ts"
+    ],
+    "add": true,
+    "sign": 3,
+    "start": "2026-11-18T06:41:04.162Z",
+    "end": "2026-11-18T06:43:05.039Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "--project=apbm007b-firefox",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-add-firefox",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "186cb30c0057c56c8132-fc207f365df5fb0dea76",
+        "title": "owner adds a store: server quote, three consents, payment, activated; dashboard shows it",
+        "start": "2026-11-18T06:41:06.031Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-firefox",
+        "status": "passed",
+        "duration_ms": 23023,
+        "end": "2026-11-18T06:41:29.902Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-b47399eb3320cd78ca8c",
+        "title": "owner schedules a period-end removal and undoes it; no charge either way",
+        "start": "2026-11-18T06:41:29.903Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-firefox",
+        "status": "passed",
+        "duration_ms": 18438,
+        "end": "2026-11-18T06:41:48.755Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-df0bf03e06f27522cab0",
+        "title": "narrow viewport (375): dashboard and Add Store form fit with no horizontal scroll",
+        "start": "2026-11-18T06:41:48.755Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-firefox",
+        "status": "passed",
+        "duration_ms": 9725,
+        "end": "2026-11-18T06:41:58.650Z"
+      }
+    ],
+    "confirm_requests": [
+      {
+        "method": "POST",
+        "path": "/api/stores/add/confirm",
+        "started_at": "2026-11-18T06:41:17.098Z",
+        "duration_ms": 9773.182999999999,
+        "response_status": 200,
+        "failure": null,
+        "trace_private": true,
+        "request_body_or_credentials_exported": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "2749878b-d50c-420f-a23d-3b7b85c9b7cb",
+        "state": "activated",
+        "created_at": "2026-11-18T06:41:17.424176+00:00",
+        "activated_at": "2026-11-18T06:41:26.571903+00:00",
+        "invoice_id": "in_1Ud2YUGnEQDyu3RRsNOqRU0I",
+        "business_id": "1dfe440a-f495-4805-b147-576b80cd13d4",
+        "amount_cents": 4893
+      },
+      {
+        "id": "1104b799-6467-482a-96b3-8ebf9a056ab3",
+        "state": "completed",
+        "created_at": "2026-11-18T06:41:36.424506+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      },
+      {
+        "id": "3c23bbb5-61b8-488a-b008-59dcc95dad6b",
+        "state": "completed",
+        "created_at": "2026-11-18T06:41:42.275765+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      }
+    ],
+    "expected": {
+      "written_before_attempt": "2026-11-18T06:41:04.159Z",
+      "period_start": 1802857313,
+      "period_end": 1805276513,
+      "provider_frozen_at": 1802860913,
+      "cents": 4893,
+      "quantity_before": 20,
+      "formula": "round-half-up(4900*(period_end-provider_clock)/(period_end-period_start))"
+    },
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "o1-alone-webkit-1",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.o1-state.spec.ts"
+    ],
+    "sign": 2,
+    "start": "2026-11-18T06:43:05.041Z",
+    "end": "2026-11-18T06:43:18.899Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.o1-state.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-o1-alone-webkit-1",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "6712998919789bd23211-e3fc07f7928600fd419e",
+        "title": "Portal dashboard shows the active state with the owner's billing action",
+        "start": "2026-11-18T06:43:07.155Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 3287,
+        "end": "2026-11-18T06:43:10.692Z"
+      },
+      {
+        "id": "6712998919789bd23211-22a82ed71f7bf518b539",
+        "title": "OwedBook shows the active banner",
+        "start": "2026-11-18T06:43:10.693Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 7847,
+        "end": "2026-11-18T06:43:18.726Z"
+      }
+    ],
+    "confirm_requests": [],
+    "operations": [],
+    "expected": null,
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "o1-alone-webkit-2",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.o1-state.spec.ts"
+    ],
+    "sign": 2,
+    "start": "2026-11-18T06:43:18.901Z",
+    "end": "2026-11-18T06:43:30.777Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.o1-state.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-o1-alone-webkit-2",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "6712998919789bd23211-e3fc07f7928600fd419e",
+        "title": "Portal dashboard shows the active state with the owner's billing action",
+        "start": "2026-11-18T06:43:20.783Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 3313,
+        "end": "2026-11-18T06:43:24.357Z"
+      },
+      {
+        "id": "6712998919789bd23211-22a82ed71f7bf518b539",
+        "title": "OwedBook shows the active banner",
+        "start": "2026-11-18T06:43:24.358Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 6048,
+        "end": "2026-11-18T06:43:30.604Z"
+      }
+    ],
+    "confirm_requests": [],
+    "operations": [],
+    "expected": null,
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "o1-alone-webkit-3",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.o1-state.spec.ts"
+    ],
+    "sign": 2,
+    "start": "2026-11-18T06:43:30.779Z",
+    "end": "2026-11-18T06:43:43.370Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.o1-state.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-o1-alone-webkit-3",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "6712998919789bd23211-e3fc07f7928600fd419e",
+        "title": "Portal dashboard shows the active state with the owner's billing action",
+        "start": "2026-11-18T06:43:32.720Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 4356,
+        "end": "2026-11-18T06:43:37.362Z"
+      },
+      {
+        "id": "6712998919789bd23211-22a82ed71f7bf518b539",
+        "title": "OwedBook shows the active banner",
+        "start": "2026-11-18T06:43:37.362Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 5622,
+        "end": "2026-11-18T06:43:43.147Z"
+      }
+    ],
+    "confirm_requests": [],
+    "operations": [],
+    "expected": null,
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "o1-alone-webkit-4",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.o1-state.spec.ts"
+    ],
+    "sign": 2,
+    "start": "2026-11-18T06:43:43.374Z",
+    "end": "2026-11-18T06:43:59.166Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.o1-state.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-o1-alone-webkit-4",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "6712998919789bd23211-e3fc07f7928600fd419e",
+        "title": "Portal dashboard shows the active state with the owner's billing action",
+        "start": "2026-11-18T06:43:45.350Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 5327,
+        "end": "2026-11-18T06:43:50.921Z"
+      },
+      {
+        "id": "6712998919789bd23211-22a82ed71f7bf518b539",
+        "title": "OwedBook shows the active banner",
+        "start": "2026-11-18T06:43:50.921Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 7821,
+        "end": "2026-11-18T06:43:58.937Z"
+      }
+    ],
+    "confirm_requests": [],
+    "operations": [],
+    "expected": null,
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "o1-alone-webkit-5",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.o1-state.spec.ts"
+    ],
+    "sign": 2,
+    "start": "2026-11-18T06:43:59.167Z",
+    "end": "2026-11-18T06:44:11.862Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.o1-state.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-o1-alone-webkit-5",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 2,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "6712998919789bd23211-e3fc07f7928600fd419e",
+        "title": "Portal dashboard shows the active state with the owner's billing action",
+        "start": "2026-11-18T06:44:01.163Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 4152,
+        "end": "2026-11-18T06:44:05.552Z"
+      },
+      {
+        "id": "6712998919789bd23211-22a82ed71f7bf518b539",
+        "title": "OwedBook shows the active banner",
+        "start": "2026-11-18T06:44:05.553Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 5987,
+        "end": "2026-11-18T06:44:11.670Z"
+      }
+    ],
+    "confirm_requests": [],
+    "operations": [],
+    "expected": null,
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "full-order-webkit-1",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.addstore.spec.ts",
+      "apbm007b.o1-state.spec.ts",
+      "apbm007b.regression.spec.ts"
+    ],
+    "add": true,
+    "sign": 8,
+    "start": "2026-11-18T06:44:12.611Z",
+    "end": "2026-11-18T06:46:24.424Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "e2e/apbm007b.o1-state.spec.ts",
+      "e2e/apbm007b.regression.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-full-order-webkit-1",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 8,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "186cb30c0057c56c8132-345aec871069e94f2c6a",
+        "title": "owner adds a store: server quote, three consents, payment, activated; dashboard shows it",
+        "start": "2026-11-18T06:44:14.710Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 22186,
+        "end": "2026-11-18T06:44:37.332Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-5d35860377fb7eb64265",
+        "title": "owner schedules a period-end removal and undoes it; no charge either way",
+        "start": "2026-11-18T06:44:37.333Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 12076,
+        "end": "2026-11-18T06:44:49.626Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-3ea9e9200b2585bbe7a4",
+        "title": "narrow viewport (375): dashboard and Add Store form fit with no horizontal scroll",
+        "start": "2026-11-18T06:44:49.627Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 4875,
+        "end": "2026-11-18T06:44:54.696Z"
+      },
+      {
+        "id": "6712998919789bd23211-e3fc07f7928600fd419e",
+        "title": "Portal dashboard shows the active state with the owner's billing action",
+        "start": "2026-11-18T06:44:54.703Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 2204,
+        "end": "2026-11-18T06:44:57.020Z"
+      },
+      {
+        "id": "6712998919789bd23211-22a82ed71f7bf518b539",
+        "title": "OwedBook shows the active banner",
+        "start": "2026-11-18T06:44:57.020Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 5577,
+        "end": "2026-11-18T06:45:02.736Z"
+      },
+      {
+        "id": "a1fda633b99ccfd6b900-f2bd7bdc8ac046ca3568",
+        "title": "dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action",
+        "start": "2026-11-18T06:45:02.741Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 5389,
+        "end": "2026-11-18T06:45:08.262Z"
+      },
+      {
+        "id": "a1fda633b99ccfd6b900-9f172c5a436ed4166e35",
+        "title": "handoff Portal → OwedBook keeps the same user; OwedBook → Portal billing returns",
+        "start": "2026-11-18T06:45:08.263Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 7333,
+        "end": "2026-11-18T06:45:15.788Z"
+      },
+      {
+        "id": "a1fda633b99ccfd6b900-d5b7e70b4fe39e6f012d",
+        "title": "Add Store quote screen: keyboard-only, dark theme, server quote shown, confirm disabled until all three consents",
+        "start": "2026-11-18T06:45:15.788Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 4328,
+        "end": "2026-11-18T06:45:20.271Z"
+      }
+    ],
+    "confirm_requests": [
+      {
+        "method": "POST",
+        "path": "/api/stores/add/confirm",
+        "started_at": "2026-11-18T06:44:23.324Z",
+        "duration_ms": 10836.643,
+        "response_status": 200,
+        "failure": null,
+        "trace_private": true,
+        "request_body_or_credentials_exported": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "1c32868a-3202-4050-9033-1fc010083a67",
+        "state": "completed",
+        "created_at": "2026-11-18T06:44:46.027562+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      },
+      {
+        "id": "916f507e-1fb2-4b4c-a7e2-47d5e3d6e3f5",
+        "state": "activated",
+        "created_at": "2026-11-18T06:44:24.201334+00:00",
+        "activated_at": "2026-11-18T06:44:33.806027+00:00",
+        "invoice_id": "in_1Ud2bVGnEQDyu3RRl6eEXnnZ",
+        "business_id": "a9e3c9d3-5f43-4b50-b36a-aed09214bbef",
+        "amount_cents": 4893
+      },
+      {
+        "id": "3eb87b56-338a-4248-a1f9-060047bf8f1e",
+        "state": "completed",
+        "created_at": "2026-11-18T06:44:41.164469+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      }
+    ],
+    "expected": {
+      "written_before_attempt": "2026-11-18T06:44:12.611Z",
+      "period_start": 1802857313,
+      "period_end": 1805276513,
+      "provider_frozen_at": 1802860913,
+      "cents": 4893,
+      "quantity_before": 21,
+      "formula": "round-half-up(4900*(period_end-provider_clock)/(period_end-period_start))"
+    },
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  },
+  {
+    "label": "full-order-webkit-2",
+    "project": "apbm007b-webkit",
+    "specs": [
+      "apbm007b.addstore.spec.ts",
+      "apbm007b.o1-state.spec.ts",
+      "apbm007b.regression.spec.ts"
+    ],
+    "add": true,
+    "sign": 8,
+    "start": "2026-11-18T06:46:25.222Z",
+    "end": "2026-11-18T06:48:40.124Z",
+    "exit": 0,
+    "command": [
+      "npx",
+      "--no-install",
+      "playwright",
+      "test",
+      "e2e/apbm007b.addstore.spec.ts",
+      "e2e/apbm007b.o1-state.spec.ts",
+      "e2e/apbm007b.regression.spec.ts",
+      "--project=apbm007b-webkit",
+      "--trace=on",
+      "--output=/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af/q402-browser-full-order-webkit-2",
+      "--reporter=line,/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/timing-reporter.cjs"
+    ],
+    "passed": 8,
+    "failed": 0,
+    "not_run": 0,
+    "test_times": [
+      {
+        "id": "186cb30c0057c56c8132-345aec871069e94f2c6a",
+        "title": "owner adds a store: server quote, three consents, payment, activated; dashboard shows it",
+        "start": "2026-11-18T06:46:27.142Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 22577,
+        "end": "2026-11-18T06:46:50.065Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-5d35860377fb7eb64265",
+        "title": "owner schedules a period-end removal and undoes it; no charge either way",
+        "start": "2026-11-18T06:46:50.065Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 11726,
+        "end": "2026-11-18T06:47:01.930Z"
+      },
+      {
+        "id": "186cb30c0057c56c8132-3ea9e9200b2585bbe7a4",
+        "title": "narrow viewport (375): dashboard and Add Store form fit with no horizontal scroll",
+        "start": "2026-11-18T06:47:01.931Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 4813,
+        "end": "2026-11-18T06:47:06.903Z"
+      },
+      {
+        "id": "6712998919789bd23211-e3fc07f7928600fd419e",
+        "title": "Portal dashboard shows the active state with the owner's billing action",
+        "start": "2026-11-18T06:47:06.908Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 2100,
+        "end": "2026-11-18T06:47:09.124Z"
+      },
+      {
+        "id": "6712998919789bd23211-22a82ed71f7bf518b539",
+        "title": "OwedBook shows the active banner",
+        "start": "2026-11-18T06:47:09.124Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 7760,
+        "end": "2026-11-18T06:47:17.071Z"
+      },
+      {
+        "id": "a1fda633b99ccfd6b900-f2bd7bdc8ac046ca3568",
+        "title": "dashboard and billing still show plan, status, count and pharmacies; billing has one Manage billing action",
+        "start": "2026-11-18T06:47:17.077Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 9516,
+        "end": "2026-11-18T06:47:26.745Z"
+      },
+      {
+        "id": "a1fda633b99ccfd6b900-9f172c5a436ed4166e35",
+        "title": "handoff Portal → OwedBook keeps the same user; OwedBook → Portal billing returns",
+        "start": "2026-11-18T06:47:26.747Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 7861,
+        "end": "2026-11-18T06:47:34.798Z"
+      },
+      {
+        "id": "a1fda633b99ccfd6b900-d5b7e70b4fe39e6f012d",
+        "title": "Add Store quote screen: keyboard-only, dark theme, server quote shown, confirm disabled until all three consents",
+        "start": "2026-11-18T06:47:34.799Z",
+        "timeout_ms": 30000,
+        "project": "apbm007b-webkit",
+        "status": "passed",
+        "duration_ms": 3125,
+        "end": "2026-11-18T06:47:38.031Z"
+      }
+    ],
+    "confirm_requests": [
+      {
+        "method": "POST",
+        "path": "/api/stores/add/confirm",
+        "started_at": "2026-11-18T06:46:36.120Z",
+        "duration_ms": 10693.991,
+        "response_status": 200,
+        "failure": null,
+        "trace_private": true,
+        "request_body_or_credentials_exported": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "8eb789a7-4023-45e4-b976-463d871e24c3",
+        "state": "activated",
+        "created_at": "2026-11-18T06:46:36.825839+00:00",
+        "activated_at": "2026-11-18T06:46:46.506199+00:00",
+        "invoice_id": "in_1Ud2ddGnEQDyu3RRuKCdqp9V",
+        "business_id": "cd914d56-50c1-4d72-ba6a-31d885854fd4",
+        "amount_cents": 4893
+      },
+      {
+        "id": "c33689ce-10cf-4af8-a990-5472c68697e1",
+        "state": "completed",
+        "created_at": "2026-11-18T06:46:53.564917+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      },
+      {
+        "id": "14639d6f-5242-48c2-a75f-22f59c27b840",
+        "state": "completed",
+        "created_at": "2026-11-18T06:46:57.429842+00:00",
+        "activated_at": null,
+        "invoice_id": null,
+        "business_id": "5ddfdd74-9bd1-440f-9ecb-145cabccc41b",
+        "amount_cents": null
+      }
+    ],
+    "expected": {
+      "written_before_attempt": "2026-11-18T06:46:25.221Z",
+      "period_start": 1802857313,
+      "period_end": 1805276513,
+      "provider_frozen_at": 1802860913,
+      "cents": 4893,
+      "quantity_before": 22,
+      "formula": "round-half-up(4900*(period_end-provider_clock)/(period_end-period_start))"
+    },
+    "unchanged_specs": true,
+    "unchanged_timeouts": true,
+    "retries": 0,
+    "instrument_qualification": "QA reporter and private Playwright HAR trace enabled to time confirm; traces/credentials never exported; trace overhead disclosed. Runs sequential, no concurrent QA sign-out/revocation."
+  }
+]

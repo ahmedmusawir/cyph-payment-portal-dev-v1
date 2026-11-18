@@ -1,0 +1,1094 @@
+{
+  "at": "2026-11-18T06:41:50.726141+00:00",
+  "from_pair": {
+    "pp": "00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d",
+    "ob": "1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d"
+  },
+  "to_pair": {
+    "pp": "ba66534351368b4b67b9e61d6f0278866950c850",
+    "ob": "855e0ad2e22a37e633ab5a55b8459e9bcc6bd871"
+  },
+  "Q4_01_package_sha256": "ec99c079406250551abd02f1d5e4403f6f101a3bbc24c0cdd9b8b52a029400a5",
+  "groups": [
+    {
+      "group": "payment_deadline_activation_money_crash",
+      "reason": "Source-identical implementation and schema; Q4/01 independent evidence remains tied to its original pair. Current ownership counts/sessions may evolve under Q4/02 effects; no claim fixture data is frozen. New form/reproduction/sign-in/last-transfer results are fresh and separate.",
+      "source_proofs": [
+        {
+          "app": "pp",
+          "path": "src/server/storeOperations.ts",
+          "unchanged": true,
+          "sha256": "91a1099cb01d3fe10a8acccf0eb7acc064b0f71b04c1af68e5a0e3b2c79f3555"
+        },
+        {
+          "app": "pp",
+          "path": "src/server/webhook.ts",
+          "unchanged": true,
+          "sha256": "43dd8817edecdc62b41e4f32f1836a057de126ccb371b67a6dd63f317f5b1ef3"
+        },
+        {
+          "app": "pp",
+          "path": "src/server/billing.ts",
+          "unchanged": true,
+          "sha256": "5f14701906d1879ca9fcb620f9134ae345c3cfbfe7bf7ad16955177c393192d3"
+        },
+        {
+          "app": "ob",
+          "path": "supabase/migrations/0070_007b_consent_deadline_paid_time.sql",
+          "unchanged": true,
+          "sha256": "de0b51c61c4ef255934fc20b6c7abdc5d4b69e1129bbce4a8a15111905edce81"
+        }
+      ]
+    },
+    {
+      "group": "invitations_membership_role_history_transfer",
+      "reason": "Source-identical implementation and schema; Q4/01 independent evidence remains tied to its original pair. Current ownership counts/sessions may evolve under Q4/02 effects; no claim fixture data is frozen. New form/reproduction/sign-in/last-transfer results are fresh and separate.",
+      "source_proofs": [
+        {
+          "app": "pp",
+          "path": "src/server/operator007b.ts",
+          "unchanged": true,
+          "sha256": "065eeaf3ad2bdaa7adc14d1a4564eb0d8186d72f9a97584f0d80bf6cd17e231a"
+        },
+        {
+          "app": "ob",
+          "path": "src/components/admin-portal/LiveStaffPanel.tsx",
+          "unchanged": true,
+          "sha256": "74d16fbd5a52bba3c3c3cb2d2437facfbbb0d1d2e4fc07a01d50dda0a8311abd"
+        },
+        {
+          "app": "ob",
+          "path": "supabase/migrations/0064_007b_invitations.sql",
+          "unchanged": true,
+          "sha256": "b104a17f0dc97020b7cfa6ec93cd3d2e94fdb1b4fb419d38fe3fd6c8920d2b11"
+        },
+        {
+          "app": "ob",
+          "path": "supabase/migrations/0066_007b_operator_audit.sql",
+          "unchanged": true,
+          "sha256": "3c9bae80614af88ffa205e6401548c6dbb9db5e183876c2155141c8b3b11c85c"
+        },
+        {
+          "app": "ob",
+          "path": "supabase/migrations/0067_007b_reads_privileges.sql",
+          "unchanged": true,
+          "sha256": "9668bb9d73fc4323c55242e36aef94574788d20ada990dadc2c4ae10b8e90bde"
+        },
+        {
+          "app": "ob",
+          "path": "supabase/migrations/0069_007b_reactivation_transfer_registration.sql",
+          "unchanged": true,
+          "sha256": "c173249ad7706392f26da57ab32011b641e7dee9ebdf39ad613e9137d74668ad"
+        }
+      ]
+    },
+    {
+      "group": "notices_grace_readonly",
+      "reason": "Source-identical implementation and schema; Q4/01 independent evidence remains tied to its original pair. Current ownership counts/sessions may evolve under Q4/02 effects; no claim fixture data is frozen. New form/reproduction/sign-in/last-transfer results are fresh and separate.",
+      "source_proofs": [
+        {
+          "app": "pp",
+          "path": "src/server/billingNotices.ts",
+          "unchanged": true,
+          "sha256": "1c94e43fd529bb036ca46d7a0f1f3f5f21316f1c041a40b7ecf050b23ec66249"
+        },
+        {
+          "app": "ob",
+          "path": "supabase/migrations/0065_007b_notices.sql",
+          "unchanged": true,
+          "sha256": "9eca9725a36bdadd064201ac3bbe774edffecc6c574a6194858d3699d8e9b55d"
+        }
+      ]
+    },
+    {
+      "group": "unchanged_auth_server_and_support",
+      "reason": "Source-identical implementation and schema; Q4/01 independent evidence remains tied to its original pair. Current ownership counts/sessions may evolve under Q4/02 effects; no claim fixture data is frozen. New form/reproduction/sign-in/last-transfer results are fresh and separate.",
+      "source_proofs": [
+        {
+          "app": "pp",
+          "path": "src/server/emailLink.ts",
+          "unchanged": true,
+          "sha256": "4bf39128610ebc5221ee59692531300b57d49afdf93d65c8965dceaacbf28419"
+        },
+        {
+          "app": "pp",
+          "path": "src/server/handoff.ts",
+          "unchanged": true,
+          "sha256": "72afdfd7f42bccf8a46d299170af931b62a921d07683bab7d7cd265c014f5aaa"
+        },
+        {
+          "app": "pp",
+          "path": "src/server/afterSignIn.ts",
+          "unchanged": true,
+          "sha256": "2fedabe2d67e80efed62dc3f541e83e14c40704a008f7a497f895671b632155e"
+        },
+        {
+          "app": "pp",
+          "path": "agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/SUPPORT_PROCEDURES.md",
+          "unchanged": true,
+          "sha256": "8821ad80ce070046af4555f63e0e1a4d740d953e3e99735b9b7987524c502004"
+        },
+        {
+          "app": "ob",
+          "path": "src/server/emailLink.ts",
+          "unchanged": true,
+          "sha256": "4523c9cbfb39d863ad0e40708f8ab94d0bfccaae587a4e8809b17065d5e3f5c7"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "path": "evidence/Q4/01/live_campaign.json",
+      "sha256": "f538272af88bcf9827bbd09d87f1c92e759b5b6483edecd1456e5ae6061cd2b0",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/action_role_matrix.json",
+      "sha256": "e46a9359ed6d0b7bd6e24dd1a1d389b6f39e1a15bc667cded9572aabfdcf3918",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/operator_legacy_wording_observation.json",
+      "sha256": "74a69cae3f9b98a220a505bf9568fa4dbeeddf0ecf711c2ea32efe7f0674fa7c",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/remaining_plan_after_privacy_release.json",
+      "sha256": "653b22afe6d231c32ab24156a1c24ae94491a03d1ac2ca61d629cb6c2fb9bd2a",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/screens_gallery_q4.json",
+      "sha256": "c5db1cc4d1fa4defda76598994f7025a237d716fa53b7eacca929b0094e492bb",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/deadline_timing_qualifications.json",
+      "sha256": "e8c672aa3d3473974dcd38f239a4442a794ee0aa52eb648f8207ca19860a9fdb",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser_extra_expected_apbm007b-firefox.json",
+      "sha256": "157e61b52a95ca5a42e052ece8edac8c9988807f3dbe3fad53e7274d391962cb",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/privacy_stop_2026-11-18.json",
+      "sha256": "b084ac58f9b87c894f63cfb4b580c77230fb4466e6a679c82782319d49440966",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/final_process_baseline.json",
+      "sha256": "592847a21272b33479c73c5b0daecda9f644912af7e280d78d22bfc8c2f525b6",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/action_role_matrix_fresh.json",
+      "sha256": "70ad93f963cada28b6f3806e9dd60ba9dac868dda277861d35eda41131fb772d",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/finding_retests_final.json",
+      "sha256": "e982fcfe6663c6d2a2a6099e3c7dfa741be9d9198898a95bfea21e1962b6cd12",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/fixture_inventory_final.json",
+      "sha256": "b58b8de046923a423504a042ee12a00cb9d64b4ea94cb86adc03b0d939c79cb0",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser_extra_results.json",
+      "sha256": "7d2917e7b93fe338f5cc0a165dba71e4612c31c71be8b0381539d6e20dbba670",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/deadline_independent_final_audit.json",
+      "sha256": "e26f9ef636d7037557aa69c32537875c306d13e276a122f6e216c911346c8167",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/candidate_identity_final.json",
+      "sha256": "781233e1fbd3f114e88325f53ba5829b8dee94488c60b0f8c857d5c1b3b1169c",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/final_pre_payment_runtime.json",
+      "sha256": "b640dca71029f5ee04992ca8bdf59abad67064534ebe7d8315a4618999424795",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/privacy_modes_verified.json",
+      "sha256": "04064b0d9f103853e3ba7cdac1ffb9c2e62c1b1d3fe6a25d374da952ef75fec2",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/privacy_recovery.json",
+      "sha256": "9be744de0eff94d71d573766551adc6a28162ad8ac078a620fb0ef1db869c239",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/hydration_forms.json",
+      "sha256": "8f7989a8541f4c7547b40cec2128c0c83666221330b46f3a70fd8d5020637c8f",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/remaining_plan_forecast_02.json",
+      "sha256": "79d88985de1c28d2b689ec300ed829330f5c3cb6ed24bb68012b8efd0df813c9",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/fixture_inventory.json",
+      "sha256": "c92cab64d0d3890b33329835b04532118587da7e8eb3df64d5d83ff56540aaea",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/real_wait_progress.jsonl",
+      "sha256": "767a90a55c8e38c8d21168ea0f908e7c34b3c93ee4c98e04d4ad8e3f03d518ab",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/instrument_qualifications.json",
+      "sha256": "962d1cc8f80a3e5e43622583f887800441046c8a4c389afcd6a3ef6664914276",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser_extra_expected_apbm007b.json",
+      "sha256": "22146892346fdbd0c04cd307d83dc45142ee78a37b7acd26330f9c0f78f79daf",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/direct_jwt_boundaries_final.json",
+      "sha256": "dbdf0bb53bbabdc654cdc48e85c44db4829565ffdad46d810be15dc6a2b3b36b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/final_real_redelivery.json",
+      "sha256": "e715cd7d39284124611ee584f17f3780ce95634356deee8a53963c8c2c3ca812",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/privacy_stop_process_exit.json",
+      "sha256": "060a79d36f1e30f9b5fe59d745ce96f2fbfb471141f42dae49a7977b750bf056",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/privacy_snapshot_control.json",
+      "sha256": "e4f29db7a5a8f3e1aa72c377a5bfb10a7e738ab45e3b246bcb44c60ffa913263",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/fixture_inventory_stop04.json",
+      "sha256": "91c0ecd4e575b3c920fadaff24b63a0dd3d6907873736892444f92bae07d32c0",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/hydration_forms_extended.json",
+      "sha256": "3bca6c88d3b6bdc58ef6bfbcd27905293ad56ec1cda1746b027036a64606d384",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/prior_export_password_gate.json",
+      "sha256": "d4e3639aca2f9e245cdd6bc33161c3c139f203ef8a0a6786079b91ccc2fe7c6d",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/direct_jwt_boundaries_q4.json",
+      "sha256": "f968ed1394ba24cd5222d78e092a55f32a3d01f21e04e99579cef0c321643d2a",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser_extra_expected_apbm007b-webkit.json",
+      "sha256": "4549ba6002b4b74ff819748191b834ac7b6e5776a2886d973b4d73ff884d78ab",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/support_runbook_dry_runs.json",
+      "sha256": "0d39be41bb64992fa211f82980a0a6c187241f93893d55ff2c8825d9ea8f1027",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/phase_exit_final.json",
+      "sha256": "aa5a003f5158cc7ba080047c7ddd0d628f14d2563317e30abd8b05df69e959de",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runtime_after_privacy_resume.json",
+      "sha256": "066b1f064d89eb4b867147c0a619c2075cba1fb7e3d65f29e48881c67751840b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser_final_serial_skips.json",
+      "sha256": "84a9d70ddceb74572281bca3c68ae4e3169bd3d661fd84c8ac4e3a5ac2a9e945",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/partial_acceptance_mapping_stop04.json",
+      "sha256": "3dfa97a109da4254a1795291dfaabfc3504ecb648c45e88659e0b43f3e6b037d",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/acceptance_mapping_final.json",
+      "sha256": "bfc901d44c29ba5ead25aced57e1e3e963670b30630a9d6317b8e45b7aba35dd",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/carry_forward_provenance.json",
+      "sha256": "d81a9c0b88feafe8e9158f36aec051fae8e936575148b09c8f652f7459b97ff9",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/client_bundle_scan.json",
+      "sha256": "733d7ded443ee062c4e4b8da26935abef107b4f017b4398576165723e184423f",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/ob_unit.txt",
+      "sha256": "43aff05e03483dba28412d8f236acbc5a64952a1fa33a8388d64c8b01b007d66",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/ob_lint_receipt.json",
+      "sha256": "677619b80a64889f25162e2da3277d61f8e762cba4522c94c8c611e9c7269372",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/actual_private_values_bundle_scan.json",
+      "sha256": "02ccb67fab0e5ddd6e15ef546632b69cf8b59631b4302921cd7e252d691df766",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/sql_upgraded.txt",
+      "sha256": "9659396a2101f351481b342eab74255ec7fbffe4207e6158dc19fef399da2ba2",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/manifest_ob.json",
+      "sha256": "68c9d4527b64c97732ed282e5fbf9bda06a674c391356c7f9f0e42cb603aaad4",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/ob_lint.txt",
+      "sha256": "6869384e3b5b84fb01a5b363f7d498a027e2fa5ad52f6b431365d2843a9b6e15",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/baseline69.txt",
+      "sha256": "e6a91d9cdb7cea3d97deac8cc1d2dd2a9d98e22e0da134098ff0999514a9168a",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/pp_unit_receipt.json",
+      "sha256": "47eee32fe59a648e602fcc446afadce97db30f82d87b4af62c6685110b357b86",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/upgrade70.txt",
+      "sha256": "d6fb4c037c9fe8f50da71fc8cc26dc6d13362af57322814dc0135df80c9a4b8f",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/actual_private_values_bundle_scan_final.json",
+      "sha256": "3902d40578160c2ebfc96bc2126f189c03fd76b8d3de56a00fa5789c307a9238",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/pp_lint.txt",
+      "sha256": "33d13ea24640d8b079f191a3dda51a99ab70ad47a873ff8af5449e9a397b427f",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/pp_typecheck.txt",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/fresh.txt",
+      "sha256": "512504a67defd83d5971aa11f62817c53cd464fa3a5f095b569b28509596e54b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/fresh02.txt",
+      "sha256": "d18df14468647a755a5b9b9539caead20729fad6cfadc4db2d5c68851911715a",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/sql_fresh.txt",
+      "sha256": "9659396a2101f351481b342eab74255ec7fbffe4207e6158dc19fef399da2ba2",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/pp_typecheck_receipt.json",
+      "sha256": "a57da86feaa54bf488825b811dd7de6000683c235cec7d42597b8bbf6f483ce3",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/pp_lint_receipt.json",
+      "sha256": "32579b3a61124c5091fac5b98b8b52c6dab78db3ae3808dd5547f973c4dde37a",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/pp_unit.txt",
+      "sha256": "cdc9f4a03c1364f863b079c8669f548aab126b14d521240949fd17b3348ad7d9",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/manifest_pp.json",
+      "sha256": "8cc0f0a265868db7cfc8ac22fa5e42fa215240047175c77e8970e94ae86e0066",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/ob_typecheck_receipt.json",
+      "sha256": "77b783f00d60e2229cf6422c0bcefbf329c56453bc26953849e912338808a3a9",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/ob_unit_receipt.json",
+      "sha256": "a69f4b27f4c3144be092bd6c12c8c9adbb39e7ef5312264e022a3d89074768cd",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/local/ob_typecheck.txt",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/pp-all-engines.txt",
+      "sha256": "a2d5ad30447ad7de8bb5b6ee7f23c88e21570b50dd519b4bf49420cf442ffd88",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/ob-webkit-1.txt",
+      "sha256": "09da29251a727eaaf52cbc16ae9aba57c960aabc887554ed9233d765df49450b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/extra-apbm007b.txt",
+      "sha256": "1f83675d68a95a4e047de2b18a97a8d160d1e95191a2d8cabdcc98cd077072c7",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/ob-webkit-2.txt",
+      "sha256": "0342657ddbc08c6f88b6bb35aa5fd6ec189b47ad54754dcfe1eff6b620bc882e",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/ob-webkit-3.txt",
+      "sha256": "87899221b12188593f82a467c7b19a5f403527b426867db6f00edc7482e24358",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/ob-all-engines.txt",
+      "sha256": "f500c91b832e6dbdb2ff4067c5c60998249a83af977895250f984972232e9902",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/ob-webkit-5.txt",
+      "sha256": "f444920171b9e5891c757f7c37f21b7c0a0270be8b08b908abbde19f9b33ff08",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/ob_results.json",
+      "sha256": "7a3990b4068055347a0766d833fbe85c2e18ba7782eb3fd69aa6c9eafe0ab2f1",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/ob-webkit-4.txt",
+      "sha256": "314e0df27c51af4ac9a87c78240eefc4eda61f0f5acf5b82c41a900116f4e36d",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/final-webkit-narrow-viewport.txt",
+      "sha256": "edd13ee62a1919f6e9937b4a8626e972632981cfc53e4004a0f6720d939405fe",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/extra-apbm007b-firefox.txt",
+      "sha256": "81353983a5fcded99e026d93f7d281d2c3fd9edbd81ae081cd55a76362d49bb4",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/final-webkit-removal-undo.txt",
+      "sha256": "0d39d10e1ac5ab7d998fe956d47413a0b5e79db69e9fdb16ef9c96735c11e1eb",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/extra-apbm007b-webkit.txt",
+      "sha256": "c37c54e345f318fe1f6d3683274c2a5cc23c3992abc72479190e8373f1fbc993",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/browser/pp_results.json",
+      "sha256": "45dcc8dd4876eaa80220747008835b8029e0b8f460c886d6a917530ee5956a90",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/screens/OWNER_A-pp-_dashboard-1440-light.png",
+      "sha256": "bab8b513ddb3c02c1a262948fce52554f746f17345ec758fd584b73564d28c54",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/screens/OWNER_A-pp-_dashboard-375-dark.png",
+      "sha256": "dd96ba7971776825b52e8cdd087fab03606d8672ab883801f4aa9ecc0067f91b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/screens/OWNER_A-pp-_dashboard-375-light.png",
+      "sha256": "72f19ddef772a9efb5835a388d95095eeff20e4d741929b560424f83a0d63885",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/screens/OWNER_A-pp-_dashboard-1440-dark.png",
+      "sha256": "00a199e39345025fe8a4a1a297a70b9f4207161b6d83b76c18244c479e724ffa",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/screens/gallery_selection.json",
+      "sha256": "256f3647ca69ca83274f776fd6a808c683708842b5665d9781dde06ac1729e26",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/portal_identity.json",
+      "sha256": "5516804fb73be193c63c790fbe25b10e3014d6384dadfe4fdeb959dbe1e79a83",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/served_ob.json",
+      "sha256": "cc3f9481baf77bbb9b5a289894dbd403dd5cb659751571465ded43212b1c95a3",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/migration0070.json",
+      "sha256": "63fb067d1bc6abf42ce8cc44665375842c190060db265901d559898693169bcc",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/listeners_2026-11-18.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/served_pp.json",
+      "sha256": "c70a00c11b1810b6fe5b3f580ce9eb34bb518be6a67ec92967fbd3566585af61",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/budget_stop.json",
+      "sha256": "8f2b01cc6873e3ed75b8e65207ca544eeb0c1852dff1b62b3a0cabcaf3788134",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/repair_scope.json",
+      "sha256": "e729e820d19ca6aa969815fcf4346ccb2517e156683046b35d7fc2af49669fe2",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/listeners_readonly.json",
+      "sha256": "34d18a586ef6a398b24c5866e72fc0528ae8bffb4d7eddb59d0bb022db38ae85",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/full_plan_budget_2026-11-18.json",
+      "sha256": "08eb7b6f67337c72ec9f5b9e18e37784b8fbbb1d977649c45755b23cd11dfada",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/owedbook_complete.diff",
+      "sha256": "f00fe2191fc800cce2bb5c98cfe591cfa1fcd04a888911d84abacef111337714",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/owedbook_identity.json",
+      "sha256": "1491dd30fe2369ab9f91d53e13243f962bbbfb52b70754f28871d5c66a9d2546",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/phase_exit.json",
+      "sha256": "9fa745a1fd733718462637805fb55103d344890cbeefc87215e258fed14e0296",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/owned_runtime_event.json",
+      "sha256": "cbbacc86c0d96ebaef73560f6f00b06d87f8940aa94650356c2e64f95e862db3",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/entry/portal_repair_only.diff",
+      "sha256": "8722988a8400b805b1f5935ea47e05c8d8d04df80c837867d29ae969af97ff12",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/effects/amendment_2026-11-18.json",
+      "sha256": "874be6513a7f0d772b565fdb4e7ec73df8022a6d85178395b050ce016ad357ad",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/effects/ledger.jsonl",
+      "sha256": "ea473993f1919dc5b664e5d3f77304316aaabf9429c546217edc69c807f77c0c",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/effects/final_reconciliation.json",
+      "sha256": "79ceed8bae89d91eaf4e00f27ed35b606f09c66dd623f38582a7500abde43015",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/effects/dry_runs.jsonl",
+      "sha256": "af9cd9accc022b341883bed1896b0aa6f60126d3cc8bee90ddfb70d11b4cb2c5",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/effects/counters.json",
+      "sha256": "e948bb17a2256076961c9c9fce98f4142eeb69deae7534f058b39c16f01fb807",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/effects/carry_in.json",
+      "sha256": "aea5ecd8e1ab59fe84ac7f3544681af65764ace1e269133f075ffdff3bda4f0e",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/effects/standing_authority_limit_use.json",
+      "sha256": "8fef9f72ff218f76debcab5c1603eb725bd85e0d4cb1516abf85b5a2b2505589",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-inflight-s1-02.txt",
+      "sha256": "57eca2b377e7a1c3839ad7efbe7a65eeb2fe4cb1d89f240b6c4c5ff4375e7ec5",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-midpoint-money_receipt.json",
+      "sha256": "8db403c880d244a3e7b9ee577e6f29067defc202fc4821e2d030ccc27870635e",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-full-browser-extra_receipt.json",
+      "sha256": "7893d8c4c2f557f1d00be20e5aa2b632e9fc62d71b27fec266abb416201319ed",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-fixture-inventory.txt",
+      "sha256": "f6c948fb6ee933f9afd7ed94e4ba5cc771d9a2eeee2dcad6917b04017b9a12f6",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-refund-close_receipt.json",
+      "sha256": "7251a1f020cfdcc071c0c7bede7f561ebcf4fb663343c0404874e1845d2f3a72",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-support-runbook.txt",
+      "sha256": "cec61271225bc361b5cf26a8f89e45e04e1e7bcfaabd7b14ff839587e718e606",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-real-race_receipt.json",
+      "sha256": "41e50a12c40e7c5b49d4667833af67e12f384be83a053850dc893ce89ba6723b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-role-matrix-fresh_receipt.json",
+      "sha256": "3085393584288fd38a147ab755ce2e509745a6854ac2be96e79338fcc1bbbe9c",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-stop-retention-readonly.txt",
+      "sha256": "d0fbedd52dcc767464a195c657a88f37a761e6bc13733bbf29d455a1ebd20a4d",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-role-matrix-fresh.txt",
+      "sha256": "124c03c09bd39a2f86dd7b6b3180dea1f3d41b33ac55a57ba3c26e6b5a4a7815",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-inflight-s1-02_receipt.json",
+      "sha256": "963e3cba5bce126050179763886771411147ce1301295866bfbed3d0427074a3",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-deadline-start.txt",
+      "sha256": "b5c902bd1883955a2baeebb984a072f369cb2f7bd212423be070b003980da967",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-browser-skips.txt",
+      "sha256": "7c7ca32894ef122c6b61b0bf9afa46f13b6ca7b4cd4b3780391e0ddd4efd3c4b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-hydration-extended_receipt.json",
+      "sha256": "a66247bc7742919e9582c4c2908686340babc75c6b9558868a5ac1885e8412f8",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-migration-entry_receipt.json",
+      "sha256": "f1eb0a69cb63a9400fc632bdcf1ef75c988fabc32b7236516abc461dbf1f4f25",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-support-runbook_receipt.json",
+      "sha256": "517df37c1b7c1e3dd37e2a1a18bb5f34d630cf504fdb26e90480c8d853d18456",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-real-more-start.txt",
+      "sha256": "3e6aa6682b6a792ade4cc9079b52c978292029b91b5c939cd3b70a18db68a50d",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-browser-pp_receipt.json",
+      "sha256": "843b55b31a825bfe1b9909e15a9f048b4e0d477b154c9ce74964f013ac781657",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-refund-close.txt",
+      "sha256": "06f36682739440aa76fba6ca96e1479b6113d18096c7d6bc4cc8213c089e884d",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-full-browser-extra.txt",
+      "sha256": "b8ee86466ae5689b0af802af86e1bcc15eb7128bbf0df7be127cfe748f302174",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-real-start.txt",
+      "sha256": "0a64c619ae8c9ed169d154b04a1cb3da4595524a371354d9be35647056a85df3",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-inflight-s1_receipt.json",
+      "sha256": "8b8a27ec475dfa3f873a093b15a74de18451b32ee4892a31081af6af6887965a",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-fixture-inventory.txt",
+      "sha256": "d0fbedd52dcc767464a195c657a88f37a761e6bc13733bbf29d455a1ebd20a4d",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-real-late-finish.txt",
+      "sha256": "796c084ae94d37710263bb0766cca8674b452c7681eb1b0a5732f508357070f2",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-activation-first_receipt.json",
+      "sha256": "2133853cd22d3ce7e0f5324b44260cb6e5fa46cb61278bde413c6f768d9efc26",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-browser-skips_receipt.json",
+      "sha256": "9615f4b9ba15dbb1874fb74ba948bb1ce4753e546beaaf30ead4bcfa0b8db056",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-midpoint-money.txt",
+      "sha256": "0e64bb9749ba0b8f987224c5a313151b8b1eb943345848d358bbc867f662d62a",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-real-more-start_receipt.json",
+      "sha256": "20e0e3cb9f94a9754785c6b04f65a67479a0bad8272f85a8c64ad9af558543f3",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-deadline-audit.txt",
+      "sha256": "986dda9c988cea4099f99c98f96b7028f92db75f1a685618707874d424afd93b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-hydration-extended.txt",
+      "sha256": "74270938054982c6507d711605baac957391138179897fa7086d9aedaff4e71d",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-listener-start.txt",
+      "sha256": "d93e348fc08ea045e3639a39f03d443f54fc6c0c38790b925ec2a727bcc3b5e5",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-real-wait-controller.txt",
+      "sha256": "c59c0f57bf35a69c347e33a445e19df5d7e97b52b681495c5b9280594a92c9ff",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-browser-pp.txt",
+      "sha256": "f68c87904df7d2369f0f3ac6b9ae973a66e82a208e7fe9a095c0f90e96683dd2",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-real-late-finish_receipt.json",
+      "sha256": "16ad3ffba4617386825f1ed167c1fd7b36f53acd6586fb71c7148f9a757d7524",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-role-matrix.txt",
+      "sha256": "5f0ab4fae956dfa3baf603555ac0b388564952821853b79b6ab66824a04048a9",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-migration-entry.txt",
+      "sha256": "0578758adf5e0b0dab59412e0eaea29f2f00e7162b01ba8670ce7681d0abc7e6",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-activation-first.txt",
+      "sha256": "349437408c24a900dbc4661871b86fe56d7a12f2e1f905b9a4a2c0603563e115",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-real-race.txt",
+      "sha256": "d24f394b8a651a61dd032ca1df69563010f3ba1278b8844901bcf416efbb36c8",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-role-matrix_receipt.json",
+      "sha256": "42873733bd9a2cf5331389bae17db3eae55f51147dc8c2033364adb83919df10",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-prepare-s1_receipt.json",
+      "sha256": "eee6dcf64bf1cb525f98b4e29b2b5e894c45c7772cf41796e6ed7727dc45cb9a",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-gallery.txt",
+      "sha256": "4e1bf78ddeea31f7619cabce78679af7bf5c1433c2e29998c0063b1c1f9c92ec",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-redelivery_receipt.json",
+      "sha256": "a8b3aa7fbda6ab29ee7150237bf66795c0ab47f88e079851cf53d633a96d9eec",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-real-owner-resume_receipt.json",
+      "sha256": "1a873711940286c73102169b37f133953afc67db27ecc0216aadd0fa4e0dd998",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-direct-roles.txt",
+      "sha256": "5d949be4462e9ecc413a7335ea83db3ecf0d9af46985df401896ca118824bdeb",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-guards-readd_receipt.json",
+      "sha256": "40fccc05030d3138392823982a3f164d5fd51c64d32f0cc3220f0480c7b6034b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-deadline-audit_receipt.json",
+      "sha256": "78711d056295ad59236a32b931e3abac61f186d1e39521a9c2a7818f458ce815",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-fixture-inventory_receipt.json",
+      "sha256": "172c6bd564cbdb0e385bcec3426f1c2f67e344ce6351965b977d6de519217b87",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-inflight-s1.txt",
+      "sha256": "a8975892a9bb9f65265bf2eb12bd9e3102f6fe35b0c063a7e526f9306acd915f",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-listener-restore_receipt.json",
+      "sha256": "a6766bfe49526fb7b56c68b052d6f7d8bc42a4625e90f83a2c90b76c47753905",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-fixture-inventory_receipt.json",
+      "sha256": "49a54469d2d84e6752e8b90ee709b7e640cda678a45bc737ffa226d29b573b18",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-prepare-s1.txt",
+      "sha256": "fefc87148ace203f6d12878ab4a21b2a74010ab3cc3eebd961e774b3e643b32e",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-process-exit.txt",
+      "sha256": "0c6b74e4bc5e64472e209501e75ec002bfca76616496e1b9ef2781e4c91688b5",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-process-exit_receipt.json",
+      "sha256": "2e8a5e7dae0f25d71a0b0066feb72fd408f13371722144cb0a5f3b26b1ddf562",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-real-start_receipt.json",
+      "sha256": "10777418692147301cf96edc515ee2bf0c17a8c15ee3167bfa37d4a8ad7106ba",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-deadline-start_receipt.json",
+      "sha256": "46538678c6300da2d66ef560ea2fc234d28a54bc1af078410727d2d7a0d29178",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-listener-start.txt",
+      "sha256": "956b93e05a6b91e5c92d79925c98d5f3e4c078e52d060a808d4e7ebabb0005e1",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-real-owner-resume.txt",
+      "sha256": "0fde935e5ef935c2f4c2e6dba16266ac2ab10226662130904203f7d436f64454",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-privacy-recovery_receipt.json",
+      "sha256": "916e94603bbd531b023f70b216508f7f6eee2d3c2d27ab31046b320bf3823b2f",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-prepare-live.txt",
+      "sha256": "d1e7b33ad677ca599bd2c89250892d880f1e87e9cc8912b5392225a55de26363",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-privacy-recovery.txt",
+      "sha256": "d71fda154cc81429f74fa2d567d24568f7e608cb58dc4edfafe928c4fb809286",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-stop-retention-readonly_receipt.json",
+      "sha256": "c9bc55917105a266e6969ebcaf888e53681bf41e30170fe8de4ff72d25c042ed",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-real-wait-controller_receipt.json",
+      "sha256": "9c915a7930739a49812ce953543bbb0af07c88c5333fc0bbb9af374f2e2f353f",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-active-APA.txt",
+      "sha256": "56b9fac03aca61049fd3d678c300540e9e4e4936e0468805982ac140d9d361e1",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-browser-ob.txt",
+      "sha256": "3b0717c988c8ca370de548c4421eac45e52a58c82bffb4d81de74895053dde5d",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-direct-roles_receipt.json",
+      "sha256": "a5f4f2a6cbe194fe4a41baa08ace20672e0053a2393da79f236eecf60b4b4b01",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-listener-restore.txt",
+      "sha256": "7a52b6a3f117837b42609b22f8c3c001746784c8dea502da9f158f57b10ff730",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-support-runbook02_receipt.json",
+      "sha256": "dd28495955e043c027ecadbc1a6485b679238307812e2daf14f241f419105bbc",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-direct-jwt_receipt.json",
+      "sha256": "855afb8a6acb1ef0e2eaf08911d68d534a7af3b208a7bdc074eb9396f9ba786e",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-prepare-live_receipt.json",
+      "sha256": "02fe3623e1b1b1c4770f1e0e8cdf5e372a4460f60822b9a34afbd3721c179f03",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-gallery_receipt.json",
+      "sha256": "e7196d000821caa93ccb740f9e74afb9457e26054868b100582e1b65c47f3fe7",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-pf00-event_receipt.json",
+      "sha256": "e28d8ecdc61d32000021ed7002417db1bbb0b27abf0d4f62d93c7f02dc5adf73",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-guards-readd.txt",
+      "sha256": "be69d0ce5cad46045e36560eadce8205abcbd61516bb3066bfd49f98c98e4327",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-hydration-forms_receipt.json",
+      "sha256": "60fb2fa1d70b530135b92d4518bddf3306033f389d5973fb280a26c37c05ab1a",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-direct-jwt.txt",
+      "sha256": "5d949be4462e9ecc413a7335ea83db3ecf0d9af46985df401896ca118824bdeb",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-browser-ob_receipt.json",
+      "sha256": "361772e0676c93c665e29ab71475d8e5b6b4cf12b1aceceb00cf7bc346ab3b4d",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-listener-start_receipt.json",
+      "sha256": "c00231350a3ceb771d594f073ac4953358f3fb61327f3a9536cb8d0ae606f302",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-support-runbook02.txt",
+      "sha256": "9a964bf771150ffa307126ff12bcd8240712de4c2dee188cc0407219765d728b",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-active-APA_receipt.json",
+      "sha256": "b813e38dc8c774a58a2858a479a81bcca5874046eed6cbb32ef478114773c2dc",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-pf00-event.txt",
+      "sha256": "8e070ea691b3429c4e6786c57a5d65d87c8d17b78edea60d0d680632731de2d3",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-hydration-forms.txt",
+      "sha256": "ee7a30a3bc87dd633f2e65cb55c5a422db5ed37daa91a3eb0f42214b1d4a4948",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-listener-start_receipt.json",
+      "sha256": "4531decfa8b8e22cd8eb26f03b8de45bc25f42ec525b74dd02e8c17b7287adc9",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/runs/q4-final-redelivery.txt",
+      "sha256": "4a69ca7acb1cd6c41b6092ff74e1911149517cfe1bb338c91a74e88308e55d63",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/campaign/r06/CRASH_RESTART/qa-q4-s1-s1/state_after_recovery.json",
+      "sha256": "97e2c14a6cc2e3f91f42d50fe76379894eec6b947dd8936a1f30d80febd298f5",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/campaign/r06/CRASH_RESTART/qa-q4-s1-s1/state_final.json",
+      "sha256": "c6d5080832af26a8c386b1c68ea067e2aea696e52f810dcb49c94c2a050edb36",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/campaign/r06/CRASH_RESTART/qa-q4-s1-s1/state_down_immediately.json",
+      "sha256": "04512365bfc3b33e0757913178fba2520f275fb960bf8638ef46605a9819b72e",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/campaign/r06/CRASH_RESTART/qa-q4-s1-s1/state_down_settled.json",
+      "sha256": "3d0034518cc02275bc0a710b996a40798c58eaf4582a87d28a27d15918c322d7",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    },
+    {
+      "path": "evidence/Q4/01/campaign/r06/CRASH_RESTART/qa-q4-s1-s1/result.json",
+      "sha256": "8b8b65e153a1dd98721bbf644f6d01f2d6fa8a8558a431ccac5febc3efd2afcb",
+      "purpose": "Original Q4/01 evidence: carried only for unchanged paths; old UI failures/attempts remain history"
+    }
+  ],
+  "not_carried": "Touched form hydration, sign-in regression, F-Q4-002/003 reproductions and new final live transfer execution; original known limitations remain explicit",
+  "inherited_qualifications": "Q2 human inbox observations remain attributed separately; native permanent HTTPS endpoint retry/deployed GateD NOTRUN; U1\u2013U3 Directoraccepted not QAcertified; source history API path approved; older appliedSQLwording Directorbacklog."
+}

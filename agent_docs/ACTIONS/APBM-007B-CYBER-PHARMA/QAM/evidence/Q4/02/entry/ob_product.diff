@@ -1,0 +1,173 @@
+diff --git a/src/__tests__/auth/hydration-forms.test.tsx b/src/__tests__/auth/hydration-forms.test.tsx
+new file mode 100644
+index 0000000..27ca7af
+--- /dev/null
++++ b/src/__tests__/auth/hydration-forms.test.tsx
+@@ -0,0 +1,68 @@
++/** @jest-environment jsdom */
++// APBM-007B F-Q4-001 — what is typed or filled before the page finishes loading is kept, the submit button follows the
++// real field values, and Show password never clears the field. Each test server-renders the form, types into the server
++// HTML with no input event (React never sees it, as when the production script is still loading), then hydrates.
++import { act } from "react";
++import { renderToString } from "react-dom/server";
++import { hydrateRoot, type Root } from "react-dom/client";
++import { fireEvent, screen, waitFor } from "@testing-library/react";
++import { LinkRequestForm } from "@/components/auth/LinkRequestForm";
++import ProfileForm from "@/app/profile/ProfileForm";
++import { AppRole } from "@/utils/app-role";
++import type { User } from "@supabase/supabase-js";
++
++const mockUpdateUser = jest.fn(async (_: { password: string }) => ({ error: null }));
++jest.mock("@/utils/supabase/client", () => ({ createClient: () => ({ auth: { updateUser: mockUpdateUser } }) }));
++jest.mock("@/components/ui/use-toast", () => ({ useToast: () => ({ toast: jest.fn() }) }));
++
++let posts: unknown[] = [];
++beforeEach(() => {
++  posts = [];
++  global.fetch = jest.fn(async (_url: RequestInfo | URL, init?: RequestInit) => {
++    posts.push(JSON.parse(String(init?.body)));
++    return { ok: true, status: 200, json: async () => ({}) };
++  }) as unknown as typeof fetch;
++});
++afterEach(() => { document.body.innerHTML = ""; mockUpdateUser.mockClear(); });
++
++async function typeBeforeHydration(ui: React.ReactElement, typed: (c: HTMLElement) => void) {
++  const container = document.createElement("div");
++  container.innerHTML = renderToString(ui);
++  document.body.appendChild(container);
++  const ssrSubmitDisabled = (container.querySelector("button[type=submit]") as HTMLButtonElement).disabled;
++  typed(container);   // no input events: React never sees these
++  let root: Root | undefined;
++  await act(async () => { root = hydrateRoot(container, ui); });
++  return { container, ssrSubmitDisabled, root: root as Root };
++}
++
++it("sign-in link: a typed address is kept, the button is enabled, and that address is the one sent", async () => {
++  const { container, root } = await typeBeforeHydration(<LinkRequestForm />, (c) => {
++    (c.querySelector("#link-email") as HTMLInputElement).value = "link-early@x.invalid";
++  });
++  const send = screen.getByRole("button", { name: "Email me a sign-in link" }) as HTMLButtonElement;
++  expect(send.disabled).toBe(false);
++  await act(async () => { fireEvent.submit(container.querySelector("form") as HTMLFormElement); });
++  expect(posts).toEqual([{ email: "link-early@x.invalid" }]);
++  await waitFor(() => expect(screen.getByRole("status").textContent).toContain("a sign-in link is on its way"));
++  expect((container.querySelector("#link-email") as HTMLInputElement).value).toBe("link-early@x.invalid");   // survived re-renders
++  act(() => root.unmount());
++});
++
++it("change password: Update is disabled in the server HTML; typed passwords survive Show password and are the ones saved", async () => {
++  const user = { id: "u1", email: "owner@x.invalid", user_metadata: {} } as unknown as User;
++  const ui = <ProfileForm user={user} role={AppRole.ADMIN} />;
++  const { container, ssrSubmitDisabled, root } = await typeBeforeHydration(ui, (c) => {
++    const [pw, confirm] = Array.from(c.querySelectorAll("input[placeholder]")).slice(-2) as HTMLInputElement[];
++    pw.value = "typed-early-1"; confirm.value = "typed-early-1";
++  });
++  await act(async () => { fireEvent.click(screen.getAllByRole("button", { name: "Show password" })[0]); });
++  const pw = screen.getByPlaceholderText("Minimum 8 characters") as HTMLInputElement;
++  expect(pw.type).toBe("text");
++  expect(pw.value).toBe("typed-early-1");
++  expect(ssrSubmitDisabled).toBe(true);
++  expect((screen.getByRole("button", { name: "Update Password" }) as HTMLButtonElement).disabled).toBe(false);
++  await act(async () => { fireEvent.submit(container.querySelector("form") as HTMLFormElement); });
++  expect(mockUpdateUser).toHaveBeenCalledWith({ password: "typed-early-1" });
++  act(() => root.unmount());
++});
+diff --git a/src/app/profile/ProfileForm.tsx b/src/app/profile/ProfileForm.tsx
+index c68e2af..fa92801 100644
+--- a/src/app/profile/ProfileForm.tsx
++++ b/src/app/profile/ProfileForm.tsx
+@@ -1,6 +1,6 @@
+ "use client";
+ 
+-import { useState } from "react";
++import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+ import { createClient } from "@/utils/supabase/client";
+ import { Button } from "@/components/ui/button";
+ import { Input } from "@/components/ui/input";
+@@ -18,12 +18,26 @@ interface Props {
+   role: AppRole;
+ }
+ 
++// false on the server and while hydrating, true once React owns the page (no effect, no extra render).
++const noSubscribe = () => () => {};
++const useHydrated = () => useSyncExternalStore(noSubscribe, () => true, () => false);
++
+ const ProfileForm = ({ user, role }: Props) => {
+   const [loading, setLoading] = useState(false);
+   const [password, setPassword] = useState("");
+   const [confirmPassword, setConfirmPassword] = useState("");
+   const [validationError, setValidationError] = useState<string | null>(null);
+   const { toast } = useToast();
++  // F-Q4-001: a password typed before the page finished loading never reached this state, and the next re-render (e.g.
++  // Show password) wiped it. Adopt what the fields hold once React owns them; Update stays disabled until then, so an
++  // early click cannot become a native form submission.
++  const passwordRef = useRef<HTMLInputElement>(null);
++  const confirmRef = useRef<HTMLInputElement>(null);
++  const hydrated = useHydrated();
++  useEffect(() => {
++    if (passwordRef.current?.value) setPassword(passwordRef.current.value);
++    if (confirmRef.current?.value) setConfirmPassword(confirmRef.current.value);
++  }, []);
+ 
+   const displayName: string =
+     user.user_metadata?.full_name ?? user.email?.split("@")[0] ?? "Member";
+@@ -146,6 +160,7 @@ const ProfileForm = ({ user, role }: Props) => {
+                 New Password
+               </Label>
+               <PasswordInput
++                ref={passwordRef}
+                 className="p-6 bg-muted mt-2"
+                 placeholder="Minimum 8 characters"
+                 value={password}
+@@ -157,6 +172,7 @@ const ProfileForm = ({ user, role }: Props) => {
+                 Confirm New Password
+               </Label>
+               <PasswordInput
++                ref={confirmRef}
+                 className="p-6 bg-muted mt-2"
+                 placeholder="Re-enter new password"
+                 value={confirmPassword}
+@@ -166,7 +182,7 @@ const ProfileForm = ({ user, role }: Props) => {
+                 <p className="text-sm text-destructive mt-1">{validationError}</p>
+               )}
+             </div>
+-            <Button type="submit" disabled={loading} className="w-full">
++            <Button type="submit" disabled={loading || !hydrated} className="w-full">
+               {loading ? (
+                 <>
+                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+diff --git a/src/components/auth/LinkRequestForm.tsx b/src/components/auth/LinkRequestForm.tsx
+index 132fdb3..d6a59ab 100644
+--- a/src/components/auth/LinkRequestForm.tsx
++++ b/src/components/auth/LinkRequestForm.tsx
+@@ -1,7 +1,7 @@
+ "use client";
+ 
+ // APBM007A — "email me a sign-in link". The answer is deliberately the same for every address.
+-import { useState } from "react";
++import { useEffect, useRef, useState } from "react";
+ import { Button } from "@/components/ui/button";
+ import { Input } from "@/components/ui/input";
+ import { Label } from "@/components/ui/label";
+@@ -9,6 +9,12 @@ import { Label } from "@/components/ui/label";
+ export function LinkRequestForm() {
+   const [email, setEmail] = useState("");
+   const [state, setState] = useState<"idle" | "sending" | "sent" | "slow" | "error">("idle");
++  // F-Q4-001: an address typed before the page finished loading never reached this state, and the next re-render wiped
++  // it. Adopt what the field holds once React owns it.
++  const emailRef = useRef<HTMLInputElement>(null);
++  useEffect(() => {
++    if (emailRef.current?.value) setEmail(emailRef.current.value);
++  }, []);
+ 
+   async function onSubmit(e: React.FormEvent) {
+     e.preventDefault();
+@@ -20,7 +26,7 @@ export function LinkRequestForm() {
+   return (
+     <form onSubmit={onSubmit} noValidate className="space-y-3" data-testid="link-request-form">
+       <Label htmlFor="link-email" className="uppercase text-xs font-bold text-muted-foreground">Email me a sign-in link</Label>
+-      <Input id="link-email" type="email" autoComplete="email" className="p-6 bg-muted" placeholder="Please Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} />
++      <Input ref={emailRef} id="link-email" type="email" autoComplete="email" className="p-6 bg-muted" placeholder="Please Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+       <Button type="submit" variant="outline" className="w-full" disabled={state === "sending" || email.trim().length === 0}>
+         {state === "sending" ? "Sending…" : "Email me a sign-in link"}
+       </Button>

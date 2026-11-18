@@ -1,0 +1,30 @@
+{
+  "status": "Q4/02 COMPLETE \u2014 AWAITING ADJUDICATION",
+  "path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/APBM-007B-CYBER-PHARMA_Q4_REVIEW_02.zip",
+  "downloads": "/home/moose/Downloads/APBM-007B-CYBER-PHARMA_Q4_REVIEW_02.zip",
+  "members": 417,
+  "indexed_entries": 416,
+  "sha256": "e6dd4520ac255a3a71e63cb71799618c0780c7baf8b1bb558adc3e8c7afb25d6",
+  "validated": true,
+  "expanded_privacy_gates": [
+    {
+      "dir": "/tmp/APBM-007B-CYBER-PHARMA_Q4_REVIEW_02_EXPANDED",
+      "hits": [],
+      "skipped_binary": 4
+    },
+    {
+      "controls": {
+        "poison": true,
+        "clean": true
+      },
+      "files": 417,
+      "private_values_checked": 96,
+      "hits": [],
+      "credential_values_or_hashes_printed": false
+    }
+  ],
+  "last_buyer": "NOT RUN \u2014 Director copied link not provided; no decline or approval inferred",
+  "decision": "Friday adjudicates F-Q4-001 retest, F-Q4-002 timing evidence failure, F-Q4-003 not-reproduced/causal limits, optional buyer limitation and local CLI delivery observation, then verdict/retention",
+  "fixtures_retained": true,
+  "owned_listener_stopped": true
+}

@@ -1,0 +1,87 @@
+{
+  "at": "2026-11-18T08:03:10.077709+00:00",
+  "protected_before": {
+    "cyph-payment-portal-dev-v1": {
+      "HEAD": "ba66534351368b4b67b9e61d6f0278866950c850",
+      "outside_QAM_tracked_changes": [],
+      "director_env_local_stat": {
+        "st_ino": 467272,
+        "st_size": 1950,
+        "st_mtime_ns": 1794900285205261741
+      },
+      "status": [
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AC_EVIDENCE_MATRIX.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/FINDINGS.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/README.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/REVIEW_START_HERE.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_APPROVAL.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_CERTIFICATION.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_CLEANUP_REPORT.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_EXECUTION_REPORT.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_STATE.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_TEST_PLAN.md",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/CLEANUP/",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/APBM-007B-CYBER-PHARMA_Q4_REVIEW_02.zip",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/Q4_02_RECEIPT.json",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/SOURCE_REFERENCES_Q4_02.json",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/CLEANUP/",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q4/02/"
+      ]
+    },
+    "cyph-v1-dev": {
+      "HEAD": "855e0ad2e22a37e633ab5a55b8459e9bcc6bd871",
+      "outside_QAM_tracked_changes": [],
+      "director_env_local_stat": {
+        "st_ino": 205684,
+        "st_size": 2602,
+        "st_mtime_ns": 1794885210278234737
+      },
+      "status": []
+    }
+  },
+  "paths": [
+    "/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af",
+    "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/.env.qa.local",
+    "/tmp/APBM-007B-CYBER-PHARMA_Q1_REVIEW_01",
+    "/tmp/APBM-007B-CYBER-PHARMA_Q1_REVIEW_02",
+    "/tmp/APBM-007B-CYBER-PHARMA_Q2_REVIEW_01",
+    "/tmp/APBM-007B-CYBER-PHARMA_Q4_REVIEW_01",
+    "/tmp/APBM-007B-CYBER-PHARMA_Q4_REVIEW_02_EXPANDED",
+    "/tmp/APBM-007B-CYBER-PHARMA_Q4_REVIEW_02_STAGE",
+    "/tmp/APBM-007B-CYBER-PHARMA_STOP_REVIEW_01",
+    "/tmp/APBM-007B-CYBER-PHARMA_STOP_REVIEW_02",
+    "/tmp/APBM-007B-CYBER-PHARMA_STOP_REVIEW_03",
+    "/tmp/APBM-007B-CYBER-PHARMA_STOP_REVIEW_04",
+    "/tmp/APBM007B_Q2_01_EXPANDED",
+    "/tmp/APBM007B_Q2_PRE_EXPORT",
+    "/tmp/APBM007B_Q4_FINAL_PREFLIGHT",
+    "/tmp/APBM007B_Q4_REVIEW01_EXPANDED",
+    "/tmp/APBM007B_STOP02_EXPANDED",
+    "/tmp/APBM007B_STOP03_EXPANDED",
+    "/tmp/APBM007B_STOP04_EXPANDED",
+    "/tmp/apbm007b-qa-q4-02",
+    "/tmp/apbm007b-qa-cleanup-01",
+    "/tmp/apbm007b-q4-s1.json",
+    "/tmp/apbm007b-qa-foreign-fixture.json",
+    "/tmp/apbm007b-watch-grouped.cjs",
+    "/tmp/finalize_apbm007b_q2_records.py",
+    "/tmp/package_apbm007b_q2_final.py",
+    "/tmp/package_apbm007b_q4_final.py",
+    "/tmp/package_apbm007b_q4_stop03.py",
+    "/tmp/package_apbm007b_q4_stop04.py",
+    "/tmp/apbm-q2-package.py",
+    "/tmp/apbm-q2-report.py"
+  ],
+  "old_archives": {
+    "APBM-007B-CYBER-PHARMA_STOP_REVIEW_01.zip": "acd3b53e1f7ded79e2102da8125932fb7d38db9fc0e496e858ecc250becb4961",
+    "APBM-007B-CYBER-PHARMA_Q1_REVIEW_01.zip": "b1d5fce17c5ea8ff76bc72656624fc45c6de268cbcf1872118197ef890c6fb0c",
+    "APBM-007B-CYBER-PHARMA_Q1_REVIEW_02.zip": "b0d6640e76d27b234602c134b86f558826dc2e7bb04168c79bacfd7b1ef70340",
+    "APBM-007B-CYBER-PHARMA_STOP_REVIEW_02.zip": "911acf545c035d9b3f46c9b723f5fcdd2e5f89e4aed18b32a145cb20c34c8e77",
+    "APBM-007B-CYBER-PHARMA_STOP_REVIEW_03.zip": "926e6c424501c2cc5f08b7d5c33a7185b9cf7c6cb3c19056d12cd4648ac77233",
+    "APBM-007B-CYBER-PHARMA_Q4_REVIEW_01.zip": "ec99c079406250551abd02f1d5e4403f6f101a3bbc24c0cdd9b8b52a029400a5",
+    "APBM-007B-CYBER-PHARMA_Q2_REVIEW_01.zip": "befa782288fe05ead925399d268dd6e218d6fb87e37000884fc144b66c7cfb9b",
+    "APBM-007B-CYBER-PHARMA_Q4_REVIEW_02.zip": "e6dd4520ac255a3a71e63cb71799618c0780c7baf8b1bb558adc3e8c7afb25d6",
+    "APBM-007B-CYBER-PHARMA_STOP_REVIEW_04.zip": "f15850f8f947f5a36ef22a2451dc60f67e71d895ef0beafe73d7fe61e76c81b7"
+  }
+}

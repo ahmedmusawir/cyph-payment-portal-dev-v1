@@ -1,0 +1,2 @@
+{"listener_pid":292825,"account_matches":true,"test_mode":true,"forward_to":"http://localhost:3101/api/webhooks/stripe","secret_saved_privately":true,"command":"STRIPE_API_KEY=<private sandbox key> stripe listen --events checkout.session.completed,checkout.session.expired,invoice.paid,invoice.payment_failed,customer.subscription.created,customer.subscription.updated,customer.subscription.deleted --events-from @self --forward-to http://localhost:3101/api/webhooks/stripe"}
+

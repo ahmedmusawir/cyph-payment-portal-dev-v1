@@ -144,3 +144,38 @@ Post-export receipt: Cody 2026-11-18T03:52:33.284000+00:00 Q4/01 COMPLETE: /home
 Exact supplied dispositions recorded in FINDINGS.md§2; next-retest budget recorded in QAM_APPROVAL.md§4: sign-ins176→300, provider440→560(last20cleanup), pay_or_hosted80→100, reads5000→8000; all other limits unchanged, counters preserved, nothing reset. Supplied standing authority continues for the next retest; this does not release execution now.
 
 Nobody retests in this state. Keep every fixture as is, including protectedF-Q2-001store unrefunded. Engineering now has the QA branch. No apps/listener started, no provider/database/Auth effects, no fixture cleanup, no pull/rebind or Git mutation in this docs-only step. Q4/01 archives/receipts and tested pair Portal00a9e0e98aadb2bdba830ebe6d8c06fb6902e37d/OwedBook1fd5a61073e8adaa7997e1ad3c4b1f02d0e7f54d remain historical; no second repaired pair bound. Wait for Director's repaired commit pair and Friday's bound retest scope/release.
+
+## Cody,18November2026 — Q4/02 release bound
+
+**Current state: RELEASED FOR Q4.** Friday/Director Q4/02release, QA_LEAD_Q4_02_BINDING_APBM007B_2026-11-18.md suppliedcurrentconversation. Repairedremote pair Portalba66534351368b4b67b9e61d6f0278866950c850/OwedBook855e0ad2e22a37e633ab5a55b8459e9bcc6bd871; bothqa/apbm-007b, descendfromQ4/01 anddeclaredUI/test-onlydiffverified. No undeclaredserver/DB/migration/payment/activationchange. Scopeplan§7 SHA-256c06196aa44ab3cee181e101a175106a96b7f24e1e941f5754aa0bd38124bbdbb; approval§4transcribed. Entry/build/runtime/effectsforecastpending; no liveeffect yet. Alloldfixturesretained, Q4/01immutable, counterscarryforwardwithoutreset. Director3000/3001/3457untouched; onlyowned3100/3101/listenerauthorized. Laststeptransferbuyerrealinboxrequestonlyafterallotherworkrecorded.
+
+## Cody,18November2026 — Q4/02 execution complete
+
+**Current state: Q4 COMPLETE — AWAITING ADJUDICATION.** AttemptQ4/02, fixedpairPortalba66534351368b4b67b9e61d6f0278866950c850/OwedBook855e0ad2e22a37e633ab5a55b8459e9bcc6bd871. Releasedscopecompleted/attemptedand31ACmapped; finaloptionalbuyerNOT RUNwithhonestlimitation/assertions. OneunchangedWebKit30srepetitionfailureretained, otherfreshpassesandhistoricalboundsrecorded; no repair/rebind/timeoutedits/verdict/Gitmutation. Allfixturesretained,F001unrefunded. Ownapps/listeneractuallystopped, Directorprocessesuntouched. Countersreconciled,nothingreset; nextFridayadjudicatesfindings/limitations/verdict/retention. No furtherQAexecutionbeforeownerruling.
+
+
+Cody Q4/02 pre-export snapshot: Q4 COMPLETE — AWAITING ADJUDICATION, all released scope attempted with explicit final optional buyer NOT RUN limitation and retained timing failure. Same repairedpair, all fixtures retained/F001unrefunded, ownapps/listener actually stopped. Package APBM-007B-CYBER-PHARMA_Q4_REVIEW_02.zip, 417 members including FILE_INDEX and EXPORT_VALIDATION; ZIP hash external only.
+
+Post-export receipt: Cody 2026-11-18T07:16:39.679609+00:00 Q4/02 COMPLETE: /home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/APBM-007B-CYBER-PHARMA_Q4_REVIEW_02.zip; 417 members (416 indexed plus index), SHA-256 e6dd4520ac255a3a71e63cb71799618c0780c7baf8b1bb558adc3e8c7afb25d6. Exact membership/bytes/hashes/CRC/safe paths and stage/expanded pattern/actual-private-value scans PASS. Downloads byte-identical /home/moose/Downloads/APBM-007B-CYBER-PHARMA_Q4_REVIEW_02.zip. Optional buyer NOT RUN, copied link not provided; no approval/decline inferred. All fixtures retained, F001unrefunded. Owned apps/listener actually stopped, Director processes untouched; may restart listener. Friday adjudication/verdict/retention next; no certificate.
+
+## Cody,18November2026 — verdict and cleanup authority received
+
+**Current state: VERDICT ISSUED — CLEANUP PENDING.** Friday supplied exact verdict GATE Q PASS WITH KNOWN RISK on Portalba66534351368b4b67b9e61d6f0278866950c850/OwedBook855e0ad2e22a37e633ab5a55b8459e9bcc6bd871. Certificate reference `QAM_CERTIFICATION_APBM-007B_2026-11-18.md, supplied SHA-256 3d897cf99575c37c429200446df6315fff5b94f3c384c4a9044f42a2e24ce70f`; Director acceptance13:40Asia/Dhaka transcribed verbatim. Exact certificate sections1–7 unavailable so far and requested, not reconstructed. Final dispositions transcribed FINDINGS§2; explicit cleanup/retention authority recorded CLEANUP_REPORT§0/§3. Proceed with independent authorized scan/inventory and explicit bounded cleanup; no refunds/untaggedsandboxobjects/Directorresources/DEVchanges/product-contract-testchanges/deployment. Keep business/claim/Authidentity rows and durable evidence. No release to closeout; Friday acceptance still required.
+
+## Final cleanup execution — Cody, 18 November 2026
+
+**CLEANUP EXECUTED — AWAITING ACCEPTANCE**. Friday/Tony cleanup authority executed with itemized hard-limit/API exceptions in QAM_CLEANUP_REPORT.md and evidence/CLEANUP/01. Six tagged subscriptions canceled (including F-Q2-001, unrefunded); QA contexts disabled, prepared transfer/reservation canceled/released, all eight QA server sessions/refresh authority revoked. Business/claim rows and QA identities retained. Private QA material and owned disposable lanes removed after controlled actual-value scan; retained-output pattern scans and indexed cleanup package follow. Certified pair unchanged. No cleanup acceptance, durable commit, closeout release, deployment or DEV migration authorized by this record. Exact certificate sections 1–6 remain pending source; supplied verdict and Tony acceptance transcribed verbatim without inventing risk text.
+
+## Friday cleanup acceptance and closeout release — 18 November 2026
+
+**CLEANUP ACCEPTED — RELEASED TO CLOSEOUT**
+
+Cleanup ACCEPTED, 18 November 2026, Friday (QA Lead), with the recorded exceptions: sandbox customers and clocks retained; two apbm007a pairs untouched; terminal checkout sessions and paid history retained; one unproven temporary file left; issued tokens valid until expiry; no secure-erasure claim.
+
+RELEASED TO ARCHITECT CLOSEOUT by Friday (QA Lead), 18 November 2026, effective on the Director's commit of the durable QA records. Not authorized by QA: deployment; applying migration 0070 to DEV; merge to main.
+
+Transcribed by Cody from the explicit Friday/Director instruction. All eight requested source files missing from Downloads; supplied references preserved, import receipt in HANDOFFS/QA_LEAD_FILE_IMPORT_2026-11-18.md. No source certificate transcription invented. No runtime, provider, database or Git mutation. Cody’s APBM-007B work is done.
+
+### Source import correction — Cody, 18 November 2026
+
+Certificate and cleanup acceptance/closeout release files now present in Downloads, SHA-256 verified and imported unchanged into HANDOFFS. Certificate sections 1–6 transcribed exactly into QAM_CERTIFICATION.md sections 1–3. Six earlier QA Lead source files remain missing; see HANDOFFS/QA_LEAD_FILE_IMPORT_2026-11-18.md. State remains **CLEANUP ACCEPTED — RELEASED TO CLOSEOUT**, effective on the Director’s commit of durable QA records. Only QAM documents changed; no runtime or external effect.

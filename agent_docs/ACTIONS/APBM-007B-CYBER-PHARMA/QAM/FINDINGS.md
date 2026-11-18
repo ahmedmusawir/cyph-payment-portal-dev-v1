@@ -71,6 +71,25 @@ O-Q4-001 (observation, unranked): applied operator SQL still returns “paid re-
 Repair retest observations with paths: evidence/Q4/01/finding_retests_final.json. All findings, proposed classes/severity, original attempts and uncertainty are retained for Friday; no Engineer routing or new verdict composed by Cody.
 
 
+### Q4/02 execution observations — Cody,18November2026; QA Lead dispositions unchanged
+
+Released repaired pair Portalba66534351368b4b67b9e61d6f0278866950c850/OwedBook855e0ad2e22a37e633ab5a55b8459e9bcc6bd871. F-Q4-001 retest: selected15/15normal-click loading probesPASS (12initial plus3corrected-profile follow-ups); actual18/18three-engine password/link/change/global-signout checksPASS. Initialprofileprobe incorrectly set browser authcookiesHttpOnly; correctedQAhelper only, failedattempt preserved, no password mutation fromsyntheticprobes. ROLE_EXISTING_INVITEE_PASSWORD changedprivately3times throughactualprofileform, eachnewvalue verified; no value/hash recorded.
+
+F-Q4-002 retest: unchanged WebKitAddStorespec5runs PASS/PASS/FAIL/PASS/PASS, Chromium/Firefoxeach3/3PASS; additionaltwofull-suite-orderWebKitruns8/8each. ThirdWebKitfailedatfinaldashboardpharmacy-count assertion underunchanged30souterlimit, afterconfirmHTTP20014.672s andDBactivation; twofollowingserialchecks skippedinthat attempt, coveredbyotherfreshpasses. All9confirmrequestsHTTP200,9.435–14.672s; privateHARandactualonTestBegintimestampsrecorded. Originaloperationcreated02:21:05.295Z/activated02:21:45.392Z (40.097s). Exactoldteststartnotcaptured; evencreated_at+30s boundsmaximumpossibledeadline02:21:35.295Z, activation10.097safterthatbound. No original timestamp invented andno testtimeoutchanged. Proposed continued acceptance-evidence/performance-budget adjudication; no productrootorclosureinferred. Evidence evidence/Q4/02/browser_reproductions.json; original_failure_correlation.json; original_failure_bounds_followup.json.
+
+F-Q4-003 retest: fiveisolatedO1WebKitruns2/2each plusO1checksintwofull-suite-orderpasses; no concurrentQA sign-out/revocation duringthese runs. No QAledgerglobalrevocationinoriginalfailureinterval; knownprivacyrevocationsoccurredlater03:10Z. Authaudit tablecontains0retainedentries, so exactoldclientSIGNED_OUTcause cannotbeestablished. Freshfailure notreproduced; no unilateraldisposition. Evidence samebrowserreproductionandhistoricalcorrelationartifacts.
+
+Freshunits823/823, type/lint/builds andclientbundlecontrolsPASS. ExactOwedBook-onlyoneauth-js.generateLinkexception unchanged, no broadsuppression. Final live transfer is notyetexecuted atthis datedpre-lastrecord; separate resultwillfollow. No repair/rebind/Gitmutation/certificate.
+
+### O-Q4-02-001 — local listener delivery observation, Cody proposal
+
+One of ten new paid invoice events existed at Stripe but initially had neither an owned CLI log line nor a durable application receipt. The cause is unknown. A genuine provider resend through the existing owned CLI returnedHTTP200/processed with the same operation/store/invoice and unchanged provider quantity23. Nine first deliveries were observed automatically; the tenth is labelled provider redelivery, never counted as a proven first automatic delivery. No controlled signer, new charge or forced activation. Proposed class: observation / local QA transport limitation, unranked; Friday adjudicates. Native permanent HTTPS retry/outage remains GateD. Evidence: evidence/Q4/02/real_payment_event_correlation.json; third_webkit_payment_event.json; missed_event_redelivery.json. Do not infer that this gap caused the client timeout.
+
+### Q4/02 completion supplement — Cody Executor,18November2026
+
+F-Q4-001freshselected15loadingand18realAuthregressionchecksPASS; recommendFridaygradeagainstnewscope, no dispositioncomposed. F-Q4-002oneof5dedicatedWebKitrepetitionsfailedatouter30sfinaldashboardcount; all9confirmsHTTP200/activated,2fullorderpasses. F-Q4-003all7O1runsPASS; originalclientcausestillunprovenbecausehistoricalAuthauditempty, no simultaneousQArevocationrecorded. Proposecontinuedacceptance-evidence/performance-budgetadjudicationforF-Q4-002 andexplicitnot-reproduced/limited-causalityreviewforF-Q4-003. Originalattempts/serialskips/sourcehashes retained. Lastnewtransferbuyer: NOT RUN; seeevidence/Q4/02/transfer_live.json, no baselinefixturedeletionorF001refund. QAinstrumentprofilecookie/pollissuesfixedordisclosed, no newprivacyexposureidentified; private diagnosticcreationmodesverified. Friday's§2dispositionsunchanged.
+
+
 ## 2. Dispositions (QA Lead only)
 
 | Finding | Class (final) | Severity (final) | Disposition | Inherited condition evidence (if claimed pre-existing) | Affects verdict? | Routed to |
@@ -139,6 +158,18 @@ The following supplied dispositions supersede earlier rows for these identifiers
 
 Friday's instruction: state **REPAIR RULED — AWAITING COMMIT**; nobody retests in this state. Keep every fixture as is. Do not start apps or a listener. Engineering now has the QA branch. Director supplies the repaired pair; Friday then supplies the bound retest scope. No next retest is released by this adjudication.
 
+### Final Q4/02 dispositions — Friday,18November2026; transcribed by Cody
+
+Authority: Friday's cleanup instruction, source certificate `QAM_CERTIFICATION_APBM-007B_2026-11-18.md, supplied SHA-256 3d897cf99575c37c429200446df6315fff5b94f3c384c4a9044f42a2e24ce70f`; Director acceptance as quoted in QAM_CERTIFICATION.md. Supersedes earlier rows for these identifiers without deleting history.
+
+| Finding / item | Final disposition supplied by Friday |
+|---|---|
+| F-Q4-001 | CLOSED — repaired on five forms, verified on three engines (Q4/02) |
+| F-Q4-002 | NOT A FUNCTIONAL DEFECT — test time budget and performance observation; Director-accepted as KR-1 |
+| F-Q4-003 | NOT REPRODUCED in 7 runs, cause unproven; Director-accepted as KR-2 |
+| O-Q4-02-001 | local listener limitation; Director-accepted as KR-6; native retry is a Gate D item |
+| Optional buyer completion | NOT RUN; Director-accepted as KR-3 |
+
 ## 3. Conditional repair routing (only when §2 dispositions a genuine product defect)
 
 ### 3.1 Repair proposal (QA Executor draft; a proposal, not a work order)
@@ -165,4 +196,5 @@ Created only when at least one product AC is FAIL with a product-defect disposit
 Repairs stay on the QA branch; nothing is transferred back to the engineering branch (RUL-02). All prior attempts are preserved under `evidence/`.
 
 *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*
+
 

@@ -1,0 +1,21 @@
+{
+  "invoice": "in_1Ud2kCGnEQDyu3RRBjQHAmD5",
+  "status": "paid",
+  "paid_cents": 4766,
+  "expected_cents": 4766,
+  "event": "evt_1Ud2kIGnEQDyu3RRUYJ5RMNy",
+  "durable_receipt": {
+    "event_id": "evt_1Ud2kIGnEQDyu3RRUYJ5RMNy",
+    "type": "invoice.paid",
+    "object_id": "in_1Ud2kCGnEQDyu3RRBjQHAmD5",
+    "status": "processed",
+    "error_code": null,
+    "attempts": 0
+  },
+  "listener_lines": [
+    "2026-11-18 12:53:31   --> invoice.paid [evt_1Ud2kIGnEQDyu3RRUYJ5RMNy]",
+    "2026-11-18 12:53:33  <--  [200] POST http://localhost:3101/api/webhooks/stripe [evt_1Ud2kIGnEQDyu3RRUYJ5RMNy]"
+  ],
+  "HTTP200": true,
+  "delivery_lane": "Read-only actual provider/listener correlation; no delivery injected"
+}

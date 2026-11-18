@@ -1,0 +1,86 @@
+[
+  {
+    "app": "pp",
+    "kind": "unit",
+    "start": "2026-11-18T06:24:41.362Z",
+    "end": "2026-11-18T06:24:53.995Z",
+    "command": [
+      "npm",
+      "test",
+      "--",
+      "--runInBand"
+    ],
+    "exit": 0,
+    "tests": 504,
+    "suites": 27
+  },
+  {
+    "app": "pp",
+    "kind": "typecheck",
+    "start": "2026-11-18T06:24:53.996Z",
+    "end": "2026-11-18T06:25:04.282Z",
+    "command": [
+      "./node_modules/.bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "tests": 0,
+    "suites": 0
+  },
+  {
+    "app": "pp",
+    "kind": "lint",
+    "start": "2026-11-18T06:25:04.282Z",
+    "end": "2026-11-18T06:25:15.543Z",
+    "command": [
+      "npm",
+      "run",
+      "lint"
+    ],
+    "exit": 0,
+    "tests": 0,
+    "suites": 0
+  },
+  {
+    "app": "ob",
+    "kind": "unit",
+    "start": "2026-11-18T06:25:15.544Z",
+    "end": "2026-11-18T06:25:30.713Z",
+    "command": [
+      "npm",
+      "test",
+      "--",
+      "--runInBand"
+    ],
+    "exit": 0,
+    "tests": 319,
+    "suites": 48
+  },
+  {
+    "app": "ob",
+    "kind": "typecheck",
+    "start": "2026-11-18T06:25:30.714Z",
+    "end": "2026-11-18T06:25:39.061Z",
+    "command": [
+      "./node_modules/.bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "tests": 0,
+    "suites": 0
+  },
+  {
+    "app": "ob",
+    "kind": "lint",
+    "start": "2026-11-18T06:25:39.061Z",
+    "end": "2026-11-18T06:25:48.613Z",
+    "command": [
+      "npm",
+      "run",
+      "lint"
+    ],
+    "exit": 0,
+    "tests": 0,
+    "suites": 0
+  }
+]

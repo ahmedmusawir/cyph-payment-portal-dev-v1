@@ -1,0 +1,23 @@
+{
+  "source": "agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q4/01/effects/counters.json",
+  "sha256": "e948bb17a2256076961c9c9fce98f4142eeb69deae7534f058b39c16f01fb807",
+  "counters": {
+    "seq": 2321,
+    "used": {
+      "reads": 3101,
+      "provider_mutations": 383,
+      "new_identities": 12,
+      "test_clocks": 3,
+      "customers": 8,
+      "subscriptions": 8,
+      "attempted_cents": 591178,
+      "sign_ins": 167,
+      "pay_or_hosted": 64,
+      "email_attempts": 18,
+      "unique_identities": 8,
+      "refunds": 2,
+      "scratch_cycles": 1
+    }
+  },
+  "reason": "Q4/02cumulativecounters,nothingreset"
+}

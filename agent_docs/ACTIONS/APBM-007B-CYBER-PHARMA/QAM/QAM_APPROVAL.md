@@ -98,6 +98,10 @@ All other limits unchanged. Standing authority from this morning continues for t
 
 Keep every fixture as is. Do not start apps or a listener. Engineering now has the QA branch. When the Director provides the repaired pair, Friday will send the bound retest scope. Current state **REPAIR RULED — AWAITING COMMIT**; nobody retests in this state.
 
+### Q4/02 release — Friday and Tony,18November2026; transcribed by Cody
+
+Source: project record QA_LEAD_Q4_02_BINDING_APBM007B_2026-11-18.md, current Director conversation. QA LEAD(Friday): Q4/02scopeD1–D8 approved, transcribed plan§7; planSHA-256 `c06196aa44ab3cee181e101a175106a96b7f24e1e941f5754aa0bd38124bbdbb`. DIRECTOR(Tony): Q4/02released bysendingthismessage,18November2026. Repairedpair: Portalba66534351368b4b67b9e61d6f0278866950c850; OwedBook855e0ad2e22a37e633ab5a55b8459e9bcc6bd871, qa/apbm-007b. Bothremoteheads/ancestryverified. Budgetalreadyrecorded:sign-ins300,provider560(last20cleanup),pay_or_hosted100,reads8000;othersunchanged,counterspreserved,nothingreset; suppliedstandingauthoritycontinues. Keepallfixtures, no migration/repair/rebind, effectsSCRATCH/sandbox, ownedruntimeonly.
+
 `RELEASED FOR Q4` requires all three: the repaired candidate identity, the QA Lead's retest-scope approval and the Director's release (`QAM_ENTRY.md` §5).
 
 *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*

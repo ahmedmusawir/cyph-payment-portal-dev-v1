@@ -1,0 +1,204 @@
+{
+  "at": "2026-11-18T08:03:39.737765+00:00",
+  "final_value_scan_sha256": "e25223130227145423cbf232f2fba2fac4d46a3c535d44bd30b0d9885c00c7e8",
+  "removals": [
+    {
+      "path": "/home/moose/.apbm007b/apbm007b-qa-20261117T074504611Z-c414c4af",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/.env.qa.local",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM-007B-CYBER-PHARMA_Q1_REVIEW_01",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM-007B-CYBER-PHARMA_Q1_REVIEW_02",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM-007B-CYBER-PHARMA_Q2_REVIEW_01",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM-007B-CYBER-PHARMA_Q4_REVIEW_01",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM-007B-CYBER-PHARMA_Q4_REVIEW_02_EXPANDED",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM-007B-CYBER-PHARMA_Q4_REVIEW_02_STAGE",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM-007B-CYBER-PHARMA_STOP_REVIEW_01",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM-007B-CYBER-PHARMA_STOP_REVIEW_02",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM-007B-CYBER-PHARMA_STOP_REVIEW_03",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM-007B-CYBER-PHARMA_STOP_REVIEW_04",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM007B_Q2_01_EXPANDED",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM007B_Q2_PRE_EXPORT",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM007B_Q4_FINAL_PREFLIGHT",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM007B_Q4_REVIEW01_EXPANDED",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM007B_STOP02_EXPANDED",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM007B_STOP03_EXPANDED",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/APBM007B_STOP04_EXPANDED",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/apbm007b-qa-q4-02",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/apbm007b-qa-cleanup-01",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/apbm007b-q4-s1.json",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/apbm007b-qa-foreign-fixture.json",
+      "result": "already_absent",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/apbm007b-watch-grouped.cjs",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/finalize_apbm007b_q2_records.py",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/package_apbm007b_q2_final.py",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/package_apbm007b_q4_final.py",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/package_apbm007b_q4_stop03.py",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/package_apbm007b_q4_stop04.py",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/apbm-q2-package.py",
+      "result": "removed",
+      "verified_absent": true
+    },
+    {
+      "path": "/tmp/apbm-q2-report.py",
+      "result": "removed",
+      "verified_absent": true
+    }
+  ],
+  "protected_after": {
+    "cyph-payment-portal-dev-v1": {
+      "HEAD": "ba66534351368b4b67b9e61d6f0278866950c850",
+      "outside_QAM_tracked_changes": [],
+      "director_env_local_stat": {
+        "st_ino": 467272,
+        "st_size": 1950,
+        "st_mtime_ns": 1794900285205261741
+      },
+      "status": [
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AC_EVIDENCE_MATRIX.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/FINDINGS.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/README.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/REVIEW_START_HERE.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_APPROVAL.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_CERTIFICATION.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_CLEANUP_REPORT.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_EXECUTION_REPORT.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_STATE.md",
+        " M agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/QAM_TEST_PLAN.md",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/CLEANUP/",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/AUTOMATION/Q4_02/",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/APBM-007B-CYBER-PHARMA_Q4_REVIEW_02.zip",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/Q4_02_RECEIPT.json",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/HANDOFFS/SOURCE_REFERENCES_Q4_02.json",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/CLEANUP/",
+        "?? agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/QAM/evidence/Q4/02/"
+      ]
+    },
+    "cyph-v1-dev": {
+      "HEAD": "855e0ad2e22a37e633ab5a55b8459e9bcc6bd871",
+      "outside_QAM_tracked_changes": [],
+      "director_env_local_stat": {
+        "st_ino": 205684,
+        "st_size": 2602,
+        "st_mtime_ns": 1794885210278234737
+      },
+      "status": []
+    }
+  },
+  "protected_matches_before": true,
+  "old_archives_unchanged": true,
+  "no_physical_secure_erasure_claim": "Filesystem removal verified; no assertion of storage-level erasure or backup deletion"
+}

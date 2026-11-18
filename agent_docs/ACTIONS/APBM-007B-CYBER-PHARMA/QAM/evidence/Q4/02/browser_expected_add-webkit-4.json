@@ -1,0 +1,9 @@
+{
+  "written_before_attempt": "2026-11-18T06:35:51.441Z",
+  "period_start": 1802857313,
+  "period_end": 1805276513,
+  "provider_frozen_at": 1802860913,
+  "cents": 4893,
+  "quantity_before": 17,
+  "formula": "round-half-up(4900*(period_end-provider_clock)/(period_end-period_start))"
+}

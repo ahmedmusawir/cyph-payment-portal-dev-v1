@@ -1,0 +1,13 @@
+{
+  "profile_probe_cookie_injection": {
+    "initial_attempt": "loading_probes.json",
+    "cause": "QA injected all Supabase browser cookies as HttpOnly. SSR was authenticated, but client Supabase SDK could not read its session for profile update, so no synthetic Auth PUT was submitted.",
+    "correction": "Follow-up injects normal readable SSR auth cookies and waits for intercepted SDK request; no product repair, password or provider mutation.",
+    "affected": "Three profile submit probes only; other12observations retained.",
+    "followup": "loading_probes_profile_followup.json"
+  },
+  "original_test_start": "Exact Q4/01 onTestBegin timestamp not captured; pre-spawn marker retained. Operationcreated_at bounds show activation40.097seconds later, beyond any30second test whose confirm preceded operation creation. No exact start invented.",
+  "private_trace_instrument": "New unchanged browser specs use QA timing reporter and private0600HAR traces solely to extract confirm duration; raw traces/auth snapshots never exported. All source/timeout checks preserved.",
+  "settlement_poll": "Browser campaign includes lifecycle completed rows in its conservative terminal poll, causing up to60seconds extra between some completed runs. This adds bounded read reservations/time only, no provider actions or product-test timeout changes. Original executed helper and attempts retained; do not infer product delay from inter-run spacing.",
+  "final_report_caps_dictionary": "First report-generation attempt omitted the unchanged refunds key from its validation dictionary and stopped before final document writes. Added cap2, matching released ledger; counters/effects unchanged. No product tests repeated."
+}

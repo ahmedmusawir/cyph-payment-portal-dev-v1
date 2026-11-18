@@ -398,6 +398,21 @@ Entry before effects: read complete old-to-repaired diffs; compare changed files
 
 Director budget: counters preserved, nothing reset. Provider mutations400 total (last20cleanup), sign-ins176, test clocks7, sandbox refunds2, customers16 and subscriptions16; all other limits unchanged. Director approves the six support actions. Reserve before each attempt; return before exceeding a limit. Failures are findings; only eight playbook stops halt. No repair/rebind during Q4; all effects SCRATCH plus Stripe sandbox. No Director session planned; any necessary human checks grouped into one request with complete mailbox/To/time/subject/instructions and fresh links. Keep every fixture including F-Q2-001 unrefunded. At phase exit stop only owned apps/listener/local containers and tell Director when listener stopped. Return Q4 COMPLETE indexed package or playbook stop.
 
+### Q4/02 scope — Friday, released by Director Tony,18November2026
+
+Source: project record QA_LEAD_Q4_02_BINDING_APBM007B_2026-11-18.md, supplied current Director conversation. Repaired pair remotely verified: Portal ba66534351368b4b67b9e61d6f0278866950c850; OwedBook855e0ad2e22a37e633ab5a55b8459e9bcc6bd871, qa/apbm-007b. Both descend from Q4/01; declared UI/test-only product diff verified; no server/database/migration/payment/activation change.
+
+1. Builds from the repaired pair on3100/3101 againstSCRATCH, served identity verified, one ownedlistener, nothing forwarding3001. No migration this round; confirmSCRATCHledger70.
+2. Loading-delay probe on three engines for every touched form: OwedBooksign-inlink; Portalpasswordsign-in includingShowpassword; Portalsign-inlink; OwedBookchangepassword; PortalAddStoredetails. Textkept, buttonstatecorrect, submittedvaluescorrect.
+3. Sign-inregression, bothapps, threeengines: passwordandlinksign-in, cross-appsign-out, changepassword. Anychangedrolepassword staysprivate; recordonlythat itchanged.
+4. F-Q4-002: originalrun compareteststart,30-secondlimit andactivated_at ofoperationf80277f8-8d46-49e5-857e-a179707a4852. UnchangedAddStorespecWebKitfive times andonceeachChromium/Firefox; recordconfirmrequestdurationeverytime.
+5. F-Q4-003: checkoriginalfailuresign-out/sessionrevocation fromothertests/QAactions. UnchangedO1specWebKitfive timesalone andtwicefull-suiteorder.
+6. WebKitstaffspecthreetimes; unitsuites,typecheck,lint; bundlescannewbuilds.
+7. CarryeverythingelsefromQ4/01withitscommitsandwhyitstillapplies; no oldresultsubstitutesfortouchedforms/newreproductions.
+8. LAST, aftereverythingabovecompleted/recorded: prepareonelivetransfer-buyercompletionontherepairedpair; onecopiedlinkfromDirectorinbox. Fullinstructionsmailbox/Toalias/subject/AsiaDhakasendtime/copydonotclickwithfreshlink. Ifdeclined/unavailable, NOTRUNwithlimitationandfinish.
+
+Rules: failureisafinding,continue; onlymorninghardlinesstop; norepair/rebind; effectsSCRATCH/sandbox; keepeveryfixture. At exit stoponlyownedapps/listener andtellDirector. ReturnQ4/02COMPLETEindexedpackage, byteidenticalDownloadscopy. Budgetpreserved:sign-ins300,provider560(last20cleanup),pay_or_hosted100,reads8000;othersunchanged,standingauthoritycontinues.
+
 ## 8. QA Lead amendments
 
 Applied by Cody, 2026-11-17 Asia/Dhaka, exactly as supplied by Friday via Tony’s current message. No second plan review. Source reference supplied by QA Lead: QA_LEAD_DECISION_APBM007B_Q1_01_2026-11-17.md, SHA-256 304be11445b91494c98605f76f6e89406860d1f43d51c5bb7e3964b7d885af95 (source attachment not independently received/hash-verified; instructions transcribed from this conversation). Before/after diff: evidence/preflight/02/plan_amendments.diff.

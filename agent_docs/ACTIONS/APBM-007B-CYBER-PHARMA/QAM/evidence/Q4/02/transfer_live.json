@@ -1,0 +1,93 @@
+{
+  "stage": "not_run",
+  "seller_role": "NEW_MEMBER",
+  "buyer_role": "NEW_ADMIN",
+  "steps": [
+    {
+      "name": "authorized",
+      "at": "2026-11-18T06:53:36.617Z",
+      "effective_at": "2026-11-18T06:55:03.563Z"
+    }
+  ],
+  "seller": {
+    "role": "NEW_MEMBER",
+    "account": "82a2d611-4ed4-402f-8082-531749b2a523",
+    "customer": "cus_Ve2PY4BIOkhh4R",
+    "subscription": "sub_1UckKtGnEQDyu3RRzSsOMNyj",
+    "clock": null,
+    "context_enabled": false,
+    "visa": "pm_1UckKqGnEQDyu3RRg5HbWof2",
+    "authpm": "pm_1Ucy1DGnEQDyu3RRT3UX7TDn",
+    "card_selected": true,
+    "prepared": true
+  },
+  "buyer": {
+    "role": "NEW_ADMIN",
+    "customer": "cus_VeGY4NupjibtEo",
+    "visa": "pm_1Ucy1EGnEQDyu3RRMAM24qBy",
+    "subscription": "sub_1Ucy1GGnEQDyu3RRvzi7OUrP",
+    "account": "132f1534-c86e-423b-b1df-07f171793dcf",
+    "clock": null,
+    "context_enabled": false,
+    "baseline_store": "f16bbfaf-5200-4260-99b3-e8b3a2906065",
+    "authpm": "pm_1Ucy1IGnEQDyu3RRW7tPJjV1",
+    "card_selected": true,
+    "prepared": true
+  },
+  "seller_visa_ready": true,
+  "buyer_visa_ready": true,
+  "seller_quantity_before_prepare": 2,
+  "npi": "1570611875",
+  "source_expected": {
+    "written_before_quote": "2026-11-18T06:53:15.795Z",
+    "basis_cents": 4900,
+    "period_start": 1794914041,
+    "period_end": 1797506041,
+    "formula": "round-half-up(4900*(period_end-quote_created_at)/(period_end-period_start))",
+    "cents": 4766,
+    "quote_cents": 4766,
+    "written_before_confirm": "2026-11-18T06:53:23.536Z"
+  },
+  "source_operation": "e3997909-b03b-4903-9d90-537bb0667df8",
+  "source_business": "24fe12dd-f09e-402b-a91f-f69ec74bc162",
+  "source_invoice": "in_1Ud2kCGnEQDyu3RRBjQHAmD5",
+  "source_paid_cents": 4766,
+  "history": [
+    {
+      "id": "a27c80cd-3884-4589-a560-d46b6c4c8fec",
+      "business_id": "24fe12dd-f09e-402b-a91f-f69ec74bc162"
+    },
+    {
+      "id": "e3091600-aa05-4db3-aa4e-c9d46fb3c463",
+      "business_id": "24fe12dd-f09e-402b-a91f-f69ec74bc162"
+    }
+  ],
+  "effective_at": "2026-11-18T06:55:03.563Z",
+  "authorization": {
+    "dry": "planned",
+    "apply": "applied"
+  },
+  "transfer": "b254f723-9774-494d-9096-e50672ad323c",
+  "finalize": "applied",
+  "transfer_before_buyer": {
+    "id": "b254f723-9774-494d-9096-e50672ad323c",
+    "status": "buyer_reserved",
+    "pharmacy_id": "4d7d39db-52b2-4648-acf1-547f2cf16fad",
+    "source_account_id": "82a2d611-4ed4-402f-8082-531749b2a523",
+    "buyer_account_id": "132f1534-c86e-423b-b1df-07f171793dcf",
+    "buyer_business_id": null
+  },
+  "finalized": true,
+  "mail_sent_at": "2026-11-18T06:55:13.459Z",
+  "mail_http": 200,
+  "mail_subject": "Your Cyber Pharma sign-in link",
+  "mail_lane": "Real ordinary Portal requestSignInLink -> SCRATCH Auth mail -> controlled Gmail, manual Director copied-link pending",
+  "buyer_completion": {
+    "result": "NOT RUN",
+    "reason": "Director copied link was not provided during the final optional input window (more than six minutes after the instruction sheet/request); no decline or approval inferred. Q402D8 authorizes finishing with this availability limitation.",
+    "human_observation": "No new Director inbox observation or copied-link verification recorded",
+    "no_buyer_payment": true,
+    "retention": "Fresh paid seller source, history rows and buyer-reserved transfer retained; no cancellation/refund/cleanup",
+    "recorded_at": "2026-11-18T07:04:14.551Z"
+  }
+}
