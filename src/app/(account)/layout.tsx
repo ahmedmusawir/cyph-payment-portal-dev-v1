@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { getPortalUser } from "@/services/auth/session";
+import { getPortalUser, getPortalViewerRole } from "@/services/auth/session";
 import { Shell } from "@/components/portal/Shell";
 
 // Auth gate for every signed-in screen (APBM007A): ANY authenticated user —
@@ -18,5 +18,9 @@ export default async function AccountLayout({
   const user = await getPortalUser();
   if (!user) redirect("/login");
 
-  return <Shell user={{ displayName: user.displayName, email: user.email }}>{children}</Shell>;
+  // Manual QA 20 Nov 2026: the navbar role badge comes from tenant_stores, read with the person's own session (an unaudited
+  // capability read). A failure shows no badge rather than a guess.
+  const role = await getPortalViewerRole();
+
+  return <Shell user={{ displayName: user.displayName, email: user.email, nameSet: user.nameSet, role }}>{children}</Shell>;
 }

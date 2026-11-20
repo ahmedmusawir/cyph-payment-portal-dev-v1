@@ -2,7 +2,6 @@
 
 import type { PharmacyDraft } from "@/types/portal/contract";
 import { SelectField, TextField } from "./FormField";
-import { Pill } from "./Pill";
 import { RadioCard } from "./RadioCard";
 import { US_STATE_OPTIONS } from "@/services/portal";
 
@@ -156,21 +155,12 @@ export function PharmacyFields({
             description="You also manage this store as its admin, in addition to owning the account."
           />
           {context === "signup" ? (
-            // 007A: naming a different store admin is deferred. Shown, never selectable.
-            <RadioCard
-              name="admin"
-              value="other"
-              checked={false}
-              disabled
-              onSelect={() => undefined}
-              title={
-                <span className="flex flex-wrap items-center gap-2">
-                  <span className="text-muted-foreground">Someone else</span>
-                  <Pill tone="muted">Not available yet</Pill>
-                </span>
-              }
-              description="Naming a different store admin is not available yet. You will be this store's admin."
-            />
+            // Manual QA 19 Nov 2026 (R5): the supported way to delegate is the owner-only admin invitation in OwedBook after
+            // activation; signup does not collect another person, so no misleading option is shown.
+            <p className="text-sm text-muted-foreground" data-testid="admin-delegation-note">
+              As the owner you already manage this store. After it is active you can invite someone else as its store admin
+              from OwedBook (Admin Portal → the store → Invite). A store admin manages that store&apos;s people; billing stays with you.
+            </p>
           ) : (
             <RadioCard
               name="admin"

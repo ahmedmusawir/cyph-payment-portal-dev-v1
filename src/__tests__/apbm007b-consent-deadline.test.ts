@@ -15,6 +15,7 @@ const mockS = {
   billingNow: 0, leaseFree: true, op: null as Op | null, intents: new Set<string>(), rpcs: [] as { fn: string; args: Record<string, unknown> }[],
   inv: { status: 'open', paid_at: null as number | null, amount: 3774 }, card: '3ds' as 'ok' | '3ds', raceOnVoid: null as number | null,
   quantity: 2, quantityUpdates: [] as number[], pay: 0, void: 0,
+  subPm: null as string | null, payParams: [] as Record<string, unknown>[], intentParams: [] as Record<string, unknown>[],
 };
 const mockInvoice = () => ({ id: 'in_unit', customer: 'cus_unit', currency: 'usd', status: mockS.inv.status, amount_due: mockS.inv.amount, total: mockS.inv.amount,
   amount_paid: mockS.inv.status === 'paid' ? mockS.inv.amount : 0, metadata: { apbm_operation: 'op' }, hosted_invoice_url: 'https://invoice.invalid/x',
@@ -26,7 +27,7 @@ const mockRpc = async (fn: string, args: Record<string, unknown>): Promise<unkno
   switch (fn) {
     case 'store_operation_lease': if (!mockS.leaseFree) return null; o.fencing_epoch += 1; return o.fencing_epoch;
     case 'store_operation_release': return true;
-    case 'store_operation_intent': mockS.intents.add(String(args.p_stage)); return 'recorded';
+    case 'store_operation_intent': mockS.intents.add(String(args.p_stage)); mockS.intentParams.push({ stage: args.p_stage, ...(args.p_params as Record<string, unknown>) }); return 'recorded';
     case 'store_operation_intent_outcome': return null;
     case 'store_operation_deadline_passed': return deadline <= mockS.billingNow;
     case 'store_operations_due': return ['payment_setup', 'payment_pending'].includes(o.state) && deadline <= mockS.billingNow ? [{ id: o.id }] : [];
@@ -65,11 +66,11 @@ jest.mock('@/server/stripeClient', () => ({
   stripe: () => ({
     invoices: {
       retrieve: async () => ({ ...mockInvoice(), metadata: { apbm_operation: (mockS.op as Op).id } }),
-      pay: async () => { mockS.pay++; if (mockS.card === '3ds') throw Object.assign(new Error('requires action'), { code: 'invoice_payment_intent_requires_action' }); mockPaid(Math.floor(mockS.billingNow / 1000)); return {}; },
+      pay: async (_id: string, params: Record<string, unknown>) => { mockS.pay++; mockS.payParams.push(params); if (mockS.card === '3ds') throw Object.assign(new Error('requires action'), { code: 'invoice_payment_intent_requires_action' }); mockPaid(Math.floor(mockS.billingNow / 1000)); return {}; },
       voidInvoice: async () => { mockS.void++; if (mockS.raceOnVoid !== null) mockPaid(mockS.raceOnVoid); if (mockS.inv.status !== 'open') throw Object.assign(new Error('not open'), { code: 'invoice_not_open' }); mockS.inv.status = 'void'; return {}; },
     },
     subscriptions: {
-      retrieve: async () => ({ id: 'sub_unit', status: 'active', items: { data: [{ id: 'si_unit', quantity: mockS.quantity, price: { id: 'price_unit' }, current_period_start: PS / 1000, current_period_end: PE / 1000 }] } }),
+      retrieve: async () => ({ id: 'sub_unit', status: 'active', default_payment_method: mockS.subPm, items: { data: [{ id: 'si_unit', quantity: mockS.quantity, price: { id: 'price_unit' }, current_period_start: PS / 1000, current_period_end: PE / 1000 }] } }),
       update: async (_id: string, p: { items: { quantity: number }[] }) => { mockS.quantityUpdates.push(p.items[0].quantity); mockS.quantity = p.items[0].quantity; return {}; },
     },
   }),
@@ -87,7 +88,7 @@ function setup(mode: Mode, opts: { payIntentRecorded: boolean }) {
     invoice_id: 'in_unit', amount_cents: 3774, stripe_customer_id: 'cus_unit', stripe_subscription_id: 'sub_unit', stripe_item_id: 'si_unit', period_start: new Date(PS).toISOString(),
     period_end: new Date(PE).toISOString(), target_quantity: 3, hosted_invoice_url: 'https://invoice.invalid/x', created_at: new Date(DEADLINE - 1800_000).toISOString(), fencing_epoch: 0,
     provider_paid_at: null, close_reference: null, store_name: 'Unit Store', npi: '1003000118' };
-  Object.assign(mockS, { leaseFree: true, rpcs: [], inv: { status: 'open', paid_at: null, amount: 3774 }, card: '3ds', raceOnVoid: null, quantity: 2, quantityUpdates: [], pay: 0, void: 0 });
+  Object.assign(mockS, { leaseFree: true, rpcs: [], inv: { status: 'open', paid_at: null, amount: 3774 }, card: '3ds', raceOnVoid: null, quantity: 2, quantityUpdates: [], pay: 0, void: 0, subPm: null, payParams: [], intentParams: [] });
   mockS.intents = new Set(opts.payIntentRecorded ? ['pay'] : []);
   /** Billing clock (and the provider clock in a test context) at deadline + k seconds; the wall clock follows the mode. */
   const at = (k: number) => { mockS.billingNow = DEADLINE + k * 1000; jest.spyOn(Date, 'now').mockReturnValue(mode === 'simulated' ? mockS.billingNow - WALL_BEHIND_MS : mockS.billingNow); };
@@ -149,5 +150,23 @@ describe.each<Mode>(['real', 'simulated'])('consent deadline (%s time)', (mode) 
     const t = setup(mode, { payIntentRecorded: true }); t.paidAt(-60); t.at(10);
     await advanceStoreOperation((mockS.op as Op).id);
     expect(mockS.rpcs.some((r) => r.fn === 'store_operation_transition' && r.args.p_to === 'paid_pending_activation')).toBe(false);
+  });
+});
+
+// Manual QA 19 Nov 2026 (R3): DEV operation ab6a6a91 failed its one charge with Stripe 'missing' because registration Checkout
+// saves the card on the SUBSCRIPTION, while a bare invoices.pay uses only the customer's invoice default.
+describe('add-store charge uses the card saved on the subscription', () => {
+  it('pays once with the subscription default payment method and records it in the intent', async () => {
+    const t = setup('real', { payIntentRecorded: false }); mockS.card = 'ok'; mockS.subPm = 'pm_from_checkout'; t.at(-1500);
+    expect(await advanceStoreOperation((mockS.op as Op).id)).toBe('activated');
+    expect(mockS.payParams).toEqual([{ payment_method: 'pm_from_checkout' }]);
+    expect(mockS.intentParams.find((x) => x.stage === 'pay')).toMatchObject({ payment_method: 'pm_from_checkout' });
+  });
+  it('without a subscription card it falls back to the customer default (no parameter) and still charges at most once', async () => {
+    const t = setup('real', { payIntentRecorded: false }); mockS.card = '3ds'; mockS.subPm = null; t.at(-1500);
+    expect(await advanceStoreOperation((mockS.op as Op).id)).toBe('payment_pending');
+    expect(await advanceStoreOperation((mockS.op as Op).id)).toBe('payment_pending');
+    expect([mockS.pay, mockS.payParams]).toEqual([1, [{}]]);
+    expect(mockS.intentParams.find((x) => x.stage === 'pay')).toMatchObject({ payment_method: 'customer_default' });
   });
 });

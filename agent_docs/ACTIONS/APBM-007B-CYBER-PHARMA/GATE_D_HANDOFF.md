@@ -51,3 +51,42 @@ after Gate Q.
 9. Rollback readiness.
 
 Return revision-bound Gate D findings separately. **No local Gate Q certificate implies a Gate D pass.**
+
+## 5. Director additions, 19 November 2026 (stakeholder Alpha)
+
+Recorded by Claudy on the Director's instruction. Not implemented, configured or verified.
+
+1. **Open-recipient mail policy before stakeholder Alpha testing.** Implement and independently verify the proposed
+   `MAIL_RECIPIENT_POLICY` (default `allowlist`; `open` honoured only on the alpha DEV project `yrsuwikjnbmvpznrgydb`;
+   `*` and `MAIL_GUARD=off` stay ignored). Proposal: OwedBook
+   `agent_docs/RESPONSES/response_2026-11-19_150500_open-invite-mail-proposal.md`. It amends `CONTRACTS/CLOCK_AND_NOTICES.md`
+   line 23 and needs a Director ruling. Until it ships, mail goes only to exact `MAIL_ALLOWLIST` addresses.
+2. **Supabase Auth callback URLs.** Verify Site URL and redirect allowlist for:
+   - `https://owedbook.alpha.cyberizedev.com` (`/api/auth/confirm`)
+   - `https://payment.alpha.cyberizedev.com` (`/api/auth/confirm`)
+
+   **Origin discrepancy (source, not only configuration):** both apps' `src/lib/appIdentity.ts` freeze the `staging`
+   origins as `https://owedbook.cyberizedev.com` and `https://owedbook-payment.cyberizedev.com`. `siteOriginMatches()`
+   fails closed when `NEXT_PUBLIC_SITE_URL` differs, and the cross-app handoff uses that table. Serving on the alpha domains
+   needs an approved source change to that table in both apps (or a domain decision that matches it). This supersedes
+   the §2 "Portal origin" row's two candidates once the Director confirms.
+3. **Tester guide.** Verify that the testers' inbox supports plus-aliases (`moose+alpha01-<role>@cyberizegroup.com`)
+   before the session, and use a separate browser session (profile or private window) for each role: session cookies
+   are per app and per environment, and one browser shares them across tabs.
+
+**Status update, 20 November 2026 (Claudy):**
+- **Item 1:** implemented in code in both apps (`MAIL_RECIPIENT_POLICY`, amendment AM-MQ-02; 7 unit tests per app plus both mail-path tests). It is not configured or verified on any deployed environment. Configuration sheet: `MANUAL_QA/2026-11-19/STAGING_MAIL_AND_AUTH.md`.
+- **Items 2 and 3:** unchanged and still open.
+
+## 6. Staging inventory (20 November 2026, Claudy; read only)
+
+The current two-app inventory is in `MANUAL_QA/2026-11-20/STAGING_INVENTORY.md`. It covers origins and allowlists, auth routes, variable names and classes, webhook, mail, scheduler, deployment files and conflicts, and the ordered decisions.
+
+**Findings that change §2:**
+- The Portal kit (3 Nov) does not pass `NEXT_PUBLIC_APP_ENV=staging`. Without it, every staging request runs with the local origins and fails closed.
+- The kit still assumes zero secrets. Four server secrets are now required.
+- The kit's domain `cyph-payment.cyberizedev.com` conflicts with the code's staging origin.
+- The kit's service `cyph-sub-portal-prod` was already deployed once (`abbbcc8`).
+- Both Next.js versions in use have published advisories. 16.4.5 is the minimal clean target and needs a separate approval.
+
+**Process:** deployment preparation follows the targeted manual retest, and deployment itself stays a separate Director release.

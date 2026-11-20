@@ -71,6 +71,21 @@ describe('billing notice dispatch', () => {
     expect(sent[0].text).toContain('http://localhost:3001/billing');
     expect(finish()).toMatchObject({ p_outcome: 'sent', p_message_id: 'msg_1', p_epoch: 3 });
   });
+  // Manual QA 19 Nov 2026 (R10): the explicit DEV-only open policy reaches the real notice path, and fails closed elsewhere.
+  it('open policy on the DEV/alpha project: a plus-alias owner outside the allowlist is sent through the same path', async () => {
+    Object.assign(process.env, { MAIL_ALLOWLIST: '', MAIL_RECIPIENT_POLICY: 'open', NEXT_PUBLIC_SUPABASE_URL: 'https://yrsuwikjnbmvpznrgydb.supabase.co' });
+    rpcImpl = (fn) => (fn === 'notices_due' ? ['n1'] : fn === 'notice_claim' ? { ...claim, to: 'moose+alpha01-owner@cyberizegroup.com' } : 'recorded');
+    const { dispatchDueNotices } = await import('@/server/billingNotices');
+    const r = await dispatchDueNotices();
+    expect(r.sent).toBe(1); expect(sent[0].to).toBe('moose+alpha01-owner@cyberizegroup.com'); expect(sent[0].key).toBe('renewal_payment_failed/in_1');
+  });
+  it('open policy on any other project is ignored: blocked locally, no provider request', async () => {
+    Object.assign(process.env, { MAIL_ALLOWLIST: '', MAIL_RECIPIENT_POLICY: 'open', NEXT_PUBLIC_SUPABASE_URL: 'https://ihgcsrypblqkwommrkgj.supabase.co' });
+    const { dispatchDueNotices } = await import('@/server/billingNotices');
+    const r = await dispatchDueNotices();
+    expect(r.blocked).toBe(1); expect(sent).toHaveLength(0);
+    expect(finish()).toMatchObject({ p_outcome: 'attention', p_error: 'mail_guard_blocked' });
+  });
   it('a recipient outside the allowlist is blocked locally: no provider request, attention recorded', async () => {
     process.env.MAIL_ALLOWLIST = 'someone-else@example.com';
     const { dispatchDueNotices } = await import('@/server/billingNotices');

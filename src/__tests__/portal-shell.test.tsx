@@ -67,3 +67,25 @@ it('a 502 shows the server message with a retry and does not leave the page; the
   expect(calls).toHaveLength(2);
   expect(mockRouter.push).toHaveBeenCalledWith('/login');
 });
+
+// Manual QA 20 Nov 2026 — navbar identity: name plus a compact store-role badge (from tenant_stores on the server), the full
+// email only inside the account menu, and an honest generic label when no name is set.
+it('shows the name and the role badge with its scope; the email is not in the bar, only in the menu', async () => {
+  mockLogout([DONE]);
+  render(<Shell user={{ displayName: 'Jordan Ellis', email: 'jordan@example.test', nameSet: true, role: { label: 'Store admin', scope: 'Store admin of 1 pharmacy' } }}>content</Shell>);
+  const badges = screen.getAllByTestId('nav-role-badge');
+  expect(badges[0].textContent).toContain('Store admin');
+  expect(badges[0].getAttribute('title')).toBe('Store admin of 1 pharmacy');
+  expect(screen.getByTestId('account-menu').textContent).not.toContain('jordan@example.test');
+  fireEvent.click(screen.getByTestId('menu-trigger'));
+  expect(await screen.findByText('jordan@example.test')).toBeTruthy();
+});
+
+it('no name set: the generic label is shown and the avatar uses the email initial; no role → no badge', () => {
+  mockLogout([DONE]);
+  render(<Shell user={{ displayName: 'Your account', email: 'pat@example.test', nameSet: false, role: null }}>content</Shell>);
+  const trigger = screen.getByTestId('account-menu');
+  expect(trigger.textContent).toContain('Your account');
+  expect(trigger.textContent).toContain('P');
+  expect(screen.queryByTestId('nav-role-badge')).toBeNull();
+});

@@ -18,6 +18,9 @@ const read = (f: string) => readFileSync(f, 'utf8');
 
 // Reviewed list. Adding an importer is a deliberate change to this test.
 const SUPABASE_IMPORTERS = [
+  // Manual QA 20 Nov 2026 (reviewed): the server-rendered Add Store page checks owner authority with the cookie-bound client
+  // before the form renders (same owner_billing_overview predicate as the Add Store APIs).
+  'src/app/(account)/stores/add/page.tsx',
   'src/app/api/auth/login/route.ts',
   'src/app/api/billing/overview/route.ts',
   'src/app/api/billing/portal/route.ts',

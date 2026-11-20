@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 2026-11-20 03:40 UTC — [CC] Claude Code
+- **Updated (module):** `MANUAL_QA/2026-11-19/DEV_APPLY_0071_PREPARED.md` (APPLIED section), `REPAIR_LEDGER.md` and `TESTER_PLAN.md` (DEV at 71, local open mail policy), `APBM_STATE.md` and `APBM_JOURNAL.md` (dated entries appended).
+- **Reason:** Director release: DEV 0071 apply (PASS). Documentation only.
+
+## 2026-11-20 02:22 UTC — [CC] Claude Code
+- **Updated (module `agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/`):** `APBM_JOURNAL.md`, `APBM_STATE.md`, `APBM_RULINGS.md`, `AMENDMENT_LEDGER.md` (AM-MQ-01…04), `GATE_D_HANDOFF.md` (§5 status note). Dated entries appended; history unchanged.
+- **New:** `MANUAL_QA/TESTER_PLAN.md`, `MANUAL_QA/2026-11-19/REPAIR_LEDGER.md`, `DEV_APPLY_0071_PREPARED.md`, `STAGING_MAIL_AND_AUTH.md`.
+- **Product (manual QA R1–R10):** Add a pharmacy button; busy states; add-store payment (subscription card, payment-issue states, new-tab Stripe page, bounded polling, resume, completion); removal dialog and coverage labels; support and legal configuration; signup copy; DEV-only `MAIL_RECIPIENT_POLICY`; tests; `.env.example` names.
+- **Reason:** Director-led manual walkthrough of 19 Nov 2026 and the Director's approval of 20 Nov 2026.
+
+## 2026-11-19 08:54 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/GATE_D_HANDOFF.md` — new §5 (Director additions for stakeholder Alpha: open-recipient mail policy before Alpha testing; Supabase Auth callback URLs for `owedbook.alpha.cyberizedev.com` / `payment.alpha.cyberizedev.com`, with the `appIdentity.ts` origin discrepancy; tester guide on plus-aliases and per-role browser sessions). Existing sections unchanged.
+- **Reason:** Director instruction, 19 Nov 2026. Documentation only.
+
 ## 2026-11-18 08:55 UTC — [CC] Claude Code
 - **Updated:**
   - module `agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/`: `CONTRACT_MANIFEST.json` (hash correction, old values kept), `APBM_STATE.md`, `APBM_JOURNAL.md`, `QAM/HANDOFFS/ENGINEERING_HANDOFF.md` (dated closeout entries appended)
@@ -129,3 +143,10 @@
 - **Updated:** module `RULINGS.md` (R-008 verification record, R-009), `_project/APP_BRIEF.md` v1.2, `_project/DATA_CONTRACT.md` v1.2, `_project/IMPLEMENTATION_CONTRACT.md` v1.1, `ACCEPTANCE_SPEC.md` v1.1, `_project/UI_SPEC.md` (sign-in wording), `EXECUTION_PLAN.md`, `README.md`, `SKILLS_MANIFEST.md`, `playbook/04,05`, `verification/BUILD_CHECKLIST.md`, QAM preflight/risks/manifest/state/handoff, ledger/STATE/JOURNAL/RETROSPECTIVE, EVIDENCE (E2 report, stale check, logs), install record + manifest.
 - **Updated:** `RECOVERY.md` — E2 status and access standing rule.
 - **Reason:** Director R-009 dispatch (public entry; admin/superadmin account management) and E2 completion.
+
+## 2026-11-20 07:03 UTC — [CC] Claude Code
+
+- **Updated:** APBM-007B manual QA records — final consolidated repair batch.
+  - Portal module: `REPAIR_LEDGER.md`, `APBM_JOURNAL.md`, `APBM_STATE.md`, `TESTER_PLAN.md` v2, `GATE_D_HANDOFF.md` §6; new `MANUAL_QA/2026-11-20/STAGING_INVENTORY.md`.
+  - OwedBook: session log, `RECOVERY.md`, response `response_2026-11-20_130324_final-qa-repair-batch.md`.
+- **Reason:** Director order of 20 Nov 2026 (repairs F1–F6, advisory investigation, read-only deployment preparation).

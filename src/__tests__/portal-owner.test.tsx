@@ -67,10 +67,12 @@ beforeEach(() => {
 });
 
 describe('PlanView — one store only', () => {
-  it('has no store-count control and says more stores are not available yet', async () => {
+  // Manual QA 19 Nov 2026 (R1): adding stores exists (Billing → Add a pharmacy); signup no longer says it is unavailable.
+  it('has no store-count control and says more pharmacies are added from Billing once active', async () => {
     noDraft();
     render(<PlanView />);
-    expect((await screen.findByTestId('store-count')).textContent).toMatch(/Additional stores can be added later — that isn't available yet/);
+    expect((await screen.findByTestId('store-count')).textContent).toMatch(/Once it is active you can add more pharmacies from Billing/);
+    expect(document.body.textContent).not.toMatch(/not available yet/i);
     expect(screen.queryByRole('button', { name: /More pharmacies|Fewer pharmacies/ })).toBeNull();
     expect(screen.getByTestId('plan-price').textContent).toContain('$99.00');
     expect(document.body.textContent).not.toMatch(/illustrative|demo|TBD/i);
@@ -140,15 +142,18 @@ describe('PharmacyStepView — one pharmacy, saved with the owner', () => {
     await waitFor(() => expect(mockRouter.replace).toHaveBeenCalledWith('/register/owner'));
   });
 
-  it('NCPDP is optional; "someone else" as store admin is shown as not available yet', async () => {
+  // Manual QA 19 Nov 2026 (R5): signup collects no second person; the supported delegation path (owner-only store admin
+  // invitation in OwedBook after activation) is explained instead of a disabled "Someone else" option.
+  it('NCPDP is optional; the owner is the admin and delegation later is explained (no disabled "someone else")', async () => {
     registrationSessionStore.setState({ owner: OWNER });
     noDraft();
     render(<PharmacyStepView />);
     const ncpdp = await screen.findByLabelText(/NCPDP number/);
     expect(ncpdp.getAttribute('aria-required')).toBeNull();
     const radios = screen.getAllByRole('radio') as HTMLInputElement[];
-    expect(radios.map((r) => [r.value, r.checked, r.disabled])).toEqual([['owner', true, false], ['other', false, true]]);
-    expect(screen.getByText('Not available yet')).toBeTruthy();
+    expect(radios.map((r) => [r.value, r.checked, r.disabled])).toEqual([['owner', true, false]]);
+    expect(screen.getByTestId('admin-delegation-note').textContent).toMatch(/invite someone else as its store admin\s+from OwedBook/);
+    expect(document.body.textContent).not.toMatch(/not available yet/i);
     expect(screen.queryByLabelText(/Admin's email/)).toBeNull();
   });
 

@@ -54,10 +54,10 @@ export function PlanView() {
             <div className="min-w-0">
               <p className="text-sm font-medium text-foreground">Pharmacies on this subscription: 1</p>
               <p className="mt-1 text-xs text-muted-foreground">
-                You register one pharmacy now. Additional stores can be added later — that isn&apos;t available yet.
+                You register one pharmacy now. Once it is active you can add more pharmacies from Billing.
               </p>
             </div>
-            <Pill tone="muted" className="self-start">More stores · not available yet</Pill>
+            <Pill tone="muted" className="self-start">More stores · from Billing later</Pill>
           </div>
         </div>
 

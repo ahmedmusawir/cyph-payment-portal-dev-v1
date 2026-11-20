@@ -5,7 +5,7 @@ import { randomUUID } from 'node:crypto';
 import type Stripe from 'stripe';
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { admin } from '@/server/db';
-import { PortalError } from '@/server/errors';
+import { PortalError, logServer } from '@/server/errors';
 import { ownOrigin } from '@/lib/appIdentity';
 import { idOf } from '@/server/stripeMirror';
 import { assertStripeAccount, stripe, stripeCall, stripeNames } from '@/server/stripeClient';
@@ -38,6 +38,22 @@ export async function ownerOverview(userClient: SupabaseClient): Promise<Overvie
     return { ...o, access: { ...o.access, state: 'none', read_only: false } };
   }
   return o;
+}
+
+/**
+ * Manual QA 20 Nov 2026: the page-level owner check for owner-only screens (/stores/add), using the SAME predicate as the
+ * Add Store APIs (ownerContext → owner_billing_overview, 42501 for anyone who is not the account owner). It fails closed:
+ * anything other than a confirmed owner never gets the form. The APIs keep enforcing on their own.
+ */
+export async function ownerAccess(userClient: SupabaseClient): Promise<'owner' | 'not_owner' | 'unavailable'> {
+  try {
+    await ownerOverview(userClient);
+    return 'owner';
+  } catch (e) {
+    if (e instanceof PortalError && (e.code === 'not_owner' || e.code === 'sign_in_required')) return 'not_owner';
+    logServer('owner access', e);
+    return 'unavailable';
+  }
 }
 
 interface StripeLink { stripe_customer_id: string; stripe_subscription_id: string }

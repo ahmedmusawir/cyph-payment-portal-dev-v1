@@ -7,7 +7,7 @@ import { AlertCircle, ArrowLeft, ExternalLink, Loader2, Lock } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Alert, Placeholder } from "../Alert";
-import { BRAND } from "../brand";
+import { BRAND, LEGAL, NOT_CONFIGURED } from "../brand";
 import { PageContainer, ViewSkeleton } from "../Loading";
 import { PageHeader, RoleLabel } from "../PageHeader";
 import { Stepper } from "../Stepper";
@@ -251,7 +251,7 @@ export function ReviewView() {
                 </dd>
               </div>
             </dl>
-            <p className="mt-3 text-xs text-muted-foreground">One pharmacy per registration. Adding stores and naming a different store admin are not available yet.</p>
+            <p className="mt-3 text-xs text-muted-foreground">One pharmacy per registration. You can add more pharmacies from Billing once this one is active, and invite a store admin from OwedBook.</p>
           </section>
 
           <fieldset className="border border-border bg-card p-4 sm:p-5">
@@ -264,7 +264,7 @@ export function ReviewView() {
               <label className="flex min-h-[44px] cursor-pointer items-start gap-3 text-sm text-foreground">
                 <input id="c1" type="checkbox" className="mt-0.5 h-5 w-5 shrink-0" checked={consents.terms} disabled={!ready || leaving} onChange={toggle("terms")} aria-invalid={missing("terms") ? true : undefined} aria-describedby={missing("terms") ? "c1-err" : undefined} />
                 <span>
-                  I agree to the Terms of Service <Placeholder>[LINK TBD]</Placeholder> and Privacy Policy <Placeholder>[LINK TBD]</Placeholder>.
+                  I agree to the {LEGAL.termsUrl ? <a className="underline" href={LEGAL.termsUrl} target="_blank" rel="noopener noreferrer">Terms of Service</a> : <>Terms of Service <Placeholder>{NOT_CONFIGURED}</Placeholder></>} and {LEGAL.privacyUrl ? <a className="underline" href={LEGAL.privacyUrl} target="_blank" rel="noopener noreferrer">Privacy Policy</a> : <>Privacy Policy <Placeholder>{NOT_CONFIGURED}</Placeholder></>}.
                 </span>
               </label>
               {missing("terms") ? <ConsentError id="c1-err" /> : null}

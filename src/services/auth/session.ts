@@ -23,6 +23,7 @@ import type { PortalStaffUser, PortalUser } from '@/types/auth';
 import { isPortalStaffRole } from '@/services/auth/access';
 import { createClient } from '@/utils/supabase/server';
 import { getUserRole } from '@/utils/get-user-role';
+import { NO_DISPLAY_NAME, viewerRole, type Capability, type ViewerRole } from '@/lib/viewerRole';
 
 /**
  * APBM007A — any authenticated user (customers are ordinary members), or null when signed out.
@@ -35,11 +36,12 @@ export async function getPortalUser(): Promise<PortalUser | null> {
   } = await supabase.auth.getUser();
   if (!user) return null;
 
-  // Display-only name from auth metadata, falling back to the email local-part.
+  // Display-only name from auth metadata. Manual QA 20 Nov 2026: with no name set, an honest generic label — never the
+  // email address or its local-part (the full email stays in the account menu).
   const metadataName =
-    typeof user.user_metadata?.full_name === 'string' ? (user.user_metadata.full_name as string) : undefined;
+    typeof user.user_metadata?.full_name === 'string' ? (user.user_metadata.full_name as string).trim() : '';
   const email = user.email ?? '';
-  return { id: user.id, email, displayName: metadataName?.trim() || email.split('@')[0] || 'Account' };
+  return { id: user.id, email, displayName: metadataName || NO_DISPLAY_NAME, nameSet: Boolean(metadataName) };
 }
 
 /**
@@ -50,6 +52,16 @@ export async function requirePortalUser(): Promise<PortalUser> {
   const user = await getPortalUser();
   if (!user) redirect('/login');
   return user;
+}
+
+/**
+ * Manual QA 20 Nov 2026 — the navbar role badge: tenant_stores read with the person's own session (an unaudited capability
+ * read; ownership from the account, admin from the membership). Null when it cannot be read, so no badge is guessed.
+ */
+export async function getPortalViewerRole(): Promise<ViewerRole | null> {
+  const supabase = await createClient();
+  const r = await supabase.rpc('tenant_stores');
+  return !r.error && Array.isArray(r.data) ? viewerRole(r.data as { capability: Capability }[]) : null;
 }
 
 /**
