@@ -68,4 +68,5 @@ export type PaymentMethodState = { onFile: boolean; brand?: string; last4?: stri
 export interface BillingOverviewResponse { overview: BillingOverview; paymentMethod: PaymentMethodState }
 
 /** Any signed-in user of the portal (customers are ordinary members). No role is carried. */
-export interface PortalUserView { displayName: string; email: string }
+// nameSet false: no profile name, displayName is the generic label. role: from tenant_stores; null when none or unknown.
+export interface PortalUserView { displayName: string; email: string; nameSet?: boolean; role?: { label: 'Owner' | 'Store admin' | 'Member'; scope: string } | null }

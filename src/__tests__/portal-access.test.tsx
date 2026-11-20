@@ -31,9 +31,11 @@ import { redirect } from 'next/navigation';
 const createClientMock = createClient as jest.MockedFunction<typeof createClient>;
 const getUserRoleMock = getUserRole as jest.MockedFunction<typeof getUserRole>;
 
+let tenantStores: { data: unknown; error: unknown } = { data: [], error: null };
 function signedIn(user: Record<string, unknown> | null) {
   const getUser = jest.fn().mockResolvedValue({ data: { user } });
-  createClientMock.mockResolvedValue({ auth: { getUser } } as any);
+  const rpc = jest.fn(async (fn: string) => (fn === 'tenant_stores' ? tenantStores : { data: null, error: { code: 'unexpected' } }));
+  createClientMock.mockResolvedValue({ auth: { getUser }, rpc } as any);
 }
 
 const AUTH_USER = {
@@ -85,24 +87,36 @@ describe('getPortalUser', () => {
 
   it('resolves any authenticated user without a role lookup, carrying no role', async () => {
     signedIn(AUTH_USER);
-    await expect(getPortalUser()).resolves.toEqual({ id: 'user-1', email: 'owner@example.test', displayName: 'Owner Person' });
+    await expect(getPortalUser()).resolves.toEqual({ id: 'user-1', email: 'owner@example.test', displayName: 'Owner Person', nameSet: true });
     expect(getUserRoleMock).not.toHaveBeenCalled();
   });
 
-  it('falls back to the email local-part for the display name, and never reads a metadata role', async () => {
+  // Manual QA 20 Nov 2026: with no name set, an honest generic label — never the email local-part.
+  it('falls back to a generic label (not the email) for the display name, and never reads a metadata role', async () => {
     signedIn({ id: 'user-2', email: 'pat@example.test', user_metadata: { role: 'superadmin' } });
-    await expect(getPortalUser()).resolves.toEqual({ id: 'user-2', email: 'pat@example.test', displayName: 'pat' });
+    await expect(getPortalUser()).resolves.toEqual({ id: 'user-2', email: 'pat@example.test', displayName: 'Your account', nameSet: false });
   });
 });
 
 describe('(account) layout gate', () => {
-  it('renders the shell for any signed-in user with name and email only', async () => {
+  // Manual QA 20 Nov 2026: plus the store-role badge from tenant_stores (own session), never from user_roles or metadata.
+  it('renders the shell for any signed-in user with name, email and the tenant_stores role', async () => {
+    tenantStores = { data: [{ capability: 'owner' }, { capability: 'owner' }, { capability: 'member' }], error: null };
     signedIn(AUTH_USER);
     const element = await PortalLayout({ children: 'page' });
-    expect(element.props.user).toEqual({ displayName: 'Owner Person', email: 'owner@example.test' });
+    expect(element.props.user).toEqual({ displayName: 'Owner Person', email: 'owner@example.test', nameSet: true,
+      role: { label: 'Owner', scope: 'Owner of 2 pharmacies · Member of 1 pharmacy' } });
     expect(element.props.children).toBe('page');
     expect(redirect).not.toHaveBeenCalled();
     expect(getUserRoleMock).not.toHaveBeenCalled();
+  });
+
+  it('shows no badge when tenant_stores cannot be read, and none for a person with no stores', async () => {
+    tenantStores = { data: null, error: { code: '42501' } };
+    signedIn(AUTH_USER);
+    expect((await PortalLayout({ children: 'page' })).props.user.role).toBeNull();
+    tenantStores = { data: [], error: null };
+    expect((await PortalLayout({ children: 'page' })).props.user.role).toBeNull();
   });
 
   it('redirects a signed-out request to /login', async () => {

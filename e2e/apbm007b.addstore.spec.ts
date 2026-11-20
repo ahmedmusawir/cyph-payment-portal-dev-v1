@@ -50,16 +50,19 @@ test("owner adds a store: server quote, three consents, payment, activated; dash
 
 test("owner schedules a period-end removal and undoes it; no charge either way", async ({ page }) => {
   await signIn(page);
-  page.on("dialog", (d) => void d.accept());
+  // Manual QA 19 Nov 2026 (R9): an in-page confirmation naming the pharmacy and the date replaces the browser prompt.
   const section = page.getByTestId("pharmacies-section");
   const remove = section.getByRole("button", { name: "Remove at period end" }).first();
   await remove.click();
-  await expect(section.getByText("Removal scheduled.")).toBeVisible({ timeout: 30000 });
+  const dialog = page.getByRole("alertdialog");
+  await expect(dialog.getByText(/^Remove .+ on .+\?$/)).toBeVisible();
+  await dialog.getByRole("button", { name: "Schedule removal" }).click();
+  await expect(section.getByText(/^Removal scheduled/)).toBeVisible({ timeout: 30000 });
   const keep = section.getByRole("button", { name: "Keep this store" }).first();
   await expect(keep).toBeVisible({ timeout: 30000 });
   await expect(section.getByText(/Leaves on/).first()).toBeVisible();
   await keep.click();
-  await expect(section.getByText("Removal cancelled.")).toBeVisible({ timeout: 30000 });
+  await expect(section.getByText(/stays on your account\.$/)).toBeVisible({ timeout: 30000 });
   await expect(section.getByRole("button", { name: "Keep this store" })).toHaveCount(0, { timeout: 30000 });
 });
 

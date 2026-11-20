@@ -133,8 +133,31 @@ export async function quoteAddStore(userClient: SupabaseClient, input: { storeNa
 }
 
 // ---------------------------------------------------------------- A2 confirm
+/**
+ * Why a payment-pending Add Store still needs the owner (R3, manual QA 19 Nov 2026), derived only from the outcome code the
+ * server recorded for its single charge attempt. Never a client signal; never a reason to charge again.
+ */
+export type PaymentIssue = 'none' | 'processing' | 'authentication_required' | 'declined' | 'no_payment_method' | 'unknown';
+const AUTH_CODES = ['invoice_payment_intent_requires_action', 'authentication_required', 'payment_intent_authentication_failure'];
+const DECLINE_CODES = ['card_declined', 'insufficient_funds', 'expired_card', 'incorrect_cvc', 'incorrect_number', 'invalid_cvc', 'invalid_expiry_month',
+  'invalid_expiry_year', 'processing_error', 'card_decline_rate_limit_exceeded', 'payment_intent_payment_attempt_failed'];
+const NO_METHOD_CODES = ['missing', 'invoice_no_payment_method_types', 'payment_method_unactivated'];
+export function paymentIssueFor(state: string, payOutcome: string | null): PaymentIssue {
+  if (state !== 'payment_pending') return 'none';
+  if (payOutcome === null) return 'processing';            // the single attempt has not been recorded yet
+  if (payOutcome === 'paid') return 'processing';          // Stripe accepted the attempt; the invoice is not paid yet
+  if (AUTH_CODES.includes(payOutcome)) return 'authentication_required';
+  if (DECLINE_CODES.includes(payOutcome)) return 'declined';
+  if (NO_METHOD_CODES.includes(payOutcome)) return 'no_payment_method';
+  return 'unknown';
+}
+async function payOutcome(id: string): Promise<string | null> {
+  const r = await admin().from('provider_call_intents').select('outcome').eq('operation_id', id).eq('stage', 'pay').eq('attempt', 1).maybeSingle();
+  if (r.error) throw new PortalError('provider_unavailable', 'intent read');
+  return (r.data as { outcome: string | null } | null)?.outcome ?? null;
+}
 export interface StatusView { operationId: string; kind: string; state: string; errorCode: string | null; paymentDeadline: string | null; amountCents: number | null;
-  paymentRequired: boolean; hostedPaymentUrl: string | null; businessId: string | null; storeName: string | null; effectiveAt?: string | null }
+  paymentRequired: boolean; paymentIssue: PaymentIssue; hostedPaymentUrl: string | null; businessId: string | null; storeName: string | null; effectiveAt?: string | null }
 export async function confirmAddStore(userClient: SupabaseClient, input: { quoteId: string; intentKey: string }): Promise<StatusView> {
   const ctx = await ownerContext(userClient);
   const r = await rpc<{ operation?: OperationRow; error?: string }>('store_operation_claim', { p_quote: input.quoteId, p_actor: ctx.userId, p_intent: input.intentKey, p_terms_version: ADD_STORE_TERMS_VERSION });
@@ -158,8 +181,9 @@ async function statusFor(ctx: OwnerContext, id: string): Promise<StatusView> {
   // The hosted page is an owner-only capability, offered only while that exact invoice is open and awaiting payment
   // before the deadline on the account's billing clock (the database decides; never this server's wall clock).
   const showHosted = op.kind === 'store_add' && op.state === 'payment_pending' && !!op.hosted_invoice_url && !!op.payment_deadline && !(await deadlinePassed(op.id));
+  const issue = op.kind === 'store_add' ? paymentIssueFor(op.state, op.state === 'payment_pending' ? await payOutcome(op.id) : null) : 'none';
   return { operationId: op.id, kind: op.kind, state: op.state, errorCode: op.last_error_code, paymentDeadline: op.payment_deadline, amountCents: op.amount_cents,
-    paymentRequired: op.state === 'payment_pending', hostedPaymentUrl: showHosted ? op.hosted_invoice_url : null, businessId: op.state === 'activated' ? op.business_id : null,
+    paymentRequired: op.state === 'payment_pending', paymentIssue: issue, hostedPaymentUrl: showHosted ? op.hosted_invoice_url : null, businessId: op.state === 'activated' ? op.business_id : null,
     storeName: op.store_name, effectiveAt: op.kind === 'store_removal' && op.state === 'completed' ? op.period_end : null };
 }
 export async function storeOperationStatus(userClient: SupabaseClient, id: string): Promise<StatusView> {
@@ -321,13 +345,25 @@ async function setupInvoice(op: OperationRow, l: Lease): Promise<void> {
   await transition(op, l, 'attention', `invoice_${inv.status}`);
 }
 
+/** The subscription's default payment method id (the card saved at registration Checkout), or null. Read only. */
+async function subscriptionPaymentMethod(op: OperationRow): Promise<string | null> {
+  if (!op.stripe_subscription_id) return null;
+  const sub = await stripeCall('subscription read', () => stripe().subscriptions.retrieve(op.stripe_subscription_id as string));
+  const pm = sub.default_payment_method;
+  return typeof pm === 'string' ? pm : pm?.id ?? null;
+}
+
 /** Attempt payment ONCE (only before the deadline), then only read. Paid → routed by paid time; due and unpaid → verified close; open → wait. */
 async function settlePayment(op: OperationRow, l: Lease, due: boolean): Promise<void> {
   const s = stripe();
   let inv = await stripeCall('invoice read', () => s.invoices.retrieve(op.invoice_id as string));
   if (inv.status === 'open' && !due && !(await intentRecorded(op, 'pay'))) {
-    await intent(op, l, 'pay', `${op.id}:pay:1`, { invoice: inv.id, expected_cents: op.amount_cents });
-    try { await s.invoices.pay(inv.id as string, {}, { idempotencyKey: `${op.id}:pay:1` }); await outcome(op, 'pay', 'paid'); }
+    // Manual QA 19 Nov 2026 (R3): registration Checkout saves the owner's card on the SUBSCRIPTION, not as the customer's
+    // invoice default, so a bare invoices.pay found no card ('missing') and every real owner was sent to the hosted page.
+    // Pay with the subscription's own default payment method when it has one; otherwise Stripe's customer default applies.
+    const pm = await subscriptionPaymentMethod(op);
+    await intent(op, l, 'pay', `${op.id}:pay:1`, { invoice: inv.id, expected_cents: op.amount_cents, payment_method: pm ?? 'customer_default' });
+    try { await s.invoices.pay(inv.id as string, pm ? { payment_method: pm } : {}, { idempotencyKey: `${op.id}:pay:1` }); await outcome(op, 'pay', 'paid'); }
     catch (e) { await outcome(op, 'pay', (e as { code?: string }).code ?? 'error'); }
     inv = await stripeCall('invoice read', () => s.invoices.retrieve(op.invoice_id as string));
   }

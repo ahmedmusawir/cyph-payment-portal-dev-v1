@@ -25,3 +25,12 @@ All entries mean authored into this exact review candidate, not independently ap
 | PE11 | Exact94ID DEV read-only result0matches included and QA preflight scoped |
 
 Duplicate equivalent AC006/012/025/027 sentences consolidated without weakening their outcomes. New separate-invoice architecture supersedes pending-update proposal because Director approved preserving APA discount. Earlier probe supports some components only; CP1 establishes selected path before its implementation. No claim that Friday has seen original evidence until this review.
+
+## Manual QA repair round amendments — 20 November 2026 (Director-authorized; recorded by Claudy; contract files unchanged)
+
+| ID | Contract text amended | Amendment |
+|---|---|---|
+| AM-MQ-01 | `CONTRACTS/IDENTITY_AND_MEMBERSHIP.md` ("Demote old admin to member unless removal selected … Owner remains platform member and retains owner rights even if store membership demoted. … Removal cannot delete effective admin") | The account owner is never removed from a store, by any caller (0071 `member_remove`). An admin invitation may not ask to remove an owner incumbent (0071 `invitation_create`). The owner row may still become `member` at delegation (unchanged acceptance), only while ownership stays authoritative. The UI shows Owner and never demotion. Ownership changes stay with the transfer/recovery procedures |
+| AM-MQ-02 | `CONTRACTS/CLOCK_AND_NOTICES.md` §O-2 ("MAIL_ALLOWLIST … absent/empty means deny all … No wildcard/production bypass in E2; MAIL_GUARD=off is not authorized") | Adds `MAIL_RECIPIENT_POLICY=open`, honoured **only** when the app is bound to the DEV/alpha project `yrsuwikjnbmvpznrgydb`: any single syntactically valid recipient, plus aliases included. Default and every other project: exact allowlist. No wildcard; `MAIL_GUARD=off` is still ignored. Sender, attempts, spacing and idempotency are unchanged. Applies to both guarded adapters (OwedBook invitations, Portal notices) |
+| AM-MQ-03 | `ALLOWED_PATHS.md` (OwedBook migrations 0061–0067) | Forward migration `0071_007b_owner_settings_audit.sql` is added under the Director's repair order ("forward migration only if required"). SCRATCH is applied; the DEV apply needs a separate release |
+| AM-MQ-04 | `SCOPE.md` / D-10 copy | Signup and Portal copy no longer says adding stores or naming an admin is unavailable. Support address configured. Terms and Privacy shown as "(link not yet published)" until the Director supplies them. The pre-exposure legal blocker stands |

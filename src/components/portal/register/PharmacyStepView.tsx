@@ -136,7 +136,7 @@ export function PharmacyStepView() {
         <Pill tone="muted">1 of 1</Pill>
       </div>
       <p className="mt-1 text-sm text-muted-foreground">
-        We use these details to identify your pharmacy and set up its store. Ownership checks are separate — entering an identifier doesn&apos;t prove ownership. Adding more stores is not available yet.
+        We use these details to identify your pharmacy and set up its store. Ownership checks are separate — entering an identifier doesn&apos;t prove ownership. You can add more pharmacies from Billing after this one is active.
       </p>
 
       {notice ? (

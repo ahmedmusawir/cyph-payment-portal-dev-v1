@@ -44,3 +44,19 @@ BP01–09 contract additions applied in this working successor. Director default
 | Gate D | **PENDING** (`GATE_D_HANDOFF.md`) |
 | Awaiting separate releases | Merge to `main` (both repositories; `EVIDENCE/CLOSEOUT/commit/GIT_HANDOFF.md`); DEV 0070 apply; deployment |
 | Records | `CLOSEOUT_REPORT.md`, `CARRY_FORWARD.md`, `GATE_D_HANDOFF.md` |
+
+## Manual QA repair round (20 November 2026, appended by Claudy)
+
+| Item | Fact |
+|---|---|
+| Stage | **REPAIRS IMPLEMENTED — RETEST PENDING (Tony/JARVIS).** Historical Gate Q (PASS WITH KNOWN RISK, `ba66534`/`855e0ad`) is unchanged; current manual acceptance is tracked in `MANUAL_QA/` |
+| Trigger | Director-led manual walkthrough, 19 Nov 2026: 10 findings (R1–R10) |
+| Baseline | OwedBook `main` `64295a7`; Portal `main` `0443fda`; changes uncommitted in both working trees (Tony owns Git) |
+| Databases | DEV at **70** (0071 NOT applied; separate release). SCRATCH at **71** (apply PASS; proof 180/180) |
+| Records | `MANUAL_QA/2026-11-19/REPAIR_LEDGER.md`, `MANUAL_QA/TESTER_PLAN.md`, `MANUAL_QA/2026-11-19/DEV_APPLY_0071_PREPARED.md`, `MANUAL_QA/2026-11-19/STAGING_MAIL_AND_AUTH.md` |
+| Open inputs | Terms URL, Privacy URL, support mailbox check, alpha-domain decision (`appIdentity.ts`), DEV 0071 release |
+| Not passed | Owner protection/delegated admin on DEV; store transfer; scheduler expiry/final removal; populated data isolation; remaining Profile tests; staging; retest of R1–R10 |
+
+| Update (20 Nov 2026, later) | **DEV 0071 APPLIED** under the Director release: ledger 71; catalogue `849b7699…`; guard post and compatibility PASS (receipt `forward-apply-1795145858189.json`, OwedBook `EVIDENCE/apply/dev-apply-0071/`). Both repos on `repair/apbm-007b-manual-qa` (uncommitted). Local `MAIL_RECIPIENT_POLICY=open` set in both apps (DEV-fenced). Retest PENDING |
+
+| Update (20 Nov 2026, final batch) | **FINAL CONSOLIDATED REPAIR BATCH IMPLEMENTED — TARGETED RETEST PENDING (Tony/JARVIS).** F1–F6 (ledger § Final consolidated batch). jest 370/370 + 568/568; builds PASS (isolated). DEV at 71 (unchanged this batch). Staging inventory `MANUAL_QA/2026-11-20/STAGING_INVENTORY.md` (read only). Deployment: separate release. Campaign NOT certified |

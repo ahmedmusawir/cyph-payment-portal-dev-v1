@@ -3,11 +3,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ExternalLink, Home, Loader2 } from "lucide-react";
+import { ExternalLink, Home, Loader2, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Alert, Placeholder } from "../Alert";
-import { BRAND, owedBookHandoffHref } from "../brand";
+import { BRAND } from "../brand";
 import { DataTable } from "../DataTable";
 import { EmptyState } from "../EmptyState";
 import { PageContainer } from "../Loading";
@@ -15,6 +15,7 @@ import { PageHeader } from "../PageHeader";
 import { Pill, type PillTone } from "../Pill";
 import { STORE_PILL, SUBSCRIPTION_PILL } from "./status";
 import { StoreRemovalControl } from "./StoreRemovalControl";
+import { OwedBookLink, OwnerOnlyNotice } from "./OwnerOnlyNotice";
 import { externalRedirect, formatDate, portalApi } from "@/services/portal";
 import type { BillingOverview, BillingOverviewResponse, PaymentMethodState } from "@/types/portal/api";
 
@@ -41,20 +42,10 @@ function cardLine(pm: PaymentMethodState): string | null {
   return "Card on file";
 }
 
-function OwedBookLink({ primary }: { primary?: boolean }) {
-  return (
-    <Button asChild variant={primary ? "default" : "outline"}>
-      <a href={owedBookHandoffHref()} data-testid="open-owedbook">
-        Open {BRAND.owedBook} <ExternalLink className="h-4 w-4" aria-hidden="true" />
-      </a>
-    </Button>
-  );
-}
-
 // C12 Your account (`/dashboard`) and Billing (`/billing`). Both read the signed-in owner's billing
 // overview from the server; the database decides who the owner is. Payment method, invoices and
 // cancellation all live on Stripe's Billing Portal, reached through "Manage billing" — there are no
-// separate invoice or cancel pages here. Adding stores and inviting staff are not available yet.
+// separate invoice or cancel pages here. Adding a pharmacy is the paid Add Store flow (/stores/add); staff are invited in OwedBook.
 export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
   const router = useRouter();
   const [view, setView] = useState<View>({ kind: "loading" });
@@ -143,24 +134,7 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
     );
   }
 
-  if (view.kind === "not_owner") {
-    return (
-      <PageContainer width="3xl">
-        <PageHeader eyebrow={eyebrow} title="Billing is managed by the account owner" />
-        <div className="mt-5 border border-border bg-card p-4 sm:p-5" data-testid="denied-view">
-          <p className="text-sm text-muted-foreground">
-            You&apos;re signed in, but you aren&apos;t the billing owner of an account. Only the account owner can see or manage the plan, payment method and invoices, so none of that is shown here.
-          </p>
-          <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-            <OwedBookLink primary />
-          </div>
-        </div>
-        <p className="mt-4 text-xs text-muted-foreground">
-          Think you should be the billing owner? There&apos;s no self-service ownership transfer. Contact <Placeholder>{BRAND.supportEmail}</Placeholder>.
-        </p>
-      </PageContainer>
-    );
-  }
+  if (view.kind === "not_owner") return <OwnerOnlyNotice eyebrow={eyebrow} />;
 
   const { overview, paymentMethod } = view.data;
   const sub = overview.subscription;
@@ -172,6 +146,8 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
   const ended = access.state === "ended";
   const card = cardLine(paymentMethod);
   const working = busy !== null;
+  const canAdd = real && !ended && !access.read_only && !cancelScheduled && access.state === "active";
+  const leaving = stores.filter((s) => s.removal_effective_at);
 
   const manageButton = (label: string, testId: string, variant: "default" | "outline" = "outline") => (
     <Button type="button" variant={variant} disabled={working} onClick={manageBilling} aria-busy={busy === "portal" || undefined} data-testid={testId}>
@@ -190,26 +166,30 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
     { key: "status", header: "Status", cell: storePill },
     // APBM-007B: period-end removal/undo for an active Stripe subscription (never the last store; server-enforced).
     ...(real && !ended && !access.read_only ? [{ key: "actions", header: "Changes", cell: (s: Store) => (stores.length > 1 || s.removal_effective_at)
-      ? <StoreRemovalControl storeId={s.id} removalEffectiveAt={s.removal_effective_at ?? null} onChanged={() => void load()} />
+      ? <StoreRemovalControl storeId={s.id} storeName={s.name} periodEnd={sub?.current_period_end ?? null} removalEffectiveAt={s.removal_effective_at ?? null} onChanged={() => void load()} />
       : <span className="text-xs text-muted-foreground">Only store — cancel the subscription to stop</span> }] : []),
   ];
 
   const storesSection = (
     <section aria-labelledby="ph-h" className="mt-8" data-testid="pharmacies-section">
-      <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+      <div className="mb-3 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div className="min-w-0">
           <h2 id="ph-h" className="text-xl font-bold text-foreground">Pharmacies on this account</h2>
-          {real && !ended && !access.read_only && !cancelScheduled && access.state === "active" ? (
-            <Link className="text-sm underline" href="/stores/add" data-testid="add-store-link">Add a pharmacy</Link>
-          ) : (
+          <span className="text-sm tabular-nums text-muted-foreground" data-testid="pharmacy-count">
+            {stores.length} {stores.length === 1 ? "pharmacy" : "pharmacies"}
+          </span>
+          {canAdd ? null : (
             <p className="text-sm text-muted-foreground" data-testid="add-store-unavailable">
               {real ? "Adding a store needs an active subscription with no overdue payment or scheduled cancellation." : "Adding a store needs a paid subscription."}
             </p>
           )}
         </div>
-        <span className="shrink-0 text-sm tabular-nums text-muted-foreground" data-testid="pharmacy-count">
-          {stores.length} {stores.length === 1 ? "pharmacy" : "pharmacies"}
-        </span>
+        {/* Manual QA 19 Nov 2026 (R1): a prominent button, full width on phones, instead of a small text link. */}
+        {canAdd ? (
+          <Button asChild size="lg" className="w-full sm:w-auto" data-testid="add-store-link">
+            <Link href="/stores/add"><Plus className="mr-2 h-4 w-4" aria-hidden="true" />Add a pharmacy</Link>
+          </Button>
+        ) : null}
       </div>
       <DataTable
         columns={columns}
@@ -269,8 +249,7 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
             title={sub?.paid_through ? `Your subscription ends on ${date(sub.paid_through)}` : "Your subscription is set to end"}
             action={
               <Button type="button" variant="outline" disabled={working} onClick={undoCancel} aria-busy={busy === "undo" || undefined} data-testid="undo-cancel">
-                {busy === "undo" ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : null}
-                Undo cancellation
+                {busy === "undo" ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />Undoing cancellation…</> : "Undo cancellation"}
               </Button>
             }
           >
@@ -318,10 +297,21 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
               <h2 id="plan-h" className="mt-1 text-xl font-bold text-foreground">
                 {BRAND.owedBook} <span className="text-sm font-normal text-muted-foreground">· monthly</span>
               </h2>
-              <dl className="mt-4 grid grid-cols-2 gap-4">
+              {/* Manual QA 19 Nov 2026 (R9): a scheduled removal lowers the subscription quantity at once (it is what the next
+                  renewal bills) while the store keeps access until the period ends. Show both numbers, labelled. */}
+              <dl className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
                 <div>
-                  <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Pharmacies covered</dt>
+                  <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Pharmacies with access now</dt>
+                  <dd className="text-2xl font-semibold tabular-nums text-foreground" data-testid="active-count">{stores.length}</dd>
+                </div>
+                <div>
+                  <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Billed at next renewal</dt>
                   <dd className="text-2xl font-semibold tabular-nums text-foreground" data-testid="store-count">{sub.quantity ?? "—"}</dd>
+                  {leaving.length > 0 ? (
+                    <p className="text-xs text-muted-foreground" data-testid="leaving-note">
+                      {leaving.length === 1 ? `1 pharmacy leaves on ${date(leaving[0].removal_effective_at ?? null)}` : `${leaving.length} pharmacies leave at the end of this period`}
+                    </p>
+                  ) : null}
                 </div>
                 <div>
                   <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{showsPaidThrough ? "Paid through" : "Next payment"}</dt>

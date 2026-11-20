@@ -248,3 +248,88 @@ No independent QA approval or certification is implied.
 - Contract manifest hashes corrected (header line in all 12; +47 / +5 appended Director lines in `APBM_RULINGS.md` / `ENVIRONMENT_AND_EFFECTS.md`); old hashes kept; contract files unchanged.
 - Prepared, not executed: DEV 0070 release (0070 `de0b51c6…` = expected; 70-entry manifest `134d815d…`), Git handoff (Portal local `--no-ff`; OwedBook PR because `main` is protected), carry-forward list and Gate D handoff. No GitHub workflows or deployments in either repo. GCP Cloud Build triggers could not be read (gcloud needs re-authentication); a read-only check is in the handoff.
 - No commit, push, merge, deployment, DEV apply, database or provider write, cleanup or refund. DEV stays at 69. Gate D pending.
+
+## 19–20 November 2026 — Director-led manual QA walkthrough and repair round (Claudy)
+
+- **19 Nov:** Tony and JARVIS walked the product end to end on local OwedBook/Portal against DEV (at 70 after the 0070 apply). **Ten findings:**
+  - R1 Add Store entry points
+  - R2 busy states
+  - R3 add-store payment journey
+  - R4 member-removal confirmation
+  - R5 owner/admin model
+  - R6 Settings placeholder
+  - R7 Profile
+  - R8 audit readability
+  - R9 removal presentation
+  - R10 placeholders and tester mail
+  The walkthrough passes and the unconfirmed member logout are recorded in the repair ledger.
+- **Plan and approval:** plan `response_2026-11-19_173752_manual-qa-repair-plan.md` (OwedBook). Approved 20 Nov with decisions (APBM_RULINGS), amendments AM-MQ-01…04.
+- **R3 investigation (DEV read-only, one rolled-back READ ONLY transaction):** the second-store operation's single `invoices.pay` failed with Stripe `missing`. Registration Checkout stores the card on the subscription, not as the customer's invoice default; fixtures had always set a customer default. The charge now uses the subscription's default payment method. The hosted-invoice return limitation was verified in the installed SDK types.
+- **0071 (owner protection and flags, `store_profile`, readable `admin_audit`):**
+  - SCRATCH dry run, then preloaded proof 180/180 (rolled back), then the committed apply (receipt `forward-apply-1795139934011.json`), then the committed proof 180/180.
+  - DEV not touched beyond the read-only investigation.
+- **Checks:**
+  - OwedBook jest 355/355; Portal jest 533/533 (new tests for every repair);
+  - typecheck clean in both repos;
+  - lint: no new errors (warnings follow the existing pattern);
+  - `next build` PASS for both apps in isolated copies (the running :3000/:3001 servers were untouched). The Portal build first stopped on a Next.js security advisory notice; a rerun completed. No upgrade was made.
+- **Not run:** Playwright (it would write to DEV), live Stripe payments, mail sends, deployment.
+- **Retest:** PENDING Tony/JARVIS (`MANUAL_QA/TESTER_PLAN.md`).
+- **Process lesson (mandatory):** a Director-led end-to-end manual walkthrough is required before release approval, alongside automated and executor testing. The automated proofs passed while R3's real-owner card path was broken: every fixture set a customer default card, so no automated proof exercised a card saved only on the subscription.
+
+## 20 November 2026 — DEV migration 0071 applied (Director release; Claudy)
+
+- **Release scope:** apply ONLY 0071 to DEV per `MANUAL_QA/2026-11-19/DEV_APPLY_0071_PREPARED.md`. Both repos on `repair/apbm-007b-manual-qa` (HEADs `64295a7` / `0443fda`); the uncommitted repair changes were permitted.
+- **Pre-write:**
+  - 0071 `9a912307…` and manifest `403e27b1…` matched; 0001–0070 unchanged;
+  - tooling identical to HEAD (hashes in the report);
+  - DEV catalogue = post-0070 `21c2e80d…`.
+  - Guard preflight `ready` false by design (69-file and branch constants, as at 0070).
+  - Data changes since the 0070 post-check were verified read-only to be exactly the walkthrough's new rows.
+- **Apply:** `Committed 0071_007b_owner_settings_audit.sql`, receipt PASS.
+- **Post:**
+  - ledger 71; catalogue `849b7699…` (103 functions);
+  - guard post: every preservation check equal, privilege lists empty, DEV test clock refused 42501;
+  - rolled-back compatibility: no scope diffs (counts reflect the walkthrough data);
+  - the SCRATCH comparison differs only in `defaultACLs`.
+- **Local config:** `MAIL_RECIPIENT_POLICY=open` added to both `.env.local` files (one line each; DEV-fenced).
+- **Not done:** no reset, retry, other migration, Git, deployment, app start, payment or mail test.
+
+## 20 November 2026 — final consolidated manual-QA repair batch (Director order; Claudy)
+
+- **Workflow:** repairs and checks → Tony/JARVIS targeted retest → deployment preparation. The campaign is not certified.
+- **Repairs (both repos, uncommitted on `repair/apbm-007b-manual-qa`):**
+  - F1 `/stores/add` server guard, plus an authorization review of every Add Store and removal operation;
+  - F2 owner-managed billing for store admins (no false warnings);
+  - F3 access-denied state;
+  - F4 audit wording (scheduled vs removed, owner-safe handover, system actor);
+  - F5 navbar name and role badge in both apps;
+  - F6 auth scope unchanged.
+- **Details:** `MANUAL_QA/2026-11-19/REPAIR_LEDGER.md` § Final consolidated batch.
+- **Checks:**
+  - jest OwedBook 370/370 and Portal 568/568; typecheck clean;
+  - lint 0 errors on changed files;
+  - both builds PASS in isolated copies.
+  - No DEV write; 0071 unedited; no new migration.
+- **Manual results recorded as reported:**
+  - invitation → acceptance;
+  - member scope and removal;
+  - audit actors;
+  - filtering;
+  - the admin's Store 04 attempt refused.
+- **Pending:**
+  - audit pagination;
+  - 3DS, decline and recovery;
+  - scheduler expiry and removal;
+  - transfer;
+  - populated data isolation;
+  - full password tests;
+  - deployed smoke tests.
+- **Next.js advisory (investigated, not acted on):**
+  - Portal 16.4.3 is affected by moderate advisories fixed after 16.4.4.
+  - OwedBook 16.3.7 is also affected by critical and high advisories (≤16.4.0, <16.3.8).
+  - The npm registry lists no advisory for 16.4.5. That is the minimal common target and needs a separate approval.
+- **Deployment preparation (read only):** `MANUAL_QA/2026-11-20/STAGING_INVENTORY.md`.
+  - The old Portal kit conflicts with the code: domain, missing `NEXT_PUBLIC_APP_ENV`, an obsolete "zero secrets" assumption, and a service that was already deployed.
+  - OwedBook has no kit.
+- **QA lesson (reaffirmed):** a Director-led end-to-end manual walkthrough belongs inside release verification, alongside the automated checks. This batch's findings F1 to F5 came from that walkthrough, not from the automated suites.

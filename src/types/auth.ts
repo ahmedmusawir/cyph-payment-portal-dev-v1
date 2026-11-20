@@ -18,5 +18,6 @@ export interface PortalStaffUser {
 export interface PortalUser {
   id: string; // Supabase auth.users.id (uuid)
   email: string;
-  displayName: string; // best-available; falls back to email local-part
+  displayName: string; // the profile name, or the generic "Your account" (manual QA 20 Nov 2026: never the email local-part)
+  nameSet: boolean; // false when displayName is the generic label
 }

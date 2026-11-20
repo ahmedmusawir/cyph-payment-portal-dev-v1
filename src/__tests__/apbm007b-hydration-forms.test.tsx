@@ -72,6 +72,9 @@ it('add store details: typed details are kept and are the ones quoted; "See the 
   });
   const see = screen.getByRole('button', { name: 'See the price' }) as HTMLButtonElement;
   expect(see.disabled).toBe(false);
+  // Manual QA R3: on load the page first asks the server for an unresolved Add Store to resume (GET, no body).
+  expect(posts).toEqual([{ url: '/api/stores/operations', body: {} }]);
+  posts = [];
   await act(async () => { fireEvent.submit(container.querySelector('form') as HTMLFormElement); });
   expect(posts).toEqual([{ url: '/api/stores/add/quote', body: { storeName: 'Early Typed Pharmacy', npi: '1234567893' } }]);
   await waitFor(() => expect(screen.getByText('Refused in this test.')).toBeTruthy());

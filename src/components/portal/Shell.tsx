@@ -26,8 +26,9 @@ import { Initials } from "./PageHeader";
 
 // Authenticated account shell (UI_SPEC §1): top bar + centered content, no
 // rail. Rendered only inside the server-protected (account) layout, which
-// admits any signed-in user (APBM007A). The account menu shows the signed-in
-// identity; it carries no role.
+// admits any signed-in user (APBM007A). Manual QA 20 Nov 2026: the bar shows the
+// person's name and a compact store-role badge (Owner / Store admin / Member,
+// from tenant_stores on the server); the full email is in the account menu.
 //
 // Mobile-first: < md the right side collapses to theme toggle + 44px hamburger
 // opening the existing left Sheet (Radix: focus trap, Escape, focus return).
@@ -76,6 +77,13 @@ export function Shell({
   }
 
   const owedBookHref = owedBookHandoffHref();
+  const avatarName = user.nameSet === false ? user.email || user.displayName : user.displayName;
+  const badge = user.role ? (
+    <span className="shrink-0 border border-border px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide text-muted-foreground" title={user.role.scope} data-testid="nav-role-badge">
+      {user.role.label}
+      <span className="sr-only"> ({user.role.scope})</span>
+    </span>
+  ) : null;
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -97,8 +105,9 @@ export function Shell({
                 className="ml-1 inline-flex h-11 items-center gap-2 border border-border px-2.5 pr-3 text-sm text-foreground hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 data-testid="account-menu"
               >
-                <Initials name={user.displayName} size="sm" />
-                <span className="max-w-[12rem] truncate font-medium">{user.displayName}</span>
+                <Initials name={avatarName} size="sm" />
+                <span className="max-w-[12rem] truncate font-medium" title={user.displayName}>{user.displayName}</span>
+                {badge}
                 <ChevronDown className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="min-w-[14rem]">
@@ -136,9 +145,9 @@ export function Shell({
                   <Brand href="/dashboard" />
                 </div>
                 <div className="flex items-center gap-3 border-b border-border p-4">
-                  <Initials name={user.displayName} />
+                  <Initials name={avatarName} />
                   <div className="min-w-0">
-                    <p className="truncate text-sm font-semibold text-foreground">{user.displayName}</p>
+                    <p className="flex min-w-0 items-center gap-2 text-sm font-semibold text-foreground"><span className="truncate">{user.displayName}</span>{badge}</p>
                     <p className="truncate text-xs text-muted-foreground">{user.email}</p>
                   </div>
                 </div>

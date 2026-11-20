@@ -77,3 +77,31 @@ Engineering note (not a ruling): rulings 2 and 3 require SQL changes; because 00
 
 - Tony accepts the hash-verified as-received v0.1 review attachment as satisfying R-3, provided its full SHA-256 equals `37a0993a700264f8a1efab02c149c67e5bc0c1760abe47c8e6b73b5ecea50d48`. **Verified:** the as-received bytes (`GOVERNING/FRIDAY_REVIEW_APBM007B_PRE_E2_DRAFT_v0_1_2026-11-16_AS_RECEIVED.txt`, unchanged) plus one restored final newline (0x0A) give exactly that full SHA-256 (`EVIDENCE/E2/r07_v0_1_review_r3_verification.json`). R-3 is satisfied; the earlier "disposition required" entries are superseded by this ruling and remain as history. The original file itself was never supplied; no original-named file was created.
 - The obsolete pre-E2 preparation package (`agent_docs/PACKAGES/APBM007B_PREPARATION_v0_3/`) is excluded from the candidate commits.
+
+## Director decisions — manual QA repair round, 19–20 November 2026 (recorded by Claudy; earlier entries unchanged)
+
+Source: the Director's consolidated repair order from the Tony/JARVIS manual walkthrough (19 Nov), and the Director's approval with decisions (20 Nov).
+
+- **Process:** no separate QA Lead/Cody handoff for this repair round. Engineering implements and runs the checks; Tony and JARVIS repeat the manual walkthrough. Deployment preparation follows only after that retest succeeds.
+- **Mandatory process lesson:** future QA includes a **Director-led end-to-end manual walkthrough** alongside automated and executor testing, before release approval. Passing automated checks alone does not complete product acceptance.
+- **Owner model:**
+  - **Owner:** shown as "Owner". Administers every pharmacy the account owns. Is the only role with billing and money powers (paid stores, subscription). Cannot be demoted or removed by ordinary member removal or store-admin replacement. Ownership changes use the separate transfer process.
+  - **Store admin:** delegated authority for the assigned pharmacy only, such as member management. No billing, payment, subscription or paid-store powers.
+  - **Member:** assigned pharmacies only. No administrative or billing powers.
+  - **20 Nov:** keeping the owner's underlying store membership as `member` after delegation is acceptable **only** while account ownership stays authoritative across every owned store. The UI always shows Owner, never suggests demotion, and never offers ordinary removal of the owner. These protections are enforced server-side and tested (owner authority after delegation; no billing for the delegated admin).
+- **Contact and legal:** use `support@pharmacybooks.com` (contract-recorded) as the configured support address; mailbox operation is unverified. Terms and Privacy URLs remain missing deployment inputs, not to be invented or substituted.
+- **Editing:**
+  - Name and email stay read-only, with accurate support guidance.
+  - The pharmacy information display and selector are built now; pharmacy editing is deferred.
+  - NPI stays read-only pending an identity-change policy.
+- **Payment recovery:**
+  - Implement the retained app page, server reconciliation, reload recovery and the completion screen.
+  - Handle popup blocking with a prominent manual payment button.
+  - Never depend on the Stripe tab closing or on a client-side success signal.
+  - Bound polling, explain delays, prevent duplicate charges.
+  - Verify the hosted-invoice return limitation rather than assume it.
+- **Mail:** an explicit DEV-only open-recipient policy is approved. Document the frozen-contract amendment and configuration. Verify both mail paths and confirm that open mode fails closed outside the intended DEV project. Production behaviour stays restricted.
+- **Releases (20 Nov):**
+  - **Authorized:** the repair batch; the 0071 apply plus SQL proofs on SCRATCH; a narrowly scoped read-only DEV investigation of the second-store payment.
+  - **Not authorized:** the DEV 0071 apply, which is a separate release.
+  - **Not done:** no commit, push, merge or deployment.
