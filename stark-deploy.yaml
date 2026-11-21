@@ -1,74 +1,117 @@
 # ==================================================================
 # STARK FACTORY — next-deploy-auto config (skill v1.3)
 # File name: stark-deploy.yaml   Location: project root (next to package.json)
+# App: Account & Billing Portal (cyph-payment-portal-dev-v1) — ALPHA deployment.
+# Prepared 2026-11-21 on branch deploy/payment-alpha-prep (main 883bc93). STATUS: prepared, NOT deployed.
 #
-# The agent prepared this form on 2026-11-03 (round 2). Fill only the blanks marked
-# REQUIRED FROM YOU, save, and say "config ready". The agent verifies it against your
-# code and your GCP project, shows a short deployment summary, and waits for your approval.
-# Values marked PROPOSED were filled by the agent from repo evidence; change them freely.
+# This file replaces the 3 Nov 2026 FFM config (service cyph-sub-portal-prod, domain
+# cyph-payment.cyberizedev.com). That config is in git history (883bc93). The FFM service is a
+# DIFFERENT Cloud Run service; nothing here names, reuses or changes it.
 #
 # RULES
 #  - Secret NAMES only. Never put a secret VALUE in this file. It is committed to git.
 #  - Public values (NEXT_PUBLIC_*) go here verbatim — they ship to the browser anyway.
-#  - Anything marked REQUIRED with no value = fill the value here. The agent never guesses.
+#  - After any edit: say "config ready"; the agent revalidates and regenerates the deploy files.
 # ==================================================================
 
 version: 1
 
 app:
-  name: "cyph-sub-portal"       # PROPOSED (from the repo name). 2–19 chars, lowercase-hyphenated.
-                                #   Creates: service cyph-sub-portal-prod, runtime SA sa-cyph-sub-portal-runtime.
-  display_name: "CyPh Subscription Portal v1"   # PROPOSED. Banner label only.
+  name: "cyph-payment-alpha"    # PROPOSED (18 characters; the schema maximum is 19). The service name
+                                # "cyph-v1-payment-alpha" is 21 characters and cannot be the app name, because the
+                                # runtime service account ID (sa-{name}-runtime) is capped at 30. Same pattern as
+                                # OwedBook ("cyph-owedbook-alpha"). Prefix for secrets and the runtime SA only.
+  display_name: "Payment Portal Alpha"
 
 gcp:
-  project_id: "cyberize-nextjs-staging"   # Supplied by Tony 2026-11-03 (same project as the payment portal deploy).
-                                #   Candidate: your gcloud default is "cyberize-nextjs-staging" (ACTIVE; already hosts
-                                #   cyber-pharma-prod and cyph-mission-ctrl-prod). Type it here only if that is the target.
-  region: "us-east1"            # Schema default; both existing services in that project run here.
-  expected_account: "moose@cyberizegroup.com"   # PROPOSED: your current active gcloud login.
-                                #   Preflight stops if a different account is active. Clear it to be asked instead.
-  service_name: ""              # Optional. Blank = "cyph-sub-portal-prod". The "-prod" suffix is a naming
-                                #   convention only; it does not make this a production deployment.
+  project_id: "cyberize-nextjs-staging"          # Supplied by the Director 2026-11-21.
+  region: "us-east1"                             # Supplied by the Director 2026-11-21.
+  expected_account: "moose@cyberizegroup.com"    # The account used for the OwedBook alpha. Preflight fails on any other.
+  service_name: "cyph-v1-payment-alpha"          # Supplied by the Director. NEW service; nothing existing is reused.
 
 urls:
-  custom_domain: "cyph-payment.cyberizedev.com"   # Supplied by Tony 2026-11-03. DNS record + Cloud Run mapping not created yet (operator step after deploy).
-                                #   Filled -> NEXT_PUBLIC_APP_URL = https://{custom_domain}; one deploy.
-                                #   Blank  -> placeholder first deploy, then a second deploy once you pick the
-                                #   domain or the run.app URL. Filling this does NOT map DNS; that stays a
-                                #   separate operator step after deploy.
-  backend_url: ""               # Leave blank: the code never reads NEXT_PUBLIC_BACKEND_URL.
+  custom_domain: "cyph-v1-payment-alpha.cyberizedev.com"   # Supplied by the Director. Known domain -> one deploy.
+                                # The CNAME exists (ghs.googlehosted.com, TTL 3600; seen in public DNS 2026-11-21).
+                                # The Cloud Run domain mapping and HTTPS certificate are NOT created by the skill.
+  backend_url: ""               # Not used by the Portal.
 
 access:
-  invoker: "public"             # Supplied by Tony 2026-11-03 (chat).
-                                #   This is network access to the URL, not app sign-in.
-                                #   public  -> anyone with the URL reaches the app; the app's own login still guards
-                                #              account pages. Public registration at "/" needs this.
-                                #   private -> every request gets 403 until you grant roles/run.invoker to someone.
+  invoker: "public"             # Network access only, not app sign-in. Required: public registration, the Stripe
+                                # webhook and the scheduler call all arrive unauthenticated at the Cloud Run layer.
+                                # The app's own sign-in, webhook signature and bearer token guard the routes.
 
 secrets:
-  mode: "helper"                # Unused while items is empty (no upload step runs).
-  env_file: ".env.local"        # Only the helper would read this, in YOUR terminal. The agent never opens it.
-  items: []
-  # Zero secrets, on evidence: SUPABASE_SECRET_KEY is read only in src/utils/supabase/admin.ts, and no file
-  # imports that module, so the deployed app never reads it. If you want it provisioned anyway, add:
-  # - env: SUPABASE_SECRET_KEY
-  #   secret: ""                # default name: cyph-sub-portal-supabase-secret-key
-  #   scope: runtime
+  mode: "helper"                # YOU run upload-secrets.sh; it reads env_file in your terminal.
+  env_file: ".env.local"        # The agent never opens this file.
+  items:
+    # All runtime-only: none is read during `next build`, none is a build argument, none is in the image.
+    - env: SUPABASE_SECRET_KEY  # src/utils/supabase/admin.ts (via src/server/db.ts), src/server/provisioning.ts.
+      secret: ""                # Default: cyph-payment-alpha-supabase-secret-key
+      scope: runtime            # Also seeds the operator/scheduler bearer token (src/server/operator.ts).
+    - env: STRIPE_SECRET_KEY    # src/server/stripeClient.ts. The code refuses anything but sk_test_/rk_test_.
+      secret: ""                # Default: cyph-payment-alpha-stripe-secret-key
+      scope: runtime
+    - env: STRIPE_WEBHOOK_SECRET   # src/server/stripeClient.ts -> src/server/webhook.ts (signature check).
+      secret: ""                # Default: cyph-payment-alpha-stripe-webhook-secret
+      scope: runtime
+      upload: manual            # [EXTENSION] NOT uploaded by the helper. .env.local holds the local Stripe CLI
+                                # listener's secret, which must not be reused. The deployed endpoint's own whsec_
+                                # value is added by hand (DEPLOYMENT_CHECKLIST.md, step A3).
+    - env: RESEND_API_KEY       # src/server/billingNotices.ts (billing notices only).
+      secret: ""                # Default: cyph-payment-alpha-resend-api-key
+      scope: runtime
+    # The three entries below are Stripe sandbox IDENTIFIERS, not credentials. They are kept in Secret Manager
+    # only so the helper can take them from your env file: the deployed app then uses exactly the catalogue you
+    # tested locally, and the agent never needs to read or ask for the values.
+    - env: STRIPE_EXPECTED_ACCOUNT        # acct_…  src/server/stripeClient.ts (account guard).
+      secret: ""                # Default: cyph-payment-alpha-stripe-expected-account
+      scope: runtime
+    - env: STRIPE_PRICE_STORES            # price_… src/server/stripeClient.ts.
+      secret: ""                # Default: cyph-payment-alpha-stripe-price-stores
+      scope: runtime
+    - env: STRIPE_PORTAL_CONFIGURATION    # bpc_…   src/server/stripeClient.ts.
+      secret: ""                # Default: cyph-payment-alpha-stripe-portal-configuration
+      scope: runtime
 
 public_vars:
-  # Values ship to the browser. Type the PUBLIC values for the Supabase project the deployed app should use.
-  # The agent does not copy them from .env files. Never put the secret/service-role key here.
+  # Do NOT list NEXT_PUBLIC_APP_URL — it is derived from urls.custom_domain (the app does not read it).
+  - env: NEXT_PUBLIC_SITE_URL   # Must equal this app's own origin exactly, or sign-in, handoff and every
+    value: "https://cyph-v1-payment-alpha.cyberizedev.com"    # state-changing API fail closed (src/lib/appIdentity.ts).
+  - env: NEXT_PUBLIC_APP_ENV    # Selects the deployed origin row in src/lib/appIdentity.ts. "staging" is the only
+    value: "staging"            # non-local label the code and database (migration 0059) accept; alpha uses it.
   - env: NEXT_PUBLIC_SUPABASE_URL
-    value: "https://yrsuwikjnbmvpznrgydb.supabase.co"   # Supplied by Tony 2026-11-03 (same Supabase project as the payment portal).
+    value: "https://yrsuwikjnbmvpznrgydb.supabase.co"         # Director: DEV project (CyberPharma_Dev_v1).
   - env: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
-    value: "sb_publishable_8FvPLZTmChxMrPwv7q9-rw_NgjoDk1S"   # Supplied by Tony 2026-11-03. Publishable, browser-safe.
-  - env: NEXT_PUBLIC_SITE_URL
-    value: "https://cyph-payment.cyberizedev.com"   # Matches custom_domain. The code uses this only to decide Secure cookies
-                                #   (any https:// value turns them on). Set it to https://{custom_domain}
-                                #   if you fill custom_domain above.
+    value: "sb_publishable_8FvPLZTmChxMrPwv7q9-rw_NgjoDk1S"   # Public browser key (already in this file since 3 Nov
+                                                              # and in the OwedBook alpha config). Not the secret key.
+
+  # OPTIONAL — not set. Add an entry only if you want to change the behaviour:
+  #  - NEXT_PUBLIC_SUPPORT_EMAIL   unset -> the code default support@pharmacybooks.com (src/components/portal/brand.ts).
+  #  - NEXT_PUBLIC_TERMS_URL / NEXT_PUBLIC_PRIVACY_URL   unset -> pages say "(link not yet published)".
+  #    Director input, required before any external exposure (STAGING_AND_GATE_D.md).
+
+# ------------------------------------------------------------------
+# EXTENSION (not in the skill schema v1.3; same block as OwedBook) — plain server-side runtime
+# settings. Neither secrets nor NEXT_PUBLIC values. A non-empty value is set on the Cloud Run
+# service through --set-env-vars in cloudbuild.yaml; "" means the variable is not set.
+# ------------------------------------------------------------------
+runtime_env:
+  MAIL_RECIPIENT_POLICY: "open"      # Same as OwedBook alpha (JARVIS ruling 2026-11-20). The code honours "open"
+                                     # ONLY while NEXT_PUBLIC_SUPABASE_URL is the DEV project (src/server/mailGuard.ts).
+  APA_PROMOTION_CODES: ""            # Not set (Director, 2026-11-21): no APA promotion code is accepted on alpha.
+                                     # Records show "APA10SANDBOX" redeemed in the sandbox on 12-17 Nov 2026, but its
+                                     # present state in Stripe is not verified. To enable later: put the verified code
+                                     # here, regenerate, redeploy. The code also re-checks each code with Stripe.
+  MAIL_ALLOWLIST: ""                 # Not set. Not needed while the open policy is active on DEV.
+  BILLING_EMAIL_FROM: ""             # Not set -> code default "Cyber Pharma <no-reply@cyberizedev.com>".
+  ALLOW_SYNTHETIC_SUBSCRIPTIONS: ""  # Not set, as on OwedBook alpha (Director, 2026-11-20).
+  # NEVER deployed: ALLOW_TEST_CLOCK, MAIL_GUARD, APBM007B_*, APBM_ITEST_*, APBM_LOCALDB_*, APBM_SAGA_IMPL,
+  # APBM_DEADLINE_OUT (fixtures and integration tests only; no test clock on the shared DEV database).
 
 runtime:
   memory: "1Gi"
-  max_instances: 1
+  max_instances: 1              # REQUIRED to stay 1: the rate limiters are per process (STAGING_AND_GATE_D.md).
   min_instances: 0
-  dynamic_env_access: "auto"    # The agent found no process.env[...] dynamic reads, so auto resolves to off.
+  dynamic_env_access: "auto"    # No process.env[...] read in app code (one test file only). The public vars
+                                # still ride --set-env-vars as well, as on OwedBook: harmless, and it keeps the
+                                # server-side reads correct if a later change adds a runtime check.

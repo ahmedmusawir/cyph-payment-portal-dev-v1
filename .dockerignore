@@ -1,9 +1,11 @@
+# Payment Portal — Docker build context excludes.
 # Packaging hygiene (FFM-ABM-001 E2): keep docs, credentials, browser state and
 # local build/test output out of any image build context.
+# CRITICAL: .env* keeps local secrets out of the image. Next.js standalone output copies .env files
+# into .next/standalone — without these lines .env.local would ship in the final image.
 agent_docs/
 _SKILLS/
 .env*
-!.env.example
 .auth/
 test-results/
 playwright-report/
@@ -13,8 +15,6 @@ node_modules
 .next
 .git
 # Merged 2026-11-03 by next-deploy-auto v1.3 (Template 1b lines not already present).
-# Existing rules above are preserved unchanged. Note: .env.example never reaches Cloud Build
-# anyway — .gcloudignore excludes every .env* file from the upload.
 .gitignore
 .gcloudignore
 Dockerfile
@@ -26,3 +26,25 @@ upload-secrets.sh
 stark-deploy.yaml
 DEPLOYMENT_CHECKLIST.md
 README.md
+# Added 2026-11-21 (alpha; carried over from the OwedBook alpha review, cyph-v1-dev 2026-11-20).
+# The former "!.env.example" exception is removed: no .env* file of any name enters the context.
+# `.env*` above covers the context root only; these cover every depth.
+**/.env*
+**/*.pem
+**/*.p12
+**/*.key
+**/*service*account*.json
+**/*credentials*.json
+**/.auth/
+# Case variants of credential file names (OwedBook canary test 2026-11-20: serviceAccount.json got through).
+**/*[sS][eE][rR][vV][iI][cC][eE]*[aA][cC][cC][oO][uU][nN][tT]*.[jJ][sS][oO][nN]
+**/*[cC][rR][eE][dD][eE][nN][tT][iI][aA][lL][sS]*.[jJ][sS][oO][nN]
+**/*.[pP][eE][mM]
+**/*.[pP]12
+**/*.[kK][eE][yY]
+# Factory records and local tooling that are not build inputs.
+RECOVERY.md
+CHANGELOG.md
+WINDSURF.md
+CLAUDE.md
+tsconfig.tsbuildinfo

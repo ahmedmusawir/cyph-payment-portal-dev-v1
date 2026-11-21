@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 2026-11-21 03:40 UTC — [CC] Claude Code
+- **New:** `agent_docs/KIP_REGISTRY.md` (KIP-1: zod advisory deferred for alpha, open for production).
+- **Updated:** `stark-deploy.yaml`, `DEPLOYMENT_CHECKLIST.md` (promotion allowlist unset, decisions recorded, cloud checks ticked), `RECOVERY.md`.
+- **Product and deployment files:** `package.json`, `package-lock.json` (Next.js and eslint-config-next 16.4.5), `cloudbuild.yaml`.
+- **Reason:** Director instructions of 21 Nov 2026 after the cloud checks. Nothing deployed.
+
+## 2026-11-21 03:05 UTC — [CC] Claude Code
+- **Updated:** `stark-deploy.yaml`, `DEPLOYMENT_CHECKLIST.md` — rewritten for the new alpha service `cyph-v1-payment-alpha` (the 3 Nov FFM versions are in git history at `883bc93`).
+- **Updated:** `agent_docs/SKILL_ISSUES_LEDGER_next_deploy_auto.md` (rows 7–12), `RECOVERY.md` (alpha preparation entry).
+- **New:** `agent_docs/SESSIONS/session_2026-11-21.md`, `agent_docs/RESPONSES/response_2026-11-21_090051_payment-alpha-deploy-prep.md`.
+- **Product and deployment files:** `src/lib/appIdentity.ts` (staging origin pair → alpha hosts), `src/__tests__/alpha-origins.test.ts`, `Dockerfile`, `.dockerignore`, `.gcloudignore`, `cloudbuild.yaml`, `deploy.sh`, `init-app.sh`, `upload-secrets.sh`.
+- **Reason:** Director instruction of 21 Nov 2026: prepare the Payment Portal alpha deployment. Nothing deployed.
+
 ## 2026-11-20 03:40 UTC — [CC] Claude Code
 - **Updated (module):** `MANUAL_QA/2026-11-19/DEV_APPLY_0071_PREPARED.md` (APPLIED section), `REPAIR_LEDGER.md` and `TESTER_PLAN.md` (DEV at 71, local open mail policy), `APBM_STATE.md` and `APBM_JOURNAL.md` (dated entries appended).
 - **Reason:** Director release: DEV 0071 apply (PASS). Documentation only.
