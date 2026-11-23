@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026-11-21 04:50 UTC — [CC] Claude Code
+- **Updated:** `DEPLOYMENT_CHECKLIST.md` (init, secrets, webhook, deploy and domain evidence), `RECOVERY.md`, `agent_docs/SESSIONS/session_2026-11-21.md`.
+- **New:** `agent_docs/RESPONSES/response_2026-11-21_095332_payment-alpha-init-result.md`, `agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md`.
+- **Reason:** Payment Portal alpha deployed to `cyph-v1-payment-alpha` and mapped to its domain on the Director's approval.
+
 ## 2026-11-21 03:40 UTC — [CC] Claude Code
 - **New:** `agent_docs/KIP_REGISTRY.md` (KIP-1: zod advisory deferred for alpha, open for production).
 - **Updated:** `stark-deploy.yaml`, `DEPLOYMENT_CHECKLIST.md` (promotion allowlist unset, decisions recorded, cloud checks ticked), `RECOVERY.md`.
