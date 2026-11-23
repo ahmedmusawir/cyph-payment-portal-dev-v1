@@ -11,7 +11,7 @@ export const PEER_ID: AppId = 'ob';
 const ORIGINS: Record<AppEnv, Record<AppId, string>> = {
   local: { ob: 'http://localhost:3000', pp: 'http://localhost:3001' },
   'local-proof': { ob: 'http://localhost:3100', pp: 'http://localhost:3101' },
-  staging: { ob: 'https://owedbook.cyberizedev.com', pp: 'https://owedbook-payment.cyberizedev.com' },
+  staging: { ob: 'https://cyph-v1-owedbook-alpha.cyberizedev.com', pp: 'https://cyph-v1-payment-alpha.cyberizedev.com' },
 };
 
 export function appEnv(): AppEnv {

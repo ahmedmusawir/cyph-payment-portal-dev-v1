@@ -1,5 +1,16 @@
 # Recovery State — cyph-stripe-subscription-portal-v1
 
+## ▶ PAYMENT PORTAL ALPHA — DEPLOYED, DOMAIN LIVE (updated 2026-11-21, Asia/Dhaka) — read this first
+- **DEPLOYED 2026-11-21:** `cyph-v1-payment-alpha` revision `00001-mwh` from commit `6dd3de7` (build `ebbd4a02-3d79-4ce4-9a12-2b4afe5f6e48`), live at `https://cyph-v1-payment-alpha.cyberizedev.com` (mapping and certificate verified). Report `agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md`. NOT verified: sign-in, signed webhook delivery, mail, two-app flows. Next: Stripe test delivery, Supabase Auth settings, two-app testing, scheduler decision, commit the records. The lines below are the preparation history.
+- **Status:** branch `deploy/payment-alpha-prep` (base `883bc93`), everything UNCOMMITTED. New service `cyph-v1-payment-alpha` (prefix `cyph-payment-alpha`), `cyberize-nextjs-staging` / us-east1, final URL `https://cyph-v1-payment-alpha.cyberizedev.com`. No cloud resource created or changed; FFM service `cyph-sub-portal-prod` untouched.
+- **Record:** `agent_docs/RESPONSES/` `response_2026-11-21_090051_payment-alpha-deploy-prep.md`; run record `DEPLOYMENT_CHECKLIST.md`; ledger `agent_docs/SKILL_ISSUES_LEDGER_next_deploy_auto.md` rows 7–12.
+- **Changed:** `src/lib/appIdentity.ts` (staging row → alpha pair), new `src/__tests__/alpha-origins.test.ts`, `stark-deploy.yaml`, `Dockerfile`, `.dockerignore`, `.gcloudignore`, `cloudbuild.yaml`, `deploy.sh`, `init-app.sh`, new `upload-secrets.sh`, `DEPLOYMENT_CHECKLIST.md`.
+- **Update 2026-11-21 (later):** cloud read-only checks all pass; Next.js 16.4.5; zod deferral recorded (`agent_docs/KIP_REGISTRY.md` KIP-1); `APA_PROMOTION_CODES` unset. Final report `agent_docs/RESPONSES/response_2026-11-21_092234_payment-alpha-prep-final.md` (has the exact git commands).
+- **Init done 2026-11-21 on commit `6dd3de7`:** 7 empty secrets, runtime SA `sa-cyph-payment-alpha-runtime`, bindings. No values uploaded, not deployed.
+- **Secrets done 2026-11-21:** all 7 have ENABLED version 1 (6 by helper, webhook secret by hand from the new Stripe sandbox endpoint `cyph-v1-payment-alpha`). `deploy.sh` guards pass in a dry run. NOT deployed.
+- **WAITING FOR TONY:** deployment approval. Then `./deploy.sh` (agent), read-back, domain mapping (separate approval). Then init (agent) → `upload-secrets.sh` (Tony) → webhook endpoint and secret, checklist step A3 (Tony) → deploy (agent).
+- **Never:** reuse the local Stripe CLI signing secret; enable a scheduler while a local job runner is active on DEV; mark Supabase redirect/template updates or two-app tests as passed (Stage C is pending).
+
 ## ▶ APBM007B CLOSEOUT PREPARED — Director merge pending in both repos (updated 2026-11-18, Asia/Dhaka) — read this first
 - **Status:** Gate Q PASS WITH KNOWN RISK (Friday) on Portal `ba66534` / OwedBook `855e0ad`. KR-1 to KR-6 Director-accepted; cleanup accepted; QA records `1a07c63` pushed. SCRATCH at migration 70, DEV at 69. Gate D pending.
 - **Record:** module `agent_docs/ACTIONS/APBM-007B-CYBER-PHARMA/CLOSEOUT_REPORT.md`; Git handoff `…/EVIDENCE/CLOSEOUT/commit/GIT_HANDOFF.md`; DEV 0070 release sheet `…/EVIDENCE/CLOSEOUT/DEV_APPLY_0070/DEV_APPLY_0070_RELEASE.md`.
