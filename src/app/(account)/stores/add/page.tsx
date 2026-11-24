@@ -8,6 +8,7 @@ import { PageContainer } from "@/components/portal/Loading";
 import { PageHeader } from "@/components/portal/PageHeader";
 import { Alert } from "@/components/portal/Alert";
 import { Button } from "@/components/ui/button";
+import { LayoutMode } from "@/components/portal/layoutMode";
 
 export const metadata = { title: "Add a pharmacy — Pharmacy Books" };
 export const dynamic = "force-dynamic";
@@ -23,6 +24,7 @@ export default async function AddStorePage() {
   }
   if (access === "unavailable") {
     return (
+      <LayoutMode mode="panel">
       <PageContainer width="3xl">
         <PageHeader eyebrow="Add a pharmacy" title="We couldn't check your account right now" />
         <div className="mt-5" data-testid="access-check-failed">
@@ -34,6 +36,7 @@ export default async function AddStorePage() {
           </Button>
         </div>
       </PageContainer>
+      </LayoutMode>
     );
   }
   return <AddStoreFlow />;

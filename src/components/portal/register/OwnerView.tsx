@@ -82,7 +82,7 @@ export function OwnerView() {
 
       <form className="mt-6 space-y-6" noValidate onSubmit={submit}>
         <RequiredNote />
-        <div className="grid min-w-0 gap-5 border border-border bg-card p-4 sm:grid-cols-2 sm:p-5">
+        <div className="grid min-w-0 gap-5 pb-card p-4 sm:grid-cols-2 sm:p-5">
           <TextField id="first" label="First name" required autoComplete="given-name" value={form.firstName} onValue={set("firstName")} error={errors.firstName} />
           <TextField id="last" label="Last name" required autoComplete="family-name" value={form.lastName} onValue={set("lastName")} error={errors.lastName} />
           <TextField
@@ -100,7 +100,7 @@ export function OwnerView() {
           />
           <TextField id="mobile" type="tel" inputMode="tel" autoComplete="tel" label="Mobile phone" required value={form.mobile} onValue={set("mobile")} error={errors.mobile} />
         </div>
-        <fieldset className="min-w-0 border border-border bg-card p-4 sm:p-5" data-testid="owner-declaration-panel">
+        <fieldset className="min-w-0 pb-card p-4 sm:p-5" data-testid="owner-declaration-panel">
           <legend className="sr-only">Owner declaration (required)</legend>
           <label htmlFor="owner-declaration" className="flex min-h-[44px] cursor-pointer items-start gap-3 text-sm text-foreground">
             <input

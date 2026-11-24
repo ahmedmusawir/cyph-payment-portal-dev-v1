@@ -22,7 +22,7 @@ export const ErrorSummary = forwardRef<HTMLDivElement, { items: SummaryItem[]; t
       tabIndex={-1}
       role="alert"
       data-testid="error-summary"
-      className="mt-5 border-l-[3px] border-destructive bg-destructive/10 p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      className="pb-notice pb-tone-destructive mt-5"
     >
       <p className="font-semibold text-foreground">{heading}</p>
       <ul className="mt-1 list-inside list-disc text-sm text-foreground">

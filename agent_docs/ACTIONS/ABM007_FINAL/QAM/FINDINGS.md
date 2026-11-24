@@ -55,3 +55,13 @@ QA Lead disposition, then the Architect's bounded repair instruction, then the E
 | Finding | Repair instruction reference | Repair commit (Director) | Retest scope | Retest result |
 |---|---|---|---|---|
 | none | | | | |
+
+## Amendment 01 additions
+
+1. Every finding records one additional field, **Source**: automated, or Director walkthrough.
+2. Findings from both sources are kept in this one register. A pass from one source does not close a failure from the other.
+3. After adjudication there is one consolidated repair work order for the Engineer.
+
+| Repair work order reference | Findings included | Issued by, date |
+|---|---|---|
+| none | | |

@@ -1,3 +1,6 @@
+"use client";
+
+import { useLayoutMode } from "./layoutMode";
 import { Skeleton } from "@/components/ui/skeleton";
 
 // Shown until the per-tab demo state is read, so fixtures never flash.
@@ -14,6 +17,10 @@ export function ViewSkeleton({ label = "Loading…" }: { label?: string }) {
 }
 
 export function PageContainer({ width = "3xl", children }: { width?: "md" | "xl" | "3xl" | "6xl"; children: React.ReactNode }) {
+  const mode = useLayoutMode();
+  // ABM007_FINAL literal layout: the page sits in the centred white shell (about 560px for single-purpose pages,
+  // about 1100px for multi-column forms) on PublicShell's navy backdrop.
+  if (mode === "literal") return <div className={`pb-shell min-w-0 p-4 sm:p-7 ${width === "md" ? "pb-shell-narrow" : ""}`}>{children}</div>;
   const max = { md: "max-w-md", xl: "max-w-xl", "3xl": "max-w-3xl", "6xl": "max-w-6xl" }[width];
   return <div className={`mx-auto min-w-0 ${max} px-5 py-6 md:py-8`}>{children}</div>;
 }

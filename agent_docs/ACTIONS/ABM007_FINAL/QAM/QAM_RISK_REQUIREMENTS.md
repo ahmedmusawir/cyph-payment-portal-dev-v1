@@ -86,3 +86,14 @@ The Executor preflights every counter and the cleanup boundary before Q2 and pro
 ## 3. Executor's reading (Q1)
 
 NOT RECORDED. Filled by the QA Executor in Q1 without altering sections 1 or 2.
+
+## Amendment 01 module requirements (24 November 2026)
+
+Source for all four rows: Director rulings of 24 November 2026, campaign journal Entries 001 to 003, DC-001 and DC-002. Detail: `QAM_AMENDMENT_01.md`.
+
+| ID | Requirement | Evidence expected |
+|---|---|---|
+| AR-1 | A QA Lead-selected human walkthrough is performed by the Director inside Q2, before certification | The selected checks in the approved plan, each with a recorded result. None prefilled |
+| AR-2 | Regression coverage is inventoried and selected in Q1 from the complete candidate diff | The inventory, the CR and criterion mapping, and a reason for every exclusion and reused item |
+| AR-3 | A fixture session is not presented as proof of real sign-in, email delivery or handoff | Every result states how its session was obtained; real sign-in has its own evidence |
+| AR-4 | Reusable passing scripts are listed and approved for keeping before any cleanup removes them; no credential or sign-in state is kept | The approved keep-list in the cleanup report |

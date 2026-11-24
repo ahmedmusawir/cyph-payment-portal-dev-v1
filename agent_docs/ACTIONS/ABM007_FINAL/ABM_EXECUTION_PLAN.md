@@ -1,15 +1,16 @@
 # ABM_EXECUTION_PLAN — ABM007_FINAL
 
-**Owner:** Engineer (Claudy) · **Version:** DRAFT 01 · **Date:** 24 November 2026, Asia/Dhaka
+**Owner:** Engineer (Claudy) · **Version:** RELEASED 02 · **Date:** 24 November 2026, Asia/Dhaka
 
-**Status: DRAFT ENGINEERING PLAN, RETURNED FOR REVIEW.** Written on the Director's instruction of 24 November, which authorized entry checks and a draft plan while the pack is still a review candidate. This plan does not freeze the contract, does not settle any proposed position, and releases nothing. Nothing in either product was changed.
+**Status: APPROVED AND RELEASED.** The Architect's E1 verdict was APPROVE WITH EXACT AMENDMENTS; the Director approved the recommended decision bundle and released E2 on 24 November, 10:02 (`SOURCES/DIRECTOR_RELEASE_E2_2026-11-24.md`; `ABM_RULINGS.md` AM-08, AM-09). This version is DRAFT 01 with the six exact amendments applied (section 15) and the decisions in section 12 A recorded as ruled. Sections 1 to 14 otherwise stand as reviewed.
 
 | Field | Value |
 |---|---|
-| Plan version / hash | DRAFT 01. SHA-256 is in the review package's `FILE_INDEX.json` |
-| Planning basis | The pack's recommended included/deferred split (`ABM_RULINGS.md` section 4, group 2), as a **proposal**. Positions P-01 to P-22 stay pending until the Director rules |
-| Architect review | NOT RECORDED |
-| Director release | NOT RECORDED |
+| Plan version / hash | RELEASED 02. SHA-256 recorded in `ABM_STATE.md` (a file cannot carry its own hash) |
+| Planning basis | Group 2 split **approved** (AM-08 (1)); P-01 to P-04 **approved** (AM-08 (2)) |
+| Architect review | E1: APPROVE WITH EXACT AMENDMENTS A to F (AM-09) |
+| Director release | RECORDED, 24 Nov 2026 10:02 (AM-08) |
+| Contract | Frozen at `CONTRACT_FREEZE.md` (AM-10) |
 
 ## 1. Summary
 
@@ -122,7 +123,7 @@ One further theme-toggle mount exists in an unreachable file, `src/components/po
 
 ## 5. Implementation order and dependencies
 
-One continuous run after release. The steps are internal checkpoints. After each step both unit suites and both typechecks run before the next begins.
+One continuous run after release. The steps are internal checkpoints. Checks during the run are targeted (AM-09 (C)); the full set runs once at completion (section 15).
 
 | Step | Work | Needs | Self-check at the end of the step |
 |---|---|---|---|
@@ -274,7 +275,7 @@ The single-session question is practical, not a conflict: steps 1 and 7 change b
 
 Nothing below was decided by this plan. Settled decisions D-01 to D-15 are not reopened.
 
-### A. Needed before building
+### A. Needed before building — ALL RULED 24 Nov (AM-08); recommendations adopted as written, with D-B2 trimming not authorized
 
 | # | Decision | Owner | Why it gates the build | Recommendation |
 |---|---|---|---|---|
@@ -312,7 +313,7 @@ Nothing below was decided by this plan. Settled decisions D-01 to D-15 are not r
 
 ### E. Genuine blockers today
 
-None that stops planning. Building is blocked only by section A.
+None. Section A is ruled. Step 9 waits on X-1 and X-3 only (AM-09 (F)).
 
 ## 13. Estimate for the proposed scope
 
@@ -352,3 +353,16 @@ This replaces the engineering rows of the brief's section 10. It is close to the
 - **P-nn, D-nn, AC-xnn:** proposed positions, settled Director decisions and acceptance criteria in the pack.
 - **S1 / S2:** the Director's read-only and apply dashboard sessions.
 - **Isolated copy:** an export of a commit into a scratch folder outside both repositories, where builds and tests run without touching either working tree.
+
+## 15. Amendments applied at release (AM-09)
+
+| # | Amendment | Where it changes this plan |
+|---|---|---|
+| A | Read-only refresh: `git ls-remote --heads origin` in both repositories and one GET of each alpha service's `/api/build-info`. No fetch, pull, switch or Git change. Live observations recorded apart from historical records; an unavailable read is a recorded limitation, not parity | Replaces the first two rows of the "Not verified" table in section 2. Run before step 1; evidence `EVIDENCE/E2/REFRESH.md` |
+| B | Final verification on the **actual working tree**: the isolated copy is assembled from the working-tree inventory (tracked files as they are on disk plus untracked product files, excluding ignored and environment files), its file list and hashes are bound to `git status --porcelain` and `git ls-files` output taken at the same moment, and credentials are excluded. `git archive HEAD` is not used for the final run | Section 6.1 first row and step 10 |
+| C | Targeted checks during implementation (the affected test files and typecheck); the full unit, typecheck, lint and build set once at completion, repeated only when later changes or failures justify it | Replaces "After each step both unit suites and both typechecks run" in section 5 |
+| D | Help corrected through H-1 to H-6 and rendered behavior. Member navigation and billing links traced to their real guard outcomes. Guards are not changed to fit Help. Acceptance clarifications go to the rulings lane; an unresolved contract conflict stops only the Help task | Section 8 and step 5. H-2 is settled by AM-08 (6): labels kept, Help describes them |
+| E | Old-logo scan reconciled with protected unused preview files: exact references listed; asset-reference-only correction where the path is allowed; unused modules neither restyled nor deleted; out-of-scope references reported with path and the exception needed; no clean-scan claim without that reconciliation | Section 6.1 logo row; leftovers list |
+| F | Missing external inputs stay in scope. If X-1 or X-3 has not arrived at completion, the return is an **interim handoff** naming step 9 as unfinished; ENGINEERING COMPLETE is not recorded and AC-E01 is not claimed. The live template is never reconstructed | Sections 9, 10 and step 9 |
+
+Ruling AM-08 (5) replaces decision D-B3's recommendation with the Director's exact limits: isolated production preview builds on mock or public pages or designated existing SCRATCH fixtures, backend identity verified before any authenticated check, no purchase, listener, DEV-backed signed-in session, rehearsal account, data mutation or fixture creation; owned ports and processes recorded and stopped.

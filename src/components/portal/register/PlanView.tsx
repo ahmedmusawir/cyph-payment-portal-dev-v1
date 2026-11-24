@@ -36,20 +36,20 @@ export function PlanView() {
       >
         <fieldset className="min-w-0">
           <legend className="mb-2 text-sm font-medium text-foreground">Plan</legend>
-          <label className="relative flex cursor-pointer flex-col gap-2 border-2 border-primary bg-card p-4 focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 focus-within:ring-offset-background">
+          <label className="relative flex cursor-pointer flex-col gap-2 rounded-lg border-2 border-heading bg-card p-4 focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 focus-within:ring-offset-background">
             <input type="radio" name="plan" className="sr-only" checked readOnly value="owedbook" />
             <span className="flex items-center justify-between gap-2">
-              <span className="text-sm font-semibold text-foreground">{BRAND.owedBook}</span>
-              <span className="inline-flex items-center whitespace-nowrap border border-foreground/25 bg-primary px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-primary-foreground">Selected</span>
+              <span className="pb-h2">{BRAND.owedBook}</span>
+              <span className="pb-pill pb-tone-info">Selected</span>
             </span>
-            <span className="text-2xl font-semibold tabular-nums text-foreground" data-testid="plan-price">
+            <span className="text-[28px] font-bold tabular-nums text-heading" data-testid="plan-price">
               $99.00 <span className="text-sm font-normal text-muted-foreground">/ month</span>
             </span>
             <span className="text-xs text-muted-foreground">Includes 1 pharmacy · each additional store $49.00 / month</span>
           </label>
         </fieldset>
 
-        <div className="min-w-0 border border-border bg-card p-4 sm:p-5" data-testid="store-count">
+        <div className="min-w-0 pb-card p-4 sm:p-5" data-testid="store-count">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
             <div className="min-w-0">
               <p className="text-sm font-medium text-foreground">Pharmacies on this subscription: 1</p>

@@ -174,7 +174,7 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
     <section aria-labelledby="ph-h" className="mt-8" data-testid="pharmacies-section">
       <div className="mb-3 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div className="min-w-0">
-          <h2 id="ph-h" className="text-xl font-bold text-foreground">Pharmacies on this account</h2>
+          <h2 id="ph-h" className="pb-h2 text-xl">Pharmacies on this account</h2>
           <span className="text-sm tabular-nums text-muted-foreground" data-testid="pharmacy-count">
             {stores.length} {stores.length === 1 ? "pharmacy" : "pharmacies"}
           </span>
@@ -195,7 +195,7 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
         columns={columns}
         rows={stores}
         getRowKey={(s) => s.id}
-        tableClassName="border border-border bg-card"
+        tableClassName="pb-card"
         mobileLabel="Pharmacies on this account"
         empty={
           <EmptyState
@@ -218,7 +218,7 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
         eyebrow={eyebrow}
         title={page === "billing" ? "Your subscription" : "Your account"}
         meta={
-          <button type="button" className="portal-link inline-flex min-h-[44px] items-center" onClick={reload} disabled={working} aria-busy={busy === "reload" || undefined} data-testid="refresh">
+          <button type="button" className="pb-link-on-page inline-flex min-h-[44px] items-center" onClick={reload} disabled={working} aria-busy={busy === "reload" || undefined} data-testid="refresh">
             {busy === "reload" ? "Refreshing…" : "Refresh"}
           </button>
         }
@@ -259,8 +259,8 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
       </div>
 
       {sub === null ? (
-        <section className="mt-5 border border-border bg-card p-4 sm:p-5" data-testid="no-subscription">
-          <h2 className="text-xl font-bold text-foreground">No subscription yet</h2>
+        <section className="mt-5 pb-card p-4 sm:p-5" data-testid="no-subscription">
+          <h2 className="pb-h2 text-xl">No subscription yet</h2>
           <p className="mt-1 text-sm text-muted-foreground">
             {stores.length === 0 ? "This account doesn't have a subscription or a pharmacy yet." : "This account doesn't have a subscription on record."}
           </p>
@@ -274,10 +274,10 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
           </div>
         </section>
       ) : synthetic ? (
-        <section className="mt-5 border-2 border-dashed border-border bg-card p-4 sm:p-5" data-testid="synthetic-panel">
+        <section className="mt-5 rounded-lg border-2 border-dashed border-input bg-card p-4 sm:p-5" data-testid="synthetic-panel">
           <div className="flex flex-wrap items-center gap-2">
             <Pill tone="info">Test account</Pill>
-            <h2 className="text-xl font-bold text-foreground">Test account — no billing</h2>
+            <h2 className="pb-h2 text-xl">Test account — no billing</h2>
           </div>
           <p className="mt-1 text-sm text-muted-foreground">
             This account was set up for testing and isn&apos;t connected to a payment provider. There is no plan to pay for, no payment method, no invoices and nothing to manage here.
@@ -287,26 +287,26 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
           </div>
         </section>
       ) : (
-        <section aria-labelledby="plan-h" className="mt-5 border border-border bg-card p-4 sm:p-5" data-testid="plan-summary">
+        <section aria-labelledby="plan-h" className="mt-5 pb-card p-4 sm:p-5" data-testid="plan-summary">
           <div className="flex flex-col gap-6 lg:flex-row lg:justify-between lg:gap-10">
             <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-center gap-2">
-                <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Plan</p>
+                <p className="text-[13px] font-medium text-muted-foreground">Plan</p>
                 <span data-testid="subscription-status"><Pill tone={subPill.tone}>{subPill.label}</Pill></span>
               </div>
-              <h2 id="plan-h" className="mt-1 text-xl font-bold text-foreground">
+              <h2 id="plan-h" className="pb-h2 mt-1 text-xl">
                 {BRAND.owedBook} <span className="text-sm font-normal text-muted-foreground">· monthly</span>
               </h2>
               {/* Manual QA 19 Nov 2026 (R9): a scheduled removal lowers the subscription quantity at once (it is what the next
                   renewal bills) while the store keeps access until the period ends. Show both numbers, labelled. */}
               <dl className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
                 <div>
-                  <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Pharmacies with access now</dt>
-                  <dd className="text-2xl font-semibold tabular-nums text-foreground" data-testid="active-count">{stores.length}</dd>
+                  <dt className="text-[13px] font-medium text-muted-foreground">Pharmacies with access now</dt>
+                  <dd className="text-2xl font-bold tabular-nums text-heading" data-testid="active-count">{stores.length}</dd>
                 </div>
                 <div>
-                  <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Billed at next renewal</dt>
-                  <dd className="text-2xl font-semibold tabular-nums text-foreground" data-testid="store-count">{sub.quantity ?? "—"}</dd>
+                  <dt className="text-[13px] font-medium text-muted-foreground">Billed at next renewal</dt>
+                  <dd className="text-2xl font-bold tabular-nums text-heading" data-testid="store-count">{sub.quantity ?? "—"}</dd>
                   {leaving.length > 0 ? (
                     <p className="text-xs text-muted-foreground" data-testid="leaving-note">
                       {leaving.length === 1 ? `1 pharmacy leaves on ${date(leaving[0].removal_effective_at ?? null)}` : `${leaving.length} pharmacies leave at the end of this period`}
@@ -314,8 +314,8 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
                   ) : null}
                 </div>
                 <div>
-                  <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">{showsPaidThrough ? "Paid through" : "Next payment"}</dt>
-                  <dd className="text-2xl font-semibold tabular-nums text-foreground" data-testid="next-date">
+                  <dt className="text-[13px] font-medium text-muted-foreground">{showsPaidThrough ? "Paid through" : "Next payment"}</dt>
+                  <dd className="text-2xl font-bold tabular-nums text-heading" data-testid="next-date">
                     {(showsPaidThrough ? date(sub.paid_through) : date(sub.current_period_end)) || "—"}
                   </dd>
                 </div>
@@ -324,7 +324,7 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
             <div className="flex min-w-0 flex-col gap-3 border-t border-border pt-5 lg:w-80 lg:shrink-0 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0" data-testid="plan-actions">
               {page === "billing" ? (
                 <>
-                  <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Payment method</p>
+                  <p className="text-[13px] font-medium text-muted-foreground">Payment method</p>
                   {card ? <p className="break-words text-sm font-medium text-foreground" data-testid="payment-method">{card}</p> : null}
                   {manageButton("Manage billing", "manage-billing", "default")}
                   <p className="text-xs text-muted-foreground">
@@ -333,7 +333,7 @@ export function DashboardView({ page }: { page: "dashboard" | "billing" }) {
                 </>
               ) : (
                 <>
-                  <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Go to</p>
+                  <p className="text-[13px] font-medium text-muted-foreground">Go to</p>
                   <OwedBookLink primary />
                   <Button asChild variant="outline">
                     <Link href="/billing" data-testid="go-billing">Billing</Link>

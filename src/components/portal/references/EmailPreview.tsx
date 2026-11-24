@@ -59,7 +59,7 @@ export function EmailPreview({
       <div className="mx-auto max-w-[600px] px-4 py-6">
         <div className="flex items-center gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-color.svg" alt="" className="h-7 w-7" />
+          <img src="/brand/pharmacy-books-logo-primary.png" alt="" className="h-7 w-auto" />
           <span className="text-sm font-bold uppercase tracking-wide text-foreground">{BRAND.name}</span>
         </div>
         {variant === "owner" ? (

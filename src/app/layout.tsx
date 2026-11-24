@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Saira } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.scss";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "./providers/ThemeProvider";
 
-// Cyber Pharma typeface (Metro Warm): Saira, app-wide.
-const saira = Saira({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+import { BRAND } from "@/components/portal/brand";
+
+// ABM007_FINAL: Inter 400 to 700 via next/font (self-hosted at build), replacing Saira.
+const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-brand" });
 
 export const metadata: Metadata = {
-  title: "Cyber Pharma — Subscription Portal",
-  description: "Cyber Pharma subscription portal (foundation).",
+  title: `${BRAND.subline} · ${BRAND.name}`,
+  description: `${BRAND.name} ${BRAND.subline}: your subscription, pharmacies and invoices.`,
 };
 
 export default function RootLayout({
@@ -17,14 +19,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Dark by default: html ships class="dark" for a dark first paint (no flash);
-  // next-themes keeps dark as the default while the ThemeToggle still switches.
+  // ABM007_FINAL (D-01): light only. No "dark" class ships on <html>, and
+  // next-themes is forced to light so a saved or system preference cannot apply.
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={saira.className}>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <body className="font-brand">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
+          forcedTheme="light"
           enableSystem={false}
           disableTransitionOnChange
         >

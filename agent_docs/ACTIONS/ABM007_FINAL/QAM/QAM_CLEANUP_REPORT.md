@@ -39,3 +39,13 @@ Password rotation by the Director (recorded as Director-reported if he reports i
 |---|---|
 | Accepted, or returned with exact items | NOT RECORDED |
 | Date | NOT RECORDED |
+
+## Amendment 01 addition: keep-list (completed before any cleanup step removes anything)
+
+Proposed by the QA Executor, approved by the QA Lead. Never listed: credentials, passwords, tokens, links, cookies, sign-in state, browser profiles, raw authenticated traces.
+
+| Asset | CR mapping | Pass checkpoints | Fixture specification | Permitted effects | Actual result | Candidate it passed on | Keep? |
+|---|---|---|---|---|---|---|---|
+| NOT RECORDED | | | | | | | |
+
+QA Lead approval of the keep-list: NOT RECORDED.

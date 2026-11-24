@@ -237,7 +237,7 @@ export function ActivationView() {
     <PageContainer>
       <PageHeader eyebrow="Activation" title={heading} />
 
-      <section aria-labelledby="tr-h" aria-live="polite" className="mt-6 border border-border bg-card p-4 sm:p-5" data-testid="activation-tracks">
+      <section aria-labelledby="tr-h" aria-live="polite" className="mt-6 pb-card p-4 sm:p-5" data-testid="activation-tracks">
         <h2 id="tr-h" className="text-base font-semibold text-foreground">Activation progress</h2>
         <ol className="mt-1 divide-y divide-border">
           <Track
@@ -348,7 +348,7 @@ export function ActivationView() {
         ) : null}
 
         {ready && s.email === "not_needed" ? (
-          <section aria-labelledby="go-h" className="border border-border bg-card p-4 sm:p-5" data-testid="activation-signed-in">
+          <section aria-labelledby="go-h" className="pb-card p-4 sm:p-5" data-testid="activation-signed-in">
             <h2 id="go-h" className="text-base font-semibold text-foreground">Your subscription is active</h2>
             <p className="mt-1 text-sm text-muted-foreground">You&apos;re already signed in, so no sign-in email is needed.</p>
             <div className="mt-3 flex flex-col gap-2 sm:flex-row">

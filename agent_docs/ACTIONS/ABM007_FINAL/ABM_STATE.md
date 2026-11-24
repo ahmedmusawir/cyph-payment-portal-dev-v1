@@ -6,22 +6,22 @@ A small index. It points at authoritative records and grants no authority. Lates
 
 | Field | Value |
 |---|---|
-| As of | 23 November 2026, Asia/Dhaka |
-| Module state | `REVIEW CANDIDATE — AWAITING ARCHITECT VERDICT AND DIRECTOR RULINGS` (second review candidate; the Architect re-checks amendments A-01 to A-06) |
-| Contract version | Brief, acceptance spec and amended contracts at 1.1-review; Help content unchanged at 1.0-review. Not frozen |
-| Engineering branch / baseline, OwedBook | `abm007-final` / `9597699b404afdbcd792a9b4da61c21abb10cdf8` |
-| Engineering branch / baseline, Portal | `abm007-final` / `cb4decde9adc9ab75d0dcb15556c64a3bdbfe075` |
-| Product candidate | PENDING (does not exist until the Director commits completed engineering) |
-| Approved engineering plan | NOT RECORDED |
-| Engineering release | NOT RECORDED |
-| Gate V (visual approval of `DESIGN/`) | Approved by the Director on the REVIEW_01 renders, 23 Nov 17:20. Reconfirmation on the corrected REVIEW_02 renders PENDING (`ABM_RULINGS.md` AM-01, AM-03) |
-| Current writer | none. The pack has not been installed in either repository |
+| As of | 24 November 2026, about 15:55 Asia/Dhaka |
+| Module state | `ENGINEERING COMPLETE — AWAITING QA BRANCH`. The Architect accepted engineering completion for QA intake (journal v0.5 Entry 005); this is not Gate Q, release or closeout. QAM Amendment 01 installed (AM-17) |
+| Contract version | Frozen 24 Nov at `CONTRACT_FREEZE.md` (AM-10) |
+| Engineering branch / baseline, OwedBook | `abm007-final` / `9597699b404afdbcd792a9b4da61c21abb10cdf8` (baseline kept, AM-08 (3)). Actual starting HEAD `c335671afa6cd4a8a2d437c30aeae5040e0cecaf` (records-only, preserved) |
+| Engineering branch / baseline, Portal | `abm007-final` / `cb4decde9adc9ab75d0dcb15556c64a3bdbfe075` (baseline kept). Actual starting HEAD `b2e50fa86ef041f9f7f7f1a0f630576de0a10664` ("E1 recon done", Director, 24 Nov 09:36; records only: module pack, E1 records), pushed |
+| Product candidate | PENDING in both repositories until the Director commits (`EVIDENCE/E2/DIRECTOR_GIT_COMMANDS.md`); Q1 records the actual identities from the Director's receipt |
+| Approved engineering plan | `ABM_EXECUTION_PLAN.md` RELEASED 02, SHA-256 `81ae3410eb5d5652b9eaf3f0cf009458d3a95b2ee8fd913f904acd452515c7ce` |
+| Engineering release | RECORDED: Director, 24 Nov 10:02 (`SOURCES/DIRECTOR_RELEASE_E2_2026-11-24.md`; AM-08, AM-09) |
+| Gate V (visual approval of `DESIGN/`) | Approved (AM-01) and reconfirmed by ruling AM-08 (2) |
+| Current writer | Engineer (Claudy) until the Director commits; then the QA branch per `QAM/QAM_STATE.md` |
 | QAM state | `READY FOR ENGINEERING` (see `QAM/QAM_STATE.md`) |
-| Latest package | The authoring review package; filename and SHA-256 in the author's return message |
-| Current stop | none |
-| Next owner | Architect (check of amendments A-01 to A-06); Director (the four decision groups in `ABM_RULINGS.md` section 4) |
-| Next permitted action | Review. No installation, build, external change or deployment |
-| Actions already completed that must not repeat | Pre-ABM recon by the Engineer, 23 Nov. The Director's customer rehearsal of 21 to 22 Nov. Neither is rerun |
+| Latest package | `EVIDENCE/ABM007_FINAL_E2_FINAL_HANDOFF_04.zip` (final documentation-only handoff; SHA-256 in the `.sha256` beside it and in the return message). Earlier: `_ENGINEERING_REVIEW_01`, `_SOURCE_REVIEW_01`, `_E2_COMPLETION_REVIEW_02`, `_E2_COMPLETION_REVIEW_03` |
+| Current stop | None. S-1 closed for engineering (template prepared, AM-16), S-2 closed (SCRATCH reuse and automated authentication, AM-14 and AM-15), S-3 closed (exception applied, AM-16) |
+| Next owner | Director: commit both candidates with the exact lists, create `qa/abm007-final` at those commits, release Q1. QA Lead: confirm the installed amendment from the install report. Engineer: available for accepted repairs |
+| Next permitted action | Director Git actions; independent QA Q1 on the committed candidates (the SCRATCH setup is in handoff section 12.4). Engineering makes no further change unless asked |
+| Actions already completed that must not repeat | Pre-ABM recon (23 Nov); the Director's customer rehearsal (21 to 22 Nov); entry checks E-1 to E-6 (24 Nov) |
 
 ## Transition log (append-only; newest last)
 
@@ -32,6 +32,15 @@ A small index. It points at authoritative records and grants no authority. Lates
 | 2026-11-23 | ABM author | state unchanged | REVIEW_02: the six amendments applied in one bounded pass (`AMENDMENT_EVIDENCE_02.md`). No recon repeated, nothing built |
 | 2026-11-24 | Engineer | state unchanged | Draft engineering plan returned on the Director's instruction of 24 Nov, which authorized entry checks and a draft plan while the pack is a review candidate. Entry checks E-1 to E-6 done (`EVIDENCE/PLAN/ENTRY_CHECKS.md`); `ABM_EXECUTION_PLAN.md` DRAFT 01 written. Not a freeze, not a release; no product change. Found: OwedBook HEAD is `c335671`, one records-only local commit past the baseline `9597699` |
 
+| 2026-11-24 | Director (Architect verdict relayed) | `REVIEW CANDIDATE — AWAITING ARCHITECT VERDICT AND DIRECTOR RULINGS` → `ENGINEERING RELEASED` | Architect E1: APPROVE WITH EXACT AMENDMENTS. Director approved the decision bundle and released E2, 10:02 (AM-08, AM-09). Contract frozen (AM-10). Plan RELEASED 02, `81ae3410…15c7ce`. Writer: Engineer |
+
+| 2026-11-24 | Engineer | state unchanged (`ENGINEERING RELEASED`) | Interim engineering handoff: steps 1 to 8 and 10 done in both working trees (uncommitted); step 9 Stripe values prepared, email body not (X-1 missing); full checks green on working-tree copies; public pages rendered; stops S-1 to S-3 recorded. Not `ENGINEERING COMPLETE` (AM-09 (F)) |
+
 ## State vocabulary
 
 `REVIEW CANDIDATE — AWAITING ARCHITECT VERDICT AND DIRECTOR RULINGS` → `CONTRACT FROZEN — READY FOR ENGINEERING PLAN` → `PLAN RETURNED — AWAITING REVIEW AND RELEASE` → `ENGINEERING RELEASED` → `ENGINEERING COMPLETE — AWAITING QA BRANCH` → (QA states in `QAM/QAM_STATE.md`) → `CERTIFIED — DEPLOYMENT AUTHORIZED FOR <service>` (once per service) → `DEPLOYED — ALPHA VERIFICATION PENDING` → `ALPHA VERIFIED — AWAITING DIRECTOR ACCEPTANCE` → `CLOSED`. A stop may interrupt any state and records its resume point.
+
+| 2026-11-24 | Engineer | state unchanged (`ENGINEERING RELEASED`, E2 INTERIM) | Director's continuation (`SOURCES/DIRECTOR_E2_CONTINUATION_2026-11-24.md`; AM-12 Architect AC-H03 confirmation, AM-13 limits). Source-review corrections A to D done. One self-introduced regression (overlay menu obscured focus) found and fixed. Final checks green; rendered first-paint, focus and Help checks done. Director-observed settings recorded; Stripe traced read-only; external settings plan and deployed walkthrough prepared. Stops S-1 (narrowed), S-2 (corrected), S-3 open |
+
+| 2026-11-24 | Engineer | `ENGINEERING RELEASED` → `ENGINEERING COMPLETE — AWAITING QA BRANCH` | Director rulings AM-14 to AM-16: S-1 template prepared (heading-only diff), S-3 exception applied, existing SCRATCH fixtures with automated authentication. Signed-in checks for 3 roles in both apps, per-role Help, AC-F02 reproduction (not reproduced). Two pre-existing 375 px overflows fixed. Final affected checks green. Package 03 |
+| 2026-11-24 | Engineer | state unchanged (`ENGINEERING COMPLETE — AWAITING QA BRANCH`) | Architect accepted package 03 for QA intake. QAM_AMENDMENT_01 installed with pointer blocks (AM-17; documentation only, no result recorded). Engineering record corrected (AC-F02 18 + 2 per attempt; O-1 for QA; build-check history kept; QA-copy constraints of the SCRATCH tooling documented). Delta from package 03 documentation only. Package 04 |

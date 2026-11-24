@@ -1,19 +1,19 @@
 // APBM007A — small presentational pieces for the sign-in confirmation, link recovery, handoff recovery, account
 // switch and signed-out pages. Server-renderable: the two forms are plain HTML POSTs, so they work without script.
+import { PageHeader } from "@/components/portal/PageHeader";
 import Link from "next/link";
 import { Alert } from "@/components/portal/Alert";
 import { PageContainer } from "@/components/portal/Loading";
 import { LinkRequestForm } from "@/components/auth/LinkRequestForm";
 
-const buttonClass = "inline-flex h-11 w-full items-center justify-center bg-primary px-5 text-sm font-semibold uppercase tracking-wide text-primary-foreground hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
-const secondaryClass = "inline-flex h-11 w-full items-center justify-center border border-input bg-background px-5 text-sm font-semibold uppercase tracking-wide text-foreground hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
+const buttonClass = "inline-flex min-h-11 w-full items-center justify-center rounded-md bg-primary px-5 py-2.5 text-center text-base font-normal text-primary-foreground hover:bg-primary-hover";
+const secondaryClass = "inline-flex min-h-11 w-full items-center justify-center rounded-md border border-input bg-card px-5 py-2.5 text-center text-base font-normal text-heading hover:bg-accent";
 
 function Frame({ eyebrow, title, children }: { eyebrow: string; title: string; children: React.ReactNode }) {
   return (
     <PageContainer width="md">
-      <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">{eyebrow}</p>
-      <h1 className="mt-1 text-[26px] font-bold leading-tight text-foreground md:text-[32px]">{title}</h1>
-      <div className="mt-6 space-y-4">{children}</div>
+      <PageHeader eyebrow={eyebrow} title={title} />
+      <div className="space-y-4">{children}</div>
     </PageContainer>
   );
 }
@@ -23,7 +23,7 @@ export function ConfirmSignIn({ csrf }: { csrf: string }) {
   return (
     <Frame eyebrow="Account & Billing" title="Finish signing in">
       <p className="text-sm text-muted-foreground">You opened a sign-in link. Press the button to sign in on this browser. The link works once.</p>
-      <form method="post" action="/api/auth/confirm" className="border border-border bg-card p-4 sm:p-5">
+      <form method="post" action="/api/auth/confirm" className="pb-card p-4 sm:p-5">
         <input type="hidden" name="csrf" value={csrf} />
         <button type="submit" className={buttonClass} data-testid="confirm-sign-in">Sign in</button>
       </form>

@@ -48,3 +48,13 @@ Kept separate from the plan so the plan's hash does not refer to itself. Text he
 | Round | Repaired pair | Retest scope | QA Lead approval | Director release |
 |---|---|---|---|---|
 | none | | | | |
+
+## Amendment 01 additions (owner: QA Lead)
+
+| Field | Value |
+|---|---|
+| Selected human checks (IDs) | NOT RECORDED |
+| Proposed human checks removed or moved to automation, with reasons | NOT RECORDED |
+| Regression selection accepted, with any exact amendments | NOT RECORDED |
+| Automated sign-in method confirmed as not needing the Director's inbox | NOT RECORDED |
+| Human checks the Director must repeat after a repair (per retest round) | none |

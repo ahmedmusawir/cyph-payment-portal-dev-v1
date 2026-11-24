@@ -83,3 +83,19 @@ What a complete Q2 return contains. NOT RECORDED.
 | Date | Edit, verbatim | Source in `QAM_APPROVAL.md` | Applied by |
 |---|---|---|---|
 | none | | | |
+
+## Amendment 01 additions (owner: QA Executor drafts; QA Lead selects and approves)
+
+**A. Human walkthrough.** This table replaces any earlier human-checks section in this file. Fields are defined in `QAM_AMENDMENT_01.md` section 1.
+
+| ID and criterion | Why a human | Candidate and target | Fixture and effects | Action | Expected result | Evidence | Result | Finding and retest |
+|---|---|---|---|---|---|---|---|---|
+| NOT RECORDED | | | | | | | PENDING | |
+
+Effort estimate for the walkthrough: NOT RECORDED. Device named for any real-phone check: NOT RECORDED.
+
+**B. Regression selection.**
+
+| Change in the candidate | Coverage selected | CR mapping | Session method | Effects declared | Excluded or reused, with reason and owner |
+|---|---|---|---|---|---|
+| NOT RECORDED | | | | | |

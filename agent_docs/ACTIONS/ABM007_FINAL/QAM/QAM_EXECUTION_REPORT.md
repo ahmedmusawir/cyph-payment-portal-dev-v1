@@ -69,3 +69,19 @@ NOT RECORDED.
 ## 10. Final changed-file inventory in the QA lane
 
 NOT RECORDED.
+
+## Amendment 01 additions (owner: QA Executor records; the Director's observations are his own)
+
+**A. Human walkthrough record.** This table replaces any earlier human-checks table in this file.
+
+| ID | Performed by | Candidate and target confirmed | Observation, in the performer's words | Result | Time | Finding |
+|---|---|---|---|---|---|---|
+| NOT RECORDED | | | | PENDING | | |
+
+**B. Session method by test.** Each result in this report states fixture session, password sign-in, or emailed link (human).
+
+**C. First failures.** Each first failure is listed here with its classification before any rerun.
+
+| Test | First failure, time | Classed as | Rerun? Why it was safe | Later outcomes |
+|---|---|---|---|---|
+| none recorded | | | | |

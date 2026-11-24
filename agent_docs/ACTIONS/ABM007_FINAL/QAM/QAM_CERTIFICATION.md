@@ -48,3 +48,13 @@ Reference to `GATE_D_PLAN.md` section 5. NOT RECORDED.
 ## 7. Release to closeout
 
 Requires: accepted Gate Q verdict, accepted cleanup, durable records committed by the Director, clean trees, and the Gate D rows recorded. NOT RECORDED.
+
+## Amendment 01 checks (QA Lead, before any verdict)
+
+| Check | Met? Evidence |
+|---|---|
+| Every selected human check has a result; none is PENDING. Any BLOCKED check has the Director's written disposition | |
+| Automated and human findings were adjudicated together; one repair work order; affected retests and required regression done on the final candidate | |
+| No fixture-session evidence is counted as proof of real sign-in, email delivery or handoff | |
+| The keep-list was approved before cleanup | |
+| Deployment-only checks are named and left to Gate D | |

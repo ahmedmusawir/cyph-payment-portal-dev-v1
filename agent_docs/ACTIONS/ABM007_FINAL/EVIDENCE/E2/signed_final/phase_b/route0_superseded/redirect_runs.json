@@ -1,0 +1,745 @@
+{
+ "note": "Superseded route: after OwedBook pages it visited Portal /dashboard directly, without a Portal session (no OwedBook link into Account & Billing is offered to a Store admin), so the /login landings show the separate-cookie design, not the defect. Kept for the record; not evidence of the defect.",
+ "runs": [
+  {
+   "browser": "chromium",
+   "mode": "fresh",
+   "run": 1,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "fresh",
+   "run": 2,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "fresh",
+   "run": 3,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "fresh",
+   "run": 4,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "fresh",
+   "run": 5,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "warm",
+   "run": 1,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "warm",
+   "run": 2,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "warm",
+   "run": 3,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "warm",
+   "run": 4,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "warm",
+   "run": 5,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "fresh",
+   "run": 1,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "fresh",
+   "run": 2,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "fresh",
+   "run": 3,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "fresh",
+   "run": 4,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "fresh",
+   "run": 5,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "warm",
+   "run": 1,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "warm",
+   "run": 2,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "warm",
+   "run": 3,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "warm",
+   "run": 4,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "warm",
+   "run": 5,
+   "steps": [
+    {
+     "what": "OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "OB /admin-portal",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "OB /admin-portal/billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "Manage billing",
+     "note": "not offered to this role on this page"
+    },
+    {
+     "what": "back to OB /owedbook",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/login"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": true,
+   "sentToOwedBookSignIn": false
+  }
+ ]
+}

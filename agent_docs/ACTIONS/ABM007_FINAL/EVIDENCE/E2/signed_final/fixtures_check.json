@@ -1,0 +1,67 @@
+{
+ "target": "ihgcsrypblqkwommrkgj",
+ "at": "2026-11-24T09:11:05.918Z",
+ "migrations": {
+  "v": "20261012053902",
+  "n": "1"
+ },
+ "roles": {
+  "ENGINEERING_OWNER_A": {
+   "exists": true,
+   "confirmed": true,
+   "has_password": true,
+   "cast_has_password": true,
+   "banned": false,
+   "owns_accounts": 1,
+   "memberships": {
+    "admin": 2,
+    "member": 1
+   }
+  },
+  "ENGINEERING_OWNER_B": {
+   "exists": true,
+   "confirmed": true,
+   "has_password": true,
+   "cast_has_password": true,
+   "banned": false,
+   "owns_accounts": 1,
+   "memberships": {
+    "admin": 2,
+    "member": 1
+   }
+  },
+  "ENGINEERING_ADMIN": {
+   "exists": true,
+   "confirmed": true,
+   "has_password": true,
+   "cast_has_password": false,
+   "banned": false,
+   "owns_accounts": 0,
+   "memberships": {
+    "admin": 1
+   }
+  },
+  "ENGINEERING_MEMBER": {
+   "exists": true,
+   "confirmed": true,
+   "has_password": true,
+   "cast_has_password": false,
+   "banned": false,
+   "owns_accounts": 0,
+   "memberships": {
+    "member": 1
+   }
+  },
+  "ENGINEERING_INVITEE": {
+   "exists": true,
+   "confirmed": true,
+   "has_password": true,
+   "cast_has_password": false,
+   "banned": false,
+   "owns_accounts": 1,
+   "memberships": {
+    "admin": 1
+   }
+  }
+ }
+}

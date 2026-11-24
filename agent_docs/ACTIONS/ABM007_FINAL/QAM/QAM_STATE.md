@@ -41,3 +41,4 @@ The copy of this file inside a review ZIP is the immutable pre-export snapshot. 
 |---|---|---|---|---|
 | 2026-11-23, Asia/Dhaka | ABM author | — → `READY FOR ENGINEERING` | Baselines above | QAM instantiated for this module under QAM_PLAYBOOK v1.0, template set v0.3. See `GOVERNING/README.md` for how |
 | 2026-11-23, Asia/Dhaka | ABM author | `READY FOR ENGINEERING` (unchanged) | none | REVIEW_02: Architect amendments A-01 to A-06 applied. Governing playbooks copied into `GOVERNING/` with hashes; every QAM structure completed; `GATE_D_PLAN.md` added. No result recorded |
+| 2026-11-24, Asia/Dhaka | Engineer, on the QA Lead's instruction and the Director's release | state unchanged | none | `QAM_AMENDMENT_01.md` installed with pointer blocks. Documentation only. No result recorded |

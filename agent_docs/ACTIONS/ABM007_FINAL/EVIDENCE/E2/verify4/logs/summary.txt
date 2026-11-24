@@ -1,0 +1,7 @@
+pp test exit=0
+pp typecheck exit=0
+pp lint exit=0
+scratch build exit=1
+ob test exit=0
+ob typecheck exit=0
+ob lint exit=0

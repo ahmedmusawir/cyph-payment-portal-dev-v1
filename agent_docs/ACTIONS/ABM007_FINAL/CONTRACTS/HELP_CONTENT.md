@@ -20,25 +20,27 @@
 
 | Label quoted in Help | Where it should appear | Matches current screen? | Corrected text, if different |
 |---|---|---|---|
-| My Stores | OwedBook navigation | NOT RECORDED | |
-| Invite member | Pharmacy page | NOT RECORDED | |
-| Member / Store admin (role choice) | Invite form | NOT RECORDED | |
-| Pending / Active (invitation and person status) | Pharmacy people list | NOT RECORDED | |
-| Remove (member removal) and its confirmation | Pharmacy people list | NOT RECORDED | |
-| Billing | OwedBook admin navigation | NOT RECORDED | |
-| Manage billing | OwedBook Billing; Account & Billing | NOT RECORDED | |
-| Add store / Add a pharmacy | OwedBook Billing; Account & Billing | NOT RECORDED | |
-| Return link on the Stripe page | Stripe billing page | NOT RECORDED | |
-| Remove at period end | Account & Billing dashboard | NOT RECORDED | |
-| Keep this store | Account & Billing dashboard | NOT RECORDED | |
-| Settings | OwedBook admin navigation | NOT RECORDED | |
-| Audit log | OwedBook admin navigation | NOT RECORDED | |
-| Show: People and invitations / Pharmacies / Billing | Audit log filter | NOT RECORDED | |
-| Include views and system steps | Audit log | NOT RECORDED | |
-| Load older | Audit log | NOT RECORDED | |
-| My Profile | Account menu | NOT RECORDED | |
-| Back to My Stores | Access-restricted page | NOT RECORDED | |
-| Sign out | Account menu, both apps | NOT RECORDED | |
+| My Stores | OwedBook navigation | Partly. The top menu item is **Admin Portal** (Owner and Store admin only); **My Stores** is its first sidebar item (`Navbar.tsx` links array; `AdminSidebar.tsx` ADMIN_ITEMS) | "Open **Admin Portal** from the menu. **My Stores** is its first page." Members: no My Stores (H-1) |
+| Invite member | Pharmacy page | Yes (`StoreDetailScreen.tsx:108`); the form page then says **Invite someone** and **Send invitation** (`LiveStaffPanel.tsx:91`, `:117`) | Steps name **Invite member**, then **Send invitation** |
+| Member / Store admin (role choice) | Invite form | Yes (`LiveStaffPanel.tsx:98-99`); **Store admin** shown only when the user may appoint one | Sentence added: the Store admin choice appears only when you are allowed to appoint one |
+| Pending / Active (invitation and person status) | Pharmacy people list | No. Invitations list shows the status word (pending) under **Invitations**; accepted people appear under **People with access**; there is no "Active" label (`LiveStaffPanel.tsx:122-149`) | "listed under **Invitations** as pending … appear under **People with access**" |
+| Remove (member removal) and its confirmation | Pharmacy people list | Control is **Remove access**, shown only for Members (not the Owner or a Store admin); dialog "Remove {name} from {pharmacy}?" with **Cancel** and **Remove access** (`LiveStaffPanel.tsx:151`, `:162-176`) | Help names **Remove access** and **Cancel**; adds that the Owner and a Store admin are not removed this way |
+| Billing | OwedBook admin navigation | Yes (`AdminSidebar.tsx`) | — |
+| Manage billing | OwedBook Billing; Account & Billing | Yes in both (`BillingScreen.tsx:96`; Portal `DashboardView.tsx:329`) | — |
+| Add store / Add a pharmacy | OwedBook Billing; Account & Billing | Yes: **Add store** (OwedBook, `AddStoreButton.tsx:85`), **Add a pharmacy** (Portal, `DashboardView.tsx:190`) | Both named in section 7 |
+| Return link on the Stripe page | Stripe billing page | Not verifiable here: Stripe-hosted, depends on S2 naming | Help says "the return link at the top of the Stripe page" without quoting a label. Rendered confirmation pending S1/S2 |
+| Remove at period end | Account & Billing dashboard | Yes (`StoreRemovalControl.tsx:45`) | — |
+| Keep this store | Account & Billing dashboard | Yes (`StoreRemovalControl.tsx:42`) | — |
+| Settings | OwedBook admin navigation | Yes | — |
+| Audit log | OwedBook admin navigation | Yes | — |
+| Show: People and invitations / Pharmacies / Billing | Audit log filter | Yes, plus a first option **All changes** (`LiveAuditLog.tsx:24`, label `:76`) | **All changes** added |
+| Include views and system steps | Audit log | Yes (`LiveAuditLog.tsx:82`) | — |
+| Load older | Audit log | No: **Load older events** (`LiveAuditLog.tsx:97`) | "**Load older events**" |
+| My Profile | Account menu | No: the menu item and navbar link are **Profile**; **My Profile** is the page heading (`Navbar.tsx` links array and account menu; `profile/page.tsx:25`) (H-3) | "Open **Profile** … The page, **My Profile**, …" |
+| Back to My Stores | Access-restricted page | Yes for a Store admin on another pharmacy (`AccessDenied.tsx:26`). A Member never sees it: `(admin)/layout.tsx` redirects Members to `/owedbook` | Role note in section 2 corrected (see AM-11) |
+| Sign out | Account menu, both apps | No in OwedBook: desktop account menu **Logout** (`auth/Logout.tsx:20`), mobile menu **Log out** (`Navbar.tsx` mobile panel). **Sign out** in Account & Billing (`Shell.tsx`). Labels kept by ruling AM-08 (6) (H-2) | Section 11 names **Logout**, **Log out** and **Sign out** where each appears |
+
+Checked against source at the working-tree state of 24 Nov 2026 and, for the public pages, against the rendered production build (`EVIDENCE/E2/rendered/`). Signed-in screens were not rendered (SCRATCH fixtures unavailable, AM-08 (5)); their labels are verified from source and stay a rendered check for independent QA (AC-H02).
 
 ---
 
@@ -239,3 +241,27 @@ Guidance for uploading claims and reading results will be added here in a later 
 ### 13. Getting help
 
 Email **support@pharmacybooks.com**. Tell us the pharmacy name and what you were trying to do. Please do not include patient information in your message.
+
+
+---
+
+## Engineer corrections appendix (24 November 2026; AM-09 (D), AM-08 (6))
+
+Part B above is the author's text as frozen. The page that ships (`cyph-v1-dev/src/components/help/HelpPage.tsx`, route `/help`) follows Part B with these corrections. Where the screen and Part B differed, the screen won; no control was invented and no guard was changed.
+
+| # | Part B said | Shipped text says | Why |
+|---|---|---|---|
+| H-1 | §3 My Stores "Who can use it. Everyone"; §2 "a link back to **My Stores**" for any role | My Stores is for Owners and Store admins; Members choose a pharmacy with the **Store** selector on the OwedBook page. Role table row "Open My Stores" added. §2: a Store admin on a pharmacy not theirs sees the message with **Back to My Stores**; a Member who opens a My Stores page is taken to the OwedBook page | `(admin)/layout.tsx` redirects unless `canAdminister` (Owner or Store admin, `tenantScope.ts:22`) |
+| H-2 | §11 "Use **Sign out** in the account menu" | "choose **Logout**. On a phone, open **Menu** and choose **Log out**. In Account & Billing the same action is called **Sign out**" | Ruling AM-08 (6): labels kept, Help describes them |
+| H-3 | §11 "Open **My Profile** from the account menu"; "name, email address and role" | "Open **Profile** … The page, **My Profile**, shows …"; adds that a new password can be set on the same page | Source labels; the page has a password section |
+| H-4 | §4 [VERIFY] "resend it or cancel it" | "choose **Resend** or **Revoke** … The person you invited can also decline it" | Controls exist: Resend, Revoke (`LiveStaffPanel.tsx`), Decline (`InvitationsScreen.tsx`) |
+| H-5 | §3 "Two counts the Owner may see: 'Access now' … 'At next renewal'" | Moved to §7 and §8 with the Portal's words **Pharmacies with access now** and **Billed at next renewal** | Not on any OwedBook screen; present on the Portal dashboard (`DashboardView.tsx`) |
+| H-6 | §8 [VERIFY] "Cancelling the subscription is done on the Stripe billing page" | Kept, adding "and takes effect at the end of the current billing period" | The Portal refuses to open a billing-portal session unless cancellation at period end is enabled (`billing.ts:119-123`). Confirmation on the Stripe page itself waits for S1 (X-3) |
+| L-1 | §4 "they show as **Pending** … **Active**" | "listed under **Invitations** as pending … appear under **People with access**" | No "Active" label exists |
+| L-2 | §6 "choose to remove them … Confirm … or cancel" | "**Remove access** … **Remove access** to confirm, or **Cancel**"; step 1 goes through **Invite member**, where the people list lives; the Owner and a Store admin are not removed this way | `LiveStaffPanel.tsx` renders on the invite page; the button is shown for Members only |
+| L-3 | §10 "**Load older**"; filter list | "**Load older events**"; **All changes** added | Source labels |
+| L-4 | §5 steps | Adds that the form asks what happens to a current Store admin | The disposition question exists (`LiveStaffPanel.tsx:108-112`) |
+| L-5 | §7 "In Account & Billing, choose to add a pharmacy" | "choose **Add a pharmacy**. (In OwedBook, **Add store** on the Billing page takes you there.)" | Both controls exist |
+| L-6 | §1 to §13 | Two in-text links added: `/admin-portal` and `/admin-portal/billing`; support address as a mail link | Existing guarded routes only; outcomes per role in AM-11 |
+
+No [VERIFY] marker ships. The forbidden-term scan (seeded control first) runs in `src/__tests__/abm007/help-page.test.tsx`.

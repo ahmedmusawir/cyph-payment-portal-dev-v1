@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 // with sr-only text, help + inline error wired through aria-describedby, and
 // aria-invalid. Native inputs/selects styled with tokens; no new library.
 const CONTROL =
-  "flex h-11 w-full border border-input bg-background px-3 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card aria-[invalid=true]:border-destructive aria-[invalid=true]:focus-visible:ring-destructive disabled:opacity-50";
+  "flex h-11 w-full rounded-md border border-input bg-card px-2.5 text-[15px] text-foreground placeholder:text-muted-foreground aria-[invalid=true]:border-2 aria-[invalid=true]:border-destructive disabled:cursor-not-allowed disabled:bg-disabled";
 
 interface FieldShellProps {
   id: string;
@@ -164,7 +164,7 @@ export const PasswordField = forwardRef<HTMLInputElement, Omit<InputProps, "type
             aria-pressed={visible}
             aria-controls={id}
             disabled={rest.disabled}
-            className="absolute inset-y-0 right-1.5 my-auto flex h-8 w-8 items-center justify-center text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
+            className="absolute inset-y-0 right-1.5 my-auto flex h-8 w-8 items-center justify-center rounded-sm text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
           >
             {visible ? <EyeOff className="h-4 w-4" aria-hidden="true" /> : <Eye className="h-4 w-4" aria-hidden="true" />}
           </button>

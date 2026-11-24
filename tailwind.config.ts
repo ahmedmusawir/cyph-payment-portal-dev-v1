@@ -19,14 +19,28 @@ const config = {
     },
     extend: {
       colors: {
+        heading: "hsl(var(--heading))",
+        "ring-on-dark": "hsl(var(--ring-on-dark))",
+        "shadow-tint": "hsl(var(--shadow-tint))",
+        disabled: {
+          DEFAULT: "hsl(var(--disabled))",
+          foreground: "hsl(var(--disabled-foreground))",
+        },
+        brand: {
+          navy: "hsl(var(--brand-navy))",
+          "navy-deep": "hsl(var(--brand-navy-deep))",
+          ice: "hsl(var(--brand-ice))",
+          green: "hsl(var(--brand-green))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
+        ring: "hsl(var(--pb-focus-ring, var(--ring)))", // surface-aware, see globals
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -54,6 +68,10 @@ const config = {
         },
         // Cyber Pharma semantic-four (Metro Warm, shared). Coral stays --primary (brand,
         // never a status). Pills use tinted bg + colored text, e.g. bg-success/15 text-success.
+        navbar: {
+          DEFAULT: "hsl(var(--navbar))",
+          foreground: "hsl(var(--navbar-foreground))",
+        },
         success: {
           DEFAULT: "hsl(var(--success))",
           foreground: "hsl(var(--success-foreground))",
@@ -67,10 +85,26 @@ const config = {
           foreground: "hsl(var(--info-foreground))",
         },
       },
+      // ABM007_FINAL brand contract 3.6: explicit scale (one knob cannot give
+      // 8px fields and 14px cards).
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        sm: "var(--radius-sm)",
+        md: "var(--radius-md)",
+        tile: "var(--radius-tile)",
+        lg: "var(--radius-lg)",
+        xl: "var(--radius-xl)",
+      },
+      // Brand contract 3.7: navy-tinted shadows.
+      boxShadow: {
+        shell: "0 18px 48px hsl(var(--shadow-tint) / 0.18), inset 0 1px 0 hsl(var(--card) / 0.6)",
+        masthead: "0 12px 28px hsl(var(--shadow-tint) / 0.18)",
+        card: "0 8px 20px hsl(var(--shadow-tint) / 0.05)",
+        tile: "0 6px 16px hsl(var(--shadow-tint) / 0.25)",
+        menu: "0 10px 24px hsl(var(--shadow-tint) / 0.14)",
+      },
+      fontFamily: {
+        brand: ["var(--font-brand)", "system-ui", "sans-serif"],
+        sans: ["var(--font-brand)", "system-ui", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

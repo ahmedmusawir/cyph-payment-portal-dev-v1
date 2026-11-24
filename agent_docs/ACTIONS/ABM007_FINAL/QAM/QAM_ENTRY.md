@@ -105,3 +105,7 @@ Every Q1 return, Q2 return, material stop and retest return produces one indexed
 ## 8. Engineer completion duties (pointer)
 
 See `../ABM_ENTRY.md` section 7. The Engineer completes `QAM_MANIFEST.md` and `HANDOFFS/ENGINEERING_HANDOFF.md` for **both** repositories before the Director commits, and records `ENGINEERING COMPLETE — AWAITING QA BRANCH`.
+
+## Amendment 01 (24 November 2026)
+
+`QAM_AMENDMENT_01.md` is part of this QAM and is read straight after this file. Where a sentence above differs from it, the amendment governs. In short: the Director's human walkthrough is inside Q2 and before certification; automated and human findings share one register and one repair work order; Q1 inventories existing tests and maps regression coverage; reusable passing scripts are listed for keeping before cleanup; a fixture session is never proof of real sign-in. It adds no shot and releases nothing.

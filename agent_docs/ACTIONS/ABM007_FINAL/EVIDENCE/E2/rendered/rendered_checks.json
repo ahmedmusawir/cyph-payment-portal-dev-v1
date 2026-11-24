@@ -1,0 +1,954 @@
+[
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/",
+  "width": 375,
+  "status": 200,
+  "title": "OwedBook · Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 1,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Get back every dollar you're owed"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/auth",
+  "width": 375,
+  "status": 200,
+  "title": "OwedBook · Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 1,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Login"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/auth/link-expired",
+  "width": 375,
+  "status": 200,
+  "title": "Sign-in link expired",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 1,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "That sign-in link can't be used"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/auth/signed-out",
+  "width": 375,
+  "status": 200,
+  "title": "Signed out",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 1,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "You're signed out"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/auth/sign-in-to-continue",
+  "width": 375,
+  "status": 200,
+  "title": "Log in to continue",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 1,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Log in to continue"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/nope-404",
+  "width": 375,
+  "status": 404,
+  "title": "OwedBook · Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 0,
+  "logoSrc": [],
+  "h1": [
+   "Page Not Found"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/login",
+  "width": 375,
+  "status": 200,
+  "title": "Sign in — Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Sign in"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/register/plan",
+  "width": 375,
+  "status": 200,
+  "title": "Choose your plan — Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Choose your plan"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/register/owner",
+  "width": 375,
+  "status": 200,
+  "title": "Owner details — Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Tell us about you"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/register/pharmacy",
+  "width": 375,
+  "status": 200,
+  "title": "Owner details — Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Tell us about you"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/register/review",
+  "width": 375,
+  "status": 200,
+  "title": "Owner details — Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Tell us about you"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/auth/link-expired",
+  "width": 375,
+  "status": 200,
+  "title": "Sign-in link expired",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "That sign-in link can't be used"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/nope-404",
+  "width": 375,
+  "status": 404,
+  "title": "Account & Billing · Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 0,
+  "logoSrc": [],
+  "h1": [
+   "Page Not Found"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/",
+  "width": 1440,
+  "status": 200,
+  "title": "OwedBook · Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 1,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Get back every dollar you're owed"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/auth",
+  "width": 1440,
+  "status": 200,
+  "title": "OwedBook · Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 1,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Login"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/auth/link-expired",
+  "width": 1440,
+  "status": 200,
+  "title": "Sign-in link expired",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 1,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "That sign-in link can't be used"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/auth/signed-out",
+  "width": 1440,
+  "status": 200,
+  "title": "Signed out",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 1,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "You're signed out"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/auth/sign-in-to-continue",
+  "width": 1440,
+  "status": 200,
+  "title": "Log in to continue",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 1,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Log in to continue"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "ob",
+  "url": "http://localhost:3300/nope-404",
+  "width": 1440,
+  "status": 404,
+  "title": "OwedBook · Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 0,
+  "logoSrc": [],
+  "h1": [
+   "Page Not Found"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/login",
+  "width": 1440,
+  "status": 200,
+  "title": "Sign in — Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Sign in"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/register/plan",
+  "width": 1440,
+  "status": 200,
+  "title": "Choose your plan — Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Choose your plan"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/register/owner",
+  "width": 1440,
+  "status": 200,
+  "title": "Owner details — Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Tell us about you"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/register/pharmacy",
+  "width": 1440,
+  "status": 200,
+  "title": "Owner details — Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Tell us about you"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/register/review",
+  "width": 1440,
+  "status": 200,
+  "title": "Owner details — Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "Tell us about you"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/auth/link-expired",
+  "width": 1440,
+  "status": 200,
+  "title": "Sign-in link expired",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [
+   "Skip to content"
+  ],
+  "uppercaseButtons": 0,
+  "logoTiles": 2,
+  "logoSrc": [
+   "/brand/pharmacy-books-logo-primary.png"
+  ],
+  "h1": [
+   "That sign-in link can't be used"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ },
+ {
+  "app": "pp",
+  "url": "http://localhost:3301/nope-404",
+  "width": 1440,
+  "status": 404,
+  "title": "Account & Billing · Pharmacy Books",
+  "htmlClass": "Y0t-tG_variable light",
+  "colorScheme": "light",
+  "bodyBg": "rgb(234, 243, 250)",
+  "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+  "overflowX": 0,
+  "tokens": {
+   "--brand-navy": "#154474",
+   "--brand-green": "#32a38d",
+   "--brand-green-dark": "#288472",
+   "--brand-ice": "#eaf3fa",
+   "--brand-charcoal": "#393b38",
+   "--brand-gray": "#515151",
+   "--primary": "#288472",
+   "--heading": "#154474"
+  },
+  "control": "#298572",
+  "themeControls": 0,
+  "oldName": false,
+  "smallButtons": [],
+  "uppercaseButtons": 0,
+  "logoTiles": 0,
+  "logoSrc": [],
+  "h1": [
+   "Page Not Found"
+  ],
+  "tokenMismatches": [],
+  "controlFlagged": true
+ }
+]

@@ -24,7 +24,7 @@ export function LinkRequestForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="space-y-4 border border-border bg-card p-4 sm:p-5" data-testid="link-request-form">
+    <form onSubmit={onSubmit} noValidate className="space-y-4 pb-card p-4 sm:p-5" data-testid="link-request-form">
       <TextField ref={emailRef} id="link-email" type="email" autoComplete="email" label="Email for a sign-in link" value={email} onValue={setEmail} />
       <Button type="submit" variant="outline" className="w-full" disabled={state === "sending" || email.trim().length === 0}>
         {state === "sending" ? "Sending…" : "Email me a sign-in link"}

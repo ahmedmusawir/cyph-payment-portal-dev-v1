@@ -50,3 +50,7 @@ Result labels: PASS, FAIL, BLOCKED, NOT RUN, ADJUDICATE. A row marked `D` stays 
 | AC | Evidence from which earlier candidate | Why it still applies (diff proof) | Accepted by the QA Lead? |
 |---|---|---|---|
 | none | | | |
+
+## Amendment 01 note
+
+A criterion that depends on a required human check is not PASS while that check is PENDING or BLOCKED. Evidence obtained under a fixture session is marked as such in the evidence cell and does not satisfy a criterion that asks for real sign-in, email delivery or handoff.

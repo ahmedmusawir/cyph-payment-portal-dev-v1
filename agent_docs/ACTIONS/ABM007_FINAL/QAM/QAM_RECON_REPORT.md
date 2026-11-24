@@ -85,3 +85,23 @@ A list of running processes is not an answer to any row.
 | READY FOR Q2, READY WITH LISTED GAPS, or NOT READY | NOT RECORDED |
 | Blockers, each with owner and exact resolution | NOT RECORDED |
 | What cannot be tested yet, and why | NOT RECORDED |
+
+## Amendment 01 additions (owner: QA Executor, Q1)
+
+**A. Test and helper inventory.** One row per suite, spec, check set or helper found in either repository or in the retained APBM-007B QA lane.
+
+| Asset | Repository or lane | Kind | Current, stale or retired, and why | What it covers | What it needs to run |
+|---|---|---|---|---|---|
+| NOT RECORDED | | | | | |
+
+**B. Coverage map.**
+
+| CR or criterion | Existing coverage | Gap | Only testable by a person today? |
+|---|---|---|---|
+| NOT RECORDED | | | |
+
+**C. Recommended layout for a durable regression pack.** A recommendation only. Nothing is implemented in Q1. NOT RECORDED.
+
+**D. Fixture state as found**, and any need the existing cast cannot meet. NOT RECORDED.
+
+**E. Sign-in method available for routine automated runs** without the Director's inbox, and the authorization it rests on. NOT RECORDED.
