@@ -1,0 +1,11 @@
+# ABM_JOURNAL — ABM007_FINAL
+
+Meaningful checkpoints only. No transcript dumps. Each seat appends its own dated entries.
+
+| Date | Seat | Entry |
+|---|---|---|
+| 2026-11-23 | ABM author | Review package authored. Inputs: approved brand design, conflict register v0.3 with the Director's rulings, the Engineer's pre-ABM recon, the Architect handoff, campaign journal v0.3, tester guide v3, the October Portal design package (tooling reference), the APBM-007B certificate. A style tile and five sample screens were built as static HTML and rendered at 1440 and 375 px; the supplied logo could not be fetched into the authoring workspace and is shown as a placeholder tile. No repository was inspected or changed by the author. |
+| 2026-11-23 | Director | Approved the look on the REVIEW_01 renders ("you have my design approval"), including P-01 to P-04 when asked. |
+| 2026-11-23 | Architect | Review 01 returned: ACCEPT WITH EXACT AMENDMENTS, A-01 to A-06. Supplied the verified logo master and byte copies of five playbooks. |
+| 2026-11-23 | ABM author | REVIEW_02 correction pass. The Architect's color finding was confirmed in a browser: the rounded dark-green triplet resolves to #298572 and fails contrast at 4.475:1. Token file regenerated with exact colors; real logo placed in the references; mobile menu shown; 13 renders regenerated and all 13 looked at. Email matrix, authority rule, records rule, audit paging and the shared-Stripe condition rewritten. Governing playbooks copied in with hashes; QA_PLAYBOOK v1.2 read and reconciled; every QAM structure completed; Gate D plan added. No repository was inspected or changed by the author. |
+| 2026-11-24 | Engineer | Planning shot on the Director's instruction. Read the pack and both repositories' root instructions. Entry checks E-1 to E-6 run read-only; baseline health run in isolated copies (OwedBook 374/374, Portal 572/572; typecheck and production build clean in both; lint 0 errors with 38 and 27 existing warnings). Located the "No permitted stores" condition (`StoreSelector.tsx:8`); confirmed Resend, Revoke and Decline exist; chose `/help`; confirmed the allowed paths cover the contract. Wrote `ABM_EXECUTION_PLAN.md` DRAFT 01 and `EVIDENCE/PLAN/`. No product file, dependency, database, dashboard or Git state changed. `RECOVERY.md` not written (paths contract section 3). |

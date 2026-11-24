@@ -1,0 +1,262 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 0498d2f..4c72866 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -3,6 +3,10 @@
+ > Documentation/playbook change log per CLAUDE.md Changelog Protocol.
+ > `[CC]` = Claude Code · `[TS]` = Tony Stark manual edits.
+ 
++## 2026-11-20 11:38 UTC — [CC] Claude Code
++- **Updated:** `DEPLOYMENT_CHECKLIST.md` (Stage A ticked with build ID, revision, tag, digest), `RECOVERY.md`, `agent_docs/SESSIONS/session_2026-11-20.md`, `agent_docs/SKILL_ISSUES_LEDGER_next_deploy_auto.md`; new `agent_docs/RESPONSES/response_2026-11-20_170846_owedbook-alpha-auto-plan.md` and `response_2026-11-20_173800_owedbook-alpha-deployed.md`.
++- **Reason:** Director-approved deployment of the OwedBook alpha base service and its domain mapping. Manual acceptance pending.
++
+ ## 2026-11-20 10:00 UTC — [CC] Claude Code
+ - **Updated:** `agent_docs/KIP_REGISTRY.md` (new KIP-3: zod 3.x advisory open, zod 4 deferred for alpha), `DEPLOYMENT_CHECKLIST.md` and `stark-deploy.yaml` (Director decisions), `RECOVERY.md`, `agent_docs/SESSIONS/session_2026-11-20.md`; new `agent_docs/RESPONSES/response_2026-11-20_160040_owedbook-alpha-precommit.md`.
+ - **Reason:** Director: commit preparation only; pre-commit whitespace, secret and debris review. Nothing committed or deployed.
+diff --git a/DEPLOYMENT_CHECKLIST.md b/DEPLOYMENT_CHECKLIST.md
+index fff17fe..25b7627 100644
+--- a/DEPLOYMENT_CHECKLIST.md
++++ b/DEPLOYMENT_CHECKLIST.md
+@@ -1,7 +1,7 @@
+ # Deployment Checklist — OwedBook Alpha (run record)
+ 
+ Generated 2026-11-20 by next-deploy-auto v1.3; revised after JARVIS review (round 2).
+-**Status: PREPARED on branch `deploy/owedbook-alpha-prep` — nothing run in the cloud.**
++**Status: Stage A DEPLOYED and verified 2026-11-20 (commit `ef4cebc`). Stage B: domain mapping and certificate live; sign-in NOT yet verified (Supabase allow-list pending). Manual acceptance PENDING.**
+ Evidence: `agent_docs/RESPONSES/response_2026-11-20_155313_owedbook-alpha-prep-round2.md` (round 1: `…152916_owedbook-alpha-deploy-prep.md`).
+ 
+ ## Config Summary
+@@ -35,9 +35,9 @@ Evidence: `agent_docs/RESPONSES/response_2026-11-20_155313_owedbook-alpha-prep-r
+ - [x] JARVIS review round 2
+ - [x] Decision (Director, 2026-11-20): zod 4 migration DEFERRED for alpha. The advisory GHSA-mrhx-c7xc-m3w5 stays OPEN (`agent_docs/KIP_REGISTRY.md` KIP-3); required before production
+ - [x] Decision (Director, 2026-11-20): `ALLOW_SYNTHETIC_SUBSCRIPTIONS` stays unset; testers use Portal-purchased test stores
+-- [ ] Changes committed on the branch (deploy aborts on a dirty tree)
++- [x] Changes committed on the branch (Tony; HEAD `ef4cebc`)
+ - [ ] Final manual retest (on Next.js 16.4.5) — PENDING
+-- [ ] Deployment approved by Tony
++- [x] Deployment approved by Tony (2026-11-20 17:15)
+ 
+ ## Pre-flight evidence (2026-11-20, read-only)
+ 
+@@ -51,23 +51,23 @@ Evidence: `agent_docs/RESPONSES/response_2026-11-20_155313_owedbook-alpha-prep-r
+ 
+ ## Stage A — Base service (this skill)
+ 
+-- [ ] `./init-app.sh` exit 0 (agent): secret created empty, runtime SA created, accessor binding, act-as check ✅
+-- [ ] `./upload-secrets.sh` run by Tony — exit code:
+-- [ ] `cyph-owedbook-alpha-supabase-secret-key` has an ENABLED version (metadata only)
+-- [ ] IAM: runtime SA holds `secretAccessor` on the secret (build SA: not needed)
+-- [ ] `./deploy.sh` exit 0 from a CLEAN tree, no "Setting IAM policy failed" warning — build ID:
+-- [ ] Source revision (full SHA, no `-dirty`):
+-- [ ] Image tag:
+-- [ ] Image digest (`sha256:…`, read back from the service):
+-- [ ] `allUsers` holds `roles/run.invoker` (read back)
+-- [ ] run.app URL: — returns 200
+-- [ ] `/api/build-info` on run.app shows the same revision
++- [x] `./init-app.sh` exit 0 (agent, second run; first run stopped on a false act-as alarm, fixed in `ef4cebc`): secret created empty, runtime SA created, accessor binding, act-as check ✅
++- [x] `./upload-secrets.sh` run by Tony — reported "Secrets done"
++- [x] `cyph-owedbook-alpha-supabase-secret-key` has an ENABLED version (version 1; metadata only)
++- [x] IAM: runtime SA holds `secretAccessor` on the secret (build SA: not needed) — EVIDENCE
++- [x] `./deploy.sh` exit 0 from a CLEAN tree, no "Setting IAM policy failed" warning — build ID: `5d840fee-51cc-4c9f-ab03-9b9f97c191e4`
++- [x] Source revision (full SHA, no `-dirty`): `ef4cebccae68499bee7d4a53b230e31474a17f52`
++- [x] Image tag: `ef4cebccae68-20261120t111951z`
++- [x] Image digest (read back from the service): `sha256:db2d37b44ce76fde9ed426da2feef5f91bae4eaa18170e9410cdfda8a9408348`
++- [x] `allUsers` holds `roles/run.invoker` (read back)
++- [x] run.app URL: `https://cyph-v1-owedbook-alpha-hr465ynfuq-ue.a.run.app` — returns 200
++- [x] `/api/build-info` on run.app shows the same revision
+ - Sign-in is NOT expected to work on run.app: the app accepts only its configured origin.
+ 
+ ## Stage B — Final-domain authentication (operator-led, outside this skill)
+ 
+-- [ ] Cloud Run domain mapping for `cyph-v1-owedbook-alpha.cyberizedev.com` (CNAME to `ghs.googlehosted.com` exists)
+-- [ ] Certificate issued; HTTPS answers
++- [x] Cloud Run domain mapping for `cyph-v1-owedbook-alpha.cyberizedev.com` created 2026-11-20 (Tony approved); Google expects CNAME → `ghs.googlehosted.com.`, public DNS matches
++- [x] Certificate issued; HTTPS answers (2026-11-20: Google Trust Services, verify ok, expires 2027-02-18; `/` 200; `/api/build-info` shows `ef4cebc`; http redirects to https)
+ - [ ] Supabase Auth (DEV project): Site URL / redirect allow-list admits the alpha origin
+ - [ ] Sign-in, email links and staff actions work on the alpha domain
+ - [ ] Invitation mail reaches a test recipient
+diff --git a/RECOVERY.md b/RECOVERY.md
+index 6518290..1b515c6 100644
+--- a/RECOVERY.md
++++ b/RECOVERY.md
+@@ -4,7 +4,12 @@
+ > Updated after every plan completion. If this file is stale, the session log in
+ > `agent_docs/SESSIONS/` is the fallback source of truth.
+ 
+-**Last updated:** 2026-11-20 16:00 — **OwedBook alpha: pre-commit review READY TO COMMIT on `deploy/owedbook-alpha-prep` (uncommitted, nothing staged); NOTHING deployed** · External handoff ready **NO**
++**Last updated:** 2026-11-20 18:00 — **OwedBook alpha DEPLOYED; `https://cyph-v1-owedbook-alpha.cyberizedev.com` answers over HTTPS (certificate issued); sign-in NOT verified; manual acceptance PENDING** · External handoff ready **NO**
++**Result:** service `cyph-v1-owedbook-alpha` (`cyberize-nextjs-staging`, us-east1, public), revision `cyph-v1-owedbook-alpha-00001-qrp`, from commit `ef4cebc` on `deploy/owedbook-alpha-prep` (local only, not pushed). Build `5d840fee-51cc-4c9f-ab03-9b9f97c191e4`. Image digest `sha256:db2d37b4…8348`. run.app `https://cyph-v1-owedbook-alpha-hr465ynfuq-ue.a.run.app`: `/` 200, `/api/build-info` shows the commit. Mapping `cyph-v1-owedbook-alpha.cyberizedev.com` created; DNS matches.
++**Next step:** confirm the certificate and HTTPS on the alpha domain → Tony adds the alpha origin to Supabase Auth (DEV) → sign-in check → manual retest → Portal mirror origins and Portal alpha. Uncommitted: records since `ef4cebc` (`DEPLOYMENT_CHECKLIST.md`, `RECOVERY.md`, `CHANGELOG.md`, `agent_docs/`).
++**Record:** `agent_docs/RESPONSES/response_2026-11-20_173800_owedbook-alpha-deployed.md`.
++
++**Prior block (2026-11-20 16:00):** **Last updated:** 2026-11-20 16:00 — **OwedBook alpha: pre-commit review READY TO COMMIT on `deploy/owedbook-alpha-prep` (uncommitted, nothing staged); NOTHING deployed** · External handoff ready **NO**
+ **Decisions (Director):** zod 4 deferred for alpha, advisory stays OPEN (`agent_docs/KIP_REGISTRY.md` KIP-3, required before production); `ALLOW_SYNTHETIC_SUBSCRIPTIONS` unset (Portal-purchased test stores).
+ **Next step:** Tony runs the four commits in `agent_docs/RESPONSES/response_2026-11-20_160040_owedbook-alpha-precommit.md` → final manual retest (PENDING) → deployment approval → init (agent) → `upload-secrets.sh` (Tony) → deploy.
+ 
+diff --git a/agent_docs/RESPONSES/response_2026-11-20_170846_owedbook-alpha-auto-plan.md b/agent_docs/RESPONSES/response_2026-11-20_170846_owedbook-alpha-auto-plan.md
+new file mode 100644
+index 0000000..e83d47a
+--- /dev/null
++++ b/agent_docs/RESPONSES/response_2026-11-20_170846_owedbook-alpha-auto-plan.md
+@@ -0,0 +1,34 @@
++# OwedBook alpha — deployment plan and approval summary (awaiting Tony's approval)
++
++**Date:** 2026-11-20 17:08 (+06) · **Status:** PENDING APPROVAL — nothing initialized, uploaded or deployed.
++
++## Source state (EVIDENCE, 2026-11-20 17:08)
++
++- Branch `deploy/owedbook-alpha-prep`, HEAD `0e2b4441d3949e240ba1d6f9a9f9dac5f03100ff`, working tree clean. Local only: no upstream, not pushed.
++- Four commits above `main` `0b12191`: `0a48814` origins (2 files) · `0aef527` dependencies (2 files) · `15f586d` deployment files (9 files) · `0e2b444` records (8 files). Contents match the reviewed sets. Scripts are executable in git (100755).
++- `deploy.sh` pre-submit section, dry run without submitting: upload boundary clean (388 files); source identified as clean; revision `0e2b4441…` with no `-dirty`; tag form `0e2b4441d394-<UTC time>`.
++
++## Cloud state (EVIDENCE, read-only)
++
++- Account `moose@cyberizegroup.com`; project `cyberize-nextjs-staging`.
++- Service `cyph-v1-owedbook-alpha`, secret `cyph-owedbook-alpha-supabase-secret-key`, runtime SA `sa-cyph-owedbook-alpha-runtime`: all still absent. Nothing to reuse; no mismatch.
++- Build identity `524380376459-compute@developer.gserviceaccount.com`: `roles/run.admin` and `roles/editor` (act-as included).
++
++## What approval covers (Stage A — base service only)
++
++1. Agent runs `./init-app.sh`: verifies project infrastructure; creates the empty secret, the runtime SA, one `secretAccessor` binding for the runtime SA; act-as check. No other IAM change.
++2. Tony runs `./upload-secrets.sh` (reads `SUPABASE_SECRET_KEY` from `.env.local`; the agent never sees it). Agent then checks version metadata only.
++3. Agent runs `./deploy.sh`: Cloud Build builds the image from commit `0e2b444`, pushes it under a unique tag, deploys it by digest to a NEW public Cloud Run service (1Gi, 0–1 instances, port 3000), with `allUsers` as invoker.
++4. Agent reads back the invoker policy, the digest, the run.app status code and `/api/build-info`.
++
++## Not covered
++
++Domain mapping and certificate · Supabase Auth settings · Payment Portal · migrations · push or merge · any existing service.
++
++## Known at approval time
++
++- Final manual retest is PENDING; it has not been run on Next.js 16.4.5.
++- The run.app URL will load but sign-in will not work there (origin guard). Sign-in needs the domain mapping and the Supabase allow-list.
++- zod advisory GHSA-mrhx-c7xc-m3w5 is OPEN (KIP-3), accepted for alpha.
++- The Cloud Build steps (digest resolution, deploy flags) have been syntax-checked and the image built locally, but they run for the first time in this deployment.
++- The service is public from the moment it deploys.
+diff --git a/agent_docs/RESPONSES/response_2026-11-20_173800_owedbook-alpha-deployed.md b/agent_docs/RESPONSES/response_2026-11-20_173800_owedbook-alpha-deployed.md
+new file mode 100644
+index 0000000..2f31dae
+--- /dev/null
++++ b/agent_docs/RESPONSES/response_2026-11-20_173800_owedbook-alpha-deployed.md
+@@ -0,0 +1,60 @@
++# OwedBook alpha — DEPLOYED (Stage A base service) + domain mapping created
++
++**Date:** 2026-11-20 17:38 (+06) · **Result:** base service DEPLOYED and VERIFIED · domain mapping CREATED, certificate PENDING
++**Not a certification:** manual acceptance is PENDING; a successful deploy is not Gate D.
++
++## Deployment (EVIDENCE)
++
++| Item | Value |
++|---|---|
++| Service | `cyph-v1-owedbook-alpha`, `cyberize-nextjs-staging`, us-east1 |
++| Revision | `cyph-v1-owedbook-alpha-00001-qrp` (ready) |
++| LIVE NOW | `https://cyph-v1-owedbook-alpha-hr465ynfuq-ue.a.run.app` |
++| Source | branch `deploy/owedbook-alpha-prep`, commit `ef4cebccae68499bee7d4a53b230e31474a17f52`, clean (no `-dirty`) |
++| Build | `5d840fee-51cc-4c9f-ab03-9b9f97c191e4`, SUCCESS, 4m43s, run as `524380376459-compute@developer.gserviceaccount.com` |
++| Image tag | `ef4cebccae68-20261120t111951z` |
++| Image digest | `sha256:db2d37b44ce76fde9ed426da2feef5f91bae4eaa18170e9410cdfda8a9408348` — the same in the build results, the push step and the service spec |
++| Runtime SA | `sa-cyph-owedbook-alpha-runtime@cyberize-nextjs-staging.iam.gserviceaccount.com` |
++| Container port | 3000; log shows `Network: http://0.0.0.0:3000` |
++| Service labels | `source-revision`, `image-tag` set |
++
++## Verification (read back)
++
++- **Access:** `allUsers` holds `roles/run.invoker`; "Setting IAM Policy … done", no failure warning. Matches `access.invoker: public`.
++- **HTTP on run.app:** `/` 200 · `/api/build-info` 200 · `/owedbook` 307 → `/auth`.
++- **Build identity:** `/api/build-info` returns revision `ef4cebcc…7f52` and artifact `owedbook-alpha-ef4cebccae68-20261120t111951z`.
++- **Runtime settings:** `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_APP_ENV=staging`, `NEXT_PUBLIC_SUPABASE_URL` (DEV), `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `MAIL_RECIPIENT_POLICY=open`; `SUPABASE_SECRET_KEY` mounted from secret `cyph-owedbook-alpha-supabase-secret-key:latest`. `MAIL_ALLOWLIST` and `ALLOW_SYNTHETIC_SUBSCRIPTIONS` not set.
++- **Logs:** Next.js 16.4.5 ready; "Environment validated"; no error lines.
++- **Secret:** version 1 ENABLED; only the runtime SA holds `secretAccessor`. Metadata proves a value exists, not that it is correct; no database call using the secret key has been exercised yet.
++- **Other services:** the five existing services show their previous revisions and timestamps; untouched.
++
++## Init (two runs)
++
++Run 1 exited 1 on a false "Act-as MISSING" from an agent script defect (`grep -q` under pipefail); it had already created the empty secret and the runtime SA. No grant was made. Fixed in `ef4cebc`; run 2 exit 0. Ledger row written.
++
++## Domain mapping (approved by Tony: "map the domain after verification")
++
++- Created: `cyph-v1-owedbook-alpha.cyberizedev.com` → `cyph-v1-owedbook-alpha` (us-east1).
++- Google expects: CNAME `cyph-v1-owedbook-alpha` → `ghs.googlehosted.com.` Public DNS (8.8.8.8) returns exactly that. Match.
++- Status at creation: `DomainRoutable` True; certificate `CertificatePending`. HTTPS on the alpha domain is not confirmed yet.
++
++## Cloud resources created today
++
++1 secret (1 version, uploaded by Tony) · 1 service account · 1 secret-level IAM binding · 1 image · 1 Cloud Run service with public invoker · 1 domain mapping. Nothing deleted; nothing existing modified.
++
++## Not done
++
++- Certificate issuance and HTTPS on the alpha domain (in progress on Google's side).
++- Supabase Auth (DEV): Site URL / redirect allow-list for the alpha origin — Tony, dashboard. Sign-in is expected to fail until then.
++- Sign-in, email links, staff actions, invitation mail on the alpha domain — not exercised.
++- Payment Portal: mirrored origins and Portal alpha deployment; two-app handoff.
++- Final manual retest / acceptance — PENDING.
++- zod 4 before production (KIP-3, OPEN).
++- Branch is local only: not pushed, not merged. Records since `ef4cebc` are uncommitted.
++
++## Update — HTTPS on the alpha domain (EVIDENCE, 2026-11-20 ~18:00 +06)
++
++- Mapping `Ready` True, `CertificateProvisioned` True. HTTPS began answering a few minutes later.
++- Certificate: subject `cyph-v1-owedbook-alpha.cyberizedev.com`, issuer Google Trust Services (WR3), verify ok, expires 2027-02-18.
++- `https://cyph-v1-owedbook-alpha.cyberizedev.com/` 200 · `/api/build-info` 200, revision `ef4cebcc…7f52` · `/owedbook` 307 → `/auth` on the alpha host · plain http 302 → https.
++- Still not verified: sign-in, email links, staff actions, invitation mail (Supabase allow-list pending); manual acceptance PENDING.
+diff --git a/agent_docs/SESSIONS/session_2026-11-20.md b/agent_docs/SESSIONS/session_2026-11-20.md
+index ac5ce7b..68d7f4a 100644
+--- a/agent_docs/SESSIONS/session_2026-11-20.md
++++ b/agent_docs/SESSIONS/session_2026-11-20.md
+@@ -298,3 +298,47 @@ Also in scope:
+ **Checks (8 tracked + 13 untracked):** `git diff --check HEAD` clean; untracked whitespace clean; no secret (two pattern matches verified as the secret NAME mapping only); public publishable key only where intended; no `.env*`, debris, markers or unrelated changes.
+ **Verdict:** READY TO COMMIT. Four-commit command set issued (origins · dependencies · deployment files · records).
+ **Writes:** KIP-3, checklist, `stark-deploy.yaml` comment, `RECOVERY.md`, `CHANGELOG.md`, this entry, `agent_docs/RESPONSES/response_2026-11-20_160040_owedbook-alpha-precommit.md`. Nothing staged, committed, pushed, initialized or deployed. Manual retest PENDING.
++
++### 17:08 — PENDING_APPROVAL (OwedBook alpha deployment, Stage A base service)
++
++**Task:** deploy `cyph-v1-owedbook-alpha` from commit `0e2b444` (branch `deploy/owedbook-alpha-prep`, clean, local only) to `cyberize-nextjs-staging` / us-east1, public.
++**Plan:** `./init-app.sh` (agent: empty secret, runtime SA, one accessor binding) → `./upload-secrets.sh` (Tony) → metadata check → `./deploy.sh` (agent: build, unique tag, deploy by digest) → read back invoker policy, digest, run.app status, build-info. Domain mapping, Supabase settings, Portal and migrations are out of scope.
++**Verified before asking:** Tony's four commits match the reviewed sets; tree clean; deploy dry run identifies a clean revision; target resources absent; account and project match.
++**Known:** manual retest PENDING; sign-in will not work on run.app; zod advisory open (KIP-3).
++**Record:** `agent_docs/RESPONSES/response_2026-11-20_170846_owedbook-alpha-auto-plan.md`
++**Status:** Awaiting approval
++
++### 17:15 — APPROVED → IN PROGRESS (OwedBook alpha deployment, Stage A)
++
++**Task:** init → Tony's secret upload → deploy → verify the base Cloud Run service `cyph-v1-owedbook-alpha`.
++**Approved at:** 17:15 by Tony, in his own words: "I approve the reviewed OwedBook alpha deployment to: cyberize-nextjs-staging / us-east1 / cyph-v1-owedbook-alpha." Existing services preserved; manual acceptance remains pending. DNS record confirmed by Tony: CNAME `cyph-v1-owedbook-alpha.cyberizedev.com` → `ghs.googlehosted.com`, TTL 3600 (domain mapping itself is outside this stage).
++
++### 17:20 — IN PROGRESS (init done; waiting for Tony's secret upload)
++
++**Init run 1:** exit 1 at the act-as check — FALSE NEGATIVE caused by my own script (`grep -q` under pipefail, SIGPIPE). Before stopping it had created the empty secret `cyph-owedbook-alpha-supabase-secret-key` and the runtime SA `sa-cyph-owedbook-alpha-runtime`. Diagnosis by read-only commands: `roles/editor` does include `iam.serviceAccounts.actAs`. No grant was made.
++**Fix:** one check in `init-app.sh` now reads the permission list before matching (uncommitted; Tony must commit before deploy, since `deploy.sh` aborts on a dirty uploaded file).
++**Init run 2:** exit 0. Infrastructure ✅, Staging Rule ✅, secret reused, runtime SA reused, act-as ✅ (project role `roles/editor`), `secretAccessor` bound for the runtime SA on the secret, secret has NO VALUE YET.
++**Cloud changes so far:** 1 empty secret, 1 service account, 1 secret-level IAM binding. Nothing else.
++**Next:** Tony runs `./upload-secrets.sh` → "secrets done" → metadata check → Tony commits the `init-app.sh` fix → `./deploy.sh`.
++
++### 17:30 — IN PROGRESS (deploy started)
++
++**Secret:** Tony ran the helper; version 1 ENABLED (metadata only). **Fix commit:** `ef4cebc` (init-app.sh). Remaining uncommitted paths are `agent_docs/` records, not uploaded. Running `./deploy.sh` under the 17:15 approval.
++
++### 17:35 — APPROVED (follow-on, conditional): Cloud Run domain mapping
++
++**Approved by Tony:** "map the domain after verification". Scope: create the Cloud Run domain mapping `cyph-v1-owedbook-alpha.cyberizedev.com` → service `cyph-v1-owedbook-alpha` (us-east1) ONLY after the base service verifies; read back the DNS record Google expects; watch the certificate. Not in scope: DigitalOcean DNS, Supabase settings, any other service's mapping.
++
++### 17:38 — COMPLETE (OwedBook alpha Stage A deployed and verified; domain mapping created)
++
++**Task:** `./deploy.sh` exit 0 from commit `ef4cebc` (clean). Build `5d840fee-51cc-4c9f-ab03-9b9f97c191e4` SUCCESS (4m43s). Revision `cyph-v1-owedbook-alpha-00001-qrp`. Image tag `ef4cebccae68-20261120t111951z`, digest `sha256:db2d37b44ce76fde9ed426da2feef5f91bae4eaa18170e9410cdfda8a9408348` (service runs the digest).
++**Verified:** `allUsers` invoker (matches public); run.app `/` 200, `/api/build-info` shows the commit; port 3000 on `0.0.0.0`; runtime SA and secret reference correct; `MAIL_RECIPIENT_POLICY=open`; logs clean; five existing services untouched.
++**Domain mapping (Tony: "map the domain after verification"):** created; Google expects CNAME → `ghs.googlehosted.com.`; public DNS matches; certificate pending.
++**Files changed:** `DEPLOYMENT_CHECKLIST.md`, `RECOVERY.md`, `CHANGELOG.md`, ledger, this log, two response files (all uncommitted).
++**Tests:** deployment read-backs only; sign-in not exercised; manual acceptance PENDING.
++**Open:** certificate/HTTPS; Supabase Auth allow-list (Tony); Portal mirror and Portal alpha; zod (KIP-3); push/merge of the branch.
++**Record:** `agent_docs/RESPONSES/response_2026-11-20_173800_owedbook-alpha-deployed.md`.
++
++### 18:00 — COMPLETE (alpha domain answers over HTTPS)
++
++Certificate issued (Google Trust Services, expires 2027-02-18, verify ok). `https://cyph-v1-owedbook-alpha.cyberizedev.com/` 200; `/api/build-info` shows `ef4cebc`; `/owedbook` → `/auth`; http → https. Checklist and RECOVERY updated. Sign-in not verified; Supabase allow-list (Tony) and manual acceptance PENDING.
+diff --git a/agent_docs/SKILL_ISSUES_LEDGER_next_deploy_auto.md b/agent_docs/SKILL_ISSUES_LEDGER_next_deploy_auto.md
+index 089059d..3ff3f7e 100644
+--- a/agent_docs/SKILL_ISSUES_LEDGER_next_deploy_auto.md
++++ b/agent_docs/SKILL_ISSUES_LEDGER_next_deploy_auto.md
+@@ -11,3 +11,4 @@
+ | 2026-11-20 | 2 (review) | Baseline ignore patterns are case-sensitive and `.dockerignore` covers `.env*` at the root only. Canary test: `sub/serviceAccount.json` reached both the Docker context and the upload list. | Glob patterns in the baselines. | Nested and case-insensitive patterns added to both files; canary re-test clean. | Update Template 1b and UPLOAD_BOUNDARY.md; add a canary test to Phase 2. |
+ | 2026-11-20 | 2 (review) | The skill has no act-as check for the build identity on the runtime SA. | Not in Template 4. | Report-only check added to `init-app.sh`. | Add to Template 4. |
+ | 2026-11-20 | 2 (review) | No source identity in the templates; a deploy from uncommitted files is indistinguishable from a clean one. | Not in Template 3. | `deploy.sh` aborts when an uploaded file differs from HEAD unless `ALLOW_DIRTY=1`, and then labels revision, tag and artifact `-dirty`. | Consider for Template 3. |
++| 2026-11-20 | 3 (init) | First `init-app.sh` run stopped with "Act-as MISSING" although the build SA holds `roles/editor`, which includes the permission. | Agent defect in the round-2 act-as check: `gcloud … \| tr \| grep -qx` under `set -o pipefail`; `grep -q` exits on the first match, the upstream gets SIGPIPE (141) and the pipeline reports failure. A manual `grep -c` had passed. | Check now reads the permission list into a variable before matching. Rerun: exit 0. First run had already created the empty secret and the runtime SA (reused on rerun). No IAM grant was made to work around it. The fix is an uncommitted change to `init-app.sh`; Tony commits it before deploy. | Never pipe a long producer into `grep -q` under pipefail in templates. The Staging Rule check (Template 4) has the same shape with a short producer; review it. |

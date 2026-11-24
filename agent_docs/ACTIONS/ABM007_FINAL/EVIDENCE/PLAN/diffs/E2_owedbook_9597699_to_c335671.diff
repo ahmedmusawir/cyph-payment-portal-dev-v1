@@ -1,0 +1,212 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 4c72866..d650a92 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -3,6 +3,19 @@
+ > Documentation/playbook change log per CLAUDE.md Changelog Protocol.
+ > `[CC]` = Claude Code · `[TS]` = Tony Stark manual edits.
+ 
++## 2026-11-24 01:51 UTC — [CC] Claude Code
++- **Updated:** new `agent_docs/SESSIONS/session_2026-11-24.md`; `agent_docs/SESSIONS/session_2026-11-23.md` (end-of-session block filled).
++- **Updated:** `RECOVERY.md` (01:52 UTC; new top block: session closed with no work, ABM007_FINAL engineering starts from the Portal repository).
++- **Reason:** session start (Step 0) and Director closeout a minute later. Records only.
++
++## 2026-11-23 09:31 UTC — [CC] Claude Code
++- **Updated:** `RECOVERY.md` (new top block: ABM007_FINAL pre-ABM reconnaissance delivered; Portal alpha status corrected), `agent_docs/SESSIONS/session_2026-11-23.md` (recon entries, corrected entry times).
++- **Reason:** Director task: bounded read-only reconnaissance for ABM007_FINAL. The report is in `/home/moose/Downloads/ABM007_FINAL_PRE_RECON/`, outside the repository by instruction. No product file changed.
++
++## 2026-11-23 09:17 UTC — [CC] Claude Code
++- **Updated:** `RECOVERY.md` (new top block: PR #14 merged, `main` synced at `9597699`, session on `abm007-final`); new `agent_docs/SESSIONS/session_2026-11-23.md`.
++- **Reason:** Director request at session start: update the session and recovery files. Records only.
++
+ ## 2026-11-20 11:38 UTC — [CC] Claude Code
+ - **Updated:** `DEPLOYMENT_CHECKLIST.md` (Stage A ticked with build ID, revision, tag, digest), `RECOVERY.md`, `agent_docs/SESSIONS/session_2026-11-20.md`, `agent_docs/SKILL_ISSUES_LEDGER_next_deploy_auto.md`; new `agent_docs/RESPONSES/response_2026-11-20_170846_owedbook-alpha-auto-plan.md` and `response_2026-11-20_173800_owedbook-alpha-deployed.md`.
+ - **Reason:** Director-approved deployment of the OwedBook alpha base service and its domain mapping. Manual acceptance pending.
+diff --git a/RECOVERY.md b/RECOVERY.md
+index 1b515c6..ca2b009 100644
+--- a/RECOVERY.md
++++ b/RECOVERY.md
+@@ -4,7 +4,26 @@
+ > Updated after every plan completion. If this file is stale, the session log in
+ > `agent_docs/SESSIONS/` is the fallback source of truth.
+ 
+-**Last updated:** 2026-11-20 18:00 — **OwedBook alpha DEPLOYED; `https://cyph-v1-owedbook-alpha.cyberizedev.com` answers over HTTPS (certificate issued); sign-in NOT verified; manual acceptance PENDING** · External handoff ready **NO**
++**Last updated:** 2026-11-24 07:52 — **Session opened and closed here with no work done; ABM007_FINAL engineering starts from the Portal repository** · `abm007-final` @ `9597699` (OwedBook, no commits of its own), `cb4decd` (Portal) · External handoff ready **NO**
++**State:** nothing changed in the product. The canonical module pack is in the Portal at `cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/` (entry: `ABM_ENTRY.md`); this repository holds only the pointer `agent_docs/ACTIONS/ABM007_FINAL/README.md`. Work for this repository is listed in the pack's `CONTRACTS/NO_BREAK_AND_PATHS.md` section 2. The pack has not been read by Claudy yet.
++**Next step:** Tony opens a session in the Portal repository; the engineer reads `ABM_ENTRY.md` there. Nothing is pending approval. Uncommitted here: `RECOVERY.md`, `CHANGELOG.md`, `agent_docs/SESSIONS/session_2026-11-23.md`, `agent_docs/SESSIONS/session_2026-11-24.md`, and the untracked pointer `agent_docs/ACTIONS/ABM007_FINAL/README.md`.
++**Record:** session `agent_docs/SESSIONS/session_2026-11-24.md`.
++
++**Prior block (2026-11-23 15:31):** **Last updated:** 2026-11-23 15:31 — **ABM007_FINAL pre-ABM reconnaissance DELIVERED (read-only; no product change in either repo)** · `abm007-final` @ `9597699` (OwedBook), `cb4decd` (Portal) · External handoff ready **NO**
++**Result:** consolidated report, command-evidence appendix, index and ZIP in `/home/moose/Downloads/ABM007_FINAL_PRE_RECON/` (ZIP `ABM007_FINAL_PRE_RECON_2026-11-23.zip`, SHA-256 `2c90269888a1e1ba7b8789b1794af810933bb9785ef01ca2d0055d5099789524`). Jest baseline: OwedBook 374/374, Portal 572/572. Not run: typecheck, lint, builds, Playwright.
++**Key facts for the ABM:** both apps are token-driven; radius and shadow need per-component work (mostly Portal); Portal defaults to dark; no Help page exists; one Supabase Magic Link template serves all sign-in mail and its live body is not in the repos; Stripe sandbox branding is empty. Estimate 9 to 12.5 engineering days (proposal).
++**Correction to the 15:17 block below:** the Portal alpha is deployed (2026-11-21, per the Portal's records). Still open on alpha: Supabase Auth allow-list and templates, sign-in check, two-app flows.
++**Next step:** Friday authors the ABM from the report; JARVIS reviews; Director closes the gaps in report §11 (Supabase and Stripe dashboard reads). Nothing is pending approval. Uncommitted in OwedBook: `RECOVERY.md`, `CHANGELOG.md`, `agent_docs/SESSIONS/session_2026-11-23.md`.
++**Record:** session `agent_docs/SESSIONS/session_2026-11-23.md`; the report itself lives outside the repo by instruction.
++
++**Prior block (2026-11-23 15:17):** **Last updated:** 2026-11-23 15:17 — **Session opened on `abm007-final` @ `9597699` (clean, no commits of its own); PR #14 merged, `main` = `origin/main` = `9597699`; OwedBook alpha deployed 20 Nov, sign-in NOT verified, manual acceptance PENDING** · External handoff ready **NO**
++**Since 2026-11-20 18:00:** Tony committed the deployment records as `2fec846` and merged PR #14 (`deploy/owedbook-alpha-prep` → `main`) as `9597699b404afdbcd792a9b4da61c21abb10cdf8` on 2026-11-21. Local `main` and `origin/main` full SHAs match (remote refs as of the last fetch). New branch `abm007-final` tracks `origin/abm007-final` at the same commit; its task has not been stated yet.
++**Not re-verified today:** the alpha service and domain (last checked 2026-11-20 18:00, revision from `ef4cebc`; `main` is now two commits ahead of the deployed revision). Anything done outside the repo since then is unknown here.
++**Open:** Supabase Auth (DEV) allow-list for the alpha origin (Tony) → sign-in check → final manual retest on Next.js 16.4.5 → Portal mirror origins and Portal alpha (`DEPLOYMENT_CHECKLIST.md` Stages B and C). KIP-3 (zod) open, required before production.
++**Next step:** Tony states the task for `abm007-final`. Uncommitted: `RECOVERY.md`, `CHANGELOG.md`, `agent_docs/SESSIONS/session_2026-11-23.md`.
++**Record:** session `agent_docs/SESSIONS/session_2026-11-23.md`.
++
++**Prior block (2026-11-20 18:00):** **Last updated:** 2026-11-20 18:00 — **OwedBook alpha DEPLOYED; `https://cyph-v1-owedbook-alpha.cyberizedev.com` answers over HTTPS (certificate issued); sign-in NOT verified; manual acceptance PENDING** · External handoff ready **NO**
+ **Result:** service `cyph-v1-owedbook-alpha` (`cyberize-nextjs-staging`, us-east1, public), revision `cyph-v1-owedbook-alpha-00001-qrp`, from commit `ef4cebc` on `deploy/owedbook-alpha-prep` (local only, not pushed). Build `5d840fee-51cc-4c9f-ab03-9b9f97c191e4`. Image digest `sha256:db2d37b4…8348`. run.app `https://cyph-v1-owedbook-alpha-hr465ynfuq-ue.a.run.app`: `/` 200, `/api/build-info` shows the commit. Mapping `cyph-v1-owedbook-alpha.cyberizedev.com` created; DNS matches.
+ **Next step:** confirm the certificate and HTTPS on the alpha domain → Tony adds the alpha origin to Supabase Auth (DEV) → sign-in check → manual retest → Portal mirror origins and Portal alpha. Uncommitted: records since `ef4cebc` (`DEPLOYMENT_CHECKLIST.md`, `RECOVERY.md`, `CHANGELOG.md`, `agent_docs/`).
+ **Record:** `agent_docs/RESPONSES/response_2026-11-20_173800_owedbook-alpha-deployed.md`.
+diff --git a/agent_docs/ACTIONS/ABM007_FINAL/README.md b/agent_docs/ACTIONS/ABM007_FINAL/README.md
+new file mode 100644
+index 0000000..5460e27
+--- /dev/null
++++ b/agent_docs/ACTIONS/ABM007_FINAL/README.md
+@@ -0,0 +1,20 @@
++# ABM007_FINAL — pointer (OwedBook repository)
++
++Install this file as `agent_docs/ACTIONS/ABM007_FINAL/README.md` in the OwedBook repository `cyph-v1-dev`.
++
++---
++
++# ABM007_FINAL in this repository
++
++This repository is one of two covered by module **ABM007_FINAL**. The canonical module pack lives in the Account & Billing repository:
++
++`cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/`
++
++On the Director's machine: `/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/`
++
++There is one acceptance contract for both repositories. It is not copied here, so the two can never disagree.
++
++- **Engineer:** read `ABM_ENTRY.md` in the canonical pack. Work for this repository is listed in `CONTRACTS/NO_BREAK_AND_PATHS.md` section 2.
++- **QA Executor:** read `QAM/QAM_ENTRY.md` in the canonical pack.
++- Engineering branch here: `abm007-final`. QA branch here: `qa/abm007-final`. Baseline here: `9597699b404afdbcd792a9b4da61c21abb10cdf8`.
++- This repository's own root instructions still apply to every change made here.
+diff --git a/agent_docs/SESSIONS/session_2026-11-23.md b/agent_docs/SESSIONS/session_2026-11-23.md
+new file mode 100644
+index 0000000..2fb47a9
+--- /dev/null
++++ b/agent_docs/SESSIONS/session_2026-11-23.md
+@@ -0,0 +1,73 @@
++# Session Log: 2026-11-23
++
++## Project Context
++
++- **Project:** Cyber Pharma (OwedBook `cyph-v1-dev`; Portal `cyph-payment-portal-dev-v1` not inspected this session)
++- **Tool:** Claude Code
++- **Goal:** Not set yet. First request (Tony, 15:14): update the session and recovery files.
++
++## Starting State
++
++- **Branch:** `abm007-final` @ `9597699` (tracks `origin/abm007-final`), working tree clean. `main` = `origin/main` = `9597699b404afdbcd792a9b4da61c21abb10cdf8` (remote refs as of the last fetch; no fetch run this session). The branch has no commits of its own yet; its purpose has not been stated to me.
++- **Since the last log (2026-11-20 18:00):** Tony committed the deployment records as `2fec846` (2026-11-21 08:35) and merged PR #14 `deploy/owedbook-alpha-prep` → `main` as `9597699` (2026-11-21 08:37). The post-merge sync holds: local `main` and `origin/main` full SHAs match.
++- **Last Working Feature:** OwedBook alpha deployed 2026-11-20 — service `cyph-v1-owedbook-alpha` (`cyberize-nextjs-staging`, us-east1), revision `cyph-v1-owedbook-alpha-00001-qrp` from `ef4cebc`; `https://cyph-v1-owedbook-alpha.cyberizedev.com` answered over HTTPS at 18:00 that day. Not re-checked today.
++- **Known Issues / open (carried from the records, not re-verified):**
++  - Sign-in on the alpha domain NOT verified; Supabase Auth (DEV) allow-list for the alpha origin is Tony's step (`DEPLOYMENT_CHECKLIST.md` Stage B).
++  - Final manual retest on Next.js 16.4.5 and manual acceptance PENDING.
++  - Stage C: Portal mirror origins and Portal alpha not done.
++  - The deployed revision is `ef4cebc`; `main` is two commits ahead (`2fec846` records, `9597699` merge). Whether those touch any deployed file was not checked.
++  - KIP-1 (`server.ts` cookie adapter) open, trigger not met. KIP-3 (zod 3.x advisory) open; triggers: before production, before server-side zod use, on resolver upgrade — none met by this session's work.
++  - External handoff ready: NO.
++
++## Session Progress
++
++### 15:14 — Step 0 (workflow option 2, factory engineering)
++
++Read `RECOVERY.md` (top block 2026-11-20 18:00), `session_2026-11-20.md` (end state), `agent_docs/KIP_REGISTRY.md`, `DEPLOYMENT_CHECKLIST.md`. Read-only git inspection (`status`, `log`, `branch -vv`, `rev-parse`). No session file existed for today; created this one.
++
++### 15:17 — COMPLETE (Tony: update the session and recovery files)
++
++**Task:** new session log for 2026-11-23; new top block in `RECOVERY.md` recording the PR #14 merge, the synced `main`, and the current branch; the 18:00 block of 20 Nov demoted to "Prior block".
++**Files changed:** `agent_docs/SESSIONS/session_2026-11-23.md` (new), `RECOVERY.md`, `CHANGELOG.md`.
++**Tests:** none run (records only). No cloud, database or product file touched. No git mutation.
++**Notes:** everything about the weekend comes from git history and the 20 Nov records. Anything Tony did outside the repo (Supabase allow-list, sign-in check, manual retest) is not known to me and is still recorded as pending.
++
++### 15:19 — Read (Tony: two files in `~/Downloads`, `_ARCHIVE` skipped)
++
++`ABM007_FINAL_BRANDING_CONFLICT_REGISTER_v0_3_2026-11-23.md` and `CYPH_FRANK_DESIGN.md` read in full. Nothing written.
++
++### 15:20 — APPROVED → IN PROGRESS (Director task message: bounded pre-ABM reconnaissance for ABM007_FINAL)
++
++**Task:** read-only recon of OwedBook (`cyph-v1-dev`) and Portal (`cyph-payment-portal-dev-v1`) for Friday (ABM author) and JARVIS (review): styling architecture, theme switching, screen inventory, logo assets, emails, Stripe, tests, open manual-QA items and Help state, affected paths and effort. No redesign, no ABM.
++**Approved at:** 15:20, scope and limits stated in the task message itself. (Times in this entry and the one above were first written as 15:40 and 15:30 by estimate; corrected against the system clock.)
++**Limits (from the message):** no git mutation, product edit, install, deployment, dashboard change, purchase, invitation or database write; no DEV-backed servers or Stripe listeners; no secrets printed. Reports only under `/home/moose/Downloads/ABM007_FINAL_PRE_RECON/` (so no copy in `agent_docs/RESPONSES/`; this log keeps status only). Portal repo: nothing written, tree stays clean.
++**Baselines verified:** OwedBook `9597699b404afdbcd792a9b4da61c21abb10cdf8`, Portal `cb4decde9adc9ab75d0dcb15556c64a3bdbfe075`, both on `abm007-final` = `main` = `origin/main` (as of last fetch), one worktree each, no stashes. Remotes: OwedBook `Cyberize-Group/cyph-v1-dev`, Portal `ahmedmusawir/cyph-payment-portal-dev-v1`. OwedBook tree is not clean: it carries this session's three record files.
++
++### 15:31 — COMPLETE (pre-ABM reconnaissance for ABM007_FINAL)
++
++**Task:** read-only recon of both repositories delivered as one consolidated report with a command-evidence appendix, an index and a ZIP.
++**Output (outside the repos, as instructed):** `/home/moose/Downloads/ABM007_FINAL_PRE_RECON/` — `00_INDEX.md`, `ABM007_FINAL_PRE_RECON_REPORT.md`, `APPENDIX_A_COMMAND_EVIDENCE.txt`, `ABM007_FINAL_PRE_RECON_2026-11-23.zip` (SHA-256 `2c90269888a1e1ba7b8789b1794af810933bb9785ef01ca2d0055d5099789524`) and its `.sha256` file.
++**Files changed in this repo:** this log, `RECOVERY.md`, `CHANGELOG.md`. No product, test, deploy or migration file. Portal repo: nothing written, tree clean before and after.
++**Tests:** Jest baseline only — OwedBook 54 suites / 374 tests passed; Portal 32 suites / 572 tests passed. Not run: typecheck, lint, builds, Playwright, integration tests.
++**External reads:** three Stripe GET requests through the existing CLI sign-in (sandbox "Cyber Pharma": account, portal configurations, products); one download of the public preferred logo to the session scratch folder. No write anywhere outside the output folder and these records.
++**Main findings:** both apps token-driven with almost no hardcoded colour; radius and shadow are not one knob (Portal: 40 card containers with no radius class); Portal ships dark by default, OwedBook follows system and stored choice; the two themes have drifted; no Help page in either app; one Supabase-hosted Magic Link template serves all sign-in, access and invitation mail and its live body is not in either repo; Stripe sandbox has no branding set and still shows "Cyber Pharma"; 16 of 19 Portal browser specs target removed `/demo` routes; effort estimate 9 to 12.5 engineering days.
++**Corrections found while reading:** the Portal alpha (`cyph-v1-payment-alpha`) was deployed on 2026-11-21 per the Portal's own records; this morning's RECOVERY block listed "Portal alpha" as still open. Corrected in the new block.
++**Not verified (listed in the report §11):** live Supabase template and allow-list, Resend click tracking, Stripe dashboard-only options and email settings, which portal configuration alpha uses, rendered contrast, builds and browser specs at baseline.
++
++## Lessons Learned
++
++- Take entry times from the system clock, not from an estimate: two entries today were stamped ahead of the clock and had to be corrected.
++
++## End of Session State
++
++_Filled on 2026-11-24 07:51; the session was not formally closed on the day._
++
++- **Working:** nothing changed in either product. Jest baseline: OwedBook 374/374, Portal 572/572. Recon report delivered to `/home/moose/Downloads/ABM007_FINAL_PRE_RECON/`.
++- **Broken:** nothing new. Open items are unchanged (alpha sign-in unverified, manual retest pending, KIP-1 and KIP-3 open).
++- **Next Steps:** Friday authors the ABM from the report; JARVIS reviews; Director closes the gaps in report §11. The three record files of this session were left uncommitted.
++
++## Files Changed This Session
++
++- `agent_docs/SESSIONS/session_2026-11-23.md` — new session log
++- `RECOVERY.md` — new top block (2026-11-23 15:17); previous top block marked as prior
++- `CHANGELOG.md` — entries for the record updates and the recon closeout
+diff --git a/agent_docs/SESSIONS/session_2026-11-24.md b/agent_docs/SESSIONS/session_2026-11-24.md
+new file mode 100644
+index 0000000..e6ff63c
+--- /dev/null
++++ b/agent_docs/SESSIONS/session_2026-11-24.md
+@@ -0,0 +1,45 @@
++# Session Log: 2026-11-24
++
++## Project Context
++
++- **Project:** Cyber Pharma (OwedBook `cyph-v1-dev`; Portal `cyph-payment-portal-dev-v1`)
++- **Tool:** Claude Code
++- **Goal:** Not set yet. Tony opened the session at 07:51 and chose workflow option 2 (factory engineering).
++
++## Starting State
++
++- **Branch:** `abm007-final` @ `9597699b404afdbcd792a9b4da61c21abb10cdf8` = `main` = `origin/main` (remote refs as of the last fetch; no fetch run). No commits of its own.
++- **Working tree (not clean):** `RECOVERY.md` and `CHANGELOG.md` modified, `agent_docs/SESSIONS/session_2026-11-23.md` untracked (all three from yesterday, still uncommitted); `agent_docs/ACTIONS/ABM007_FINAL/README.md` untracked, new since yesterday (07:49 today, not written by me).
++- **Portal:** `abm007-final` @ `cb4decde9adc9ab75d0dcb15556c64a3bdbfe075`; untracked `agent_docs/ACTIONS/ABM007_FINAL/` (the canonical module pack, not written by me).
++- **Last Working Feature:** unchanged from yesterday. OwedBook alpha and Portal alpha deployed (20 and 21 Nov); not re-checked. Jest baseline yesterday: OwedBook 374/374, Portal 572/572.
++- **Last completed work:** ABM007_FINAL pre-ABM reconnaissance, delivered 2026-11-23 15:31 to `/home/moose/Downloads/ABM007_FINAL_PRE_RECON/`.
++- **Known Issues / open (carried, not re-verified):**
++  - Alpha sign-in and Supabase Auth (DEV) allow-list and templates not verified.
++  - Manual retest of R1–R10 and F1–F6 pending; campaign not certified.
++  - KIP-1 (`server.ts` cookie adapter) open, trigger not met. KIP-3 (zod 3.x advisory) open; triggers: before production, before server-side zod use, on resolver upgrade. None met at session start.
++  - External handoff ready: NO.
++
++## Session Progress
++
++### 07:51 — Step 0 (workflow option 2, factory engineering)
++
++Read `RECOVERY.md` (top block 2026-11-23 15:31), `session_2026-11-23.md`, the KIP registry headings, and the new pointer `agent_docs/ACTIONS/ABM007_FINAL/README.md`. Read-only git inspection of both repositories. Created this file and filled yesterday's end-of-session block. The canonical pack in the Portal repository was listed but not read; no task has been given yet.
++
++## Lessons Learned
++
++- (none yet)
++
++## End of Session State
++
++_Closed 07:52 by Tony: ABM007_FINAL engineering starts from a session in the Portal repository._
++
++- **Working:** unchanged; no product, test or deploy file touched, nothing run.
++- **Broken:** nothing new. Open items as listed under Starting State.
++- **Next Steps:** new session in `cyph-payment-portal-dev-v1`; read `agent_docs/ACTIONS/ABM007_FINAL/ABM_ENTRY.md` there. Record files here remain uncommitted (reminder given).
++
++## Files Changed This Session
++
++- `agent_docs/SESSIONS/session_2026-11-24.md` — new session log
++- `agent_docs/SESSIONS/session_2026-11-23.md` — end-of-session block filled
++- `RECOVERY.md` — new top block (2026-11-24 07:52): session closed, work moves to the Portal
++- `CHANGELOG.md` — entries for the above

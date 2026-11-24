@@ -1,0 +1,124 @@
+ABM007_FINAL color verification — resolved in Chromium from DESIGN/tokens/abm007_final_tokens.css
+Method: each token is applied as hsl(var(--token)) to an element; getComputedStyle gives the color the browser renders.
+Contrast is WCAG 2.x relative luminance computed from those resolved colors. Composites are source-over on the named base.
+This verifies color values and declared pairs. It is not a measurement of every rendered screen (that is AC-B08, independent QA).
+
+== 1. Approved anchors resolve to the exact approved hex ==
+OK   --brand-navy  resolved rgb(21, 68, 116) = #154474  approved #154474
+OK   --brand-green  resolved rgb(50, 163, 141) = #32A38D  approved #32A38D
+OK   --brand-green-dark  resolved rgb(40, 132, 114) = #288472  approved #288472
+OK   --brand-ice  resolved rgb(234, 243, 250) = #EAF3FA  approved #EAF3FA
+OK   --brand-charcoal  resolved rgb(57, 59, 56) = #393B38  approved #393B38
+OK   --brand-gray  resolved rgb(81, 81, 81) = #515151  approved #515151
+OK   --brand-green-hover  resolved rgb(36, 119, 103) = #247767  approved #247767
+
+== 2. Every color token, as resolved ==
+--brand-navy  rgb(21, 68, 116)  #154474
+--brand-green  rgb(50, 163, 141)  #32A38D
+--brand-green-dark  rgb(40, 132, 114)  #288472
+--brand-ice  rgb(234, 243, 250)  #EAF3FA
+--brand-charcoal  rgb(57, 59, 56)  #393B38
+--brand-gray  rgb(81, 81, 81)  #515151
+--brand-green-hover  rgb(36, 119, 103)  #247767
+--brand-navy-deep  rgb(15, 48, 82)  #0F3052
+--brand-navy-deeper  rgb(10, 33, 56)  #0A2138
+--shadow-tint  rgb(12, 38, 65)  #0C2641
+--background  rgb(234, 243, 250)  #EAF3FA
+--foreground  rgb(57, 59, 56)  #393B38
+--card  rgb(255, 255, 255)  #FFFFFF
+--card-foreground  rgb(57, 59, 56)  #393B38
+--popover  rgb(255, 255, 255)  #FFFFFF
+--popover-foreground  rgb(57, 59, 56)  #393B38
+--primary  rgb(40, 132, 114)  #288472
+--primary-foreground  rgb(255, 255, 255)  #FFFFFF
+--primary-hover  rgb(36, 119, 103)  #247767
+--secondary  rgb(234, 243, 250)  #EAF3FA
+--secondary-foreground  rgb(21, 68, 116)  #154474
+--muted  rgb(234, 243, 250)  #EAF3FA
+--muted-foreground  rgb(81, 81, 81)  #515151
+--accent  rgb(234, 243, 250)  #EAF3FA
+--accent-foreground  rgb(21, 68, 116)  #154474
+--heading  rgb(21, 68, 116)  #154474
+--navbar  rgb(21, 68, 116)  #154474
+--navbar-foreground  rgb(255, 255, 255)  #FFFFFF
+--border  rgb(211, 226, 238)  #D3E2EE
+--input  rgb(81, 81, 81)  #515151
+--ring  rgb(21, 68, 116)  #154474
+--ring-on-dark  rgb(255, 255, 255)  #FFFFFF
+--disabled  rgb(223, 230, 236)  #DFE6EC
+--disabled-foreground  rgb(81, 81, 81)  #515151
+--destructive  rgb(170, 38, 34)  #AA2622
+--destructive-foreground  rgb(255, 255, 255)  #FFFFFF
+--success  rgb(40, 134, 57)  #288639
+--success-foreground  rgb(255, 255, 255)  #FFFFFF
+--warning  rgb(157, 109, 6)  #9D6D06
+--warning-foreground  rgb(255, 255, 255)  #FFFFFF
+--info  rgb(33, 115, 222)  #2173DE
+--info-foreground  rgb(255, 255, 255)  #FFFFFF
+--chart-1  rgb(170, 38, 34)  #AA2622
+--chart-2  rgb(33, 115, 222)  #2173DE
+--chart-3  rgb(40, 134, 57)  #288639
+--chart-4  rgb(21, 68, 116)  #154474
+--chart-5  rgb(50, 163, 141)  #32A38D
+--role-superadmin  rgb(21, 68, 116)  #154474
+--role-superadmin-foreground  rgb(255, 255, 255)  #FFFFFF
+--role-admin  rgb(21, 68, 116)  #154474
+--role-admin-foreground  rgb(255, 255, 255)  #FFFFFF
+--role-member  rgb(21, 68, 116)  #154474
+--role-member-foreground  rgb(255, 255, 255)  #FFFFFF
+
+== 3. Declared pairs (expect PASS) ==
+OK   4.532:1  need 4.5  passes  | Primary button: white text on --primary  [#FFFFFF on #288472]
+OK   5.371:1  need 4.5  passes  | Primary button hover: white text on --primary-hover  [#FFFFFF on #247767]
+OK   4.532:1  need 4.5  passes  | Link: --primary text on white card  [#288472 on #FFFFFF]
+OK   8.858:1  need 4.5  passes  | Link on navy header: ice text on --navbar  [#EAF3FA on #154474]
+OK   9.948:1  need 4.5  passes  | Header text: white on --navbar  [#FFFFFF on #154474]
+OK   11.949:1  need 4.5  passes  | Masthead text: ice on gradient end --brand-navy-deep  [#EAF3FA on #0F3052]
+OK   14.523:1  need 4.5  passes  | Backdrop footer: ice on --brand-navy-deeper  [#EAF3FA on #0A2138]
+OK   6.741:1  need 4.5  passes  | Active header item: white on (white 14% over navy)  [#FFFFFF on #365E87]
+OK   11.311:1  need 4.5  passes  | Body text: --foreground on white card  [#393B38 on #FFFFFF]
+OK   10.071:1  need 4.5  passes  | Body text: --foreground on ice page  [#393B38 on #EAF3FA]
+OK   7.938:1  need 4.5  passes  | Labels: --muted-foreground on white card  [#515151 on #FFFFFF]
+OK   7.068:1  need 4.5  passes  | Labels: --muted-foreground on ice page  [#515151 on #EAF3FA]
+OK   7.068:1  need 4.5  passes  | Table head: --muted-foreground on --muted  [#515151 on #EAF3FA]
+OK   9.948:1  need 4.5  passes  | Headings: --heading on white card  [#154474 on #FFFFFF]
+OK   8.858:1  need 4.5  passes  | Headings and navy link: --heading on ice page  [#154474 on #EAF3FA]
+OK   6.300:1  need 4.5  passes  | Disabled button: --disabled-foreground on --disabled  [#515151 on #DFE6EC]
+OK   6.978:1  need 4.5  passes  | Status text on white: --destructive  [#AA2622 on #FFFFFF]
+OK   4.606:1  need 4.5  passes  | Status text on white: --success  [#288639 on #FFFFFF]
+OK   4.542:1  need 4.5  passes  | Status text on white: --warning  [#9D6D06 on #FFFFFF]
+OK   4.593:1  need 4.5  passes  | Status text on white: --info  [#2173DE on #FFFFFF]
+OK   9.960:1  need 4.5  passes  | Pill/notice text: --foreground on success tint (10% over white)  [#393B38 on #EAF3EB]
+OK   9.988:1  need 4.5  passes  | Pill/notice text: --foreground on warning tint  [#393B38 on #F5F0E6]
+OK   9.588:1  need 4.5  passes  | Pill/notice text: --foreground on destructive tint  [#393B38 on #F7E9E9]
+OK   9.933:1  need 4.5  passes  | Pill/notice text: --foreground on info tint  [#393B38 on #E9F1FC]
+OK   8.858:1  need 4.5  passes  | Outline button text: --heading on ice hover surface  [#154474 on #EAF3FA]
+OK   5.915:1  need 4.5  passes  | Destructive outline button: --destructive text on (destructive 10% over white)  [#AA2622 on #F7E9E9]
+OK   7.938:1  need 3  passes  | Non-text: field border --input against white  [#515151 on #FFFFFF]
+OK   9.948:1  need 3  passes  | Non-text: focus ring --ring against white  [#154474 on #FFFFFF]
+OK   8.858:1  need 3  passes  | Non-text: focus ring --ring against ice page  [#154474 on #EAF3FA]
+OK   9.948:1  need 3  passes  | Non-text: focus ring --ring-on-dark against --navbar  [#FFFFFF on #154474]
+OK   4.532:1  need 3  passes  | Non-text: primary button edge against white  [#288472 on #FFFFFF]
+OK   4.035:1  need 3  passes  | Non-text: primary button edge against ice page  [#288472 on #EAF3FA]
+OK   4.606:1  need 3  passes  | Non-text: status border --success against white  [#288639 on #FFFFFF]
+OK   4.542:1  need 3  passes  | Non-text: status border --warning against white  [#9D6D06 on #FFFFFF]
+OK   4.593:1  need 3  passes  | Non-text: status border --info against white  [#2173DE on #FFFFFF]
+OK   9.948:1  need 3  passes  | Non-text: step badge --brand-navy against white  [#154474 on #FFFFFF]
+OK   3.107:1  need 3  passes  | Large type only: --brand-green on white (3:1 bar)  [#32A38D on #FFFFFF]
+
+== 4. Controls (expect FAIL — these show the check can fail) ==
+OK   3.107:1  need 4.5  fails  | CONTROL: white text on raw --brand-green (design forbids it)  [#FFFFFF on #32A38D]
+OK   4.475:1  need 4.5  fails  | CONTROL: rounded triplet hsl(168 53% 34%) from review package 01, white text  [#FFFFFF on #298572]
+OK   4.035:1  need 4.5  fails  | CONTROL: dark-green link on ice page  [#288472 on #EAF3FA]
+OK   2.195:1  need 4.5  fails  | CONTROL: dark-green link on navy  [#288472 on #154474]
+OK   3.803:1  need 4.5  fails  | CONTROL: old hover, white on (primary 90% over white)  [#FFFFFF on #3D9080]
+OK   1.978:1  need 4.5  fails  | CONTROL: old disabled, white on (primary 50% over white)  [#FFFFFF on #94C2B9]
+OK   4.101:1  need 4.5  fails  | CONTROL: --success status text on ice page  [#288639 on #EAF3FA]
+OK   4.044:1  need 4.5  fails  | CONTROL: --warning status text on ice page  [#9D6D06 on #EAF3FA]
+OK   4.090:1  need 4.5  fails  | CONTROL: --info status text on ice page  [#2173DE on #EAF3FA]
+OK   1.123:1  need 3  fails  | CONTROL: design ice hairline against white (non-text 3:1)  [#EAF3FA on #FFFFFF]
+OK   1.322:1  need 3  fails  | CONTROL: proposed --border hairline against white (decorative; not relied on)  [#D3E2EE on #FFFFFF]
+
+ctl-rounded-green resolves to rgb(41, 133, 114) = #298572 (approved value is #288472)
+
+RESULT: every row matched its expectation.

@@ -1,0 +1,130 @@
+{
+ "module": "ABM007_FINAL",
+ "package": "ABM007_FINAL_ENGINEERING_PLAN_REVIEW_01.zip",
+ "phase": "ENGINEERING PLAN (draft)",
+ "attempt": "01",
+ "generated": "2026-11-24 Asia/Dhaka",
+ "note": "Lists every archive member except this index. The archive's own SHA-256 is in the return message and the .sha256 file. Not a result, approval or release.",
+ "member_count_excluding_index": 17,
+ "members": [
+  {
+   "archive_path": "ABM007_FINAL/ABM_EXECUTION_PLAN.md",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/ABM_EXECUTION_PLAN.md",
+   "purpose": "the plan (DRAFT 01)",
+   "bytes": 39249,
+   "sha256": "63414fb806eedba400ac7c0716b9704f8d139b00fe3f8529302a7e3e4e779ef0"
+  },
+  {
+   "archive_path": "ABM007_FINAL/ABM_JOURNAL.md",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/ABM_JOURNAL.md",
+   "purpose": "journal snapshot with the Engineer entry",
+   "bytes": 2353,
+   "sha256": "4e661f95fadcade8c7d1c7cb747c468a8d3925d087fa4fa9dd46c79f36a577f6"
+  },
+  {
+   "archive_path": "ABM007_FINAL/ABM_STATE.md",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md",
+   "purpose": "state snapshot with the Engineer row",
+   "bytes": 3483,
+   "sha256": "8d02d7a03ee7fca11ef71d38a882913452c0b22c1606ae5997158b1ce19a3777"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/ENTRY_CHECKS.md",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/ENTRY_CHECKS.md",
+   "purpose": "entry-check evidence E-1 to E-6",
+   "bytes": 16726,
+   "sha256": "c775511f2a56bd6bf77fd06439ee08457c6786441a5151803984de38e95377d0"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/diffs/E2_owedbook_9597699_to_c335671.diff",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/diffs/E2_owedbook_9597699_to_c335671.diff",
+   "purpose": "full diff for an entry check",
+   "bytes": 20392,
+   "sha256": "4ab5f13133bd1a52a2993a8fc62e0d7de74eae6cb574a9c273d0705fd8ea49db"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/diffs/E4_owedbook_ef4cebc_to_9597699.diff",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/diffs/E4_owedbook_ef4cebc_to_9597699.diff",
+   "purpose": "full diff for an entry check",
+   "bytes": 23894,
+   "sha256": "334bd7493c13f327be62be3681789711e022e90a82dcfd65ff2f14e49c4193cf"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/diffs/E4_portal_6dd3de7_to_cb4decd.diff",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/diffs/E4_portal_6dd3de7_to_cb4decd.diff",
+   "purpose": "full diff for an entry check",
+   "bytes": 22733,
+   "sha256": "e73e7ee30df433b75ddf002d6ddc6bc6cfedcbedb400c5fd274dfed2e1f861ed"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/logs/ob_build.log",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/logs/ob_build.log",
+   "purpose": "baseline run log",
+   "bytes": 1868,
+   "sha256": "2f1ff214c777d9761a2165e0e47fbdf95162f29d6cf3a5726bf739a6bffb7bed"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/logs/ob_lint.log",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/logs/ob_lint.log",
+   "purpose": "baseline run log",
+   "bytes": 24052,
+   "sha256": "84670fde09370e085f2c874326cd20312bc71962d56ea3e97ef6f021d31bba1d"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/logs/ob_test.log",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/logs/ob_test.log",
+   "purpose": "baseline run log",
+   "bytes": 132,
+   "sha256": "ca2ab9be0c3e1578dfea23222d121946d807eb0bd49cd70be79dd247670eebdb"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/logs/ob_typecheck.log",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/logs/ob_typecheck.log",
+   "purpose": "baseline run log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/logs/pp_build.log",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/logs/pp_build.log",
+   "purpose": "baseline run log",
+   "bytes": 1992,
+   "sha256": "fee521cd437623c01fc4ba9d220b85072fe265dc4961ce909e57f2986047964c"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/logs/pp_lint.log",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/logs/pp_lint.log",
+   "purpose": "baseline run log",
+   "bytes": 15679,
+   "sha256": "f0ab6bc41b5cb415f49dcdd115163ac5f35006a4e6aa1b491e1e553158865b26"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/logs/pp_test.log",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/logs/pp_test.log",
+   "purpose": "baseline run log",
+   "bytes": 131,
+   "sha256": "b1d271166c27a7c635c6555d53453c6f4ede865b9e0d1c68a89340438fc44bf4"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/logs/pp_typecheck.log",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/logs/pp_typecheck.log",
+   "purpose": "baseline run log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "archive_path": "ABM007_FINAL/EVIDENCE/PLAN/logs/summary.txt",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/logs/summary.txt",
+   "purpose": "baseline run log",
+   "bytes": 199,
+   "sha256": "7497696ab6f40d9558783a9bf11314c2c38f42183b8ba957a9af6ec29afb9f01"
+  },
+  {
+   "archive_path": "REVIEW_START_HERE.md",
+   "source_path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/PLAN/REVIEW_START_HERE.md",
+   "purpose": "entry note",
+   "bytes": 4375,
+   "sha256": "f329f6f2c5ea4fa371d4e051fd52fd52a7f7605ae2d51e80ce2596a0f818e73b"
+  }
+ ]
+}

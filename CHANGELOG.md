@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026-11-24 02:05 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_EXECUTION_PLAN.md` (draft engineering plan, DRAFT 01, replaces the stub), `ABM_STATE.md` and `ABM_JOURNAL.md` (one appended Engineer row each; module state unchanged).
+- **New:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/` (entry checks E-1 to E-6, baseline run logs, diffs, review ZIP and its hash), `session_2026-11-24.md`, `agent_docs/RESPONSES/response_2026-11-24_080516_abm007-final-engineering-plan.md`.
+- **Reason:** Director instruction of 24 Nov 2026: entry checks and a draft engineering plan for ABM007_FINAL. Planning records only; no product file changed. `RECOVERY.md` not written (module paths contract section 3; Director ruling requested).
+
 ## 2026-11-21 04:50 UTC — [CC] Claude Code
 - **Updated:** `DEPLOYMENT_CHECKLIST.md` (init, secrets, webhook, deploy and domain evidence), `RECOVERY.md`, `agent_docs/SESSIONS/session_2026-11-21.md`.
 - **New:** `agent_docs/RESPONSES/response_2026-11-21_095332_payment-alpha-init-result.md`, `agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md`.

@@ -1,0 +1,9 @@
+ob test exit=0 secs=11
+ob typecheck exit=0 secs=9
+ob lint exit=0 secs=11
+ob build exit=0 secs=21
+pp test exit=0 secs=9
+pp typecheck exit=0 secs=12
+pp lint exit=0 secs=12
+pp build exit=0 secs=23
+DONE
