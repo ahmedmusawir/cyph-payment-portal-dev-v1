@@ -1,0 +1,67 @@
+{
+  "targetStatusBeforeRemoval": [
+    [
+      "/tmp/abm007-final-cody-q1/ob",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q1/pp",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q2/ob",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q2/pp",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q4/ob",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q4/pp",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q4-a2/ob",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q4-a2/pp",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q4-a3/ob",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q4-a3/pp",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q2/mock-ob",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q4/mock-ob",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q4/restart-2026-11-27_081414_BDT/ob-prior-next",
+      "present"
+    ],
+    [
+      "/tmp/abm007-final-cody-q4/restart-2026-11-27_081414_BDT/pp-prior-next",
+      "present"
+    ]
+  ],
+  "allTargetsAbsentAfter": true,
+  "portsClearBeforeAndAfter": [
+    3100,
+    3101
+  ],
+  "ownedProcessesFound": 0,
+  "nonQamGitChangesBeforeAndAfter": 0
+}

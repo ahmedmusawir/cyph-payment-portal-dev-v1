@@ -1,0 +1,62 @@
+{
+  "onlyQAWorkUsingBuilds": "This exclusive final diagnostic phase. No Director walkthrough yet.",
+  "rows": [
+    {
+      "engine": "firefox",
+      "version": "148.0.2",
+      "context": "Q2-A1 fresh 2 after Portal billing",
+      "target": "/owedbook",
+      "timeoutMs": 15000,
+      "result": "COMPLETE",
+      "serverLogLines": [],
+      "console": [],
+      "documentResponses": [
+        {
+          "origin": "http://localhost:3100",
+          "path": "/owedbook",
+          "status": 200
+        }
+      ],
+      "screenshot": "agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/05/F22-firefox-return.png"
+    },
+    {
+      "engine": "chromium",
+      "version": "147.0.7727.15",
+      "context": "Owner A 375px",
+      "path": "/owedbook",
+      "timeoutMs": 20000,
+      "status": 200,
+      "result": "COMPLETE",
+      "serverLogLines": [],
+      "console": [],
+      "documentResponses": [
+        {
+          "origin": "http://localhost:3100",
+          "path": "/owedbook",
+          "status": 200
+        }
+      ],
+      "screenshot": "agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/05/F22-ob-1.png"
+    },
+    {
+      "engine": "chromium",
+      "version": "147.0.7727.15",
+      "context": "Owner A 375px",
+      "path": "/admin-portal/audit",
+      "timeoutMs": 20000,
+      "status": 200,
+      "result": "COMPLETE",
+      "serverLogLines": [],
+      "console": [],
+      "documentResponses": [
+        {
+          "origin": "http://localhost:3100",
+          "path": "/admin-portal/audit",
+          "status": 200
+        }
+      ],
+      "screenshot": "agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/05/F22-ob-2.png"
+    }
+  ],
+  "resume": "Two untouched Chromium snapshots only. Firefox was retained and not replayed."
+}

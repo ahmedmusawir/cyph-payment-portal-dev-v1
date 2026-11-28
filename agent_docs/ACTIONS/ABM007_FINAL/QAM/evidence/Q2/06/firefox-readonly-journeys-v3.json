@@ -1,0 +1,200 @@
+{
+  "rows": [
+    {
+      "engine": "firefox",
+      "version": "148.0.2",
+      "role": "ENGINEERING_MEMBER",
+      "time": "2026-11-24T13:13:39.477Z",
+      "app": "ob",
+      "method": "provider token via the app confirm page (AM-15)",
+      "selector": {
+        "options": 1,
+        "noPermitted": false,
+        "nonempty": 1
+      },
+      "helpLinks": [],
+      "helpForbidden": false,
+      "helpDestinations": [
+        {
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "requested": "/admin-portal",
+          "landed": "/owedbook",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        },
+        {
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "requested": "/admin-portal/billing",
+          "landed": "/owedbook",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        }
+      ],
+      "menu": {
+        "opened": true,
+        "closed": true
+      },
+      "auditResponseCounts": [],
+      "auditDistinctIdsAcrossPages": null,
+      "completed": true,
+      "signout": 200
+    },
+    {
+      "engine": "firefox",
+      "version": "148.0.2",
+      "role": "ENGINEERING_ADMIN",
+      "time": "2026-11-24T13:14:02.594Z",
+      "app": "ob",
+      "method": "provider token via the app confirm page (AM-15)",
+      "selector": {
+        "options": 1,
+        "noPermitted": false,
+        "nonempty": 1
+      },
+      "helpLinks": [],
+      "helpForbidden": false,
+      "helpDestinations": [
+        {
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "requested": "/admin-portal",
+          "landed": "/admin-portal",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        },
+        {
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "requested": "/admin-portal/billing",
+          "landed": "/admin-portal/billing",
+          "ownerMessage": 1,
+          "ownerDataVisible": 0
+        }
+      ],
+      "menu": {
+        "opened": true,
+        "closed": true
+      },
+      "foreignStore": {
+        "backToStores": true,
+        "denial": true,
+        "memberControls": 0
+      },
+      "auditResponseCounts": [],
+      "auditDistinctIdsAcrossPages": null,
+      "completed": true,
+      "signout": 200
+    },
+    {
+      "engine": "firefox",
+      "version": "148.0.2",
+      "role": "ENGINEERING_OWNER_A",
+      "time": "2026-11-24T13:14:59.647Z",
+      "app": "ob",
+      "method": "password (normal sign-in form)",
+      "selector": {
+        "options": 3,
+        "noPermitted": false,
+        "nonempty": 3
+      },
+      "helpLinks": [],
+      "helpForbidden": false,
+      "helpDestinations": [
+        {
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "requested": "/admin-portal",
+          "landed": "/admin-portal",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        },
+        {
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "requested": "/admin-portal/billing",
+          "landed": "/admin-portal/billing",
+          "ownerMessage": 0,
+          "ownerDataVisible": 1
+        }
+      ],
+      "menu": {
+        "opened": true,
+        "closed": true
+      },
+      "audit": {
+        "includeReadsOff": {
+          "rows": 0,
+          "loadOlder": 0
+        },
+        "includeReadsOn": {
+          "rows": 50,
+          "loadOlder": 1
+        },
+        "paging": {
+          "before": 50,
+          "after": 100,
+          "grew": true,
+          "prefixPreserved": true,
+          "distinctDisplayedText": false
+        },
+        "filters": [
+          {
+            "value": "people",
+            "rows": 0
+          },
+          {
+            "value": "stores",
+            "rows": 0
+          },
+          {
+            "value": "billing",
+            "rows": 0
+          },
+          {
+            "value": "all",
+            "rows": 100
+          }
+        ]
+      },
+      "failedRead": {
+        "errorVisible": true,
+        "emptyClaim": false
+      },
+      "staffReadFailure": {
+        "errorVisible": true,
+        "noInvitationsClaim": false,
+        "emptyPeople": true
+      },
+      "auditResponseCounts": [
+        {
+          "includeReads": false,
+          "beforePresent": false,
+          "rowCount": 0,
+          "uniqueIds": 0
+        },
+        {
+          "includeReads": true,
+          "beforePresent": false,
+          "rowCount": 50,
+          "uniqueIds": 50
+        },
+        {
+          "includeReads": true,
+          "beforePresent": true,
+          "rowCount": 50,
+          "uniqueIds": 50
+        }
+      ],
+      "auditDistinctIdsAcrossPages": true,
+      "completed": true,
+      "signout": 200
+    }
+  ],
+  "counters": {
+    "password_sign_ins": 1,
+    "token_sign_ins": 2,
+    "generate_link_calls": 2
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "archive": "/home/moose/NEXTJS/CYBER_PHARMA/ARCHIVE/ABM007_FINAL_REVIEW_PACKAGES/ABM007_FINAL_E2_COMPLETION_REVIEW_03.zip",
+    "sha256": "7d4d2fc5691317fe42bcc63d50b0757e4c030a792434df9e6a275b615c0c20e1",
+    "checksum_matches": true,
+    "integrity": null,
+    "members": 356
+  },
+  {
+    "archive": "/home/moose/NEXTJS/CYBER_PHARMA/ARCHIVE/ABM007_FINAL_REVIEW_PACKAGES/ABM007_FINAL_E2_FINAL_HANDOFF_04.zip",
+    "sha256": "c7ae85b9d6be0f60e508b981c2c2a7936139891e2036f10b10bc5c9e35996774",
+    "checksum_matches": true,
+    "integrity": null,
+    "members": 333
+  },
+  {
+    "snapshot_files_compared": 142,
+    "differences": [
+      {
+        "repo": "owedbook",
+        "path": "src/components/auth/LoginForm.tsx",
+        "old_sha": "72799ade50c7d119ec2c88de69e9cae422307f1f0d2c1e0d4abee00ad58333df",
+        "new_sha": "f66f53ab608048775d8c3c58b7b36732e669197d9dc3e2a01dec73598ae0079b",
+        "equal_after_trailing_whitespace_removal": true
+      },
+      {
+        "repo": "owedbook",
+        "path": "src/components/common/Spinner.tsx",
+        "old_sha": "9cd23a9623e17ba2f087a6d76dce3a78eb6c80c3dfb83d9c48a49e19b88f0112",
+        "new_sha": "b77ce303c3696412c047339d77b4447c9e3ef2dd1dca77fb71b29b1261e34cf6",
+        "equal_after_trailing_whitespace_removal": true
+      }
+    ]
+  }
+]

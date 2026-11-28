@@ -1,0 +1,32 @@
+/** @jest-environment jsdom */
+// SCRATCH-ONLY harness (never in a repository): renders the real Help page and the real signed-in Navbar with a
+// fictional identity, closed and with the mobile menu open, and writes the markup for the browser checks.
+import { render, fireEvent, screen } from "@testing-library/react";
+import { writeFileSync } from "fs";
+import type { User as SupabaseUser } from "@supabase/auth-js";
+
+jest.mock("@/store/useAuthStore", () => ({
+  useAuthStore: Object.assign(jest.fn(), { getState: () => ({ logout: jest.fn().mockResolvedValue(undefined) }) }),
+}));
+jest.mock("@/utils/supabase/client", () => ({
+  createClient: () => ({ auth: { onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => {} } } }) } }),
+}));
+
+import Navbar from "@/components/global/Navbar";
+import HelpPage from "@/components/help/HelpPage";
+import { AppRole } from "@/utils/app-role";
+
+const pat = { email: "pat@example.test", user_metadata: { full_name: "Pat Example" } } as unknown as SupabaseUser;
+const OUT = process.env.HARNESS_OUT!;
+
+it("writes Help and Navbar markup", () => {
+  const { container } = render(
+    <div className="flex flex-col min-h-screen">
+      <Navbar user={pat} role={AppRole.ADMIN} />
+      <main id="main" className="flex-1"><HelpPage /></main>
+    </div>,
+  );
+  writeFileSync(`${OUT}/help_closed.html`, container.innerHTML);
+  fireEvent.click(screen.getByRole("button", { name: "Open menu" }));
+  writeFileSync(`${OUT}/help_menu_open.html`, container.innerHTML);
+});

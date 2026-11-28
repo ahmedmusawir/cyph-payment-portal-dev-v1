@@ -1,0 +1,93 @@
+{
+  "engine": "chromium",
+  "version": "147.0.7727.15",
+  "role": "ENGINEERING_OWNER_A",
+  "session": "password (normal sign-in form)",
+  "width": 375,
+  "app": "ob",
+  "requested": "/invitations",
+  "status": 200,
+  "measurement": {
+    "path": "/invitations",
+    "tokens": {
+      "brand-navy": "#154474",
+      "brand-green": "#32a38d",
+      "brand-green-dark": "#288472",
+      "brand-ice": "#eaf3fa",
+      "brand-charcoal": "#393b38",
+      "brand-gray": "#515151"
+    },
+    "overflow": 0,
+    "width": 375,
+    "bodyBackground": "rgb(234, 243, 250)",
+    "darkClass": false,
+    "colorScheme": "light",
+    "themeControls": 0,
+    "text": [
+      {
+        "where": "body>header:nth-child(3)>span:nth-child(1)>span:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 600,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>header:nth-child(3)>span:nth-child(1)>span:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 8.8583,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(4)>section:nth-child(1)>h1:nth-child(1)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 28,
+        "weight": 700,
+        "contrast": 8.8583,
+        "threshold": 3,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(4)>section:nth-child(1)>p:nth-child(2)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 7.0679,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      }
+    ],
+    "controls": [],
+    "links": [],
+    "pills": [],
+    "anchors": [],
+    "oldNames": {
+      "text": false,
+      "title": false,
+      "alt": false,
+      "accessible": false
+    },
+    "tables": [],
+    "noStores": false,
+    "ownerBillingMessage": false,
+    "backToStores": false,
+    "errors": false
+  },
+  "time": "2026-11-24T12:47:09.528Z"
+}

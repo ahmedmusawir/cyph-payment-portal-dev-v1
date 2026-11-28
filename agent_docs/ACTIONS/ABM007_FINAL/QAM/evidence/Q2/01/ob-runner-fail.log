@@ -1,0 +1,21 @@
+FAIL ../runner-controls/fail.test.js
+  ✕ seeded failing control (4 ms)
+
+  ● seeded failing control
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 1
+
+    [0m[31m[1m>[22m[39m[90m 1 |[39m test([32m"seeded failing control"[39m[33m,[39m()[33m=>[39mexpect([35m1[39m)[33m.[39mtoBe([35m2[39m))[33m;[39m
+     [90m   |[39m                                             [31m[1m^[22m[39m
+     [90m 2 |[39m[0m
+
+      at Object.toBe (fail.test.js:1:45)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.366 s
+Ran all test suites.

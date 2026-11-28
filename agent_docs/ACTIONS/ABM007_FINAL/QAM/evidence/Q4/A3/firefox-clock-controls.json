@@ -1,0 +1,37 @@
+{
+  "records": [
+    {
+      "name": "native",
+      "from": 750,
+      "post": {
+        "y": 52,
+        "target": true
+      },
+      "later": {
+        "y": 52,
+        "target": true,
+        "clickTimer": {
+          "y": 750,
+          "target": false
+        }
+      }
+    },
+    {
+      "name": "missing",
+      "from": 750,
+      "post": {
+        "y": 750,
+        "target": false
+      },
+      "later": {
+        "y": 750,
+        "target": false,
+        "clickTimer": {
+          "y": 750,
+          "target": false
+        }
+      }
+    }
+  ],
+  "version": "148.0.2"
+}

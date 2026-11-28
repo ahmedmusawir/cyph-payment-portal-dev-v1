@@ -1,0 +1,433 @@
+{
+  "engine": "chromium",
+  "version": "147.0.7727.15",
+  "role": "ENGINEERING_OWNER_A",
+  "session": "password (normal sign-in form)",
+  "width": 1023,
+  "app": "pp",
+  "requested": "/stores/add",
+  "status": 200,
+  "measurement": {
+    "path": "/stores/add",
+    "tokens": {
+      "brand-navy": "#154474",
+      "brand-green": "#32a38d",
+      "brand-green-dark": "#288472",
+      "brand-ice": "#eaf3fa",
+      "brand-charcoal": "#393b38",
+      "brand-gray": "#515151"
+    },
+    "overflow": 0,
+    "width": 1023,
+    "bodyBackground": "rgb(234, 243, 250)",
+    "darkClass": false,
+    "colorScheme": "light",
+    "themeControls": 0,
+    "text": [
+      {
+        "where": "body>div:nth-child(3)>a:nth-child(1)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 10.0714,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>a:nth-child(1)>span:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 600,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>a:nth-child(1)>span:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 8.8583,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>a:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 15,
+        "weight": 400,
+        "contrast": 8.8583,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>button:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgb(255, 255, 255)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 11,
+        "weight": 700,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>button:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 500,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>button:nth-child(2)>span:nth-child(3)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>button:nth-child(2)>span:nth-child(3)>span:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>span:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>h1:nth-child(2)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 36,
+        "weight": 700,
+        "contrast": 1.123,
+        "threshold": 3,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(2)>div:nth-child(1)>label:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(2)>div:nth-child(2)>label:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(2)>div:nth-child(3)>label:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(2)>button:nth-child(4)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(40, 132, 114)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 4.532,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 400,
+        "contrast": 7.0679,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 400,
+        "contrast": 7.0679,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(2)>span:nth-child(1)>a:nth-child(1)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 400,
+        "contrast": 8.8583,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 400,
+        "contrast": 7.0679,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(2)>span:nth-child(3)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 400,
+        "contrast": 7.0679,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      }
+    ],
+    "controls": [
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>button:nth-child(2)",
+        "tag": "BUTTON",
+        "type": "button",
+        "height": 44,
+        "width": 298.203125,
+        "radius": "8px",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": "14px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "outline": "rgb(255, 255, 255) none 3px",
+        "offset": "0px",
+        "border": "rgba(255, 255, 255, 0.4)",
+        "borderWidth": "1px",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(2)>div:nth-child(1)>input:nth-child(2)",
+        "tag": "INPUT",
+        "type": null,
+        "height": 42,
+        "width": 686,
+        "radius": "8px",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "outline": "rgb(57, 59, 56) none 3px",
+        "offset": "0px",
+        "border": "rgb(81, 81, 81)",
+        "borderWidth": "1px",
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(2)>div:nth-child(2)>input:nth-child(2)",
+        "tag": "INPUT",
+        "type": null,
+        "height": 42,
+        "width": 686,
+        "radius": "8px",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "outline": "rgb(57, 59, 56) none 3px",
+        "offset": "0px",
+        "border": "rgb(81, 81, 81)",
+        "borderWidth": "1px",
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(2)>div:nth-child(3)>input:nth-child(2)",
+        "tag": "INPUT",
+        "type": null,
+        "height": 42,
+        "width": 686,
+        "radius": "8px",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "outline": "rgb(57, 59, 56) none 3px",
+        "offset": "0px",
+        "border": "rgb(81, 81, 81)",
+        "borderWidth": "1px",
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(2)>button:nth-child(4)",
+        "tag": "BUTTON",
+        "type": "submit",
+        "height": 44,
+        "width": 133,
+        "radius": "8px",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "disabled": false,
+        "busy": "false",
+        "outline": "rgb(255, 255, 255) none 3px",
+        "offset": "0px",
+        "border": "rgb(211, 226, 238)",
+        "borderWidth": "0px",
+        "background": "rgb(40, 132, 114)"
+      }
+    ],
+    "links": [
+      {
+        "where": "body>div:nth-child(3)>a:nth-child(1)",
+        "href": "#main",
+        "color": "#393b38",
+        "background": [
+          234,
+          243,
+          250
+        ],
+        "underline": "none"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>a:nth-child(1)",
+        "href": "/dashboard",
+        "color": "#ffffff",
+        "background": [
+          21,
+          68,
+          116
+        ],
+        "underline": "none"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>a:nth-child(1)",
+        "href": "http://localhost:3100/api/handoff/start",
+        "color": "#eaf3fa",
+        "background": [
+          21,
+          68,
+          116
+        ],
+        "underline": "none"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(2)>span:nth-child(1)>a:nth-child(1)",
+        "href": "mailto:[email]",
+        "color": "#154474",
+        "background": [
+          234,
+          243,
+          250
+        ],
+        "underline": "underline"
+      }
+    ],
+    "pills": [
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>button:nth-child(2)>span:nth-child(3)",
+        "color": "#ffffff",
+        "background": "#000000",
+        "border": "rgba(255, 255, 255, 0.8)"
+      }
+    ],
+    "anchors": [
+      {
+        "href": "#main",
+        "exists": true
+      }
+    ],
+    "oldNames": {
+      "text": false,
+      "title": false,
+      "alt": false,
+      "accessible": false
+    },
+    "tables": [],
+    "noStores": false,
+    "ownerBillingMessage": false,
+    "backToStores": false,
+    "errors": false
+  },
+  "time": "2026-11-24T12:50:30.213Z"
+}

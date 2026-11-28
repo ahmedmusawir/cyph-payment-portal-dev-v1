@@ -1,0 +1,658 @@
+{
+  "engine": "webkit",
+  "version": "26.4",
+  "planHash": "6a1abc2ae4187874e6c755d195d5ab6fc060c4f26d92520b6df6bc8cf9c73c7d",
+  "setup": "One fixture sign-in to Portal, then actual Open OwedBook handoff establishes both app cookies before route attempts; no second helper sign-in. Engineering reproduction uses Portal-first setup. No real-login proof claimed.",
+  "extraRoutesSource": "EVIDENCE/E2/REDIRECT_REPRODUCTION.md:28-29; settings, audit, profile, Help and dashboard Open OwedBook handoff each included once as extension per attempt.",
+  "rows": [
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "run": 1,
+      "time": "2026-11-24T16:16:35.925Z",
+      "method": "fixture-token sign-in to Portal plus actual app handoff",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "via": "Portal dashboard Open OwedBook",
+          "expectedContent": true
+        }
+      ],
+      "result": "COMPLETE",
+      "identitySame": true
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "run": 2,
+      "time": "2026-11-24T16:17:08.224Z",
+      "method": "fixture-token sign-in to Portal plus actual app handoff",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "via": "Portal dashboard Open OwedBook",
+          "expectedContent": true
+        }
+      ],
+      "result": "COMPLETE",
+      "identitySame": true
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "run": 3,
+      "time": "2026-11-24T16:17:45.311Z",
+      "method": "fixture-token sign-in to Portal plus actual app handoff",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "via": "Portal dashboard Open OwedBook",
+          "expectedContent": true
+        }
+      ],
+      "result": "COMPLETE",
+      "identitySame": true
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "warm",
+      "run": 1,
+      "time": "2026-11-24T16:18:29.852Z",
+      "method": "fixture-token sign-in to Portal plus actual app handoff",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "via": "Portal dashboard Open OwedBook",
+          "expectedContent": true
+        }
+      ],
+      "result": "COMPLETE",
+      "identitySame": true
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "warm",
+      "run": 2,
+      "time": "2026-11-24T16:18:53.046Z",
+      "method": "fixture-token sign-in to Portal plus actual app handoff",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "via": "Portal dashboard Open OwedBook",
+          "expectedContent": true
+        }
+      ],
+      "result": "COMPLETE",
+      "identitySame": true
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "warm",
+      "run": 3,
+      "time": "2026-11-24T16:19:13.185Z",
+      "method": "fixture-token sign-in to Portal plus actual app handoff",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "via": "Portal dashboard Open OwedBook",
+          "expectedContent": true
+        }
+      ],
+      "result": "COMPLETE",
+      "identitySame": true
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "warm",
+      "run": 4,
+      "time": "2026-11-24T16:19:37.087Z",
+      "method": "fixture-token sign-in to Portal plus actual app handoff",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "via": "Portal dashboard Open OwedBook",
+          "expectedContent": true
+        }
+      ],
+      "result": "COMPLETE",
+      "identitySame": true
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "warm",
+      "run": 5,
+      "time": "2026-11-24T16:20:04.359Z",
+      "method": "fixture-token sign-in to Portal plus actual app handoff",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "via": "Portal dashboard Open OwedBook",
+          "expectedContent": true
+        }
+      ],
+      "result": "COMPLETE",
+      "identitySame": true
+    }
+  ],
+  "sessions": [
+    {
+      "kind": "fresh",
+      "index": 1,
+      "role": "ENGINEERING_ADMIN",
+      "signInAttempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "setupSameIdentity": true,
+      "signout": 200
+    },
+    {
+      "kind": "fresh",
+      "index": 2,
+      "role": "ENGINEERING_ADMIN",
+      "signInAttempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "setupSameIdentity": true,
+      "signout": 200
+    },
+    {
+      "kind": "fresh",
+      "index": 3,
+      "role": "ENGINEERING_ADMIN",
+      "signInAttempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "setupSameIdentity": true,
+      "signout": 200
+    },
+    {
+      "kind": "warm",
+      "index": 1,
+      "role": "ENGINEERING_ADMIN",
+      "signInAttempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "setupSameIdentity": true,
+      "signout": 200
+    }
+  ],
+  "counters": {
+    "password_sign_ins": 0,
+    "token_sign_ins": 4,
+    "generate_link_calls": 4
+  },
+  "sessionDiagnostics": [
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "stage": "fixture-session-established",
+      "entryStatus": 200,
+      "landedPath": "/auth/confirm",
+      "confirmControlCount": 1,
+      "confirmVisible": true,
+      "confirmEnabled": true,
+      "confirmPosts": 1,
+      "confirmResponseStatuses": [
+        303
+      ]
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "stage": "fixture-session-established",
+      "entryStatus": 200,
+      "landedPath": "/auth/confirm",
+      "confirmControlCount": 1,
+      "confirmVisible": true,
+      "confirmEnabled": true,
+      "confirmPosts": 1,
+      "confirmResponseStatuses": [
+        303
+      ]
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "stage": "fixture-session-established",
+      "entryStatus": 200,
+      "landedPath": "/auth/confirm",
+      "confirmControlCount": 1,
+      "confirmVisible": true,
+      "confirmEnabled": true,
+      "confirmPosts": 1,
+      "confirmResponseStatuses": [
+        303
+      ]
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "stage": "fixture-session-established",
+      "entryStatus": 200,
+      "landedPath": "/auth/confirm",
+      "confirmControlCount": 1,
+      "confirmVisible": true,
+      "confirmEnabled": true,
+      "confirmPosts": 1,
+      "confirmResponseStatuses": [
+        303
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "engine": "webkit",
+  "version": "26.4",
+  "app": "pp",
+  "role": "PUBLIC",
+  "method": "none",
+  "width": 375,
+  "requested": "/register/plan",
+  "landed": "/register/plan",
+  "control": 6,
+  "state": "focus",
+  "time": "2026-11-24T15:46:44.369Z",
+  "raster": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "BUTTON",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 153.45703125,
+          "top": 757.59375,
+          "right": 221.54296875,
+          "bottom": 777.59375
+        },
+        "unsupported": [],
+        "worstRatio": 4.5041,
+        "samples": 165,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 1,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "completed": true
+}

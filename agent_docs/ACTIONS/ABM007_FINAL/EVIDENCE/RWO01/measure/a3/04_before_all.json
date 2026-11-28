@@ -1,0 +1,5010 @@
+{
+ "step": "04_before_all",
+ "engines": {
+  "firefox": "148.0.2",
+  "chromium": "158.0.8127.88",
+  "webkit": "26.4"
+ },
+ "sessions": {
+  "password_sign_ins": 3,
+  "token_sign_ins": 0,
+  "generate_link_calls": 0,
+  "total_sign_ins": 3
+ },
+ "portal_requests": 0,
+ "took_ms": 216867,
+ "error": null,
+ "log": [
+  "webkit   1024x600 art  1 keyboard center scroll-then-focus start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[23,0]]",
+  "chromium 1024x600 art  1 keyboard center scroll-then-focus start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[16,0]]",
+  "firefox  1024x600 art  1 keyboard center scroll-then-focus start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "webkit   1024x600 art  1 keyboard center focus-then-scroll start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[29,0]]",
+  "chromium 1024x600 art  1 keyboard center focus-then-scroll start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[17,0]]",
+  "firefox  1024x600 art  1 keyboard center focus-then-scroll start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "webkit   1024x600 art  1 keyboard bottom scroll-then-focus start   500 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[12,0]]",
+  "chromium 1024x600 art  1 keyboard bottom scroll-then-focus start   501 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[15,0]]",
+  "firefox  1024x600 art  1 keyboard bottom scroll-then-focus start   501 | 0:0 100:501 300:501 800:501 2000:501 | FAIL | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0],[15,501]]",
+  "chromium 1024x600 art  1 keyboard bottom focus-then-scroll start    28 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[20,0]]",
+  "webkit   1024x600 art  1 keyboard bottom focus-then-scroll start    28 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[14,0]]",
+  "firefox  1024x600 art  1 keyboard bottom focus-then-scroll start    28 | 0:0 100:28 300:28 800:28 2000:28 | FAIL | focus: a \"Go to the Top\" in article getting-around  | ev [[5,0],[34,28]]",
+  "chromium 1024x600 art  1 keyboard top    scroll-then-focus start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[11,0]]",
+  "webkit   1024x600 art  1 keyboard top    scroll-then-focus start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[9,0]]",
+  "firefox  1024x600 art  1 keyboard top    scroll-then-focus start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[2,0]]",
+  "chromium 1024x600 art  1 keyboard top    focus-then-scroll start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[22,0]]",
+  "webkit   1024x600 art  1 keyboard top    focus-then-scroll start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[17,0]]",
+  "firefox  1024x600 art  1 keyboard top    focus-then-scroll start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "chromium 1024x600 art  1 mouse    center not applicable (m start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[6,0]]",
+  "webkit   1024x600 art  1 mouse    center not applicable (m start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[36,0]]",
+  "firefox  1024x600 art  1 mouse    center not applicable (m start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[38,0]]",
+  "chromium 1024x600 art  1 mouse    bottom not applicable (m start    28 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[11,0]]",
+  "firefox  1024x600 art  1 mouse    bottom not applicable (m start    28 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[31,0]]",
+  "webkit   1024x600 art  1 mouse    bottom not applicable (m start    28 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[28,0]]",
+  "chromium 1024x600 art  1 mouse    top    not applicable (m start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[7,0]]",
+  "firefox  1024x600 art  1 mouse    top    not applicable (m start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[34,0]]",
+  "webkit   1024x600 art  1 mouse    top    not applicable (m start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[13,0]]",
+  "chromium 1024x600 art  7 keyboard center scroll-then-focus start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[13,0]]",
+  "firefox  1024x600 art  7 keyboard center scroll-then-focus start  4913 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[5,0]]",
+  "webkit   1024x600 art  7 keyboard center scroll-then-focus start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[9,0]]",
+  "chromium 1024x600 art  7 keyboard center focus-then-scroll start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[22,0]]",
+  "firefox  1024x600 art  7 keyboard center focus-then-scroll start  4913 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[5,0]]",
+  "webkit   1024x600 art  7 keyboard center focus-then-scroll start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[13,0]]",
+  "chromium 1024x600 art  7 mouse    center not applicable (m start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[13,0]]",
+  "firefox  1024x600 art  7 mouse    center not applicable (m start  4913 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[43,0]]",
+  "webkit   1024x600 art  7 mouse    center not applicable (m start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[11,0]]",
+  "chromium 1024x600 art 13 keyboard center scroll-then-focus start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[7,0]]",
+  "firefox  1024x600 art 13 keyboard center scroll-then-focus start  7519 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[2,0]]",
+  "webkit   1024x600 art 13 keyboard center scroll-then-focus start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[14,0]]",
+  "chromium 1024x600 art 13 keyboard center focus-then-scroll start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[13,0]]",
+  "firefox  1024x600 art 13 keyboard center focus-then-scroll start  7519 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[9,0]]",
+  "webkit   1024x600 art 13 keyboard center focus-then-scroll start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[19,0]]",
+  "chromium 1024x600 art 13 mouse    center not applicable (m start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[8,0]]",
+  "firefox  1024x600 art 13 mouse    center not applicable (m start  7519 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[55,0]]",
+  "webkit   1024x600 art 13 mouse    center not applicable (m start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[113,0]]",
+  "chromium 1440x900 art  1 keyboard center scroll-then-focus start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[21,0]]",
+  "firefox  1440x900 art  1 keyboard center scroll-then-focus start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "webkit   1440x900 art  1 keyboard center scroll-then-focus start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[21,0]]",
+  "chromium 1440x900 art  1 keyboard center focus-then-scroll start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[12,0]]",
+  "firefox  1440x900 art  1 keyboard center focus-then-scroll start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[2,0]]",
+  "chromium 1440x900 art  1 keyboard bottom scroll-then-focus start    13 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[20,0]]",
+  "webkit   1440x900 art  1 keyboard center focus-then-scroll start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[21,0]]",
+  "firefox  1440x900 art  1 keyboard bottom scroll-then-focus start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "chromium 1440x900 art  1 keyboard bottom focus-then-scroll start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "webkit   1440x900 art  1 keyboard bottom scroll-then-focus start    13 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[148,0]]",
+  "firefox  1440x900 art  1 keyboard bottom focus-then-scroll start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "chromium 1440x900 art  1 keyboard top    scroll-then-focus start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[25,0]]",
+  "webkit   1440x900 art  1 keyboard bottom focus-then-scroll start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "firefox  1440x900 art  1 keyboard top    scroll-then-focus start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[5,0]]",
+  "chromium 1440x900 art  1 keyboard top    focus-then-scroll start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[16,0]]",
+  "webkit   1440x900 art  1 keyboard top    scroll-then-focus start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[123,0]]",
+  "firefox  1440x900 art  1 keyboard top    focus-then-scroll start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "chromium 1440x900 art  1 mouse    center not applicable (m start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[5,0]]",
+  "webkit   1440x900 art  1 keyboard top    focus-then-scroll start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[28,0]]",
+  "firefox  1440x900 art  1 mouse    center not applicable (m start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[47,0]]",
+  "chromium 1440x900 art  1 mouse    bottom not applicable (m start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "webkit   1440x900 art  1 mouse    center not applicable (m start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[166,0]]",
+  "firefox  1440x900 art  1 mouse    bottom not applicable (m start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "chromium 1440x900 art  1 mouse    top    not applicable (m start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[13,0]]",
+  "webkit   1440x900 art  1 mouse    bottom not applicable (m start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "firefox  1440x900 art  1 mouse    top    not applicable (m start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[50,0]]",
+  "chromium 1440x900 art  7 keyboard center scroll-then-focus start  4470 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[22,0]]",
+  "webkit   1440x900 art  1 mouse    top    not applicable (m start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[25,0]]",
+  "firefox  1440x900 art  7 keyboard center scroll-then-focus start  4471 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[4,0]]",
+  "chromium 1440x900 art  7 keyboard center focus-then-scroll start  4470 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[21,0]]",
+  "webkit   1440x900 art  7 keyboard center scroll-then-focus start  4543 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[140,0]]",
+  "chromium 1440x900 art  7 mouse    center not applicable (m start  4470 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[8,0]]",
+  "firefox  1440x900 art  7 keyboard center focus-then-scroll start  4471 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[6,0]]",
+  "webkit   1440x900 art  7 keyboard center focus-then-scroll start  4543 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[34,0]]",
+  "chromium 1440x900 art 13 keyboard center scroll-then-focus start  6876 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[15,0]]",
+  "firefox  1440x900 art  7 mouse    center not applicable (m start  4471 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[37,0]]",
+  "webkit   1440x900 art  7 mouse    center not applicable (m start  4543 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[58,0]]",
+  "chromium 1440x900 art 13 keyboard center focus-then-scroll start  6876 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[18,0]]",
+  "firefox  1440x900 art 13 keyboard center scroll-then-focus start  6878 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[8,0]]",
+  "webkit   1440x900 art 13 keyboard center scroll-then-focus start  6949 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[26,0]]",
+  "chromium 1440x900 art 13 mouse    center not applicable (m start  6876 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[10,0]]",
+  "firefox  1440x900 art 13 keyboard center focus-then-scroll start  6878 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[7,0]]",
+  "webkit   1440x900 art 13 keyboard center focus-then-scroll start  6949 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[6,0]]",
+  "chromium 375x900 art  1 keyboard center scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[17,0]]",
+  "firefox  1440x900 art 13 mouse    center not applicable (m start  6878 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[19,0]]",
+  "webkit   1440x900 art 13 mouse    center not applicable (m start  6949 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[226,0]]",
+  "chromium 375x900 art  1 keyboard center focus-then-scroll start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[31,0]]",
+  "firefox  375x900 art  1 keyboard center scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[3,0]]",
+  "webkit   375x900 art  1 keyboard center scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[24,0]]",
+  "chromium 375x900 art  1 keyboard bottom scroll-then-focus start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[16,0]]",
+  "firefox  375x900 art  1 keyboard center focus-then-scroll start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[5,0]]",
+  "webkit   375x900 art  1 keyboard center focus-then-scroll start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[30,0]]",
+  "chromium 375x900 art  1 keyboard bottom focus-then-scroll start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[23,0]]",
+  "firefox  375x900 art  1 keyboard bottom scroll-then-focus start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[3,0]]",
+  "webkit   375x900 art  1 keyboard bottom scroll-then-focus start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[8,0]]",
+  "chromium 375x900 art  1 keyboard top    scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[22,0]]",
+  "firefox  375x900 art  1 keyboard bottom focus-then-scroll start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[6,0]]",
+  "webkit   375x900 art  1 keyboard bottom focus-then-scroll start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[5,0]]",
+  "chromium 375x900 art  1 keyboard top    focus-then-scroll start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[38,0]]",
+  "firefox  375x900 art  1 keyboard top    scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[3,0]]",
+  "webkit   375x900 art  1 keyboard top    scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[7,0]]",
+  "chromium 375x900 art  1 mouse    center not applicable (m start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[6,0]]",
+  "firefox  375x900 art  1 keyboard top    focus-then-scroll start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[5,0]]",
+  "chromium 375x900 art  1 mouse    bottom not applicable (m start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[21,0]]",
+  "webkit   375x900 art  1 keyboard top    focus-then-scroll start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[18,0]]",
+  "firefox  375x900 art  1 mouse    center not applicable (m start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[62,0]]",
+  "chromium 375x900 art  1 mouse    top    not applicable (m start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[8,0]]",
+  "webkit   375x900 art  1 mouse    center not applicable (m start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[28,0]]",
+  "firefox  375x900 art  1 mouse    bottom not applicable (m start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[25,0]]",
+  "chromium 375x900 art  7 keyboard center scroll-then-focus start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[20,0]]",
+  "webkit   375x900 art  1 mouse    bottom not applicable (m start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[10,0]]",
+  "firefox  375x900 art  1 mouse    top    not applicable (m start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[39,0]]",
+  "webkit   375x900 art  1 mouse    top    not applicable (m start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around (out of view) | ev [[9,0]]",
+  "chromium 375x900 art  7 keyboard center focus-then-scroll start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[23,0]]",
+  "firefox  375x900 art  7 keyboard center scroll-then-focus start  8094 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[18,0]]",
+  "chromium 375x900 art  7 mouse    center not applicable (m start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[8,0]]",
+  "webkit   375x900 art  7 keyboard center scroll-then-focus start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[16,0]]",
+  "firefox  375x900 art  7 keyboard center focus-then-scroll start  8094 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[3,0]]",
+  "chromium 375x900 art 13 keyboard center scroll-then-focus start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[6,0]]",
+  "webkit   375x900 art  7 keyboard center focus-then-scroll start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[22,0]]",
+  "firefox  375x900 art  7 mouse    center not applicable (m start  8094 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[29,0]]",
+  "chromium 375x900 art 13 keyboard center focus-then-scroll start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[17,0]]",
+  "webkit   375x900 art  7 mouse    center not applicable (m start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article billing (out of view) | ev [[135,0]]",
+  "firefox  375x900 art 13 keyboard center scroll-then-focus start 11506 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[5,0]]",
+  "chromium 375x900 art 13 mouse    center not applicable (m start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[8,0]]",
+  "webkit   375x900 art 13 keyboard center scroll-then-focus start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[11,0]]",
+  "firefox  375x900 art 13 keyboard center focus-then-scroll start 11506 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[11,0]]",
+  "webkit   375x900 art 13 keyboard center focus-then-scroll start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[16,0]]",
+  "firefox  375x900 art 13 mouse    center not applicable (m start 11506 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[32,0]]",
+  "webkit   375x900 art 13 mouse    center not applicable (m start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article support (out of view) | ev [[21,0]]"
+ ],
+ "result": {
+  "served": {
+   "ob": {
+    "listener_pid": 3262891,
+    "cwd_is_verification_copy": true,
+    "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+    "app_env": "local-proof",
+    "client_bundle": {
+     "scripts": 13,
+     "scratch_refs": 0,
+     "dev_refs": 0
+    }
+   }
+  },
+  "grid": {
+   "chromium": [
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       16,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       17,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 501,
+     "scrollY_after_focus": 501,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       15,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       20,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       11,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       22,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       11,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       7,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 5190,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       13,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 5190,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       22,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 5190,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       13,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 8017,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       7,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 8017,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       13,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 8017,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       21,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       12,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 13,
+     "scrollY_after_focus": 13,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       20,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       25,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       16,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       13,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4470,
+     "scrollY_after_focus": 4470,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 4898,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       22,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4470,
+     "scrollY_after_focus": 4470,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 4898,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       21,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4470,
+     "scrollY_after_focus": 4470,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 4898,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6876,
+     "scrollY_after_focus": 6876,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 7675,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       15,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6876,
+     "scrollY_after_focus": 6876,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 7675,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       18,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 6876,
+     "scrollY_after_focus": 6876,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 7675,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       10,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       17,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       31,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       16,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       23,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       22,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       38,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       21,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 8520,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       20,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 8520,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       23,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 8520,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 12314,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 12314,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       17,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 12314,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    }
+   ],
+   "firefox": [
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 501,
+     "scrollY_after_focus": 501,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 501,
+      "300": 501,
+      "800": 501,
+      "2000": 501
+     },
+     "at_top_and_stays": false,
+     "hash": "#top",
+     "header_in_view": false,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 83,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ],
+      [
+       15,
+       501
+      ]
+     ],
+     "scroll_event_count": 2,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 28,
+      "300": 28,
+      "800": 28,
+      "2000": 28
+     },
+     "at_top_and_stays": false,
+     "hash": "#top",
+     "header_in_view": false,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 556,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ],
+      [
+       34,
+       28
+      ]
+     ],
+     "scroll_event_count": 2,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       2,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       38,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       31,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       34,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4913,
+     "scrollY_after_focus": 4913,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 5191,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4913,
+     "scrollY_after_focus": 4913,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 5191,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4913,
+     "scrollY_after_focus": 4913,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 5191,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       43,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7519,
+     "scrollY_after_focus": 7519,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 8018,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       2,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article support"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7519,
+     "scrollY_after_focus": 7519,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 8018,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article support"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 7519,
+     "scrollY_after_focus": 7519,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 8018,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       55,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article support"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       2,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       47,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       50,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4471,
+     "scrollY_after_focus": 4471,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 4899,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4471,
+     "scrollY_after_focus": 4471,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 4899,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4471,
+     "scrollY_after_focus": 4471,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 4899,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       37,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6878,
+     "scrollY_after_focus": 6878,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 7677,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article support"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6878,
+     "scrollY_after_focus": 6878,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 7677,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       7,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article support"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 6878,
+     "scrollY_after_focus": 6878,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 7677,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       19,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article support"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       62,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       25,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       39,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8094,
+     "scrollY_after_focus": 8094,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 8522,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       18,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8094,
+     "scrollY_after_focus": 8094,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 8522,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 8094,
+     "scrollY_after_focus": 8094,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 8522,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       29,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11506,
+     "scrollY_after_focus": 11506,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 12317,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article support"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11506,
+     "scrollY_after_focus": 11506,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 12317,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       11,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article support"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 11506,
+     "scrollY_after_focus": 11506,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 12317,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       32,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article support"
+    }
+   ],
+   "webkit": [
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       23,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       29,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 500,
+     "scrollY_after_focus": 500,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       12,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       14,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       17,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       36,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       28,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 584,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       13,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 5190,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 5190,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       13,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 5190,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       11,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 8017,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       14,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 8017,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       19,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 8017,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       113,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       21,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       21,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 13,
+     "scrollY_after_focus": 13,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       148,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       123,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       28,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       166,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": true,
+      "top": 559,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       25,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4543,
+     "scrollY_after_focus": 4543,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 4971,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       140,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4543,
+     "scrollY_after_focus": 4543,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 4971,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       34,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4543,
+     "scrollY_after_focus": 4543,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 4971,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       58,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6949,
+     "scrollY_after_focus": 6949,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 7748,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       26,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6949,
+     "scrollY_after_focus": 6949,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 7748,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 6949,
+     "scrollY_after_focus": 6949,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 7748,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       226,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       24,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       30,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       7,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       18,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       28,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       10,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article getting-around",
+      "in_window": false,
+      "top": 1495,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article roles"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 8520,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       16,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 8520,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       22,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article billing",
+      "in_window": false,
+      "top": 8520,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       135,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"Go to the Top\" in article removing-pharmacy"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 12314,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       11,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 12314,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(21, 68, 116)"
+     },
+     "scroll_events": [
+      [
+       16,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "a \"Go to the Top\" in article support",
+      "in_window": false,
+      "top": 12314,
+      "focus_visible": false,
+      "outline": "none 3px rgb(40, 132, 114)"
+     },
+     "scroll_events": [
+      [
+       21,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nothing (the page body)"
+    }
+   ]
+  }
+ }
+}

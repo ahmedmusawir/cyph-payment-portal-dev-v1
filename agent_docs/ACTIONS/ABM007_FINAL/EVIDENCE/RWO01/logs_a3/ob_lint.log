@@ -1,0 +1,257 @@
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/__tests__/actions.test.ts
+   32:31  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   32:43  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   40:10  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   46:56  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   49:48  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   59:57  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   61:48  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   68:48  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   76:47  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   78:48  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   85:57  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   87:53  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   94:56  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   96:53  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  103:61  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  105:53  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/__tests__/get-user-role.test.ts
+  16:74  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  22:52  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/__tests__/member/ProfileForm.test.tsx
+  32:6  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/__tests__/proxy.test.ts
+  16:46  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  18:67  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/BillingScreen.tsx
+  29:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/BillingScreen.tsx:29:5
+  27 |   useEffect(() => {
+  28 |     let cancelled = false;
+> 29 |     setLoading(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  30 |     setError(null);
+  31 |     setOwnerOnly(false);
+  32 |     billingService  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/InviteScreen.tsx
+  23:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/InviteScreen.tsx:23:5
+  21 |   useEffect(() => {
+  22 |     let cancelled = false;
+> 23 |     setError(null);
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  24 |     setDenied(false);
+  25 |     Promise.all([
+  26 |       ownerStoresService.getStore(storeId),  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/LiveAuditLog.tsx
+  48:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/LiveAuditLog.tsx:48:5
+  46 |   useEffect(() => {
+  47 |     let cancelled = false;
+> 48 |     setLoading(true); setError(null);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  49 |     viewerId().then((id) => loadAuditPage({ includeReads: showAll, viewerId: id }))
+  50 |       .then((p) => { if (!cancelled) { setRaw(p.rows); setCursors(p.cursors); setDetailed(p.detailed); setLoading(false); } })
+  51 |       .catch((e) => { if (!cancelled) { setError(e instanceof Error ? e.message : "Failed to load audit log"); setLoading(false); } });  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/LiveStaffPanel.tsx
+  59:26  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/LiveStaffPanel.tsx:59:26
+  57 |     setMembers(m); setInvites(i);
+  58 |   }, [storeId]);
+> 59 |   useEffect(() => { void load(); }, [load]);
+     |                          ^^^^ Avoid calling setState() directly within an effect
+  60 |
+  61 |   const run = async (kind: NonNullable<Busy>, fn: () => Promise<{ ok: boolean; data?: { delivery?: string }; message?: string }>, success: (d?: { delivery?: string }) => string) => {
+  62 |     if (busy) return false;  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/MyStoresScreen.tsx
+  31:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/MyStoresScreen.tsx:31:5
+  29 |   useEffect(() => {
+  30 |     let cancelled = false;
+> 31 |     setLoading(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  32 |     setError(null);
+  33 |     ownerStoresService
+  34 |       .listMyStores()  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/PharmacyDetails.tsx
+  22:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/PharmacyDetails.tsx:22:5
+  20 |     if (!selected) return;
+  21 |     let cancelled = false;
+> 22 |     setLoading(true); setError(null);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  23 |     loadStoreProfile(selected)
+  24 |       .then((r) => { if (!cancelled) { setData(r); setLoading(false); } })
+  25 |       .catch((e) => { if (!cancelled) { setError(e instanceof Error ? e.message : "Pharmacy details unavailable."); setLoading(false); } });  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/SettingsScreen.tsx
+  34:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/SettingsScreen.tsx:34:5
+  32 |   useEffect(() => {
+  33 |     let cancelled = false;
+> 34 |     setLoading(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  35 |     setError(null);
+  36 |     (async () => {
+  37 |       try {  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/StoreDetailScreen.tsx
+  32:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/admin-portal/StoreDetailScreen.tsx:32:5
+  30 |   useEffect(() => {
+  31 |     let cancelled = false;
+> 32 |     setLoading(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  33 |     setError(null);
+  34 |     setDenied(false);
+  35 |     Promise.all([  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/invitations/InvitationsScreen.tsx
+  23:26  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/invitations/InvitationsScreen.tsx:23:26
+  21 |     setState({ kind: "ready", items: body.data ?? [] });
+  22 |   }, []);
+> 23 |   useEffect(() => { void load(); }, [load]);
+     |                          ^^^^ Avoid calling setState() directly within an effect
+  24 |
+  25 |   const act = async (id: string, action: "accept" | "decline") => {
+  26 |     setBusy(id); setNotice(null);  react-hooks/set-state-in-effect
+  31:32  warning  Do not use `window.location.assign()` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @next/next/no-location-assign-relative-destination
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/layout/AuthedShell.tsx
+  56:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/layout/AuthedShell.tsx:56:5
+  54 |   // drawer covers the freshly-filtered results.
+  55 |   useEffect(() => {
+> 56 |     setDrawerOpen(false);
+     |     ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  57 |   }, [pathname, appliedTick]);
+  58 |
+  59 |   // Escape to close + lock body scroll while the drawer is open  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/owedbook/FilterRail.tsx
+  51:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/owedbook/FilterRail.tsx:51:5
+  49 |   // main-screen "Clear filters"), so the persistent desktop rail isn't stale.
+  50 |   useEffect(() => {
+> 51 |     setDraft(filters);
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  52 |   }, [filters]);
+  53 |
+  54 |   // "N filters active" reflects the APPLIED (committed) set, not the draft  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/owedbook/OwedBookScreen.tsx
+  55:39  warning  React Hook useMemo has unnecessary dependencies: 'filters', 'refreshTick', and 'service'. Either exclude them or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     react-hooks/exhaustive-deps
+  71:43  warning  React Hook useMemo has unnecessary dependencies: 'activeTab', 'page', and 'request'. Either exclude them or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-hooks/exhaustive-deps
+  80:5   warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/owedbook/OwedBookScreen.tsx:80:5
+  78 |   // A new filter set resets to the first page.
+  79 |   useEffect(() => {
+> 80 |     setPage(1);
+     |     ^^^^^^^ Avoid calling setState() directly within an effect
+  81 |   }, [filters, service]);
+  82 |
+  83 |   // KPI tiles react to the filter set  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/ui/command.tsx
+  35:24  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/rwo01/a3/ob/src/components/ui/use-toast.ts
+  21:7  warning  'actionTypes' is assigned a value but only used as a type. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+✖ 38 problems (0 errors, 38 warnings)
+

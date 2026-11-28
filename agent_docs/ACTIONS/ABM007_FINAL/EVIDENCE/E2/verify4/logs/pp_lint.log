@@ -1,0 +1,192 @@
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/scripts/apbm007b/env-preflight.mjs
+  21:7  warning  'CAST' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/__tests__/get-user-role.test.ts
+  15:74  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  21:52  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/__tests__/login-form.test.tsx
+  22:31  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  60:8   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/__tests__/portal-access.test.tsx
+  38:68  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  69:50  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  71:51  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  77:51  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/__tests__/portal-owner.test.tsx
+  25:50  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/__tests__/portal-review.test.tsx
+  26:50  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/__tests__/proxy.test.ts
+  16:46  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  18:67  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/global/ThemeToggler.tsx
+  14:19  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/global/ThemeToggler.tsx:14:19
+  12 |   const { resolvedTheme, setTheme } = useTheme();
+  13 |   const [mounted, setMounted] = useState(false);
+> 14 |   useEffect(() => setMounted(true), []);
+     |                   ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  15 |   const isDark = mounted ? resolvedTheme === "dark" : true;
+  16 |
+  17 |   return (  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/Shell.tsx
+  51:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/Shell.tsx:51:5
+  49 |
+  50 |   useEffect(() => {
+> 51 |     setDrawerOpen(false);
+     |     ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  52 |   }, [pathname]);
+  53 |
+  54 |   function navigate(e: React.MouseEvent<HTMLAnchorElement>, href: string) {  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/account/AddStoreView.tsx
+  51:28  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/account/AddStoreView.tsx:51:28
+  49 |
+  50 |   useEffect(() => {
+> 51 |     if (hydrated && !form) setForm(toForm(state.addDraft.pharmacy));
+     |                            ^^^^^^^ Avoid calling setState() directly within an effect
+  52 |   }, [hydrated, form, state.addDraft.pharmacy]);
+  53 |
+  54 |   useEffect(() => {  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/account/ConfirmStoreView.tsx
+  48:5  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/account/ConfirmStoreView.tsx:48:5
+  46 |     if (!hydrated || !draftReady || pending || quoteBusy || quoteError) return;
+  47 |     if (state.quote && state.quote.draftRevision === state.addDraft.revision) return;
+> 48 |     setQuoteBusy(true);
+     |     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  49 |     void account.requestQuote().then((r) => {
+  50 |       setQuoteBusy(false);
+  51 |       setQuoteError(!r.ok);  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/account/DashboardView.tsx
+  68:10  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/account/DashboardView.tsx:68:10
+  66 |   // Also the return point from Stripe's Billing Portal: simply read the overview again.
+  67 |   useEffect(() => {
+> 68 |     void load();
+     |          ^^^^ Avoid calling setState() directly within an effect
+  69 |   }, [load]);
+  70 |
+  71 |   async function reload() {  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/activation/ActivationView.tsx
+  79:10  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/activation/ActivationView.tsx:79:10
+  77 |   // First read after returning from Stripe: one authoritative check.
+  78 |   useEffect(() => {
+> 79 |     void load(true);
+     |          ^^^^ Avoid calling setState() directly within an effect
+  80 |   }, [load]);
+  81 |
+  82 |   const waiting = status ? isWaiting(status) : false;  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/register/OwnerView.tsx
+  44:48  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/register/OwnerView.tsx:44:48
+  42 |   // Prefill once: unsaved input from this tab first, otherwise the saved draft.
+  43 |   useEffect(() => {
+> 44 |     if (!loading && session.hydrated && !form) setForm(session.owner ?? ownerFromDraft(draft));
+     |                                                ^^^^^^^ Avoid calling setState() directly within an effect
+  45 |   }, [loading, session.hydrated, session.owner, draft, form]);
+  46 |
+  47 |   useEffect(() => {  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/register/PharmacyStepView.tsx
+  68:16  warning  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/portal/register/PharmacyStepView.tsx:68:16
+  66 |       return;
+  67 |     }
+> 68 |     if (!form) setForm(withAdmin(session.pharmacy ?? pharmacyFromDraft(draft)));
+     |                ^^^^^^^ Avoid calling setState() directly within an effect
+  69 |   }, [ready, ownerOk, form, session.pharmacy, draft, router]);
+  70 |
+  71 |   useEffect(() => {  react-hooks/set-state-in-effect
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/components/ui/use-toast.ts
+  21:7  warning  'actionTypes' is assigned a value but only used as a type. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/integration/apbm007a-scratch.itest.ts
+  46:27  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/integration/apbm007b-store.itest.ts
+  40:7  warning  'NPI' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/server/storeOperations.ts
+  12:35  warning  'incrementalCents' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/services/portal/accountService.tsx
+  105:26  warning  's' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+/tmp/claude-1000/-home-moose-NEXTJS-CYBER-PHARMA-cyph-payment-portal-dev-v1/a8c591e2-0e8b-47de-8030-f1b37bbfe10c/scratchpad/v4/pp/src/utils/supabase/middleware.ts
+  20:48  warning  'options' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+✖ 27 problems (0 errors, 27 warnings)
+

@@ -1,0 +1,1991 @@
+{
+ "step": "05_before_firefox_reps",
+ "engines": {
+  "firefox": "148.0.2",
+  "chromium": "158.0.8127.88",
+  "webkit": "26.4"
+ },
+ "sessions": {
+  "password_sign_ins": 3,
+  "token_sign_ins": 0,
+  "generate_link_calls": 0,
+  "total_sign_ins": 3
+ },
+ "portal_requests": 0,
+ "took_ms": 280286,
+ "error": null,
+ "log": [
+  "tab-path 1024x600 #1 start 306 {\"0\":306,\"100\":306,\"300\":306,\"800\":306,\"2000\":306} FAIL focus a \"Go to the Top\"",
+  "tab-path 1024x600 #2 start 306 {\"0\":306,\"100\":306,\"300\":306,\"800\":306,\"2000\":306} FAIL focus a \"Go to the Top\"",
+  "tab-path 1024x600 #3 start 306 {\"0\":0,\"100\":306,\"300\":306,\"800\":306,\"2000\":306} FAIL focus a \"Go to the Top\"",
+  "tab-path 1024x600 #4 start 306 {\"0\":0,\"100\":306,\"300\":306,\"800\":306,\"2000\":306} FAIL focus a \"Go to the Top\"",
+  "1024x600 art  1 keyboard center scroll-then-focus start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0]]",
+  "1024x600 art  1 keyboard center scroll-then-focus start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1024x600 art  1 keyboard center scroll-then-focus start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[2,0]]",
+  "1024x600 art  1 keyboard center scroll-then-focus start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1024x600 art  1 keyboard center focus-then-scroll start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1024x600 art  1 keyboard center focus-then-scroll start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[2,0]]",
+  "1024x600 art  1 keyboard center focus-then-scroll start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0]]",
+  "1024x600 art  1 keyboard center focus-then-scroll start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[7,0]]",
+  "1024x600 art  1 keyboard bottom scroll-then-focus start   501 | 0:0 100:501 300:501 800:501 2000:501 | FAIL | focus: a \"Go to the Top\" in article getting-around  | ev [[16,0],[49,501]]",
+  "1024x600 art  1 keyboard bottom scroll-then-focus start   501 | 0:0 100:501 300:501 800:501 2000:501 | FAIL | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0],[32,501]]",
+  "1024x600 art  1 keyboard bottom scroll-then-focus start   501 | 0:0 100:501 300:501 800:501 2000:501 | FAIL | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0],[37,501]]",
+  "1024x600 art  1 keyboard bottom scroll-then-focus start   501 | 0:0 100:501 300:501 800:501 2000:501 | FAIL | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0],[35,501]]",
+  "1024x600 art  1 keyboard bottom focus-then-scroll start    28 | 0:0 100:28 300:28 800:28 2000:28 | FAIL | focus: a \"Go to the Top\" in article getting-around  | ev [[2,0],[29,28]]",
+  "1024x600 art  1 keyboard bottom focus-then-scroll start    28 | 0:28 100:28 300:28 800:28 2000:28 | FAIL | focus: a \"Go to the Top\" in article getting-around  | ev [[7,0],[21,28]]",
+  "1024x600 art  1 keyboard bottom focus-then-scroll start    28 | 0:0 100:28 300:28 800:28 2000:28 | FAIL | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0],[24,28]]",
+  "1024x600 art  1 keyboard bottom focus-then-scroll start    28 | 0:0 100:28 300:28 800:28 2000:28 | FAIL | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0],[29,28]]",
+  "1024x600 art  1 keyboard top    scroll-then-focus start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1024x600 art  1 keyboard top    scroll-then-focus start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0]]",
+  "1024x600 art  1 keyboard top    scroll-then-focus start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1024x600 art  1 keyboard top    scroll-then-focus start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1024x600 art  1 keyboard top    focus-then-scroll start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0]]",
+  "1024x600 art  1 keyboard top    focus-then-scroll start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0]]",
+  "1024x600 art  1 keyboard top    focus-then-scroll start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0]]",
+  "1024x600 art  1 keyboard top    focus-then-scroll start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "tab-path 1440x900 #1 start 131 {\"0\":0,\"100\":131,\"300\":131,\"800\":131,\"2000\":131} FAIL focus a \"Go to the Top\"",
+  "tab-path 1440x900 #2 start 131 {\"0\":131,\"100\":131,\"300\":131,\"800\":131,\"2000\":131} FAIL focus a \"Go to the Top\"",
+  "tab-path 1440x900 #3 start 131 {\"0\":0,\"100\":131,\"300\":131,\"800\":131,\"2000\":131} FAIL focus a \"Go to the Top\"",
+  "tab-path 1440x900 #4 start 131 {\"0\":131,\"100\":131,\"300\":131,\"800\":131,\"2000\":131} FAIL focus a \"Go to the Top\"",
+  "1440x900 art  1 keyboard center scroll-then-focus start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1440x900 art  1 keyboard center scroll-then-focus start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[8,0]]",
+  "1440x900 art  1 keyboard center scroll-then-focus start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1440x900 art  1 keyboard center scroll-then-focus start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0]]",
+  "1440x900 art  1 keyboard center focus-then-scroll start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1440x900 art  1 keyboard center focus-then-scroll start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1440x900 art  1 keyboard center focus-then-scroll start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[5,0]]",
+  "1440x900 art  1 keyboard center focus-then-scroll start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1440x900 art  1 keyboard bottom scroll-then-focus start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "1440x900 art  1 keyboard bottom scroll-then-focus start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "1440x900 art  1 keyboard bottom scroll-then-focus start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "1440x900 art  1 keyboard bottom scroll-then-focus start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "1440x900 art  1 keyboard bottom focus-then-scroll start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "1440x900 art  1 keyboard bottom focus-then-scroll start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "1440x900 art  1 keyboard bottom focus-then-scroll start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "1440x900 art  1 keyboard bottom focus-then-scroll start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev []",
+  "1440x900 art  1 keyboard top    scroll-then-focus start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1440x900 art  1 keyboard top    scroll-then-focus start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[5,0]]",
+  "1440x900 art  1 keyboard top    scroll-then-focus start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[7,0]]",
+  "1440x900 art  1 keyboard top    scroll-then-focus start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1440x900 art  1 keyboard top    focus-then-scroll start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[7,0]]",
+  "1440x900 art  1 keyboard top    focus-then-scroll start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[4,0]]",
+  "1440x900 art  1 keyboard top    focus-then-scroll start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[7,0]]",
+  "1440x900 art  1 keyboard top    focus-then-scroll start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: a \"Go to the Top\" in article getting-around  | ev [[3,0]]"
+ ],
+ "result": {
+  "served": {
+   "ob": {
+    "listener_pid": 3262891,
+    "cwd_is_verification_copy": true,
+    "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+    "app_env": "local-proof",
+    "client_bundle": {
+     "scripts": 13,
+     "scratch_refs": 0,
+     "dev_refs": 0
+    }
+   }
+  },
+  "reps": 4,
+  "tab_path": [
+   {
+    "w": 1024,
+    "h": 600,
+    "path": "Tab from the last menu link, script centres the link, Enter",
+    "focused_article": "getting-around",
+    "start_scrollY": 306,
+    "scrollY_at_ms": {
+     "0": 306,
+     "100": 306,
+     "300": 306,
+     "800": 306,
+     "2000": 306
+    },
+    "at_top_and_stays": false,
+    "focus_after": "a \"Go to the Top\""
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "path": "Tab from the last menu link, script centres the link, Enter",
+    "focused_article": "getting-around",
+    "start_scrollY": 306,
+    "scrollY_at_ms": {
+     "0": 306,
+     "100": 306,
+     "300": 306,
+     "800": 306,
+     "2000": 306
+    },
+    "at_top_and_stays": false,
+    "focus_after": "a \"Go to the Top\""
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "path": "Tab from the last menu link, script centres the link, Enter",
+    "focused_article": "getting-around",
+    "start_scrollY": 306,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 306,
+     "300": 306,
+     "800": 306,
+     "2000": 306
+    },
+    "at_top_and_stays": false,
+    "focus_after": "a \"Go to the Top\""
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "path": "Tab from the last menu link, script centres the link, Enter",
+    "focused_article": "getting-around",
+    "start_scrollY": 306,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 306,
+     "300": 306,
+     "800": 306,
+     "2000": 306
+    },
+    "at_top_and_stays": false,
+    "focus_after": "a \"Go to the Top\""
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "path": "Tab from the last menu link, script centres the link, Enter",
+    "focused_article": "getting-around",
+    "start_scrollY": 131,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 131,
+     "300": 131,
+     "800": 131,
+     "2000": 131
+    },
+    "at_top_and_stays": false,
+    "focus_after": "a \"Go to the Top\""
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "path": "Tab from the last menu link, script centres the link, Enter",
+    "focused_article": "getting-around",
+    "start_scrollY": 131,
+    "scrollY_at_ms": {
+     "0": 131,
+     "100": 131,
+     "300": 131,
+     "800": 131,
+     "2000": 131
+    },
+    "at_top_and_stays": false,
+    "focus_after": "a \"Go to the Top\""
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "path": "Tab from the last menu link, script centres the link, Enter",
+    "focused_article": "getting-around",
+    "start_scrollY": 131,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 131,
+     "300": 131,
+     "800": 131,
+     "2000": 131
+    },
+    "at_top_and_stays": false,
+    "focus_after": "a \"Go to the Top\""
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "path": "Tab from the last menu link, script centres the link, Enter",
+    "focused_article": "getting-around",
+    "start_scrollY": 131,
+    "scrollY_at_ms": {
+     "0": 131,
+     "100": 131,
+     "300": 131,
+     "800": 131,
+     "2000": 131
+    },
+    "at_top_and_stays": false,
+    "focus_after": "a \"Go to the Top\""
+   }
+  ],
+  "article_1_keyboard": [
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 306,
+    "scrollY_after_focus": 306,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      3,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 306,
+    "scrollY_after_focus": 306,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 306,
+    "scrollY_after_focus": 306,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      2,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 306,
+    "scrollY_after_focus": 306,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 306,
+    "scrollY_after_focus": 306,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 306,
+    "scrollY_after_focus": 306,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      2,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 306,
+    "scrollY_after_focus": 306,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      3,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 306,
+    "scrollY_after_focus": 306,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      7,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 501,
+    "scrollY_after_focus": 501,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 501,
+     "300": 501,
+     "800": 501,
+     "2000": 501
+    },
+    "at_top_and_stays": false,
+    "hash": "#top",
+    "header_in_view": false,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 83,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      16,
+      0
+     ],
+     [
+      49,
+      501
+     ]
+    ],
+    "scroll_event_count": 2,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 501,
+    "scrollY_after_focus": 501,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 501,
+     "300": 501,
+     "800": 501,
+     "2000": 501
+    },
+    "at_top_and_stays": false,
+    "hash": "#top",
+    "header_in_view": false,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 83,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ],
+     [
+      32,
+      501
+     ]
+    ],
+    "scroll_event_count": 2,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 501,
+    "scrollY_after_focus": 501,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 501,
+     "300": 501,
+     "800": 501,
+     "2000": 501
+    },
+    "at_top_and_stays": false,
+    "hash": "#top",
+    "header_in_view": false,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 83,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ],
+     [
+      37,
+      501
+     ]
+    ],
+    "scroll_event_count": 2,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 501,
+    "scrollY_after_focus": 501,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 501,
+     "300": 501,
+     "800": 501,
+     "2000": 501
+    },
+    "at_top_and_stays": false,
+    "hash": "#top",
+    "header_in_view": false,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 83,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      3,
+      0
+     ],
+     [
+      35,
+      501
+     ]
+    ],
+    "scroll_event_count": 2,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 28,
+    "scrollY_after_focus": 28,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 28,
+     "300": 28,
+     "800": 28,
+     "2000": 28
+    },
+    "at_top_and_stays": false,
+    "hash": "#top",
+    "header_in_view": false,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 556,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      2,
+      0
+     ],
+     [
+      29,
+      28
+     ]
+    ],
+    "scroll_event_count": 2,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 28,
+    "scrollY_after_focus": 28,
+    "scrollY_at_ms": {
+     "0": 28,
+     "100": 28,
+     "300": 28,
+     "800": 28,
+     "2000": 28
+    },
+    "at_top_and_stays": false,
+    "hash": "#top",
+    "header_in_view": false,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 556,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      7,
+      0
+     ],
+     [
+      21,
+      28
+     ]
+    ],
+    "scroll_event_count": 2,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 28,
+    "scrollY_after_focus": 28,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 28,
+     "300": 28,
+     "800": 28,
+     "2000": 28
+    },
+    "at_top_and_stays": false,
+    "hash": "#top",
+    "header_in_view": false,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 556,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      3,
+      0
+     ],
+     [
+      24,
+      28
+     ]
+    ],
+    "scroll_event_count": 2,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 28,
+    "scrollY_after_focus": 28,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 28,
+     "300": 28,
+     "800": 28,
+     "2000": 28
+    },
+    "at_top_and_stays": false,
+    "hash": "#top",
+    "header_in_view": false,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 556,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      3,
+      0
+     ],
+     [
+      29,
+      28
+     ]
+    ],
+    "scroll_event_count": 2,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 584,
+    "scrollY_after_focus": 584,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 584,
+    "scrollY_after_focus": 584,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      3,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 584,
+    "scrollY_after_focus": 584,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 584,
+    "scrollY_after_focus": 584,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 584,
+    "scrollY_after_focus": 584,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      3,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 584,
+    "scrollY_after_focus": 584,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      3,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 584,
+    "scrollY_after_focus": 584,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      3,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1024,
+    "h": 600,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 584,
+    "scrollY_after_focus": 584,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 584,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 131,
+    "scrollY_after_focus": 131,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 131,
+    "scrollY_after_focus": 131,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      8,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 131,
+    "scrollY_after_focus": 131,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 131,
+    "scrollY_after_focus": 131,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      3,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 131,
+    "scrollY_after_focus": 131,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 131,
+    "scrollY_after_focus": 131,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 131,
+    "scrollY_after_focus": 131,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      5,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "center",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 131,
+    "scrollY_after_focus": 131,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 0,
+    "scrollY_after_focus": 0,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [],
+    "scroll_event_count": 0,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 0,
+    "scrollY_after_focus": 0,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [],
+    "scroll_event_count": 0,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 0,
+    "scrollY_after_focus": 0,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [],
+    "scroll_event_count": 0,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 0,
+    "scrollY_after_focus": 0,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [],
+    "scroll_event_count": 0,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 0,
+    "scrollY_after_focus": 0,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [],
+    "scroll_event_count": 0,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 0,
+    "scrollY_after_focus": 0,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [],
+    "scroll_event_count": 0,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 0,
+    "scrollY_after_focus": 0,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [],
+    "scroll_event_count": 0,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "bottom",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 0,
+    "scrollY_after_focus": 0,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [],
+    "scroll_event_count": 0,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 559,
+    "scrollY_after_focus": 559,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 559,
+    "scrollY_after_focus": 559,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      5,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 559,
+    "scrollY_after_focus": 559,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      7,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "scroll-then-focus",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 559,
+    "scrollY_after_focus": 559,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 559,
+    "scrollY_after_focus": 559,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      7,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 1
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 559,
+    "scrollY_after_focus": 559,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      4,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 2
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 559,
+    "scrollY_after_focus": 559,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      7,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 3
+   },
+   {
+    "w": 1440,
+    "h": 900,
+    "art": 1,
+    "how": "keyboard",
+    "place": "top",
+    "order": "focus-then-scroll",
+    "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+    "start_scrollY": 559,
+    "scrollY_after_focus": 559,
+    "scrollY_at_ms": {
+     "0": 0,
+     "100": 0,
+     "300": 0,
+     "800": 0,
+     "2000": 0
+    },
+    "at_top_and_stays": true,
+    "hash": "#top",
+    "header_in_view": true,
+    "focus": {
+     "what": "a \"Go to the Top\" in article getting-around",
+     "in_window": true,
+     "top": 559,
+     "focus_visible": true,
+     "outline": "solid 2px rgb(21, 68, 116)"
+    },
+    "scroll_events": [
+     [
+      3,
+      0
+     ]
+    ],
+    "scroll_event_count": 1,
+    "next_tab_goes_to": "a \"Go to the Top\" in article roles",
+    "rep": 4
+   }
+  ]
+ }
+}

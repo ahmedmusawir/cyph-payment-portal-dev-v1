@@ -97,7 +97,7 @@ export function PharmacyFields({
   const set = (k: keyof PharmacyForm) => (v: string) => onChange({ ...form, [k]: v });
   return (
     <>
-      <fieldset className="grid min-w-0 gap-5 border border-border bg-card p-4 sm:grid-cols-6 sm:p-5">
+      <fieldset className="grid min-w-0 gap-5 pb-card p-4 sm:grid-cols-6 sm:p-5">
         <legend className="sr-only">Pharmacy details</legend>
         <p className="text-sm font-semibold text-foreground sm:col-span-6" aria-hidden="true">Pharmacy details</p>
         <TextField id="ph-name" label="Pharmacy name" required shellClassName="sm:col-span-6" value={form.name} onValue={set("name")} error={errors.name} />
@@ -135,7 +135,7 @@ export function PharmacyFields({
         ) : null}
       </fieldset>
 
-      <fieldset className="min-w-0 space-y-3 border border-border bg-card p-4 sm:p-5">
+      <fieldset className="min-w-0 space-y-3 pb-card p-4 sm:p-5">
         <legend className="sr-only">Who will be this store&apos;s admin? (required)</legend>
         <p className="text-sm font-semibold text-foreground" aria-hidden="true">
           Who will be this store&apos;s admin? <span className="text-destructive">*</span>
@@ -180,7 +180,7 @@ export function PharmacyFields({
         ) : null}
       </fieldset>
 
-      <div className="border-l-[3px] border-info bg-info/10 p-3 text-sm" role="note">
+      <div className="pb-notice pb-tone-info text-sm" role="note">
         <p className="font-semibold text-foreground">Business details only</p>
         <p className="text-muted-foreground">Never enter patient names or prescription information here.</p>
       </div>

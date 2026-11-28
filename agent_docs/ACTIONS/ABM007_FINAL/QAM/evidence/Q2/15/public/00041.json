@@ -1,0 +1,183 @@
+{
+  "engine": "chromium",
+  "version": "147.0.7727.15",
+  "app": "ob",
+  "role": "PUBLIC",
+  "method": "none",
+  "width": 375,
+  "requested": "/auth/signed-out",
+  "landed": "/auth/signed-out",
+  "state": "default",
+  "time": "2026-11-24T15:20:28.410Z",
+  "raster": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 46,
+          "top": 51,
+          "right": 189.53125,
+          "bottom": 66
+        },
+        "unsupported": [],
+        "worstRatio": 8.9716,
+        "samples": 250,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 240.546875,
+          "top": 51,
+          "right": 329,
+          "bottom": 66
+        },
+        "unsupported": [],
+        "worstRatio": 10.1123,
+        "samples": 165,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 2,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 28,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 153,
+          "top": 80,
+          "right": 237.96875,
+          "bottom": 114
+        },
+        "unsupported": [],
+        "worstRatio": 10.9334,
+        "samples": 538,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 3,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 28,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 153,
+          "top": 110.796875,
+          "right": 291.609375,
+          "bottom": 144.796875
+        },
+        "unsupported": [],
+        "worstRatio": 11.2505,
+        "samples": 1005,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 4,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 46,
+          "top": 155.59375,
+          "right": 273,
+          "bottom": 175.59375
+        },
+        "unsupported": [],
+        "worstRatio": 9.5441,
+        "samples": 287,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 5,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 46,
+          "top": 179.59375,
+          "right": 311,
+          "bottom": 199.59375
+        },
+        "unsupported": [],
+        "worstRatio": 9.7933,
+        "samples": 299,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 6,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 46,
+          "top": 203.59375,
+          "right": 116,
+          "bottom": 223.59375
+        },
+        "unsupported": [],
+        "worstRatio": 9.8879,
+        "samples": 87,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 7,
+        "tag": "A",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 164.5,
+          "top": 294.59375,
+          "right": 210.5,
+          "bottom": 314.59375
+        },
+        "unsupported": [],
+        "worstRatio": 4.528,
+        "samples": 51,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 8,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "completed": true
+}

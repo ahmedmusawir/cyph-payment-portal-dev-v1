@@ -1,0 +1,44 @@
+[
+  {
+    "name": "clean",
+    "expected": true,
+    "accepted": true,
+    "pass": true
+  },
+  {
+    "name": "wrong-role",
+    "expected": false,
+    "accepted": false,
+    "pass": true
+  },
+  {
+    "name": "outside-address",
+    "expected": false,
+    "accepted": false,
+    "pass": true
+  },
+  {
+    "name": "wildcard",
+    "expected": false,
+    "accepted": false,
+    "pass": true
+  },
+  {
+    "name": "absent-user",
+    "expected": false,
+    "accepted": false,
+    "pass": true
+  },
+  {
+    "name": "DEV",
+    "expected": false,
+    "accepted": false,
+    "pass": true
+  },
+  {
+    "name": "unknown",
+    "expected": false,
+    "accepted": false,
+    "pass": true
+  }
+]

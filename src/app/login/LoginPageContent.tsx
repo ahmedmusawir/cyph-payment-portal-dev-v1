@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { externalRedirect, portalApi } from "@/services/portal";
 import { LinkRequestForm } from "@/components/auth/LinkRequestForm";
 import { Alert } from "@/components/portal/Alert";
+import { PageHeader } from "@/components/portal/PageHeader";
 import { BRAND } from "@/components/portal/brand";
 import { PasswordField, TextField } from "@/components/portal/FormField";
 import { PageContainer } from "@/components/portal/Loading";
@@ -64,9 +65,7 @@ export function LoginPageContent({ sessionExpired, continueHandoff = false }: { 
 
   return (
     <PageContainer width="md">
-      <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Account &amp; Billing</p>
-      <h1 className="mt-1 text-[26px] font-bold leading-tight text-foreground md:text-[32px]">Sign in</h1>
-      <p className="mt-1 text-sm text-muted-foreground">Same sign-in as {BRAND.owedBook}. Use your existing account to manage your subscription.</p>
+      <PageHeader eyebrow="Account & Billing" title="Sign in" lead={`Same sign-in as ${BRAND.owedBook}. Use your existing account to manage your subscription.`} />
 
       {sessionExpired ? (
         <Alert tone="info" className="mt-5" title="Your session expired">
@@ -79,7 +78,7 @@ export function LoginPageContent({ sessionExpired, continueHandoff = false }: { 
         </Alert>
       ) : null}
 
-      <form onSubmit={onSubmit} noValidate className="mt-6 space-y-4 border border-border bg-card p-4 sm:p-5">
+      <form onSubmit={onSubmit} noValidate className="mt-6 space-y-4 pb-card p-4 sm:p-5">
         <TextField
           ref={emailRef}
           id="email"

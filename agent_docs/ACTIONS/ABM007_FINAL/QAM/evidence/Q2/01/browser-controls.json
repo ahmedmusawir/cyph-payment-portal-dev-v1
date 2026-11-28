@@ -1,0 +1,727 @@
+{
+  "browser": "chromium",
+  "version": "147.0.7727.15",
+  "time": "2026-11-24T12:36:59.984Z",
+  "controls": [
+    {
+      "name": "clean",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#393b38",
+          "brand-green": "#393b38",
+          "brand-green-dark": "#393b38",
+          "brand-ice": "#393b38",
+          "brand-charcoal": "#393b38",
+          "brand-gray": "#393b38"
+        },
+        "overflow": 0,
+        "width": 375,
+        "bodyBackground": "rgb(255, 255, 255)",
+        "darkClass": false,
+        "colorScheme": "normal",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>p:nth-child(1)",
+            "color": "rgb(57, 59, 56)",
+            "background": "rgba(0, 0, 0, 0)",
+            "font": "Inter",
+            "size": 16,
+            "weight": 400,
+            "contrast": 11.3106,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          },
+          {
+            "where": "body>a:nth-child(2)",
+            "color": "rgb(40, 132, 114)",
+            "background": "rgba(0, 0, 0, 0)",
+            "font": "Inter",
+            "size": 16,
+            "weight": 400,
+            "contrast": 4.532,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          }
+        ],
+        "controls": [],
+        "links": [
+          {
+            "where": "body>a:nth-child(2)",
+            "href": "#good",
+            "color": "#288472",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "underline": "underline"
+          }
+        ],
+        "pills": [],
+        "anchors": [
+          {
+            "href": "#good",
+            "exists": true
+          }
+        ],
+        "oldNames": {
+          "text": false,
+          "title": false,
+          "alt": false,
+          "accessible": false
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    },
+    {
+      "name": "rounded-anchor",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#000000",
+          "brand-green": "#000000",
+          "brand-green-dark": "#298572",
+          "brand-ice": "#000000",
+          "brand-charcoal": "#000000",
+          "brand-gray": "#000000"
+        },
+        "overflow": 0,
+        "width": 375,
+        "bodyBackground": "rgba(0, 0, 0, 0)",
+        "darkClass": false,
+        "colorScheme": "normal",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>p:nth-child(1)",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "font": "\"Times New Roman\"",
+            "size": 16,
+            "weight": 400,
+            "contrast": 21,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          }
+        ],
+        "controls": [],
+        "links": [],
+        "pills": [],
+        "anchors": [],
+        "oldNames": {
+          "text": false,
+          "title": false,
+          "alt": false,
+          "accessible": false
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    },
+    {
+      "name": "font-weight",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#000000",
+          "brand-green": "#000000",
+          "brand-green-dark": "#000000",
+          "brand-ice": "#000000",
+          "brand-charcoal": "#000000",
+          "brand-gray": "#000000"
+        },
+        "overflow": 0,
+        "width": 375,
+        "bodyBackground": "rgba(0, 0, 0, 0)",
+        "darkClass": false,
+        "colorScheme": "normal",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>p:nth-child(1)",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "font": "Saira",
+            "size": 16,
+            "weight": 300,
+            "contrast": 21,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          }
+        ],
+        "controls": [],
+        "links": [],
+        "pills": [],
+        "anchors": [],
+        "oldNames": {
+          "text": false,
+          "title": false,
+          "alt": false,
+          "accessible": false
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    },
+    {
+      "name": "actual-dark",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#ffffff",
+          "brand-green": "#ffffff",
+          "brand-green-dark": "#ffffff",
+          "brand-ice": "#ffffff",
+          "brand-charcoal": "#ffffff",
+          "brand-gray": "#ffffff"
+        },
+        "overflow": 0,
+        "width": 375,
+        "bodyBackground": "rgb(17, 17, 17)",
+        "darkClass": false,
+        "colorScheme": "dark",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>p:nth-child(1)",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgba(0, 0, 0, 0)",
+            "font": "\"Times New Roman\"",
+            "size": 16,
+            "weight": 400,
+            "contrast": 18.8831,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          }
+        ],
+        "controls": [],
+        "links": [],
+        "pills": [],
+        "anchors": [],
+        "oldNames": {
+          "text": false,
+          "title": false,
+          "alt": false,
+          "accessible": false
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    },
+    {
+      "name": "radius-target",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#000000",
+          "brand-green": "#000000",
+          "brand-green-dark": "#000000",
+          "brand-ice": "#000000",
+          "brand-charcoal": "#000000",
+          "brand-gray": "#000000"
+        },
+        "overflow": 0,
+        "width": 375,
+        "bodyBackground": "rgba(0, 0, 0, 0)",
+        "darkClass": false,
+        "colorScheme": "normal",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>button:nth-child(1)",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(239, 239, 239)",
+            "font": "Arial",
+            "size": 13.3333,
+            "weight": 400,
+            "contrast": 18.2631,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          }
+        ],
+        "controls": [
+          {
+            "where": "body>button:nth-child(1)",
+            "tag": "BUTTON",
+            "type": null,
+            "height": 40,
+            "width": 51.578125,
+            "radius": "6px",
+            "font": "Arial",
+            "size": "13.3333px",
+            "weight": "400",
+            "disabled": false,
+            "busy": null,
+            "outline": "rgb(0, 0, 0) none 3px",
+            "offset": "0px",
+            "border": "rgb(0, 0, 0)",
+            "borderWidth": "2px",
+            "background": "rgb(239, 239, 239)"
+          }
+        ],
+        "links": [],
+        "pills": [],
+        "anchors": [],
+        "oldNames": {
+          "text": false,
+          "title": false,
+          "alt": false,
+          "accessible": false
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    },
+    {
+      "name": "green-on-ice",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#000000",
+          "brand-green": "#000000",
+          "brand-green-dark": "#000000",
+          "brand-ice": "#000000",
+          "brand-charcoal": "#000000",
+          "brand-gray": "#000000"
+        },
+        "overflow": 0,
+        "width": 375,
+        "bodyBackground": "rgb(234, 243, 250)",
+        "darkClass": false,
+        "colorScheme": "normal",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>a:nth-child(1)",
+            "color": "rgb(40, 132, 114)",
+            "background": "rgba(0, 0, 0, 0)",
+            "font": "\"Times New Roman\"",
+            "size": 16,
+            "weight": 400,
+            "contrast": 4.0355,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          }
+        ],
+        "controls": [],
+        "links": [
+          {
+            "where": "body>a:nth-child(1)",
+            "href": "#x",
+            "color": "#288472",
+            "background": [
+              234,
+              243,
+              250
+            ],
+            "underline": "underline"
+          }
+        ],
+        "pills": [],
+        "anchors": [
+          {
+            "href": "#x",
+            "exists": false
+          }
+        ],
+        "oldNames": {
+          "text": false,
+          "title": false,
+          "alt": false,
+          "accessible": false
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    },
+    {
+      "name": "contrast-rounded",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#000000",
+          "brand-green": "#000000",
+          "brand-green-dark": "#000000",
+          "brand-ice": "#000000",
+          "brand-charcoal": "#000000",
+          "brand-gray": "#000000"
+        },
+        "overflow": 0,
+        "width": 375,
+        "bodyBackground": "rgba(0, 0, 0, 0)",
+        "darkClass": false,
+        "colorScheme": "normal",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>p:nth-child(1)",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(41, 133, 114)",
+            "font": "\"Times New Roman\"",
+            "size": 16,
+            "weight": 400,
+            "contrast": 4.4754,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          }
+        ],
+        "controls": [],
+        "links": [],
+        "pills": [],
+        "anchors": [],
+        "oldNames": {
+          "text": false,
+          "title": false,
+          "alt": false,
+          "accessible": false
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    },
+    {
+      "name": "contrast-opacity",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#000000",
+          "brand-green": "#000000",
+          "brand-green-dark": "#000000",
+          "brand-ice": "#000000",
+          "brand-charcoal": "#000000",
+          "brand-gray": "#000000"
+        },
+        "overflow": 0,
+        "width": 375,
+        "bodyBackground": "rgb(255, 255, 255)",
+        "darkClass": false,
+        "colorScheme": "normal",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>p:nth-child(1)",
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(40, 132, 114)",
+            "font": "\"Times New Roman\"",
+            "size": 16,
+            "weight": 400,
+            "contrast": 1.9777,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "0.5"
+          }
+        ],
+        "controls": [],
+        "links": [],
+        "pills": [],
+        "anchors": [],
+        "oldNames": {
+          "text": false,
+          "title": false,
+          "alt": false,
+          "accessible": false
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    },
+    {
+      "name": "brand-status",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#000000",
+          "brand-green": "#000000",
+          "brand-green-dark": "#000000",
+          "brand-ice": "#000000",
+          "brand-charcoal": "#000000",
+          "brand-gray": "#000000"
+        },
+        "overflow": 0,
+        "width": 375,
+        "bodyBackground": "rgba(0, 0, 0, 0)",
+        "darkClass": false,
+        "colorScheme": "normal",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>span:nth-child(1)",
+            "color": "rgb(50, 163, 141)",
+            "background": "rgba(0, 0, 0, 0)",
+            "font": "\"Times New Roman\"",
+            "size": 16,
+            "weight": 400,
+            "contrast": 3.1069,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          }
+        ],
+        "controls": [],
+        "links": [],
+        "pills": [
+          {
+            "where": "body>span:nth-child(1)",
+            "color": "#32a38d",
+            "background": "#000000",
+            "border": "rgb(50, 163, 141)"
+          }
+        ],
+        "anchors": [],
+        "oldNames": {
+          "text": false,
+          "title": false,
+          "alt": false,
+          "accessible": false
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    },
+    {
+      "name": "overflow",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#000000",
+          "brand-green": "#000000",
+          "brand-green-dark": "#000000",
+          "brand-ice": "#000000",
+          "brand-charcoal": "#000000",
+          "brand-gray": "#000000"
+        },
+        "overflow": 33,
+        "width": 375,
+        "bodyBackground": "rgba(0, 0, 0, 0)",
+        "darkClass": false,
+        "colorScheme": "normal",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>div:nth-child(1)",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "font": "\"Times New Roman\"",
+            "size": 16,
+            "weight": 400,
+            "contrast": 21,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          }
+        ],
+        "controls": [],
+        "links": [],
+        "pills": [],
+        "anchors": [],
+        "oldNames": {
+          "text": false,
+          "title": false,
+          "alt": false,
+          "accessible": false
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    },
+    {
+      "name": "old-name-four-channels",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#000000",
+          "brand-green": "#000000",
+          "brand-green-dark": "#000000",
+          "brand-ice": "#000000",
+          "brand-charcoal": "#000000",
+          "brand-gray": "#000000"
+        },
+        "overflow": 0,
+        "width": 375,
+        "bodyBackground": "rgba(0, 0, 0, 0)",
+        "darkClass": false,
+        "colorScheme": "normal",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>p:nth-child(1)",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgba(0, 0, 0, 0)",
+            "font": "\"Times New Roman\"",
+            "size": 16,
+            "weight": 400,
+            "contrast": 21,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          },
+          {
+            "where": "body>button:nth-child(3)",
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(239, 239, 239)",
+            "font": "Arial",
+            "size": 13.3333,
+            "weight": 400,
+            "contrast": 18.2631,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          }
+        ],
+        "controls": [
+          {
+            "where": "body>button:nth-child(3)",
+            "tag": "BUTTON",
+            "type": null,
+            "height": 21,
+            "width": 36.75,
+            "radius": "0px",
+            "font": "Arial",
+            "size": "13.3333px",
+            "weight": "400",
+            "disabled": false,
+            "busy": null,
+            "outline": "rgb(0, 0, 0) none 3px",
+            "offset": "0px",
+            "border": "rgb(0, 0, 0)",
+            "borderWidth": "2px",
+            "background": "rgb(239, 239, 239)"
+          }
+        ],
+        "links": [],
+        "pills": [],
+        "anchors": [],
+        "oldNames": {
+          "text": true,
+          "title": true,
+          "alt": true,
+          "accessible": true
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    },
+    {
+      "name": "broken-anchor",
+      "pass": true,
+      "measurement": {
+        "path": "blank",
+        "tokens": {
+          "brand-navy": "#000000",
+          "brand-green": "#000000",
+          "brand-green-dark": "#000000",
+          "brand-ice": "#000000",
+          "brand-charcoal": "#000000",
+          "brand-gray": "#000000"
+        },
+        "overflow": 0,
+        "width": 375,
+        "bodyBackground": "rgba(0, 0, 0, 0)",
+        "darkClass": false,
+        "colorScheme": "normal",
+        "themeControls": 0,
+        "text": [
+          {
+            "where": "body>a:nth-child(1)",
+            "color": "rgb(0, 0, 238)",
+            "background": "rgba(0, 0, 0, 0)",
+            "font": "\"Times New Roman\"",
+            "size": 16,
+            "weight": 400,
+            "contrast": 9.3976,
+            "threshold": 4.5,
+            "unsupported": false,
+            "opacity": "1"
+          }
+        ],
+        "controls": [],
+        "links": [
+          {
+            "where": "body>a:nth-child(1)",
+            "href": "#missing",
+            "color": "#0000ee",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "underline": "underline"
+          }
+        ],
+        "pills": [],
+        "anchors": [
+          {
+            "href": "#missing",
+            "exists": false
+          }
+        ],
+        "oldNames": {
+          "text": false,
+          "title": false,
+          "alt": false,
+          "accessible": false
+        },
+        "tables": [],
+        "noStores": false,
+        "ownerBillingMessage": false,
+        "backToStores": false,
+        "errors": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "idle": {
+    "checkedAtBdt": "2026-11-27T08:14:14+06:00",
+    "otherActiveWorkers": [],
+    "otherWriters": [],
+    "activePortConnections": false
+  },
+  "branch": "qa/abm007-final",
+  "manifestChecks": [
+    {
+      "app": "ob",
+      "manifest": "f229d7a129138af7cc97e1fdb5acadf885c1907ad7cd3c140f4bad5334a4d22d",
+      "files": 2313,
+      "commit": null,
+      "mismatches": []
+    },
+    {
+      "app": "pp",
+      "manifest": "ba726f5ea3f5bf2cdd8156a16360e7674be2da500be48c81cacac19ba682c4b9",
+      "files": 2370,
+      "commit": null,
+      "mismatches": []
+    }
+  ],
+  "oldListeners": [
+    {
+      "logger": 2913822,
+      "server": 2913907,
+      "port": 3100,
+      "cwd": "/tmp/abm007-final-cody-q4/ob",
+      "manifest": "f229d7a129138af7cc97e1fdb5acadf885c1907ad7cd3c140f4bad5334a4d22d",
+      "serverStartTicks": "38910055",
+      "launcherStartTicks": "38909999"
+    },
+    {
+      "logger": 2871231,
+      "server": 2871419,
+      "port": 3101,
+      "cwd": "/tmp/abm007-final-cody-q4/pp",
+      "manifest": "ba726f5ea3f5bf2cdd8156a16360e7674be2da500be48c81cacac19ba682c4b9",
+      "serverStartTicks": "38616678",
+      "launcherStartTicks": "38616412"
+    }
+  ],
+  "oldBuildIds": {
+    "ob": "Hz-B0Pf4jB21sgTwfhmCM",
+    "pp": "Cq0FB4yzIxoIIGfKkpicM"
+  }
+}

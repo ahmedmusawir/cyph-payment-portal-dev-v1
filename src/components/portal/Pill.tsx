@@ -7,11 +7,11 @@ import { cn } from "@/lib/utils";
 export type PillTone = "success" | "warning" | "destructive" | "info" | "muted";
 
 const TONE: Record<PillTone, string> = {
-  success: "border-success bg-success/10 text-foreground",
-  warning: "border-warning bg-warning/10 text-foreground",
-  destructive: "border-destructive bg-destructive/10 text-foreground",
-  info: "border-info bg-info/10 text-foreground",
-  muted: "border-border bg-muted text-foreground",
+  success: "pb-tone-success",
+  warning: "pb-tone-warning",
+  destructive: "pb-tone-destructive",
+  info: "pb-tone-info",
+  muted: "pb-tone-neutral",
 };
 
 export function Pill({
@@ -26,7 +26,7 @@ export function Pill({
   return (
     <span
       className={cn(
-        "inline-flex items-center whitespace-nowrap border px-2 py-0.5 text-[11px] font-medium uppercase tracking-wide",
+        "pb-pill",
         TONE[tone],
         className,
       )}

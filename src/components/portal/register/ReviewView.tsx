@@ -192,7 +192,7 @@ export function ReviewView() {
         </Alert>
       ) : null}
       {consentErr > 0 && !allConsented ? (
-        <div ref={consentRef} tabIndex={-1} role="alert" className="mt-5 border-l-[3px] border-destructive bg-destructive/10 p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" data-testid="consent-error">
+        <div ref={consentRef} tabIndex={-1} role="alert" className="pb-notice pb-tone-destructive mt-5" data-testid="consent-error">
           <p className="font-semibold text-foreground">Three confirmations are needed before payment</p>
           <ul className="mt-1 list-inside list-disc text-sm text-muted-foreground">
             {CONSENT_LINKS.filter((c) => !consents[c.key]).map((c) => (
@@ -216,7 +216,7 @@ export function ReviewView() {
 
       <form noValidate onSubmit={submit} className="mt-6 grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="min-w-0 space-y-5">
-          <section aria-labelledby="own-h" className="border border-border bg-card p-4 sm:p-5">
+          <section aria-labelledby="own-h" className="pb-card p-4 sm:p-5">
             <div className="flex items-center justify-between gap-3">
               <h2 id="own-h" className="text-base font-semibold text-foreground">Billing owner</h2>
               <Link href="/register/owner" className="portal-link text-sm">Edit<span className="sr-only"> billing owner</span></Link>
@@ -232,7 +232,7 @@ export function ReviewView() {
             </p>
           </section>
 
-          <section aria-labelledby="ph-h" className="border border-border bg-card p-4 sm:p-5" data-testid="review-pharmacy">
+          <section aria-labelledby="ph-h" className="pb-card p-4 sm:p-5" data-testid="review-pharmacy">
             <div className="flex items-center justify-between gap-3">
               <h2 id="ph-h" className="min-w-0 break-words text-base font-semibold text-foreground">Pharmacy · {pharmacy.name}</h2>
               <Link href="/register/pharmacy" className="portal-link shrink-0 text-sm">
@@ -240,12 +240,12 @@ export function ReviewView() {
               </Link>
             </div>
             <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
-              <div className="min-w-0 sm:col-span-2"><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Address</dt><dd className="break-words text-foreground">{pharmacy.street}, {pharmacy.city}, {pharmacy.state} {pharmacy.zip}</dd></div>
-              <div><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">NPI</dt><dd className="tabular-nums text-foreground">{pharmacy.npi}</dd></div>
-              <div><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">NCPDP</dt><dd className="tabular-nums text-foreground">{pharmacy.ncpdp || "Not provided"}</dd></div>
-              <div><dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Software</dt><dd className="break-words text-foreground">{pharmacy.software}</dd></div>
+              <div className="min-w-0 sm:col-span-2"><dt className="text-[13px] font-medium text-muted-foreground">Address</dt><dd className="break-words text-foreground">{pharmacy.street}, {pharmacy.city}, {pharmacy.state} {pharmacy.zip}</dd></div>
+              <div><dt className="text-[13px] font-medium text-muted-foreground">NPI</dt><dd className="tabular-nums text-foreground">{pharmacy.npi}</dd></div>
+              <div><dt className="text-[13px] font-medium text-muted-foreground">NCPDP</dt><dd className="tabular-nums text-foreground">{pharmacy.ncpdp || "Not provided"}</dd></div>
+              <div><dt className="text-[13px] font-medium text-muted-foreground">Software</dt><dd className="break-words text-foreground">{pharmacy.software}</dd></div>
               <div className="min-w-0">
-                <dt className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Store admin</dt>
+                <dt className="text-[13px] font-medium text-muted-foreground">Store admin</dt>
                 <dd className="text-foreground">
                   {ownerName} <RoleLabel>Owner · Store admin</RoleLabel>
                 </dd>
@@ -254,7 +254,7 @@ export function ReviewView() {
             <p className="mt-3 text-xs text-muted-foreground">One pharmacy per registration. You can add more pharmacies from Billing once this one is active, and invite a store admin from OwedBook.</p>
           </section>
 
-          <fieldset className="border border-border bg-card p-4 sm:p-5">
+          <fieldset className="pb-card p-4 sm:p-5">
             <legend className="sr-only">Before you pay</legend>
             <p className="text-base font-semibold text-foreground" aria-hidden="true">Before you pay</p>
             <p className="text-xs text-muted-foreground">
@@ -289,7 +289,7 @@ export function ReviewView() {
         </div>
 
         <aside aria-labelledby="sum-h" className="min-w-0 lg:sticky lg:top-24 lg:self-start">
-          <div className="space-y-4 border border-border bg-card p-4 sm:p-5">
+          <div className="space-y-4 pb-card p-4 sm:p-5">
             <h2 id="sum-h" className="text-base font-semibold text-foreground">Order summary</h2>
             <div aria-live="polite" data-testid="order-summary">
               {quoteBusy ? (
@@ -347,7 +347,7 @@ export function ReviewView() {
                   aria-invalid={codeMsg ? true : undefined}
                   aria-describedby="code-msg"
                   autoComplete="off"
-                  className="flex h-11 min-w-0 flex-1 border border-input bg-background px-3 text-sm uppercase text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring aria-[invalid=true]:border-destructive disabled:opacity-60"
+                  className="flex h-11 min-w-0 flex-1 rounded-md border border-input bg-card px-3 text-sm uppercase text-foreground aria-[invalid=true]:border-destructive disabled:opacity-60"
                 />
                 {applied ? (
                   <Button type="button" variant="outline" onClick={remove} disabled={codeBusy || quoteBusy || leaving}>Remove</Button>

@@ -1,0 +1,14 @@
+{
+  "role": "ENGINEERING_OWNER_A",
+  "target": "ihgcsrypblqkwommrkgj",
+  "time": "2026-11-24T13:09:05.241Z",
+  "transaction": "READ ONLY; rollback",
+  "source": "OwedBook supabase/migrations/0071_007b_owner_settings_audit.sql:151-155",
+  "counts": {
+    "total": 1118,
+    "without_reads": 59,
+    "account_level": 17,
+    "account_level_without_reads": 17
+  },
+  "note": "Includes account/subscription audit rows with null business_id; Q1 fixture count queried business IDs only. Runtime paging result remains the evidence of actual paging."
+}

@@ -1,0 +1,70 @@
+{
+  "planHash": "6a1abc2ae4187874e6c755d195d5ab6fc060c4f26d92520b6df6bc8cf9c73c7d",
+  "rows": [
+    {
+      "engine": "chromium",
+      "version": "147.0.7727.15",
+      "planned": 8,
+      "started": 8,
+      "results": {
+        "COMPLETE": 8
+      },
+      "notRun": 0,
+      "sessionAttempts": 4,
+      "successfulSessions": 4,
+      "signouts": [
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "engine": "firefox",
+      "version": "148.0.2",
+      "planned": 8,
+      "started": 3,
+      "results": {
+        "COMPLETE": 1,
+        "INCOMPLETE": 2
+      },
+      "notRun": 5,
+      "sessionAttempts": 4,
+      "successfulSessions": 3,
+      "signouts": [
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "planned": 8,
+      "started": 8,
+      "results": {
+        "COMPLETE": 8
+      },
+      "notRun": 0,
+      "sessionAttempts": 4,
+      "successfulSessions": 4,
+      "signouts": [
+        200,
+        200,
+        200,
+        200
+      ]
+    }
+  ],
+  "planned": 24,
+  "started": 19,
+  "complete": 17,
+  "incomplete": 2,
+  "notRun": 5,
+  "portalLoginFailures": 0,
+  "signInAttempts": 12,
+  "successfulSessions": 11,
+  "earlier30": "Preserved INCOMPLETE; F12 plan defect, not product failure; prior Firefox timeout retained",
+  "classification": "ADJUDICATE: bounded reproduction incomplete; no historical Portal-login redirect observed in started routes. No clean O-1 pass. F20/F22 unresolved. No replacement or retry of failed sign-in."
+}

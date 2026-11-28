@@ -1,0 +1,35 @@
+{
+  "time": "2026-11-25T02:36:44.642Z",
+  "pharmacy": "O-1 A-mid o1r03",
+  "pharmacyKey": "1fe8784355f107c03d1b91f89b3024e615f8f9d629a0dc6a9bbe173e800bf15e",
+  "role": "member",
+  "recipient": "ENGINEERING_INVITEE",
+  "operator": "ENGINEERING_OWNER_A",
+  "requests": 1,
+  "delivery": "sent",
+  "browser": {
+    "name": "chromium",
+    "version": "157.0.8103.78"
+  },
+  "sessionMethod": "password (normal sign-in form)",
+  "httpStatus": 201,
+  "invitationRecorded": true,
+  "invitationKey": "838aef0b4af15550100209ce0bdd10daa31469234ff414f12826e7fe84fd2805",
+  "pending": true,
+  "attemptsRemaining": 4,
+  "respondedAt": "2026-11-25T02:37:00.527Z",
+  "sentMessageVisible": true,
+  "signout": 200,
+  "auth": {
+    "password_sign_ins": 1,
+    "token_sign_ins": 0,
+    "generate_link_calls": 0
+  },
+  "sessionDiagnostics": [
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "stage": "password-session-established"
+    }
+  ]
+}

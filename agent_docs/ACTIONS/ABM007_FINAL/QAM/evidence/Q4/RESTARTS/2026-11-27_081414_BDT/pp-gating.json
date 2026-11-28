@@ -1,0 +1,20 @@
+{
+  "app": "pp",
+  "manifest": "ba726f5ea3f5bf2cdd8156a16360e7674be2da500be48c81cacac19ba682c4b9",
+  "label": "q4-pp-ba726f5ea3f5bf2c-restart-2026-11-27_081414_BDT",
+  "rows": [
+    {
+      "name": "build",
+      "cmd": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/tmp/abm007-final-cody-q4/pp",
+      "exit": 0,
+      "started": "2026-11-27T02:14:39.158Z",
+      "finished": "2026-11-27T02:15:03.509Z",
+      "evidence": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/RESTARTS/2026-11-27_081414_BDT/pp-build.log"
+    }
+  ]
+}

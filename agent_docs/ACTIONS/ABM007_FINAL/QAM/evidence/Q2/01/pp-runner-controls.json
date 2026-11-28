@@ -1,0 +1,24 @@
+[
+  {
+    "command": [
+      "/tmp/abm007-final-cody-q2/pp/node_modules/.bin/jest",
+      "--runInBand",
+      "--config",
+      "{\"rootDir\": \"/tmp/abm007-final-cody-q2/runner-controls\", \"testMatch\": [\"**/pass.test.js\"]}"
+    ],
+    "cwd": "/tmp/abm007-final-cody-q2/pp",
+    "exit": 0,
+    "control": "pass"
+  },
+  {
+    "command": [
+      "/tmp/abm007-final-cody-q2/pp/node_modules/.bin/jest",
+      "--runInBand",
+      "--config",
+      "{\"rootDir\": \"/tmp/abm007-final-cody-q2/runner-controls\", \"testMatch\": [\"**/fail.test.js\"]}"
+    ],
+    "cwd": "/tmp/abm007-final-cody-q2/pp",
+    "exit": 1,
+    "control": "fail"
+  }
+]

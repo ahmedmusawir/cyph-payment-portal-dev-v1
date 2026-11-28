@@ -1,0 +1,588 @@
+{
+ "started": "2026-11-24T09:01:50.877Z",
+ "finished": "2026-11-24T09:06:13.489Z",
+ "served": {
+  "ob": {
+   "listener_pid": 1450940,
+   "cwd_is_verification_copy": true,
+   "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+   "app_env": "local-proof",
+   "client_bundle": {
+    "scripts": 13,
+    "scratch_refs": 0,
+    "dev_refs": 0
+   }
+  },
+  "pp": {
+   "listener_pid": 1450941,
+   "cwd_is_verification_copy": true,
+   "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+   "app_env": "local-proof",
+   "client_bundle": "not applicable (server-only Supabase use)"
+  }
+ },
+ "redirect": [
+  {
+   "browser": "chromium",
+   "mode": "fresh",
+   "run": 1,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "fresh",
+   "run": 2,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "fresh",
+   "run": 3,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "fresh",
+   "run": 4,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "fresh",
+   "run": 5,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "warm",
+   "run": 1,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "warm",
+   "run": 2,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "warm",
+   "run": 3,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "warm",
+   "run": 4,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "chromium",
+   "mode": "warm",
+   "run": 5,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "fresh",
+   "run": 1,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "fresh",
+   "run": 2,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "fresh",
+   "run": 3,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "fresh",
+   "run": 4,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "fresh",
+   "run": 5,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "warm",
+   "run": 1,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "warm",
+   "run": 2,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "error": "page.goto: Navigation to \"http://localhost:3101/dashboard\" is interrupted by another navigation to \"http://localhost:310"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "warm",
+   "run": 3,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "warm",
+   "run": 4,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "error": "page.goto: Navigation to \"http://localhost:3101/dashboard\" is interrupted by another navigation to \"http://localhost:310"
+    },
+    {
+     "what": "Open OwedBook",
+     "note": "not offered on the landed page"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  },
+  {
+   "browser": "webkit",
+   "mode": "warm",
+   "run": 5,
+   "steps": [
+    {
+     "what": "PP /dashboard",
+     "landed": "3101/dashboard"
+    },
+    {
+     "what": "click Open OwedBook (handoff)",
+     "landed": "3100/owedbook"
+    },
+    {
+     "what": "sidebar My Stores",
+     "landed": "3100/admin-portal"
+    },
+    {
+     "what": "click sidebar Billing",
+     "landed": "3100/admin-portal/billing"
+    },
+    {
+     "what": "OwedBook links into Account & Billing on Billing",
+     "note": "0 offered"
+    }
+   ],
+   "sentToPortalSignIn": false,
+   "sentToOwedBookSignIn": false
+  }
+ ],
+ "errors": [],
+ "counters": {
+  "password_sign_ins": 0,
+  "token_sign_ins": 12,
+  "generate_link_calls": 12
+ }
+}

@@ -1,0 +1,39 @@
+--- engineering/serve.mjs
++++ QA/serve.mjs
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env node
++import {contained, target, role as assertRole} from './guards.mjs';
+ // ABM007_FINAL — SCRATCH-backed production builds of hash-bound working-tree copies on the fixed proof pair
+ // (OwedBook 3100, Portal 3101; the 'local-proof' origins both apps' appIdentity already allow). Test tooling only:
+ // lives in the module's evidence tools, never in product code. Rulings AM-08 (5), AM-14, AM-15.
+@@ -33,14 +33,15 @@
+ import { existsSync, readFileSync, writeFileSync, openSync, readdirSync, statSync } from 'node:fs';
+ import { join } from 'node:path';
+ const PORTAL = '/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1';
+-const { scratchTarget, stripeTarget, loadNamed, scrub, SCRATCH_REF, DEV_REF } = await import(`${PORTAL}/scripts/apbm007b/lib/env.mjs`);
++const { scratchTarget, sqlRef, stripeTarget, loadNamed, scrub, SCRATCH_REF, DEV_REF } = await import(`${PORTAL}/scripts/apbm007b/lib/env.mjs`);
+ const args = process.argv.slice(2); const cmd = args[0]; const dir = args[args.indexOf('--copies') + 1];
+-if (!['build', 'start', 'stop'].includes(cmd) || !dir || !dir.startsWith('/tmp/claude-1000/') || !existsSync(join(dir, 'ob')) || !existsSync(join(dir, 'pp'))) {
++if (!['build', 'start', 'stop'].includes(cmd) || !dir || !contained(dir) || !existsSync(join(dir, 'ob')) || !existsSync(join(dir, 'pp'))) {
+   console.error('FAIL-CLOSED: build|start|stop --copies <scratchpad dir containing ob/ and pp/>'); process.exit(2);
+ }
++for (const name of ['ob','pp']) contained(join(dir,name));
+ const APPS = { ob: { port: 3100, site: 'http://localhost:3100' }, pp: { port: 3101, site: 'http://localhost:3101' } };
+-const sc = scratchTarget(); if (sc.ref !== SCRATCH_REF || sc.ref === DEV_REF) { console.error('FAIL-CLOSED: target is not SCRATCH'); process.exit(2); }
+-const portInUse = (p) => { try { return execSync(`ss -ltnH 'sport = :${p}'`, { encoding: 'utf8' }).trim().length > 0; } catch { return false; } };
++const sc = scratchTarget(); target(sc.ref, sqlRef(sc.dbUrl)); if (sc.ref !== SCRATCH_REF || sc.ref === DEV_REF) { console.error('FAIL-CLOSED: target is not SCRATCH'); process.exit(2); }
++const portInUse = (p) => { try { return execSync(`ss -ltnH 'sport = :${p}'`, { encoding: 'utf8' }).trim().length > 0; } catch { throw new Error("FAIL-CLOSED: port inspection failed"); } };
+ const base = { PATH: process.env.PATH, HOME: process.env.HOME, NEXT_TELEMETRY_DISABLED: '1' };
+ const pub = (a) => ({ NEXT_PUBLIC_SUPABASE_URL: sc.url, NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: sc.publishableKey, NEXT_PUBLIC_SITE_URL: a.site, NEXT_PUBLIC_APP_ENV: 'local-proof', NEXT_PUBLIC_APBM_DATA_MODE: 'real' });
+ 
+@@ -70,8 +71,8 @@
+     const env = { ...base, NODE_ENV: 'production', PORT: String(a.port), HOSTNAME: '127.0.0.1', ...pub(a), SUPABASE_SECRET_KEY: sc.secretKey, MAIL_ALLOWLIST: '',
+       ...(k === 'pp' ? { STRIPE_SECRET_KEY: st.STRIPE_SECRET_KEY, STRIPE_EXPECTED_ACCOUNT: st.STRIPE_EXPECTED_ACCOUNT, STRIPE_PRICE_STORES: st.STRIPE_PRICE_STORES,
+         STRIPE_PORTAL_CONFIGURATION: pp.STRIPE_PORTAL_CONFIGURATION, STRIPE_WEBHOOK_SECRET: pp.STRIPE_WEBHOOK_SECRET } : {}) };
+-    const log = openSync(join(dir, `serve_${k}_scratch.log`), 'a');
+-    const child = spawn('./node_modules/.bin/next', ['start', '-p', String(a.port), '-H', '127.0.0.1'], { cwd: join(dir, k), env, detached: true, stdio: ['ignore', log, log] });
++    // Discard runtime output: no raw authenticated output is retained.
++    const child = spawn('./node_modules/.bin/next', ['start', '-p', String(a.port), '-H', '127.0.0.1'], { cwd: join(dir, k), env, detached: true, stdio: ['ignore', 'ignore', 'ignore'] });
+     child.unref(); pids[k] = child.pid;
+   }
+   writeFileSync(pidfile, JSON.stringify({ ...pids, started_at: new Date().toISOString() }));

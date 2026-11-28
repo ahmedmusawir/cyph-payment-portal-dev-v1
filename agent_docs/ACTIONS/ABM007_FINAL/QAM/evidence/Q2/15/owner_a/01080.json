@@ -1,0 +1,64 @@
+{
+  "engine": "firefox",
+  "version": "148.0.2",
+  "app": "pp",
+  "role": "ENGINEERING_OWNER_A",
+  "method": "password (normal sign-in form)",
+  "width": 375,
+  "requested": "/dashboard",
+  "landed": "/dashboard",
+  "control": 12,
+  "state": "focus",
+  "time": "2026-11-24T15:56:44.213Z",
+  "raster": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "BUTTON",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 206.5,
+          "top": 982.4500122070312,
+          "right": 285.93333435058594,
+          "bottom": 1002.4500122070312
+        },
+        "unsupported": [],
+        "worstRatio": 9.9482,
+        "samples": 183,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "BUTTON",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 206.5,
+          "top": 1006.4500122070312,
+          "right": 288.18333435058594,
+          "bottom": 1026.4500122070312
+        },
+        "unsupported": [],
+        "worstRatio": 9.9482,
+        "samples": 197,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 2,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "completed": true
+}

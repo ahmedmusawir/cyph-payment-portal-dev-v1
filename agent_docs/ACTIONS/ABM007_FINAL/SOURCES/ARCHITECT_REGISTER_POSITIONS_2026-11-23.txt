@@ -1,0 +1,102 @@
+TO: Friday
+FROM: JARVIS — Architect
+RE: ABM007_FINAL branding register v0.2
+
+C-02 — AMEND
+Recommend light-only for this release, following the supplied design,
+with any existing theme toggle hidden after Director approval.
+Do not build an unapproved dark variant in this assignment.
+Repo recon must first confirm each app’s actual theme behavior.
+This is a proposed product decision, not an approved removal.
+
+C-03 — AGREE, WITH SPECIFIC MAPPING
+Use the literal RFI presentation on sign-in, signup and Add Pharmacy:
+navy backdrop, centered white shell, gradient masthead and white cards.
+
+Help adopts the masthead, cards and numbered instructions within the
+existing app navigation.
+
+Dashboard, My Stores, staff administration, Settings, Profile, Audit
+and billing-overview pages use the translated treatment: navy header,
+white content surfaces, rounded cards and restrained shadows.
+Preserve usable table width and navigation; do not impose the RFI
+page’s approximately 1100px shell on every dashboard.
+
+C-04 — AGREE IN PRINCIPLE; VERIFY IMPLEMENTATION
+Where app --primary controls ordinary primary buttons and links,
+map it to #288472, with white button text.
+Map #154474 separately to headings, header surfaces and focus styling.
+Use #393B38 for body text on white cards.
+
+Inspect actual token consumers before assigning variables. Existing
+names may also control other surfaces. Navy focus rings need a
+contrasting treatment on navy backgrounds.
+
+C-05 — AGREE
+Restrict dark-green text links to white backgrounds in this release.
+My independent calculations:
+- #288472 against white: 4.532:1.
+- #288472 against #EAF3FA: 4.035:1.
+- #288472 against #154474: 2.195:1.
+
+Use accessible contrasting text for links on dark surfaces, or place
+the link on white. Record this as an accessibility qualification to
+the blanket “every link green” instruction.
+
+White text on a solid #288472 button passes text contrast; button
+boundaries and focus visibility still need contextual checks.
+
+C-06 — AGREE: STYLE TILE FIRST
+Compare primary buttons, success notices and Owner/Admin/Member badges
+together before changing status or role colors.
+Retune only where necessary for distinction, contrast or the design’s
+restriction on brand green as a status color.
+Preserve explicit role labels and status meaning.
+
+C-08 — AMEND: PROPOSED NAMES, CONFIRMATION PENDING
+Propose:
+- Master brand: Pharmacy Books
+- OwedBook app: Pharmacy Books / OwedBook
+- Payment Portal app: Pharmacy Books / Account & Billing
+
+The slash describes brand/product hierarchy, not required literal
+header punctuation. Coach/Frank must confirm “OwedBook” versus
+“Owed Book” before wording is frozen.
+
+C-12 — AGREE; SPECIFY BEFORE ENGINEERING BUILD
+Define these once in the brand/UI contract:
+- Hover: darker than #288472; verify contrast.
+- Focus: visible 2px outline with offset and surface-aware contrast.
+- Disabled: clearly inactive, readable and actually noninteractive.
+- Busy: preserve progress text, indicators and duplicate-submit guards.
+- Notices: preserve suitable existing semantic colors after inspection;
+  use explicit wording/icons as well as color.
+- Icons: retain the existing icon set; apply navy where appropriate.
+
+LIVE REFERENCE EVIDENCE — 23 NOVEMBER 2026, ASIA/DHAKA
+
+Inspected https://pharmacybooks.com/rfi in the browser.
+Observed navy surroundings, a centered white panel, gradient masthead,
+rounded white cards and soft shadows.
+
+Read-only computed-style inspection found:
+- H1: 36px; declared family Inter, Segoe UI, Roboto, Arial, sans-serif.
+- Search button: Segoe UI, sans-serif.
+- Search button background: rgb(35, 81, 121), equivalent to #235179.
+- Header logo uses the older .../68a478abfcbcd61a6c4be41e.png export.
+
+These observations support avoiding its button styling and replacing
+the old logo. They do not independently prove that Inter never loads
+anywhere on the page.
+
+Retrieved the preferred logo URL supplied in DESIGN.md:
+.../68a614a57bdd552c6f226c3a.png
+Confirmed a 1024 × 543 PNG. Pixel inspection found #154474 and #32A38D,
+alongside nearby color variations. Use the approved design tokens;
+do not select brand colors by a dominant-pixel shortcut.
+
+No app repositories or deployed app themes were inspected.
+No forms were submitted or external settings changed.
+
+These positions are sufficient to update v0.2. Outstanding Director
+and Coach/Frank decisions remain explicitly pending.

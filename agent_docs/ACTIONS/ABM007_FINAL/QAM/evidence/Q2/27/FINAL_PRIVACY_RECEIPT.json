@@ -1,0 +1,16 @@
+{
+  "controls": {
+    "syntheticExact": true,
+    "syntheticKey": true,
+    "syntheticLink": true,
+    "clean": true
+  },
+  "leaks": [],
+  "textFiles": 7526,
+  "binaryFiles": 27,
+  "castMode": "600",
+  "expandedContent": "PASS. ZIP bytes and source bytes are checked against every index hash. Expanded original item bytes are identical.",
+  "imageReview": "16 Director screenshots with source hashes and visual address-bar review. Two named existing public-auth QA captures. Approved design renders are static reference files. No device About capture, private address, token, inbox or browser state included.",
+  "syntheticException": "The exact QA_SYNTHETIC_SECRET token in two source control artifacts was excluded from pattern matching only. Exact private value scans still covered the original bytes.",
+  "exclusions": "Prior review ZIPs and their hash packs, private cast and external runtime materials, unused archive artifacts. The as-received handoff ZIP is represented by its listed safe members and source SHA-256."
+}

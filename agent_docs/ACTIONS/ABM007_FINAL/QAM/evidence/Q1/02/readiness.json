@@ -1,0 +1,559 @@
+{
+  "reachable": true,
+  "schema": [
+    {
+      "table_name": "accounts",
+      "column_name": "id"
+    },
+    {
+      "table_name": "accounts",
+      "column_name": "name"
+    },
+    {
+      "table_name": "accounts",
+      "column_name": "owner_user_id"
+    },
+    {
+      "table_name": "accounts",
+      "column_name": "created_at"
+    },
+    {
+      "table_name": "accounts",
+      "column_name": "updated_at"
+    },
+    {
+      "table_name": "apa_memberships",
+      "column_name": "id"
+    },
+    {
+      "table_name": "apa_memberships",
+      "column_name": "license_number"
+    },
+    {
+      "table_name": "apa_memberships",
+      "column_name": "membership"
+    },
+    {
+      "table_name": "apa_memberships",
+      "column_name": "membership_expires"
+    },
+    {
+      "table_name": "apa_memberships",
+      "column_name": "first_name"
+    },
+    {
+      "table_name": "apa_memberships",
+      "column_name": "last_name"
+    },
+    {
+      "table_name": "apa_memberships",
+      "column_name": "discount_redeemed"
+    },
+    {
+      "table_name": "apa_memberships",
+      "column_name": "discount_redeemed_at"
+    },
+    {
+      "table_name": "apa_memberships",
+      "column_name": "discount_redeemed_business_id"
+    },
+    {
+      "table_name": "apa_memberships",
+      "column_name": "created_at"
+    },
+    {
+      "table_name": "apa_memberships",
+      "column_name": "updated_at"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "id"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "occurred_at"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "actor_user_id"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "actor_role"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "business_id"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "table_name"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "row_id"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "action"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "old_data"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "new_data"
+    },
+    {
+      "table_name": "audit_logs",
+      "column_name": "context"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "id"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "business_id"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "account_id"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "email"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "role"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "inviter_user_id"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "incumbent_admin_user_id"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "former_admin_disposition"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "status"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "status_reason"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "expires_at"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "dispatch_attempts"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "last_sent_at"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "accepted_user_id"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "accepted_at"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "declined_at"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "revoked_at"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "created_at"
+    },
+    {
+      "table_name": "store_invitations",
+      "column_name": "updated_at"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "account_id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "kind"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "state"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "intent_key"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "actor_user_id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "quote_id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "business_id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "store_name"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "npi"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "ncpdp"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "pharmacy_id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "transfer_id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "amount_cents"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "currency"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "consented_at"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "consent_terms_version"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "payment_deadline"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "stripe_customer_id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "stripe_subscription_id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "stripe_item_id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "period_start"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "period_end"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "target_quantity"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "invoice_id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "hosted_invoice_url"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "lease_owner"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "lease_until"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "fencing_epoch"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "last_error_code"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "activated_at"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "closed_at"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "close_reference"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "created_at"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "updated_at"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "reactivation_business_id"
+    },
+    {
+      "table_name": "store_operations",
+      "column_name": "provider_paid_at"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "id"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "account_id"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "actor_user_id"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "store_name"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "npi"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "ncpdp"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "pharmacy_id"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "transfer_id"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "stripe_customer_id"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "stripe_subscription_id"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "stripe_item_id"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "stripe_price_id"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "currency"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "additional_unit_cents"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "period_start"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "period_end"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "computed_at"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "amount_cents"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "billable_before"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "billable_after"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "next_renewal_cents"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "discount_explanation"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "terms_version"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "expires_at"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "created_at"
+    },
+    {
+      "table_name": "store_quotes",
+      "column_name": "reactivation_business_id"
+    },
+    {
+      "table_name": "store_reactivations",
+      "column_name": "id"
+    },
+    {
+      "table_name": "store_reactivations",
+      "column_name": "business_id"
+    },
+    {
+      "table_name": "store_reactivations",
+      "column_name": "account_id"
+    },
+    {
+      "table_name": "store_reactivations",
+      "column_name": "status"
+    },
+    {
+      "table_name": "store_reactivations",
+      "column_name": "operator_action_ref"
+    },
+    {
+      "table_name": "store_reactivations",
+      "column_name": "created_at"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "id"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "pharmacy_id"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "source_business_id"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "source_account_id"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "buyer_account_id"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "effective_at"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "hold_expires_at"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "status"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "source_ended_at"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "buyer_business_id"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "operator_action_ref"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "created_at"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "updated_at"
+    },
+    {
+      "table_name": "store_transfers",
+      "column_name": "buyer_email"
+    }
+  ],
+  "roles": {
+    "ENGINEERING_OWNER_A": {
+      "exists": true,
+      "passwordAvailable": true
+    },
+    "ENGINEERING_OWNER_B": {
+      "exists": true,
+      "passwordAvailable": true
+    },
+    "ENGINEERING_ADMIN": {
+      "exists": true,
+      "passwordAvailable": false
+    },
+    "ENGINEERING_MEMBER": {
+      "exists": true,
+      "passwordAvailable": false
+    },
+    "ENGINEERING_INVITEE": {
+      "exists": true,
+      "passwordAvailable": false
+    }
+  },
+  "endpointReadStatus": 200,
+  "endpoints": [
+    {
+      "url": "https://cyph-v1-payment-alpha.cyberizedev.com/api/webhooks/stripe",
+      "status": "enabled",
+      "events": [
+        "checkout.session.completed",
+        "checkout.session.expired",
+        "invoice.paid",
+        "invoice.payment_failed",
+        "customer.subscription.created",
+        "customer.subscription.deleted",
+        "customer.subscription.updated"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "role": "ENGINEERING_OWNER_A",
+  "engine": "chromium",
+  "version": "147.0.7727.15",
+  "observations": [],
+  "stage": "scroll last link and capture bounds",
+  "status": 200,
+  "links": 13,
+  "name": "Error",
+  "result": "INCOMPLETE",
+  "session": {
+    "fixture": "ENGINEERING_OWNER_A",
+    "method": "password (normal sign-in form)",
+    "app": "ob",
+    "signout": 200,
+    "diagnostics": [
+      {
+        "app": "ob",
+        "role": "ENGINEERING_OWNER_A",
+        "stage": "password-session-established"
+      }
+    ],
+    "network": {
+      "loads": [],
+      "blocked": [],
+      "console": [],
+      "documentResponses": [
+        {
+          "origin": "http://localhost:3100",
+          "path": "/auth",
+          "status": 200
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help",
+          "status": 200
+        }
+      ]
+    }
+  }
+}

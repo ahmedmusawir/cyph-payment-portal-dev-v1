@@ -1,0 +1,42 @@
+{
+  "chromium": {
+    "exit": 0,
+    "attempts": 8,
+    "complete": 8,
+    "sessions": 4,
+    "signouts": [
+      200,
+      200,
+      200,
+      200
+    ]
+  },
+  "note": "All commands finished; process exit is not route success. See summary and per-route receipts.",
+  "firefox": {
+    "exit": 0,
+    "routesStarted": 3,
+    "complete": 1,
+    "incomplete": 2,
+    "warmRoutesNotRun": 5,
+    "signInAttempts": 4,
+    "successfulSessions": 3,
+    "signouts": [
+      200,
+      200,
+      200,
+      200
+    ]
+  },
+  "webkit": {
+    "exit": 0,
+    "attempts": 8,
+    "complete": 8,
+    "sessions": 4,
+    "signouts": [
+      200,
+      200,
+      200,
+      200
+    ]
+  }
+}

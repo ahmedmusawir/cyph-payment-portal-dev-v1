@@ -1,0 +1,44 @@
+{
+  "scope": "Source-level dependency injection, not external fixture mutation; original guard bodies executed",
+  "controls": [
+    {
+      "guard": "private-cast permissions",
+      "mode": "644",
+      "rejected": true
+    },
+    {
+      "guard": "private-cast permissions",
+      "mode": "660",
+      "rejected": true
+    },
+    {
+      "guard": "private-cast permissions",
+      "mode": "604",
+      "rejected": true
+    },
+    {
+      "guard": "existing-user before token creation",
+      "rejected": true,
+      "providerNotReached": true
+    },
+    {
+      "guard": "served target/local-proof",
+      "input": "wrong target",
+      "rejected": true
+    },
+    {
+      "guard": "served target/local-proof",
+      "input": "wrong target",
+      "rejected": true
+    },
+    {
+      "guard": "served target/local-proof",
+      "input": "alpha",
+      "rejected": true
+    },
+    {
+      "guard": "served DEV bundle",
+      "rejected": true
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+# cyph-payment-portal-dev-v1  HEAD b2e50fa86ef041f9f7f7f1a0f630576de0a10664  taken 2026-11-24T07:49:22Z
+ M CHANGELOG.md
+ M agent_docs/ACTIONS/ABM007_FINAL/ABM_ACCEPTANCE_LEDGER.md
+ M agent_docs/ACTIONS/ABM007_FINAL/ABM_EXECUTION_PLAN.md
+ M agent_docs/ACTIONS/ABM007_FINAL/ABM_JOURNAL.md
+ M agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md
+ M agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md
+ M agent_docs/ACTIONS/ABM007_FINAL/CONTRACTS/HELP_CONTENT.md
+ M agent_docs/ACTIONS/ABM007_FINAL/QAM/HANDOFFS/ENGINEERING_HANDOFF.md
+ M agent_docs/ACTIONS/ABM007_FINAL/QAM/QAM_MANIFEST.md
+ D e2e/account.journeys.spec.ts
+ D e2e/account.repair.spec.ts
+ D e2e/gate-m.public.spec.ts
+ D e2e/logout.final.spec.ts
+ D e2e/public.activation-scenarios.spec.ts
+ D e2e/public.boundaries.spec.ts
+ D e2e/public.journeys.spec.ts
+ D e2e/public.owner-declaration.spec.ts
+ D e2e/public.repair.spec.ts
+ D e2e/public.repair002.spec.ts
+ D e2e/public.repair003.spec.ts
+ D e2e/public.repair004-addendum.spec.ts
+ D e2e/public.repair004.spec.ts
+ D e2e/public.repair005.spec.ts
+ D e2e/public.repair006.spec.ts
+ D e2e/public.zoom.spec.ts
+ M session_2026-11-24.md
+ M src/app/(account)/stores/add/page.tsx
+ M src/app/favicon.ico
+ M src/app/globals.scss
+ M src/app/icon.png
+ M src/app/layout.tsx
+ M src/app/login/LoginPageContent.tsx
+ M src/app/not-found.tsx
+ M src/components/auth/AuthPages.tsx
+ M src/components/auth/LinkRequestForm.tsx
+ M src/components/common/SpinnerLarge.tsx
+ M src/components/portal/Alert.tsx
+ M src/components/portal/Brand.tsx
+ M src/components/portal/DataTable.tsx
+ M src/components/portal/ErrorSummary.tsx
+ M src/components/portal/Footer.tsx
+ M src/components/portal/FormField.tsx
+ M src/components/portal/Loading.tsx
+ M src/components/portal/PageHeader.tsx
+ M src/components/portal/PharmacyFields.tsx
+ M src/components/portal/Pill.tsx
+ M src/components/portal/PublicShell.tsx
+ M src/components/portal/Shell.tsx
+ M src/components/portal/Stepper.tsx
+ M src/components/portal/account/AddStoreFlow.tsx
+ M src/components/portal/account/DashboardView.tsx
+ M src/components/portal/account/OwnerOnlyNotice.tsx
+ M src/components/portal/activation/AccessLinkView.tsx
+ M src/components/portal/activation/ActivationView.tsx
+ M src/components/portal/brand.ts
+ M src/components/portal/register/OwnerView.tsx
+ M src/components/portal/register/PharmacyStepView.tsx
+ M src/components/portal/register/PlanView.tsx
+ M src/components/portal/register/ReviewView.tsx
+ M src/components/ui/alert-dialog.tsx
+ M src/components/ui/button.tsx
+ M src/components/ui/dialog.tsx
+ M src/components/ui/dropdown-menu.tsx
+ M src/components/ui/input.tsx
+ M src/components/ui/label.tsx
+ M src/components/ui/sheet.tsx
+ M src/components/ui/toast.tsx
+ M src/server/billingNotices.ts
+ M tailwind.config.ts
+?? agent_docs/ACTIONS/ABM007_FINAL/CONTRACT_FREEZE.md
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/ABM007_FINAL_ENGINEERING_REVIEW_01.zip
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/ABM007_FINAL_ENGINEERING_REVIEW_01.zip.sha256
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/ABM007_FINAL_SOURCE_REVIEW_01.zip
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/ABM007_FINAL_SOURCE_REVIEW_01.zip.sha256
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/FILE_INDEX.json
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/INVENTORY_owedbook.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/INVENTORY_portal.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/LEFTOVERS.md
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/LOGO_PROVENANCE.md
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/PREPARED_EXTERNAL_VALUES.md
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/REDIRECT_REPRODUCTION.md
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/REFRESH.md
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/REVIEW_START_HERE.md
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/STALE_SPEC_MAPPING.md
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/VERIFICATION.md
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/cyph-payment-portal-dev-v1_changes_vs_baseline.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/cyph-v1-dev_changes_vs_baseline.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/logo/make_icons.py
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/portal_unreachable.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/rendered_checks.json
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob___1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob___375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob__auth_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob__auth_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob__auth_link-expired_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob__auth_link-expired_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob__auth_sign-in-to-continue_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob__auth_sign-in-to-continue_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob__auth_signed-out_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob__auth_signed-out_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob__nope-404_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/ob__nope-404_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__auth_link-expired_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__auth_link-expired_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__login_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__login_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__nope-404_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__nope-404_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__register_owner_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__register_owner_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__register_pharmacy_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__register_pharmacy_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__register_plan_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__register_plan_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__register_review_1440.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/rendered/shots/pp__register_review_375.png
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/tools/assemble.sh
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/tools/colorscan.py
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/tools/inventory.sh
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/tools/reachable.py
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/tools/rendered_checks.cjs
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/tools/rendered_checks_v2.cjs
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/cyph-payment-portal-dev-v1_inventory.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/cyph-payment-portal-dev-v1_source.sha256
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/cyph-payment-portal-dev-v1_status.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/cyph-v1-dev_inventory.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/cyph-v1-dev_source.sha256
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/cyph-v1-dev_status.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/ob_build.log
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/ob_exit.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/ob_lint.log
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/ob_test.log
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/ob_typecheck.log
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/pp_build.log
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/pp_exit.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/pp_lint.log
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/pp_test.log
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify/pp_typecheck.log
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify3/cyph-payment-portal-dev-v1_status.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify3/cyph-v1-dev_inventory.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify3/cyph-v1-dev_source.sha256
+?? agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/verify3/cyph-v1-dev_status.txt
+?? agent_docs/ACTIONS/ABM007_FINAL/SOURCES/DIRECTOR_RELEASE_E2_2026-11-24.md
+?? agent_docs/RESPONSES/response_2026-11-24_104525_abm007-final-e2-interim-handoff.md
+?? agent_docs/RESPONSES/response_2026-11-24_112225_abm007-final-source-review-package.md
+?? agent_docs/RESPONSES/response_2026-11-24_125114_resend-domain-settings-check.md
+?? public/brand/pharmacy-books-logo-primary.png
+?? src/__tests__/abm007/billing-notice-wording.test.ts
+?? src/__tests__/abm007/focus-surface.test.ts
+?? src/__tests__/abm007/forced-light.test.tsx
+?? src/__tests__/abm007/token-pin.test.ts
+?? src/app/apple-icon.png
+?? src/components/portal/layoutMode.tsx

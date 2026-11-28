@@ -1,0 +1,99 @@
+{
+  "engine": "webkit",
+  "version": "26.4",
+  "rows": [
+    {
+      "app": "ob",
+      "role": "PUBLIC",
+      "scripts": true,
+      "width": 375,
+      "requested": "/auth",
+      "baseline": "evidence/Q2/02/0696.json",
+      "baselineLanded": "/auth",
+      "seen": {
+        "status": 200,
+        "path": "/auth"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0000.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 14,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "PUBLIC",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/auth",
+      "baseline": "evidence/Q2/02/0697.json",
+      "baselineLanded": "/auth",
+      "seen": {
+        "status": 200,
+        "path": "/auth"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0001.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 14,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "PUBLIC",
+      "scripts": false,
+      "width": 1280,
+      "requested": "/auth",
+      "baseline": "evidence/Q2/02/0698.json",
+      "baselineLanded": "/auth",
+      "result": "INCOMPLETE",
+      "name": "Error"
+    }
+  ],
+  "sessions": [
+    {
+      "diagnostics": [],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          }
+        ]
+      }
+    }
+  ]
+}

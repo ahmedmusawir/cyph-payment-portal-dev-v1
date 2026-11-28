@@ -1,0 +1,34 @@
+{
+  "app": "mock-ob",
+  "manifest": "f229d7a129138af7cc97e1fdb5acadf885c1907ad7cd3c140f4bad5334a4d22d",
+  "label": "q4-mock-ob-f229d7a129138af7",
+  "rows": [
+    {
+      "name": "install",
+      "cmd": [
+        "npm",
+        "ci",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "cwd": "/tmp/abm007-final-cody-q4/mock-ob",
+      "exit": 0,
+      "started": "2026-11-26T09:32:58.293Z",
+      "finished": "2026-11-26T09:33:28.212Z",
+      "evidence": "agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/01/mock-ob-install.log"
+    },
+    {
+      "name": "build",
+      "cmd": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/tmp/abm007-final-cody-q4/mock-ob",
+      "exit": 0,
+      "started": "2026-11-26T09:33:28.213Z",
+      "finished": "2026-11-26T09:33:49.511Z",
+      "evidence": "agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/01/mock-ob-build.log"
+    }
+  ]
+}

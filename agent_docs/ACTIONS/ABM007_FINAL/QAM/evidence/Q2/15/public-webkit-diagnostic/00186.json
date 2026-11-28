@@ -1,0 +1,44 @@
+{
+  "engine": "webkit",
+  "version": "26.4",
+  "app": "pp",
+  "role": "PUBLIC",
+  "method": "none",
+  "width": 375,
+  "requested": "/auth/handoff-recovery",
+  "landed": "/auth/handoff-recovery",
+  "control": 3,
+  "state": "hover",
+  "time": "2026-11-24T15:45:38.985Z",
+  "raster": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 301.970947265625,
+          "top": 22.5,
+          "right": 341.997802734375,
+          "bottom": 41.5
+        },
+        "unsupported": [],
+        "worstRatio": 9.1766,
+        "samples": 72,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 1,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "completed": true
+}

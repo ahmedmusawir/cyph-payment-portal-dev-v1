@@ -1,0 +1,107 @@
+
+src/app/(admin)/layout.tsx
+1: import { ReactNode } from "react";
+2: import { protectPage } from "@/utils/supabase/actions";
+3: import { AppRole } from "@/utils/app-role";
+4: import { createClient } from "@/utils/supabase/server";
+5: import { redirect } from "next/navigation";
+6: import { canAdminister, listTenantStores, isDemoMode } from "@/services/tenantScope";
+7: import AuthedShell from "@/components/layout/AuthedShell";
+8: 
+9: interface LayoutProps {
+10:   children: ReactNode;
+11: }
+12: 
+13: export default async function AdminLayout({ children }: LayoutProps) {
+14:   // Authenticate with the existing protected helper; tenant capabilities grant admin access.
+15:   const { user, role } = await protectPage([AppRole.ADMIN, AppRole.MEMBER, AppRole.SUPERADMIN], {
+16:     unauthorizedRedirect: "/owedbook",
+17:   });
+18: 
+19:   if (isDemoMode()) {
+20:     if (role !== AppRole.ADMIN) redirect("/owedbook");
+21:   } else if (!canAdminister(await listTenantStores(await createClient()))) {
+22:     redirect("/owedbook");
+23:   }
+24: 
+25:   // Content-column gutter for every admin-portal screen — the designer's `.main`
+26:   // padding (mockup: 26px 30px desktop, 18px 16px ≤900px ≈ below lg, where the
+27:   // sidebar stops being fixed). Applied here (admin-portal-only group) rather than
+28:   // in the shared AuthedShell so /owedbook + /moose-portal are physically out of
+29:   // scope. One place → all six screens (+ loading/error/not-found) inherit it.
+30:   return (
+31:     <AuthedShell user={user} role={role}>
+32:       <div className="px-4 py-[18px] lg:px-[30px] lg:py-[26px]">{children}</div>
+33:     </AuthedShell>
+34:   );
+35: }
+
+src/utils/get-user-role.ts
+1: import { createClient } from './supabase/server';
+2: import { AppRole } from './app-role';
+3: 
+4: /**
+5:  * Fetches the user's role from the user_roles table in the database.
+6:  * This is the canonical source of truth for authorization.
+7:  * 
+8:  * @param userId - The authenticated user's ID from auth.users
+9:  * @returns The user's role or null if not found
+10:  */
+11: export const getUserRole = async (userId: string): Promise<AppRole | null> => {
+12:   if (!userId) return null;
+13: 
+14:   const supabase = await createClient();
+15:   
+16:   const { data, error } = await supabase
+17:     .from('user_roles')
+18:     .select('role')
+19:     .eq('user_id', userId)
+20:     .single();
+21: 
+22:   if (error || !data) {
+23:     console.error('Error fetching user role:', error);
+24:     return null;
+25:   }
+26: 
+27:   return data.role as AppRole;
+28: };
+
+next.config.js
+1: /** @type {import('next').NextConfig} */
+2: // APBM-007B: non-secret build identity, compiled in at build time by scripts/apbm007b/build-check.mjs and exposed only
+3: // through the read-only /api/build-info route (app, revision, artifact id). No credential is ever placed here.
+4: const nextConfig = {
+5:   env: {
+6:     APBM_BUILD_ARTIFACT_ID: process.env.APBM_BUILD_ARTIFACT_ID || "unlabelled-build",
+7:     APBM_BUILD_REVISION: process.env.APBM_BUILD_REVISION || "unrecorded",
+8:   },
+9:   output: "standalone",
+10:   reactStrictMode: true,
+11:   // Do not let `next dev` write the managed agent-rules block into CLAUDE.md / AGENTS.md
+12:   // (root CLAUDE.md is the protected workflow entry; VIK round-two amendment, 2026-10-14).
+13:   agentRules: false,
+14:   async headers() {
+15:     return [
+16:       {
+17:         source: "/((?!_next/static/).*)",
+18:         headers: [
+19:           {
+20:             key: "Cache-Control",
+21:             value:
+22:               "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+23:           },
+24:           {
+25:             key: "Pragma",
+26:             value: "no-cache",
+27:           },
+28:           {
+29:             key: "Expires",
+30:             value: "0",
+31:           },
+32:         ],
+33:       },
+34:     ];
+35:   },
+36: };
+37: 
+38: module.exports = nextConfig;

@@ -1,0 +1,28 @@
+[
+  {
+    "app": "ob",
+    "url": "https://cyph-v1-owedbook-alpha.cyberizedev.com/api/build-info",
+    "method": "GET",
+    "attempts": 1,
+    "time_utc": "2026-11-24T12:11:52.861332+00:00",
+    "status": 200,
+    "body": {
+      "app": "ob",
+      "revision": "ef4cebccae68499bee7d4a53b230e31474a17f52",
+      "artifactId": "owedbook-alpha-ef4cebccae68-20261120t111951z"
+    }
+  },
+  {
+    "app": "pp",
+    "url": "https://cyph-v1-payment-alpha.cyberizedev.com/api/build-info",
+    "method": "GET",
+    "attempts": 1,
+    "time_utc": "2026-11-24T12:11:58.005442+00:00",
+    "status": 200,
+    "body": {
+      "app": "pp",
+      "revision": "6dd3de737acacff9685c0c2027246bf396f10c1d",
+      "artifactId": "payment-alpha-6dd3de737aca-20261121t042632z"
+    }
+  }
+]

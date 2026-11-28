@@ -1,0 +1,52 @@
+PAGE 375 200 http://localhost:3300/ darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=3/3 fail=[]
+PAGE 375 200 http://localhost:3300/auth darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=4/4 fail=[]
+PAGE 375 200 http://localhost:3300/auth/link-expired darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=2/2 fail=[]
+PAGE 375 200 http://localhost:3300/auth/signed-out darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=1/1 fail=[]
+PAGE 375 200 http://localhost:3300/auth/sign-in-to-continue darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=2/2 fail=[]
+PAGE 375 404 http://localhost:3300/nope-404 darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=1/1 fail=[]
+PAGE 375 200 http://localhost:3301/login darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=9/9 fail=[]
+PAGE 375 200 http://localhost:3301/register/plan darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=7/7 fail=[]
+PAGE 375 200 http://localhost:3301/register/owner darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=9/9 fail=[]
+PAGE 375 200 http://localhost:3301/auth/link-expired darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=6/6 fail=[]
+PAGE 375 404 http://localhost:3301/nope-404 darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=1/1 fail=[]
+PAGE 1440 200 http://localhost:3300/ darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=4/4 fail=[]
+PAGE 1440 200 http://localhost:3300/auth darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=4/4 fail=[]
+PAGE 1440 200 http://localhost:3300/auth/link-expired darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=2/2 fail=[]
+PAGE 1440 200 http://localhost:3300/auth/signed-out darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=1/1 fail=[]
+PAGE 1440 200 http://localhost:3300/auth/sign-in-to-continue darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=2/2 fail=[]
+PAGE 1440 404 http://localhost:3300/nope-404 darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=1/1 fail=[]
+PAGE 1440 200 http://localhost:3301/login darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=9/9 fail=[]
+PAGE 1440 200 http://localhost:3301/register/plan darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=7/7 fail=[]
+PAGE 1440 200 http://localhost:3301/register/owner darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=9/9 fail=[]
+PAGE 1440 200 http://localhost:3301/auth/link-expired darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=6/6 fail=[]
+PAGE 1440 404 http://localhost:3301/nope-404 darkEver=false bg=#eaf3fa ovf=0 tokMis=0 ctrl=true theme=0 old=false font=Inter, "Inter Fallback focus=1/1 fail=[]
+MENU http://localhost:3300/ focus=5/5 items=["Log in","Start free trial","Start free trial","Pharmacy Books OwedBook","Close"] fail=[]
+MENU http://localhost:3301/login focus=3/3 items=["Pharmacy Books Account & Billing","Already subscribed? Sign in","Close navigation"] fail=[]
+MENU http://localhost:3301/register/plan focus=3/3 items=["Pharmacy Books Account & Billing","Already subscribed? Sign in","Close navigation"] fail=[]
+HARNESS help_closed 375 ovf=0 widest=0.0 table=false stacked=true(6) focus=18/18 fail=[]
+HARNESS help_menu_open 375 ovf=0 widest=0.0 table=false stacked=true(6) focus=12/12 fail=[]
+HARNESS help_closed 1440 ovf=0 widest=-144.0 table=true stacked=false(6) focus=22/22 fail=[]
+CONTROL 375 Control pass=false sides=[1,1,1,1]
+CONTROL 1440 Control pass=false sides=[1,1,1,1]
+NOJS 375 200 http://localhost:3300/ dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 375 200 http://localhost:3300/auth dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 375 200 http://localhost:3300/auth/link-expired dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 375 200 http://localhost:3300/auth/signed-out dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 375 200 http://localhost:3300/auth/sign-in-to-continue dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 375 404 http://localhost:3300/nope-404 dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 375 200 http://localhost:3301/login dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 375 200 http://localhost:3301/register/plan dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 375 200 http://localhost:3301/register/owner dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 375 200 http://localhost:3301/auth/link-expired dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 375 404 http://localhost:3301/nope-404 dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 1440 200 http://localhost:3300/ dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 1440 200 http://localhost:3300/auth dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 1440 200 http://localhost:3300/auth/link-expired dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 1440 200 http://localhost:3300/auth/signed-out dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 1440 200 http://localhost:3300/auth/sign-in-to-continue dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 1440 404 http://localhost:3300/nope-404 dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 1440 200 http://localhost:3301/login dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 1440 200 http://localhost:3301/register/plan dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 1440 200 http://localhost:3301/register/owner dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 1440 200 http://localhost:3301/auth/link-expired dark=false bg=#eaf3fa class="Y0t-tG_variable"
+NOJS 1440 404 http://localhost:3301/nope-404 dark=false bg=#eaf3fa class="Y0t-tG_variable"

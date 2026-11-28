@@ -1,0 +1,1895 @@
+{
+  "engine": "webkit",
+  "version": "26.4",
+  "rows": [
+    {
+      "app": "ob",
+      "role": "PUBLIC",
+      "scripts": true,
+      "width": 375,
+      "requested": "/auth",
+      "baseline": "evidence/Q2/02/0696.json",
+      "baselineLanded": "/auth",
+      "seen": {
+        "status": 200,
+        "path": "/auth"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0000.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 14,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "PUBLIC",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/auth",
+      "baseline": "evidence/Q2/02/0697.json",
+      "baselineLanded": "/auth",
+      "seen": {
+        "status": 200,
+        "path": "/auth"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0001.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 14,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "PUBLIC",
+      "scripts": false,
+      "width": 1280,
+      "requested": "/auth",
+      "baseline": "evidence/Q2/02/0698.json",
+      "baselineLanded": "/auth",
+      "result": "INCOMPLETE",
+      "name": "Error"
+    },
+    {
+      "app": "pp",
+      "role": "PUBLIC",
+      "scripts": true,
+      "width": 375,
+      "requested": "/login",
+      "baseline": "evidence/Q2/02/0699.json",
+      "baselineLanded": "/login",
+      "seen": {
+        "status": 200,
+        "path": "/login"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0003.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 26,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "pp",
+      "role": "PUBLIC",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/login",
+      "baseline": "evidence/Q2/02/0700.json",
+      "baselineLanded": "/login",
+      "seen": {
+        "status": 200,
+        "path": "/login"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0004.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 27,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "pp",
+      "role": "PUBLIC",
+      "scripts": false,
+      "width": 1280,
+      "requested": "/login",
+      "baseline": "evidence/Q2/02/0701.json",
+      "baselineLanded": "/login",
+      "result": "INCOMPLETE",
+      "name": "Error"
+    },
+    {
+      "baseline": "evidence/Q2/02/0702.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/owedbook",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0703.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/help",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0704.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/profile",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0705.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/invitations",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0706.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/admin-portal",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0707.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/admin-portal/billing",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0708.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/admin-portal/settings",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0709.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/admin-portal/audit",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0710.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/owedbook",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0711.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/help",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0712.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/profile",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0713.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/invitations",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0714.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/admin-portal",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0715.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/admin-portal/billing",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0716.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/admin-portal/settings",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0717.json",
+      "app": "ob",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/admin-portal/audit",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0719.json",
+      "app": "pp",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/dashboard",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0720.json",
+      "app": "pp",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/billing",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0721.json",
+      "app": "pp",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/stores/add",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0722.json",
+      "app": "pp",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/dashboard",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0723.json",
+      "app": "pp",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/billing",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0724.json",
+      "app": "pp",
+      "role": "ENGINEERING_MEMBER",
+      "requested": "/stores/add",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "Q2 active Member was removed in J-h. Zero-store case tested separately. Existing Invitee has mixed Owner/Member capability."
+    },
+    {
+      "baseline": "evidence/Q2/02/0726.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/owedbook",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0727.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/help",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0728.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/profile",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0729.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/invitations",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0730.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0731.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal/billing",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0732.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal/settings",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0733.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal/audit",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0734.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal/stores/[id]",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0735.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal/stores/[id]/invite",
+      "width": 375,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0736.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/owedbook",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0737.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/help",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0738.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/profile",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0739.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/invitations",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0740.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0741.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal/billing",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0742.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal/settings",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0743.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal/audit",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0744.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal/stores/[id]",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "baseline": "evidence/Q2/02/0745.json",
+      "app": "ob",
+      "role": "ENGINEERING_ADMIN",
+      "requested": "/admin-portal/stores/[id]/invite",
+      "width": 1440,
+      "result": "BLOCKED",
+      "reason": "First setup attempt for this browser/app/fixture failed in 02. No automatic sign-in retry."
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "scripts": true,
+      "width": 375,
+      "requested": "/dashboard",
+      "baseline": "evidence/Q2/02/0747.json",
+      "baselineLanded": "/dashboard",
+      "seen": {
+        "status": 200,
+        "path": "/login"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0048.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 26,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": true
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "scripts": true,
+      "width": 375,
+      "requested": "/billing",
+      "baseline": "evidence/Q2/02/0748.json",
+      "baselineLanded": "/billing",
+      "seen": {
+        "status": 200,
+        "path": "/login"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0049.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 26,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": true
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "scripts": true,
+      "width": 375,
+      "requested": "/stores/add",
+      "baseline": "evidence/Q2/02/0749.json",
+      "baselineLanded": "/stores/add",
+      "seen": {
+        "status": 200,
+        "path": "/login"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0050.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 26,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": true
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/dashboard",
+      "baseline": "evidence/Q2/02/0750.json",
+      "baselineLanded": "/dashboard",
+      "seen": {
+        "status": 200,
+        "path": "/login"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0051.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 27,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": true
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/billing",
+      "baseline": "evidence/Q2/02/0751.json",
+      "baselineLanded": "/billing",
+      "seen": {
+        "status": 200,
+        "path": "/login"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0052.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 27,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": true
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/stores/add",
+      "baseline": "evidence/Q2/02/0752.json",
+      "baselineLanded": "/stores/add",
+      "seen": {
+        "status": 200,
+        "path": "/login"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0053.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 27,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": true
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/owedbook",
+      "baseline": "evidence/Q2/02/0754.json",
+      "baselineLanded": "/owedbook",
+      "seen": {
+        "status": 200,
+        "path": "/owedbook"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0054.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 33,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/help",
+      "baseline": "evidence/Q2/02/0755.json",
+      "baselineLanded": "/help",
+      "seen": {
+        "status": 200,
+        "path": "/help"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0055.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 583,
+        "fail": 1,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/profile",
+      "baseline": "evidence/Q2/02/0756.json",
+      "baselineLanded": "/profile",
+      "seen": {
+        "status": 200,
+        "path": "/profile"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0056.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 24,
+        "fail": 0,
+        "notRun": 1
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/invitations",
+      "baseline": "evidence/Q2/02/0757.json",
+      "baselineLanded": "/invitations",
+      "seen": {
+        "status": 200,
+        "path": "/invitations"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0057.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 3,
+        "fail": 1,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/admin-portal",
+      "baseline": "evidence/Q2/02/0758.json",
+      "baselineLanded": "/admin-portal",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0058.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 41,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/admin-portal/billing",
+      "baseline": "evidence/Q2/02/0759.json",
+      "baselineLanded": "/admin-portal/billing",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal/billing"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0059.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 40,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/admin-portal/settings",
+      "baseline": "evidence/Q2/02/0760.json",
+      "baselineLanded": "/admin-portal/settings",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal/settings"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0060.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 27,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/admin-portal/audit",
+      "baseline": "evidence/Q2/02/0761.json",
+      "baselineLanded": "/admin-portal/audit",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal/audit"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0061.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 477,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/admin-portal/stores/[id]",
+      "baseline": "evidence/Q2/02/0762.json",
+      "baselineLanded": "/admin-portal/stores/[id]",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal/stores/[id]"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0062.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 26,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/admin-portal/stores/[id]/invite",
+      "baseline": "evidence/Q2/02/0763.json",
+      "baselineLanded": "/admin-portal/stores/[id]/invite",
+      "result": "INCOMPLETE",
+      "name": "Error"
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/owedbook",
+      "baseline": "evidence/Q2/02/0764.json",
+      "baselineLanded": "/owedbook",
+      "seen": {
+        "status": 200,
+        "path": "/owedbook"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0064.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 52,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/help",
+      "baseline": "evidence/Q2/02/0765.json",
+      "baselineLanded": "/help",
+      "seen": {
+        "status": 200,
+        "path": "/help"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0065.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 470,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/profile",
+      "baseline": "evidence/Q2/02/0766.json",
+      "baselineLanded": "/profile",
+      "seen": {
+        "status": 200,
+        "path": "/profile"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0066.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 25,
+        "fail": 0,
+        "notRun": 1
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/invitations",
+      "baseline": "evidence/Q2/02/0767.json",
+      "baselineLanded": "/invitations",
+      "seen": {
+        "status": 200,
+        "path": "/invitations"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0067.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 4,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/admin-portal",
+      "baseline": "evidence/Q2/02/0768.json",
+      "baselineLanded": "/admin-portal",
+      "result": "INCOMPLETE",
+      "name": "TimeoutError"
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/admin-portal/billing",
+      "baseline": "evidence/Q2/02/0769.json",
+      "baselineLanded": "/admin-portal/billing",
+      "result": "INCOMPLETE",
+      "name": "TimeoutError"
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/admin-portal/settings",
+      "baseline": "evidence/Q2/02/0771.json",
+      "baselineLanded": "/admin-portal/settings",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal/settings"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0070.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 20,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/admin-portal/audit",
+      "baseline": "evidence/Q2/02/0772.json",
+      "baselineLanded": "/admin-portal/audit",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal/audit"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0071.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 362,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/admin-portal/stores/[id]",
+      "baseline": "evidence/Q2/02/0773.json",
+      "baselineLanded": "/admin-portal/stores/[id]",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal/stores/[id]"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0072.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 36,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/admin-portal/stores/[id]/invite",
+      "baseline": "evidence/Q2/02/0774.json",
+      "baselineLanded": "/admin-portal/stores/[id]/invite",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal/stores/[id]/invite"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0073.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 25,
+        "fail": 0,
+        "notRun": 2
+      },
+      "redirected": false
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/dashboard",
+      "baseline": "evidence/Q2/02/0776.json",
+      "baselineLanded": "/dashboard",
+      "seen": {
+        "status": 200,
+        "path": "/dashboard"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0074.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 63,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/billing",
+      "baseline": "evidence/Q2/02/0777.json",
+      "baselineLanded": "/billing",
+      "seen": {
+        "status": 200,
+        "path": "/billing"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0075.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 63,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 375,
+      "requested": "/stores/add",
+      "baseline": "evidence/Q2/02/0778.json",
+      "baselineLanded": "/stores/add",
+      "seen": {
+        "status": 200,
+        "path": "/stores/add"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0076.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 18,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/dashboard",
+      "baseline": "evidence/Q2/02/0779.json",
+      "baselineLanded": "/dashboard",
+      "result": "INCOMPLETE",
+      "name": "TimeoutError"
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/billing",
+      "baseline": "evidence/Q2/02/0780.json",
+      "baselineLanded": "/billing",
+      "result": "INCOMPLETE",
+      "name": "TimeoutError"
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_OWNER_A",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/stores/add",
+      "baseline": "evidence/Q2/02/0781.json",
+      "baselineLanded": "/stores/add",
+      "seen": {
+        "status": 200,
+        "path": "/stores/add"
+      },
+      "result": "OBSERVED",
+      "evidence": "webkit/0079.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 1,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 21,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    }
+  ],
+  "sessions": [
+    {
+      "diagnostics": [],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "diagnostics": [],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_ADMIN",
+      "method": "provider token via the app confirm page (AM-15)",
+      "app": "pp",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "pp",
+          "role": "ENGINEERING_ADMIN",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        },
+        {
+          "app": "ob",
+          "role": "ENGINEERING_ADMIN",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [
+          {
+            "time": "2026-11-26T09:07:32.175Z",
+            "path": "/dashboard",
+            "resource": "document"
+          },
+          {
+            "time": "2026-11-26T09:07:33.184Z",
+            "path": "/billing",
+            "resource": "document"
+          },
+          {
+            "time": "2026-11-26T09:07:35.217Z",
+            "path": "/dashboard",
+            "resource": "document"
+          },
+          {
+            "time": "2026-11-26T09:07:36.556Z",
+            "path": "/billing",
+            "resource": "document"
+          }
+        ],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/auth/link-expired",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 307
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/billing",
+            "status": 307
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/stores/add",
+            "status": 307
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 307
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/billing",
+            "status": 307
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/stores/add",
+            "status": 307
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_OWNER_A",
+      "method": "password (normal sign-in form)",
+      "app": "ob",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_OWNER_A",
+          "stage": "password-session-established"
+        },
+        {
+          "app": "ob",
+          "role": "ENGINEERING_ADMIN",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        },
+        {
+          "app": "pp",
+          "role": "ENGINEERING_ADMIN",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [
+          {
+            "type": "pageerror",
+            "message": "/ihgcsrypblqkwommrkgj.supabase.co/rest/v1/rpc/tenant_stores due to access control checks."
+          },
+          {
+            "type": "pageerror",
+            "message": "/localhost:3100/admin-portal/stores/[id]?_rsc=kPrg_wiWyIbHjv1e due to access control checks."
+          },
+          {
+            "type": "pageerror",
+            "message": "/localhost:3100/admin-portal/stores/[id]?_rsc=kPrg_wiWyIbHjv1e due to access control checks."
+          },
+          {
+            "type": "pageerror",
+            "message": "/localhost:3100/admin-portal/billing?_rsc=Wf7P4f4IJ1blKRm3 due to access control checks."
+          },
+          {
+            "type": "pageerror",
+            "message": "/localhost:3100/admin-portal/settings?_rsc=Wf7P4f4IJ1blKRm3 due to access control checks."
+          },
+          {
+            "type": "pageerror",
+            "message": "/localhost:3100/admin-portal/audit?_rsc=Wf7P4f4IJ1blKRm3 due to access control checks."
+          },
+          {
+            "type": "pageerror",
+            "message": "TypeError: Load failed"
+          }
+        ],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/profile",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/invitations",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/billing",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/settings",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/audit",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/stores/[id]",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/stores/[id]/invite",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/profile",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/invitations",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/settings",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/audit",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/stores/[id]",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/stores/[id]/invite",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_OWNER_A",
+      "method": "password (normal sign-in form)",
+      "app": "pp",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "pp",
+          "role": "ENGINEERING_OWNER_A",
+          "stage": "password-session-established"
+        },
+        {
+          "app": "ob",
+          "role": "ENGINEERING_OWNER_A",
+          "stage": "password-session-established"
+        }
+      ],
+      "network": {
+        "loads": [
+          {
+            "time": "2026-11-26T09:09:06.860Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:09:07.038Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:09:07.499Z",
+            "path": "/dashboard",
+            "resource": "document"
+          },
+          {
+            "time": "2026-11-26T09:09:09.917Z",
+            "path": "/billing",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:09:10.106Z",
+            "path": "/billing",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:09:11.133Z",
+            "path": "/billing",
+            "resource": "document"
+          },
+          {
+            "time": "2026-11-26T09:09:11.780Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:09:12.207Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:09:15.067Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:09:15.227Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:09:15.825Z",
+            "path": "/dashboard",
+            "resource": "document"
+          },
+          {
+            "time": "2026-11-26T09:09:21.112Z",
+            "path": "/billing",
+            "resource": "document"
+          },
+          {
+            "time": "2026-11-26T09:09:25.050Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:09:25.252Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:09:32.168Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:09:32.381Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          }
+        ],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/billing",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/stores/add",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/billing",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/stores/add",
+            "status": 200
+          }
+        ]
+      }
+    }
+  ]
+}

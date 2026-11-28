@@ -1,0 +1,5002 @@
+{
+ "step": "06_after_all",
+ "engines": {
+  "firefox": "148.0.2",
+  "chromium": "158.0.8127.88",
+  "webkit": "26.4"
+ },
+ "sessions": {
+  "password_sign_ins": 3,
+  "token_sign_ins": 0,
+  "generate_link_calls": 0,
+  "total_sign_ins": 3
+ },
+ "portal_requests": 0,
+ "took_ms": 253916,
+ "error": null,
+ "log": [
+  "chromium 1024x600 art  1 keyboard center scroll-then-focus start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[2,0]]",
+  "firefox  1024x600 art  1 keyboard center scroll-then-focus start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[6,0]]",
+  "webkit   1024x600 art  1 keyboard center scroll-then-focus start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[25,0]]",
+  "webkit   1024x600 art  1 keyboard center focus-then-scroll start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[25,0]]",
+  "chromium 1024x600 art  1 keyboard center focus-then-scroll start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[5,0]]",
+  "firefox  1024x600 art  1 keyboard center focus-then-scroll start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "webkit   1024x600 art  1 keyboard bottom scroll-then-focus start   500 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[28,0]]",
+  "chromium 1024x600 art  1 keyboard bottom scroll-then-focus start   501 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "firefox  1024x600 art  1 keyboard bottom scroll-then-focus start   501 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "webkit   1024x600 art  1 keyboard bottom focus-then-scroll start    28 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[30,0]]",
+  "chromium 1024x600 art  1 keyboard bottom focus-then-scroll start    28 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[10,0]]",
+  "firefox  1024x600 art  1 keyboard bottom focus-then-scroll start    28 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[14,0]]",
+  "webkit   1024x600 art  1 keyboard top    scroll-then-focus start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[43,0]]",
+  "chromium 1024x600 art  1 keyboard top    scroll-then-focus start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "firefox  1024x600 art  1 keyboard top    scroll-then-focus start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[10,0]]",
+  "webkit   1024x600 art  1 keyboard top    focus-then-scroll start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[9,0]]",
+  "chromium 1024x600 art  1 keyboard top    focus-then-scroll start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[6,0]]",
+  "firefox  1024x600 art  1 keyboard top    focus-then-scroll start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "chromium 1024x600 art  1 mouse    center not applicable (m start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[8,0]]",
+  "webkit   1024x600 art  1 mouse    center not applicable (m start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[21,0]]",
+  "firefox  1024x600 art  1 mouse    center not applicable (m start   306 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[28,0]]",
+  "firefox  1024x600 art  1 mouse    bottom not applicable (m start    28 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[24,0]]",
+  "chromium 1024x600 art  1 mouse    bottom not applicable (m start    28 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[8,0]]",
+  "webkit   1024x600 art  1 mouse    bottom not applicable (m start    28 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[14,0]]",
+  "chromium 1024x600 art  1 mouse    top    not applicable (m start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[7,0]]",
+  "firefox  1024x600 art  1 mouse    top    not applicable (m start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[30,0]]",
+  "webkit   1024x600 art  1 mouse    top    not applicable (m start   584 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[15,0]]",
+  "chromium 1024x600 art  7 keyboard center scroll-then-focus start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[20,0]]",
+  "firefox  1024x600 art  7 keyboard center scroll-then-focus start  4913 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "webkit   1024x600 art  7 keyboard center scroll-then-focus start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[18,0]]",
+  "chromium 1024x600 art  7 keyboard center focus-then-scroll start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "firefox  1024x600 art  7 keyboard center focus-then-scroll start  4913 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[6,0]]",
+  "webkit   1024x600 art  7 keyboard center focus-then-scroll start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[35,0]]",
+  "chromium 1024x600 art  7 mouse    center not applicable (m start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[6,0]]",
+  "firefox  1024x600 art  7 mouse    center not applicable (m start  4913 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[26,0]]",
+  "webkit   1024x600 art  7 mouse    center not applicable (m start  4912 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[9,0]]",
+  "chromium 1024x600 art 13 keyboard center scroll-then-focus start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "firefox  1024x600 art 13 keyboard center scroll-then-focus start  7519 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "webkit   1024x600 art 13 keyboard center scroll-then-focus start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[30,0]]",
+  "chromium 1024x600 art 13 keyboard center focus-then-scroll start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[5,0]]",
+  "firefox  1024x600 art 13 keyboard center focus-then-scroll start  7519 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[17,0]]",
+  "webkit   1024x600 art 13 keyboard center focus-then-scroll start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[29,0]]",
+  "chromium 1024x600 art 13 mouse    center not applicable (m start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[10,0]]",
+  "firefox  1024x600 art 13 mouse    center not applicable (m start  7519 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[23,0]]",
+  "webkit   1024x600 art 13 mouse    center not applicable (m start  7518 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[7,0]]",
+  "chromium 1440x900 art  1 keyboard center scroll-then-focus start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[8,0]]",
+  "firefox  1440x900 art  1 keyboard center scroll-then-focus start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "webkit   1440x900 art  1 keyboard center scroll-then-focus start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[9,0]]",
+  "chromium 1440x900 art  1 keyboard center focus-then-scroll start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[2,0]]",
+  "firefox  1440x900 art  1 keyboard center focus-then-scroll start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[15,0]]",
+  "webkit   1440x900 art  1 keyboard center focus-then-scroll start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[23,0]]",
+  "chromium 1440x900 art  1 keyboard bottom scroll-then-focus start    13 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[9,0]]",
+  "firefox  1440x900 art  1 keyboard bottom scroll-then-focus start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev []",
+  "webkit   1440x900 art  1 keyboard bottom scroll-then-focus start    13 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[119,0]]",
+  "chromium 1440x900 art  1 keyboard bottom focus-then-scroll start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev []",
+  "firefox  1440x900 art  1 keyboard bottom focus-then-scroll start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev []",
+  "firefox  1440x900 art  1 keyboard top    scroll-then-focus start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "chromium 1440x900 art  1 keyboard top    scroll-then-focus start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "webkit   1440x900 art  1 keyboard bottom focus-then-scroll start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev []",
+  "webkit   1440x900 art  1 keyboard top    scroll-then-focus start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[20,0]]",
+  "firefox  1440x900 art  1 keyboard top    focus-then-scroll start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "chromium 1440x900 art  1 keyboard top    focus-then-scroll start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "firefox  1440x900 art  1 mouse    center not applicable (m start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[44,0]]",
+  "webkit   1440x900 art  1 keyboard top    focus-then-scroll start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[25,0]]",
+  "chromium 1440x900 art  1 mouse    center not applicable (m start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[9,0]]",
+  "chromium 1440x900 art  1 mouse    bottom not applicable (m start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev []",
+  "firefox  1440x900 art  1 mouse    bottom not applicable (m start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev []",
+  "webkit   1440x900 art  1 mouse    center not applicable (m start   131 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[11,0]]",
+  "chromium 1440x900 art  1 mouse    top    not applicable (m start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[6,0]]",
+  "firefox  1440x900 art  1 mouse    top    not applicable (m start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[29,0]]",
+  "webkit   1440x900 art  1 mouse    bottom not applicable (m start     0 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev []",
+  "chromium 1440x900 art  7 keyboard center scroll-then-focus start  4470 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[6,0]]",
+  "firefox  1440x900 art  7 keyboard center scroll-then-focus start  4471 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "webkit   1440x900 art  1 mouse    top    not applicable (m start   559 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[21,0]]",
+  "chromium 1440x900 art  7 keyboard center focus-then-scroll start  4470 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "firefox  1440x900 art  7 keyboard center focus-then-scroll start  4471 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[8,0]]",
+  "webkit   1440x900 art  7 keyboard center scroll-then-focus start  4543 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[48,0]]",
+  "chromium 1440x900 art  7 mouse    center not applicable (m start  4470 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[7,0]]",
+  "firefox  1440x900 art  7 mouse    center not applicable (m start  4471 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[26,0]]",
+  "webkit   1440x900 art  7 keyboard center focus-then-scroll start  4543 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[12,0]]",
+  "chromium 1440x900 art 13 keyboard center scroll-then-focus start  6876 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[16,0]]",
+  "firefox  1440x900 art 13 keyboard center scroll-then-focus start  6878 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[6,0]]",
+  "webkit   1440x900 art  7 mouse    center not applicable (m start  4543 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[21,0]]",
+  "chromium 1440x900 art 13 keyboard center focus-then-scroll start  6876 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "firefox  1440x900 art 13 keyboard center focus-then-scroll start  6878 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "webkit   1440x900 art 13 keyboard center scroll-then-focus start  6949 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[143,0]]",
+  "chromium 1440x900 art 13 mouse    center not applicable (m start  6876 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[8,0]]",
+  "firefox  1440x900 art 13 mouse    center not applicable (m start  6878 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[26,0]]",
+  "webkit   1440x900 art 13 keyboard center focus-then-scroll start  6949 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[35,0]]",
+  "chromium 375x900 art  1 keyboard center scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "firefox  375x900 art  1 keyboard center scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "webkit   1440x900 art 13 mouse    center not applicable (m start  6949 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[46,0]]",
+  "chromium 375x900 art  1 keyboard center focus-then-scroll start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[2,0]]",
+  "firefox  375x900 art  1 keyboard center focus-then-scroll start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[7,0]]",
+  "webkit   375x900 art  1 keyboard center scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[9,0]]",
+  "chromium 375x900 art  1 keyboard bottom scroll-then-focus start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "firefox  375x900 art  1 keyboard bottom scroll-then-focus start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "webkit   375x900 art  1 keyboard center focus-then-scroll start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[26,0]]",
+  "chromium 375x900 art  1 keyboard bottom focus-then-scroll start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[9,0]]",
+  "firefox  375x900 art  1 keyboard bottom focus-then-scroll start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[5,0]]",
+  "webkit   375x900 art  1 keyboard bottom scroll-then-focus start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[28,0]]",
+  "chromium 375x900 art  1 keyboard top    scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "firefox  375x900 art  1 keyboard top    scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[5,0]]",
+  "webkit   375x900 art  1 keyboard bottom focus-then-scroll start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[23,0]]",
+  "chromium 375x900 art  1 keyboard top    focus-then-scroll start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[6,0]]",
+  "firefox  375x900 art  1 keyboard top    focus-then-scroll start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "webkit   375x900 art  1 keyboard top    scroll-then-focus start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[22,0]]",
+  "chromium 375x900 art  1 mouse    center not applicable (m start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[19,0]]",
+  "firefox  375x900 art  1 mouse    center not applicable (m start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[28,0]]",
+  "webkit   375x900 art  1 keyboard top    focus-then-scroll start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[19,0]]",
+  "chromium 375x900 art  1 mouse    bottom not applicable (m start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[6,0]]",
+  "firefox  375x900 art  1 mouse    bottom not applicable (m start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[32,0]]",
+  "webkit   375x900 art  1 mouse    center not applicable (m start  1067 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[9,0]]",
+  "chromium 375x900 art  1 mouse    top    not applicable (m start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "firefox  375x900 art  1 mouse    top    not applicable (m start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[40,0]]",
+  "webkit   375x900 art  1 mouse    bottom not applicable (m start   639 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[28,0]]",
+  "chromium 375x900 art  7 keyboard center scroll-then-focus start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "firefox  375x900 art  7 keyboard center scroll-then-focus start  8094 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "webkit   375x900 art  1 mouse    top    not applicable (m start  1495 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[17,0]]",
+  "chromium 375x900 art  7 keyboard center focus-then-scroll start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "webkit   375x900 art  7 keyboard center scroll-then-focus start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[7,0]]",
+  "firefox  375x900 art  7 keyboard center focus-then-scroll start  8094 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[5,0]]",
+  "chromium 375x900 art  7 mouse    center not applicable (m start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[7,0]]",
+  "firefox  375x900 art  7 mouse    center not applicable (m start  8094 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[35,0]]",
+  "webkit   375x900 art  7 keyboard center focus-then-scroll start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[18,0]]",
+  "chromium 375x900 art 13 keyboard center scroll-then-focus start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "webkit   375x900 art  7 mouse    center not applicable (m start  8092 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[14,0]]",
+  "firefox  375x900 art 13 keyboard center scroll-then-focus start 11506 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[3,0]]",
+  "chromium 375x900 art 13 keyboard center focus-then-scroll start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[5,0]]",
+  "webkit   375x900 art 13 keyboard center scroll-then-focus start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[12,0]]",
+  "chromium 375x900 art 13 mouse    center not applicable (m start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[7,0]]",
+  "firefox  375x900 art 13 keyboard center focus-then-scroll start 11506 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[4,0]]",
+  "webkit   375x900 art 13 keyboard center focus-then-scroll start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[6,0]]",
+  "firefox  375x900 art 13 mouse    center not applicable (m start 11506 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[34,0]]",
+  "webkit   375x900 art 13 mouse    center not applicable (m start 11503 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus: h1#top \"Help\" in a header  | ev [[13,0]]"
+ ],
+ "result": {
+  "served": {
+   "ob": {
+    "listener_pid": 3296347,
+    "cwd_is_verification_copy": true,
+    "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+    "app_env": "local-proof",
+    "client_bundle": {
+     "scripts": 13,
+     "scratch_refs": 0,
+     "dev_refs": 0
+    }
+   }
+  },
+  "grid": {
+   "chromium": [
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       2,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 501,
+     "scrollY_after_focus": 501,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       10,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       7,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       20,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       10,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       2,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 13,
+     "scrollY_after_focus": 13,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4470,
+     "scrollY_after_focus": 4470,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4470,
+     "scrollY_after_focus": 4470,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4470,
+     "scrollY_after_focus": 4470,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       7,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6876,
+     "scrollY_after_focus": 6876,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       16,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6876,
+     "scrollY_after_focus": 6876,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 6876,
+     "scrollY_after_focus": 6876,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       2,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       19,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       7,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       7,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    }
+   ],
+   "firefox": [
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 501,
+     "scrollY_after_focus": 501,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       14,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       10,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       28,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       24,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       30,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4913,
+     "scrollY_after_focus": 4913,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4913,
+     "scrollY_after_focus": 4913,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4913,
+     "scrollY_after_focus": 4913,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       26,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7519,
+     "scrollY_after_focus": 7519,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7519,
+     "scrollY_after_focus": 7519,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       17,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 7519,
+     "scrollY_after_focus": 7519,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       23,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "nav \"ON THIS PAGE\n1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       15,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       44,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       29,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4471,
+     "scrollY_after_focus": 4471,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4471,
+     "scrollY_after_focus": 4471,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       8,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4471,
+     "scrollY_after_focus": 4471,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       26,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6878,
+     "scrollY_after_focus": 6878,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6878,
+     "scrollY_after_focus": 6878,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 6878,
+     "scrollY_after_focus": 6878,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       26,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       7,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       28,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       32,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       40,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8094,
+     "scrollY_after_focus": 8094,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8094,
+     "scrollY_after_focus": 8094,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       5,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 8094,
+     "scrollY_after_focus": 8094,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       35,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11506,
+     "scrollY_after_focus": 11506,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       3,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11506,
+     "scrollY_after_focus": 11506,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       4,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 11506,
+     "scrollY_after_focus": 11506,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": false,
+      "outline": "none 3px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       34,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    }
+   ],
+   "webkit": [
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       25,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       25,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 500,
+     "scrollY_after_focus": 500,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       28,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       30,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       43,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 306,
+     "scrollY_after_focus": 306,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       21,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 28,
+     "scrollY_after_focus": 28,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       14,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 584,
+     "scrollY_after_focus": 584,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       15,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       18,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       35,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4912,
+     "scrollY_after_focus": 4912,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       30,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       29,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1024,
+     "h": 600,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 7518,
+     "scrollY_after_focus": 7518,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       7,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       23,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 13,
+     "scrollY_after_focus": 13,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       119,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       20,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       25,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 131,
+     "scrollY_after_focus": 131,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       11,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 0,
+     "scrollY_after_focus": 0,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [],
+     "scroll_event_count": 0,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 559,
+     "scrollY_after_focus": 559,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       21,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4543,
+     "scrollY_after_focus": 4543,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       48,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 4543,
+     "scrollY_after_focus": 4543,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       12,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 4543,
+     "scrollY_after_focus": 4543,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       21,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6949,
+     "scrollY_after_focus": 6949,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       143,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 6949,
+     "scrollY_after_focus": 6949,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       35,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 1440,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 6949,
+     "scrollY_after_focus": 6949,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 148,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       46,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       26,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       28,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "bottom",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       23,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       22,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "keyboard",
+     "place": "top",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       19,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1067,
+     "scrollY_after_focus": 1067,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       9,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "bottom",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 639,
+     "scrollY_after_focus": 639,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       28,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 1,
+     "how": "mouse",
+     "place": "top",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 1495,
+     "scrollY_after_focus": 1495,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       17,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       7,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       18,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 7,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 8092,
+     "scrollY_after_focus": 8092,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       14,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "scroll-then-focus",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       12,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "keyboard",
+     "place": "center",
+     "order": "focus-then-scroll",
+     "key_focus": "keyboard (Shift+Tab, then Tab back onto the link)",
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       6,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    },
+    {
+     "w": 375,
+     "h": 900,
+     "art": 13,
+     "how": "mouse",
+     "place": "center",
+     "order": "not applicable (mouse)",
+     "key_focus": null,
+     "start_scrollY": 11503,
+     "scrollY_after_focus": 11503,
+     "scrollY_at_ms": {
+      "0": 0,
+      "100": 0,
+      "300": 0,
+      "800": 0,
+      "2000": 0
+     },
+     "at_top_and_stays": true,
+     "hash": "#top",
+     "header_in_view": true,
+     "focus": {
+      "what": "h1#top \"Help\" in a header",
+      "in_window": true,
+      "top": 144,
+      "focus_visible": true,
+      "outline": "solid 2px rgb(255, 255, 255)"
+     },
+     "scroll_events": [
+      [
+       13,
+       0
+      ]
+     ],
+     "scroll_event_count": 1,
+     "next_tab_goes_to": "a \"1. Getting around\" in the contents menu"
+    }
+   ]
+  }
+ }
+}

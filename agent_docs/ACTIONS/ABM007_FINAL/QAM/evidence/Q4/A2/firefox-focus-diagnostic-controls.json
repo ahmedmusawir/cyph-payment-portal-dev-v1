@@ -1,0 +1,191 @@
+[
+  {
+    "name": "whole",
+    "expected": "PASS",
+    "keys": 1,
+    "observed": "PASS",
+    "details": {
+      "role": null,
+      "tag": "A",
+      "keyFocus": true,
+      "focusVisible": true,
+      "outlineWidth": 2,
+      "outlineOffset": 2,
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(21, 68, 116)",
+      "shadow": "none",
+      "radius": 8,
+      "rect": {
+        "left": 62,
+        "right": 192,
+        "top": 62,
+        "bottom": 106,
+        "width": 130,
+        "height": 44
+      },
+      "clip": {
+        "left": 50,
+        "top": 50,
+        "right": 474,
+        "bottom": 118
+      },
+      "width": 2,
+      "offset": 2,
+      "color": [
+        21,
+        68,
+        116
+      ],
+      "sides": {
+        "top": {
+          "fraction": 1,
+          "geometricallyClipped": false,
+          "samples": 110
+        },
+        "bottom": {
+          "fraction": 1,
+          "geometricallyClipped": false,
+          "samples": 110
+        },
+        "left": {
+          "fraction": 1,
+          "geometricallyClipped": false,
+          "samples": 24
+        },
+        "right": {
+          "fraction": 1,
+          "geometricallyClipped": false,
+          "samples": 24
+        }
+      },
+      "result": "PASS"
+    },
+    "pass": true
+  },
+  {
+    "name": "left-cut",
+    "expected": "FAIL",
+    "keys": 1,
+    "observed": "FAIL",
+    "details": {
+      "role": null,
+      "tag": "A",
+      "keyFocus": true,
+      "focusVisible": true,
+      "outlineWidth": 2,
+      "outlineOffset": 2,
+      "outlineStyle": "solid",
+      "outlineColor": "rgb(21, 68, 116)",
+      "shadow": "none",
+      "radius": 8,
+      "rect": {
+        "left": 50,
+        "right": 180,
+        "top": 62,
+        "bottom": 106,
+        "width": 130,
+        "height": 44
+      },
+      "clip": {
+        "left": 50,
+        "top": 50,
+        "right": 462,
+        "bottom": 118
+      },
+      "width": 2,
+      "offset": 2,
+      "color": [
+        21,
+        68,
+        116
+      ],
+      "sides": {
+        "top": {
+          "fraction": 1,
+          "geometricallyClipped": false,
+          "samples": 110
+        },
+        "bottom": {
+          "fraction": 1,
+          "geometricallyClipped": false,
+          "samples": 110
+        },
+        "left": {
+          "fraction": 0,
+          "geometricallyClipped": true,
+          "samples": 24
+        },
+        "right": {
+          "fraction": 1,
+          "geometricallyClipped": false,
+          "samples": 24
+        }
+      },
+      "result": "FAIL"
+    },
+    "pass": true
+  },
+  {
+    "name": "shadow-ring",
+    "expected": "PASS",
+    "keys": 1,
+    "observed": "PASS",
+    "details": {
+      "role": null,
+      "tag": "A",
+      "keyFocus": true,
+      "focusVisible": true,
+      "outlineWidth": 2,
+      "outlineOffset": 0,
+      "outlineStyle": "solid",
+      "outlineColor": "rgba(0, 0, 0, 0)",
+      "shadow": "rgb(21, 68, 116) 0px 0px 0px 4px",
+      "radius": 8,
+      "rect": {
+        "left": 62,
+        "right": 192,
+        "top": 62,
+        "bottom": 106,
+        "width": 130,
+        "height": 44
+      },
+      "clip": {
+        "left": 50,
+        "top": 50,
+        "right": 474,
+        "bottom": 118
+      },
+      "width": 2,
+      "offset": 2,
+      "color": [
+        21,
+        68,
+        116
+      ],
+      "sides": {
+        "top": {
+          "fraction": 1,
+          "geometricallyClipped": false,
+          "samples": 110
+        },
+        "bottom": {
+          "fraction": 1,
+          "geometricallyClipped": false,
+          "samples": 110
+        },
+        "left": {
+          "fraction": 1,
+          "geometricallyClipped": false,
+          "samples": 24
+        },
+        "right": {
+          "fraction": 1,
+          "geometricallyClipped": false,
+          "samples": 24
+        }
+      },
+      "result": "PASS"
+    },
+    "pass": true
+  }
+]

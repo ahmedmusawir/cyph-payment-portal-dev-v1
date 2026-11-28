@@ -1,0 +1,44 @@
+{
+  "engine": "firefox",
+  "version": "148.0.2",
+  "app": "pp",
+  "role": "PUBLIC",
+  "method": "none",
+  "width": 1440,
+  "requested": "/register/plan",
+  "landed": "/register/plan",
+  "control": 6,
+  "state": "focus",
+  "time": "2026-11-24T15:39:52.322Z",
+  "raster": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "BUTTON",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 1111.949951171875,
+          "top": 654.7666625976562,
+          "right": 1180.0499572753906,
+          "bottom": 674.7666625976562
+        },
+        "unsupported": [],
+        "worstRatio": 4.5041,
+        "samples": 156,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 1,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "completed": true
+}

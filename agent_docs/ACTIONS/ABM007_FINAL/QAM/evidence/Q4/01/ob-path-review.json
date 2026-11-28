@@ -1,0 +1,30 @@
+{
+  "sourceAndTests": [
+    "src/__tests__/abm007/help-page.test.tsx",
+    "src/__tests__/abm007/home-cta.test.tsx",
+    "src/__tests__/auth/LoginForm.hydration.test.tsx",
+    "src/__tests__/auth/PasswordToggle.test.tsx",
+    "src/__tests__/global/MobileNav.test.tsx",
+    "src/__tests__/global/Navbar.mobile.test.tsx",
+    "src/__tests__/global/UserMenu.test.tsx",
+    "src/__tests__/member/ProfileForm.test.tsx",
+    "src/__tests__/owedbook/OwedBookScreen.test.tsx",
+    "src/app/(public)/HomePageContent.tsx",
+    "src/app/profile/ProfileForm.tsx",
+    "src/components/admin-portal/ScreenHeader.tsx",
+    "src/components/auth/LoginForm.tsx",
+    "src/components/global/MobileNav.tsx",
+    "src/components/global/Navbar.tsx",
+    "src/components/global/UserMenu.tsx",
+    "src/components/help/HelpPage.tsx",
+    "src/components/owedbook/OwedBookScreen.tsx",
+    "src/components/ui/input.tsx",
+    "src/components/ui/password-input.tsx"
+  ],
+  "recordsAndEvidence": [
+    "CHANGELOG.md",
+    "agent_docs/SESSIONS/session_2026-11-26.md"
+  ],
+  "recovery": "unchanged",
+  "noRulingOutsideAllowedPaths": true
+}

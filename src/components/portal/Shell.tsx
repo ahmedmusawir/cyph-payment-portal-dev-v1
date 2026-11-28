@@ -6,7 +6,6 @@ import { usePathname, useRouter } from "next/navigation";
 import { ChevronDown, ExternalLink, Loader2, LogOut, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SpinnerLarge from "@/components/common/SpinnerLarge";
-import ThemeToggler from "@/components/global/ThemeToggler";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import {
   DropdownMenu,
@@ -77,9 +76,13 @@ export function Shell({
   }
 
   const owedBookHref = owedBookHandoffHref();
+  // Drawer item (brand contract 4.8): white drawer, active item on ice with a navy left rule.
+  const drawerItem = (active: boolean) =>
+    `flex min-h-[44px] items-center rounded-md px-3 text-[15px] ${active ? "pb-rail-active" : "text-foreground hover:bg-accent"}`;
   const avatarName = user.nameSet === false ? user.email || user.displayName : user.displayName;
-  const badge = user.role ? (
-    <span className="shrink-0 border border-border px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide text-muted-foreground" title={user.role.scope} data-testid="nav-role-badge">
+  // ABM007_FINAL P-04: one neutral outlined role label, told apart by the word (white outline on the navy bar).
+  const roleLabel = (onDark: boolean) => user.role ? (
+    <span className={`pb-role shrink-0 ${onDark ? "pb-role-on-dark" : ""}`} title={user.role.scope} data-testid="nav-role-badge">
       {user.role.label}
       <span className="sr-only"> ({user.role.scope})</span>
     </span>
@@ -88,27 +91,26 @@ export function Shell({
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <SkipLink />
-      <header className="sticky top-0 z-30 border-b border-border bg-card">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5">
+      <header className="pb-on-dark sticky top-0 z-30 bg-navbar text-navbar-foreground">
+        <div className="mx-auto flex min-h-16 max-w-6xl items-center justify-between gap-3 px-5 py-2">
           <Brand href="/dashboard" />
           <nav className="hidden items-center gap-1 md:flex" aria-label="Account">
             <a
               href={owedBookHref}
-              className="inline-flex h-11 items-center gap-1.5 px-3 text-sm font-medium text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="pb-nav-item inline-flex h-11 items-center gap-1.5 px-3 text-[15px]"
             >
               Open {BRAND.owedBook}
               <ExternalLink className="h-4 w-4" aria-hidden="true" />
             </a>
-            <ThemeToggler />
             <DropdownMenu>
               <DropdownMenuTrigger
-                className="ml-1 inline-flex h-11 items-center gap-2 border border-border px-2.5 pr-3 text-sm text-foreground hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="ml-1 inline-flex h-11 items-center gap-2 rounded-md border border-navbar-foreground/40 px-2.5 pr-3 text-sm text-navbar-foreground hover:bg-navbar-foreground/10"
                 data-testid="account-menu"
               >
                 <Initials name={avatarName} size="sm" />
                 <span className="max-w-[12rem] truncate font-medium" title={user.displayName}>{user.displayName}</span>
-                {badge}
-                <ChevronDown className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
+                {roleLabel(true)}
+                <ChevronDown className="h-4 w-4 text-brand-ice" aria-hidden="true" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="min-w-[14rem]">
                 <DropdownMenuLabel className="font-normal">
@@ -130,38 +132,38 @@ export function Shell({
             </DropdownMenu>
           </nav>
           <div className="flex items-center gap-1 md:hidden">
-            <ThemeToggler />
             <Sheet open={drawerOpen} onOpenChange={setDrawerOpen}>
               <SheetTrigger
                 aria-label="Open account menu"
-                className="grid h-11 w-11 place-items-center text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="inline-flex min-h-11 items-center gap-2 rounded-md border border-navbar-foreground/70 px-3 py-2 text-[15px] text-navbar-foreground hover:bg-navbar-foreground/10"
                 data-testid="menu-trigger"
               >
-                <Menu className="h-6 w-6" aria-hidden="true" />
+                <Menu className="h-5 w-5" aria-hidden="true" />
+                <span aria-hidden="true">Menu</span>
               </SheetTrigger>
               <SheetContent aria-describedby={undefined}>
                 <SheetTitle className="sr-only">Account menu</SheetTitle>
                 <div className="border-b border-border p-4 pr-14">
-                  <Brand href="/dashboard" />
+                  <Brand href="/dashboard" tone="light" />
                 </div>
                 <div className="flex items-center gap-3 border-b border-border p-4">
                   <Initials name={avatarName} />
                   <div className="min-w-0">
-                    <p className="flex min-w-0 items-center gap-2 text-sm font-semibold text-foreground"><span className="truncate">{user.displayName}</span>{badge}</p>
+                    <p className="flex min-w-0 items-center gap-2 text-sm font-semibold text-foreground"><span className="truncate">{user.displayName}</span>{roleLabel(false)}</p>
                     <p className="truncate text-xs text-muted-foreground">{user.email}</p>
                   </div>
                 </div>
-                <nav className="flex flex-col px-4 py-2" aria-label="Account">
-                  <Link href="/dashboard" onClick={(e) => navigate(e, "/dashboard")} className="flex min-h-[44px] items-center text-sm font-medium text-foreground">
+                <nav className="flex flex-col gap-1 px-4 py-3" aria-label="Account">
+                  <Link href="/dashboard" onClick={(e) => navigate(e, "/dashboard")} aria-current={pathname === "/dashboard" ? "page" : undefined} className={drawerItem(pathname === "/dashboard")}>
                     Your account
                   </Link>
-                  <Link href="/billing" onClick={(e) => navigate(e, "/billing")} className="flex min-h-[44px] items-center text-sm font-medium text-foreground">
+                  <Link href="/billing" onClick={(e) => navigate(e, "/billing")} aria-current={pathname === "/billing" ? "page" : undefined} className={drawerItem(pathname === "/billing")}>
                     Billing
                   </Link>
-                  <a href={owedBookHref} className="flex min-h-[44px] items-center text-sm font-medium text-foreground">
+                  <a href={owedBookHref} className={drawerItem(false)}>
                     Open {BRAND.owedBook}
                   </a>
-                  <button type="button" onClick={() => void signOut()} className="flex min-h-[44px] items-center text-left text-sm font-medium text-muted-foreground hover:text-foreground">
+                  <button type="button" onClick={() => void signOut()} className="flex min-h-[44px] items-center rounded-md px-3 text-left text-[15px] text-heading hover:bg-accent">
                     Sign out
                   </button>
                 </nav>

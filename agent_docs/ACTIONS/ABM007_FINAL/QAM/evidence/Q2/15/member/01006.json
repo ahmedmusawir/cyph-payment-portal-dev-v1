@@ -1,0 +1,64 @@
+{
+  "engine": "firefox",
+  "version": "148.0.2",
+  "app": "pp",
+  "role": "ENGINEERING_MEMBER",
+  "method": "provider token via the app confirm page (AM-15)",
+  "width": 375,
+  "requested": "/dashboard",
+  "landed": "/dashboard",
+  "control": 5,
+  "state": "hover",
+  "time": "2026-11-24T15:40:39.703Z",
+  "raster": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "A",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 111.53334045410156,
+          "top": 339.3999938964844,
+          "right": 156.85000610351562,
+          "bottom": 359.3999938964844
+        },
+        "unsupported": [],
+        "worstRatio": 5.3446,
+        "samples": 102,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "A",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 156.85000610351562,
+          "top": 339.3999938964844,
+          "right": 239.46665954589844,
+          "bottom": 359.3999938964844
+        },
+        "unsupported": [],
+        "worstRatio": 5.3445,
+        "samples": 211,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 2,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "completed": true
+}

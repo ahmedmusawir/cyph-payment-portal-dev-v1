@@ -1,0 +1,44 @@
+[
+  {
+    "name": "path-valid",
+    "expected": true,
+    "accepted": true,
+    "pass": true
+  },
+  {
+    "name": "path-outside",
+    "expected": false,
+    "accepted": false,
+    "pass": true
+  },
+  {
+    "name": "target-valid",
+    "expected": true,
+    "accepted": true,
+    "pass": true
+  },
+  {
+    "name": "target-dev",
+    "expected": false,
+    "accepted": false,
+    "pass": true
+  },
+  {
+    "name": "target-unknown",
+    "expected": false,
+    "accepted": false,
+    "pass": true
+  },
+  {
+    "name": "role-valid",
+    "expected": true,
+    "accepted": true,
+    "pass": true
+  },
+  {
+    "name": "role-outside",
+    "expected": false,
+    "accepted": false,
+    "pass": true
+  }
+]

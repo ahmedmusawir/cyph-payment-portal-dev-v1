@@ -1,0 +1,259 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index e9e5de2..33d90e8 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -1,5 +1,10 @@
+ # CHANGELOG
+ 
++## 2026-11-21 04:50 UTC — [CC] Claude Code
++- **Updated:** `DEPLOYMENT_CHECKLIST.md` (init, secrets, webhook, deploy and domain evidence), `RECOVERY.md`, `agent_docs/SESSIONS/session_2026-11-21.md`.
++- **New:** `agent_docs/RESPONSES/response_2026-11-21_095332_payment-alpha-init-result.md`, `agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md`.
++- **Reason:** Payment Portal alpha deployed to `cyph-v1-payment-alpha` and mapped to its domain on the Director's approval.
++
+ ## 2026-11-21 03:40 UTC — [CC] Claude Code
+ - **New:** `agent_docs/KIP_REGISTRY.md` (KIP-1: zod advisory deferred for alpha, open for production).
+ - **Updated:** `stark-deploy.yaml`, `DEPLOYMENT_CHECKLIST.md` (promotion allowlist unset, decisions recorded, cloud checks ticked), `RECOVERY.md`.
+diff --git a/DEPLOYMENT_CHECKLIST.md b/DEPLOYMENT_CHECKLIST.md
+index 6fbfc19..6debe76 100644
+--- a/DEPLOYMENT_CHECKLIST.md
++++ b/DEPLOYMENT_CHECKLIST.md
+@@ -1,8 +1,8 @@
+ # Deployment Checklist — Payment Portal Alpha (run record)
+ 
+ Generated 2026-11-21 by next-deploy-auto v1.3, with the OwedBook alpha review fixes carried over.
+-**Status: PREPARED. Nothing deployed, no cloud resource created or changed, nothing committed.**
+-Evidence: `agent_docs/RESPONSES/response_2026-11-21_090051_payment-alpha-deploy-prep.md`.
++**Status: Stage A DEPLOYED and verified 2026-11-21 (commit `6dd3de7`). Stage B: domain mapping and certificate live at https://cyph-v1-payment-alpha.cyberizedev.com; signed webhook delivery verified (200). Stage C (Supabase settings, sign-in, two-app tests) PENDING. Not Gate D.**
++Evidence: `agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md` (deployment); `agent_docs/RESPONSES/response_2026-11-21_090051_payment-alpha-deploy-prep.md` (preparation).
+ The 3 Nov 2026 FFM run record (service `cyph-sub-portal-prod`) is in git history (`883bc93`); that service is not touched.
+ 
+ ## Config Summary
+@@ -48,8 +48,8 @@ The 3 Nov 2026 FFM run record (service `cyph-sub-portal-prod`) is in git history
+ - [x] Decision (Director, 2026-11-21): the three Stripe identifiers stay in Secret Manager
+ - [x] Decision (Director, 2026-11-21): `APA_PROMOTION_CODES` not set; no APA code accepted on alpha until one is verified
+ - [ ] JARVIS review
+-- [ ] Changes committed on the branch (Tony). `deploy.sh` aborts on an uncommitted tree by design
+-- [ ] Deployment approved by Tony
++- [x] Changes committed on the branch (Tony; HEAD `6dd3de7`)
++- [x] Deployment approved by Tony (2026-11-21)
+ 
+ ## Pre-flight evidence
+ 
+@@ -65,9 +65,9 @@ The 3 Nov 2026 FFM run record (service `cyph-sub-portal-prod`) is in git history
+ 
+ ## Stage A — Base service (this skill, after approval)
+ 
+-- [ ] **A1** `./init-app.sh` (agent): 7 secrets created EMPTY, runtime SA created, 7 accessor bindings, act-as check ✅
+-- [ ] **A2** `./upload-secrets.sh` (Tony): 6 values from `.env.local`. Tony says "secrets done"
+-- [ ] **A3** Webhook signing secret (Tony), in this order:
++- [x] **A1** `./init-app.sh` (agent, 2026-11-21, commit `6dd3de7`): exit 0 on the first run; 7 secrets created EMPTY, runtime SA created, 7 accessor bindings, act-as check ✅
++- [x] **A2** `./upload-secrets.sh` (Tony, 2026-11-21): all 6 uploaded; each has ENABLED version 1 (metadata read back by the agent)
++- [x] **A3** Webhook signing secret (Tony, 2026-11-21): sandbox endpoint `cyph-v1-payment-alpha` created (7 events, snapshot payload, API version `2025-01-27.acacia`; the handler uses the payload as a pointer only); secret stored, ENABLED version 1 (metadata). Value not verifiable until a signed delivery. Steps followed:
+   1. Stripe **sandbox** dashboard (the account in `STRIPE_EXPECTED_ACCOUNT`) → Developers → Webhooks → add an endpoint:
+      URL `https://cyph-v1-payment-alpha.cyberizedev.com/api/webhooks/stripe`; events
+      `checkout.session.completed`, `checkout.session.expired`, `invoice.paid`, `invoice.payment_failed`,
+@@ -80,21 +80,24 @@ The 3 Nov 2026 FFM run record (service `cyph-sub-portal-prod`) is in git history
+   4. **One consumer:** stop the local `stripe listen` and any local Portal pointed at DEV while alpha is the consumer.
+   - The endpoint URL is known before the deploy, so A3 comes before A4. Deliveries fail until the domain is live; Stripe retries.
+   - Without this secret the app rejects every Stripe call ("stripe configuration names missing"), not only webhooks, and `deploy.sh` refuses to run.
+-- [ ] Every secret has an ENABLED version (metadata only)
+-- [ ] IAM: runtime SA holds `secretAccessor` on all 7 (build SA: not needed)
+-- [ ] **A4** `./deploy.sh` exit 0 from a CLEAN tree, no "Setting IAM policy failed" — build ID: ______
+-- [ ] Source revision (full SHA, no `-dirty`): ______
+-- [ ] Image tag: ______ · Image digest (read back from the service): ______
+-- [ ] `allUsers` holds `roles/run.invoker` (read back)
+-- [ ] run.app URL: ______ — `/` answers; `/api/build-info` shows `app: "pp"` and the same revision
+-- [ ] Existing services unchanged (`cyph-sub-portal-prod`, `cyph-v1-owedbook-alpha`, the others): same revisions as before
++- [x] Every secret has an ENABLED version (metadata only, 2026-11-21)
++- [x] IAM: runtime SA is the only accessor on all 7 (read back 2026-11-21; build SA: not needed)
++- [x] **A4** `./deploy.sh` exit 0 from a CLEAN tree (approved by Tony 2026-11-21); "Setting IAM Policy … done", no failure warning — build ID: `ebbd4a02-3d79-4ce4-9a12-2b4afe5f6e48` (SUCCESS, 4m29s)
++- [x] Source revision (full SHA, no `-dirty`): `6dd3de737acacff9685c0c2027246bf396f10c1d`
++- [x] Image tag: `6dd3de737aca-20261121t042632z` · Image digest (read back from the service): `sha256:0b1792918f0d2200deeb98688d42b479708d5f6c752862b2d3a0907b2aa5da1c`
++- [x] Revision `cyph-v1-payment-alpha-00001-mwh`; runtime SA, port 3000, max 1 instance, 1Gi, 7 secret references and 5 plain settings read back as configured
++- [x] `allUsers` holds `roles/run.invoker` (read back)
++- [x] run.app URL: `https://cyph-v1-payment-alpha-hr465ynfuq-ue.a.run.app` — `/` 307 → `/register/plan`; `/login` 200; `/dashboard` 307 → `/login`; `/api/build-info` shows `app: "pp"` and the same revision
++- [x] Unsigned webhook POST → 400 `invalid_signature`; jobs route without token → 404
++- [x] Log: Next.js 16.4.5, `Network: http://0.0.0.0:3000`, no error lines
++- [x] Existing services unchanged: all six on the revisions recorded before the deploy
+ - Sign-in is NOT expected to work on run.app: the app accepts only its configured origin.
+ 
+ ## Stage B — Final domain (operator-led, outside this skill)
+ 
+-- [ ] Cloud Run domain mapping `cyph-v1-payment-alpha.cyberizedev.com` → `cyph-v1-payment-alpha`; Google's expected record matches DNS
+-- [ ] Certificate issued; HTTPS answers; `/api/build-info` on the alpha host
+-- [ ] Stripe test webhook delivery to the alpha endpoint returns 2xx (signature accepted)
++- [x] Cloud Run domain mapping `cyph-v1-payment-alpha.cyberizedev.com` → `cyph-v1-payment-alpha` created 2026-11-21 (Tony approved); Google expects CNAME → `ghs.googlehosted.com.`, public DNS matches
++- [x] Certificate issued; HTTPS answers (2026-11-21: Google Trust Services WR3, verify ok, expires 2027-02-19; `/login` 200; `/api/build-info` shows `6dd3de7`; http redirects to https)
++- [x] Signed Stripe delivery to the alpha endpoint returned 200 (2026-11-21, event `evt_1Udj4FGnEQDyu3RRJuC5BlLE` resent to `we_1Ue5gQGnEQDyu3RRYxHdqat8`): signature accepted. Business outcome (duplicate / processed / ignored) not identified — `agent_docs/RESPONSES/response_2026-11-21_110610_payment-alpha-webhook-delivery.md`
+ 
+ ## Stage C — Two-app integration (PENDING — not started, not passed)
+ 
+diff --git a/RECOVERY.md b/RECOVERY.md
+index 6fba3f7..b5b714a 100644
+--- a/RECOVERY.md
++++ b/RECOVERY.md
+@@ -1,11 +1,14 @@
+ # Recovery State — cyph-stripe-subscription-portal-v1
+ 
+-## ▶ PAYMENT PORTAL ALPHA — DEPLOYMENT PREPARED, NOT DEPLOYED (updated 2026-11-21, Asia/Dhaka) — read this first
++## ▶ PAYMENT PORTAL ALPHA — DEPLOYED, DOMAIN LIVE (updated 2026-11-21, Asia/Dhaka) — read this first
++- **DEPLOYED 2026-11-21:** `cyph-v1-payment-alpha` revision `00001-mwh` from commit `6dd3de7` (build `ebbd4a02-3d79-4ce4-9a12-2b4afe5f6e48`), live at `https://cyph-v1-payment-alpha.cyberizedev.com` (mapping and certificate verified). Report `agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md`. NOT verified: sign-in, signed webhook delivery, mail, two-app flows. Next: Stripe test delivery, Supabase Auth settings, two-app testing, scheduler decision, commit the records. The lines below are the preparation history.
+ - **Status:** branch `deploy/payment-alpha-prep` (base `883bc93`), everything UNCOMMITTED. New service `cyph-v1-payment-alpha` (prefix `cyph-payment-alpha`), `cyberize-nextjs-staging` / us-east1, final URL `https://cyph-v1-payment-alpha.cyberizedev.com`. No cloud resource created or changed; FFM service `cyph-sub-portal-prod` untouched.
+ - **Record:** `agent_docs/RESPONSES/` `response_2026-11-21_090051_payment-alpha-deploy-prep.md`; run record `DEPLOYMENT_CHECKLIST.md`; ledger `agent_docs/SKILL_ISSUES_LEDGER_next_deploy_auto.md` rows 7–12.
+ - **Changed:** `src/lib/appIdentity.ts` (staging row → alpha pair), new `src/__tests__/alpha-origins.test.ts`, `stark-deploy.yaml`, `Dockerfile`, `.dockerignore`, `.gcloudignore`, `cloudbuild.yaml`, `deploy.sh`, `init-app.sh`, new `upload-secrets.sh`, `DEPLOYMENT_CHECKLIST.md`.
+ - **Update 2026-11-21 (later):** cloud read-only checks all pass; Next.js 16.4.5; zod deferral recorded (`agent_docs/KIP_REGISTRY.md` KIP-1); `APA_PROMOTION_CODES` unset. Final report `agent_docs/RESPONSES/response_2026-11-21_092234_payment-alpha-prep-final.md` (has the exact git commands).
+-- **WAITING FOR TONY:** (1) two commits by the list in the final report; (2) deployment approval. Then init (agent) → `upload-secrets.sh` (Tony) → webhook endpoint and secret, checklist step A3 (Tony) → deploy (agent).
++- **Init done 2026-11-21 on commit `6dd3de7`:** 7 empty secrets, runtime SA `sa-cyph-payment-alpha-runtime`, bindings. No values uploaded, not deployed.
++- **Secrets done 2026-11-21:** all 7 have ENABLED version 1 (6 by helper, webhook secret by hand from the new Stripe sandbox endpoint `cyph-v1-payment-alpha`). `deploy.sh` guards pass in a dry run. NOT deployed.
++- **WAITING FOR TONY:** deployment approval. Then `./deploy.sh` (agent), read-back, domain mapping (separate approval). Then init (agent) → `upload-secrets.sh` (Tony) → webhook endpoint and secret, checklist step A3 (Tony) → deploy (agent).
+ - **Never:** reuse the local Stripe CLI signing secret; enable a scheduler while a local job runner is active on DEV; mark Supabase redirect/template updates or two-app tests as passed (Stage C is pending).
+ 
+ ## ▶ APBM007B CLOSEOUT PREPARED — Director merge pending in both repos (updated 2026-11-18, Asia/Dhaka) — read this first
+diff --git a/agent_docs/RESPONSES/response_2026-11-21_095332_payment-alpha-init-result.md b/agent_docs/RESPONSES/response_2026-11-21_095332_payment-alpha-init-result.md
+new file mode 100644
+index 0000000..4118c2d
+--- /dev/null
++++ b/agent_docs/RESPONSES/response_2026-11-21_095332_payment-alpha-init-result.md
+@@ -0,0 +1,11 @@
++# Payment Portal alpha — init result (2026-11-21)
++
++**Result: `./init-app.sh` exit 0, first run.** Authorized by Tony after commit `6dd3de7` (clean tree). No deploy.
++
++- **Created:** 7 empty secrets (`cyph-payment-alpha-supabase-secret-key`, `-stripe-secret-key`, `-stripe-webhook-secret`, `-resend-api-key`, `-stripe-expected-account`, `-stripe-price-stores`, `-stripe-portal-configuration`); runtime service account `sa-cyph-payment-alpha-runtime`; 7 `secretAccessor` bindings for that account only.
++- **Verified:** APIs, Artifact Registry, build identity `524380376459-compute@developer.gserviceaccount.com` with `roles/run.admin`, act-as via `roles/editor`.
++- **No value yet:** all 7 secrets. Six come from `./upload-secrets.sh` (Tony); the webhook secret is added by hand after the Stripe sandbox endpoint is created.
++- **Side effect:** the script set the gcloud defaults `core/project` and `run/region` (already these values).
++- **Not touched:** any existing service, secret or service account.
++
++Next: Tony runs `./upload-secrets.sh`.
+diff --git a/agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md b/agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md
+new file mode 100644
+index 0000000..f052903
+--- /dev/null
++++ b/agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md
+@@ -0,0 +1,59 @@
++# Payment Portal alpha — DEPLOYED, domain live over HTTPS
++
++**Date:** 2026-11-21 (+06) · **Result:** base service DEPLOYED and VERIFIED · domain mapping CREATED · certificate ISSUED · HTTPS answering.
++**Not a certification:** sign-in, the Stripe webhook, mail and two-app flows are NOT yet exercised. A successful deploy is not Gate D.
++
++**Final URL: https://cyph-v1-payment-alpha.cyberizedev.com**
++
++## Deployment (EVIDENCE)
++
++| Item | Value |
++|---|---|
++| Service | `cyph-v1-payment-alpha`, `cyberize-nextjs-staging`, us-east1 |
++| Revision | `cyph-v1-payment-alpha-00001-mwh` (ready) |
++| run.app URL | `https://cyph-v1-payment-alpha-hr465ynfuq-ue.a.run.app` |
++| Source | branch `deploy/payment-alpha-prep`, commit `6dd3de737acacff9685c0c2027246bf396f10c1d`, clean (no `-dirty`) |
++| Build | `ebbd4a02-3d79-4ce4-9a12-2b4afe5f6e48`, SUCCESS, 4m29s |
++| Image tag | `6dd3de737aca-20261121t042632z` |
++| Image digest | `sha256:0b1792918f0d2200deeb98688d42b479708d5f6c752862b2d3a0907b2aa5da1c` — the same in the push step, the build results and the service spec |
++| Runtime SA | `sa-cyph-payment-alpha-runtime@cyberize-nextjs-staging.iam.gserviceaccount.com` |
++| Container | port 3000; log shows Next.js 16.4.5, `Network: http://0.0.0.0:3000` |
++| Sizing | 1Gi, max 1 instance |
++
++## Verification (read back)
++
++- **Access:** `allUsers` holds `roles/run.invoker`; "Setting IAM Policy … done", no failure warning. Matches `access.invoker: public`.
++- **Runtime settings:** `NEXT_PUBLIC_SITE_URL` (alpha), `NEXT_PUBLIC_APP_ENV=staging`, `NEXT_PUBLIC_SUPABASE_URL` (DEV), publishable key, `MAIL_RECIPIENT_POLICY=open`. Seven secrets mounted from `cyph-payment-alpha-*:latest`. `APA_PROMOTION_CODES` and the other optional names not set.
++- **Build identity:** `/api/build-info` returns `app: "pp"`, revision `6dd3de73…10c1d`, artifact `payment-alpha-6dd3de737aca-20261121t042632z`, on both URLs.
++- **HTTP on the alpha domain:** `/` 307 → `/register/plan` · `/login` 200 · `/dashboard` 307 → `/login` · plain http 302 → https.
++- **Guards:** unsigned webhook POST → 400 `invalid_signature`; jobs route without a token → 404.
++- **Other services:** all six on the revisions recorded before the deploy; untouched.
++
++## Domain (approved by Tony with the deployment)
++
++- Mapping `cyph-v1-payment-alpha.cyberizedev.com` → `cyph-v1-payment-alpha`: `Ready` True, `CertificateProvisioned` True, `DomainRoutable` True.
++- Google expects CNAME → `ghs.googlehosted.com.`; public DNS (8.8.8.8) returns exactly that.
++- Certificate: subject `cyph-v1-payment-alpha.cyberizedev.com`, issuer Google Trust Services (WR3), verify ok, expires 2027-02-19.
++
++## Cloud resources created today
++
++7 secrets (1 version each, values supplied by Tony) · 1 service account · 7 secret-level IAM bindings · 1 image · 1 Cloud Run service with public invoker · 1 domain mapping. In Stripe (by Tony): 1 sandbox webhook endpoint. Nothing deleted; nothing existing modified.
++
++## Not verified / not done
++
++- **Secret values:** metadata shows a version exists for each, not that it is correct. No Supabase service-role call, Stripe call or Resend call has run yet.
++- **Webhook signing secret:** unproven until a signed delivery returns 2xx.
++- **Supabase Auth (DEV):** redirect allow-list, Site URL and email templates for the alpha origins — Director, dashboard. Sign-in and emailed links are expected to fail until then.
++- **Scheduler:** not created; the Cloud Scheduler API is not enabled. Expiry and billing-notice jobs do not run on alpha.
++- **One consumer:** the local `stripe listen` and any local Portal on DEV must stay off while alpha is live.
++- **Two-app integration (Stage C):** handoff both ways, purchase, Add Store, billing portal, notices — PENDING.
++- **Before external exposure:** Terms, Privacy and support address. **Before production:** zod 4 (KIP-1).
++- **JARVIS review** of the prepared files was not recorded before the deploy.
++- **Git:** the branch is local; records changed since `6dd3de7` are uncommitted.
++
++## Next steps
++
++1. Stripe sandbox → the `cyph-v1-payment-alpha` endpoint → send a test event (or resend a recent one). 2xx (or `ignored`) proves the signing secret.
++2. Supabase Auth settings for both alpha origins (integration step).
++3. Authenticated two-app testing.
++4. Scheduler decision.
+diff --git a/agent_docs/RESPONSES/response_2026-11-21_110610_payment-alpha-webhook-delivery.md b/agent_docs/RESPONSES/response_2026-11-21_110610_payment-alpha-webhook-delivery.md
+new file mode 100644
+index 0000000..2a55e27
+--- /dev/null
++++ b/agent_docs/RESPONSES/response_2026-11-21_110610_payment-alpha-webhook-delivery.md
+@@ -0,0 +1,25 @@
++# Payment Portal alpha — signed webhook delivery check (2026-11-21)
++
++**Result: signature verification PASSED. Business processing: the request finished with HTTP 200 and no error; which of the three success outcomes it was is NOT established.**
++
++## Verified before sending (Stripe CLI 1.55.11, authenticated; no listener started)
++
++- Account: `acct_1RxzixGnEQDyu3RR`, "Cyber Pharma · sandbox" — the account the earlier project records name.
++- Endpoint: `we_1Ue5gQGnEQDyu3RRYxHdqat8`, URL `https://cyph-v1-payment-alpha.cyberizedev.com/api/webhooks/stripe`, enabled, `livemode: false`, API version `2025-01-27.acacia`, exactly the seven required events. It is the only webhook endpoint in the sandbox.
++
++## Delivery
++
++- Event resent: `evt_1Udj4FGnEQDyu3RRJuC5BlLE`, `customer.subscription.updated`, created 2026-11-20 04:04 UTC, sandbox. Chosen because it was already delivered to localhost yesterday and a subscription update only refreshes the mirror from Stripe.
++- Command: `stripe events resend <event> --webhook-endpoint=<endpoint>` at 2026-11-21 05:05:37 UTC.
++- Cloud Run request log: `POST /api/webhooks/stripe` → **200**, user agent `Stripe/1.0`, 0.55 s, 05:05:37 UTC.
++- Stripe: `pending_webhooks` on the event went 1 → 0 (delivery accepted).
++- No error line in the service log.
++
++## What this proves
++
++- **Signature: PASS (EVIDENCE).** The handler answers 400 `invalid_signature` for a wrong secret, altered bytes or a stale timestamp; an unsigned POST got exactly that earlier today. A 200 is only reachable after the signature check, the sandbox-mode check and the account check.
++- **`STRIPE_SECRET_KEY`, `STRIPE_EXPECTED_ACCOUNT`, `STRIPE_PRICE_STORES`, `STRIPE_PORTAL_CONFIGURATION` are present and well-formed (EVIDENCE):** the handler loads all of them before verifying.
++- **`SUPABASE_SECRET_KEY` works (EVIDENCE):** every 200 path writes or reads the `stripe_events` table with the service-role key first; a failure there returns 500.
++- **Business processing: 200, outcome not identified (GAP).** A 200 body is one of `duplicate` (already finished, no second action), a processed note (mirror refreshed) or `ignored`. The body is not in the Cloud Run log, and the database was not queried. The Stripe dashboard shows the response body under the event's delivery attempt for this endpoint.
++
++Not covered: a new purchase end to end, `RESEND_API_KEY`, the scheduler.
+diff --git a/agent_docs/SESSIONS/session_2026-11-21.md b/agent_docs/SESSIONS/session_2026-11-21.md
+index cbcdb3f..cb7c152 100644
+--- a/agent_docs/SESSIONS/session_2026-11-21.md
++++ b/agent_docs/SESSIONS/session_2026-11-21.md
+@@ -42,13 +42,28 @@
+ **Tests:** typecheck clean; Jest 572/572; lint 0 errors; docker build exit 0 on 16.4.5; upload boundary clean.
+ **Notes:** waiting for Tony's two commits, then deployment approval. Report: `agent_docs/RESPONSES/response_2026-11-21_092234_payment-alpha-prep-final.md`.
+ 
++### Init — COMPLETE
++**Task:** `./init-app.sh` on commit `6dd3de7`, authorized by Tony. Exit 0: 7 empty secrets, runtime SA, 7 bindings. No deploy.
++**Notes:** waiting for Tony to run `./upload-secrets.sh`. Report: `agent_docs/RESPONSES/response_2026-11-21_095332_payment-alpha-init-result.md`.
++
++### Secrets and webhook endpoint — COMPLETE
++**Task:** Tony ran `./upload-secrets.sh` (6 values) and created the Stripe sandbox endpoint `cyph-v1-payment-alpha` (7 events, API version `2025-01-27.acacia`), then stored its signing secret by hidden prompt. All 7 secrets have ENABLED version 1; the runtime SA is the only accessor. `deploy.sh` guards pass in a dry run (clean source `6dd3de7`). NOT deployed.
++**Notes:** waiting for Tony's deployment approval.
++
++### Deploy and domain — COMPLETE
++**Task:** `./deploy.sh` (approved by Tony) exit 0: build `ebbd4a02-3d79-4ce4-9a12-2b4afe5f6e48`, revision `cyph-v1-payment-alpha-00001-mwh`, digest `sha256:0b179291…a5da1c`, source `6dd3de7` clean. Read-back checks pass. Domain mapping created (approved), certificate issued, HTTPS verified.
++**Notes:** sign-in, signed webhook delivery, mail and two-app flows NOT exercised. Report: `agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md`.
++
++### Signed webhook delivery — COMPLETE
++**Task:** resent sandbox event `evt_1Udj4FGnEQDyu3RRJuC5BlLE` to endpoint `we_1Ue5gQGnEQDyu3RRYxHdqat8` with the Stripe CLI (no listener). Cloud Run: POST 200 from Stripe. Signature PASS; business outcome not identified. Report: `agent_docs/RESPONSES/response_2026-11-21_110610_payment-alpha-webhook-delivery.md`.
++
+ ## Lessons Learned
+ - Check `gcloud` authentication first; an expired token turns every cloud check into a GAP.
+ 
+ ## End of Session State
+-- **Working:** local checks green on the prepared tree
++- **Working:** Payment Portal alpha live at https://cyph-v1-payment-alpha.cyberizedev.com (base service, HTTPS, build identity)
+ - **Broken:** nothing known
+-- **Next Steps:** Tony: `gcloud auth login`, decisions, JARVIS review, commit, deployment approval
++- **Next Steps:** signed Stripe test delivery; Supabase Auth settings for the alpha origins; two-app testing; scheduler decision; commit the records
+ 
+ ## Files Changed This Session
+ - `agent_docs/SESSIONS/session_2026-11-21.md` — created (session start)

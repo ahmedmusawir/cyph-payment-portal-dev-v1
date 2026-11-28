@@ -1,0 +1,77 @@
+{
+  "businessColumns": [
+    "id",
+    "account_id",
+    "ncpdp",
+    "npi",
+    "pharmacy_name",
+    "address",
+    "address_line2",
+    "city",
+    "state",
+    "zip",
+    "phone",
+    "fax",
+    "email",
+    "pharmacy_license_number",
+    "pharmacist_license",
+    "contact_person",
+    "contact_person_last_name",
+    "business_email",
+    "website_url",
+    "time_zone",
+    "preferred_contact_method",
+    "country",
+    "pharmacy_software_system",
+    "role_in_pharmacy",
+    "mobile_number",
+    "ghl_contact_id",
+    "ghl_company_id",
+    "date_of_registration",
+    "status",
+    "pharmacy_slug",
+    "stripe_customer_id",
+    "has_used_trial",
+    "activation_key",
+    "created_at",
+    "updated_at",
+    "pharmacy_id",
+    "ownership_started_at",
+    "ownership_ended_at",
+    "removal_requested_at",
+    "removal_effective_at",
+    "removed_at",
+    "transferred_at",
+    "reactivated_at"
+  ],
+  "scopedAuditActions": [
+    {
+      "action": "delete",
+      "count": 1
+    },
+    {
+      "action": "read_page",
+      "count": 537
+    },
+    {
+      "action": "update",
+      "count": 30
+    },
+    {
+      "action": "insert",
+      "count": 25
+    }
+  ],
+  "scopedOperations": [
+    {
+      "kind": "store_removal",
+      "state": "completed",
+      "count": 1
+    },
+    {
+      "kind": "store_add",
+      "state": "activated",
+      "count": 3
+    }
+  ]
+}

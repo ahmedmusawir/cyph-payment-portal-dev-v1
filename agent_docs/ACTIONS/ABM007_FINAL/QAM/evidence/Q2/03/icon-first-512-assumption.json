@@ -1,0 +1,135 @@
+{
+  "rows": [
+    {
+      "app": "ob",
+      "file": "icon.png",
+      "size": [
+        512,
+        512
+      ],
+      "fullCanvasScaleAndWhitePadPixelsEqual": true,
+      "sha256": "04d61e4cc210650bf122b4c3f0d46157d947c30638105c81f11078f2aec755bd"
+    },
+    {
+      "app": "ob",
+      "file": "apple-icon.png",
+      "size": [
+        180,
+        180
+      ],
+      "fullCanvasScaleAndWhitePadPixelsEqual": true,
+      "sha256": "c9f664aebbf9a532391623df749d20e43af78cc60b32fde993d3a0d1387a5f14"
+    },
+    {
+      "app": "ob",
+      "file": "favicon.ico",
+      "sizes": [
+        [
+          16,
+          16
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          48,
+          48
+        ]
+      ],
+      "sha256": "667f09562c76c51dc86c94d3f419edc057e9d708720ae38dcb1e64a36fdd341f",
+      "frames": [
+        {
+          "size": [
+            16,
+            16
+          ],
+          "opaque": true,
+          "wholeSquareResizePixelsEqual": false
+        },
+        {
+          "size": [
+            32,
+            32
+          ],
+          "opaque": true,
+          "wholeSquareResizePixelsEqual": false
+        },
+        {
+          "size": [
+            48,
+            48
+          ],
+          "opaque": true,
+          "wholeSquareResizePixelsEqual": false
+        }
+      ]
+    },
+    {
+      "app": "pp",
+      "file": "icon.png",
+      "size": [
+        512,
+        512
+      ],
+      "fullCanvasScaleAndWhitePadPixelsEqual": true,
+      "sha256": "04d61e4cc210650bf122b4c3f0d46157d947c30638105c81f11078f2aec755bd"
+    },
+    {
+      "app": "pp",
+      "file": "apple-icon.png",
+      "size": [
+        180,
+        180
+      ],
+      "fullCanvasScaleAndWhitePadPixelsEqual": true,
+      "sha256": "c9f664aebbf9a532391623df749d20e43af78cc60b32fde993d3a0d1387a5f14"
+    },
+    {
+      "app": "pp",
+      "file": "favicon.ico",
+      "sizes": [
+        [
+          16,
+          16
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          48,
+          48
+        ]
+      ],
+      "sha256": "667f09562c76c51dc86c94d3f419edc057e9d708720ae38dcb1e64a36fdd341f",
+      "frames": [
+        {
+          "size": [
+            16,
+            16
+          ],
+          "opaque": true,
+          "wholeSquareResizePixelsEqual": false
+        },
+        {
+          "size": [
+            32,
+            32
+          ],
+          "opaque": true,
+          "wholeSquareResizePixelsEqual": false
+        },
+        {
+          "size": [
+            48,
+            48
+          ],
+          "opaque": true,
+          "wholeSquareResizePixelsEqual": false
+        }
+      ]
+    }
+  ],
+  "note": "Independent whole-canvas Lanczos scaling and white padding, pixel comparison for PNGs. Every ICO color/alpha channel independently compared with whole-square resizing; master visual comparison also performed."
+}

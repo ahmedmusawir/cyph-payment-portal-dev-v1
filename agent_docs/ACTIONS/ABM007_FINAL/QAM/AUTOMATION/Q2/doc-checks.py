@@ -1,0 +1,12 @@
+from pathlib import Path
+import json,hashlib,re,subprocess
+q=Path('agent_docs/ACTIONS/ABM007_FINAL/QAM');e=q/'evidence/Q2/03';module=q.parent
+orig=(module/'EVIDENCE/E2/email/DEV_MAGIC_LINK_TEMPLATE_ORIGINAL.html').read_text();amend=(module/'EVIDENCE/E2/email/DEV_MAGIC_LINK_TEMPLATE_AMENDED.html').read_text()
+link=lambda s:re.findall(r'href\s*=\s*[\'"](.*?)[\'"]|({{.*?}})',s,re.S)
+logo=Path('/tmp/abm007-final-cody-q2/ob/public/brand/pharmacy-books-logo-primary.png').read_bytes();mut=bytes([logo[0]^1])+logo[1:]
+controls={'template_link_mutation_flagged':link(orig)!=link(amend.replace('.RedirectTo','.ConfirmationURL')),'template_clean_pass':link(orig)==link(orig),'logo_one_byte_flagged':hashlib.sha256(logo).hexdigest()!=hashlib.sha256(mut).hexdigest()}
+(e/'document-controls.json').write_text(json.dumps(controls,indent=2));assert all(controls.values())
+diff=subprocess.run(['diff','-u',str(module/'EVIDENCE/E2/email/DEV_MAGIC_LINK_TEMPLATE_ORIGINAL.html'),str(module/'EVIDENCE/E2/email/DEV_MAGIC_LINK_TEMPLATE_AMENDED.html')],capture_output=True,text=True)
+(e/'email-template.diff').write_text(diff.stdout)
+notice=subprocess.check_output(['git','diff','cb4decde9adc9ab75d0dcb15556c64a3bdbfe075','fc1fa6c2a90ebf59987287ad765e2e65cf635549','--','src/server/billingNotices.ts'],text=True);(e/'billing-notices.diff').write_text(notice)
+result={'AC-V01':{'record':'ABM_RULINGS.md AM-08(2), line 69','observed':'Director reconfirmed corrected look and P01–P04; no independent approval invented'},'AC-E01':{'all_links_equal':link(orig)==link(amend),'only_brand_heading_change':orig.replace('Sign in to Cyber Pharma','Sign in to Pharmacy Books')==amend,'diff_exit':diff.returncode,'deployment':'NOT RUN; Gate D'},'AC-E03_source':{'observed':'Only sender display name, two subjects and two closing strings change in protected billingNotices.ts; link, arithmetic and dispatch logic unchanged','evidence':'billing-notices.diff','deployment':'NOT RUN; Gate D'},'AC-P01':{'record':'EVIDENCE/E2/CHANGED_LABELS.md','read_in_full':True,'rendered_spot_checks':'Pending completion of Q2 route matrix'},'AC-R03':{'RECOVERY_exception':'AM-08(3), Friday Q1 return02 §3.1; c335671..candidate RECOVERY diff empty','Portal_exception':'billingNotices brand strings only','dependencies':'both diffs empty','migration_changes':'none in complete changed-path inventories'},'limits':'Source checks are not live email delivery, payment outcome or deployment proof.'};(e/'document-results.json').write_text(json.dumps(result,indent=2));print(json.dumps(controls))

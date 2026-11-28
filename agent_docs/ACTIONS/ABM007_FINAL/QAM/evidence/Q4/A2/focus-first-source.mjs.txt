@@ -1,0 +1,97 @@
+import {snap} from './nontext-pixels.mjs';
+import {expect} from './runner.mjs';
+
+export async function tabTo(page,locator,limit=100){
+  for(let i=0;i<=limit;i++){
+    if(await locator.evaluate(e=>document.activeElement===e))return i;
+    if(i<limit)await page.keyboard.press('Tab');
+  }
+  expect(false,'Real Tab sequence did not reach the requested control');
+}
+
+export async function center(locator){
+  await locator.evaluate(e=>e.scrollIntoView({block:'center',inline:'nearest'}));
+}
+
+export async function focusOutline(page,locator){
+  const item=await locator.evaluate(element=>{
+    const r=element.getBoundingClientRect();
+    const style=getComputedStyle(element);
+    const clip={left:0,top:0,right:innerWidth,bottom:innerHeight};
+    for(let node=element.parentElement;node;node=node.parentElement){
+      const s=getComputedStyle(node);
+      const b=node.getBoundingClientRect();
+      if(/hidden|clip|auto|scroll/.test(s.overflowX)){
+        clip.left=Math.max(clip.left,b.left+node.clientLeft);
+        clip.right=Math.min(clip.right,b.left+node.clientLeft+node.clientWidth);
+      }
+      if(/hidden|clip|auto|scroll/.test(s.overflowY)&&node!==document.body&&node!==document.documentElement){
+        clip.top=Math.max(clip.top,b.top+node.clientTop);
+        clip.bottom=Math.min(clip.bottom,b.top+node.clientTop+node.clientHeight);
+      }
+    }
+    return {role:element.getAttribute('role'),tag:element.tagName,keyFocus:element===document.activeElement,
+      focusVisible:element.matches(':focus-visible'),outlineWidth:parseFloat(style.outlineWidth),
+      outlineOffset:parseFloat(style.outlineOffset),outlineStyle:style.outlineStyle,outlineColor:style.outlineColor,
+      shadow:style.boxShadow,radius:parseFloat(style.borderTopLeftRadius)||0,
+      rect:{left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height},clip};
+  });
+  const ring=item.outlineWidth>0&&item.outlineStyle!=='none';
+  const rgb=s=>s.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/)?.slice(1).map(Number);
+  let color,width,offset;
+  if(ring){
+    color=rgb(item.outlineColor);
+    width=item.outlineWidth;
+    offset=item.outlineOffset;
+  }else{
+    const shadow=item.shadow.match(/(rgba?\(\s*21,\s*68,\s*116.*?\))\s+0px\s+0px\s+0px\s+(\d+)px/);
+    color=shadow&&rgb(shadow[1]);
+    width=2;
+    offset=shadow?Math.max(0,Number(shadow[2])-width):0;
+  }
+  if(!item.keyFocus||!item.focusVisible||!color)return {...item,result:'FAIL',reason:'No visible keyboard outline style'};
+  const frame=await snap(page);
+  const {rect,clip}=item;
+  const delta=offset+width;
+  const padded={top:rect.top-delta,bottom:rect.bottom+delta,left:rect.left-delta,right:rect.right+delta};
+  const clipped={top:padded.top<clip.top-.8,bottom:padded.bottom>clip.bottom+.8,
+    left:padded.left<clip.left-.8,right:padded.right>clip.right+.8};
+  const pixel=(x,y)=>{
+    x=Math.round(x);y=Math.round(y);
+    if(x<0||y<0||x>=frame.info.width||y>=frame.info.height)return false;
+    const i=(y*frame.info.width+x)*frame.info.channels;
+    return color.every((c,k)=>Math.abs(c-frame.data[i+k])<=18);
+  };
+  const sides={};
+  for(const side of ['top','bottom','left','right']){
+    const horizontal=['top','bottom'].includes(side);
+    const size=horizontal?rect.width:rect.height;
+    const start=Math.min(size*.3,Math.max(4,item.radius+2));
+    const main=horizontal?rect.left:rect.top;
+    let matched=0,samples=0;
+    for(let i=Math.ceil(start);i<Math.floor(size-start);i++){
+      const coordinate=main+i;
+      const lineCenter=rect[side]+(side==='top'||side==='left'?-1:1)*(offset+width/2);
+      const band=[lineCenter-.8,lineCenter,lineCenter+.8];
+      matched+=Number(band.some(pos=>horizontal?pixel(coordinate,pos):pixel(pos,coordinate)));
+      samples++;
+    }
+    sides[side]={fraction:samples?+(matched/samples).toFixed(3):0,geometricallyClipped:clipped[side],samples};
+  }
+  return {...item,width,offset,color,sides,result:Object.values(sides).every(side=>side.fraction>=.95&&!side.geometricallyClipped)?'PASS':'FAIL'};
+}
+
+export async function calibrateFocus(browser){
+  const page=await browser.newPage({viewport:{width:560,height:300}});
+  try{
+    const results=[];
+    for(const [name,clipped,expected] of [['whole',false,'PASS'],['left-cut',true,'FAIL']]){
+      await page.setContent(`<style>body{margin:50px;background:#fff}.box{overflow:hidden;padding:${clipped?'12px 12px 12px 0':'12px'};width:400px}a{display:inline-flex;height:44px;width:130px;align-items:center;border-radius:8px;background:#fff}a:focus-visible{outline:2px solid rgb(21,68,116);outline-offset:2px}</style><div class="box"><a href="#control">Keyboard probe</a></div>`);
+      const probe=page.getByRole('link');
+      const keys=await tabTo(page,probe,10);
+      const sample=await focusOutline(page,probe);
+      results.push({name,expected,keys,observed:sample.result,details:sample,pass:sample.result===expected});
+    }
+    return results;
+  }finally{await page.close();}
+}

@@ -1,0 +1,646 @@
+{
+ "module": "ABM007_FINAL",
+ "package": "ABM007_FINAL_AUTHORING_REVIEW_02.zip",
+ "generated": "2026-11-23 Asia/Dhaka",
+ "supersedes": "ABM007_FINAL_AUTHORING_REVIEW_01.zip (sha256 9f7d784489d798206a1d7ca9f2964eebf7f4eb931c4aad196f73c485f37cddf3), not nested",
+ "note": "Lists every archive member except this index. The archive's own SHA-256 is given only in the author's return message.",
+ "member_count_excluding_index": 106,
+ "members": [
+  {
+   "archive_path": "ABM007_FINAL/ABM_ACCEPTANCE_LEDGER.md",
+   "purpose": "module control",
+   "bytes": 1173,
+   "sha256": "35b67e035a876e93ef4c4b7154114dfdc56dfad4ca896c870de5d178017451a5"
+  },
+  {
+   "archive_path": "ABM007_FINAL/ABM_ACCEPTANCE_SPEC.md",
+   "purpose": "module control",
+   "bytes": 17382,
+   "sha256": "42163bae823ff6e510e4d100543ea4ea628375cdd5bf7613d2094887c3f6cced"
+  },
+  {
+   "archive_path": "ABM007_FINAL/ABM_BRIEF.md",
+   "purpose": "module control",
+   "bytes": 9673,
+   "sha256": "560968f84e3f0a5891ee62d84649a60a8fe8c8461aad2a90dec3ab43b20b1531"
+  },
+  {
+   "archive_path": "ABM007_FINAL/ABM_ENTRY.md",
+   "purpose": "module control",
+   "bytes": 8186,
+   "sha256": "13c1760e674be33b0c122d35b47c630e9c1718b7d2d9e12f0d62eb2ba5fb222d"
+  },
+  {
+   "archive_path": "ABM007_FINAL/ABM_EXECUTION_PLAN.md",
+   "purpose": "module control",
+   "bytes": 781,
+   "sha256": "7561676b2f7d62a5c5e8bf9c148bdd74e60b04a1b6914c8ace8cbb35b1228eed"
+  },
+  {
+   "archive_path": "ABM007_FINAL/ABM_JOURNAL.md",
+   "purpose": "module control",
+   "bytes": 1654,
+   "sha256": "2807d5a81797e058a0bc6792fd2990060b1e0a4b7648073bdd17816d7c14124d"
+  },
+  {
+   "archive_path": "ABM007_FINAL/ABM_RULINGS.md",
+   "purpose": "module control",
+   "bytes": 15964,
+   "sha256": "524b2aca3e022c411d771db6b4ec68aea06992de1d8818aea8bcbde8a3da10c6"
+  },
+  {
+   "archive_path": "ABM007_FINAL/ABM_SKILLS_MANIFEST.md",
+   "purpose": "module control",
+   "bytes": 2484,
+   "sha256": "73e5832d62b4fcc77355d98631a03040a733566992cf5bf1a44d8309bb6a17a1"
+  },
+  {
+   "archive_path": "ABM007_FINAL/ABM_STATE.md",
+   "purpose": "module control",
+   "bytes": 3032,
+   "sha256": "7bc9990e63148f8ba07a23866ad9b303af84ed6691523f45b75909cd7eb70fc9"
+  },
+  {
+   "archive_path": "ABM007_FINAL/AGENTS.md",
+   "purpose": "module control",
+   "bytes": 1391,
+   "sha256": "f7478b148f9ea1a7174dfea4ef66396e529655dae456c7c112338a1ce9e33e99"
+  },
+  {
+   "archive_path": "ABM007_FINAL/AMENDMENT_EVIDENCE_02.md",
+   "purpose": "review entry",
+   "bytes": 7609,
+   "sha256": "48dce8e5274ae5f3a5dc87b247eec8b6cb186179bd94e263dc58d4f31b31a870"
+  },
+  {
+   "archive_path": "ABM007_FINAL/CLAUDE.md",
+   "purpose": "module control",
+   "bytes": 1380,
+   "sha256": "71bbd5970e71fb236bc15194d5837063a3d6f8ff15b5999533ea222687209dba"
+  },
+  {
+   "archive_path": "ABM007_FINAL/CONTRACTS/BACKLOG_DISPOSITIONS.md",
+   "purpose": "contract",
+   "bytes": 13110,
+   "sha256": "f1c30c080857d6e85a82c492e81c287204421ce03c8515887771cb2c7bd5456e"
+  },
+  {
+   "archive_path": "ABM007_FINAL/CONTRACTS/BRAND_UI_CONTRACT.md",
+   "purpose": "contract",
+   "bytes": 15682,
+   "sha256": "8aa6729cdebe7c45670b754c66ee3729fb1808be06be9bb40066e8e5fc90142f"
+  },
+  {
+   "archive_path": "ABM007_FINAL/CONTRACTS/EMAIL_AND_STRIPE.md",
+   "purpose": "contract",
+   "bytes": 11750,
+   "sha256": "053cf4667f5578b8b402fcdb27422626ebd1451d3e19da35f51ac3a392ceaa86"
+  },
+  {
+   "archive_path": "ABM007_FINAL/CONTRACTS/HELP_CONTENT.md",
+   "purpose": "contract",
+   "bytes": 13580,
+   "sha256": "038c9aed53f71bc1b784dc5606c8cfc53541cf9fbc8aac68216748406a2d5ef4"
+  },
+  {
+   "archive_path": "ABM007_FINAL/CONTRACTS/LOGO_ASSET_SPEC.md",
+   "purpose": "contract",
+   "bytes": 4833,
+   "sha256": "7cd3929d2fb5bac21c382bc0c8ee7558c9e7938ad515f405d5cc9a7477e945f0"
+  },
+  {
+   "archive_path": "ABM007_FINAL/CONTRACTS/NO_BREAK_AND_PATHS.md",
+   "purpose": "contract",
+   "bytes": 11330,
+   "sha256": "bcc8338037346c9e007a595b0645f6fc3897555be1e5f6109f09f7ae066e3b89"
+  },
+  {
+   "archive_path": "ABM007_FINAL/CONTRACTS/OWEDBOOK_POINTER.md",
+   "purpose": "contract",
+   "bytes": 1056,
+   "sha256": "4f03c524737f4df1d4c7bbdb512619a05fc5cf51cd8be9dd673a6a166e8e80bf"
+  },
+  {
+   "archive_path": "ABM007_FINAL/CONTRACTS/UI_SPEC.md",
+   "purpose": "contract",
+   "bytes": 8661,
+   "sha256": "c98482e11db9c34c93315b280db19b6f15d69427d5ec6b5de1000a924940008c"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/README.md",
+   "purpose": "design reference source",
+   "bytes": 5129,
+   "sha256": "9224a15a88ebfaf1c0a9455a760775f3b6fc94c268af59da41e2fe0bf97b4117"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/assets/Pharmacy-Books-Logo-Primary.png",
+   "purpose": "design reference source",
+   "bytes": 321101,
+   "sha256": "e7e5d3575c743f7c07defbaf907dc71a2a7f854aadaaad92d74e73f4d3293afd"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/assets/brand.css",
+   "purpose": "design reference source",
+   "bytes": 12491,
+   "sha256": "e24670ef497db7eda66a7285eb058c13a27fa966ae11d491a755b73c4212489b"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/assets/fonts/INTER_LICENSE.txt",
+   "purpose": "design reference source",
+   "bytes": 4477,
+   "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/assets/fonts/inter-latin-400-italic.woff2",
+   "purpose": "design reference source",
+   "bytes": 25040,
+   "sha256": "7ea9d2f1274cebee837f0c6eebb426c18fbb2333a6b6da4d02ec5cf47db7fb8e"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/assets/fonts/inter-latin-400-normal.woff2",
+   "purpose": "design reference source",
+   "bytes": 23664,
+   "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/assets/fonts/inter-latin-500-normal.woff2",
+   "purpose": "design reference source",
+   "bytes": 24272,
+   "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/assets/fonts/inter-latin-600-normal.woff2",
+   "purpose": "design reference source",
+   "bytes": 24452,
+   "sha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/assets/fonts/inter-latin-700-normal.woff2",
+   "purpose": "design reference source",
+   "bytes": 24356,
+   "sha256": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/01-portal-sign-in__desktop.png",
+   "purpose": "design reference render or check record",
+   "bytes": 2099957,
+   "sha256": "4e8a8e4b4cb4a26ad6a95a59f0cad4142776c87b1dd4c82a26530e34ee5d55b6"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/01-portal-sign-in__mobile.png",
+   "purpose": "design reference render or check record",
+   "bytes": 526681,
+   "sha256": "e5460d2280ac5f11b287e1f89eb2561f599eee1c5733b944e2f0c1b92d8c90c9"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/02-portal-register-plan__desktop.png",
+   "purpose": "design reference render or check record",
+   "bytes": 1657099,
+   "sha256": "3c8eadfa5e560875c61a04acfce0daa3f330292c53ed04bdb8300e824bdadb25"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/02-portal-register-plan__mobile.png",
+   "purpose": "design reference render or check record",
+   "bytes": 714357,
+   "sha256": "323b2353b38e9ccf486d3a07bf70e44ce32ed9df11c01a6225fe0ad218f27b5b"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/03-owedbook-dashboard__desktop.png",
+   "purpose": "design reference render or check record",
+   "bytes": 473764,
+   "sha256": "b5a8a6d5e4571550835427fe293f3353b8f2e8d14504e918859be89628caca6c"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/03-owedbook-dashboard__mobile.png",
+   "purpose": "design reference render or check record",
+   "bytes": 518074,
+   "sha256": "a5135f605303b22dcbde7a6903aec0573d22b96457ac8d0f7488ed3baab8202e"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/04-portal-dashboard__desktop.png",
+   "purpose": "design reference render or check record",
+   "bytes": 461755,
+   "sha256": "cd2dda52d3c633ee90436abd3780698c306ff596c14e1a03158c9687d87e46f4"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/04-portal-dashboard__mobile.png",
+   "purpose": "design reference render or check record",
+   "bytes": 420092,
+   "sha256": "237a63ac661ae8dc2b6faa5afc962a43c9404d6007d0f3775563c1f468ea861f"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/04b-portal-dashboard-menu-open__mobile.png",
+   "purpose": "design reference render or check record",
+   "bytes": 467027,
+   "sha256": "a8a00bdb7b0f26f402d44080465c7b5aab699481b3f16af94181f0848e52f31f"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/05-owedbook-help__desktop.png",
+   "purpose": "design reference render or check record",
+   "bytes": 774484,
+   "sha256": "e8e8b03b47e6a922756fcb516108c02414566ae0bb8c75542829bc956a8f9347"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/05-owedbook-help__mobile.png",
+   "purpose": "design reference render or check record",
+   "bytes": 619630,
+   "sha256": "cdc2d3f71792f3ac967ee9544cae3436691924903fd51625a49834d920a44c3b"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/COLOR_VERIFICATION.txt",
+   "purpose": "design reference render or check record",
+   "bytes": 8493,
+   "sha256": "53970309f6bb59c0b15dd3c1c1743b60c5c9a4d74593541d289871432eb83e64"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/RENDER_CHECKS.txt",
+   "purpose": "design reference render or check record",
+   "bytes": 1238,
+   "sha256": "0c7a82ce7f762d2826ac1c664a4b3819827c6ee54669d0a5610eba88e70bbce6"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/style-tile__desktop.png",
+   "purpose": "design reference render or check record",
+   "bytes": 1622555,
+   "sha256": "4a871c07a4561a955be77145f3d1d419c500eae0b8ce067e3011c99647a115b5"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/renders/style-tile__mobile.png",
+   "purpose": "design reference render or check record",
+   "bytes": 1483813,
+   "sha256": "6d1324bac998ed89c7ee47f5c16eb5c3629aa9bf84dfbc9ad42545b546830d08"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/samples/01-portal-sign-in.html",
+   "purpose": "design reference source",
+   "bytes": 1549,
+   "sha256": "2d46c1a8edcc477f722f47feb4e4d9aa06e3525249ed18cb838945983c1710e1"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/samples/02-portal-register-plan.html",
+   "purpose": "design reference source",
+   "bytes": 2525,
+   "sha256": "9dbe135a6f648578a0ad0c49215dd4f1d4728feacd4a23ebfed0b106f10009ad"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/samples/03-owedbook-dashboard.html",
+   "purpose": "design reference source",
+   "bytes": 4892,
+   "sha256": "82ecf931867edbc9db0659eb00b7f6b19b28f7f09537fa996648882268dd1307"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/samples/04-portal-dashboard.html",
+   "purpose": "design reference source",
+   "bytes": 4263,
+   "sha256": "a032be0349a953d4e44f107c2b1e560af7e69d3b5d63675bb12aa59655d0fb33"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/samples/04b-portal-dashboard-menu-open.html",
+   "purpose": "design reference source",
+   "bytes": 4298,
+   "sha256": "a6c5de0866f0499bd5ae912c2373398abd96cda0ba4cb171055a3c50692c2ba1"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/samples/05-owedbook-help.html",
+   "purpose": "design reference source",
+   "bytes": 3404,
+   "sha256": "a481bed462602f2a85f3f335fc167ec0b4723ff5496d7a81f95deeb8de46ae8c"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/source/build_refs.py",
+   "purpose": "design reference source",
+   "bytes": 22485,
+   "sha256": "f1a28073aafe9f7d7c2f8f3c00999b820b11e3685855900ad529bcb85e718d7d"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/source/gen_tokens.py",
+   "purpose": "design reference source",
+   "bytes": 5817,
+   "sha256": "4727dd9b7966aab60905b02c83b89cf8014fc00d18dad1090be4cd8e4ef39054"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/source/render_refs.mjs",
+   "purpose": "design reference source",
+   "bytes": 2513,
+   "sha256": "1f529dcc4376a6564773ad0f766760ff8be04deefb0607b33cbec7338799e509"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/source/verify_colors.mjs",
+   "purpose": "design reference source",
+   "bytes": 8851,
+   "sha256": "b903ec651d1330ae298bfea7ff1250e8561721cd80d3736e260effcfc7429385"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/style-tile/style-tile.html",
+   "purpose": "design reference source",
+   "bytes": 9313,
+   "sha256": "290bb8a89601aeba2c689d95720cdf1979eefe2a610cebb3ea845e7f148b546b"
+  },
+  {
+   "archive_path": "ABM007_FINAL/DESIGN/tokens/abm007_final_tokens.css",
+   "purpose": "design reference source",
+   "bytes": 5221,
+   "sha256": "c2625014a0001da3c0a82c1d5979512356b9770b813163ae23960f21793d1ac2"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/AC_EVIDENCE_MATRIX.md",
+   "purpose": "independent QA assignment",
+   "bytes": 4009,
+   "sha256": "dde198f455082ddb91cd401d60bb87074814ac0bffc803b35288946b85ad5c2b"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/AGENTS.md",
+   "purpose": "independent QA assignment",
+   "bytes": 999,
+   "sha256": "9ad0fe2f50090281f49b4d3de536354f9f40fd3a3a0d2989cc7e5e25afbe7779"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/AUTOMATION/README.md",
+   "purpose": "independent QA assignment",
+   "bytes": 1218,
+   "sha256": "f1348021569fced968da45adb70ecf06e64c1ea73dbee72194756e7a4becdafa"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/CLAUDE.md",
+   "purpose": "independent QA assignment",
+   "bytes": 988,
+   "sha256": "bcd272dbdc538b5e78c96ff8ba54f4445f21170f140c0384e7ce3510357aff1f"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/FINDINGS.md",
+   "purpose": "independent QA assignment",
+   "bytes": 2897,
+   "sha256": "676adef75fe9b521cd5decf3da1309f705b1c6407afa0b4b911690e477272112"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/GATE_D_PLAN.md",
+   "purpose": "independent QA assignment",
+   "bytes": 4997,
+   "sha256": "e4e9755812dbe1913559af040fe6a3cc1d06b287e95a68839f61369a77098390"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/GOVERNING/ABM_PLAYBOOK_v1_0.md",
+   "purpose": "governing source snapshot or provenance",
+   "bytes": 47242,
+   "sha256": "21f8344812a385ec0a3da8ec41e144dc07c7248814a8b0a73db4f2433c5b2051"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/GOVERNING/DESIGNER_PLAYBOOK.md",
+   "purpose": "governing source snapshot or provenance",
+   "bytes": 19768,
+   "sha256": "c5fc80000e293fbfba59a559c81a24fcfcfb42e935b06c438bee561ae6f28d4e"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/GOVERNING/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+   "purpose": "governing source snapshot or provenance",
+   "bytes": 12655,
+   "sha256": "2b5da310aa196164cb0d07654d6df73c15f3ac23c67c416da3036ea148f1d491"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/GOVERNING/PROVENANCE.md",
+   "purpose": "governing source snapshot or provenance",
+   "bytes": 2085,
+   "sha256": "90957076f01f892ef932b255b90def089f1af076e034e289dbe267cd139bd680"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/GOVERNING/QAM_PLAYBOOK.md",
+   "purpose": "governing source snapshot or provenance",
+   "bytes": 33355,
+   "sha256": "456246341096459742400af061b6605fcf1d56e9de1a09b27621a6680489c9f6"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/GOVERNING/QA_PLAYBOOK.md",
+   "purpose": "governing source snapshot or provenance",
+   "bytes": 42559,
+   "sha256": "4c460b040b09782497069b69409381523fbf3bea56897febecb6c51f9458d458"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/GOVERNING/README.md",
+   "purpose": "governing source snapshot or provenance",
+   "bytes": 6065,
+   "sha256": "ae9f4d02b827450dde8290b482b7622ea8b6763c14f65d0a403ca378cbeba5b8"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+   "purpose": "independent QA assignment",
+   "bytes": 1936,
+   "sha256": "456cb8cfe4a22fb23dbf29e69b07a84e961873b8675a07fe72b405c2cb639747"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/HANDOFFS/FILE_INDEX.template.json",
+   "purpose": "independent QA assignment",
+   "bytes": 281,
+   "sha256": "55ab6d866b427d69bc56ae6852c3db7b43f1c4507e081e120b7f5c49e7acfddf"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/HANDOFFS/README.md",
+   "purpose": "independent QA assignment",
+   "bytes": 835,
+   "sha256": "b34ebbd7f6fcdfd401b7b2edbe7b86f8b402bfd2feca97f0e55a25a15d46b2da"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/HANDOFFS/REVIEW_START_HERE.md",
+   "purpose": "independent QA assignment",
+   "bytes": 726,
+   "sha256": "50ea2c4301296691f0ef313f5fbc306fdf49fbc487ab110f649dd1d69aef92f2"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/PARENT_ENTRY_ROUTING.md",
+   "purpose": "independent QA assignment",
+   "bytes": 728,
+   "sha256": "0fbf9cf9a4c1cc7a92f349d0e9ca0427a94fc5293663f24d55167e32b501a287"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_APPROVAL.md",
+   "purpose": "independent QA assignment",
+   "bytes": 2385,
+   "sha256": "0fdacf2657c4b563357776208d6d3db1cc47df56be2fd932c8bd70c6e3d499c5"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_CERTIFICATION.md",
+   "purpose": "independent QA assignment",
+   "bytes": 3115,
+   "sha256": "a31788e7c2ddfa3f93998cb9aa29a12553e5cb89d0e608a606e1e62a54bf049a"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_CLEANUP_REPORT.md",
+   "purpose": "independent QA assignment",
+   "bytes": 2432,
+   "sha256": "4f8e7a0c9dafaeca9e8e4c73cdbb2621a60f5dee5057e8febfdfbde200c9b300"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_ENTRY.md",
+   "purpose": "independent QA assignment",
+   "bytes": 12255,
+   "sha256": "20cf5e4ecd6f0d97fb0f10faa73255e1dca9ef8036fc343b587d0b66d8e3f569"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_EXECUTION_REPORT.md",
+   "purpose": "independent QA assignment",
+   "bytes": 2565,
+   "sha256": "9d4f64c8146eb261f885adb0315d717a1cbd9f77cf36e384b8cea70189c0b971"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_MANIFEST.md",
+   "purpose": "independent QA assignment",
+   "bytes": 4665,
+   "sha256": "a6fbc6f107bb53612590e5d5acd33297df85f5d6c2b2b8ccdbf1fc99988712af"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_PACKAGING.md",
+   "purpose": "independent QA assignment",
+   "bytes": 2411,
+   "sha256": "1dc5a07492ed4fc335c41e6f69e664625f91f5b6d5efeb07869919769596486e"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_PREFLIGHT.md",
+   "purpose": "independent QA assignment",
+   "bytes": 9388,
+   "sha256": "b7601241dad7dbaccab906c5bf1b94d7d027f642579c58f2d5a1ad52fd6d2713"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_RECON_REPORT.md",
+   "purpose": "independent QA assignment",
+   "bytes": 4420,
+   "sha256": "b864866043a5fcfac9c14bb24041518aa28f6f2f09dc53f647728cd824ebced2"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_RISK_REQUIREMENTS.md",
+   "purpose": "independent QA assignment",
+   "bytes": 11600,
+   "sha256": "06c25ca89f8f4545444894ce5cb2c7fca0dd3b6f3279cc29df10d159b60d8c94"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_STATE.md",
+   "purpose": "independent QA assignment",
+   "bytes": 3094,
+   "sha256": "3a0c963f8f7f4e5f00d045739bfa6fe1b7082897961cd6dd9f177d9b7ddf9866"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/QAM_TEST_PLAN.md",
+   "purpose": "independent QA assignment",
+   "bytes": 4008,
+   "sha256": "e15d93167fede6a989db4e90c69b99c9b868a7f9e4f9c133d9f6b9a86e7d0817"
+  },
+  {
+   "archive_path": "ABM007_FINAL/QAM/evidence/README.md",
+   "purpose": "independent QA assignment",
+   "bytes": 945,
+   "sha256": "7913d90fb30a7f02ac286affc7aae94e049ed9a3daa1ed9b274468c3b226f484"
+  },
+  {
+   "archive_path": "ABM007_FINAL/README.md",
+   "purpose": "module control",
+   "bytes": 3184,
+   "sha256": "5bf70b00ed05a0ef676d426b6b6e481fc0d6702641b75ff619c5cdb204ef2c56"
+  },
+  {
+   "archive_path": "ABM007_FINAL/RETROSPECTIVE.md",
+   "purpose": "module control",
+   "bytes": 1199,
+   "sha256": "4ad552de36f29631519f2733fc0e97fb2316ee5d90e58022bfb1896c8b99f99e"
+  },
+  {
+   "archive_path": "ABM007_FINAL/REVIEW_START_HERE.md",
+   "purpose": "review entry",
+   "bytes": 9853,
+   "sha256": "e094f5a53763db812207248832712e6b6115505b98c0f576a26ab8cc9c4d43f6"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/ABM007_FINAL_BRANDING_CONFLICT_REGISTER_v0_3_2026-11-23.md",
+   "purpose": "source snapshot",
+   "bytes": 14845,
+   "sha256": "457b480c972d5a6b75296e8902863309c4244f69f70fc55e156639f5277195f9"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/ARCHITECT_AUTHORING_INSTRUCTION_2026-11-23.txt",
+   "purpose": "source snapshot",
+   "bytes": 8829,
+   "sha256": "6c795b687fcdca1db7b8ad1eeded6fc82318b485ff41367932d2981b95d7c866"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/ARCHITECT_HANDOFF_CYPH_P6_APBM007_FINALIZE_2026-11-23.md",
+   "purpose": "source snapshot",
+   "bytes": 57269,
+   "sha256": "8da83a9ff5ec54c76aa0a25dce5f33979550db1140df03ff20af8b1e5a8237e1"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/ARCHITECT_REGISTER_POSITIONS_2026-11-23.txt",
+   "purpose": "source snapshot",
+   "bytes": 4427,
+   "sha256": "3ceb58487a685d2ecb57065fa3528806003662e0cf64f89d925acc9d82bad3cf"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/ARCHITECT_REVIEW_01_2026-11-23.md",
+   "purpose": "source snapshot",
+   "bytes": 14380,
+   "sha256": "bee2f4382447c5891edc9067eef033a5cfad199ac7e19a829a87752d5902e77f"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/ARCHITECT_REVIEW_01_AUTHORING_INPUTS_PROVENANCE.json",
+   "purpose": "source snapshot",
+   "bytes": 1751,
+   "sha256": "162cc17fa7f4c6a4461fe84b59077b8d2cc5ce14d6e1f94b83afc1a42faa3fbb"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/ARCHITECT_REVIEW_01_COLOR_EVIDENCE.json",
+   "purpose": "source snapshot",
+   "bytes": 475,
+   "sha256": "37bb5c66085d2f77ed4f776dd4dfe3634c5012051aaab18445f15983d8b0dcf6"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/CYPH_APBM007B_CAMPAIGN_DOCTRINE_JOURNAL_v0_3.md",
+   "purpose": "source snapshot",
+   "bytes": 42519,
+   "sha256": "af1a4688e47557c3e495f5c14eeb83119b97d1eda12dba4b761ef706e5312448"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/CYPH_FRANK_DESIGN.md",
+   "purpose": "source snapshot",
+   "bytes": 25474,
+   "sha256": "b63285bb1fd7b54faa81b8421dac5a7a23bf98069d46e755e378647fea453278"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/Cyber_Pharma_Alpha_Tester_Guide_v3.pdf",
+   "purpose": "source snapshot",
+   "bytes": 143796,
+   "sha256": "138a51a1ea1900f4fc3bb7d41e46cef8190ffeb9fb85c25e414aa716c8032e8b"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/Cyber_Pharma_QA_Recipe_v3_0_Rework_Record.md",
+   "purpose": "source snapshot",
+   "bytes": 17454,
+   "sha256": "4ae1aee8ed75abae577e25a7b8f7c7c741cb7bf133e2a89c403970c006aa3c43"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/DIRECTOR_RULING_ABM007_FINAL_GATE_V_2026-11-23.md",
+   "purpose": "source snapshot",
+   "bytes": 2390,
+   "sha256": "8238903eedacfacd90ecadce0a3f442407151ad5ab53014e16c2389b9dd01da8"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/RECON/00_INDEX.md",
+   "purpose": "source snapshot",
+   "bytes": 2399,
+   "sha256": "23f98cef887d69dfd00f69a634b347ffe2cbe9e5a8328bacadf9feff9169e2dd"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/RECON/ABM007_FINAL_PRE_RECON_REPORT.md",
+   "purpose": "source snapshot",
+   "bytes": 71040,
+   "sha256": "14765e3f562dd6c3d0b5e259f8a3d783819046810e01a6fed209a097767f2eae"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/RECON/APPENDIX_A_COMMAND_EVIDENCE.txt",
+   "purpose": "source snapshot",
+   "bytes": 20546,
+   "sha256": "4158d6e15d1f57551278de28057706265819c130d32cff7aef84111e5037b247"
+  },
+  {
+   "archive_path": "ABM007_FINAL/SOURCES/SOURCE_INDEX.md",
+   "purpose": "source snapshot",
+   "bytes": 3683,
+   "sha256": "285aee2ebc93c56abba9490b9561dc9484fd54fb977969391321f7030f4b9a7d"
+  }
+ ]
+}

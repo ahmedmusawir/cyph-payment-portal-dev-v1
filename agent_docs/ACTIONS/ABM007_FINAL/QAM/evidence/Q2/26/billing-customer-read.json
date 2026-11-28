@@ -1,0 +1,52 @@
+{
+  "time": "2026-11-25T03:00:37.153Z",
+  "target": "ihgcsrypblqkwommrkgj",
+  "providerReads": [
+    {
+      "label": "Sandbox account guard",
+      "method": "GET",
+      "status": 200,
+      "code": null,
+      "type": null
+    },
+    {
+      "label": "ENGINEERING_OWNER_A",
+      "method": "GET",
+      "status": 200,
+      "code": null,
+      "type": null
+    },
+    {
+      "label": "ENGINEERING_INVITEE",
+      "method": "GET",
+      "status": 200,
+      "code": null,
+      "type": null
+    }
+  ],
+  "fixtures": [
+    {
+      "role": "ENGINEERING_OWNER_A",
+      "ownsAccount": true,
+      "selectedSubscriptionOrigin": "stripe",
+      "subscriptionStatus": "active",
+      "customerLinkPresent": true,
+      "customerLinkWellFormed": true,
+      "subscriptionLinkPresent": true,
+      "sandboxCustomer": "DELETED"
+    },
+    {
+      "role": "ENGINEERING_INVITEE",
+      "ownsAccount": true,
+      "selectedSubscriptionOrigin": "stripe",
+      "subscriptionStatus": "active",
+      "customerLinkPresent": true,
+      "customerLinkWellFormed": true,
+      "subscriptionLinkPresent": true,
+      "sandboxCustomer": "DELETED"
+    }
+  ],
+  "providerWrites": 0,
+  "scope": "Read-only SCRATCH transaction for the records the candidate selects, followed by Stripe sandbox GETs only. No customer identifiers, keys, addresses or provider bodies retained.",
+  "sandboxAccountMatches": true
+}

@@ -1,11 +1,15 @@
 import { peerOrigin } from "@/lib/appIdentity";
 
 // Customer-facing brand text — ONE configurable place (UI_SPEC §1, AC-20).
-// "Pharmacy Books" follows Coach; final naming is Tony/Coach's call.
+// ABM007_FINAL (D-03, P-22): the three approved names only; no "a Cyber Pharma product".
 export const BRAND = {
   name: "Pharmacy Books",
   subline: "Account & Billing",
-  footer: "Pharmacy Books · a Cyber Pharma product",
+  footer: "Pharmacy Books · Account & Billing",
+  logoSrc: "/brand/pharmacy-books-logo-primary.png",
+  /** Intrinsic size of the logo master (1024 x 543). */
+  logoWidth: 1024,
+  logoHeight: 543,
   // Manual QA 19 Nov 2026 (R10): the contract-recorded business address (STAGING_AND_GATE_D.md), overridable by
   // NEXT_PUBLIC_SUPPORT_EMAIL. Director 20 Nov 2026: use it; mailbox operation not yet verified.
   supportEmail: (process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@pharmacybooks.com").trim(),

@@ -1,0 +1,3 @@
+# Invitee scope — decision pending
+
+The existing designated Invitee owns one active pharmacy, as recorded in the Q1 fixture evidence. AC-R04(e) requires invitation scoped to one pharmacy; Tony’s continuation says “verify the Invitee sees only that one pharmacy.” Adding Owner A membership will not remove the existing pharmacy. No removal/reset is authorized. Cody asked Tony to confirm that the assertion is only one newly accessible Owner A pharmacy, preserving pre-existing access, or to hold for Friday. No interpretation or fixture change made. Invitation remains held until Tony is at his inbox tomorrow and this expected-result scope is resolved.

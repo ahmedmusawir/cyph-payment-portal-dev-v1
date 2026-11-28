@@ -1,0 +1,81 @@
+{
+  "planHash": "6a1abc2ae4187874e6c755d195d5ab6fc060c4f26d92520b6df6bc8cf9c73c7d",
+  "time": "2026-11-24T16:30:43.370Z",
+  "target": {
+    "ob": {
+      "listener_pid": 1796734,
+      "cwd_is_verification_copy": true,
+      "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+      "app_env": "local-proof",
+      "client_bundle": {
+        "scripts": 13,
+        "scratch_refs": 0,
+        "dev_refs": 0
+      }
+    },
+    "pp": {
+      "listener_pid": 1796742,
+      "cwd_is_verification_copy": true,
+      "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+      "app_env": "local-proof",
+      "client_bundle": "not applicable (server-only Supabase use)"
+    }
+  },
+  "rows": [
+    {
+      "app": "ob",
+      "port": 3100,
+      "head": "2e91e90905b2d9907577a64985e643f7827019ac",
+      "branch": "qa/abm007-final",
+      "compiledBuildId": "iwtrms8cN2rVXC-n79gGf",
+      "compiledBuildIdMatchesPriorRecord": true,
+      "buildInfoProvidesIdentity": false,
+      "productTrackedDirtyPaths": [],
+      "cwdIsRealCopy": true,
+      "sourceFiles": 406,
+      "sourceHashesMatch": true,
+      "candidate": "2e91e90905b2d9907577a64985e643f7827019ac",
+      "runtimeRevisionMatches": true,
+      "runtimeMode": "real",
+      "artifact": "real-iwtrms8cN2rVXC-n79gGf",
+      "mailAllowlistExact": true,
+      "buildInfoStatus": 200,
+      "buildInfo": {
+        "revision": "unrecorded",
+        "app": "ob",
+        "artifactId": "unlabelled-build"
+      },
+      "ready": true
+    },
+    {
+      "app": "pp",
+      "port": 3101,
+      "head": "fc1fa6c2a90ebf59987287ad765e2e65cf635549",
+      "branch": "qa/abm007-final",
+      "compiledBuildId": "zF6loXbH0G8UyAHWRJsfe",
+      "compiledBuildIdMatchesPriorRecord": true,
+      "buildInfoProvidesIdentity": false,
+      "productTrackedDirtyPaths": [],
+      "cwdIsRealCopy": true,
+      "sourceFiles": 288,
+      "sourceHashesMatch": true,
+      "candidate": "fc1fa6c2a90ebf59987287ad765e2e65cf635549",
+      "runtimeRevisionMatches": true,
+      "runtimeMode": "real",
+      "artifact": "real-zF6loXbH0G8UyAHWRJsfe",
+      "mailAllowlistExact": true,
+      "buildInfoStatus": 200,
+      "buildInfo": {
+        "revision": "unrecorded",
+        "app": "pp",
+        "artifactId": "unlabelled-build"
+      },
+      "ready": true
+    }
+  ],
+  "ready": true,
+  "invitationSent": false,
+  "walkthroughAnswers": "PENDING",
+  "identityBasis": "Both HEADs/branches, no tracked product diff, all copied source hashes, unchanged compiled BUILD_ID against pre-transition evidence/Q2/18, real-copy listener cwd, SCRATCH runtime and original successful build receipts Q2/01. Build-info labels remain unrecorded because next.config.js compiles them at build time; runtime metadata is not claimed as endpoint proof.",
+  "note": "Ready means verified real builds and exact invitation allowlist, not proven email delivery or product verdict. J-e/J-h held until Tony at inbox."
+}

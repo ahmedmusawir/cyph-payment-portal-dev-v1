@@ -1,0 +1,275 @@
+{
+  "engine": "chromium",
+  "version": "147.0.7727.15",
+  "rows": [
+    {
+      "section": "AC-R05 public plan, visible after hydration",
+      "fixture": null,
+      "seen": {
+        "status": 200,
+        "path": "/register/plan"
+      },
+      "first": "$99.00 / month",
+      "additional": true,
+      "result": "PASS",
+      "review": "Gate D"
+    },
+    {
+      "section": "CR-01 My Stores, settled valid cards",
+      "fixture": "ENGINEERING_OWNER_A",
+      "method": "password (normal sign-in form)",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal"
+      },
+      "expected": 3,
+      "actual": 3,
+      "result": "PASS"
+    },
+    {
+      "section": "AC-B07/B08 Help end link",
+      "fixture": "ENGINEERING_OWNER_A",
+      "method": "password (normal sign-in form)",
+      "width": 375,
+      "link": {
+        "label": "Go to the Top",
+        "color": "rgb(40, 132, 114)",
+        "underline": true,
+        "bodyBackground": "rgb(234, 243, 250)"
+      },
+      "value": {
+        "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "A",
+            "pseudo": null,
+            "size": 13,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 24,
+              "top": 11636.265625,
+              "right": 110,
+              "bottom": 11652.265625
+            },
+            "unsupported": [],
+            "worstRatio": 4.0355,
+            "samples": 132,
+            "unstablePixels": 0,
+            "result": "FAIL"
+          }
+        ],
+        "counts": {
+          "pass": 0,
+          "fail": 1,
+          "notRun": 0
+        }
+      },
+      "result": "FAIL"
+    },
+    {
+      "section": "CR-01 My Stores, settled valid cards",
+      "fixture": "ENGINEERING_ADMIN",
+      "method": "provider token via the app confirm page (AM-15)",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal"
+      },
+      "expected": 1,
+      "actual": 1,
+      "result": "PASS",
+      "wrongStore": {
+        "friendlyDenial": true,
+        "result": "PASS"
+      }
+    },
+    {
+      "section": "CR-01 My Stores, settled valid cards",
+      "fixture": "ENGINEERING_INVITEE",
+      "method": "provider token via the app confirm page (AM-15)",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal"
+      },
+      "expected": 1,
+      "actual": 1,
+      "result": "PASS"
+    }
+  ],
+  "sessions": [
+    {
+      "diagnostics": [],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3101",
+            "path": "/register/plan",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_OWNER_A",
+      "method": "password (normal sign-in form)",
+      "app": "ob",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_OWNER_A",
+          "stage": "password-session-established"
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_ADMIN",
+      "method": "provider token via the app confirm page (AM-15)",
+      "app": "ob",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_ADMIN",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: the server responded with a status of 403 ()"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: the server responded with a status of 403 ()"
+          }
+        ],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/stores/[id]",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_INVITEE",
+      "method": "provider token via the app confirm page (AM-15)",
+      "app": "ob",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_INVITEE",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal",
+            "status": 200
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -22,7 +22,7 @@ export function OwnerOnlyNotice({ eyebrow, context }: { eyebrow: string; context
   return (
     <PageContainer width="3xl">
       <PageHeader eyebrow={eyebrow} title="Billing is managed by the account owner" />
-      <div className="mt-5 border border-border bg-card p-4 sm:p-5" data-testid="denied-view">
+      <div className="mt-5 pb-card p-4 sm:p-5" data-testid="denied-view">
         {context ? <p className="mb-2 text-sm font-medium text-foreground" data-testid="denied-context">{context}</p> : null}
         <p className="text-sm text-muted-foreground">
           You&apos;re signed in, but you aren&apos;t the billing owner of an account. Only the account owner can see or manage the plan, payment method and invoices, so none of that is shown here.

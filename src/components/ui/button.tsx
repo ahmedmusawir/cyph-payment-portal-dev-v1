@@ -4,31 +4,33 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
-// Portal recipe (COMPONENT_MANIFEST §4): 44px default height, uppercase tracked
-// semibold labels, 1px outline, primary hairline (Mist edge fix, CHECKS §3).
+// ABM007_FINAL brand contract 4.2: Title Case, Inter Regular 16px, at least 44px
+// high, 8px radius, flat. Hover uses --primary-hover (never bg-primary/90);
+// disabled uses the --disabled tokens (never opacity-50). Focus: the shared
+// 2px outline with 2px offset from globals (navy, or white inside .pb-on-dark).
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold uppercase tracking-wide ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-base font-normal transition-colors disabled:pointer-events-none disabled:cursor-not-allowed disabled:border-transparent disabled:bg-disabled disabled:text-disabled-foreground",
   {
     variants: {
       variant: {
-        default: "border border-foreground/25 bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary-hover",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-card text-heading hover:bg-accent hover:text-accent-foreground",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+          "bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground",
+        ghost: "text-heading hover:bg-accent hover:text-accent-foreground",
         "destructive-outline":
-          "border border-destructive bg-transparent text-destructive hover:bg-destructive/10",
-        link: "text-foreground underline decoration-1 underline-offset-4 hover:decoration-2",
+          "border border-destructive bg-card text-destructive hover:bg-destructive/10",
+        link: "text-primary underline underline-offset-4 hover:decoration-2",
       },
       size: {
-        default: "h-11 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-14 rounded-md px-12",
-        xl: "h-16 rounded-md px-24",
+        default: "h-11 px-4 py-2.5",
+        sm: "h-11 px-3",
+        lg: "h-14 px-12",
+        xl: "h-16 px-24",
         icon: "h-11 w-11",
       },
     },

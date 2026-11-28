@@ -1,0 +1,9 @@
+ob test exit=0 secs=11
+ob typecheck exit=0 secs=10
+ob lint exit=0 secs=11
+pp test exit=0 secs=9
+pp typecheck exit=0 secs=11
+pp lint exit=0 secs=12
+DONE
+ob build exit=0 (next build, SCRATCH public values; log build_ob_scratch.log)
+pp build exit=0 (next build, SCRATCH public values; log build_pp_scratch.log)

@@ -1,0 +1,231 @@
+diff -ruN '--exclude=node_modules' '--exclude=.next' '--exclude=*.log' '--exclude=next-env.d.ts' '--exclude=tsconfig.tsbuildinfo' '--exclude=session_2026-11-26.md' '--exclude=CHANGELOG.md' after/ob/src/components/global/MobileNav.tsx a1/ob/src/components/global/MobileNav.tsx
+--- after/ob/src/components/global/MobileNav.tsx	2026-11-24 13:37:47.045910541 +0600
++++ a1/ob/src/components/global/MobileNav.tsx	2026-11-26 13:33:27.446895112 +0600
+@@ -8,6 +8,7 @@
+ import { User as SupabaseUser } from "@supabase/auth-js";
+ import { useAuthStore } from "@/store/useAuthStore";
+ import { AppRole } from "@/utils/app-role";
++import { peerOrigin } from "@/lib/appIdentity";
+ 
+ // Identity is SERVER-RESOLVED and passed as props (Navbar Law — KIP-2 kill):
+ // no client auth fetch, no persisted-store role read, no loading window. The
+@@ -95,13 +96,14 @@
+                 >
+                   Log in
+                 </Link>
+-                <Link
+-                  href="/auth"
++                {/* RWO-01 A1-1 (ruling AM-22): opens the Account & Billing home page at its configured address. */}
++                <a
++                  href={`${peerOrigin()}/`}
+                   onClick={close}
+                   className="mt-1 flex min-h-11 items-center justify-center rounded-md bg-primary px-3 py-2.5 text-[15px] text-primary-foreground hover:bg-primary-hover"
+                 >
+-                  Start free trial
+-                </Link>
++                  Subscribe Now
++                </a>
+               </>
+             )}
+           </nav>
+diff -ruN '--exclude=node_modules' '--exclude=.next' '--exclude=*.log' '--exclude=next-env.d.ts' '--exclude=tsconfig.tsbuildinfo' '--exclude=session_2026-11-26.md' '--exclude=CHANGELOG.md' after/ob/src/components/global/UserMenu.tsx a1/ob/src/components/global/UserMenu.tsx
+--- after/ob/src/components/global/UserMenu.tsx	2026-11-26 12:48:02.520370370 +0600
++++ a1/ob/src/components/global/UserMenu.tsx	2026-11-26 13:33:27.446633761 +0600
+@@ -15,6 +15,7 @@
+ import Logout from "../auth/Logout";
+ import { User as SupabaseUser } from "@supabase/auth-js";
+ import { AppRole } from "@/utils/app-role";
++import { peerOrigin } from "@/lib/appIdentity";
+ 
+ // Identity is SERVER-RESOLVED and passed as props (Navbar Law — KIP-2 kill):
+ // no client auth fetch, no persisted-store role read, no loading window.
+@@ -74,12 +75,14 @@
+       >
+         Log in
+       </Link>
+-      <Link
+-        href="/auth"
++      {/* RWO-01 A1-1 (ruling AM-22): opens the Account & Billing home page at its configured address, like the
++          opening page's own Subscribe Now button. */}
++      <a
++        href={`${peerOrigin()}/`}
+         className="inline-flex min-h-11 items-center rounded-md bg-primary px-5 text-primary-foreground hover:bg-primary-hover"
+       >
+-        Start free trial
+-      </Link>
++        Subscribe Now
++      </a>
+     </>
+   );
+ };
+diff -ruN '--exclude=node_modules' '--exclude=.next' '--exclude=*.log' '--exclude=next-env.d.ts' '--exclude=tsconfig.tsbuildinfo' '--exclude=session_2026-11-26.md' '--exclude=CHANGELOG.md' after/ob/src/components/help/HelpPage.tsx a1/ob/src/components/help/HelpPage.tsx
+--- after/ob/src/components/help/HelpPage.tsx	2026-11-26 12:48:02.517544784 +0600
++++ a1/ob/src/components/help/HelpPage.tsx	2026-11-26 13:33:27.447175865 +0600
+@@ -91,7 +91,8 @@
+       </header>
+ 
+       <div className="mt-6 grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)] lg:items-start">
+-        <nav aria-label="On this page" className="pb-card p-4 lg:sticky lg:top-4">
++        {/* RWO-01 A1-3: when the menu is taller than the window it scrolls inside itself, so its last link can be reached. */}
++        <nav aria-label="On this page" className="pb-card p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
+           <h2 className="pb-eyebrow text-muted-foreground">On this page</h2>
+           <ol className="mt-2 space-y-0.5 text-[15px]">
+             {SECTIONS.map(([id, title], i) => (
+@@ -319,6 +320,11 @@
+               pharmacy name and what you were trying to do. Please do not include patient information in your message.
+             </p>
+           </Section>
++          {/* RWO-01 A1-2 (ruling AM-22): below lg the contents menu sits above the text, so the same link also ends
++              the text. From lg the menu link stays in view and this one is not shown. */}
++          <p className="px-2 text-[13px] lg:hidden">
++            <a href="#top" className="pb-link inline-flex min-h-11 items-center" data-testid="help-go-to-top-end">Go to the Top</a>
++          </p>
+         </div>
+       </div>
+     </div>
+diff -ruN '--exclude=node_modules' '--exclude=.next' '--exclude=*.log' '--exclude=next-env.d.ts' '--exclude=tsconfig.tsbuildinfo' '--exclude=session_2026-11-26.md' '--exclude=CHANGELOG.md' after/ob/src/__tests__/abm007/help-page.test.tsx a1/ob/src/__tests__/abm007/help-page.test.tsx
+--- after/ob/src/__tests__/abm007/help-page.test.tsx	2026-11-26 13:00:25.618766918 +0600
++++ a1/ob/src/__tests__/abm007/help-page.test.tsx	2026-11-26 13:33:27.448068220 +0600
+@@ -91,4 +91,23 @@
+     expect(top).toHaveAttribute("href", "#top");
+     expect(top).toHaveClass("pb-link", "min-h-11");
+   });
++
++  // RWO-01 A1-2 (ruling AM-22): below lg the contents menu is above the text, so the same link also ends the text;
++  // from lg it is hidden there because the menu link stays in view.
++  it("repeats Go to the Top at the end of the Help text for narrow screens only", () => {
++    const { container } = render(<HelpPage />);
++    const end = screen.getByTestId("help-go-to-top-end");
++    expect(end).toHaveTextContent("Go to the Top");
++    expect(end).toHaveAttribute("href", "#top");
++    expect(end).toHaveClass("pb-link", "min-h-11");
++    expect(end.parentElement).toHaveClass("lg:hidden");
++    const sections = container.querySelectorAll("section");
++    expect(sections[sections.length - 1].compareDocumentPosition(end) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
++  });
++
++  // RWO-01 A1-3: a contents menu taller than the window scrolls inside itself, so its last link can be reached.
++  it("lets the contents menu scroll inside itself from lg", () => {
++    render(<HelpPage />);
++    expect(screen.getByRole("navigation", { name: "On this page" })).toHaveClass("lg:sticky", "lg:max-h-[calc(100vh-2rem)]", "lg:overflow-y-auto");
++  });
+ });
+diff -ruN '--exclude=node_modules' '--exclude=.next' '--exclude=*.log' '--exclude=next-env.d.ts' '--exclude=tsconfig.tsbuildinfo' '--exclude=session_2026-11-26.md' '--exclude=CHANGELOG.md' after/ob/src/__tests__/global/MobileNav.test.tsx a1/ob/src/__tests__/global/MobileNav.test.tsx
+--- after/ob/src/__tests__/global/MobileNav.test.tsx	2026-11-11 16:06:02.327969386 +0600
++++ a1/ob/src/__tests__/global/MobileNav.test.tsx	2026-11-26 13:33:27.447996733 +0600
+@@ -15,6 +15,7 @@
+ 
+ import MobileNav from "@/components/global/MobileNav";
+ import { AppRole } from "@/utils/app-role";
++import { peerOrigin } from "@/lib/appIdentity";
+ 
+ const tony = { email: "tony@stark.com" } as SupabaseUser;
+ 
+@@ -25,11 +26,14 @@
+   const openMenu = () =>
+     fireEvent.click(screen.getByRole("button", { name: "Open menu" }));
+ 
+-  it("logged-out visitor gets Log in / Start free trial, no account rows", () => {
++  it("logged-out visitor gets Log in / Subscribe Now, no account rows", () => {
+     render(<MobileNav user={null} role={null} />);
+     openMenu();
+     expect(screen.getByText("Log in")).toBeInTheDocument();
+-    expect(screen.getByText("Start free trial")).toBeInTheDocument();
++    // RWO-01 A1-1 (ruling AM-22): the green menu button opens the configured Account & Billing home page.
++    expect(screen.getByText("Subscribe Now")).toHaveAttribute("href", `${peerOrigin()}/`);
++    expect(screen.getByText("Subscribe Now")).toHaveClass("bg-primary", "hover:bg-primary-hover", "min-h-11");
++    expect(screen.queryByText(/free trial/i)).not.toBeInTheDocument();
+     expect(screen.queryByText("Log out")).not.toBeInTheDocument();
+     expect(screen.queryByText("Admin portal")).not.toBeInTheDocument();
+   });
+diff -ruN '--exclude=node_modules' '--exclude=.next' '--exclude=*.log' '--exclude=next-env.d.ts' '--exclude=tsconfig.tsbuildinfo' '--exclude=session_2026-11-26.md' '--exclude=CHANGELOG.md' after/ob/src/__tests__/global/UserMenu.test.tsx a1/ob/src/__tests__/global/UserMenu.test.tsx
+--- after/ob/src/__tests__/global/UserMenu.test.tsx	2026-11-26 13:00:52.232362471 +0600
++++ a1/ob/src/__tests__/global/UserMenu.test.tsx	2026-11-26 13:33:27.447645651 +0600
+@@ -14,6 +14,7 @@
+ 
+ import UserMenu from "@/components/global/UserMenu";
+ import { AppRole } from "@/utils/app-role";
++import { peerOrigin } from "@/lib/appIdentity";
+ 
+ const tony = { email: "tony@stark.com" } as SupabaseUser;
+ 
+@@ -21,10 +22,13 @@
+ // logged-out links) must be correct on the FIRST synchronous render, with no
+ // client fetch, no loading null-window, and no persisted-store role read.
+ describe("UserMenu (props-resolved identity)", () => {
+-  it("logged-out visitor gets Log in / Start free trial, no avatar", () => {
++  it("logged-out visitor gets Log in / Subscribe Now, no avatar", () => {
+     render(<UserMenu user={null} role={null} />);
+     expect(screen.getByText("Log in")).toHaveAttribute("href", "/auth");
+-    expect(screen.getByText("Start free trial")).toBeInTheDocument();
++    // RWO-01 A1-1 (ruling AM-22): the green header button opens the configured Account & Billing home page.
++    expect(screen.getByText("Subscribe Now")).toHaveAttribute("href", `${peerOrigin()}/`);
++    expect(screen.getByText("Subscribe Now")).toHaveClass("bg-primary", "hover:bg-primary-hover", "min-h-11");
++    expect(screen.queryByText(/free trial/i)).not.toBeInTheDocument();
+     expect(screen.queryByText("T")).not.toBeInTheDocument();
+   });
+ 
+@@ -32,7 +36,7 @@
+     render(<UserMenu user={tony} role={AppRole.MEMBER} />);
+     expect(screen.getByText("T")).toBeInTheDocument(); // avatar fallback
+     expect(screen.queryByText("Log in")).not.toBeInTheDocument();
+-    expect(screen.queryByText("Start free trial")).not.toBeInTheDocument();
++    expect(screen.queryByText("Subscribe Now")).not.toBeInTheDocument();
+   });
+ 
+   // jsdom has no real pointer events; Radix triggers open reliably on keyboard.
+diff -ruN '--exclude=node_modules' '--exclude=.next' '--exclude=*.log' '--exclude=next-env.d.ts' '--exclude=tsconfig.tsbuildinfo' '--exclude=session_2026-11-26.md' '--exclude=CHANGELOG.md' after/pp/src/components/portal/Footer.tsx a1/pp/src/components/portal/Footer.tsx
+--- after/pp/src/components/portal/Footer.tsx	2026-11-26 12:48:35.175177081 +0600
++++ a1/pp/src/components/portal/Footer.tsx	2026-11-26 13:33:27.505028456 +0600
+@@ -1,15 +1,16 @@
+ import { BRAND, LEGAL, NOT_CONFIGURED } from "./brand";
+ 
+ // tone "dark": on PublicShell's navy backdrop (ice text, light links); default: on the ice page.
+-// RWO-01 R-08: on the signed-out (dark) footer the links never break across lines. Below lg, where one row does not
+-// fit, everything stacks one item per line, centered; from lg up it is the single row it was.
++// RWO-01 R-08 and add-on A1-4: the links never break across lines, on the signed-out and the signed-in footer alike.
++// Below lg, where one row does not fit, everything stacks one item per line, centered; from lg up it is the single
++// row it was. The tone changes colors only.
+ export function Footer({ tone = "page" }: { tone?: "page" | "dark" }) {
+   const dark = tone === "dark";
+   return (
+     <footer className={dark ? "mt-6" : "mt-10 border-t border-border"}>
+-      <div className={`mx-auto flex max-w-6xl flex-col gap-2 px-5 py-6 text-[13px] ${dark ? "items-center text-center text-brand-ice lg:flex-row lg:justify-between lg:text-left" : "text-muted-foreground sm:flex-row sm:items-center sm:justify-between"}`}>
++      <div className={`mx-auto flex max-w-6xl flex-col gap-2 px-5 py-6 text-[13px] items-center text-center lg:flex-row lg:justify-between lg:text-left ${dark ? "text-brand-ice" : "text-muted-foreground"}`}>
+         <p>{BRAND.footer}</p>
+-        <p className={dark ? "flex flex-col items-center gap-y-2 lg:flex-row lg:gap-x-5 lg:whitespace-nowrap" : "flex flex-wrap gap-x-5 gap-y-2"} data-testid="footer-links">
++        <p className="flex flex-col items-center gap-y-2 lg:flex-row lg:gap-x-5 lg:whitespace-nowrap" data-testid="footer-links">
+           <span>Support · <a className={dark ? "pb-link-on-dark" : "pb-link-on-page"} href={`mailto:${BRAND.supportEmail}`}>{BRAND.supportEmail}</a></span>
+           {LEGAL.termsUrl ? <a className={dark ? "pb-link-on-dark" : "pb-link-on-page"} href={LEGAL.termsUrl}>Terms</a> : <span>Terms {NOT_CONFIGURED}</span>}
+           {LEGAL.privacyUrl ? <a className={dark ? "pb-link-on-dark" : "pb-link-on-page"} href={LEGAL.privacyUrl}>Privacy</a> : <span>Privacy {NOT_CONFIGURED}</span>}
+diff -ruN '--exclude=node_modules' '--exclude=.next' '--exclude=*.log' '--exclude=next-env.d.ts' '--exclude=tsconfig.tsbuildinfo' '--exclude=session_2026-11-26.md' '--exclude=CHANGELOG.md' after/pp/src/__tests__/abm007/public-shell-fit.test.tsx a1/pp/src/__tests__/abm007/public-shell-fit.test.tsx
+--- after/pp/src/__tests__/abm007/public-shell-fit.test.tsx	2026-11-26 13:01:41.460494209 +0600
++++ a1/pp/src/__tests__/abm007/public-shell-fit.test.tsx	2026-11-26 13:33:27.505532035 +0600
+@@ -2,7 +2,8 @@
+  * @jest-environment jsdom
+  */
+ // RWO-01 R-08 (finding F27): on signed-out pages the header "Sign in" button stays on one line at its 15px text, and
+-// the footer links stack one per line, centered, below the width where one row fits. The signed-in footer is unchanged.
++// the footer links stack one per line, centered, below the width where one row fits. Add-on A1-4: the signed-in
++// footer does the same.
+ import { render, screen } from '@testing-library/react';
+ import { PublicShell } from '@/components/portal/PublicShell';
+ import { Footer } from '@/components/portal/Footer';
+@@ -33,10 +34,14 @@
+     expect(links!.children).toHaveLength(3);
+   });
+ 
+-  it('the signed-in footer keeps its layout', () => {
++  // RWO-01 add-on A1-4: the signed-in footer gets the same fix; only its colors differ.
++  it('the signed-in footer stacks the same way and keeps its own colors', () => {
+     const { container } = render(<Footer />);
+     const links = container.querySelector('[data-testid="footer-links"]');
+-    for (const c of ['flex', 'flex-wrap', 'gap-x-5', 'gap-y-2']) expect(classes(links)).toContain(c);
+-    for (const c of ['sm:flex-row', 'sm:items-center', 'sm:justify-between']) expect(classes(links!.parentElement)).toContain(c);
++    for (const c of ['flex-col', 'items-center', 'lg:flex-row', 'lg:whitespace-nowrap']) expect(classes(links)).toContain(c);
++    expect(classes(links)).not.toContain('flex-wrap');
++    for (const c of ['flex-col', 'items-center', 'text-center', 'lg:flex-row', 'lg:justify-between', 'text-muted-foreground']) expect(classes(links!.parentElement)).toContain(c);
++    expect(classes(links!.parentElement)).not.toContain('sm:flex-row');
++    expect(container.querySelector('a')!.className).toContain('pb-link-on-page');
+   });
+ });

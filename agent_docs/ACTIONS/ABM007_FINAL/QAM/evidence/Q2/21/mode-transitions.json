@@ -1,0 +1,38 @@
+[
+  {
+    "name": "stop-real",
+    "started": "2026-11-24T16:27:32.042Z",
+    "finished": "2026-11-24T16:27:32.103Z",
+    "exit": 0
+  },
+  {
+    "name": "start-mock",
+    "started": "2026-11-24T16:27:32.141Z",
+    "finished": "2026-11-24T16:27:32.402Z",
+    "exit": 0
+  },
+  {
+    "name": "mock-runtime",
+    "started": "2026-11-24T16:27:33.387Z",
+    "finished": "2026-11-24T16:27:50.059Z",
+    "exit": 0
+  },
+  {
+    "name": "stop-mock",
+    "started": "2026-11-24T16:27:50.059Z",
+    "finished": "2026-11-24T16:27:50.091Z",
+    "exit": 0
+  },
+  {
+    "name": "start-real-invite-allowlist",
+    "started": "2026-11-24T16:27:50.133Z",
+    "finished": "2026-11-24T16:27:51.023Z",
+    "exit": 0
+  },
+  {
+    "name": "verify-real-ready",
+    "started": "2026-11-24T16:27:51.894Z",
+    "finished": "2026-11-24T16:27:52.417Z",
+    "exit": 1
+  }
+]

@@ -1,0 +1,11 @@
+--- safe-stage-diagnostics
++++ safe-click-observation
+@@ -122,7 +122,7 @@
+     if (error || !data?.properties?.hashed_token) fail(`provider token unavailable (${error?.status ?? 'no token'})`);
+     const q = new URLSearchParams({ token_hash: data.properties.hashed_token, type: 'email' }); if (next) q.set('next', next);
+     diagnostic.stage='confirmation-entry'; const entryResponse=await page.goto(`${site}/api/auth/confirm?${q}`, { waitUntil: 'networkidle' });
+-    diagnostic.entryStatus=entryResponse?.status(); diagnostic.landedPath=pathOnly(page.url()); diagnostic.confirmControlCount=await page.locator('[data-testid="confirm-sign-in"]').count(); diagnostic.stage='confirmation-click';
++    diagnostic.entryStatus=entryResponse?.status(); diagnostic.landedPath=pathOnly(page.url()); diagnostic.confirmControlCount=await page.locator('[data-testid="confirm-sign-in"]').count(); diagnostic.confirmVisible=await page.locator('[data-testid="confirm-sign-in"]').isVisible(); diagnostic.confirmEnabled=await page.locator('[data-testid="confirm-sign-in"]').isEnabled(); diagnostic.confirmPosts=0; diagnostic.confirmResponseStatuses=[]; page.on('request',r=>{if(r.method()==='POST'&&new URL(r.url()).pathname==='/api/auth/confirm')diagnostic.confirmPosts++}); page.on('response',r=>{if(r.request().method()==='POST'&&new URL(r.url()).pathname==='/api/auth/confirm')diagnostic.confirmResponseStatuses.push(r.status())}); diagnostic.stage='confirmation-click';
+     await Promise.all([page.waitForURL((u) => !u.pathname.startsWith('/auth/confirm'), { timeout: 30000 }), page.click('[data-testid="confirm-sign-in"]')]);
+     diagnostic.stage='fixture-session-established'; counters.token_sign_ins++; return 'provider token via the app confirm page (AM-15)';
+   } catch (e) {

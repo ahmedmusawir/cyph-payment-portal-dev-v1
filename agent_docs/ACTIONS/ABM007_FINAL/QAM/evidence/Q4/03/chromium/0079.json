@@ -1,0 +1,712 @@
+{
+  "app": "ob",
+  "role": "PUBLIC",
+  "scripts": true,
+  "width": 1279,
+  "requested": "/",
+  "baseline": "evidence/Q2/02/0079.json",
+  "baselineLanded": "/",
+  "seen": {
+    "status": 200,
+    "path": "/"
+  },
+  "dom": {
+    "path": "/",
+    "tokens": {
+      "brand-navy": "#154474",
+      "brand-green": "#32a38d",
+      "brand-green-dark": "#288472",
+      "brand-ice": "#eaf3fa",
+      "brand-charcoal": "#393b38",
+      "brand-gray": "#515151"
+    },
+    "overflow": 0,
+    "width": 1279,
+    "bodyBackground": "rgb(234, 243, 250)",
+    "darkClass": false,
+    "colorScheme": "light",
+    "themeControls": 0,
+    "text": [
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>a:nth-child(1)>span:nth-child(1)>span:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 600,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>a:nth-child(1)>span:nth-child(1)>span:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 8.8583,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>nav:nth-child(2)>a:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 15,
+        "weight": 400,
+        "contrast": 8.8583,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>nav:nth-child(2)>a:nth-child(2)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(40, 132, 114)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 15,
+        "weight": 400,
+        "contrast": 4.532,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(2)>section:nth-child(1)>div:nth-child(1)>div:nth-child(1)>span:nth-child(2)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 8.8583,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(2)>section:nth-child(1)>div:nth-child(1)>h1:nth-child(2)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 72,
+        "weight": 700,
+        "contrast": 8.8583,
+        "threshold": 3,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(2)>section:nth-child(1)>div:nth-child(1)>h1:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(40, 132, 114)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 72,
+        "weight": 700,
+        "contrast": 4.0355,
+        "threshold": 3,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(2)>section:nth-child(1)>div:nth-child(1)>p:nth-child(3)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 18,
+        "weight": 400,
+        "contrast": 7.0679,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(2)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>a:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(40, 132, 114)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 4.532,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(2)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>a:nth-child(2)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(21, 68, 116)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(2)>section:nth-child(1)>div:nth-child(1)>div:nth-child(5)>div:nth-child(1)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgb(255, 255, 255)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(2)>section:nth-child(1)>div:nth-child(1)>div:nth-child(5)>span:nth-child(2)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 7.0679,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      }
+    ],
+    "controls": [],
+    "links": [
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>a:nth-child(1)",
+        "href": "/",
+        "color": "#ffffff",
+        "background": [
+          21,
+          68,
+          116
+        ],
+        "underline": "none"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>nav:nth-child(2)>a:nth-child(1)",
+        "href": "/auth",
+        "color": "#eaf3fa",
+        "background": [
+          21,
+          68,
+          116
+        ],
+        "underline": "none"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>nav:nth-child(2)>a:nth-child(2)",
+        "href": "http://localhost:3101/",
+        "color": "#ffffff",
+        "background": [
+          40,
+          132,
+          114
+        ],
+        "underline": "none"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(2)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>a:nth-child(1)",
+        "href": "http://localhost:3101/",
+        "color": "#ffffff",
+        "background": [
+          40,
+          132,
+          114
+        ],
+        "underline": "none"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(2)>section:nth-child(1)>div:nth-child(1)>div:nth-child(4)>a:nth-child(2)",
+        "href": "/auth",
+        "color": "#ffffff",
+        "background": [
+          21,
+          68,
+          116
+        ],
+        "underline": "none"
+      }
+    ],
+    "pills": [],
+    "anchors": [],
+    "oldNames": {
+      "text": false,
+      "title": false,
+      "alt": false,
+      "accessible": false
+    },
+    "tables": [],
+    "noStores": false,
+    "ownerBillingMessage": false,
+    "backToStores": false,
+    "errors": false
+  },
+  "candidate": {
+    "controls": [
+      {
+        "tag": "A",
+        "role": null,
+        "kind": null,
+        "test": null,
+        "radius": "8px",
+        "height": 40,
+        "width": 208,
+        "left": 28,
+        "right": 236,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "outline": "rgb(255, 255, 255) none 3px",
+        "ariaBusy": null,
+        "disabled": false,
+        "anchor": true,
+        "variant": "rgba(0, 0, 0, 0)",
+        "linkRecipe": null,
+        "underline": "none",
+        "bodyLink": false
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "kind": null,
+        "test": null,
+        "radius": "8px",
+        "height": 44,
+        "width": 74,
+        "left": 1024,
+        "right": 1098,
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "color": "rgb(234, 243, 250)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "outline": "rgb(234, 243, 250) none 3px",
+        "ariaBusy": null,
+        "disabled": false,
+        "anchor": true,
+        "variant": "rgba(0, 0, 0, 0)",
+        "linkRecipe": null,
+        "underline": "none",
+        "bodyLink": false
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "kind": null,
+        "test": null,
+        "radius": "8px",
+        "height": 44,
+        "width": 145,
+        "left": 1106,
+        "right": 1251,
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(40, 132, 114)",
+        "border": "0px",
+        "outline": "rgb(255, 255, 255) none 3px",
+        "ariaBusy": null,
+        "disabled": false,
+        "anchor": true,
+        "variant": "rgb(40, 132, 114)",
+        "linkRecipe": null,
+        "underline": "none",
+        "bodyLink": false
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "kind": null,
+        "test": "home-subscribe",
+        "radius": "8px",
+        "height": 56,
+        "width": 264,
+        "left": 215.5,
+        "right": 479.5,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(40, 132, 114)",
+        "border": "0px",
+        "outline": "rgb(255, 255, 255) none 3px",
+        "ariaBusy": null,
+        "disabled": false,
+        "anchor": true,
+        "variant": "rgb(40, 132, 114)",
+        "linkRecipe": null,
+        "underline": "none",
+        "bodyLink": false
+      },
+      {
+        "tag": "A",
+        "role": null,
+        "kind": null,
+        "test": "home-log-in",
+        "radius": "8px",
+        "height": 56,
+        "width": 264,
+        "left": 495.5,
+        "right": 759.5,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(21, 68, 116)",
+        "border": "0px",
+        "outline": "rgb(255, 255, 255) none 3px",
+        "ariaBusy": null,
+        "disabled": false,
+        "anchor": true,
+        "variant": "rgb(21, 68, 116)",
+        "linkRecipe": null,
+        "underline": "none",
+        "bodyLink": false
+      }
+    ],
+    "cards": [],
+    "nontext": []
+  },
+  "visual": {
+    "badCorner": [],
+    "badSurface": [],
+    "badTarget": [],
+    "navControl": null,
+    "badLinks": [],
+    "buttonNavy": []
+  },
+  "pixel": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 16,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 103,
+          "top": 18,
+          "right": 236,
+          "bottom": 38
+        },
+        "unsupported": [],
+        "worstRatio": 9.9338,
+        "samples": 353,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 103,
+          "top": 40,
+          "right": 170,
+          "bottom": 55
+        },
+        "unsupported": [],
+        "worstRatio": 8.8258,
+        "samples": 43,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 2,
+        "tag": "A",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 1040,
+          "top": 25.75,
+          "right": 1082,
+          "bottom": 44.75
+        },
+        "unsupported": [],
+        "worstRatio": 8.8442,
+        "samples": 44,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 3,
+        "tag": "A",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 1126,
+          "top": 25.75,
+          "right": 1231,
+          "bottom": 44.75
+        },
+        "unsupported": [],
+        "worstRatio": 4.528,
+        "samples": 108,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 4,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 239.5,
+          "top": 156,
+          "right": 482.5,
+          "bottom": 171
+        },
+        "unsupported": [],
+        "worstRatio": 8.8371,
+        "samples": 413,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 5,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 72,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 215.5,
+          "top": 189,
+          "right": 922.703125,
+          "bottom": 276
+        },
+        "unsupported": [],
+        "worstRatio": 8.8583,
+        "samples": 15213,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 6,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 72,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 215.5,
+          "top": 261,
+          "right": 429.703125,
+          "bottom": 348
+        },
+        "unsupported": [],
+        "worstRatio": 8.8583,
+        "samples": 4318,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 7,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 72,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 444.90625,
+          "top": 261,
+          "right": 630.71875,
+          "bottom": 348
+        },
+        "unsupported": [],
+        "worstRatio": 4.0355,
+        "samples": 4187,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 8,
+        "tag": "P",
+        "pseudo": null,
+        "size": 18,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 215.5,
+          "top": 373,
+          "right": 309.5,
+          "bottom": 394
+        },
+        "unsupported": [],
+        "worstRatio": 7.0679,
+        "samples": 153,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 9,
+        "tag": "P",
+        "pseudo": null,
+        "size": 18,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 309.5,
+          "top": 373,
+          "right": 610.5,
+          "bottom": 394
+        },
+        "unsupported": [],
+        "worstRatio": 7.0571,
+        "samples": 452,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 10,
+        "tag": "P",
+        "pseudo": null,
+        "size": 18,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 215.5,
+          "top": 402.25,
+          "right": 715.5,
+          "bottom": 423.25
+        },
+        "unsupported": [],
+        "worstRatio": 7.0571,
+        "samples": 757,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 11,
+        "tag": "P",
+        "pseudo": null,
+        "size": 18,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 215.5,
+          "top": 431.5,
+          "right": 677.5,
+          "bottom": 452.5
+        },
+        "unsupported": [],
+        "worstRatio": 7.0571,
+        "samples": 669,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 12,
+        "tag": "A",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 272.5,
+          "top": 514.75,
+          "right": 390.5,
+          "bottom": 534.75
+        },
+        "unsupported": [],
+        "worstRatio": 4.528,
+        "samples": 146,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 13,
+        "tag": "A",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 604.5,
+          "top": 514.75,
+          "right": 650.5,
+          "bottom": 534.75
+        },
+        "unsupported": [],
+        "worstRatio": 9.9338,
+        "samples": 51,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 14,
+        "tag": "DIV",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 254.5,
+          "top": 610.75,
+          "right": 333.5,
+          "bottom": 626.75
+        },
+        "unsupported": [],
+        "worstRatio": 11.227,
+        "samples": 97,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 15,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 366.5,
+          "top": 610.75,
+          "right": 629.5,
+          "bottom": 626.75
+        },
+        "unsupported": [],
+        "worstRatio": 7.0679,
+        "samples": 345,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 16,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "time": "2026-11-26T09:03:27.314Z"
+}

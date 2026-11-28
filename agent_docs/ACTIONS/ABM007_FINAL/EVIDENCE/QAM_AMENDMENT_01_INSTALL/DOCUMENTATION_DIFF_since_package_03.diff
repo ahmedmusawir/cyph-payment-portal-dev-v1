@@ -1,0 +1,891 @@
+# Documentation diff after review package 03 (24 Nov). Base: pre-install snapshot (before/) for QAM and module index files; package 03 copy for other records; /dev/null for new files. Product files: none changed.
+--- before/QAM/QAM_ENTRY.md
++++ current/QAM/QAM_ENTRY.md
+@@ -105,3 +105,7 @@
+ ## 8. Engineer completion duties (pointer)
+ 
+ See `../ABM_ENTRY.md` section 7. The Engineer completes `QAM_MANIFEST.md` and `HANDOFFS/ENGINEERING_HANDOFF.md` for **both** repositories before the Director commits, and records `ENGINEERING COMPLETE — AWAITING QA BRANCH`.
++
++## Amendment 01 (24 November 2026)
++
++`QAM_AMENDMENT_01.md` is part of this QAM and is read straight after this file. Where a sentence above differs from it, the amendment governs. In short: the Director's human walkthrough is inside Q2 and before certification; automated and human findings share one register and one repair work order; Q1 inventories existing tests and maps regression coverage; reusable passing scripts are listed for keeping before cleanup; a fixture session is never proof of real sign-in. It adds no shot and releases nothing.
+--- before/QAM/QAM_RISK_REQUIREMENTS.md
++++ current/QAM/QAM_RISK_REQUIREMENTS.md
+@@ -86,3 +86,14 @@
+ ## 3. Executor's reading (Q1)
+ 
+ NOT RECORDED. Filled by the QA Executor in Q1 without altering sections 1 or 2.
++
++## Amendment 01 module requirements (24 November 2026)
++
++Source for all four rows: Director rulings of 24 November 2026, campaign journal Entries 001 to 003, DC-001 and DC-002. Detail: `QAM_AMENDMENT_01.md`.
++
++| ID | Requirement | Evidence expected |
++|---|---|---|
++| AR-1 | A QA Lead-selected human walkthrough is performed by the Director inside Q2, before certification | The selected checks in the approved plan, each with a recorded result. None prefilled |
++| AR-2 | Regression coverage is inventoried and selected in Q1 from the complete candidate diff | The inventory, the CR and criterion mapping, and a reason for every exclusion and reused item |
++| AR-3 | A fixture session is not presented as proof of real sign-in, email delivery or handoff | Every result states how its session was obtained; real sign-in has its own evidence |
++| AR-4 | Reusable passing scripts are listed and approved for keeping before any cleanup removes them; no credential or sign-in state is kept | The approved keep-list in the cleanup report |
+--- before/QAM/QAM_RECON_REPORT.md
++++ current/QAM/QAM_RECON_REPORT.md
+@@ -85,3 +85,23 @@
+ | READY FOR Q2, READY WITH LISTED GAPS, or NOT READY | NOT RECORDED |
+ | Blockers, each with owner and exact resolution | NOT RECORDED |
+ | What cannot be tested yet, and why | NOT RECORDED |
++
++## Amendment 01 additions (owner: QA Executor, Q1)
++
++**A. Test and helper inventory.** One row per suite, spec, check set or helper found in either repository or in the retained APBM-007B QA lane.
++
++| Asset | Repository or lane | Kind | Current, stale or retired, and why | What it covers | What it needs to run |
++|---|---|---|---|---|---|
++| NOT RECORDED | | | | | |
++
++**B. Coverage map.**
++
++| CR or criterion | Existing coverage | Gap | Only testable by a person today? |
++|---|---|---|---|
++| NOT RECORDED | | | |
++
++**C. Recommended layout for a durable regression pack.** A recommendation only. Nothing is implemented in Q1. NOT RECORDED.
++
++**D. Fixture state as found**, and any need the existing cast cannot meet. NOT RECORDED.
++
++**E. Sign-in method available for routine automated runs** without the Director's inbox, and the authorization it rests on. NOT RECORDED.
+--- before/QAM/QAM_TEST_PLAN.md
++++ current/QAM/QAM_TEST_PLAN.md
+@@ -83,3 +83,19 @@
+ | Date | Edit, verbatim | Source in `QAM_APPROVAL.md` | Applied by |
+ |---|---|---|---|
+ | none | | | |
++
++## Amendment 01 additions (owner: QA Executor drafts; QA Lead selects and approves)
++
++**A. Human walkthrough.** This table replaces any earlier human-checks section in this file. Fields are defined in `QAM_AMENDMENT_01.md` section 1.
++
++| ID and criterion | Why a human | Candidate and target | Fixture and effects | Action | Expected result | Evidence | Result | Finding and retest |
++|---|---|---|---|---|---|---|---|---|
++| NOT RECORDED | | | | | | | PENDING | |
++
++Effort estimate for the walkthrough: NOT RECORDED. Device named for any real-phone check: NOT RECORDED.
++
++**B. Regression selection.**
++
++| Change in the candidate | Coverage selected | CR mapping | Session method | Effects declared | Excluded or reused, with reason and owner |
++|---|---|---|---|---|---|
++| NOT RECORDED | | | | | |
+--- before/QAM/QAM_APPROVAL.md
++++ current/QAM/QAM_APPROVAL.md
+@@ -48,3 +48,13 @@
+ | Round | Repaired pair | Retest scope | QA Lead approval | Director release |
+ |---|---|---|---|---|
+ | none | | | | |
++
++## Amendment 01 additions (owner: QA Lead)
++
++| Field | Value |
++|---|---|
++| Selected human checks (IDs) | NOT RECORDED |
++| Proposed human checks removed or moved to automation, with reasons | NOT RECORDED |
++| Regression selection accepted, with any exact amendments | NOT RECORDED |
++| Automated sign-in method confirmed as not needing the Director's inbox | NOT RECORDED |
++| Human checks the Director must repeat after a repair (per retest round) | none |
+--- before/QAM/QAM_EXECUTION_REPORT.md
++++ current/QAM/QAM_EXECUTION_REPORT.md
+@@ -69,3 +69,19 @@
+ ## 10. Final changed-file inventory in the QA lane
+ 
+ NOT RECORDED.
++
++## Amendment 01 additions (owner: QA Executor records; the Director's observations are his own)
++
++**A. Human walkthrough record.** This table replaces any earlier human-checks table in this file.
++
++| ID | Performed by | Candidate and target confirmed | Observation, in the performer's words | Result | Time | Finding |
++|---|---|---|---|---|---|---|
++| NOT RECORDED | | | | PENDING | | |
++
++**B. Session method by test.** Each result in this report states fixture session, password sign-in, or emailed link (human).
++
++**C. First failures.** Each first failure is listed here with its classification before any rerun.
++
++| Test | First failure, time | Classed as | Rerun? Why it was safe | Later outcomes |
++|---|---|---|---|---|
++| none recorded | | | | |
+--- before/QAM/AC_EVIDENCE_MATRIX.md
++++ current/QAM/AC_EVIDENCE_MATRIX.md
+@@ -50,3 +50,7 @@
+ | AC | Evidence from which earlier candidate | Why it still applies (diff proof) | Accepted by the QA Lead? |
+ |---|---|---|---|
+ | none | | | |
++
++## Amendment 01 note
++
++A criterion that depends on a required human check is not PASS while that check is PENDING or BLOCKED. Evidence obtained under a fixture session is marked as such in the evidence cell and does not satisfy a criterion that asks for real sign-in, email delivery or handoff.
+--- before/QAM/FINDINGS.md
++++ current/QAM/FINDINGS.md
+@@ -55,3 +55,13 @@
+ | Finding | Repair instruction reference | Repair commit (Director) | Retest scope | Retest result |
+ |---|---|---|---|---|
+ | none | | | | |
++
++## Amendment 01 additions
++
++1. Every finding records one additional field, **Source**: automated, or Director walkthrough.
++2. Findings from both sources are kept in this one register. A pass from one source does not close a failure from the other.
++3. After adjudication there is one consolidated repair work order for the Engineer.
++
++| Repair work order reference | Findings included | Issued by, date |
++|---|---|---|
++| none | | |
+--- before/QAM/QAM_CLEANUP_REPORT.md
++++ current/QAM/QAM_CLEANUP_REPORT.md
+@@ -39,3 +39,13 @@
+ |---|---|
+ | Accepted, or returned with exact items | NOT RECORDED |
+ | Date | NOT RECORDED |
++
++## Amendment 01 addition: keep-list (completed before any cleanup step removes anything)
++
++Proposed by the QA Executor, approved by the QA Lead. Never listed: credentials, passwords, tokens, links, cookies, sign-in state, browser profiles, raw authenticated traces.
++
++| Asset | CR mapping | Pass checkpoints | Fixture specification | Permitted effects | Actual result | Candidate it passed on | Keep? |
++|---|---|---|---|---|---|---|---|
++| NOT RECORDED | | | | | | | |
++
++QA Lead approval of the keep-list: NOT RECORDED.
+--- before/QAM/QAM_CERTIFICATION.md
++++ current/QAM/QAM_CERTIFICATION.md
+@@ -48,3 +48,13 @@
+ ## 7. Release to closeout
+ 
+ Requires: accepted Gate Q verdict, accepted cleanup, durable records committed by the Director, clean trees, and the Gate D rows recorded. NOT RECORDED.
++
++## Amendment 01 checks (QA Lead, before any verdict)
++
++| Check | Met? Evidence |
++|---|---|
++| Every selected human check has a result; none is PENDING. Any BLOCKED check has the Director's written disposition | |
++| Automated and human findings were adjudicated together; one repair work order; affected retests and required regression done on the final candidate | |
++| No fixture-session evidence is counted as proof of real sign-in, email delivery or handoff | |
++| The keep-list was approved before cleanup | |
++| Deployment-only checks are named and left to Gate D | |
+--- before/QAM/QAM_STATE.md
++++ current/QAM/QAM_STATE.md
+@@ -41,3 +41,4 @@
+ |---|---|---|---|---|
+ | 2026-11-23, Asia/Dhaka | ABM author | — → `READY FOR ENGINEERING` | Baselines above | QAM instantiated for this module under QAM_PLAYBOOK v1.0, template set v0.3. See `GOVERNING/README.md` for how |
+ | 2026-11-23, Asia/Dhaka | ABM author | `READY FOR ENGINEERING` (unchanged) | none | REVIEW_02: Architect amendments A-01 to A-06 applied. Governing playbooks copied into `GOVERNING/` with hashes; every QAM structure completed; `GATE_D_PLAN.md` added. No result recorded |
++| 2026-11-24, Asia/Dhaka | Engineer, on the QA Lead's instruction and the Director's release | state unchanged | none | `QAM_AMENDMENT_01.md` installed with pointer blocks. Documentation only. No result recorded |
+--- before/ABM_RULINGS.md
++++ current/ABM_RULINGS.md
+@@ -75,6 +75,7 @@
+ | AM-14 | 2026-11-24, about 14:10 | Director; `SOURCES/DIRECTOR_E2_SCRATCH_S1_S3_2026-11-24.md` instruction 1 | **SCRATCH reuse authorized** for the remaining E2 engineering checks and for subsequent independent Q1/Q2 QA: the existing APBM-007B SCRATCH environment (`ihgcsrypblqkwommrkgj`), identities and fixtures. The resolved backend is verified as SCRATCH before any sign-in. Credentials and tokens are never printed; credentials and authenticated browser state are never packaged. Not permitted: DEV-backed testing, fixture resets, new accounts, purchases, unrelated business-data changes. This designates the fixtures that AM-08 (5) required. The setup is documented for QA (`QAM/HANDOFFS/ENGINEERING_HANDOFF.md` section 12). No dashboard write, no deployment, and nothing for the future OwedBook beta (separate planning) |
+ | AM-15 | 2026-11-24, about 14:10 | Director; same source, instruction 2 (amends AM-14) | **Automated authentication on SCRATCH; no Director inbox.** Existing fixture credentials and the normal sign-in flow are preferred. Where a fixture has no available credential, **provider-supported test-session establishment with the SCRATCH privileged credential** is permitted, solely for designated existing fixture users, under these conditions: target verified as SCRATCH, failing closed for DEV, alpha or unknown targets; explicit fixture allowlist; privileged credential kept server-side in test tooling; credentials, sign-in tokens and session state never logged or packaged. No production authentication bypass, no guard change, no DEV user change, no email, no password reset, no business-data change. Tooling stays separate from production code. This supersedes the earlier service-key prohibition only inside the verified SCRATCH boundary. Automated authentication proves authenticated application behavior only, not email delivery, magic-link lifecycle or the real cross-app handoff; those stay separately identified |
+ | AM-16 | 2026-11-24, about 14:10 | Director; same source, instruction 1 (S-1, S-3) | **S-1 input supplied:** the original DEV Magic Link HTML, saved byte for byte as `EVIDENCE/E2/email/DEV_MAGIC_LINK_TEMPLATE_ORIGINAL.html`. The amendment changes only the heading's visible text; subject "Your Pharmacy Books sign-in link" and SMTP display name "Pharmacy Books" are prepared, address `no-reply@cyberizedev.com` unchanged; no dashboard change. **S-3 exception granted, exactly:** in `src/components/portal/references/EmailPreview.tsx`, the image source becomes `/brand/pharmacy-books-logo-primary.png` and `w-7` becomes `w-auto`, keeping `h-7`. No other edit and no deletion of the module. AC-N02 to be verified |
++| AM-17 | 2026-11-24 | Director; campaign journal Entries 001 to 003 (DC-001, DC-002) | The QAM is amended by `QAM/QAM_AMENDMENT_01.md`: human walkthrough inside Q2 before certification; one findings register and repair work order with affected retest; regression inventory and selection in Q1; reusable passing scripts listed for keeping before cleanup; fixture sign-in is not proof of real sign-in. No acceptance criterion, effects envelope, Gate D plan or verdict authority changes. No shot is added |
+ 
+ ## 4. Open decisions for the Director, in four groups
+ 
+--- before/ABM_JOURNAL.md
++++ current/ABM_JOURNAL.md
+@@ -14,3 +14,4 @@
+ | 2026-11-24 | Engineer | Supplemental source-review package for the Architect, on the Director's request: `EVIDENCE/ABM007_FINAL_SOURCE_REVIEW_01.zip` (SHA-256 `e9750e31…7d945`). Read-only; no product, test or Git change. S-1 to S-3 remain pending; nothing transferred to QA. |
+ | 2026-11-24 | Engineer | Resend read-only check (06:51Z): sending-only key, `GET /domains` 401 `restricted_api_key`; nothing read or changed. E2 continuation on the Director's instruction: focus made surface-aware in both apps; Help role table stacks below md; overlay regression in the OwedBook signed-in mobile menu found by the keyboard walk and fixed (back in the page flow, as at baseline); EmailPreview one-line exception proposed, not applied; AM-12 and AM-13 recorded; Director-observed settings recorded; Stripe traced read-only (account `…Dyu3RR`, explicit configuration `…diVXwt`, branding unset); external settings plan, deployed walkthrough and exact staging lists written; final checks green. **E2 INTERIM** (S-1, S-2, S-3). No Git, dashboard, database or deployment action |
+ | 2026-11-24 | Engineer | AM-14 to AM-16 recorded (`SOURCES/DIRECTOR_E2_SCRATCH_S1_S3_2026-11-24.md`). S-1: template saved, amended (heading text only), diffed. S-3: the one line applied; AC-N02 scan clean. SCRATCH: cast verified read-only; tooling `EVIDENCE/E2/tools/scratch_proof/` (password form for owners, AM-15 provider token for password-less fixtures, SCRATCH verified at build and runtime). 68 signed-in page loads pass; two pre-existing overflows fixed (`ScreenHeader.tsx`, `common/DataTable.tsx`); AC-F02 not reproduced in 2 × 20 runs; O-1 noted. **ENGINEERING COMPLETE — AWAITING QA BRANCH** |
++| 2026-11-24 | Engineer | Documentation-only handoff preparation after the Architect accepted package 03: `QAM/QAM_AMENDMENT_01.md` installed verbatim (SHA `72206961…770919`), pointer blocks appended to 10 QAM files, `QAM_STATE` log row, ruling AM-17; install report with pre-change quotes. Engineering record corrected (AC-F02 18 + 2 per attempt, O-1, build-check history, QA-copy constraints). No product change since package 03; no tests rerun. Package 04. Candidate SHAs PENDING |
+--- before/ABM_STATE.md
++++ current/ABM_STATE.md
+@@ -6,20 +6,20 @@
+ 
+ | Field | Value |
+ |---|---|
+-| As of | 24 November 2026, about 15:20 Asia/Dhaka |
+-| Module state | `ENGINEERING COMPLETE — AWAITING QA BRANCH` (E2 COMPLETE). All engineering obligations met (`QAM/HANDOFFS/ENGINEERING_HANDOFF.md` section 12). Work is uncommitted; the product candidate exists only when the Director commits it |
++| As of | 24 November 2026, about 15:55 Asia/Dhaka |
++| Module state | `ENGINEERING COMPLETE — AWAITING QA BRANCH`. The Architect accepted engineering completion for QA intake (journal v0.5 Entry 005); this is not Gate Q, release or closeout. QAM Amendment 01 installed (AM-17) |
+ | Contract version | Frozen 24 Nov at `CONTRACT_FREEZE.md` (AM-10) |
+ | Engineering branch / baseline, OwedBook | `abm007-final` / `9597699b404afdbcd792a9b4da61c21abb10cdf8` (baseline kept, AM-08 (3)). Actual starting HEAD `c335671afa6cd4a8a2d437c30aeae5040e0cecaf` (records-only, preserved) |
+ | Engineering branch / baseline, Portal | `abm007-final` / `cb4decde9adc9ab75d0dcb15556c64a3bdbfe075` (baseline kept). Actual starting HEAD `b2e50fa86ef041f9f7f7f1a0f630576de0a10664` ("E1 recon done", Director, 24 Nov 09:36; records only: module pack, E1 records), pushed |
+-| Product candidate | PENDING (does not exist until the Director commits completed engineering) |
++| Product candidate | PENDING in both repositories until the Director commits (`EVIDENCE/E2/DIRECTOR_GIT_COMMANDS.md`); Q1 records the actual identities from the Director's receipt |
+ | Approved engineering plan | `ABM_EXECUTION_PLAN.md` RELEASED 02, SHA-256 `81ae3410eb5d5652b9eaf3f0cf009458d3a95b2ee8fd913f904acd452515c7ce` |
+ | Engineering release | RECORDED: Director, 24 Nov 10:02 (`SOURCES/DIRECTOR_RELEASE_E2_2026-11-24.md`; AM-08, AM-09) |
+ | Gate V (visual approval of `DESIGN/`) | Approved (AM-01) and reconfirmed by ruling AM-08 (2) |
+ | Current writer | Engineer (Claudy) until the Director commits; then the QA branch per `QAM/QAM_STATE.md` |
+ | QAM state | `READY FOR ENGINEERING` (see `QAM/QAM_STATE.md`) |
+-| Latest package | `EVIDENCE/ABM007_FINAL_E2_COMPLETION_REVIEW_03.zip` (E2 completion package; SHA-256 in the `.sha256` beside it and in the return message). Earlier: `_ENGINEERING_REVIEW_01`, `_SOURCE_REVIEW_01`, `_E2_COMPLETION_REVIEW_02` |
++| Latest package | `EVIDENCE/ABM007_FINAL_E2_FINAL_HANDOFF_04.zip` (final documentation-only handoff; SHA-256 in the `.sha256` beside it and in the return message). Earlier: `_ENGINEERING_REVIEW_01`, `_SOURCE_REVIEW_01`, `_E2_COMPLETION_REVIEW_02`, `_E2_COMPLETION_REVIEW_03` |
+ | Current stop | None. S-1 closed for engineering (template prepared, AM-16), S-2 closed (SCRATCH reuse and automated authentication, AM-14 and AM-15), S-3 closed (exception applied, AM-16) |
+-| Next owner | Director: commit both candidates with the exact staging lists, create `qa/abm007-final`, and release Q1 to independent QA; apply external settings only after deployment authorization. Architect: review package 03 |
++| Next owner | Director: commit both candidates with the exact lists, create `qa/abm007-final` at those commits, release Q1. QA Lead: confirm the installed amendment from the install report. Engineer: available for accepted repairs |
+ | Next permitted action | Director Git actions; independent QA Q1 on the committed candidates (the SCRATCH setup is in handoff section 12.4). Engineering makes no further change unless asked |
+ | Actions already completed that must not repeat | Pre-ABM recon (23 Nov); the Director's customer rehearsal (21 to 22 Nov); entry checks E-1 to E-6 (24 Nov) |
+ 
+@@ -43,3 +43,4 @@
+ | 2026-11-24 | Engineer | state unchanged (`ENGINEERING RELEASED`, E2 INTERIM) | Director's continuation (`SOURCES/DIRECTOR_E2_CONTINUATION_2026-11-24.md`; AM-12 Architect AC-H03 confirmation, AM-13 limits). Source-review corrections A to D done. One self-introduced regression (overlay menu obscured focus) found and fixed. Final checks green; rendered first-paint, focus and Help checks done. Director-observed settings recorded; Stripe traced read-only; external settings plan and deployed walkthrough prepared. Stops S-1 (narrowed), S-2 (corrected), S-3 open |
+ 
+ | 2026-11-24 | Engineer | `ENGINEERING RELEASED` → `ENGINEERING COMPLETE — AWAITING QA BRANCH` | Director rulings AM-14 to AM-16: S-1 template prepared (heading-only diff), S-3 exception applied, existing SCRATCH fixtures with automated authentication. Signed-in checks for 3 roles in both apps, per-role Help, AC-F02 reproduction (not reproduced). Two pre-existing 375 px overflows fixed. Final affected checks green. Package 03 |
++| 2026-11-24 | Engineer | state unchanged (`ENGINEERING COMPLETE — AWAITING QA BRANCH`) | Architect accepted package 03 for QA intake. QAM_AMENDMENT_01 installed with pointer blocks (AM-17; documentation only, no result recorded). Engineering record corrected (AC-F02 18 + 2 per attempt; O-1 for QA; build-check history kept; QA-copy constraints of the SCRATCH tooling documented). Delta from package 03 documentation only. Package 04 |
+--- package_03/ABM_ACCEPTANCE_LEDGER.md
++++ current/ABM_ACCEPTANCE_LEDGER.md
+@@ -81,3 +81,7 @@
+ | AC-N02 | No old-logo reference remains in either repository outside the records; the one unreachable reference was changed under the S-3 exception (AM-16) | `LEFTOVERS.md` L-9 resolved | see matrix |
+ | AC-E01 | Engineering part done: original saved byte for byte; amended body differs in the heading text only (one-line diff, byte proof); subject and display name prepared. Review stays with QA | `email/` | see matrix |
+ | AC-R01, AC-R02 | Final trees: OwedBook 394/394, Portal 584/584; typecheck, lint (baseline warnings) and builds exit 0 | `verify4/logs/` | see matrix |
++
++## Correction after the Architect's review of package 03 (24 Nov)
++
++**AC-F02**, wording made exact: each of the two reproduction attempts had **18 complete routes and 2 interrupted routes** (WebKit warm iterations 2 and 4, observation O-1). It is not 40 clean completed journeys. No run reached a sign-in page; not reproduced; no repair. O-1 stays with independent QA. The session method for all signed-in engineering evidence was a fixture session (Store admin, Member) or a password sign-in (Owner A); neither counts as proof of real emailed sign-in, email delivery or handoff (QAM_AMENDMENT_01 section 6; AR-3).
+--- package_03/QAM/HANDOFFS/ENGINEERING_HANDOFF.md
++++ current/QAM/HANDOFFS/ENGINEERING_HANDOFF.md
+@@ -249,3 +249,51 @@
+ - Exact lists: `../../EVIDENCE/E2/STAGING_LIST_owedbook.txt` and `STAGING_LIST_portal.txt`; review ZIPs in `STAGING_LIST_portal_optional.txt`.
+ - From each repository root: read `git status --short`, compare with the list, then run `git add --pathspec-from-file=<list>` and `git diff --cached --name-status <baseline>`. Commit.
+ - Then create `qa/abm007-final` at the new commits when the Director chooses, and record both SHAs in `../QAM_MANIFEST.md` section 1.
++
++## 13. Final documentation-only handoff preparation (24 Nov, after the Architect's review of package 03)
++
++**Architect disposition (journal v0.5 Entry 005):** "Accept engineering completion for QA intake, with the QAM documentation amendment to be installed before candidate handoff. This is not Gate Q, release or final module closeout." The module state stays `ENGINEERING COMPLETE — AWAITING QA BRANCH`. Sections 1 to 12 stand; this section corrects and supersedes them where it says so.
++
++### 13.1 QAM Amendment 01 installed (ruling AM-17)
++
++- `../QAM_AMENDMENT_01.md` was added verbatim. Its SHA-256 is `72206961eb6dc3d5b11abb2f9cd2051526920e1279885c6cae5289d3bf770919`, equal to the supplied copy.
++- Pointer blocks were appended, exactly as written in the QA Lead's install instructions, to: `QAM_ENTRY`, `QAM_RISK_REQUIREMENTS`, `QAM_RECON_REPORT`, `QAM_TEST_PLAN`, `QAM_APPROVAL`, `QAM_EXECUTION_REPORT`, `AC_EVIDENCE_MATRIX`, `FINDINGS`, `QAM_CLEANUP_REPORT` and `QAM_CERTIFICATION`.
++- One row was added to the `QAM_STATE` transition log, with the state unchanged.
++- Install report: `../../EVIDENCE/QAM_AMENDMENT_01_INSTALL/INSTALL_REPORT.md`.
++- Every "NOT RECORDED" and "PENDING" stays as written. No QA field was filled.
++
++### 13.2 Corrections to the engineering record (carry into Q1 exactly)
++
++| Item | Accurate statement | Supersedes |
++|---|---|---|
++| Stops | S-1 to S-3 are **closed for engineering**. S-1: the template is prepared, not applied | 12.3 (unchanged in substance) |
++| External settings | Email template, SMTP name, Stripe branding, Checkout and the portal headline are **prepared, not applied**; their application is the Director's, after deployment authorization (`EXTERNAL_SETTINGS_PLAN.md`) | — |
++| AC-F02 runs | **Each** of the two reproduction attempts had **18 complete routes and 2 interrupted routes** (WebKit warm iterations 2 and 4). It is **not** 40 clean completed journeys. No run reached a sign-in page. The defect was not reproduced | 12.2 "AC-F02: 2 × 20 runs, not reproduced", which omitted the split |
++| O-1 | WebKit navigation interruption, cause unproven. It remains **for independent QA**: not a declared product defect, not a waived finding | — |
++| Build-check evidence | Three failed runs of the backend **check** (the builds themselves exited 0) preceded the final passing check. All are kept: `../../EVIDENCE/E2/signed_final/SCRATCH_BUILD_INSTRUMENT_HISTORY.md`, `../../EVIDENCE/E2/verify4/logs/summary.txt` (`scratch build exit=1`) and the final `scratch_build_check.json` (both `backend_ok: true`) | — |
++| QA copy of the tooling | QA may copy `tools/scratch_proof/` into its declared QA lane for independent review and adaptation. **Two** prefix checks exist (`serve.mjs` C-2, `auth.mjs` C-6), plus the other runtime and path constraints now documented in comment blocks in both files and in the README section "Copying into a QA lane". No reset, fixture creation, credential change or provider mutation is authorized by this handoff | 12.4 "one prefix check to change in a QA copy" (wrong) |
++| Session-method labels | Under QAM_AMENDMENT_01 section 6, Engineering's signed-in results used a **fixture session** (provider token: Store admin and Member) or a **password sign-in** (Owner A). None is an emailed-link sign-in. None proves email delivery, the emailed-link lifecycle, or the handoff after a real sign-in | §12.4 limits (consistent) |
++
++### 13.3 Carry into Q1 (journal Entry 005)
++
++- O-1.
++- Zero-store and removed-access rendered states (AC-F01).
++- Independent contrast across states (AC-B08).
++- The browser matrix, including Firefox.
++- Real normal sign-in and handoff requirements, with their own evidence (AR-3).
++- Candidate identity from the Director's receipt.
++- The new human-walkthrough and regression provisions (QAM_AMENDMENT_01; AR-1 to AR-4).
++
++External email and Stripe application, and the deployed checks, are tracked separately. No beta deployment change belongs in this module. REG-001 is not built here; central Factory doctrine synchronization (DC-001, DC-002) is a separately tracked action.
++
++### 13.4 Delta from package 03
++
++Documentation only. Every product, config, test and asset file in both repositories is byte-identical to package 03's inventory: OwedBook 91 paths; Portal 51 paths plus the same 16 deletions. No product test was rerun for this packaging, because the passed results bind to unchanged files. The changed files are listed in `INSTALL_REPORT.md` section 6.
++
++### 13.5 Candidate identity
++
++`QAM_MANIFEST.md` section 1 "Implementation identity" stays **PENDING** in both repositories until the Director commits. Q1 records the actual candidate identities from the Director's receipt.
++
++### 13.6 Director commands (prepared, not executed)
++
++Exact lists: `../../EVIDENCE/E2/STAGING_LIST_owedbook.txt`, `STAGING_LIST_portal.txt`; optional ZIPs in `STAGING_LIST_portal_optional.txt`. Full command set, proposed commit messages and the commands that create `qa/abm007-final` at the new commits: `../../EVIDENCE/E2/DIRECTOR_GIT_COMMANDS.md`.
+--- package_03/QAM/QAM_MANIFEST.md
++++ current/QAM/QAM_MANIFEST.md
+@@ -115,3 +115,7 @@
+ ## Engineer update, completion (24 Nov)
+ 
+ Engineering is complete (`HANDOFFS/ENGINEERING_HANDOFF.md` section 12). The reusable SCRATCH setup for QA is in section 12.4, and refreshed inventories and exact staging lists are in `../EVIDENCE/E2/`. Section 1's candidate SHAs remain the Director's to record after he commits. No QA field is filled.
++
++## Engineer update, final handoff preparation (24 Nov)
++
++QAM Amendment 01 is installed (`QAM_AMENDMENT_01.md`; `HANDOFFS/ENGINEERING_HANDOFF.md` section 13). Section 1 "Implementation identity" stays **PENDING** in both repositories until the Director commits; the commands are in `../EVIDENCE/E2/DIRECTOR_GIT_COMMANDS.md`. No QA field is filled.
+--- package_03/EVIDENCE/E2/VERIFICATION.md
++++ current/EVIDENCE/E2/VERIFICATION.md
+@@ -158,3 +158,10 @@
+ - Firefox.
+ - Rendered text contrast across every state (AC-B08, QA's measurement).
+ - Email delivery, the emailed-link lifecycle, and the real alpha handoff (AM-15; `DEPLOYED_WALKTHROUGH.md`).
++
++## 7. Notes after the Architect's review of package 03 (24 Nov)
++
++- **AC-F02:** each attempt had 18 complete routes and 2 interrupted routes (O-1); not 40 clean completed journeys.
++- **Build-check provenance:** the three failed runs of the backend check, before the final passing check, are recorded in `signed_final/SCRATCH_BUILD_INSTRUMENT_HISTORY.md` alongside the final `scratch_build_check.json`.
++- **Session methods:** fixture session (provider token: Store admin, Member) and password sign-in (Owner A). Neither is real emailed sign-in, email delivery or handoff proof.
++- **No product file changed after package 03,** so no product test was rerun for the final documentation packaging.
+--- package_03/EVIDENCE/E2/tools/scratch_proof/README.md
++++ current/EVIDENCE/E2/tools/scratch_proof/README.md
+@@ -52,7 +52,7 @@
+ node agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/tools/scratch_proof/serve.mjs stop --copies <copies>
+ ```
+ 
+-`serve.mjs` accepts copies only under this session's scratchpad (`/tmp/claude-1000/`). A QA lane would change that one prefix check in its own copy and record the change.
++`serve.mjs` (C-2) and `auth.mjs` (C-6) both accept only this Engineer session's scratchpad (`/tmp/claude-1000/`). A QA copy must reconcile both prefix checks and every other constraint listed in "Copying into a QA lane" below (corrected 24 Nov after the Architect's review: an earlier version of this line named only one prefix check).
+ 
+ ## Limits (state them in every report)
+ 
+@@ -61,3 +61,18 @@
+ 3. Handoffs exercised between 3100 and 3101 are the real handoff code on the **local proof pair**, after an automated sign-in. They are not alpha.
+ 4. Effects: SCRATCH Auth sign-in, session and audit activity, handoff codes, and one-time tokens from `generateLink` (no email). Plus read-only Stripe sandbox calls from Portal pages. No business data, password, user or DEV change.
+ 5. Never package or log: the cast, the service key, tokens, cookies, browser storage, or unmasked screenshots. The tools write no browser state to disk; contexts are closed at the end.
++
++## Copying into a QA lane (Architect review of package 03; journal Entry 005)
++
++QA may copy this folder into its own declared lane for independent review and adaptation. A copy must reconcile **every** constraint below, not only one prefix check. It records each change it makes, and must not weaken the SCRATCH verification, the fixture allowlist, the mail block or the port refusal. This handoff authorizes **no** reset, fixture creation, credential change or provider mutation. A copy run is a QA action under the QA release.
++
++| File | Constraint (IDs match the comment blocks in the files) |
++|---|---|
++| `auth.mjs` | C-1 hard-coded Portal path for `scripts/apbm007b/lib/env.mjs` and module resolution. C-2 `pg` resolved from the OwedBook path. C-3 cast file `~/.apbm007b/engineering_cast.json`, mode 0600. C-4 role allowlist. C-5 sites `localhost:3100` and `3101` with the login paths. C-6 runtime listener check: Linux `ss -ltnpH`, readable `/proc/<pid>/cwd` and `environ`, **cwd prefix `/tmp/claude-1000/`**, SCRATCH reference, `local-proof`. C-7 the user must already exist. C-8 UI selectors. C-9 timeouts. C-10 effects |
++| `serve.mjs` | C-1 hard-coded Portal path. C-2 **`--copies` prefix `/tmp/claude-1000/`**, `ob/` and `pp/` copies with `node_modules`. C-3 fixed ports on 127.0.0.1 and refusal when occupied. C-4 named keys read from both `.env.local` files. C-5 mail blocked, no listener, synthetic subscriptions not allowed. C-6 build backend check. C-7 pidfile and process-group stop |
++| `signed_checks.mjs` | Hard-coded Portal path (Playwright). `PLAYWRIGHT_BROWSERS_PATH` defaults to `/home/moose/APBM007B_REPAIR_R2/browsers` (WebKit 26.4, read-only). Chromium uses the installed Google Chrome (`channel: 'chrome'`). Sites, ports and selectors as in `auth.mjs`. Writes only to its `<out_dir>` |
++| `fixtures-check.mjs` | Hard-coded Portal path; `pg` from the OwedBook path; cast file and mode as in `auth.mjs` C-3; read-only transaction |
++| `link-inventory.mjs` | Hard-coded absolute paths to Playwright and to this folder's `auth.mjs`; sites as in `auth.mjs` |
++| `../assemble.sh` | Copies the working tree (tracked plus untracked, without `.env*` or `agent_docs/`) and hash-binds the copy; refuses a copy containing `.env*` |
++
++**Session method labels (QAM_AMENDMENT_01 section 6).** A sign-in through `auth.mjs` is a **fixture session** when it uses the provider token, and a **password sign-in** when it uses the password form. Neither is an emailed-link sign-in. Neither proves email delivery or the emailed-link lifecycle. Neither proves the handoff that follows a real sign-in.
+--- package_03/EVIDENCE/E2/tools/scratch_proof/auth.mjs
++++ current/EVIDENCE/E2/tools/scratch_proof/auth.mjs
+@@ -11,6 +11,27 @@
+ // Secrets stay in this process: the SCRATCH service key and the cast are never printed, logged, written or packaged.
+ // The one-time token exists only in memory and in the browser navigation; errors are rethrown without URLs.
+ // No session state is saved: callers use one browser context and close it.
++//
++// RUNTIME AND PATH CONSTRAINTS (all of them; a QA copy in its own declared lane must reconcile each one, not only one
++// prefix check, and record what it changed). Do not weaken a target, allowlist or effect safeguard while adapting.
++//   C-1  Line `const PORTAL = ...`: hard-coded Portal repository path. Used to import scripts/apbm007b/lib/env.mjs (the
++//        SCRATCH/DEV target guard; protected path, never edited) and to resolve playwright and @supabase/supabase-js.
++//   C-2  Line `const pg = ...`: resolves the `pg` driver from the OwedBook repository's package.json path.
++//   C-3  CAST_FILE: ~/.apbm007b/engineering_cast.json, must be mode 0600 (checked). Engineering cast only; QA uses its
++//        own cast only if the Director authorizes that, and never the cast's values in any artifact.
++//   C-4  ALLOWLIST: ENGINEERING_OWNER_A, ENGINEERING_OWNER_B, ENGINEERING_ADMIN, ENGINEERING_MEMBER. Any other role fails.
++//   C-5  SITES: http://localhost:3100 (OwedBook) and http://localhost:3101 (Portal): the 'local-proof' pair both apps'
++//        appIdentity allow; cookie names and handoff origins depend on it. LOGIN paths /auth and /login.
++//   C-6  assertServedScratch(): needs Linux `ss -ltnpH` (with process info for the same user) and readable /proc/<pid>/cwd
++//        and /proc/<pid>/environ of the listener; the listener's working directory must start with '/tmp/claude-1000/'
++//        (this Engineer session's scratchpad: the SECOND prefix check, alongside serve.mjs); its Supabase URL must resolve
++//        to SCRATCH ihgcsrypblqkwommrkgj; NEXT_PUBLIC_APP_ENV must be 'local-proof'. OwedBook served scripts must not
++//        contain the DEV backend URL.
++//   C-7  The fixture user must already exist on SCRATCH (read-only SQL) before generateLink; generateLink never creates.
++//   C-8  UI selectors: OwedBook input[name=email|password]; Portal #email/#password; the password form's non-"button"
++//        button; the confirm page's [data-testid="confirm-sign-in"]. A product change to these needs a matching edit here.
++//   C-9  Timeouts 30 s for sign-in navigation; SQL statement timeout 15 s.
++//   C-10 Effects: password sign-in, or one generateLink (no email) plus the app's own verifyOtp, per call; nothing else.
+ import { readFileSync, readlinkSync, statSync } from 'node:fs'; import { execSync } from 'node:child_process'; import { homedir } from 'node:os'; import { createRequire } from 'node:module';
+ const PORTAL = '/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1';
+ const { scratchTarget, apiRef, SCRATCH_REF, DEV_REF } = await import(`${PORTAL}/scripts/apbm007b/lib/env.mjs`);
+--- package_03/EVIDENCE/E2/tools/scratch_proof/serve.mjs
++++ current/EVIDENCE/E2/tools/scratch_proof/serve.mjs
+@@ -13,6 +13,22 @@
+ // NEXT_PUBLIC_APP_ENV=local-proof, site URLs). Server secrets (SCRATCH service key, Stripe TEST key and names) are passed
+ // to `next start` in memory only. MAIL_ALLOWLIST is empty and RESEND_API_KEY is not passed, so no app mail can leave.
+ // No Stripe listener is started. Refuses occupied ports; never touches 3000/3001/3457. Logs are scrubbed.
++//
++// RUNTIME AND PATH CONSTRAINTS (all of them; a QA copy must reconcile each and record what it changed; never weaken the
++// SCRATCH verification, the mail block or the port refusal while adapting):
++//   C-1  Line `const PORTAL = ...`: hard-coded Portal repository path (imports scripts/apbm007b/lib/env.mjs, protected).
++//   C-2  --copies must start with '/tmp/claude-1000/' (this Engineer session's scratchpad) and contain ob/ and pp/, each a
++//        copy made by ../assemble.sh with its repository's node_modules copied in (`./node_modules/.bin/next` is used).
++//        auth.mjs makes the matching check on the running listener's working directory (its C-6).
++//   C-3  Ports fixed at 3100 (ob) and 3101 (pp), bound to 127.0.0.1; refuses to start if either is in use (Linux `ss`).
++//   C-4  Reads only named keys: OwedBook .env.local APBM_SCRATCH_* (through scratchTarget()); Portal .env.local
++//        STRIPE_SECRET_KEY (test key enforced), STRIPE_EXPECTED_ACCOUNT, STRIPE_PRICE_STORES, STRIPE_PORTAL_CONFIGURATION,
++//        STRIPE_WEBHOOK_SECRET. Values go only into the child process environment; never printed or written.
++//   C-5  MAIL_ALLOWLIST is set empty and RESEND_API_KEY is not passed (no app mail); no Stripe listener; ALLOW_SYNTHETIC_
++//        SUBSCRIPTIONS is not set (as on alpha).
++//   C-6  Build check: SCRATCH backend URL must appear in the built JS and no DEV backend URL may, except the mail guard's
++//        exact comparison literal; build logs are scrubbed (lib/env.mjs scrub()).
++//   C-7  pidfile pids_scratch.json in --copies; `stop` signals only the process groups this tool started.
+ import { spawn, spawnSync, execSync } from 'node:child_process';
+ import { existsSync, readFileSync, writeFileSync, openSync, readdirSync, statSync } from 'node:fs';
+ import { join } from 'node:path';
+--- /dev/null
++++ current/QAM/QAM_AMENDMENT_01.md
+@@ -0,0 +1,134 @@
++# QAM_AMENDMENT_01 — `ABM007_FINAL`
++
++**Owner:** QA Lead · **Date:** 24 November 2026, Asia/Dhaka
++**Authority:** Director rulings of 24 November 2026 (campaign journal Entries 001 to 003; doctrine actions DC-001 and DC-002)
++**Installed by:** the Engineer, as a documentation-only change, before the engineering-to-QA handoff
++**Status:** in force for this module once installed. It records no result and releases nothing.
++
++## 0. How to read this file
++
++1. This file amends the `ABM007_FINAL` QAM. Where an earlier sentence in another QAM file says something different, **this file governs.**
++2. It changes no acceptance criterion, no approved effects envelope, no Gate D plan and no verdict authority. It adds no shot: Q1 and Q2 stay as they are.
++3. It authorizes no test effect, no fixture creation, no reset, no provider call and no Q2 release.
++4. The other QAM files carry a short pointer to this file. The pointers add no rule of their own.
++
++## 1. Human walkthrough inside Q2
++
++1. The Director's focused human walkthrough is a planned part of Q2. It is completed before the QA Lead adjudicates and before any product certification.
++2. Normally it is grouped after the QA Executor's automated campaign. A sign-in or access step the Director must do may happen earlier, when it is actually needed.
++3. **Who does what.** The Director performs the checks. The Architect may guide and translate the steps and is not an independent performer. The QA Executor prepares the builds and fixtures and keeps the evidence record. The QA Lead selects the checks, approves the plan and adjudicates; the QA Lead does not perform them.
++4. Each person records only what they themselves saw. No agent writes the Director's answer.
++5. In Q1 the QA Executor proposes a short, risk-based walkthrough, separate from the automated plan, with a practical effort estimate. The QA Lead selects or amends it at Q1 review. The selected set is recorded in the Q1 decision.
++6. Every selected check records these fields:
++
++| Field | Content |
++|---|---|
++| ID and criterion | `HC-nn`, and the acceptance criterion or risk it serves |
++| Why a human | Why automated evidence alone is not enough |
++| Candidate and target | Both candidate SHAs, the QA build address and port, the QA target, the browser or device |
++| Fixture and effects | The role and account used; what the check may change; cleanup where it applies |
++| Action | Short, plain-language steps |
++| Expected result | What should be seen, taken from the contract |
++| Evidence | The Director's observation in his own words, the time, and a sanitized screenshot only where it supports the observation |
++| Result | PENDING, PASS, FAIL or BLOCKED. Never prefilled |
++| Finding and retest | The linked finding, its disposition, and the retest result where one was required |
++
++7. One check at a time. The answer is recorded before the next check is read out.
++8. The walkthrough is short by design. About eight checks is the QA Lead's planning target. It is not permission to drop a required acceptance criterion.
++9. A real-phone check needs a named, available device, raised in Q1. An emulated screen is never recorded as a real-device pass.
++10. The walkthrough uses the module's approved effects envelope exactly as it stands. It neither adds to it nor cancels any part of it.
++11. A planned human email check uses an inbox the Director controls. No link, code, password or sign-in state is written into any artifact.
++12. A required human check that has not been performed stays PENDING, or BLOCKED with its reason. It is never represented as passed. No verdict of PASS in any form is issued while a required human check is open, unless the Director removes it from the required set in writing.
++13. Checks that can only be made after deployment are named as such before Gate Q and remain Gate D obligations. A check passed in Q2 does not count for Gate D, and the reverse.
++
++## 2. One findings register, one repair work order, affected retest
++
++1. Findings from the automated campaign and from the walkthrough go into the one register, `FINDINGS.md`. Each finding records its **source**: automated, or Director walkthrough.
++2. Both evidence sources are kept. A pass from one source does not suppress a failure from the other.
++3. No repair starts while Q2 is running. Approved work that a failure does not affect continues to completion where that is safe. Immediate stops remain for a wrong target, an isolation breach, data corruption, a compromised instrument or a real missing prerequisite. A stop is not a repair.
++4. After adjudication the QA Lead issues **one** consolidated repair work order for the Engineer. Repairs follow this module's installed repair and Git policy and the Director's Git authority.
++5. After a repair: the QA Executor reruns the original failure, its neighbors and the required regression on the repaired candidate. The Director repeats only the human checks the QA Lead names as affected. Results that the repair did not touch are carried forward only with diff proof.
++6. Candidate identity and evidence binding are reconciled before certification.
++
++## 3. Failures and reruns
++
++1. The first failure is kept and reported at once. It is a finding from that moment.
++2. A rerun is diagnostic. Before any rerun the failure is classed: wrong target, environment, instrument, or product.
++3. A test with side effects (a payment, an invitation, a removal, a role change) is never rerun automatically.
++4. A mix of pass and fail is an intermittent finding. A later pass does not erase the earlier failure.
++5. No hidden retries, no weakened assertion. An infrastructure failure is BLOCKED, never a product pass.
++6. Only the QA Lead may set a required test aside, with a named owner and a stated condition for review.
++
++## 4. Regression inventory and selection in Q1
++
++Q1 remains read-only toward product and business data, as already stated in this QAM. In Q1 the QA Executor:
++
++1. **Inventories** the tests and helpers that exist in both repositories and in the retained APBM-007B QA lane: unit, integration, browser specs, database checks, probes and helpers.
++2. **Classifies** each as current, stale, or retired, with the reason. States what is missing and what can only be tested by a person today. A count of passing tests is not presented as journey coverage.
++3. **Maps** the target register CR-01 to CR-12 (section 8) and this module's acceptance criteria to actual coverage and to gaps.
++4. **Selects** coverage from the complete candidate diff, including dependencies and external configuration, and gives a reason and an owner for every exclusion, every reused evidence item and every limitation.
++5. **Proposes** the candidate-specific test plan and the separate human walkthrough.
++6. **Recommends** a layout for a durable regression pack.
++
++Q1 does **not**: implement the regression pack (that is the separately scoped assignment `REG-001`), repair or rewrite product tests, run the campaign, or create, reset or re-credential fixtures.
++
++The inventory the QA Lead wrote on 24 November came from earlier engineering summaries. It is historical. The QA Executor's inventory on the actual candidate replaces it.
++
++## 5. Critical-regression mappings in Q2
++
++1. A Q2 probe that already belongs to this module's approved scope may carry a CR number as a mapping.
++2. A CR number grants no new scope and no new effect.
++3. Each mapped probe keeps its actual result and the candidate identity it ran on.
++4. "Non-purchasing" does not mean "changes nothing". Every test that can send mail, change a membership or role, or call the payment provider declares its effects, target and isolation in the plan. Coverage that uses no provider is reported separately from coverage that makes real provider calls.
++
++## 6. Fixture sign-in is not proof of real sign-in
++
++1. Every result records how the session was obtained: **fixture session** (set up for a designated fixture user as test setup), **password sign-in**, or **emailed link (human)**.
++2. A fixture session proves only that the app behaves correctly for a signed-in user. It is not evidence of normal sign-in, of the emailed-link lifecycle, of email delivery, or of the handoff between the two apps from a real sign-in.
++3. Real sign-in, email delivery and handoff each need their own test or human check, named in the plan.
++4. No report, matrix row or certificate presents a fixture session as proof of any of those.
++5. Routine automated runs do not depend on the Director's inbox.
++6. This file gives no permission to establish sessions. Any such setup happens only as the Director has separately authorized: designated existing SCRATCH fixture users, target verified first, no DEV access, no secret exported.
++
++## 7. Fixtures
++
++1. The cast is the designated existing SCRATCH fixtures the Director has authorized for reuse. That covers reuse only.
++2. At the start the QA Executor verifies the actual resolved target and the known fixture state, and stops if the target is wrong or missing.
++3. There is no blanket reset. A fixture need the cast cannot meet is raised in Q1 as a gap for the QA Lead and the Director.
++4. No automated test changes shared DEV, Coach's data or the Director's rehearsal account.
++
++## 8. The target register (for mapping only)
++
++These are targets to map against, not a claim that the tests exist and not work added to this module.
++
++| ID | Journey |
++|---|---|
++| CR-01 | Role matrix: each role reaches what it should and is refused what it should not, in both apps |
++| CR-02 | Account and store isolation, through the screens, by direct request, and in the database |
++| CR-03 | Store selection with zero, one and several pharmacies |
++| CR-04 | Truthful loading, empty and error states |
++| CR-05 | Handoff between the two apps in both directions |
++| CR-06 | Sign-out and session boundaries |
++| CR-07 | Server-authoritative USD 99 and USD 49 pricing |
++| CR-08 | Invitations: send, accept, resend, revoke |
++| CR-09 | Role change or removal for a user already signed in |
++| CR-10 | Billing, non-purchasing part |
++| CR-11 | Branding: exact colors, light only, contrast, names |
++| CR-12 | Help, keyboard path, phone-width usability |
++
++## 9. Keeping reusable passing scripts
++
++1. After results are adjudicated and **before any cleanup step removes anything**, the QA Executor lists the assets worth keeping, and the QA Lead approves the list.
++2. For each asset the list records: the script, its pass checkpoints, the fixture specification, the permitted effects, the actual result, and the candidate it passed on.
++3. Only a script that actually ran and passed is listed as passed. Earlier manual testing is not proof that a script passed.
++4. **Never kept:** credentials, passwords, tokens, links, cookies, sign-in state, browser profiles, raw authenticated traces.
++5. Kept assets stay in the QA lane. They are not carried into the product by merging the QA branch or its leftovers. They reach a maintained pack only through an approved engineering change (`REG-001`).
++6. An expected result in a kept script changes only through an approved, attributable change to the product contract. A saved screenshot baseline is replaced only after review.
++
++## 10. After this module
++
++Recorded for continuity; it binds nothing in this module's E2. `REG-001` establishes the first maintained regression pack through a separately scoped engineering assignment. After that, regression runs inside each module's regular QAM, and keeping the pack current is normally part of that module's own engineering work, not a further assignment after every certification.
++
++## 11. Open, outside this file
++
++Central playbook and template synchronization for DC-001 and DC-002 is tracked separately and is not closed by installing this file.
+--- /dev/null
++++ current/EVIDENCE/E2/DIRECTOR_GIT_COMMANDS.md
+@@ -0,0 +1,84 @@
++# Director Git commands: candidate commits and `qa/abm007-final` (prepared by Engineering, not executed)
++
++Git authority is the Director's. Nothing below has been run. Both repositories are on branch `abm007-final`, with nothing staged:
++- OwedBook: HEAD `c335671afa6cd4a8a2d437c30aeae5040e0cecaf`, baseline `9597699b404afdbcd792a9b4da61c21abb10cdf8`.
++- Portal: HEAD `b2e50fa86ef041f9f7f7f1a0f630576de0a10664`, baseline `cb4decde9adc9ab75d0dcb15556c64a3bdbfe075`.
++
++Candidate SHAs stay **PENDING** until these commits exist. Q1 records them from the Director's receipt.
++
++## 1. OwedBook (`/home/moose/NEXTJS/CYBER_PHARMA/cyph-v1-dev`)
++
++Read the state first and compare it with the list. Every path in the list must appear in the status, and nothing else should.
++
++```
++cd /home/moose/NEXTJS/CYBER_PHARMA/cyph-v1-dev
++```
++```
++git status --short
++```
++```
++git add --pathspec-from-file=/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/STAGING_LIST_owedbook.txt
++```
++```
++git diff --cached --name-status 9597699b404afdbcd792a9b4da61c21abb10cdf8
++```
++```
++git status --short
++```
++
++Proposed commit message:
++
++```
++git commit -m "feat(abm007-final): Pharmacy Books brand, light only, Help page, store selector fix" -m "Approved tokens and Inter; forced light; logo and derived icons; navy header and white cards; surface-aware focus rings; Help at /help with stacked role list on narrow screens; No permitted stores placeholder only with zero stores; landing names and dead links; 375 px overflow fixes in ScreenHeader and DataTable; presentation tests. Module ABM007_FINAL, E2 complete; records in the Portal repository."
++```
++
++## 2. Portal (`/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1`)
++
++```
++cd /home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1
++```
++```
++git status --short
++```
++```
++git add --pathspec-from-file=agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/STAGING_LIST_portal.txt
++```
++
++Optional: the review ZIPs and their `.sha256` files. These are large binaries; leave them out if you keep packages outside Git.
++
++```
++git add --pathspec-from-file=agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/STAGING_LIST_portal_optional.txt
++```
++```
++git diff --cached --name-status cb4decde9adc9ab75d0dcb15556c64a3bdbfe075
++```
++```
++git status --short
++```
++
++Proposed commit message:
++
++```
++git commit -m "feat(abm007-final): Pharmacy Books brand, literal and panel layouts, notice wording; QAM amendment 01 and module records" -m "Approved tokens and Inter; forced light; logo and icons; literal sign-in and registration shells; panel Add Pharmacy; surface-aware focus rings; billing-notice brand strings only; EmailPreview logo exception (AM-16); 16 stale e2e specs retired. Module records: rulings AM-08 to AM-17, QAM_AMENDMENT_01 installed, E2 evidence, SCRATCH proof tooling, prepared external settings (not applied)."
++```
++
++The list stages the 16 retired-spec deletions under `e2e/`. `RECOVERY.md` is not in either list.
++
++## 3. QA branch at the new commits (after both commits exist)
++
++These commands create the branch without switching to it; the working branch stays `abm007-final`.
++
++```
++cd /home/moose/NEXTJS/CYBER_PHARMA/cyph-v1-dev && git branch qa/abm007-final HEAD && git rev-parse HEAD qa/abm007-final
++```
++```
++cd /home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1 && git branch qa/abm007-final HEAD && git rev-parse HEAD qa/abm007-final
++```
++
++When you choose to publish them (each repository):
++
++```
++git push origin abm007-final qa/abm007-final
++```
++
++Then give the QA Executor the two full SHAs as the candidate receipt. Q1 records them in `QAM/QAM_MANIFEST.md` section 1 and `QAM/QAM_STATE.md`. Q1 is released by the Director, not by these commands.
+--- /dev/null
++++ current/EVIDENCE/E2/signed_final/SCRATCH_BUILD_INSTRUMENT_HISTORY.md
+@@ -0,0 +1,17 @@
++# SCRATCH build-check history (24 Nov), kept with the final result
++
++The output of `tools/scratch_proof/serve.mjs build` was overwritten by each run. Only the last run's file survives, as `scratch_build_check.json`. The earlier outputs below are copied from the session's tool output, and their field names are the ones each version of the check printed. `../verify4/logs/summary.txt` also keeps the first run's line `scratch build exit=1`.
++
++**Nothing in the product source changed between runs 1 and 4.** Only the check was narrowed, each time for a stated reason. Every run rebuilt both apps, and every `next build` exited 0. The failures are failures of the backend check, not of the builds.
++
++| Run | Check version | Output (verbatim values) | Exit | Why the check changed next |
++|---|---|---|---|---|
++| 1 | Client bundles must contain the bare SCRATCH reference and no bare DEV reference | ob: `build 0, client_chunks_with_scratch_ref 1, client_chunks_with_dev_ref 0, backend_ok true`. pp: `build 0, client_chunks_with_scratch_ref 0, client_chunks_with_dev_ref 0, backend_ok false` | 1 | The Portal's browser code never talks to Supabase, so its client bundles carry no reference. The check moved to client plus server bundles, and a runtime check of the listening process was added in `auth.mjs` |
++| 2 | Client and server bundles: SCRATCH reference present, bare DEV reference absent | ob: `client 1/0, server_js_with_scratch_ref 13, server_js_with_dev_ref 1, backend_ok false`. pp: `client 0/0, server 15/1, backend_ok false` | 1 | One server chunk per app contains the DEV reference: the mail guard's `OPEN_POLICY_PROJECT_REF` constant (`src/server/mailGuard.ts:10`), not a backend. The check moved to the backend-URL form `<ref>.supabase.co` |
++| 3 | Backend-URL form | Same counts as run 2 (`server_js_with_dev_ref 1` in each app) | 1 | The DEV URL appears once, as the mail guard's comparison `"<DEV>.supabase.co"===new URL("https://<SCRATCH>.supabase.co…")`. That tests whether the build is DEV; it is not its backend. Only that exact literal was excluded |
++| 4 | Backend-URL form, excluding only the mail-guard comparison literal | ob: `client 1/0, server 13/0, backend_ok true`. pp: `client 0/0, server 15/0, backend_ok true` | 0 | Final form of the check |
++| 5 (final) | Same as run 4, on the final copies after the two OwedBook overflow fixes | Identical counts, both `backend_ok true` (`scratch_build_check.json`) | 0 | — |
++
++Before any sign-in, each listening server was also checked at runtime. Its working directory had to be the verification copy, its Supabase URL had to resolve to `ihgcsrypblqkwommrkgj`, and `APP_ENV` had to be `local-proof`. This is recorded under `served` in `phase_a/signed_checks_phase_a.json` and the phase-b `redirect_runs.json` files.
++
++A sign-in run made before the runtime check existed stopped at setup with "ob served bundle is not SCRATCH-only". That was the served-page scan, which missed the lazily loaded chunk. No sign-in happened in that run. The scan is now informational, and the runtime check binds.
+--- /dev/null
++++ current/EVIDENCE/QAM_AMENDMENT_01_INSTALL/INSTALL_REPORT.md
+@@ -0,0 +1,104 @@
++# QAM Amendment 01: install report (QA Lead install instructions, section 4)
++
++**Date:** 24 November 2026, Asia/Dhaka. **By:** Engineer (Claudy), documentation only.
++**Authority:** Architect review of package 03 relayed by the Director ("Install the approved QAM provisions"); campaign journal v0.5 Entries 004 and 005; ruling **AM-17**.
++No product file, test, dependency, database, dashboard or deployment was touched. No QA result, approval, plan, finding or certificate field was filled. Every "NOT RECORDED" and "PENDING" stays as written. No test was run. Git untouched.
++
++## 0. Sources read and reconciled
++
++| Source (Downloads, 24 Nov) | SHA-256 | Copy |
++|---|---|---|
++| `QA_LEAD_QAM_AMENDMENT_INSTALL_INSTRUCTIONS_ABM007_FINAL_2026-11-24.md` (Friday's latest amendment instructions) | `29401c13bc99f16a005a79e98e67b6abf011841a5a8f1c54435ce4e961d60646` | `sources/` |
++| `QAM_AMENDMENT_01.md` (the installable amendment text) | `72206961eb6dc3d5b11abb2f9cd2051526920e1279885c6cae5289d3bf770919` | `sources/`, installed as `QAM/QAM_AMENDMENT_01.md` |
++| `QA_LEAD_REGRESSION_STRATEGY_RECOMMENDATION_2026-11-24.md` (revision 3) | `b2222fa17cfb43d85b0ac39043aa72efdc4e9f674e0a1d3dc5bf45ad4b8432ae` | `sources/` (read; not installed: a recommendation, adopted by the Director as DC-002 with the banking clarification, Entry 005) |
++| `CYPH_ABM007_FINAL_CAMPAIGN_JOURNAL.md` (Version 0.5) | `377186b4405f7b9036aac6183d6b5606adb6d10bdee4e14e1b502aa0535996e0` | `sources/` |
++
++**Reconciliation notes (for the QA Lead and the Architect):**
++1. **Missing as a separate file:** the "revised human-walkthrough amendment" that journal Entry 004 names (`QA_LEAD_AMENDMENT_ABM007_FINAL_HUMAN_WALKTHROUGH_2026-11-24 (1).md`, revision 2) is not present in Downloads or its archive. Its installable content is `QAM_AMENDMENT_01.md`, which the install instructions name as "the text to install, verbatim", and which carries every provision the Architect listed. I installed that file. If revision 2 differs from it, the difference was not available to me.
++2. The install instructions were written against journal v0.3 ("I hold v0.3 ... If v0.4 says more, send it and I will correct section 9"). Journal v0.5 Entry 004's banking clarification has two points:
++   - It retains certified checkpoints without a separate assignment after every Gate Q, with normal engineering adding maintainable tests.
++   - Promoting a QA-only helper is a bounded engineering change.
++
++   This reads as **compatible** with amendment sections 9 and 10 (section 9.5 routes the first maintained pack through REG-001; section 10 makes upkeep normal module engineering afterwards). I did not edit Friday's text. The QA Lead may wish to confirm section 9 wording.
++3. The instructions' status line reads "for Architect review. Not released." Journal Entry 005 and the Architect's review of package 03 (relayed by the Director) are the release for this install.
++4. REG-001 is not built. No product or test scope was added. Central Factory doctrine synchronization (DC-001, DC-002) stays a separately tracked action.
++
++## 1. Files: found, SHA-256 before and after, change is only the appended block
++
++| File | Found | SHA-256 before | SHA-256 after | Only the appended block |
++|---|---|---|---|---|
++| `QAM/QAM_ENTRY.md` | found | `20cf5e4ecd6f0d97fb0f10faa73255e1dca9ef8036fc343b587d0b66d8e3f569` | `f038cc9ea8eadf1a09f488dd57251633159832871e527934044c38312b07acb5` | yes |
++| `QAM/QAM_RISK_REQUIREMENTS.md` | found | `06c25ca89f8f4545444894ce5cb2c7fca0dd3b6f3279cc29df10d159b60d8c94` | `67cfc9a8df89e18bd7a89b06e9033a17d86efc4546e8c955ddddc5de4e044526` | yes |
++| `QAM/QAM_RECON_REPORT.md` | found | `b864866043a5fcfac9c14bb24041518aa28f6f2f09dc53f647728cd824ebced2` | `0d9aa455a5a340cf445e218a0b7dee66eaaf194625a39e449d271b17c171204d` | yes |
++| `QAM/QAM_TEST_PLAN.md` | found | `e15d93167fede6a989db4e90c69b99c9b868a7f9e4f9c133d9f6b9a86e7d0817` | `2f66a0ad213c324242a94a1e20bbe67685ea0b2946183e5baba7c30dba29079d` | yes |
++| `QAM/QAM_APPROVAL.md` | found | `0fdacf2657c4b563357776208d6d3db1cc47df56be2fd932c8bd70c6e3d499c5` | `18acc00f03865059ffe2a4629556996ce7bce210184d1184c953262cb06412ac` | yes |
++| `QAM/QAM_EXECUTION_REPORT.md` | found | `9d4f64c8146eb261f885adb0315d717a1cbd9f77cf36e384b8cea70189c0b971` | `8e0675b5648d70228f7b8f696bf03f662a2c0ed16ca0295917c032b7fba0763f` | yes |
++| `QAM/AC_EVIDENCE_MATRIX.md` | found | `dde198f455082ddb91cd401d60bb87074814ac0bffc803b35288946b85ad5c2b` | `504a0effe1adc4a9a07ceabc5207c916fb50aac5434f0317e798c11ab5469391` | yes |
++| `QAM/FINDINGS.md` | found | `676adef75fe9b521cd5decf3da1309f705b1c6407afa0b4b911690e477272112` | `ab5659caca8266c62fb9466070b658ac1107e5c2c3e561eb117c5940e780caa5` | yes |
++| `QAM/QAM_CLEANUP_REPORT.md` | found | `4f8e7a0c9dafaeca9e8e4c73cdbb2621a60f5dee5057e8febfdfbde200c9b300` | `50aac0f1683415fe2f3a80bcd976633218967c18eac8264d669661623cade8d0` | yes |
++| `QAM/QAM_CERTIFICATION.md` | found | `a31788e7c2ddfa3f93998cb9aa29a12553e5cb89d0e608a606e1e62a54bf049a` | `ef48e20089c4f5eacff9e04a82c60211e5fa1eb6cbae6d293369ec661f51d3e1` | yes |
++| `QAM/QAM_STATE.md` | found | `3a0c963f8f7f4e5f00d045739bfa6fe1b7082897961cd6dd9f177d9b7ddf9866` | `8972f0cfaa7ae4bd29fb5146cc72fc97e68406731faeb39f543c8733ea29c860` | yes |
++| `ABM_RULINGS.md` | found | `1b0e0e1d6a62c01ffcdbfcb24e27ffa3271b392677c53eb87c20b402dd429575` | `d8e1cb03e8aaddab44923de7c9f0b92ec66562a1b42bddde1f6b9b652c5584a4` | see note |
++| `ABM_JOURNAL.md` | found | `d554f6ef018a0a811d66e266c017a022f73577f6c0c4b5a5ff16d648bbd183a4` | `66cef20dd92ce8d4e100f11b638c819ca390f57fd3f9dd7b9571c0b6821ca7d7` | see note |
++| `ABM_STATE.md` | found | `71c1b323c9ed6f17f62c2c511e4e2f20b5d0e6724723b98a2baf6bd0cbcde987` | `abe480670a3c74f0d7d61aa3baf1a512cc57424eda757fbc33ac7d62aa591994` | see note |
++| `QAM/QAM_AMENDMENT_01.md` | new | — | `72206961eb6dc3d5b11abb2f9cd2051526920e1279885c6cae5289d3bf770919` | new file, byte-identical to the supplied copy |
++
++Notes on the last rows:
++- `ABM_RULINGS.md`: exactly one line added, the AM-17 row, placed directly after AM-16 in the amendments table (section 3 of that file) so it stays in the table; nothing removed.
++- `ABM_JOURNAL.md` and `ABM_STATE.md`: one appended row each. In `ABM_STATE.md` some index fields were updated: as-of, latest package, product candidate (still PENDING), next owner. Module state is unchanged.
++- The "after" hashes of these three record files and `QAM/QAM_MANIFEST.md` reflect later engineering appends in this same round. See section 6.
++
++Exact appended text: `QA_LEAD_..._INSTALL_INSTRUCTIONS` section 3, lines beginning `>`, with the marker removed, each after one blank line.
++
++**One fit, as section 3.11 permits ("If the installed log has different columns, the Engineer fits the same content to them and says so"):** the `QAM_STATE.md` row was appended **without** the blank line. The file ends with the transition-log table, and a blank line would have left the row outside the table. The columns match (five), and the row's text is unchanged.
++
++## 2. Installed amendment SHA-256
++
++`QAM/QAM_AMENDMENT_01.md` = `72206961eb6dc3d5b11abb2f9cd2051526920e1279885c6cae5289d3bf770919`, equal to the supplied copy.
++
++## 3. Installed passages quoted before the change
++
++`INSTALLED_PASSAGES_BEFORE.md`. Extracted mechanically from the pre-change copies in `before/`; hashes in `before_and_sources.sha256`. Covers:
++- `QAM_ENTRY.md`: target and prerequisites table, and the standing rules list;
++- `QAM_TEST_PLAN.md` section 11, human checks;
++- `QAM_EXECUTION_REPORT.md` section 7, human checks;
++- `QAM_RISK_REQUIREMENTS.md`: 27 requirement IDs (SR-1 to SR-11, MR-1 to MR-16) and the permitted-effects table;
++- `QAM_CLEANUP_REPORT.md`: the retention table;
++- `ABM_RULINGS.md`: amendment numbers AM-01 to AM-16; AM-17 used.
++
++**Overlaps for the QA Lead's comparison.** Pointers only; I made no judgment edits.
++- **`QAM_ENTRY.md` rule 5 ("Director interventions are grouped ... the QA Lead walks the Director"):** the amendment, section 1.3, has the Architect guide and the QA Lead select, approve and adjudicate without performing. The amendment governs by its section 0.1.
++- **`QAM_TEST_PLAN.md` section 11 and `QAM_EXECUTION_REPORT.md` section 7 (human-check tables):** the appended tables state that they replace these.
++- **`QAM_ENTRY.md` rules 1 to 3 (Q2 runs to completion, no repair during Q2, housekeeping does not stop the run):** consistent with amendment sections 2.3 and 3.
++- **`QAM_RISK_REQUIREMENTS.md` permitted effects (PROPOSED P-19):** unchanged. The amendment changes no envelope (section 0.2).
++- **`QAM_CLEANUP_REPORT.md` retention table:** the appended keep-list adds to it; nothing is removed.
++- **Identifier collisions:** none (AR-n, HC-nn, CR-nn and REG-001 were not used in the installed pack).
++
++## 4. Files that differ in name, place or structure
++
++None of the eleven named QAM files differs in name or place. The only structural fit is the `QAM_STATE.md` row (section 1). The OwedBook pointer folder (`cyph-v1-dev/agent_docs/ACTIONS/ABM007_FINAL/README.md`) mirrors none of these files and was left alone.
++
++## 5. Git status and change listing
++
++Complete status of both repositories at report time: `git_status_cyph-payment-portal-dev-v1.txt`, `git_status_cyph-v1-dev.txt`. Nothing is staged and both HEADs are unchanged.
++
++## 6. Files changed in this round (after review package 03)
++
++All are documentation or records. Product, config, test and asset files are byte-identical to package 03: OwedBook 91 paths; Portal 51 paths plus the same 16 deletions.
++
++- **QAM (this install):** `QAM/QAM_AMENDMENT_01.md` (new); appended blocks in `QAM_ENTRY`, `QAM_RISK_REQUIREMENTS`, `QAM_RECON_REPORT`, `QAM_TEST_PLAN`, `QAM_APPROVAL`, `QAM_EXECUTION_REPORT`, `AC_EVIDENCE_MATRIX`, `FINDINGS`, `QAM_CLEANUP_REPORT`, `QAM_CERTIFICATION`; one `QAM_STATE` log row.
++- **Module records:** `ABM_RULINGS.md` (AM-17), `ABM_JOURNAL.md`, `ABM_STATE.md`, `ABM_ACCEPTANCE_LEDGER.md` (correction), `QAM/HANDOFFS/ENGINEERING_HANDOFF.md` (section 13), `QAM/QAM_MANIFEST.md` (note).
++- **Evidence:**
++  - `EVIDENCE/E2/VERIFICATION.md` (section 7);
++  - new `EVIDENCE/E2/DIRECTOR_GIT_COMMANDS.md` and `EVIDENCE/E2/signed_final/SCRATCH_BUILD_INSTRUMENT_HISTORY.md`;
++  - refreshed `INVENTORY_*.txt`, `*_changes_vs_baseline.txt` and `STAGING_LIST_*.txt`;
++  - this folder (`INSTALL_REPORT.md`, `INSTALLED_PASSAGES_BEFORE.md`, `before/`, `sources/`, `before_and_sources.sha256`, `git_status_*.txt`).
++- **Tooling, comments and README only:** `EVIDENCE/E2/tools/scratch_proof/auth.mjs` and `serve.mjs` (constraint comment blocks; 0 code lines changed), `README.md`.
++- **Repository records:**
++  - Portal: `session_2026-11-24.md`, `CHANGELOG.md`, `agent_docs/RESPONSES/response_2026-11-24_154349_abm007-final-handoff-prep.md`.
++  - OwedBook: `agent_docs/SESSIONS/session_2026-11-24.md`, `CHANGELOG.md`.
++- **Not this round** (written when package 03 was finalized): `EVIDENCE/ABM007_FINAL_E2_COMPLETION_REVIEW_03.zip.sha256`, `agent_docs/RESPONSES/response_2026-11-24_151315_abm007-final-e2-complete.md`.
++
++## 7. Git reminder for the Director
++
++`../E2/DIRECTOR_GIT_COMMANDS.md`: exact staging lists, one command per block, proposed commit messages, and the commands that create `qa/abm007-final` at the new commits. Prepared, not executed.
+--- /dev/null
++++ current/EVIDENCE/QAM_AMENDMENT_01_INSTALL/INSTALLED_PASSAGES_BEFORE.md
+@@ -0,0 +1,135 @@
++# Installed passages quoted before the change (install instructions section 4 item 3)
++
++Extracted mechanically from the pre-change copies in `before/` (SHA-256 in `before_and_sources.sha256`). Quoted unedited; line numbers are those of the installed files before the change.
++
++## QAM_ENTRY.md: target and prerequisites table (includes the target-environment row)
++`before/QAM/QAM_ENTRY.md`, lines 50 to 59
++
++````
++## 4. Target and prerequisites (summary; executable rows in `QAM_PREFLIGHT.md`)
++
++| Item | Value |
++|---|---|
++| Target environment | PROPOSED (P-19): QA-controlled production builds of both apps on ports 3100 (OwedBook) and 3101 (Portal), against the SCRATCH database and the Stripe sandbox, with the Executor's own webhook listener. QA and alpha share that sandbox, so a separate listener and database do not by themselves isolate events: Q1 must prove isolation in both directions (`QAM_PREFLIGHT.md` PF-4.7) before any paid test. Confirmed or amended in Q1; approved at Q2 release |
++| Runtime mode | Production builds, never dev mode |
++| Roles required | Owner, Store admin, Member, a second Member ("Helper"), and one identity whose access was removed |
++| Test data | Isolated QA fixtures on SCRATCH: an owner with at least two pharmacies, and a bounded synthetic audit history long enough to need a second page. The Director's rehearsal account is not a fixture |
++| Toolchain | Node and package manager as each repository pins them; Playwright with Chromium, Firefox and WebKit; Windows Chrome is the stakeholder baseline for human checks |
++| Credential file | `.env.qa.local` in each repository where needed, created by the Director, ignored and untracked, key names only recorded |
++````
++
++## QAM_ENTRY.md: standing rules list (section 6, rules specific to this module)
++`before/QAM/QAM_ENTRY.md`, lines 88 to 99
++
++````
++## 6. Rules specific to this module
++
++1. **Q2 runs to completion.** A product failure is a finding, not a stop. Unaffected checks continue. One result package at the end.
++2. **No repair during Q2.** The Engineer is not engaged on any repair until Q2 is completely finished and adjudicated.
++3. **Housekeeping does not stop the run.** Fix it within the QA lane, record it, keep going. Genuine identity, authority, environment, instrument, evidence and privacy stops remain stops.
++4. **Two repositories, one candidate.** Every identity check, diff and receipt is done for both. A verdict covers the pair or nothing.
++5. **Director interventions are grouped.** Where a human inbox or judgment is needed, the Executor prepares what is needed and the QA Lead walks the Director through it in one session, one check at a time, recording each answer before the next, and returns them.
++6. **Post-deployment criteria** (AC-E02, AC-E03 deployment record, AC-E04, AC-D01, AC-D02) are not part of Q2. They are judged under `GATE_D_PLAN.md` after an authorized deployment. A Gate Q PASS does not close the module, and that Gate D covers this module's branding checks only, not deferred lifecycle or payment work.
++7. **Visual judgment.** Rendered checks, measured contrast and the approved `DESIGN/` references are the basis. The references use the real logo, exact colors and fictional content; the mobile menu on them is a labelled picture. They define the look. They do not define today's wording, fields, navigation items or their order, and a difference from a sample in those respects is not a defect.
++8. **Paid tests wait for the isolation proof** (PF-4.7) or the Director's authorization of one specific alternative. Nonpayment work proceeds.
++9. **Audit paging** (AC-R04 i) is exercised on a synthetic fixture, or recorded BLOCKED for a specific disposition. It is never "not applicable" for want of data.
++10. **Authority.** Read and obey each repository's instructions; preserve the Director's decisions and approved exceptions; surface a real conflict with both sources and stop only the affected work (`GOVERNING/README.md` section 2).
++````
++
++## QAM_TEST_PLAN.md: human-checks section
++`before/QAM/QAM_TEST_PLAN.md`, lines 61 to 64
++
++````
++## 11. Human checks
++
++Declared in advance, grouped into one session near the end, one check at a time, each with the exact question the Director answers. NOT RECORDED.
++
++````
++
++## QAM_EXECUTION_REPORT.md: human-checks section
++`before/QAM/QAM_EXECUTION_REPORT.md`, lines 55 to 60
++
++````
++## 7. Human checks
++
++| Check | Question put to the Director | His answer, verbatim | Time |
++|---|---|---|---|
++| NOT RECORDED | | | |
++
++````
++
++## QAM_RISK_REQUIREMENTS.md: module requirement IDs with their one-line titles
++`before/QAM/QAM_RISK_REQUIREMENTS.md` (first two cells of each requirement row, unedited)
++
++````
++| SR-1  |  Every AC gets a test or a separately authorized applicability ruling; expected results are independently derived, never copied from engineering claims |
++| SR-2  |  Negative controls and negative paths are planned, not only happy paths |
++| SR-3  |  Evidence: every PASS or FAIL cites an evidence path with the command, working directory, exit code and unfiltered output; existence checks precede greps and diffs so vacuous passes are impossible |
++| SR-4  |  Browser coverage is stated as role × route or workflow × data or filter state × viewport × theme, with reductions explained; rendered behavior, effective theme, keyboard and focus, errors, loading, stale and rejection states and access denials are checked; screenshots supplement assertions |
++| SR-5  |  Credentials: declared ignored file only; no `NEXT_PUBLIC_*` reuse for QA passwords; file proved ignored AND untracked; schema validated without emitting values; values never in build or server env, commands, logs, exceptions, screenshots, traces, JSON or ZIPs; a service-role key never substitutes for proving a user's login |
++| SR-6  |  Privacy scanners validated with synthetic leak fixtures and clean controls; raw authenticated traces treated as sensitive; only approved sanitized evidence retained |
++| SR-7  |  Side effects: backend, commerce and agent tests may mutate state or trigger cost; permitted effects and test targets are declared before execution |
++| SR-8  |  Instruments: a helper that cannot fail is not an instrument; attack at least one deliberately; never weaken assertions, add hidden retries, skip tests or change product code to obtain green |
++| SR-9  |  Result labels are observations (PASS / FAIL / BLOCKED / NOT RUN / ADJUDICATE); an unresolved discrepancy never becomes PASS by relabeling |
++| SR-10  |  Human checks are declared beforehand, grouped near the end where independent, and counted; never fake an unattended run |
++| SR-11  |  Regression scope: required regression suite named by the plan; carried-forward evidence shows its applicability and original SHA and attempt |
++| MR-1  |  A restyled control still looks right but stops working: a button that no longer submits, a dialog whose Cancel now confirms, a link that lost its target |
++| MR-2  |  Contrast passes on white in a unit view and fails in place: text on ice, on a tint, on the navy header, on a hover or disabled state |
++| MR-3  |  Dark theme leaks back: a stored preference, the operating-system setting, or a first paint before scripts run |
++| MR-4  |  Protected server code changed under cover of a visual commit |
++| MR-5  |  A forbidden control starts rendering for the wrong role after layout work |
++| MR-6  |  Busy and progress feedback removed for looks |
++| MR-7  |  Old name survives somewhere customer-visible |
++| MR-8  |  Help describes a control that does not exist, or leaks test material |
++| MR-9  |  Stale browser specs give false comfort |
++| MR-10  |  Email body edit breaks sign-in for local and alpha at once |
++| MR-11  |  QA events and alpha events cross. QA and alpha share one Stripe sandbox, so a QA purchase's events also reach alpha's registered endpoint, and alpha's events also reach a QA listener. **A second listener and a different database do not isolate them** |
++| MR-12  |  Layout breaks at widths between the two checked extremes |
++| MR-13  |  The logo is altered while making icons |
++| MR-14  |  Brand colors drift by rounding: a token triplet is hand-rounded, or one app's block differs from the other's |
++| MR-15  |  Mock mode ships and nobody tests it, or mock data leaks into a live screen |
++| MR-16  |  Audit paging is waved through for lack of data |
++````
++
++## QAM_RISK_REQUIREMENTS.md: permitted-effects table
++`before/QAM/QAM_RISK_REQUIREMENTS.md`, lines 69 to 85
++
++````
++### Permitted effects and targets (PROPOSED P-19; approved at Q2 release)
++
++| Effect | Permitted? | Target | Ceiling |
++|---|---|---|---|
++| Reads | Yes | Both repositories; SCRATCH; Stripe sandbox | — |
++| Sign-in and sign-out (creates session and audit activity) | Yes | SCRATCH QA identities | As the journeys need |
++| Invitations and their emails | Yes | QA inboxes only | As the journeys need |
++| Business writes | Yes | SCRATCH QA fixtures only | The AC-R04 journeys |
++| Paid operations | Only after the event-isolation proof (MR-11) or the Director's authorization of one specific alternative. Sandbox test payments only | Stripe sandbox, QA fixture customers | Proposed **maximum**, not a quota and not a permission: one new first-pharmacy purchase and two paid additions; attempted simulated charges up to USD 400 **including automatic retries**; no refunds. The plan justifies each purchase it asks for |
++| Synthetic audit history for the paging check | Yes | SCRATCH QA fixture only, through supported product actions where possible; any direct data seeding is named in the plan and approved before use | Enough events to need a second page, no more |
++| Editing payment or webhook code; disabling or changing alpha's endpoint; creating another Stripe sandbox | **No** | — | Needs its own release |
++| DEV database, alpha services, the Director's rehearsal account | **No** | — | — |
++| Dashboard settings (Supabase, Stripe, mail provider) | **No** | — | Director only |
++| New payments to inspect styling | **No** | — | Styling is judged from rendered screens and existing fixtures |
++
++The Executor preflights every counter and the cleanup boundary before Q2 and proposes one complete budget, not increments.
++
++````
++
++## QAM_CLEANUP_REPORT.md: retention table
++`before/QAM/QAM_CLEANUP_REPORT.md`, lines 7 to 16
++
++````
++## 1. Retention decisions (QA Lead, before anything is removed)
++
++| Item | Keep or remove | Reason |
++|---|---|---|
++| Evidence under `evidence/` | NOT RECORDED | |
++| Helpers under `AUTOMATION/` | NOT RECORDED | |
++| Failed attempts | Keep unless unsafe | |
++| QA fixtures on SCRATCH (accounts, pharmacies, the audit-history fixture) | NOT RECORDED | |
++| Stripe sandbox objects created by QA | NOT RECORDED | |
++
++````
++
++## ABM_RULINGS.md: amendment numbers already used
++
++AM-01, AM-02, AM-03, AM-04, AM-05, AM-06, AM-07, AM-08, AM-09, AM-10, AM-11, AM-12, AM-13, AM-14, AM-15, AM-16 (16 entries). Next free: AM-17.
+# Also new (not expanded here): EVIDENCE/QAM_AMENDMENT_01_INSTALL/before/ (pre-change copies), sources/ (Friday's four documents, verbatim), before_and_sources.sha256, git_status_*.txt; refreshed generated lists EVIDENCE/E2/INVENTORY_*.txt, *_changes_vs_baseline.txt, STAGING_LIST_*.txt; repository records session_2026-11-24.md, CHANGELOG.md (both repositories) and the response file.

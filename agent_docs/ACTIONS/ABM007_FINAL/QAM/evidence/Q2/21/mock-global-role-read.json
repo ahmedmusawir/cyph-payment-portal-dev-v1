@@ -1,0 +1,43 @@
+{
+  "time": "2026-11-24T16:29:58.931Z",
+  "target": "ihgcsrypblqkwommrkgj",
+  "transaction": "READ ONLY; rollback",
+  "rows": [
+    {
+      "castRole": "ENGINEERING_OWNER_A",
+      "exists": true,
+      "globalRoles": [
+        "member"
+      ]
+    },
+    {
+      "castRole": "ENGINEERING_OWNER_B",
+      "exists": true,
+      "globalRoles": [
+        "member"
+      ]
+    },
+    {
+      "castRole": "ENGINEERING_ADMIN",
+      "exists": true,
+      "globalRoles": [
+        "member"
+      ]
+    },
+    {
+      "castRole": "ENGINEERING_MEMBER",
+      "exists": true,
+      "globalRoles": [
+        "member"
+      ]
+    },
+    {
+      "castRole": "ENGINEERING_INVITEE",
+      "exists": true,
+      "globalRoles": [
+        "member"
+      ]
+    }
+  ],
+  "note": "Mock AdminLayout checks global user_roles admin, while real mode uses tenant administration capability. No role changed."
+}

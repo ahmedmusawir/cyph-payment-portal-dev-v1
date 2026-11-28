@@ -1,0 +1,32 @@
+{
+ "step": "03_variants2_firefox",
+ "engines": {
+  "firefox": "148.0.2",
+  "chromium": "158.0.8127.88",
+  "webkit": "26.4"
+ },
+ "sessions": {
+  "password_sign_ins": 3,
+  "token_sign_ins": 0,
+  "generate_link_calls": 0,
+  "total_sign_ins": 3
+ },
+ "portal_requests": 0,
+ "took_ms": 71945,
+ "error": null,
+ "log": [
+  "1024x600 D: Enter held 60 ms, start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | active: Go to the Top | [[2,\"keydown:Enter\"],[2,\"keypress:Enter\"],[2,\"click\"],[4,\"popstate\"],[4,0],[4,\"hashchange\"],[70,\"keyup:Enter\"]]",
+  "1024x600 D: Enter held 150 ms, start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | active: Go to the Top | [[3,\"keydown:Enter\"],[3,\"keypress:Enter\"],[3,\"click\"],[4,\"popstate\"],[4,0],[4,\"hashchange\"],[163,\"keyup:Enter\"]]",
+  "1024x600 D: Enter held 400 ms, start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | active: Go to the Top | [[1,\"keydown:Enter\"],[1,\"keypress:Enter\"],[1,\"click\"],[2,\"popstate\"],[2,0],[3,\"hashchange\"],[420,\"keyup:Enter\"]]",
+  "1024x600 E: Tab from the last menu link to Go to the Top (getting-around), start 455 | 0:0 100:0 300:0 800:0 2000:0 | OK | active: Go to the Top | [[2,\"keydown:Enter\"],[3,\"keypress:Enter\"],[3,\"click\"],[4,\"popstate\"],[4,0],[4,\"hashchange\"],[13,\"keyup:Enter\"]]",
+  "1024x600 F: Tab to Go to the Top (getting-around), centred, start 306 | 0:306 100:306 300:306 800:306 2000:306 | FAIL | active: Go to the Top | [[2,\"keydown:Enter\"],[3,\"keypress:Enter\"],[3,\"click\"],[4,\"popstate\"],[5,0],[5,\"hashchange\"],[12,\"keyup:Enter\"],[15,306]]",
+  "1024x600 G: after a menu jump (#getting-around), start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | active: Go to the Top | [[1,\"keydown:Enter\"],[1,\"keypress:Enter\"],[1,\"click\"],[3,\"popstate\"],[3,0],[3,\"hashchange\"],[14,\"keyup:Enter\"]]",
+  "1440x900 D: Enter held 60 ms, start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | active: Go to the Top | [[2,\"keydown:Enter\"],[2,\"keypress:Enter\"],[3,\"click\"],[4,\"popstate\"],[4,0],[4,\"hashchange\"],[92,\"keyup:Enter\"]]",
+  "1440x900 D: Enter held 150 ms, start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | active: Go to the Top | [[2,\"keydown:Enter\"],[2,\"keypress:Enter\"],[2,\"click\"],[3,\"popstate\"],[3,0],[4,\"hashchange\"],[164,\"keyup:Enter\"]]",
+  "1440x900 D: Enter held 400 ms, start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | active: Go to the Top | [[3,\"keydown:Enter\"],[3,\"keypress:Enter\"],[3,\"click\"],[5,\"popstate\"],[6,0],[6,\"hashchange\"],[413,\"keyup:Enter\"]]",
+  "1440x900 E: Tab from the last menu link to Go to the Top (getting-around), start 0 | 0:0 100:0 300:0 800:0 2000:0 | OK | active: Go to the Top | [[1,\"keydown:Enter\"],[1,\"keypress:Enter\"],[1,\"click\"],[3,\"popstate\"],[3,\"hashchange\"],[11,\"keyup:Enter\"]]",
+  "1440x900 F: Tab to Go to the Top (getting-around), centred, start 131 | 0:0 100:131 300:131 800:131 2000:131 | FAIL | active: Go to the Top | [[1,\"keydown:Enter\"],[1,\"keypress:Enter\"],[1,\"click\"],[2,\"popstate\"],[2,0],[3,\"hashchange\"],[3,\"keyup:Enter\"],[30,131]]",
+  "1440x900 G: after a menu jump (#getting-around), start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | active: Go to the Top | [[1,\"keydown:Enter\"],[2,\"keypress:Enter\"],[2,\"click\"],[2,\"popstate\"],[3,0],[3,\"hashchange\"],[3,\"keyup:Enter\"]]"
+ ],
+ "result": "see log"
+}

@@ -61,14 +61,14 @@ export function DataTable<T>({
   return (
     <div className={className}>
       {/* Desktop / tablet ≥ md */}
-      <div className={cn("hidden md:block", tableClassName)}>
+      <div className={cn("pb-card hidden overflow-hidden md:block", tableClassName)}>
         <Table>
-          <TableHeader className="sticky top-0 bg-card">
+          <TableHeader className="sticky top-0 bg-muted">
             <TableRow>
               {columns.map((c) => (
                 <TableHead
                   key={c.key}
-                  className={cn("text-[11px] uppercase tracking-wide", alignClass(c.align), c.className)}
+                  className={cn("text-[13px] font-medium uppercase tracking-[0.04em] text-muted-foreground", alignClass(c.align), c.className)}
                 >
                   {c.header}
                 </TableHead>
@@ -100,7 +100,7 @@ export function DataTable<T>({
             key={getRowKey(row)}
             onClick={onRowClick ? () => onRowClick(row) : undefined}
             className={cn(
-              "border border-border bg-card p-4",
+              "pb-card p-4",
               onRowClick && "cursor-pointer",
             )}
           >
@@ -112,7 +112,7 @@ export function DataTable<T>({
                 <dl className="grid grid-cols-2 gap-x-3 gap-y-1 text-sm tabular-nums">
                   {rest.map((c) => (
                     <React.Fragment key={c.key}>
-                      <dt className="text-[11px] uppercase tracking-wide text-muted-foreground">
+                      <dt className="text-[13px] font-medium uppercase tracking-[0.04em] text-muted-foreground">
                         {c.header}
                       </dt>
                       <dd className="text-right text-foreground">{c.cell(row)}</dd>

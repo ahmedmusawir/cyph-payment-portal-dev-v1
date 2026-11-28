@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-24T16:13:30.794Z",
+  "rows": [
+    {
+      "app": "ob",
+      "status": 200,
+      "elapsedMs": 65,
+      "revision": "unrecorded",
+      "artifactId": "unlabelled-build"
+    },
+    {
+      "app": "pp",
+      "status": 200,
+      "elapsedMs": 7,
+      "revision": "unrecorded",
+      "artifactId": "unlabelled-build"
+    }
+  ],
+  "limit": "One unauthenticated local build-info GET per app; does not establish cause of authenticated navigation timeout."
+}

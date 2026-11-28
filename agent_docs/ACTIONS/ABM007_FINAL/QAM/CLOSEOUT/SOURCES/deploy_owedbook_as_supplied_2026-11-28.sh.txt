@@ -1,0 +1,144 @@
+#!/bin/bash
+set -euo pipefail
+
+# ==================================================
+# STARK FACTORY — App Deployment Script
+# App: OwedBook Alpha
+# ==================================================
+
+# --- CONFIG (change these per app) ---
+PROJECT_ID="cyberize-nextjs-staging"
+REGION="us-east1"
+SERVICE_NAME="cyph-v1-owedbook-alpha"
+
+# --- PUBLIC VARIABLES (change these per app — REAL VALUES BAKED AT GENERATION) ---
+NEXT_PUBLIC_APP_URL="https://cyph-v1-owedbook-alpha.cyberizedev.com"
+NEXT_PUBLIC_SITE_URL="https://cyph-v1-owedbook-alpha.cyberizedev.com"
+NEXT_PUBLIC_APP_ENV="staging"
+NEXT_PUBLIC_SUPABASE_URL="https://yrsuwikjnbmvpznrgydb.supabase.co"
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY="sb_publishable_8FvPLZTmChxMrPwv7q9-rw_NgjoDk1S"
+
+# --- GUARD: refuse to deploy with unfilled placeholders (v3.1 — MUST sit AFTER the
+# --- last variable definition and BEFORE the execution banner; set -u makes any
+# --- earlier placement a fatal unbound-variable error) ---
+# PLACEHOLDER_PATTERN is the canonical list (references/CONFIG_SCHEMA.md "Placeholder formats").
+# Matched case-insensitively against EVERY public value, one per line, so one bad value aborts.
+PLACEHOLDER_PATTERN='REPLACE|CHANGE[-_]?ME|FIXME|TODO|PLACEHOLDER|INVALID://|<[^>]+>|XXXX|example\.com|your[-_]'
+if printf '%s\n' "$NEXT_PUBLIC_APP_URL" "$NEXT_PUBLIC_SITE_URL" "$NEXT_PUBLIC_APP_ENV" "$NEXT_PUBLIC_SUPABASE_URL" "$NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY" | grep -Eiq "$PLACEHOLDER_PATTERN"; then
+  echo "❌ ABORT: a public var still holds placeholder text — fix stark-deploy.yaml and regenerate. Offending value(s):"
+  printf '%s\n' "$NEXT_PUBLIC_APP_URL" "$NEXT_PUBLIC_SITE_URL" "$NEXT_PUBLIC_APP_ENV" "$NEXT_PUBLIC_SUPABASE_URL" "$NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY" | grep -Ei "$PLACEHOLDER_PATTERN" | sed 's/^/   /'
+  exit 1
+fi
+
+# --- UPLOAD BOUNDARY GUARD (v1.1): what gcloud would actually ship to Cloud Build. Honors
+# --- .gcloudignore if present, else gitignore mirroring. Aborts if any credential file is in the list.
+CRED_PATTERN='(^|/)\.env[^/]*|(^|/)\.gcloudignore\.bak$|\.pem$|\.p12$|\.key$|service[-_]?account.*\.json$|credentials.*\.json$'
+if UPLOAD_LIST="$(gcloud meta list-files-for-upload . 2>/dev/null)"; then
+  if printf '%s\n' "$UPLOAD_LIST" | grep -Eiq "$CRED_PATTERN"; then
+    echo "❌ ABORT: the Cloud Build upload would include credential file(s):"
+    printf '%s\n' "$UPLOAD_LIST" | grep -Ei "$CRED_PATTERN" | sed 's/^/   /'
+    echo "   Add them to .gcloudignore (and .gitignore) — do not deploy."
+    exit 1
+  fi
+  echo "🛡️  Upload boundary clean ($(printf '%s\n' "$UPLOAD_LIST" | grep -c .) files, no env/credential files)."
+else
+  echo "❌ ABORT: 'gcloud meta list-files-for-upload' failed — cannot prove the upload boundary. Not deploying."
+  exit 1
+fi
+
+# --- [EXTENSION — approved by JARVIS 2026-11-20] SOURCE AND BUILD IDENTITY ---
+# .git is not uploaded, so the revision is read here (read-only git) and passed to the build.
+# What gcloud uploads is the WORKING TREE (UPLOAD_LIST above). It equals the commit only when no
+# uploaded file differs from HEAD, so a path counts as DIRTY when it is modified/added/untracked
+# AND in the upload list, or when it is a tracked file that was deleted or renamed. Changes to
+# files that are never uploaded (agent_docs/, session records, .env.local) do not count.
+#   clean        -> revision = full commit SHA
+#   dirty        -> ABORT by default. With ALLOW_DIRTY=1 the build proceeds and the revision,
+#                   image tag and artifact ID all carry "-dirty".
+#   git failure  -> ABORT (the source cannot be identified).
+# A dirty upload is never labelled as a clean revision.
+if ! GIT_SHA="$(git rev-parse HEAD 2>/dev/null)"; then
+  echo "❌ ABORT: cannot read the git revision — the source of this build cannot be identified."; exit 1
+fi
+if ! GIT_STATUS="$(git status --porcelain --untracked-files=all 2>/dev/null)"; then
+  echo "❌ ABORT: 'git status' failed — cannot prove the upload matches $GIT_SHA."; exit 1
+fi
+DIRTY_PATHS=""
+while IFS= read -r LINE; do
+  [ -n "$LINE" ] || continue
+  XY="${LINE:0:2}"; FILE="${LINE:3}"
+  case "$XY" in
+    *D*|*R*|*C*|*U*) DIRTY_PATHS+="$LINE"$'\n'; continue ;;   # deletion, rename, copy, conflict: always dirty
+  esac
+  case "$FILE" in \"*) DIRTY_PATHS+="$LINE"$'\n'; continue ;; esac   # quoted (unusual) name: fail closed
+  if printf '%s\n' "$UPLOAD_LIST" | grep -Fxq -- "$FILE"; then DIRTY_PATHS+="$LINE"$'\n'; fi
+done <<<"$GIT_STATUS"
+DIRTY_SUFFIX=""
+if [ -n "$DIRTY_PATHS" ]; then
+  echo "⚠️  Uploaded files that differ from commit $GIT_SHA:"
+  printf '%s' "$DIRTY_PATHS" | sed 's/^/   /'
+  if [ "${ALLOW_DIRTY:-0}" != "1" ]; then
+    echo "❌ ABORT: the upload would not match the commit. Commit first, or re-run with ALLOW_DIRTY=1"
+    echo "   to build a clearly labelled '-dirty' artifact."
+    exit 1
+  fi
+  DIRTY_SUFFIX="-dirty"
+fi
+APBM_BUILD_REVISION="${GIT_SHA}${DIRTY_SUFFIX}"
+# Unique per build: short SHA + dirty marker + UTC time to the second. Lowercase, valid as a
+# docker tag and as a Cloud Run label value.
+IMAGE_TAG="${GIT_SHA:0:12}${DIRTY_SUFFIX}-$(date -u +%Y%m%dt%H%M%Sz)"
+APBM_BUILD_ARTIFACT_ID="owedbook-alpha-${IMAGE_TAG}"
+
+# --- EXECUTION ---
+echo "=================================================="
+echo "🤖 Stark Deployment Agent: Initiating Sequence"
+echo "   Project: $PROJECT_ID"
+echo "   Region:  $REGION"
+echo "   Service: $SERVICE_NAME"
+echo "   URL:     $NEXT_PUBLIC_APP_URL"
+echo "   Source:  $APBM_BUILD_REVISION"
+echo "   Image tag (unique to this build): $IMAGE_TAG"
+echo "=================================================="
+
+gcloud config set project "$PROJECT_ID" --quiet
+
+echo "🚀 Submitting Cloud Build..."
+# STRING-BUILDER PATTERN (mandatory — Issue #5). Never split --substitutions across
+# ,\ continuation lines: bash keeps each line's leading indent, producing separate
+# argv tokens and gcloud "unrecognized arguments". One += per public var:
+SUBSTITUTIONS="_REGION=${REGION}"
+SUBSTITUTIONS+=",_SERVICE_NAME=${SERVICE_NAME}"
+SUBSTITUTIONS+=",_IMAGE_TAG=${IMAGE_TAG}"
+SUBSTITUTIONS+=",_NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}"
+SUBSTITUTIONS+=",_NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL}"
+SUBSTITUTIONS+=",_NEXT_PUBLIC_APP_ENV=${NEXT_PUBLIC_APP_ENV}"
+SUBSTITUTIONS+=",_NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}"
+SUBSTITUTIONS+=",_NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=${NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY}"
+SUBSTITUTIONS+=",_APBM_BUILD_REVISION=${APBM_BUILD_REVISION}"
+SUBSTITUTIONS+=",_APBM_BUILD_ARTIFACT_ID=${APBM_BUILD_ARTIFACT_ID}"
+
+gcloud builds submit \
+  --project "$PROJECT_ID" \
+  --region "$REGION" \
+  --config cloudbuild.yaml \
+  --substitutions "$SUBSTITUTIONS"
+
+echo "=================================================="
+echo "✅ Deployment Sequence Complete."
+echo "   Service:  $SERVICE_NAME"
+# DUAL-URL BANNER (v3.1): the domain URL is dead until DNS/SSL completes — printing
+# only it buries the one link that works NOW twelve lines up in build scroll.
+RUN_APP_URL="$(gcloud run services describe "$SERVICE_NAME" --project "$PROJECT_ID" --region "$REGION" --format='value(status.url)')"
+echo "   LIVE NOW (run.app):            $RUN_APP_URL"
+echo "   FINAL (after DNS/SSL, pending): $NEXT_PUBLIC_APP_URL"
+# IMAGE RECORD [R2]: read back what the service actually runs. It must be a digest reference.
+DEPLOYED_IMAGE="$(gcloud run services describe "$SERVICE_NAME" --project "$PROJECT_ID" --region "$REGION" --format='value(spec.template.spec.containers[0].image)')"
+echo "   Source revision: $APBM_BUILD_REVISION"
+echo "   Image tag:       $IMAGE_TAG"
+echo "   Deployed image:  $DEPLOYED_IMAGE"
+case "$DEPLOYED_IMAGE" in
+  *@sha256:*) echo "   Image digest:    ${DEPLOYED_IMAGE##*@}" ;;
+  *) echo "❌ The service is NOT running a digest-pinned image — treat this deployment as unverified."; exit 1 ;;
+esac
+echo "=================================================="

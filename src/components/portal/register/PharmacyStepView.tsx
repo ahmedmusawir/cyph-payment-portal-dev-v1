@@ -1,5 +1,6 @@
 "use client";
 
+import { PageHeader } from "@/components/portal/PageHeader";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -128,13 +129,7 @@ export function PharmacyStepView() {
   return (
     <PageContainer>
       <Stepper current={3} />
-      <div className="flex min-w-0 flex-wrap items-end justify-between gap-2">
-        <div className="min-w-0">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Step 3 · Pharmacy</p>
-          <h1 className="mt-1 text-[26px] font-bold leading-tight text-foreground md:text-[32px]">Your pharmacy</h1>
-        </div>
-        <Pill tone="muted">1 of 1</Pill>
-      </div>
+      <PageHeader eyebrow="Step 3 · Pharmacy" title="Your pharmacy" meta={<Pill tone="muted">1 of 1</Pill>} />
       <p className="mt-1 text-sm text-muted-foreground">
         We use these details to identify your pharmacy and set up its store. Ownership checks are separate — entering an identifier doesn&apos;t prove ownership. You can add more pharmacies from Billing after this one is active.
       </p>

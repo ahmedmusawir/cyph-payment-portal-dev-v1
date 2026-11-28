@@ -19,6 +19,7 @@ import { BusyLabel } from "../BusyLabel";
 import { PageContainer } from "../Loading";
 import { PageHeader } from "../PageHeader";
 import { owedBookHandoffHref } from "../brand";
+import { LayoutMode } from "../layoutMode";
 
 type Quote = { quoteId: string; amountCents: number; periodEnd: string; quoteExpiresAt: string; nextRenewalCents: number; consentCopyVersion: string; storeName: string; npi: string; discountExplanation: string };
 type PaymentIssue = "none" | "processing" | "authentication_required" | "declined" | "no_payment_method" | "unknown";
@@ -55,7 +56,16 @@ const SLOW_MS = 60_000;
 // Stripe's page is offered only when the owner must act; while Stripe is processing the single attempt it is not.
 const needsOwner = (s: Status) => s.state === "payment_pending" && !["processing", "none"].includes(s.paymentIssue ?? "unknown");
 
+// ABM007_FINAL (D-02, AC-L03): panel inside navigation. The signed-in header stays; the content carries the masthead.
 export function AddStoreFlow() {
+  return (
+    <LayoutMode mode="panel">
+      <AddStoreFlowContent />
+    </LayoutMode>
+  );
+}
+
+function AddStoreFlowContent() {
   const [storeName, setStoreName] = useState(""); const [npi, setNpi] = useState(""); const [ncpdp, setNcpdp] = useState("");
   const [quote, setQuote] = useState<Quote | null>(null);
   const [consent, setConsent] = useState({ terms: false, recurring: false, immediate: false });
@@ -161,7 +171,7 @@ export function AddStoreFlow() {
       {error && <Alert tone="destructive" role="alert" title={status ? "That did not work" : "This store was not added"}>{error.message}</Alert>}
 
       {!quote && !status && (
-        <form className="mt-6 space-y-4 border border-border bg-card p-4 sm:p-5" onSubmit={(e) => { e.preventDefault(); if (!busy) void getQuote(); }} data-testid="add-store-form">
+        <form className="mt-6 space-y-4 pb-card p-4 sm:p-5" onSubmit={(e) => { e.preventDefault(); if (!busy) void getQuote(); }} data-testid="add-store-form">
           <div className="space-y-1"><Label htmlFor="sn">Pharmacy name</Label><Input ref={nameRef} id="sn" value={storeName} onChange={(e) => setStoreName(e.target.value)} required maxLength={200} aria-invalid={!!error?.fieldErrors?.storeName} />{error?.fieldErrors?.storeName && <p className="text-sm text-destructive">{error.fieldErrors.storeName}</p>}</div>
           <div className="space-y-1"><Label htmlFor="npi">NPI</Label><Input ref={npiRef} id="npi" inputMode="numeric" value={npi} onChange={(e) => setNpi(e.target.value.replace(/\D/g, "").slice(0, 10))} required aria-invalid={!!error?.fieldErrors?.npi} />{error?.fieldErrors?.npi && <p className="text-sm text-destructive">{error.fieldErrors.npi}</p>}</div>
           <div className="space-y-1"><Label htmlFor="ncpdp">NCPDP (optional)</Label><Input ref={ncpdpRef} id="ncpdp" inputMode="numeric" value={ncpdp} onChange={(e) => setNcpdp(e.target.value.replace(/\D/g, "").slice(0, 7))} /></div>
@@ -170,8 +180,8 @@ export function AddStoreFlow() {
       )}
 
       {quote && !status && (
-        <section className="mt-6 space-y-4 border border-border bg-card p-4 sm:p-5" data-testid="add-store-quote" aria-labelledby="q-h">
-          <h2 id="q-h" className="text-xl font-bold text-foreground">{quote.storeName}</h2>
+        <section className="mt-6 space-y-4 pb-card p-4 sm:p-5" data-testid="add-store-quote" aria-labelledby="q-h">
+          <h2 id="q-h" className="pb-h2 text-xl">{quote.storeName}</h2>
           <dl className="grid grid-cols-1 gap-2 text-sm sm:grid-cols-2">
             <dt className="text-muted-foreground">Charged now</dt><dd className="font-semibold tabular-nums text-foreground" data-testid="quote-amount">{usd(quote.amountCents)}</dd>
             <dt className="text-muted-foreground">Covers</dt><dd className="text-foreground">From now until {when(quote.periodEnd)}</dd>
@@ -197,9 +207,9 @@ export function AddStoreFlow() {
       )}
 
       {status && (
-        <section className="mt-6 space-y-3 border border-border bg-card p-4 sm:p-5" data-testid="add-store-status" data-state={status.state} data-issue={status.state === "payment_pending" ? issue : undefined} aria-live="polite">
+        <section className="mt-6 space-y-3 pb-card p-4 sm:p-5" data-testid="add-store-status" data-state={status.state} data-issue={status.state === "payment_pending" ? issue : undefined} aria-live="polite">
           {status.state === "activated" && (<>
-            <h2 className="text-xl font-bold text-foreground" data-testid="add-store-complete">{status.storeName} has been added</h2>
+            <h2 className="pb-h2 text-xl" data-testid="add-store-complete">{status.storeName} has been added</h2>
             <p className="text-sm text-foreground">Payment received{status.amountCents !== null ? ` (${usd(status.amountCents)})` : ""} and confirmed by our server. The store is active, and you manage it as the account owner.</p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild><Link href="/billing">Back to billing</Link></Button>
@@ -209,7 +219,7 @@ export function AddStoreFlow() {
           </>)}
 
           {status.state === "payment_pending" && (<>
-            <h2 className="text-xl font-bold text-foreground">{PENDING_TITLE[issue]}</h2>
+            <h2 className="pb-h2 text-xl">{PENDING_TITLE[issue]}</h2>
             <p className="text-sm text-foreground">{PENDING_TEXT[issue]} Complete payment by {when(status.paymentDeadline)}; otherwise nothing is charged and the store is not added.</p>
             {status.hostedPaymentUrl && needsOwner(status) && (<>
               <Button asChild size="lg" className="h-auto w-full whitespace-normal py-2 sm:w-auto" data-testid="hosted-pay">

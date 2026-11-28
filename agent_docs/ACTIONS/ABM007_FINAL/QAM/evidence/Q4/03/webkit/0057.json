@@ -1,0 +1,199 @@
+{
+  "app": "ob",
+  "role": "ENGINEERING_OWNER_A",
+  "scripts": true,
+  "width": 375,
+  "requested": "/invitations",
+  "baseline": "evidence/Q2/02/0757.json",
+  "baselineLanded": "/invitations",
+  "seen": {
+    "status": 200,
+    "path": "/invitations"
+  },
+  "dom": {
+    "path": "/invitations",
+    "tokens": {
+      "brand-navy": "#154474",
+      "brand-green": "#32a38d",
+      "brand-green-dark": "#288472",
+      "brand-ice": "#eaf3fa",
+      "brand-charcoal": "#393b38",
+      "brand-gray": "#515151"
+    },
+    "overflow": 0,
+    "width": 375,
+    "bodyBackground": "rgb(234, 243, 250)",
+    "darkClass": false,
+    "colorScheme": "light",
+    "themeControls": 0,
+    "text": [
+      {
+        "where": "body>header:nth-child(3)>span:nth-child(1)>span:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 600,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>header:nth-child(3)>span:nth-child(1)>span:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 8.8583,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(4)>section:nth-child(1)>h1:nth-child(1)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 28,
+        "weight": 700,
+        "contrast": 8.8583,
+        "threshold": 3,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(4)>section:nth-child(1)>p:nth-child(2)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 7.0679,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      }
+    ],
+    "controls": [],
+    "links": [],
+    "pills": [],
+    "anchors": [],
+    "oldNames": {
+      "text": false,
+      "title": false,
+      "alt": false,
+      "accessible": false
+    },
+    "tables": [],
+    "noStores": false,
+    "ownerBillingMessage": false,
+    "backToStores": false,
+    "errors": false
+  },
+  "candidate": {
+    "controls": [],
+    "cards": [],
+    "nontext": []
+  },
+  "visual": {
+    "badCorner": [],
+    "badSurface": [],
+    "badTarget": [],
+    "navControl": null,
+    "badLinks": [],
+    "buttonNavy": []
+  },
+  "pixel": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 16,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 91,
+          "top": 10,
+          "right": 220.8096923828125,
+          "bottom": 30
+        },
+        "unsupported": [],
+        "worstRatio": 9.8707,
+        "samples": 481,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 91,
+          "top": 32.5,
+          "right": 152.951171875,
+          "bottom": 47.5
+        },
+        "unsupported": [],
+        "worstRatio": 8.7348,
+        "samples": 124,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 2,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 28,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 16,
+          "top": 95.09375,
+          "right": 220.76016235351562,
+          "bottom": 129.09375
+        },
+        "unsupported": [],
+        "worstRatio": 8.783,
+        "samples": 1608,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 3,
+        "tag": "P",
+        "pseudo": null,
+        "size": 14,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 16,
+          "top": 153.6875,
+          "right": 81.228515625,
+          "bottom": 170.6875
+        },
+        "unsupported": [],
+        "worstRatio": 1,
+        "samples": 127,
+        "unstablePixels": 0,
+        "result": "FAIL"
+      }
+    ],
+    "counts": {
+      "pass": 3,
+      "fail": 1,
+      "notRun": 0
+    }
+  },
+  "time": "2026-11-26T09:07:52.522Z"
+}

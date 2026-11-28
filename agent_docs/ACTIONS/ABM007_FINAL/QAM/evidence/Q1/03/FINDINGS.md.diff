@@ -1,0 +1,16 @@
+--- return02/FINDINGS.md
++++ amended03/FINDINGS.md
+@@ -106,3 +106,13 @@
+ 15. Owner: Tony / JARVIS.
+ 16. Retest: re-prove both directions after explicitly authorized resolution.
+ Source: automated (readiness/source inspection), not Director walkthrough.
++
++## QA Lead dispositions — 24 November 2026, Q1 return 02
++
++Transcribed by Cody on Tony’s express instruction. Source: Friday’s decision §6.
++
++**ABM7F-F01, bundled Chromium missing at first launch.** Disposition: instrument issue, accepted. The first failure is kept. Installed Chrome is the stakeholder's own browser, so using it is sound. Closed for Q1; amendment A-6 covers the other engines.
++
++**ABM7F-F02, shared Stripe sandbox, isolation not proven.** Disposition: open, High, environment and contract gap. It blocks only the journeys that make the payment provider send events: J-c, J-d and J-g. It does not block anything else.
++
++The QA Lead does not adopt a new routing filter: protected payment-code work would require its own assignment. No such change is planned in this module.

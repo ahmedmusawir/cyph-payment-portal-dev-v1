@@ -20,33 +20,93 @@
    (--primary) is unchanged as the brand fill; only the light focus RING uses a
    deeper coral. Decorative --border is deliberately left as approved. */
 @layer base {
+  /* ── LIGHT · Pharmacy Books (ABM007_FINAL). Installed unchanged from
+     agent_docs/ACTIONS/ABM007_FINAL/DESIGN/tokens/abm007_final_tokens.css
+     (Portal repository). Light is forced (D-01); the .dark block below is
+     frozen and unreachable. Do not hand-edit or round these triplets. ── */
   :root {
-    --background: 217 16% 90%;
-    --foreground: 220 24% 16%;
+    /* ---- Approved anchors (exact) ---- */
+    --brand-navy: 210.3157894737 69.3430656934% 26.862745098%;  /* #154474  design "primary" */
+    --brand-green: 168.3185840708 53.0516431925% 41.7647058824%;  /* #32A38D  design "accent": fills and large type only */
+    --brand-green-dark: 168.2608695652 53.488372093% 33.7254901961%;  /* #288472  design "accent-dark" */
+    --brand-ice: 206.25 61.5384615385% 94.9019607843%;  /* #EAF3FA  design "neutral" */
+    --brand-charcoal: 100 2.6086956522% 22.5490196078%;  /* #393B38  design "charcoal" */
+    --brand-gray: 0 0% 31.7647058824%;  /* #515151  design "text-muted" */
+    --brand-green-hover: 168.4337349398 53.5483870968% 30.3921568627%;  /* #247767  PROPOSED hover; not in the design file */
+
+    /* ---- Derived from the navy hue by lightness (gradients, shadow tint). PROPOSED; defined in HSL ---- */
+    --brand-navy-deep: 210 69% 19%;
+    --brand-navy-deeper: 210 70% 13%;
+    --shadow-tint: 210 69% 15%;            /* shadows are navy-tinted, never black */
+
+    /* ---- Surfaces ---- */
+    --background: var(--brand-ice);        /* signed-in page surface. PROPOSED (P-01) */
+    --foreground: var(--brand-charcoal);
     --card: 0 0% 100%;
-    --card-foreground: 220 24% 16%;
+    --card-foreground: var(--brand-charcoal);
     --popover: 0 0% 100%;
-    --popover-foreground: 220 24% 16%;
-    --primary: 12 93% 64%;
-    --primary-foreground: 220 24% 12%;  /* portal: was 0 0% 100% — dark ink on coral, 6.0:1 */
-    --secondary: 216 16% 88%;
-    --secondary-foreground: 220 24% 22%;
-    --muted: 216 16% 93%;
-    --muted-foreground: 220 10% 36%;    /* portal R1: was 220 10% 42% — 4.44 on page, 3.95 on tinted notices; now ≥4.8 */
-    --accent: 216 16% 90%;
-    --accent-foreground: 220 24% 22%;
-    --border: 216 15% 80%;
-    --input: 216 15% 50%;               /* portal R1: was 216 15% 80% — field boundary 1.4–1.65:1; now ≥3.3 (--border unchanged) */
-    --ring: 12 80% 44%;                 /* portal R1: was 12 93% 64% (= primary) — focus ring 2.4–2.8:1; now ≥3.8 */
-    --destructive: 2 67% 40%;           /* portal R1: was 2 67% 51% — 3.78 on page, 3.3 on its tint; now ≥4.7 */
+    --popover-foreground: var(--brand-charcoal);
+
+    /* ---- Interactive. The app token "primary" is the BUTTON AND LINK color (dark green),
+            not the design's "primary" (navy). See BRAND_UI_CONTRACT section 2. ---- */
+    --primary: var(--brand-green-dark);
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: var(--brand-green-hover);   /* replaces hover:bg-primary/90 */
+
+    --secondary: var(--brand-ice);
+    --secondary-foreground: var(--brand-navy);
+    --muted: var(--brand-ice);
+    --muted-foreground: var(--brand-gray);
+    --accent: var(--brand-ice);            /* hover/focus surface of menus and quiet buttons. NOT the design "accent" */
+    --accent-foreground: var(--brand-navy);
+
+    /* ---- Structure ---- */
+    --heading: var(--brand-navy);
+    --navbar: var(--brand-navy);           /* new token in the Portal */
+    --navbar-foreground: 0 0% 100%;
+    --border: 206 45% 88%;                 /* hairline. PROPOSED: design ice is 1.12:1 on white and vanishes on an ice page */
+    --input: var(--brand-gray);            /* field border */
+    --ring: var(--brand-navy);             /* focus ring on light surfaces */
+    --ring-on-dark: 0 0% 100%;             /* focus ring on navy surfaces */
+
+    /* ---- Disabled controls. PROPOSED: neutral, not a faded green ---- */
+    --disabled: 206 25% 90%;
+    --disabled-foreground: var(--brand-gray);
+
+    /* ---- Status colors: fixed meaning. PROPOSED (P-02) = the Portal's existing HSL values, for both apps.
+            These are defined in HSL in the Portal today; their resolved colors and contrast are in
+            DESIGN/renders/COLOR_VERIFICATION.txt. Status TEXT sits on white only. ---- */
+    --destructive: 2 67% 40%;
     --destructive-foreground: 0 0% 100%;
-    --success: 131 54% 34%;             /* portal: was 131 54% 40% — small text on card 4.6:1 */
+    --success: 131 54% 34%;
     --success-foreground: 0 0% 100%;
-    --warning: 41 93% 32%;              /* portal: was 41 93% 47% — small text on card 4.5:1 */
+    --warning: 41 93% 32%;
     --warning-foreground: 0 0% 100%;
-    --info: 214 74% 50%;                /* portal: was 214 74% 53% — small text on card 4.6:1 */
+    --info: 214 74% 50%;
     --info-foreground: 0 0% 100%;
-    --radius: 0px;
+
+    /* ---- OwedBook KPI tiles and chart marks (P-03) ---- */
+    --chart-1: var(--destructive);
+    --chart-2: var(--info);
+    --chart-3: var(--success);
+    --chart-4: var(--brand-navy);
+    --chart-5: var(--brand-green);
+
+    /* ---- Role identity (P-04): neutral outlined labels, told apart by the word ---- */
+    --role-superadmin: var(--brand-navy);
+    --role-superadmin-foreground: 0 0% 100%;
+    --role-admin: var(--brand-navy);
+    --role-admin-foreground: 0 0% 100%;
+    --role-member: var(--brand-navy);
+    --role-member-foreground: 0 0% 100%;
+
+    /* ---- Radius: explicit scale (one knob cannot give 8px fields and 14px cards) ---- */
+    --radius-sm: 4px;      /* kit internals: checkbox, menu item */
+    --radius-md: 8px;      /* buttons, fields, menus, pills   = design "sm" */
+    --radius-tile: 12px;   /* logo tile                       = design "md" */
+    --radius-lg: 14px;     /* cards, dialogs                  = design "lg" */
+    --radius-xl: 16px;     /* shell, masthead                 = design "xl" */
+    --radius: 14px;        /* legacy single knob, kept for any unmapped consumer */
   }
 
   .dark {
@@ -90,31 +150,174 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Portal FFM additions (not tokens). Native form controls read the primary
-   token; links keep foreground text through hover/focus (RULINGS R-004) and
-   signal interaction with underline thickness only. */
+/* Portal link recipe (ABM007_FINAL brand contract 4.3, superseding RULINGS
+   R-004): dark green, always underlined, on white surfaces. Native control
+   color and the focus indicator now live in the shared recipes below. */
+@layer components {
+  .portal-link {
+    @apply font-medium text-primary underline decoration-1 underline-offset-4 hover:decoration-2 focus-visible:decoration-2;
+  }
+}
+
+/* ── Pharmacy Books shared recipes (ABM007_FINAL) ─────────────────────
+   Identical in OwedBook globals.css and Portal globals.scss. Tokens only:
+   every color is hsl(var(--token)) or hsl(var(--token) / alpha).
+   Brand contract sections 3 to 4; reference: DESIGN/assets/brand.css. */
 @layer base {
   input[type="checkbox"],
   input[type="radio"] {
     accent-color: hsl(var(--primary));
   }
-
-  /* REPAIR_001 (Q2-F01): one token-driven keyboard focus indicator for
-     anything without its own ring utility (skip link, plain links, native
-     checkboxes). Utilities such as focus-visible:outline-none + ring-ring win
-     because they sit in a later layer. Radios are excluded: their RadioCard /
-     plan-card label carries the focus-within ring. */
+  /* Surface-aware focus (Architect source review, 24 Nov). The 2px outline sits on the surface under the control, so
+     each surface names its ring in --pb-focus-ring and the nearest surface wins by inheritance: navy on white and ice,
+     white on navy, at any nesting depth. Portalled menus, sheets and dialogs render under <body> and get the light
+     default. Tailwind's ring-ring utility reads the same property. */
   :focus-visible {
-    outline: 2px solid hsl(var(--ring));
+    outline: 2px solid hsl(var(--pb-focus-ring, var(--ring)));
     outline-offset: 2px;
   }
-  input[type="radio"]:focus-visible {
-    outline: none;
+  .pb-on-dark,
+  .pb-backdrop,
+  .pb-masthead {
+    --pb-focus-ring: var(--ring-on-dark);
+  }
+  .pb-on-light,
+  .pb-shell,
+  .pb-card,
+  .pb-notice {
+    --pb-focus-ring: var(--ring);
   }
 }
 
 @layer components {
-  .portal-link {
-    @apply font-medium text-foreground underline decoration-1 underline-offset-4 hover:decoration-2 focus-visible:decoration-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  /* Literal layout: navy backdrop, white shell, gradient masthead */
+  .pb-backdrop {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background:
+      radial-gradient(900px 500px at 12% 0%, hsl(var(--brand-navy) / 0.55), transparent 60%),
+      linear-gradient(160deg, hsl(var(--brand-navy-deep)), hsl(var(--brand-navy-deeper)));
+  }
+  .pb-shell {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px;
+    background: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    border-radius: var(--radius-xl);
+    box-shadow: 0 18px 48px hsl(var(--shadow-tint) / 0.18), inset 0 1px 0 hsl(var(--card) / 0.6);
+  }
+  .pb-shell-narrow { max-width: 560px; }
+  .pb-masthead {
+    padding: 18px 20px 20px;
+    border-radius: var(--radius-xl);
+    color: hsl(var(--navbar-foreground));
+    background: linear-gradient(135deg, hsl(var(--brand-navy)), hsl(var(--brand-navy-deep)));
+    box-shadow: 0 12px 28px hsl(var(--shadow-tint) / 0.18);
+  }
+  .pb-masthead-text { color: hsl(var(--brand-ice)); }
+  .pb-logo-tile {
+    flex: none;
+    display: inline-grid;
+    place-items: center;
+    background: hsl(var(--card));
+    border-radius: var(--radius-tile);
+    padding: 6px 8px;
+    box-shadow: 0 6px 16px hsl(var(--shadow-tint) / 0.25);
+  }
+  /* Type */
+  .pb-eyebrow { font-weight: 600; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; }
+  .pb-headline { font-weight: 700; font-size: 36px; line-height: 1.1; letter-spacing: -0.03em; }
+  .pb-page-title { font-weight: 700; font-size: 28px; line-height: 1.15; letter-spacing: -0.02em; color: hsl(var(--heading)); }
+  .pb-h2 { font-weight: 500; font-size: 18px; line-height: 1.5; color: hsl(var(--heading)); }
+  /* One card treatment per app */
+  .pb-card {
+    background: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 20px hsl(var(--shadow-tint) / 0.05);
+  }
+  /* Links: dark green underlined on white; navy underlined on the ice page; ice on navy */
+  .pb-link {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .pb-link:hover { text-decoration-thickness: 2px; }
+  .pb-link-on-page { color: hsl(var(--heading)); text-decoration: underline; text-underline-offset: 3px; }
+  .pb-link-on-dark { color: hsl(var(--brand-ice)); text-decoration: underline; text-underline-offset: 3px; }
+  /* Pills: charcoal text, status border, 10 percent tint over white */
+  .pb-pill {
+    --pb-tone: var(--border);
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: nowrap;
+    border: 1px solid hsl(var(--pb-tone));
+    border-radius: 9999px;
+    color: hsl(var(--foreground));
+    background: linear-gradient(hsl(var(--pb-tone) / 0.1), hsl(var(--pb-tone) / 0.1)), hsl(var(--card));
+  }
+  .pb-tone-success { --pb-tone: var(--success); }
+  .pb-tone-warning { --pb-tone: var(--warning); }
+  .pb-tone-destructive { --pb-tone: var(--destructive); }
+  .pb-tone-info { --pb-tone: var(--info); }
+  .pb-tone-neutral { --pb-tone: var(--input); }
+  /* Role labels: one neutral outline, told apart by the word */
+  .pb-role {
+    display: inline-flex;
+    align-items: center;
+    padding: 1px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 9999px;
+    border: 1px solid hsl(var(--heading));
+    color: hsl(var(--heading));
+    background: hsl(var(--card));
+  }
+  .pb-role-on-dark { border-color: hsl(var(--navbar-foreground) / 0.8); color: hsl(var(--navbar-foreground)); background: transparent; }
+  /* Notices: bold instruction first, word plus border plus tint */
+  .pb-notice {
+    --pb-tone: var(--info);
+    padding: 12px 14px;
+    border: 1px solid hsl(var(--pb-tone) / 0.35);
+    border-left: 3px solid hsl(var(--pb-tone));
+    border-radius: var(--radius-md);
+    color: hsl(var(--foreground));
+    background: linear-gradient(hsl(var(--pb-tone) / 0.1), hsl(var(--pb-tone) / 0.1)), hsl(var(--card));
+  }
+  /* Step badge */
+  .pb-step-badge {
+    flex: none;
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 9999px;
+    background: hsl(var(--brand-navy));
+    color: hsl(var(--navbar-foreground));
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .pb-step-badge-todo { background: hsl(var(--card)); color: hsl(var(--brand-navy)); border: 1px solid hsl(var(--brand-navy)); }
+  /* Signed-in navigation items on navy */
+  .pb-nav-item { color: hsl(var(--brand-ice)); border-radius: var(--radius-md); }
+  .pb-nav-item:hover { background: hsl(var(--navbar-foreground) / 0.1); color: hsl(var(--navbar-foreground)); }
+  .pb-nav-item-active { background: hsl(var(--navbar-foreground) / 0.14); color: hsl(var(--navbar-foreground)); font-weight: 500; }
+  /* Links inside a tinted notice: green fails on a tint, so they take the notice's charcoal text, bold and underlined */
+  .pb-notice .pb-link,
+  .pb-notice .portal-link { color: hsl(var(--foreground)); font-weight: 600; }
+  /* Side rail and drawer active item: ice fill, navy text, navy left rule */
+  .pb-rail-active {
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+    font-weight: 500;
+    box-shadow: inset 3px 0 0 hsl(var(--brand-navy));
   }
 }

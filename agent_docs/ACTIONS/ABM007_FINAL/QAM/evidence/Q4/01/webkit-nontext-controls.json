@@ -1,0 +1,538 @@
+{
+  "engine": "webkit",
+  "version": "26.4",
+  "checks": [
+    {
+      "kind": "border",
+      "expected": "PASS",
+      "actual": "PASS",
+      "match": true,
+      "evidence": {
+        "kind": "border",
+        "result": "PASS",
+        "minimumSideSampleContrast": 7.9375,
+        "sides": [
+          {
+            "side": "top",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              }
+            ]
+          },
+          {
+            "side": "bottom",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              }
+            ]
+          },
+          {
+            "side": "left",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              }
+            ]
+          },
+          {
+            "side": "right",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 7.9375,
+                "changedPixels": 2
+              }
+            ]
+          }
+        ],
+        "style": {
+          "tag": "INPUT",
+          "type": null,
+          "outline": "3px none rgb(0, 0, 0)",
+          "offset": "0px",
+          "shadow": "none",
+          "border": "rgb(81, 81, 81)",
+          "borderWidth": "2px",
+          "focusVisible": false,
+          "height": 44
+        },
+        "method": "Actual viewport pixels: three positions per edge; border vs adjacent background, or focus image vs same pre-focus pixels. Strongest changed pixel in narrow edge strip, minimum across all12 edge samples. Images never retained."
+      }
+    },
+    {
+      "kind": "border",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "match": true,
+      "evidence": {
+        "kind": "border",
+        "result": "FAIL",
+        "minimumSideSampleContrast": 1.1602,
+        "sides": [
+          {
+            "side": "top",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              }
+            ]
+          },
+          {
+            "side": "bottom",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              }
+            ]
+          },
+          {
+            "side": "left",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              }
+            ]
+          },
+          {
+            "side": "right",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 2
+              }
+            ]
+          }
+        ],
+        "style": {
+          "tag": "INPUT",
+          "type": null,
+          "outline": "3px none rgb(0, 0, 0)",
+          "offset": "0px",
+          "shadow": "none",
+          "border": "rgb(238, 238, 238)",
+          "borderWidth": "2px",
+          "focusVisible": false,
+          "height": 44
+        },
+        "method": "Actual viewport pixels: three positions per edge; border vs adjacent background, or focus image vs same pre-focus pixels. Strongest changed pixel in narrow edge strip, minimum across all12 edge samples. Images never retained."
+      }
+    },
+    {
+      "kind": "focus",
+      "expected": "PASS",
+      "actual": "PASS",
+      "match": true,
+      "evidence": {
+        "kind": "focus",
+        "result": "PASS",
+        "minimumSideSampleContrast": 9.9482,
+        "sides": [
+          {
+            "side": "top",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              }
+            ]
+          },
+          {
+            "side": "bottom",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              }
+            ]
+          },
+          {
+            "side": "left",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              }
+            ]
+          },
+          {
+            "side": "right",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 9.9482,
+                "changedPixels": 3
+              }
+            ]
+          }
+        ],
+        "style": {
+          "tag": "INPUT",
+          "type": null,
+          "outline": "3px solid rgb(21, 68, 116)",
+          "offset": "2px",
+          "shadow": "none",
+          "border": "rgb(21, 68, 116)",
+          "borderWidth": "2px",
+          "focusVisible": true,
+          "height": 44
+        },
+        "method": "Actual viewport pixels: three positions per edge; border vs adjacent background, or focus image vs same pre-focus pixels. Strongest changed pixel in narrow edge strip, minimum across all12 edge samples. Images never retained."
+      }
+    },
+    {
+      "kind": "focus",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "match": true,
+      "evidence": {
+        "kind": "focus",
+        "result": "FAIL",
+        "minimumSideSampleContrast": 1.1602,
+        "sides": [
+          {
+            "side": "top",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              }
+            ]
+          },
+          {
+            "side": "bottom",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              }
+            ]
+          },
+          {
+            "side": "left",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              }
+            ]
+          },
+          {
+            "side": "right",
+            "samples": [
+              {
+                "fraction": 0.25,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.5,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              },
+              {
+                "fraction": 0.75,
+                "maxPixelContrast": 1.1602,
+                "changedPixels": 3
+              }
+            ]
+          }
+        ],
+        "style": {
+          "tag": "INPUT",
+          "type": null,
+          "outline": "3px solid rgb(238, 238, 238)",
+          "offset": "2px",
+          "shadow": "none",
+          "border": "rgb(238, 238, 238)",
+          "borderWidth": "2px",
+          "focusVisible": true,
+          "height": 44
+        },
+        "method": "Actual viewport pixels: three positions per edge; border vs adjacent background, or focus image vs same pre-focus pixels. Strongest changed pixel in narrow edge strip, minimum across all12 edge samples. Images never retained."
+      }
+    }
+  ],
+  "textChecks": [
+    {
+      "name": "strong",
+      "expected": "PASS",
+      "observed": "PASS",
+      "pass": true,
+      "measurement": {
+        "method": "Viewport-aligned rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 30,
+              "top": 252.5,
+              "right": 487.6171875,
+              "bottom": 269.5
+            },
+            "unsupported": [],
+            "worstRatio": 11.3106,
+            "samples": 1266,
+            "unstablePixels": 0,
+            "result": "PASS"
+          }
+        ],
+        "counts": {
+          "pass": 1,
+          "fail": 0,
+          "notRun": 0
+        }
+      }
+    },
+    {
+      "name": "weak",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "measurement": {
+        "method": "Viewport-aligned rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 30,
+              "top": 252.5,
+              "right": 487.6171875,
+              "bottom": 269.5
+            },
+            "unsupported": [],
+            "worstRatio": 4.4528,
+            "samples": 1266,
+            "unstablePixels": 0,
+            "result": "FAIL"
+          }
+        ],
+        "counts": {
+          "pass": 0,
+          "fail": 1,
+          "notRun": 0
+        }
+      }
+    },
+    {
+      "name": "gradient",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "measurement": {
+        "method": "Viewport-aligned rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 30,
+              "top": 252.5,
+              "right": 487.6171875,
+              "bottom": 269.5
+            },
+            "unsupported": [],
+            "worstRatio": 1.3713,
+            "samples": 1266,
+            "unstablePixels": 0,
+            "result": "FAIL"
+          }
+        ],
+        "counts": {
+          "pass": 0,
+          "fail": 1,
+          "notRun": 0
+        }
+      }
+    }
+  ],
+  "pass": true,
+  "textOK": true
+}

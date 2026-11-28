@@ -1,0 +1,47 @@
+{
+  "sourceOccurrenceCheck": [
+    {
+      "app": "ob",
+      "path": "src/app/globals.css",
+      "line": 221,
+      "kind": "shared gradient masthead or numbered step badge styling"
+    },
+    {
+      "app": "ob",
+      "path": "src/app/globals.css",
+      "line": 308,
+      "kind": "shared gradient masthead or numbered step badge styling"
+    },
+    {
+      "app": "ob",
+      "path": "src/app/globals.css",
+      "line": 313,
+      "kind": "shared gradient masthead or numbered step badge styling"
+    },
+    {
+      "app": "ob",
+      "path": "src/app/(public)/HomePageContent.tsx",
+      "line": 48,
+      "kind": "authorized body Log in CTA exception"
+    },
+    {
+      "app": "pp",
+      "path": "src/app/globals.scss",
+      "line": 216,
+      "kind": "shared gradient masthead or numbered step badge styling"
+    },
+    {
+      "app": "pp",
+      "path": "src/app/globals.scss",
+      "line": 303,
+      "kind": "shared gradient masthead or numbered step badge styling"
+    },
+    {
+      "app": "pp",
+      "path": "src/app/globals.scss",
+      "line": 308,
+      "kind": "shared gradient masthead or numbered step badge styling"
+    }
+  ],
+  "limit": "Named navy tokens from candidate source. Browser matrix separately records rendered fill. Styling on masthead and badges is not a button fill."
+}

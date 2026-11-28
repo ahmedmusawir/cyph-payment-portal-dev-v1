@@ -1,0 +1,17 @@
+<h2>Sign in to Cyber Pharma</h2>
+
+<p>Use this one-time link to sign in.</p>
+
+{{ if eq .RedirectTo "http://localhost:3000/api/auth/confirm" }}
+<p><a href="http://localhost:3000/api/auth/confirm?token_hash={{ .TokenHash }}&amp;type=email">Sign in to OwedBook</a></p>
+{{ else if eq .RedirectTo "http://localhost:3001/api/auth/confirm" }}
+<p><a href="http://localhost:3001/api/auth/confirm?token_hash={{ .TokenHash }}&amp;type=email">Sign in to Payment Portal</a></p>
+{{ else if eq .RedirectTo "https://cyph-v1-owedbook-alpha.cyberizedev.com/api/auth/confirm" }}
+<p><a href="https://cyph-v1-owedbook-alpha.cyberizedev.com/api/auth/confirm?token_hash={{ .TokenHash }}&amp;type=email">Sign in to OwedBook</a></p>
+{{ else if eq .RedirectTo "https://cyph-v1-payment-alpha.cyberizedev.com/api/auth/confirm" }}
+<p><a href="https://cyph-v1-payment-alpha.cyberizedev.com/api/auth/confirm?token_hash={{ .TokenHash }}&amp;type=email">Sign in to Payment Portal</a></p>
+{{ else }}
+<p>The sign-in destination was not recognized. Return to the app and request a new link.</p>
+{{ end }}
+
+<p>If you did not request this email, you can ignore it.</p>

@@ -1,0 +1,392 @@
+{
+  "rows": [
+    {
+      "engine": "chromium",
+      "version": "147.0.7727.15",
+      "role": "ENGINEERING_MEMBER",
+      "time": "2026-11-24T13:01:31.231Z",
+      "app": "ob",
+      "method": "provider token via the app confirm page (AM-15)",
+      "selector": {
+        "options": 1,
+        "noPermitted": false,
+        "nonempty": 1
+      },
+      "helpLinks": [
+        {
+          "anchor": "#getting-around",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#roles",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#my-stores",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#inviting",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#store-admin",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-access",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#billing",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-pharmacy",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#settings",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#audit",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#profile",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#claims",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#support",
+          "hash": true,
+          "present": true,
+          "inView": true
+        }
+      ],
+      "helpForbidden": false,
+      "helpDestinations": [
+        {
+          "requested": "/admin-portal",
+          "landed": "/help",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        },
+        {
+          "requested": "/admin-portal/billing",
+          "landed": "/help",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        }
+      ],
+      "menu": {
+        "opened": true,
+        "closed": true
+      },
+      "completed": true,
+      "signout": 200
+    },
+    {
+      "engine": "chromium",
+      "version": "147.0.7727.15",
+      "role": "ENGINEERING_ADMIN",
+      "time": "2026-11-24T13:01:49.717Z",
+      "app": "ob",
+      "method": "provider token via the app confirm page (AM-15)",
+      "selector": {
+        "options": 1,
+        "noPermitted": false,
+        "nonempty": 1
+      },
+      "helpLinks": [
+        {
+          "anchor": "#getting-around",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#roles",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#my-stores",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#inviting",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#store-admin",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-access",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#billing",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-pharmacy",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#settings",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#audit",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#profile",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#claims",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#support",
+          "hash": true,
+          "present": true,
+          "inView": true
+        }
+      ],
+      "helpForbidden": false,
+      "helpDestinations": [
+        {
+          "requested": "/admin-portal",
+          "landed": "/admin-portal",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        },
+        {
+          "requested": "/admin-portal/billing",
+          "landed": "/help",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        }
+      ],
+      "menu": {
+        "opened": true,
+        "closed": true
+      },
+      "completed": false,
+      "firstError": "locator.innerText: Timeout 30000ms exceeded.",
+      "signout": 200
+    },
+    {
+      "engine": "chromium",
+      "version": "147.0.7727.15",
+      "role": "ENGINEERING_OWNER_A",
+      "time": "2026-11-24T13:02:39.941Z",
+      "app": "ob",
+      "method": "password (normal sign-in form)",
+      "selector": {
+        "options": 3,
+        "noPermitted": false,
+        "nonempty": 3
+      },
+      "helpLinks": [
+        {
+          "anchor": "#getting-around",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#roles",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#my-stores",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#inviting",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#store-admin",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-access",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#billing",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-pharmacy",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#settings",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#audit",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#profile",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#claims",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#support",
+          "hash": true,
+          "present": true,
+          "inView": true
+        }
+      ],
+      "helpForbidden": false,
+      "helpDestinations": [
+        {
+          "requested": "/admin-portal",
+          "landed": "/help",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        },
+        {
+          "requested": "/admin-portal/billing",
+          "landed": "/help",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        }
+      ],
+      "menu": {
+        "opened": true,
+        "closed": true
+      },
+      "audit": {
+        "includeReadsOff": {
+          "rows": 37,
+          "loadOlder": 1
+        },
+        "includeReadsOn": {
+          "rows": 50,
+          "loadOlder": 1
+        },
+        "paging": {
+          "before": 50,
+          "after": 100,
+          "grew": true,
+          "prefixPreserved": true,
+          "distinct": false
+        },
+        "filters": [
+          {
+            "value": "people",
+            "rows": 0
+          },
+          {
+            "value": "stores",
+            "rows": 0
+          },
+          {
+            "value": "billing",
+            "rows": 0
+          },
+          {
+            "value": "all",
+            "rows": 100
+          }
+        ]
+      },
+      "failedRead": {
+        "errorVisible": true,
+        "emptyClaim": false
+      },
+      "completed": false,
+      "firstError": "locator.innerText: Timeout 30000ms exceeded.",
+      "signout": 200
+    }
+  ],
+  "counters": {
+    "password_sign_ins": 1,
+    "token_sign_ins": 2,
+    "generate_link_calls": 2
+  }
+}

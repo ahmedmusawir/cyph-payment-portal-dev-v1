@@ -1,0 +1,103 @@
+{
+  "engine": "chromium",
+  "version": "147.0.7727.15",
+  "app": "pp",
+  "role": "PUBLIC",
+  "method": "none",
+  "width": 375,
+  "requested": "/qa-missing-page",
+  "landed": "/qa-missing-page",
+  "state": "default",
+  "time": "2026-11-24T15:24:42.324Z",
+  "raster": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 28,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 80.90625,
+          "top": 366.90625,
+          "right": 294.078125,
+          "bottom": 400.90625
+        },
+        "unsupported": [],
+        "worstRatio": 9.9379,
+        "samples": 1516,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 52,
+          "top": 418.09375,
+          "right": 323,
+          "bottom": 438.09375
+        },
+        "unsupported": [],
+        "worstRatio": 11.2254,
+        "samples": 302,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 2,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 133,
+          "top": 442.09375,
+          "right": 242,
+          "bottom": 462.09375
+        },
+        "unsupported": [],
+        "worstRatio": 11.226,
+        "samples": 139,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 3,
+        "tag": "A",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 120,
+          "top": 500.09375,
+          "right": 255,
+          "bottom": 520.09375
+        },
+        "unsupported": [],
+        "worstRatio": 4.5299,
+        "samples": 280,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 4,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "completed": true
+}

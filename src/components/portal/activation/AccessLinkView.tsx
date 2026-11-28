@@ -26,9 +26,9 @@ export function AccessLinkView({
   const failed = delivery === "failed";
   const Icon = failed ? MailWarning : MailCheck;
   return (
-    <section aria-labelledby="mail-h" className="border border-border bg-card p-4 sm:p-5" data-testid={`access-email-${delivery}`}>
+    <section aria-labelledby="mail-h" className="pb-card p-4 sm:p-5" data-testid={`access-email-${delivery}`}>
       <Icon className="h-6 w-6 text-muted-foreground" aria-hidden="true" />
-      <h2 id="mail-h" className="mt-2 text-xl font-bold text-foreground">
+      <h2 id="mail-h" className="pb-h2 mt-2 text-xl">
         {failed ? "We couldn't send your sign-in email" : delivery === "pending" ? "Your sign-in email is on its way" : "Check your email"}
       </h2>
       <p className="mt-1 text-sm text-muted-foreground">

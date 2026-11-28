@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Style tile — ABM007_FINAL design reference</title><link rel="stylesheet" href="../assets/brand.css"></head>
+<body class="">
+<div class="refbar">Design reference for approval · fictional data · static page: states and the menu are illustrations, not live controls · style tile</div>
+<div class="wrap stack">
+  <div><p class="eyebrow navy">ABM007_FINAL · Style tile · light only</p>
+  <h1 class="page-title">Pharmacy Books — brand applied to OwedBook and Account &amp; Billing</h1>
+  <p class="muted body-sm">Every value on this page is read from <code>tokens/abm007_final_tokens.css</code>. Status: proposed, awaiting the Director's visual approval.</p></div>
+
+  <section class="card"><h2 class="h2">Palette and what each color does</h2>
+    <div class="grid4">
+      <div><div class="swatch" style="background:hsl(var(--brand-navy))"></div><div class="cap"><b>Navy #154474</b><br>Headings, header, masthead, focus ring. White on navy 9.95:1</div></div>
+      <div><div class="swatch" style="background:hsl(var(--primary))"></div><div class="cap"><b>Dark green #288472</b><br>Every button and link. White text 4.53:1</div></div>
+      <div><div class="swatch" style="background:hsl(var(--primary-hover))"></div><div class="cap"><b>Hover green #247767</b><br>Button hover. White text 5.37:1</div></div>
+      <div><div class="swatch" style="background:hsl(var(--brand-green))"></div><div class="cap"><b>Green #32A38D</b><br>Fills and large type only. 3.11:1 on white</div></div>
+      <div><div class="swatch" style="background:hsl(var(--brand-ice))"></div><div class="cap"><b>Ice #EAF3FA</b><br>Page surface, hover surface, text on navy 8.86:1</div></div>
+      <div><div class="swatch" style="background:hsl(var(--card))"></div><div class="cap"><b>White</b><br>Cards, shell, fields</div></div>
+      <div><div class="swatch" style="background:hsl(var(--foreground))"></div><div class="cap"><b>Charcoal #393B38</b><br>Body text. 11.31:1 on white</div></div>
+      <div><div class="swatch" style="background:hsl(var(--muted-foreground))"></div><div class="cap"><b>Gray #515151</b><br>Labels, help text, field borders. 7.94:1</div></div>
+    </div>
+    <div class="grid4" style="margin-top:14px">
+      <div><div class="swatch" style="background:hsl(var(--success))"></div><div class="cap"><b>Success #288639</b><br>Status only. Text on white 4.61:1</div></div>
+      <div><div class="swatch" style="background:hsl(var(--warning))"></div><div class="cap"><b>Warning #9D6D06</b><br>Status only. Text on white 4.54:1</div></div>
+      <div><div class="swatch" style="background:hsl(var(--destructive))"></div><div class="cap"><b>Destructive #AA2622</b><br>Errors, money lost. 6.98:1</div></div>
+      <div><div class="swatch" style="background:hsl(var(--info))"></div><div class="cap"><b>Info #2173DE</b><br>Neutral notices. 4.59:1</div></div>
+    </div>
+  </section>
+
+  <section class="card"><h2 class="h2">Type — Inter only</h2>
+    <p class="headline navy">Headline 36 Bold</p>
+    <p class="h2">Headline 2 — 18 Medium, card titles and step titles</p>
+    <p class="h-sub">Headline sub — 14 medium caps</p>
+    <p class="eyebrow navy">Eyebrow — 12 semibold caps</p>
+    <p>Body 16 Regular. Running text sits in charcoal on white cards.</p>
+    <p class="body-sm">Body small 15 Regular. Field values, list items, descriptions.</p>
+    <p class="label">Label 13 Regular. Field labels and helper text.</p>
+    <p class="body-sm"><em>Italic is for disclaimer lines and single-word emphasis only.</em></p>
+  </section>
+
+  <section class="card"><h2 class="h2">Buttons — Title Case, Regular 16, flat, 8px corners</h2>
+    <div class="row">
+      <span class="btn btn-primary">Save Changes</span>
+      <span class="btn btn-primary is-hover">Hover</span>
+      <span class="btn btn-primary is-focus">Focus</span>
+      <span class="btn is-disabled">Disabled</span>
+      <span class="btn btn-primary"><span class="spin"></span>Saving…</span>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <span class="btn btn-outline">Cancel</span>
+      <span class="btn btn-outline is-hover">Hover</span>
+      <span class="btn btn-outline is-focus">Focus</span>
+      <span class="btn btn-danger">Remove Access</span>
+      <span class="btn btn-quiet">Back to My Stores</span>
+    </div>
+    <p class="cap" style="margin-top:10px">The old hover (90 percent opacity) puts white text at 3.80:1 and is replaced by the darker hover. Disabled is neutral gray, not faded green (white on half-faded green is 1.98:1). Busy keeps its spinner and progress wording.</p>
+  </section>
+
+  <section class="grid2">
+    <div class="card"><h2 class="h2">Links</h2>
+      <p>On white: <a class="link" href="#">Open in OwedBook</a> — dark green, underlined, 4.53:1.</p>
+      <p class="cap">Dark green text is not used on ice (4.04:1) or on navy (2.20:1).</p>
+      <div class="on-navy navy-demo" style="margin-top:10px;padding:12px;border-radius:8px;background:hsl(var(--brand-navy))">
+        <span style="color:#fff">On navy: </span><a class="link" href="#">Back to OwedBook</a>
+        <span class="btn btn-outline is-focus on-dark" style="margin-left:12px;min-height:36px;padding:4px 12px">Focus on navy</span>
+      </div>
+    </div>
+    <div class="card"><h2 class="h2">Form field</h2>
+      <div class="grid2">
+        <label class="field"><span class="label">Pharmacy name</span><span class="input">Example Main Street Pharmacy</span><span class="help">Shown to your staff.</span></label>
+        <label class="field"><span class="label">NPI</span><span class="input is-focus tnum">1234567893</span><span class="help">10 digits.</span></label>
+        <label class="field"><span class="label">Email</span><span class="input is-error">owner@example</span><span class="err">Enter a complete email address.</span></label>
+        <div class="field"><span class="label">Agreement</span><span class="check"><span class="box on"></span>I agree to the recurring monthly charge.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card"><h2 class="h2">Button, status and role side by side</h2>
+    <p class="cap" style="margin:0 0 10px">Brand green and success green are close in shade, so status is carried by the word, a border and a tint, never by hue alone.</p>
+    <div class="row">
+      <span class="btn btn-primary">Add a Pharmacy</span>
+      <span class="pill success">Active</span><span class="pill warning">Pending</span>
+      <span class="pill destructive">Payment failed</span><span class="pill info">Removal scheduled</span><span class="pill">Not required</span>
+      <span class="role">Owner</span><span class="role">Store admin</span><span class="role">Member</span>
+    </div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="notice success"><b>Your pharmacy is active.</b>Riverside Pharmacy now appears in OwedBook.</div>
+      <div class="notice destructive"><b>Do not upload patient identifiers.</b>Remove names and dates of birth before uploading.</div>
+      <div class="notice warning"><b>Your last payment did not go through.</b>Update your card to keep access.</div>
+      <div class="notice"><b>Riverside Pharmacy is scheduled for removal.</b>Access continues until the date shown.</div>
+    </div>
+  </section>
+
+  <section class="grid2">
+    <div class="card"><h2 class="h2">Card, step badges, logo tile</h2>
+      <div class="stack">
+        <div class="step"><span class="badge">1</span><div><p class="h2">Choose the pharmacy</p><p class="body-sm">Open My Stores and pick the pharmacy.</p></div></div>
+        <div class="step"><span class="badge">2</span><div><p class="h2">Enter the email and role</p><p class="body-sm">Select Member or Store admin before sending.</p></div></div>
+        <div class="step"><span class="badge todo">3</span><div><p class="h2">Send the invitation</p></div></div>
+      </div>
+    </div>
+    <div class="masthead"><div class="top eyebrow"><span>Pharmacy Books</span><span>OwedBook</span></div>
+      <div class="row"><div class="logo-tile"><img src="../assets/Pharmacy-Books-Logo-Primary.png" alt="Pharmacy Books"></div><h2 class="headline" style="font-size:28px">Masthead on navy</h2></div>
+      <p class="body-sm">Ice text on the navy gradient, logo in a white tile.</p><em class="body-sm">Disclaimer lines are italic.</em></div>
+  </section>
+
+  <section class="card"><h2 class="h2">OwedBook summary tiles and table figures</h2>
+    <div class="grid4">
+      <div class="card kpi bad"><p class="label">Commercial underpaid</p><p class="n tnum">$12,669.63</p></div>
+      <div class="card kpi"><p class="label">Commercial scripts</p><p class="n tnum">2,631</p></div>
+      <div class="card kpi good"><p class="label">Updated difference</p><p class="n tnum">$41.86</p></div>
+      <div class="card kpi brand"><p class="label">Owed</p><p class="n tnum">$12,627.77</p></div>
+    </div>
+    <p class="cap" style="margin-top:10px">Proposed: white tiles with navy figures and a status rule, replacing the solid color blocks. Colored figures in tables: <span class="neg tnum">-$10.00</span> and <span class="pos tnum">$16.23</span>, on white only.</p>
+  </section>
+</div>
+</body></html>

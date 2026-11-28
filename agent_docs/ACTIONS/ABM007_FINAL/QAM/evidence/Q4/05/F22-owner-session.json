@@ -1,0 +1,35 @@
+{
+  "fixture": "ENGINEERING_OWNER_A",
+  "method": "password (normal sign-in form)",
+  "app": "ob",
+  "signout": 200,
+  "diagnostics": [
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_A",
+      "stage": "password-session-established"
+    }
+  ],
+  "network": {
+    "loads": [],
+    "blocked": [],
+    "console": [],
+    "documentResponses": [
+      {
+        "origin": "http://localhost:3100",
+        "path": "/auth",
+        "status": 200
+      },
+      {
+        "origin": "http://localhost:3100",
+        "path": "/owedbook",
+        "status": 200
+      },
+      {
+        "origin": "http://localhost:3100",
+        "path": "/admin-portal/audit",
+        "status": 200
+      }
+    ]
+  }
+}

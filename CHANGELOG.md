@@ -1,5 +1,83 @@
 # CHANGELOG
 
+## 2026-11-27 07:18 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — add-on A3 note (`RWO01_A3_ENGINEERING_REPORT.md`), `tools/driver_a3.mjs`, `tools/lib_a3.mjs`, step and static-copy tools, measurements, `logs_a3/`, `binding_a3/`, regenerated diffs, lists, staging lists and commit messages.
+- **Updated:** `session_2026-11-27.md`; new response file `agent_docs/RESPONSES/response_2026-11-27_*_rwo01-a3-engineering-return.md`.
+- **Reason:** RWO-01 add-on A3 (QA Lead, released by the Director, 27 Nov). No ruling row and no label change.
+
+## 2026-11-27 05:20 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md` — row AM-23 appended after AM-22, as given by the QA Lead.
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md` — add-on A2: new place of "Go to the Top".
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — add-on A2 report, `tools/measure_a2.mjs`, measurements, `logs_a2/`, `binding_a2/`, regenerated diffs, lists, staging lists and commit messages.
+- **Updated:** `session_2026-11-27.md`; new response file `agent_docs/RESPONSES/response_2026-11-27_*_rwo01-a2-engineering-return.md`.
+- **Reason:** RWO-01 add-on A2 (QA Lead, released by the Director, 27 Nov).
+
+## 2026-11-27 02:24 UTC — [CC] Claude Code
+- **New:** `session_2026-11-27.md` — session log for 27 Nov, with the starting state of both repositories.
+- **Reason:** new working day; Director's request.
+
+## 2026-11-26 07:42 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md` — row AM-22 appended, as given by the QA Lead.
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md` — add-on A1 labels.
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — add-on report, updated lists, `tools/measure_a1.mjs`, measurements, logs, diffs, staging lists, commit messages.
+- **Updated:** `session_2026-11-26.md`; new response file `agent_docs/RESPONSES/response_2026-11-26_*_rwo01-a1-engineering-return.md`.
+- **Reason:** RWO-01 add-on A1 (QA Lead, 26 Nov).
+
+## 2026-11-26 07:16 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md` — rows AM-18 to AM-21 appended, verbatim from the QA Lead's release document.
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md` — RWO-01 section (Subscribe Now, Log in, Go to the Top, Logging in…).
+- **New:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — engineering report, changed-file list, free-trial list, noticed list, measurements, logs, diffs, `tools/measure.mjs`.
+- **Updated:** `session_2026-11-26.md`; new response file `agent_docs/RESPONSES/response_2026-11-26_*_rwo01-engineering-return.md`.
+- **Reason:** repair work order RWO-01 (QA Lead, released by the Director, 26 Nov).
+
+## 2026-11-26 06:44 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md` — index refreshed to the current QA state (`Q2 COMPLETE — AWAITING ADJUDICATION`), committed candidate SHAs, one transition row.
+- **Updated:** `RECOVERY.md` — stale-record line removed from the 26 Nov block.
+- **Reason:** Director's request.
+
+## 2026-11-26 06:44 UTC — [CC] Claude Code
+- **New:** `session_2026-11-26.md` — session start.
+- **Updated:** `RECOVERY.md` — one block added at the top for ABM007_FINAL (with QA, awaiting adjudication); nothing else changed.
+- **Reason:** Director's request for a new session file and recovery update.
+
+## 2026-11-24 09:55 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/QAM/`:
+  - New `QAM_AMENDMENT_01.md` (QA Lead text, verbatim).
+  - Appended pointer blocks in `QAM_ENTRY`, `QAM_RISK_REQUIREMENTS`, `QAM_RECON_REPORT`, `QAM_TEST_PLAN`, `QAM_APPROVAL`, `QAM_EXECUTION_REPORT`, `AC_EVIDENCE_MATRIX`, `FINDINGS`, `QAM_CLEANUP_REPORT`, `QAM_CERTIFICATION`, plus the `QAM_STATE` log row.
+- **Updated:** module records `ABM_RULINGS.md` (AM-17), `ABM_STATE.md`, `ABM_JOURNAL.md`, `ABM_ACCEPTANCE_LEDGER.md`, `QAM/HANDOFFS/ENGINEERING_HANDOFF.md` §13, `QAM/QAM_MANIFEST.md`, `EVIDENCE/E2/VERIFICATION.md` §7.
+- **New:** `EVIDENCE/QAM_AMENDMENT_01_INSTALL/`, `EVIDENCE/E2/DIRECTOR_GIT_COMMANDS.md`, `EVIDENCE/E2/signed_final/SCRATCH_BUILD_INSTRUMENT_HISTORY.md`, package 04.
+- **Updated:** comment-only constraint blocks in `EVIDENCE/E2/tools/scratch_proof/auth.mjs` and `serve.mjs`, and their README.
+- **Updated:** `session_2026-11-24.md`; new response file `agent_docs/RESPONSES/response_2026-11-24_*_abm007-final-handoff-prep.md`.
+- **Reason:** Architect accepted E2 for QA intake; final documentation-only handoff preparation.
+
+## 2026-11-24 09:20 UTC — [CC] Claude Code
+- **Updated:** `session_2026-11-24.md`; module folder `agent_docs/ACTIONS/ABM007_FINAL/`:
+  - New: `SOURCES/DIRECTOR_E2_SCRATCH_S1_S3_2026-11-24.md`, `EVIDENCE/E2/email/`, `EVIDENCE/E2/signed_final/`, `EVIDENCE/E2/verify4/`, `EVIDENCE/E2/tools/scratch_proof/`, review package 03.
+  - Appended: `ABM_RULINGS.md` (AM-14 to AM-16), ledger, handoff §12, state, journal, manifest, `VERIFICATION.md` §6, `REDIRECT_REPRODUCTION.md`, `LEFTOVERS.md`, `EXTERNAL_SETTINGS_PLAN.md`.
+  - New response file `agent_docs/RESPONSES/response_2026-11-24_*_abm007-final-e2-complete.md`.
+- **Reason:** ABM007_FINAL E2 completion under the Director's rulings of 24 Nov (SCRATCH reuse, automated authentication, S-1, S-3).
+
+## 2026-11-24 07:58 UTC — [CC] Claude Code
+- **Updated:** `session_2026-11-24.md` (E2 continuation entries); module folder `agent_docs/ACTIONS/ABM007_FINAL/`:
+  - New: `SOURCES/DIRECTOR_E2_CONTINUATION_2026-11-24.md`; `EVIDENCE/E2/DIRECTOR_OBSERVED_SETTINGS.md`, `EXTERNAL_SETTINGS_PLAN.md`, `DEPLOYED_WALKTHROUGH.md`, `SOURCE_REVIEW_CORRECTIONS.md`, `STAGING_LIST_*.txt`, `rendered_final/`, `verify3/`, three tools.
+  - Appended: `ABM_RULINGS.md` (AM-12, AM-13), `ABM_ACCEPTANCE_LEDGER.md`, `ABM_STATE.md`, `ABM_JOURNAL.md`, `QAM/QAM_MANIFEST.md`, `QAM/HANDOFFS/ENGINEERING_HANDOFF.md` §11, `EVIDENCE/E2/VERIFICATION.md` §5, `LEFTOVERS.md`, `REDIRECT_REPRODUCTION.md`, `PREPARED_EXTERNAL_VALUES.md`.
+  - New response files `agent_docs/RESPONSES/response_2026-11-24_125114_resend-domain-settings-check.md` and `response_2026-11-24_*_abm007-final-e2-interim-finishing.md`.
+- **Reason:** ABM007_FINAL E2 continuation (Director instruction, 24 Nov); E2 INTERIM.
+
+## 2026-11-24 05:22 UTC — [CC] Claude Code
+- **Updated:** new `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/ABM007_FINAL_SOURCE_REVIEW_01.zip` (+ `.sha256`); `ABM_JOURNAL.md` (one row); `session_2026-11-24.md`; new response file.
+- **Reason:** Director request for a supplemental source-review package for the Architect. Read-only; no product change.
+
+## 2026-11-24 04:43 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/` — release source `SOURCES/DIRECTOR_RELEASE_E2_2026-11-24.md`; `ABM_RULINGS.md` AM-08 to AM-11 and section 5; new `CONTRACT_FREEZE.md`; `ABM_EXECUTION_PLAN.md` RELEASED 02; `ABM_STATE.md` (ENGINEERING RELEASED, interim stops S-1 to S-3); `ABM_JOURNAL.md`; `ABM_ACCEPTANCE_LEDGER.md`; `CONTRACTS/HELP_CONTENT.md` (Engineer label table and corrections appendix); `QAM/QAM_MANIFEST.md` and `QAM/HANDOFFS/ENGINEERING_HANDOFF.md` (Engineer-owned fields); new `EVIDENCE/E2/` (refresh, verification, rendered checks, mapping, labels, logo provenance, leftovers, prepared values, inventories, tools) and the engineering review ZIP.
+- **Updated:** `session_2026-11-24.md` (E2 entries, time correction); new `agent_docs/RESPONSES/response_2026-11-24_*_abm007-final-e2-interim-handoff.md`.
+- **Reason:** Director approval and E2 release of 24 Nov 2026. Product changes are recorded in the module evidence, not here. `RECOVERY.md` not written (protected until closeout).
+
+## 2026-11-24 02:05 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_EXECUTION_PLAN.md` (draft engineering plan, DRAFT 01, replaces the stub), `ABM_STATE.md` and `ABM_JOURNAL.md` (one appended Engineer row each; module state unchanged).
+- **New:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/` (entry checks E-1 to E-6, baseline run logs, diffs, review ZIP and its hash), `session_2026-11-24.md`, `agent_docs/RESPONSES/response_2026-11-24_080516_abm007-final-engineering-plan.md`.
+- **Reason:** Director instruction of 24 Nov 2026: entry checks and a draft engineering plan for ABM007_FINAL. Planning records only; no product file changed. `RECOVERY.md` not written (module paths contract section 3; Director ruling requested).
+
 ## 2026-11-21 04:50 UTC — [CC] Claude Code
 - **Updated:** `DEPLOYMENT_CHECKLIST.md` (init, secrets, webhook, deploy and domain evidence), `RECOVERY.md`, `agent_docs/SESSIONS/session_2026-11-21.md`.
 - **New:** `agent_docs/RESPONSES/response_2026-11-21_095332_payment-alpha-init-result.md`, `agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md`.

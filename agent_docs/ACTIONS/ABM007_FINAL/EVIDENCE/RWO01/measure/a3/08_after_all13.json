@@ -1,0 +1,18 @@
+{
+ "step": "08_after_all13",
+ "engines": {
+  "firefox": "148.0.2",
+  "chromium": "158.0.8127.88",
+  "webkit": "26.4"
+ },
+ "sessions": {
+  "password_sign_ins": 3,
+  "token_sign_ins": 0,
+  "generate_link_calls": 0,
+  "total_sign_ins": 3
+ },
+ "portal_requests": 0,
+ "took_ms": 547505,
+ "error": "page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect') |     at eval (eval at evaluate (:302:30), <anonymous>:1:202) |     at UtilityScript.evaluate (<anonymous>:304:16) |     at UtilityScript.<anonymous> (<anonymous>:1:44)",
+ "log": []
+}

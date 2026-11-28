@@ -1,0 +1,1375 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index b718089..99c71ec 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -1,5 +1,45 @@
+ # CHANGELOG
+ 
++## 2026-11-27 07:18 UTC — [CC] Claude Code
++- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — add-on A3 note (`RWO01_A3_ENGINEERING_REPORT.md`), `tools/driver_a3.mjs`, `tools/lib_a3.mjs`, step and static-copy tools, measurements, `logs_a3/`, `binding_a3/`, regenerated diffs, lists, staging lists and commit messages.
++- **Updated:** `session_2026-11-27.md`; new response file `agent_docs/RESPONSES/response_2026-11-27_*_rwo01-a3-engineering-return.md`.
++- **Reason:** RWO-01 add-on A3 (QA Lead, released by the Director, 27 Nov). No ruling row and no label change.
++
++## 2026-11-27 05:20 UTC — [CC] Claude Code
++- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md` — row AM-23 appended after AM-22, as given by the QA Lead.
++- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md` — add-on A2: new place of "Go to the Top".
++- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — add-on A2 report, `tools/measure_a2.mjs`, measurements, `logs_a2/`, `binding_a2/`, regenerated diffs, lists, staging lists and commit messages.
++- **Updated:** `session_2026-11-27.md`; new response file `agent_docs/RESPONSES/response_2026-11-27_*_rwo01-a2-engineering-return.md`.
++- **Reason:** RWO-01 add-on A2 (QA Lead, released by the Director, 27 Nov).
++
++## 2026-11-27 02:24 UTC — [CC] Claude Code
++- **New:** `session_2026-11-27.md` — session log for 27 Nov, with the starting state of both repositories.
++- **Reason:** new working day; Director's request.
++
++## 2026-11-26 07:42 UTC — [CC] Claude Code
++- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md` — row AM-22 appended, as given by the QA Lead.
++- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md` — add-on A1 labels.
++- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — add-on report, updated lists, `tools/measure_a1.mjs`, measurements, logs, diffs, staging lists, commit messages.
++- **Updated:** `session_2026-11-26.md`; new response file `agent_docs/RESPONSES/response_2026-11-26_*_rwo01-a1-engineering-return.md`.
++- **Reason:** RWO-01 add-on A1 (QA Lead, 26 Nov).
++
++## 2026-11-26 07:16 UTC — [CC] Claude Code
++- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md` — rows AM-18 to AM-21 appended, verbatim from the QA Lead's release document.
++- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md` — RWO-01 section (Subscribe Now, Log in, Go to the Top, Logging in…).
++- **New:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — engineering report, changed-file list, free-trial list, noticed list, measurements, logs, diffs, `tools/measure.mjs`.
++- **Updated:** `session_2026-11-26.md`; new response file `agent_docs/RESPONSES/response_2026-11-26_*_rwo01-engineering-return.md`.
++- **Reason:** repair work order RWO-01 (QA Lead, released by the Director, 26 Nov).
++
++## 2026-11-26 06:44 UTC — [CC] Claude Code
++- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md` — index refreshed to the current QA state (`Q2 COMPLETE — AWAITING ADJUDICATION`), committed candidate SHAs, one transition row.
++- **Updated:** `RECOVERY.md` — stale-record line removed from the 26 Nov block.
++- **Reason:** Director's request.
++
++## 2026-11-26 06:44 UTC — [CC] Claude Code
++- **New:** `session_2026-11-26.md` — session start.
++- **Updated:** `RECOVERY.md` — one block added at the top for ABM007_FINAL (with QA, awaiting adjudication); nothing else changed.
++- **Reason:** Director's request for a new session file and recovery update.
++
+ ## 2026-11-24 09:55 UTC — [CC] Claude Code
+ - **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/QAM/`:
+   - New `QAM_AMENDMENT_01.md` (QA Lead text, verbatim).
+diff --git a/RECOVERY.md b/RECOVERY.md
+index b5b714a..1eb95df 100644
+--- a/RECOVERY.md
++++ b/RECOVERY.md
+@@ -1,5 +1,15 @@
+ # Recovery State — cyph-stripe-subscription-portal-v1
+ 
++## ▶ ABM007_FINAL — WITH QA, AWAITING ADJUDICATION (updated 2026-11-26 12:44, Asia/Dhaka) — read this first
++- **Last action:** Engineering finished ABM007_FINAL on 24 Nov (E2 complete, final handoff package 04). The Director committed both candidates and created `qa/abm007-final`. QA ran Q1 and Q2.
++- **Where we are:** `Q2 COMPLETE — AWAITING ADJUDICATION` (`agent_docs/ACTIONS/ABM007_FINAL/QAM/QAM_STATE.md`, the current truth). J-c, J-d and J-g are held and BLOCKED.
++- **Candidate pair:** OwedBook `2e91e90905b2d9907577a64985e643f7827019ac`, Portal `fc1fa6c2a90ebf59987287ad765e2e65cf635549`. Both repositories are on `qa/abm007-final`.
++- **Pending:** Friday (QA Lead) adjudicates. No repair or retest is released.
++- **Next step for Engineering:** wait. Act only on an accepted repair, in place on the QA branch, and never touch QAM files.
++- **Not done:** external settings (Supabase email template, Stripe branding) are prepared, not applied. No deployment of this candidate. Not Gate Q, not closeout.
++- **Session file:** `session_2026-11-26.md`. Earlier: `session_2026-11-24.md`.
++- **Note:** this file is protected until closeout (AM-06). This block was added on the Director's direct request; nothing below was changed.
++
+ ## ▶ PAYMENT PORTAL ALPHA — DEPLOYED, DOMAIN LIVE (updated 2026-11-21, Asia/Dhaka) — read this first
+ - **DEPLOYED 2026-11-21:** `cyph-v1-payment-alpha` revision `00001-mwh` from commit `6dd3de7` (build `ebbd4a02-3d79-4ce4-9a12-2b4afe5f6e48`), live at `https://cyph-v1-payment-alpha.cyberizedev.com` (mapping and certificate verified). Report `agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md`. NOT verified: sign-in, signed webhook delivery, mail, two-app flows. Next: Stripe test delivery, Supabase Auth settings, two-app testing, scheduler decision, commit the records. The lines below are the preparation history.
+ - **Status:** branch `deploy/payment-alpha-prep` (base `883bc93`), everything UNCOMMITTED. New service `cyph-v1-payment-alpha` (prefix `cyph-payment-alpha`), `cyberize-nextjs-staging` / us-east1, final URL `https://cyph-v1-payment-alpha.cyberizedev.com`. No cloud resource created or changed; FFM service `cyph-sub-portal-prod` untouched.
+diff --git a/agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md b/agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md
+index 7623242..252e4ff 100644
+--- a/agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md
++++ b/agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md
+@@ -76,6 +76,12 @@ Each row is the author's recommendation. "Default if approved" is what the pack
+ | AM-15 | 2026-11-24, about 14:10 | Director; same source, instruction 2 (amends AM-14) | **Automated authentication on SCRATCH; no Director inbox.** Existing fixture credentials and the normal sign-in flow are preferred. Where a fixture has no available credential, **provider-supported test-session establishment with the SCRATCH privileged credential** is permitted, solely for designated existing fixture users, under these conditions: target verified as SCRATCH, failing closed for DEV, alpha or unknown targets; explicit fixture allowlist; privileged credential kept server-side in test tooling; credentials, sign-in tokens and session state never logged or packaged. No production authentication bypass, no guard change, no DEV user change, no email, no password reset, no business-data change. Tooling stays separate from production code. This supersedes the earlier service-key prohibition only inside the verified SCRATCH boundary. Automated authentication proves authenticated application behavior only, not email delivery, magic-link lifecycle or the real cross-app handoff; those stay separately identified |
+ | AM-16 | 2026-11-24, about 14:10 | Director; same source, instruction 1 (S-1, S-3) | **S-1 input supplied:** the original DEV Magic Link HTML, saved byte for byte as `EVIDENCE/E2/email/DEV_MAGIC_LINK_TEMPLATE_ORIGINAL.html`. The amendment changes only the heading's visible text; subject "Your Pharmacy Books sign-in link" and SMTP display name "Pharmacy Books" are prepared, address `no-reply@cyberizedev.com` unchanged; no dashboard change. **S-3 exception granted, exactly:** in `src/components/portal/references/EmailPreview.tsx`, the image source becomes `/brand/pharmacy-books-logo-primary.png` and `w-7` becomes `w-auto`, keeping `h-7`. No other edit and no deletion of the module. AC-N02 to be verified |
+ | AM-17 | 2026-11-24 | Director; campaign journal Entries 001 to 003 (DC-001, DC-002) | The QAM is amended by `QAM/QAM_AMENDMENT_01.md`: human walkthrough inside Q2 before certification; one findings register and repair work order with affected retest; regression inventory and selection in Q1; reusable passing scripts listed for keeping before cleanup; fixture sign-in is not proof of real sign-in. No acceptance criterion, effects envelope, Gate D plan or verdict authority changes. No shot is added |
++| AM-18 | 2026-11-26 | Director; ruling of 26 November on the OwedBook public opening page, confirmed about 12:34; QA Lead adjudication, work order RWO-01 item R-01 | **OwedBook public opening page buttons.** The existing green button keeps its look, is renamed "Subscribe Now" and opens the configured Account & Billing home page. A new, equally sized "Log in" button in brand navy sits beside it and opens the OwedBook login page. The two stack where they do not fit side by side. **Design exception:** navy as a button fill is permitted for this one button only; the brand contract's rule against navy buttons stands everywhere else. Other "free trial" wording on that page is listed by the Engineer and not changed until the Director rules on the list. AC-F03 and AC-N01 still apply to the page |
++| AM-19 | 2026-11-26 | Director; walkthrough check HC-08, finding ABM7F-F29; RWO-01 item R-02 | **Help "Go to the Top" link, mandatory.** A small link at the bottom of the left contents menu on Help returns the reader to the top of the page. It is a navigation aid and changes no Help content; `CONTRACTS/HELP_CONTENT.md` is otherwise unchanged. AC-H01 is read to include it |
++| AM-20 | 2026-11-26 | Director; rulings of 26 November | **The QA Lead conducts the rework for this module.** After Q2 adjudication the QA Lead issues the single repair work order (RWO-01) and gives all direction to the Engineer and the QA Executor, with the Architect copied. This replaces, for `ABM007_FINAL` only, the routing in `QAM/FINDINGS.md` section 6 that names the Architect's repair instruction. One writer at a time: the Engineer repairs on `qa/abm007-final` and stops; the Director commits; the QA Executor retests. After certification the module returns to the Architect for engineering closeout. Precedent: the Director's ruling of 17 November 2026 for APBM-007B |
++| AM-21 | 2026-11-26 | Director; rulings of 26 November, payment Option B; QA Lead adjudication section 7; finding ABM7F-F02 and ABM7F-F26 | **Payment journeys moved to Gate D.** Journeys J-c, J-d and J-g of AC-R04, the Stripe billing return part of J-b, and the review-screen part of AC-R05 move from Gate Q (local QA) to Gate D (alpha, after redeployment). The Director runs them on alpha on one new throwaway tester account, with Stripe sandbox test payments only. The Gate D rule "no purchase" is lifted for that one account only. The rehearsal account, Coach's data and every existing tenant stay untouched. These rows block module closure. Gate Q may be certified after a successful rework and retest as "pass with known risk", naming them. This ruling does not release their execution: the QA Lead first revises `QAM/GATE_D_PLAN.md` and the Director approves it. No protected payment code changes |
++| AM-22 | 2026-11-26, about 13:31 | Director; answers to the QA Lead's review of RWO-01 engineering return 01 | **Three confirmations.** (1) "Start free trial" in the OwedBook opening page header and its phone menu becomes "Subscribe Now" and opens the configured Account & Billing home page, completing AM-18; no "free trial" wording remains on that page. (2) Below 1024 wide, Help also shows "Go to the Top" at the end of the Help text, completing AM-19. (3) The Director confirms that the record changes made on 26 November before RWO-01 in the Account & Billing repository (`RECOVERY.md`, `ABM_STATE.md`, the session log and changelog entries) were made at his request. They are record changes, not engineering changes, and AC-R03 reads them as authorized |
++| AM-23 | 2026-11-27, about 10:20 | Director; Q4 walkthrough at phone width; QA Lead Q4 adjudication, add-on A2 item A2-1; finding ABM7F-F36 | **Help "Go to the Top", final design.** The link sits at the end of each of the 13 Help articles, inside the article, at every width. It is removed from the contents menu, and the single link at the end of the Help text is removed. Reason: at phone width the contents menu stacks at the top, so a reader in the lower articles had no link nearby. The link follows the link rule for the surface it sits on and meets 4.5 to 1. This replaces AM-19 and part (2) of AM-22. No Help content changes |
+ 
+ ## 4. Open decisions for the Director, in four groups
+ 
+diff --git a/agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md b/agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md
+index 6120d8b..63282c3 100644
+--- a/agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md
++++ b/agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md
+@@ -6,21 +6,21 @@ A small index. It points at authoritative records and grants no authority. Lates
+ 
+ | Field | Value |
+ |---|---|
+-| As of | 24 November 2026, about 15:55 Asia/Dhaka |
+-| Module state | `ENGINEERING COMPLETE — AWAITING QA BRANCH`. The Architect accepted engineering completion for QA intake (journal v0.5 Entry 005); this is not Gate Q, release or closeout. QAM Amendment 01 installed (AM-17) |
++| As of | 26 November 2026, 12:44 Asia/Dhaka (index refreshed from `QAM/QAM_STATE.md` at the Director's request; that file is authoritative for QA) |
++| Module state | With independent QA: `Q2 COMPLETE — AWAITING ADJUDICATION` (`QAM/QAM_STATE.md`). Engineering completed on 24 Nov (`ENGINEERING COMPLETE — AWAITING QA BRANCH`; Architect accepted it for QA intake, journal v0.5 Entry 005; QAM Amendment 01 installed, AM-17). Not Gate Q, not certified, not released, not closed |
+ | Contract version | Frozen 24 Nov at `CONTRACT_FREEZE.md` (AM-10) |
+ | Engineering branch / baseline, OwedBook | `abm007-final` / `9597699b404afdbcd792a9b4da61c21abb10cdf8` (baseline kept, AM-08 (3)). Actual starting HEAD `c335671afa6cd4a8a2d437c30aeae5040e0cecaf` (records-only, preserved) |
+ | Engineering branch / baseline, Portal | `abm007-final` / `cb4decde9adc9ab75d0dcb15556c64a3bdbfe075` (baseline kept). Actual starting HEAD `b2e50fa86ef041f9f7f7f1a0f630576de0a10664` ("E1 recon done", Director, 24 Nov 09:36; records only: module pack, E1 records), pushed |
+-| Product candidate | PENDING in both repositories until the Director commits (`EVIDENCE/E2/DIRECTOR_GIT_COMMANDS.md`); Q1 records the actual identities from the Director's receipt |
++| Product candidate | Committed by the Director on 24 Nov, about 16:20. OwedBook `2e91e90905b2d9907577a64985e643f7827019ac`; Portal `fc1fa6c2a90ebf59987287ad765e2e65cf635549`. Both are on `qa/abm007-final`. `QAM/QAM_STATE.md` records this pair as the tested product SHAs, matched at Q2 entry and closeout |
+ | Approved engineering plan | `ABM_EXECUTION_PLAN.md` RELEASED 02, SHA-256 `81ae3410eb5d5652b9eaf3f0cf009458d3a95b2ee8fd913f904acd452515c7ce` |
+ | Engineering release | RECORDED: Director, 24 Nov 10:02 (`SOURCES/DIRECTOR_RELEASE_E2_2026-11-24.md`; AM-08, AM-09) |
+ | Gate V (visual approval of `DESIGN/`) | Approved (AM-01) and reconfirmed by ruling AM-08 (2) |
+-| Current writer | Engineer (Claudy) until the Director commits; then the QA branch per `QAM/QAM_STATE.md` |
+-| QAM state | `READY FOR ENGINEERING` (see `QAM/QAM_STATE.md`) |
+-| Latest package | `EVIDENCE/ABM007_FINAL_E2_FINAL_HANDOFF_04.zip` (final documentation-only handoff; SHA-256 in the `.sha256` beside it and in the return message). Earlier: `_ENGINEERING_REVIEW_01`, `_SOURCE_REVIEW_01`, `_E2_COMPLETION_REVIEW_02`, `_E2_COMPLETION_REVIEW_03` |
+-| Current stop | None. S-1 closed for engineering (template prepared, AM-16), S-2 closed (SCRATCH reuse and automated authentication, AM-14 and AM-15), S-3 closed (exception applied, AM-16) |
+-| Next owner | Director: commit both candidates with the exact lists, create `qa/abm007-final` at those commits, release Q1. QA Lead: confirm the installed amendment from the install report. Engineer: available for accepted repairs |
+-| Next permitted action | Director Git actions; independent QA Q1 on the committed candidates (the SCRATCH setup is in handoff section 12.4). Engineering makes no further change unless asked |
++| Current writer | QA Executor (Cody) on `qa/abm007-final`, per `QAM/QAM_STATE.md`. The Engineer writes only an accepted repair, in place on the QA branch, and never QAM files |
++| QAM state | `Q2 COMPLETE — AWAITING ADJUDICATION`. Scope 1 execution closed; J-c, J-d and J-g remain held and BLOCKED. Attempts: Q1 amended return 03, Q2 01, Q4 not released (see `QAM/QAM_STATE.md`) |
++| Latest package | QA: final Q2 return 01 (identity in QA's external export receipt, per `QAM/QAM_STATE.md`). Engineering: `EVIDENCE/ABM007_FINAL_E2_FINAL_HANDOFF_04.zip` (final documentation-only handoff; SHA-256 in the `.sha256` beside it). Earlier: `_ENGINEERING_REVIEW_01`, `_SOURCE_REVIEW_01`, `_E2_COMPLETION_REVIEW_02`, `_E2_COMPLETION_REVIEW_03` |
++| Current stop | None active (`QAM/QAM_STATE.md`). Engineering stops S-1 to S-3 closed on 24 Nov (AM-14 to AM-16). External settings (Supabase email template, Stripe branding) are prepared, not applied |
++| Next owner | Friday, QA Lead: adjudicates Q2. Engineer: available for accepted repairs |
++| Next permitted action | QA Lead adjudication. No repair or retest is released. Engineering makes no change unless a repair is ruled |
+ | Actions already completed that must not repeat | Pre-ABM recon (23 Nov); the Director's customer rehearsal (21 to 22 Nov); entry checks E-1 to E-6 (24 Nov) |
+ 
+ ## Transition log (append-only; newest last)
+@@ -44,3 +44,4 @@ A small index. It points at authoritative records and grants no authority. Lates
+ 
+ | 2026-11-24 | Engineer | `ENGINEERING RELEASED` → `ENGINEERING COMPLETE — AWAITING QA BRANCH` | Director rulings AM-14 to AM-16: S-1 template prepared (heading-only diff), S-3 exception applied, existing SCRATCH fixtures with automated authentication. Signed-in checks for 3 roles in both apps, per-role Help, AC-F02 reproduction (not reproduced). Two pre-existing 375 px overflows fixed. Final affected checks green. Package 03 |
+ | 2026-11-24 | Engineer | state unchanged (`ENGINEERING COMPLETE — AWAITING QA BRANCH`) | Architect accepted package 03 for QA intake. QAM_AMENDMENT_01 installed with pointer blocks (AM-17; documentation only, no result recorded). Engineering record corrected (AC-F02 18 + 2 per attempt; O-1 for QA; build-check history kept; QA-copy constraints of the SCRATCH tooling documented). Delta from package 03 documentation only. Package 04 |
++| 2026-11-26 | Engineer, at the Director's request | `ENGINEERING COMPLETE — AWAITING QA BRANCH` → QA states (`Q2 COMPLETE — AWAITING ADJUDICATION`) | Index refreshed from `QAM/QAM_STATE.md`; no new fact created here. Director committed both candidates on 24 Nov (OwedBook `2e91e90`, Portal `fc1fa6c`) and created `qa/abm007-final`. QA ran Q1 (amended return 03) and Q2 scope 1 (attempt 01); J-c, J-d and J-g held and BLOCKED. Next owner: QA Lead |
+diff --git a/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md
+index d8f6f15..8a267b9 100644
+--- a/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md
++++ b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md
+@@ -45,3 +45,43 @@ Unchanged on purpose: **Logout** (desktop account menu) and **Log out** (mobile
+ ## Styling-only changes (same words)
+ 
+ Buttons, pills, role labels and the wordmark are no longer shown in capitals (both apps). Role labels (Owner, Store admin, Member) are neutral outlined labels in both navbars, the Portal account menu and OwedBook's people list (P-04). Status words are unchanged.
++
++## RWO-01 repair work order (26 November 2026)
++
++New and changed labels from repair items R-01 to R-03 (rulings AM-18 and AM-19). No other label changed in either app.
++
++### OwedBook
++
++| Where | Before | After |
++|---|---|---|
++| Public opening page, green button | **Start free trial**, opening OwedBook login (`/auth`) | **Subscribe Now**, opening the Account & Billing home page at its configured address (R-01) |
++| Public opening page, beside the green button | — | **Log in** (new navy button), opening OwedBook login (`/auth`) (R-01) |
++| Help, bottom of the "On this page" contents menu | — | **Go to the Top** (new link), returning to the top of the page (R-02) |
++| `/auth` password sign-in button, while signing in | **Login** (disabled, spinner above it) | **Logging in…** (disabled, marked busy for assistive technology, spinner kept). At rest it still reads **Login** (R-03) |
++
++Add-on A1 (ruling AM-22, 26 November):
++
++| Where | Before | After |
++|---|---|---|
++| Public opening page header, green button (1024 wide and above) | **Start free trial**, opening OwedBook login (`/auth`) | **Subscribe Now**, opening the Account & Billing home page at its configured address (A1-1) |
++| Public opening page phone menu, green button (below 1024 wide) | **Start free trial**, opening OwedBook login (`/auth`) | **Subscribe Now**, opening the Account & Billing home page at its configured address (A1-1) |
++| Help, end of the Help text, below 1024 wide | — | **Go to the Top** (the same link as in the contents menu; not shown from 1024 wide) (A1-2) |
++
++No "free trial" wording remains on the opening page. **Log in** in the same header and phone menu is unchanged.
++
++Add-on A2 (ruling AM-23, 27 November). The words do not change; the link's place does:
++
++| Where | Before | After |
++|---|---|---|
++| Help, end of each of the 13 articles, inside the article, at every width | — | **Go to the Top** (new place), returning to the top of the page (A2-1) |
++| Help, bottom of the "On this page" contents menu | **Go to the Top** (R-02) | removed (A2-1) |
++| Help, end of the Help text, below 1024 wide | **Go to the Top** (A1-2) | removed (A2-1) |
++
++So the two **Go to the Top** rows above (R-02 and A1-2) no longer describe the product. The label now appears 13 times on Help, once per article.
++
++Help quotes none of these labels, so the Help label table is unchanged.
++
++### Account & Billing (Portal)
++
++No label changed. Repair items R-04, R-08 and R-09 change size, corner, spacing and wrapping only.
++
+diff --git a/src/__tests__/manual-qa-portal-ui.test.tsx b/src/__tests__/manual-qa-portal-ui.test.tsx
+index b826c6f..40a8e3d 100644
+--- a/src/__tests__/manual-qa-portal-ui.test.tsx
++++ b/src/__tests__/manual-qa-portal-ui.test.tsx
+@@ -86,6 +86,8 @@ describe('StoreRemovalControl confirmation', () => {
+     serve({ '/api/stores/s2/removal': { state: 'completed' } });
+     const changed = jest.fn();
+     render(<StoreRemovalControl storeId="s2" storeName="Stark Test Pharmacy 02" periodEnd="2026-12-19T00:00:00Z" removalEffectiveAt={null} onChanged={changed} />);
++    // RWO-01 R-09 (b): the row button is at least 44px high and still grows when its words wrap.
++    for (const c of ['min-h-11', 'h-auto', 'rounded-md']) expect(screen.getByTestId('remove-store-s2').className.split(' ')).toContain(c);
+     fireEvent.click(screen.getByTestId('remove-store-s2'));
+     const dialog = await screen.findByRole('alertdialog');
+     expect(within(dialog).getByText(/Remove Stark Test Pharmacy 02 on/)).toBeTruthy();
+diff --git a/src/__tests__/password-field.test.tsx b/src/__tests__/password-field.test.tsx
+index d167e5c..eedc94f 100644
+--- a/src/__tests__/password-field.test.tsx
++++ b/src/__tests__/password-field.test.tsx
+@@ -87,6 +87,14 @@ describe('PasswordField (U-3)', () => {
+     raf.mockRestore();
+   });
+ 
++  // RWO-01 R-09 (a): the show-or-hide button is a 44 by 44 target with the 8px corner, inside the room the field reserves.
++  it('the show-or-hide button is 44 by 44 with the button corner', () => {
++    render(<Harness onSubmit={jest.fn()} />);
++    const toggle = screen.getByRole('button', { name: 'Show password' });
++    for (const c of ['h-11', 'w-11', 'rounded-md', 'right-0']) expect(toggle.className.split(' ')).toContain(c);
++    expect(screen.getByLabelText('Password').className.split(' ')).toContain('pr-12');
++  });
++
+   it('is reachable by keyboard, shows a focus ring, and toggles with Space and Enter without submitting', async () => {
+     const user = userEvent.setup();
+     const onSubmit = jest.fn();
+diff --git a/src/components/portal/Footer.tsx b/src/components/portal/Footer.tsx
+index 2f106a2..ed31bfa 100644
+--- a/src/components/portal/Footer.tsx
++++ b/src/components/portal/Footer.tsx
+@@ -1,13 +1,16 @@
+ import { BRAND, LEGAL, NOT_CONFIGURED } from "./brand";
+ 
+ // tone "dark": on PublicShell's navy backdrop (ice text, light links); default: on the ice page.
++// RWO-01 R-08 and add-on A1-4: the links never break across lines, on the signed-out and the signed-in footer alike.
++// Below lg, where one row does not fit, everything stacks one item per line, centered; from lg up it is the single
++// row it was. The tone changes colors only.
+ export function Footer({ tone = "page" }: { tone?: "page" | "dark" }) {
+   const dark = tone === "dark";
+   return (
+     <footer className={dark ? "mt-6" : "mt-10 border-t border-border"}>
+-      <div className={`mx-auto flex max-w-6xl flex-col gap-2 px-5 py-6 text-[13px] sm:flex-row sm:items-center sm:justify-between ${dark ? "text-brand-ice" : "text-muted-foreground"}`}>
++      <div className={`mx-auto flex max-w-6xl flex-col gap-2 px-5 py-6 text-[13px] items-center text-center lg:flex-row lg:justify-between lg:text-left ${dark ? "text-brand-ice" : "text-muted-foreground"}`}>
+         <p>{BRAND.footer}</p>
+-        <p className="flex flex-wrap gap-x-5 gap-y-2">
++        <p className="flex flex-col items-center gap-y-2 lg:flex-row lg:gap-x-5 lg:whitespace-nowrap" data-testid="footer-links">
+           <span>Support · <a className={dark ? "pb-link-on-dark" : "pb-link-on-page"} href={`mailto:${BRAND.supportEmail}`}>{BRAND.supportEmail}</a></span>
+           {LEGAL.termsUrl ? <a className={dark ? "pb-link-on-dark" : "pb-link-on-page"} href={LEGAL.termsUrl}>Terms</a> : <span>Terms {NOT_CONFIGURED}</span>}
+           {LEGAL.privacyUrl ? <a className={dark ? "pb-link-on-dark" : "pb-link-on-page"} href={LEGAL.privacyUrl}>Privacy</a> : <span>Privacy {NOT_CONFIGURED}</span>}
+diff --git a/src/components/portal/FormField.tsx b/src/components/portal/FormField.tsx
+index 674f63b..6eb282b 100644
+--- a/src/components/portal/FormField.tsx
++++ b/src/components/portal/FormField.tsx
+@@ -164,7 +164,7 @@ export const PasswordField = forwardRef<HTMLInputElement, Omit<InputProps, "type
+             aria-pressed={visible}
+             aria-controls={id}
+             disabled={rest.disabled}
+-            className="absolute inset-y-0 right-1.5 my-auto flex h-8 w-8 items-center justify-center rounded-sm text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
++            className="absolute inset-y-0 right-0 my-auto flex h-11 w-11 items-center justify-center rounded-md text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
+           >
+             {visible ? <EyeOff className="h-4 w-4" aria-hidden="true" /> : <Eye className="h-4 w-4" aria-hidden="true" />}
+           </button>
+diff --git a/src/components/portal/PublicShell.tsx b/src/components/portal/PublicShell.tsx
+index 192954f..0576d1f 100644
+--- a/src/components/portal/PublicShell.tsx
++++ b/src/components/portal/PublicShell.tsx
+@@ -23,15 +23,19 @@ export function PublicShell({ children }: { children: React.ReactNode }) {
+       <SkipLink />
+       <header className="z-30">
+         <div className="mx-auto flex min-h-16 max-w-6xl items-center justify-between gap-3 px-5 py-2">
+-          <Brand href="/register/plan" />
+-          <nav className="hidden items-center gap-1 md:flex" aria-label="Site">
+-            <span className="px-3 text-sm text-brand-ice">
+-              Questions? <span className="font-medium text-navbar-foreground">{BRAND.supportEmail}</span>
++          {/* RWO-01 R-08: from md up the brand keeps its width, "Already subscribed?" and Sign in stay on one line, and
++              only the support line gives way (it wraps before its address, which never breaks). Text sizes unchanged. */}
++          <div className="min-w-0 md:shrink-0">
++            <Brand href="/register/plan" />
++          </div>
++          <nav className="hidden min-w-0 items-center gap-1 md:flex" aria-label="Site">
++            <span className="min-w-0 px-3 text-sm text-brand-ice">
++              Questions? <span className="whitespace-nowrap font-medium text-navbar-foreground">{BRAND.supportEmail}</span>
+             </span>
+-            <span className="ml-2 text-sm text-brand-ice">Already subscribed?</span>
++            <span className="ml-2 shrink-0 whitespace-nowrap text-sm text-brand-ice">Already subscribed?</span>
+             <Link
+               href="/login"
+-              className="ml-1 inline-flex h-11 items-center rounded-md border border-navbar-foreground/70 px-4 text-[15px] text-navbar-foreground hover:bg-navbar-foreground/10"
++              className="ml-1 inline-flex h-11 shrink-0 items-center whitespace-nowrap rounded-md border border-navbar-foreground/70 px-4 text-[15px] text-navbar-foreground hover:bg-navbar-foreground/10"
+               data-testid="public-sign-in"
+             >
+               Sign in
+diff --git a/src/components/portal/account/StoreRemovalControl.tsx b/src/components/portal/account/StoreRemovalControl.tsx
+index 2174ee3..eadf870 100644
+--- a/src/components/portal/account/StoreRemovalControl.tsx
++++ b/src/components/portal/account/StoreRemovalControl.tsx
+@@ -38,11 +38,11 @@ export function StoreRemovalControl({ storeId, storeName, periodEnd, removalEffe
+     <span className="flex min-w-0 max-w-full flex-col items-start gap-1">
+       {removalEffectiveAt ? (<>
+         <span className="text-xs text-muted-foreground">Leaves on {formatDate(removalEffectiveAt)}</span>
+-        <Button type="button" size="sm" variant="outline" className="h-auto max-w-full whitespace-normal py-1 text-left" disabled={busy !== null} aria-busy={busy === "undo"} onClick={() => void act(true)} data-testid={`undo-removal-${storeId}`}>
++        <Button type="button" size="sm" variant="outline" className="h-auto min-h-11 max-w-full whitespace-normal py-1 text-left" disabled={busy !== null} aria-busy={busy === "undo"} onClick={() => void act(true)} data-testid={`undo-removal-${storeId}`}>
+           <BusyLabel busy={busy === "undo"} busyText="Keeping store…">Keep this store</BusyLabel>
+         </Button>
+       </>) : (
+-        <Button type="button" size="sm" variant="outline" className="h-auto max-w-full whitespace-normal py-1 text-left" disabled={busy !== null} onClick={() => setConfirming(true)} data-testid={`remove-store-${storeId}`}>Remove at period end</Button>
++        <Button type="button" size="sm" variant="outline" className="h-auto min-h-11 max-w-full whitespace-normal py-1 text-left" disabled={busy !== null} onClick={() => setConfirming(true)} data-testid={`remove-store-${storeId}`}>Remove at period end</Button>
+       )}
+       {message && <span role="status" className="text-xs text-foreground">{message}</span>}
+       <AlertDialog open={confirming} onOpenChange={(o) => { if (!busy) setConfirming(o); }}>
+diff --git a/src/components/ui/input.tsx b/src/components/ui/input.tsx
+index e3836e1..d1e7aea 100644
+--- a/src/components/ui/input.tsx
++++ b/src/components/ui/input.tsx
+@@ -11,7 +11,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
+       <input
+         type={type}
+         className={cn(
+-          "flex min-h-[42px] w-full rounded-md border border-input bg-card px-2.5 py-2 text-[15px] text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
++          "flex min-h-[42px] w-full rounded-md border border-input bg-card px-2.5 py-2 text-[15px] text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-disabled disabled:text-disabled-foreground disabled:opacity-100",
+           className
+         )}
+         ref={ref}
+diff --git a/session_2026-11-26.md b/session_2026-11-26.md
+new file mode 100644
+index 0000000..afa6f66
+--- /dev/null
++++ b/session_2026-11-26.md
+@@ -0,0 +1,112 @@
++# Session Log: 2026-11-26
++
++## Project Context
++- **Project:** cyph-payment-portal-dev-v1 (Account & Billing), with companion OwedBook `cyph-v1-dev`
++- **Tool:** Claude Code
++- **Goal:** Not set yet. Module ABM007_FINAL is with independent QA; Engineering waits for the QA Lead's adjudication and any accepted repair.
++
++## Starting State
++- **Branch:** `qa/abm007-final` in both repositories.
++  - Portal HEAD `fc1fa6c2a90ebf59987287ad765e2e65cf635549`
++  - OwedBook HEAD `2e91e90905b2d9907577a64985e643f7827019ac`
++  - These are the candidate pair QA tested (`QAM/QAM_STATE.md`).
++- **Working tree at start:**
++  - Portal: only QA's own uncommitted records under `agent_docs/ACTIONS/ABM007_FINAL/QAM/` (Cody's lane; not Engineering's to touch).
++  - OwedBook: clean.
++- **Last Working Feature:** ABM007_FINAL engineering candidate (Pharmacy Books brand, light only, Help page, store selector fix), committed by the Director on 24 Nov. The LoginForm whitespace fix is in the OwedBook candidate.
++- **Module state (QA):** `Q2 COMPLETE — AWAITING ADJUDICATION`. Scope 1 execution closed; J-c, J-d and J-g held and BLOCKED. Next owner: Friday (QA Lead). No repair or retest is released.
++- **Known Issues:**
++  - `ABM_STATE.md` showed the 24 Nov engineering view at session start; refreshed later this session.
++  - O-1 (WebKit interruption in the redirect reproduction) stays with QA, cause unproven.
++  - External settings (Supabase template, Stripe branding) prepared, not applied.
++
++## Since the last session file (24 Nov, last entry 15:55)
++- 24 Nov, after 15:55: whitespace fix in OwedBook `src/components/auth/LoginForm.tsx` lines 112 and 132 at the Director's request. `Spinner.tsx` left unchanged (CRLF file; no trailing spaces). No session entry was written then, to keep the staged OwedBook tree clean.
++- 25 Nov: credential-location help for the Director walkthrough. The private cast file was opened in VS Code at the `ENGINEERING_OWNER_B` entry; no credential entered the conversation, a log or the repository. No sign-in, no account change, QA builds untouched. No repository file written.
++
++## Session Progress
++
++### 12:42 — COMPLETE (session start)
++**Task:** New session file and `RECOVERY.md` update, at the Director's request.
++**Files changed:** `session_2026-11-26.md` (new), `RECOVERY.md` (one block added at the top; nothing below it changed), `CHANGELOG.md` (one entry).
++**Tests:** none run; no product file touched.
++**Notes:**
++- `RECOVERY.md` is protected until closeout (AM-06 (2)). This update is made on the Director's direct request of 26 Nov. It adds a block and rewrites nothing.
++- No Git action. No QAM file touched.
++
++### 12:43 — APPROVED → IN PROGRESS
++**Task:** Update `agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md` to match the current QA state in `QAM/QAM_STATE.md` (Director's request). Index fields plus one appended transition row. No QAM file, product file or Git action.
++**Approved at:** 12:43 (the request itself).
++
++### 12:44 — COMPLETE
++**Task:** `ABM_STATE.md` refreshed to match `QAM/QAM_STATE.md`.
++**Files changed:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md` (nine index fields; one transition row appended), `CHANGELOG.md`, `RECOVERY.md` (stale-record line removed from today's block).
++**Tests:** none; documentation only.
++**Notes:** every value comes from `QAM/QAM_STATE.md` or the two candidate commits. Earlier clock times in this file corrected (12:44 and 12:50 were ahead of the clock).
++
++### 12:46 — APPROVED → IN PROGRESS (RWO-01 repair work order)
++**Task:** ABM007_FINAL repair work order RWO-01, items R-01 to R-09, from the QA Lead, released by the Director on 26 Nov (rulings AM-18 to AM-21 to be appended).
++**Sources read:** `~/Downloads/QA_LEAD_ADJUDICATION_ABM007_FINAL_Q2_2026-11-26.md` (section 6 governs) and `~/Downloads/QA_LEAD_RWO01_RELEASE_AND_DIRECTOR_RULINGS_ABM007_FINAL_2026-11-26.md`. Both opened.
++**Entry check:** both repositories on `qa/abm007-final`; OwedBook `2e91e90905b2d9907577a64985e643f7827019ac`, Portal `fc1fa6c2a90ebf59987287ad765e2e65cf635549`. Match.
++**Plan:**
++1. Recon each item: confirm which control it is before changing it (R-06, R-09); R-07 verify first.
++2. Repair R-01 to R-06 in OwedBook, R-08 and R-09 in the Portal (and R-04 there if it fades disabled fields the same way). Tokens only.
++3. Unit tests where the suite already tests the component.
++4. Records: `ABM_RULINGS.md` rows AM-18 to AM-21 verbatim; `EVIDENCE/E2/CHANGED_LABELS.md`; Help label table only if a quoted label changed.
++5. Checks: both unit suites, typecheck, lint, production build in both repositories; rendered measurements before and after at the named widths; signed-in checks on SCRATCH only, at most 20 sessions.
++6. Return ZIP `~/Downloads/ABM007_FINAL_RWO01_ENGINEERING_RETURN_01.zip`; stop.
++**Boundaries:** nothing inside `agent_docs/ACTIONS/ABM007_FINAL/QAM/`. No protected path, migration, guard change, dependency, hardcoded color. No email, invitation, removal, billing-portal opening, Stripe call, purchase, fixture change, DEV or alpha access, dashboard change, deployment. No staging, commit, push or branch switch. No credential or session state in any file.
++**Approved at:** 12:46 (the Director's release, ruling 1 of the release document).
++
++### 13:03 — IN PROGRESS note (RWO-01)
++- Repairs applied in both working trees (uncommitted, nothing staged): OwedBook R-01 to R-07, Portal R-04, R-08, R-09 (a) and (b). R-09 (c) identified, not changed.
++- R-07 verify-first result: clean at 375, 390 and 430; **both OwedBook pages slide sideways at 320** on the candidate (header Menu button 11 px past the edge; Add control 16 px past it). Layout-only fixes applied in `Navbar.tsx` and `ScreenHeader.tsx`.
++- Records: `ABM_RULINGS.md` rows AM-18 to AM-21 appended, byte-identical to the release document; `EVIDENCE/E2/CHANGED_LABELS.md` section added.
++- "Before" measurements taken on the unmodified candidate (SCRATCH proof pair 3100/3101, verified SCRATCH before sign-in): 3 sign-in sessions used of 20. Servers stopped afterwards. "After" build running in scratchpad copies.
++- New tooling: `EVIDENCE/RWO01/tools/measure.mjs` (reuses `E2/tools/scratch_proof/auth.mjs` unchanged).
++
++### 13:16 — COMPLETE (RWO-01 ENGINEERING COMPLETE — AWAITING DIRECTOR COMMIT)
++**Task:** RWO-01 items R-01 to R-09.
++**Files changed:** see `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/CHANGED_FILES.md`. OwedBook: 10 product, 8 test, 2 record files. Portal: 5 product, 3 test files, plus records.
++**Tests:** OwedBook 406 of 406 (60 suites), Portal 588 of 588 (37 suites); typecheck clean in both; lint 0 errors (38 and 27 warnings, unchanged); both production builds succeeded. Run on hash-bound copies of the working trees.
++**Notes:**
++- Eight items changed. R-09 (c) is "Refresh", drawn as a link: identified, not changed, for the QA Lead's ruling.
++- R-07 was not clean: both OwedBook pages slid sideways at 320 on the candidate. Layout-only fix.
++- **Departure:** measuring R-09 loaded the Portal dashboard and billing pages 16 times as Owner A; each load makes the app read card details from the Stripe sandbox (read-only, existing code). The work order permits no Stripe call. Reported at the top of the engineering report.
++- Sign-in sessions: 6 of 20, all Owner A by password. Servers on 3100 and 3101 stopped; no listener left.
++- Nothing staged or committed. No QAM file touched. `RECOVERY.md` and `ABM_STATE.md` not updated for RWO-01 (not in the work order's list of records); this morning's `RECOVERY.md` block and `ABM_STATE.md` now trail the adjudication.
++- Return package: `~/Downloads/ABM007_FINAL_RWO01_ENGINEERING_RETURN_01.zip`; identity in the response file.
++
++### 13:25 — COMPLETE (staging lists for the Director)
++**Task:** exact staging lists and proposed commit messages for the RWO-01 commit, at the Director's request. Nothing staged.
++**Files changed:** new `EVIDENCE/RWO01/STAGING_LIST_owedbook.txt` (20 paths), `STAGING_LIST_portal.txt` (86), `STAGING_LIST_portal_optional.txt` (2: the ZIP copy and its checksum). No QAM path in any list.
++
++### 13:33 — APPROVED → IN PROGRESS (RWO-01 add-on A1)
++**Task:** QA Lead's add-on A1 on top of the uncommitted RWO-01 working trees: A1-1 header "Subscribe Now" (opening page header and phone menu), A1-2 "Go to the Top" at the end of the Help text below 1024, A1-3 Help contents menu scrolls inside itself when taller than the window, A1-4 signed-in Portal footer stacks like the signed-out one. Records: `ABM_RULINGS.md` row AM-22 verbatim, `CHANGED_LABELS.md`, tests.
++**Entry check:** both repositories still on `qa/abm007-final` at `2e91e90…` and `fc1fa6c…`; nothing staged; no listener on 3100/3101.
++**Rulings received:** dashboard and billing page-load Stripe reads accepted and permitted for A1-4 only; R-09 (c) closed, unchanged; 14 sign-in sessions left.
++**Approved at:** 13:33 (the QA Lead's instruction; same rules as RWO-01).
++
++### 13:42 — COMPLETE (RWO-01 ADD-ON A1 COMPLETE — AWAITING DIRECTOR COMMIT)
++**Task:** add-on A1-1 to A1-4.
++**Files changed:** OwedBook `UserMenu.tsx`, `MobileNav.tsx`, `HelpPage.tsx` and their three tests; Portal `Footer.tsx` and its test. Records: `ABM_RULINGS.md` row AM-22, `CHANGED_LABELS.md`, `EVIDENCE/RWO01/` (report 02, updated lists, `tools/measure_a1.mjs`, measurements, `logs_a1/`, `binding_a1/`, regenerated diffs and staging lists, `COMMIT_MESSAGES.md`).
++**Tests:** OwedBook 408 of 408, Portal 588 of 588; typecheck clean; lint 0 errors (38 and 27 warnings, unchanged); both production builds succeeded. On hash-bound copies.
++**Notes:**
++- "Free trial" scan of the opening page: 0 matches after the change (text, labels, title, whole served page), Chrome and WebKit.
++- Sign-in sessions: 6 for the add-on; 12 of 20 for RWO-01 in total. Portal page loads for A1-4: 6 (2 per session), 6 overview requests counted.
++- Servers on 3100 and 3101 stopped. Nothing staged or committed. No QAM file touched.
++- Return package: `~/Downloads/ABM007_FINAL_RWO01_ENGINEERING_RETURN_02.zip`; identity in the response file.
++
++## Lessons Learned
++- Before measuring a page, check what its load does at the provider. The Portal dashboard reads Stripe on every load; I should have asked before loading it under a "no Stripe call" limit.
++
++## End of Session State
++- **Working:** RWO-01 repairs in both working trees; all checks green on copies.
++- **Broken:** nothing known.
++- **Next Steps:** Director commits; QA Lead rules on R-09 (c) and the free-trial list; QA Executor retests under a new effects release.
++
++## Files Changed This Session
++- `session_2026-11-26.md` — new
++- `RECOVERY.md` — top block added
++- `CHANGELOG.md` — two entries
++- `agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md` — index refreshed from QA state
+diff --git a/session_2026-11-27.md b/session_2026-11-27.md
+new file mode 100644
+index 0000000..b2cc6ab
+--- /dev/null
++++ b/session_2026-11-27.md
+@@ -0,0 +1,119 @@
++# Session Log: 2026-11-27
++
++## Project Context
++- **Project:** cyph-payment-portal-dev-v1 (Account & Billing), with companion OwedBook `cyph-v1-dev`
++- **Tool:** Claude Code
++- **Goal:** Not set yet. Engineering returned RWO-01 and add-on A1 on 26 Nov and is waiting. QA (Cody) is running Q4 and has both builds serving for the Director's walkthrough.
++
++## Starting State
++- **Branch:** `qa/abm007-final` in both repositories.
++  - Portal HEAD `fc1fa6c2a90ebf59987287ad765e2e65cf635549` (unchanged since 24 Nov)
++  - OwedBook HEAD `2e91e90905b2d9907577a64985e643f7827019ac` (unchanged since 24 Nov)
++- **Working tree at start (08:24):** the RWO-01 and add-on A1 repairs are still uncommitted in both repositories. Nothing staged, no stash.
++  - Portal: 7 product and test files modified, 1 new test, the records (`ABM_RULINGS.md`, `ABM_STATE.md`, `CHANGED_LABELS.md`, `RECOVERY.md`, `CHANGELOG.md`), `EVIDENCE/RWO01/`, two response files, `session_2026-11-26.md`. QA's own uncommitted records under `QAM/` are Cody's lane.
++  - OwedBook: 22 paths, as in `EVIDENCE/RWO01/STAGING_LIST_owedbook.txt`.
++- **Last Working Feature:** RWO-01 items R-01 to R-09 (a)(b) and add-on A1-1 to A1-4, checked on 26 Nov: OwedBook 408 of 408, Portal 588 of 588, typecheck clean, lint 0 errors, both production builds succeeded.
++- **Engineering status line (26 Nov):** `RWO-01 ADD-ON A1 COMPLETE — AWAITING DIRECTOR COMMIT`.
++- **QA state, read-only from `QAM/QAM_STATE.md` (written 27 Nov 08:15):**
++  - Q4 progress export 01 was made on 26 Nov 15:35.
++  - 27 Nov: "Sheet 04 readiness rebuild". Both local listeners were restarted and are serving for the Director's walkthrough.
++  - The "Current state" table in that file still shows `Q2 COMPLETE — AWAITING ADJUDICATION`; the dated entries below it are newer.
++- **Local servers at start:** ports 3100 and 3101 are listening since 08:15 today, from `/tmp/abm007-final-cody-q4/ob` and `/pp`. They are QA's, not Engineering's. Not touched.
++- **Known Issues:**
++  - Both return ZIPs are no longer in `~/Downloads`. The copies in `EVIDENCE/RWO01/` are intact and their SHA-256 values match (`e64985c0…` return 01, `553c89e5…` return 02).
++  - `ABM_STATE.md` and the top block of `RECOVERY.md` date from 26 Nov 12:4x and trail RWO-01, the add-on and Q4. Not updated: `RECOVERY.md` is protected until closeout (AM-06), and no request covers either file today.
++  - Row AM-22 in `ABM_RULINGS.md` was typed from the QA Lead's message; a compare against the QA Lead's copy is still open.
++  - Keyboard focus outline of the end-of-text "Go to the Top" link was not captured on 26 Nov.
++  - O-1 (WebKit interruption in the redirect reproduction) stays with QA.
++  - External settings (Supabase template, Stripe branding) prepared, not applied.
++- **Limits carried over:** sign-in sessions 12 of 20 used under RWO-01. No Git action by the Engineer. No QAM file touched. SCRATCH only.
++
++## Since the last session file (26 Nov, last entry 13:42)
++- No engineering work after the add-on A1 return.
++- QA continued with Q4 (their records, not Engineering's).
++
++## Session Progress
++
++### 08:24 — COMPLETE (session start)
++**Task:** New session file, at the Director's request.
++**Files changed:** `session_2026-11-27.md` (new), `CHANGELOG.md` (one entry).
++**Tests:** none run; no product file touched.
++**Notes:**
++- Read-only checks only: clock, both HEADs and working trees, `RECOVERY.md`, yesterday's session file, `QAM/QAM_STATE.md`, listeners, ZIP hashes.
++- `RECOVERY.md` not changed (not requested today; protected until closeout).
++- No Git action. No QAM file touched. QA's servers left running.
++
++### 10:38 — STOPPED AT ENTRY (RWO-01 add-on A2)
++**Task:** QA Lead's add-on A2 (A2-1 Help "Go to the Top" at the end of each article; A2-2 focus outlines, verify first; row AM-23; labels; staging lists).
++**Stop:** the work order says to read `QA_LEAD_ADJUDICATION_ABM007_FINAL_Q4_2026-11-27.md` in the VM Downloads folder first, and to stop if it cannot be opened. It is not there. `~/Downloads` holds only `ABM007_FINAL_Q4_REVIEW_01_2026-11-27_102756_BDT.zip` and `_ARCHIVE/`; a search of the home folder by name found no Q4 adjudication for this module. The Director pasted the document's text into the conversation, but there is no file to open.
++**Entry checks (passed):** both repositories on `qa/abm007-final` at `2e91e90…` and `fc1fa6c…`; nothing staged; product files changed are only the RWO-01 and A1 set (OwedBook 20 modified and 2 new; Portal 7 modified and 1 new test).
++**Files changed:** this entry only. No product file, no record, no QAM file, no sign-in, no Git action.
++
++### 11:05 — APPROVED → IN PROGRESS (RWO-01 add-on A2)
++**Task:** QA Lead's add-on A2, released by the Director on 27 Nov, on top of the uncommitted RWO-01 and A1 working trees. A2-1: "Go to the Top" at the end of each of the 13 Help articles; removed from the contents menu and from the end of the Help text. A2-2: focus outlines, verify first (Help contents menu links at 1440 x 900 and 1024 x 600; Add control on OwedBook billing at 375; password field and its show-or-hide button on Profile at 375). Records: `ABM_RULINGS.md` row AM-23, `CHANGED_LABELS.md`, Help tests, regenerated staging lists.
++**Governing document:** `QA_LEAD_ADJUDICATION_ABM007_FINAL_Q4_2026-11-27.md` was still not in `~/Downloads` at 11:00. After my stop the Director pasted its full text into the conversation a second time; I work from that pasted text (section 6). No file was opened, so no file hash is recorded.
++**Entry check:** both repositories on `qa/abm007-final` at `2e91e90…` and `fc1fa6c…`; nothing staged. Product and test files are byte-identical to the A1-tested copies (`binding_a1`); only `CHANGELOG.md` (both) and the Portal session logs differ. Ports 3100 and 3101 free (QA's listeners are gone).
++**Limits:** at most 8 sign-in sessions; no Account & Billing dashboard or billing page load; SCRATCH only.
++**Approved at:** 11:05 (the work order itself).
++
++### 11:17 — COMPLETE (RWO-01 ADD-ON A2 COMPLETE — AWAITING QA CONFIRMATION)
++**Task:** add-on A2-1 and A2-2.
++**Files changed:** OwedBook `src/components/help/HelpPage.tsx` and `src/__tests__/abm007/help-page.test.tsx`; OwedBook records `CHANGELOG.md`, `agent_docs/SESSIONS/session_2026-11-27.md` (new). Portal records: `ABM_RULINGS.md` row AM-23, `CHANGED_LABELS.md`, `CHANGELOG.md`, `EVIDENCE/RWO01/` (report 03, `tools/measure_a2.mjs`, measurements, `logs_a2/`, `binding_a2/`, regenerated diffs, lists, staging lists, `COMMIT_MESSAGES.md`), a response file. No Portal product or test file changed.
++**Tests:** OwedBook 408 of 408, Portal 588 of 588; typecheck clean; lint 0 errors (38 and 27 warnings, unchanged); both production builds succeeded. On hash-bound copies (`binding_a2/`).
++**Notes:**
++- A2-1: 13 "Go to the Top" links, one at the end of each article, inside it; none in the contents menu, none after the last article. Contrast 4.53 to 1 (dark green on white) at 375 and 1440; before, the end-of-text link was 4.04 to 1 on the light blue page. 44px target; returns to scroll position 0 with the header in view by mouse and keyboard; outline whole on four sides.
++- A2-2, verify first: one cut found. At 1024 x 600, contents menu link 12 lost the bottom edge of its outline (4px) under the scrolling menu box. Layout fix: `lg:scroll-py-2` on the menu. After: 13 of 13 whole at 1024 x 600 and 1440 x 900. The Add control, the password field and its show-or-hide button were whole before and are unchanged.
++- Tool note: the first "before" run had a tool fault (it scrolled the page and could not read ring-style focus); kept as `measure_a2_before_run1.json`, corrected and rerun.
++- Sign-in sessions: 5 of 8 (2 + 1 + 2), all Owner A by password on OwedBook, SCRATCH verified first. No Account & Billing page loaded (counted: 0).
++- Servers on 3100 and 3101 stopped. Nothing staged or committed; both HEADs unchanged. No QAM file touched.
++- Return package: `~/Downloads/ABM007_FINAL_RWO01_ENGINEERING_RETURN_03.zip`; identity in the response file.
++
++### 12:05 — APPROVED → IN PROGRESS (RWO-01 add-on A3)
++**Task:** QA Lead's add-on A3, released by the Director on 27 Nov: in Firefox, at desktop sizes, keyboard Enter on the "Go to the Top" link at the end of Help article 1 does not leave the page at the top. Reproduce in Firefox first, find the cause, then fix only that. Expected files: OwedBook `HelpPage.tsx` and its test. Records: an A3 note in the evidence folder, changelog, regenerated staging lists. No new ruling row.
++**Entry check (12:01):** both repositories on `qa/abm007-final` at `2e91e90…` and `fc1fa6c…`; nothing staged. Product and test files byte-identical to the A2-tested copies (`binding_a2`); only `CHANGELOG.md` (both) and this session log differ. Firefox is installed for the test tool (`firefox-1511`).
++**Ports:** 3100 and 3101 are in use by the QA Executor's listeners (`/tmp/abm007-final-cody-q4-a2/`, started 11:35). Not mine; not touched. While they run I cannot serve my own build. I start with a reproduction that needs no server and no sign-in: the Help page's own HTML and built CSS opened as a file in Firefox.
++**Limits:** at most 6 sign-in sessions; no Account & Billing page; SCRATCH only.
++**Approved at:** 12:05 (the work order itself).
++
++### 12:07 — BLOCKED, AWAITING DIRECTOR (RWO-01 add-on A3)
++**Done so far (no product file changed, no sign-in, no server started):**
++- Firefox 148.0.2 runs here through the test tool.
++- A static copy of the Help page (its own HTML from the A2 copy and the built CSS, opened as a file) does NOT reproduce the defect: in Firefox, Enter and mouse click on the article 1, 7 and 13 links leave the page at 0 at 0, 100, 300, 800 and 2,000 ms, at 1024 x 600, 1440 x 900 and 375 wide. So the cause is not in the link's HTML or the CSS; it is in what the running app adds (its scripts or its real header).
++- Reading the OwedBook client code found no handler for hash changes or scrolling. Not conclusive.
++**Blocker:** reproducing in the running app needs my SCRATCH build on ports 3100 and 3101 (the only pair the ruled tools and the apps' identity table allow). Both ports are held by the QA Executor's listeners (`/tmp/abm007-final-cody-q4-a2/`, since 11:35), which I may not stop. The work order says not to fix blind, so I have not changed anything.
++**Scratch note:** a temporary test file `src/__tests__/zz_tmp_dump.test.tsx` is left in the scratchpad copy `rwo01/a2/ob` (not in the repository); a removal was refused by the harness safety check. The A3 build will use a fresh copy.
++
++### 13:18 — COMPLETE (RWO-01 ADD-ON A3 COMPLETE — AWAITING QA CONFIRMATION)
++**Task:** add-on A3, the Firefox "Go to the Top" defect.
++**Unblocked:** asked the Director about the busy ports; the Director had the QA Executor's servers stopped. Ports checked free at 12:18 before I started mine.
++**Cause:** `#top` named no element, so the browser scrolled up but left keyboard focus on the link. Firefox then moved the page back to where it was. Reproduced with QA's numbers (306 at 1024 x 600, 131 at 1440 x 900) when the link is focused by Tab and a script scrolls it into place; reproduced on a file copy with no scripts, so not the app's scripts. Not timing: 4 of 4 fail or 4 of 4 pass per case. Not established: Firefox's internal rule, and why only article 1. Not shown with a reader's own actions.
++**Files changed:** OwedBook `src/components/help/HelpPage.tsx` (the "Help" heading is the real, focusable `#top` target with a one-window scroll margin; no script) and `src/__tests__/abm007/help-page.test.tsx` (one test). OwedBook records `CHANGELOG.md`, `agent_docs/SESSIONS/session_2026-11-27.md`. Portal records: `CHANGELOG.md`, `EVIDENCE/RWO01/` (A3 report, tools, measurements, `logs_a3/`, `binding_a3/`, regenerated diffs, lists, staging lists, `COMMIT_MESSAGES.md`), a response file. No Portal product or test file, no ruling row, no label change.
++**Tests:** OwedBook 409 of 409, Portal 588 of 588; typecheck clean; lint 0 errors (38 and 27 warnings, unchanged); both production builds succeeded. On hash-bound copies (`binding_a3/`).
++**Notes:**
++- Grid (articles 1, 7, 13; mouse and keyboard; three sizes; 45 cases per engine): Firefox 43 of 45 before, 45 of 45 after; Chrome and WebKit 45 of 45 before and after. Firefox repeats: 40 of 56 before, 56 of 56 after. All 13 links in Firefox after: 78 of 78.
++- All 13 links in Chrome and WebKit: NOT measured. My three-engine step failed on a fault in its own heading check and lost its results; I had closed the driver in the same command. One session was left; used for Firefox.
++- Focus after activation: the "Help" heading, in view, in all three engines. It shows the standard white focus outline after keyboard activation (WebKit also after a click). Left visible; reported for the Director's look.
++- A2 design re-measured on the A3 build in Chrome and WebKit: unchanged.
++- Sign-in sessions: 6 of 6 (3 kept open across the build swap, 2 for the A2 re-measure, 1 for the Firefox rerun). All Owner A by password on OwedBook, SCRATCH verified. No Account & Billing page loaded (requests counted: 0). No session state written anywhere.
++- Servers on 3100 and 3101 stopped. Nothing staged or committed; both HEADs unchanged. No QAM file touched.
++- Return package: `~/Downloads/ABM007_FINAL_RWO01_ENGINEERING_RETURN_04.zip`; identity in the response file.
++
++## Lessons Learned
++- A stop named in a work order is a stop even when the same text is in the conversation: say so, and let the Director decide how to supply it.
++- Do not chain "close the tool" after "read the results" in one command: a failed step then costs the sessions. Read first, close after.
++- A step file should save each result as it goes and guard its last lines, so a late fault cannot lose earlier work.
++- Check the measuring tool on the unchanged build first. The first focus run blamed the window edge for two outlines and missed ring-style focus.
++
++## End of Session State
++- **Working:** RWO-01 with add-ons A1, A2 and A3 in both working trees; all checks green on copies.
++- **Broken:** nothing known.
++- **Next Steps:** QA Executor confirms A3 on fresh manifests (all 13 links in Chrome and WebKit are not yet measured); the Director looks at Help and commits; QA Lead certifies Gate Q.
++
++## Files Changed This Session
++- `session_2026-11-27.md` — new
++- `CHANGELOG.md` — two entries
++- `agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md` — row AM-23
++- `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md` — add-on A2 block
++- `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — add-on A2 report, tool, measurements, logs, diffs, lists
++- `agent_docs/RESPONSES/response_2026-11-27_*_rwo01-a2-engineering-return.md` — new
++- OwedBook: `src/components/help/HelpPage.tsx`, `src/__tests__/abm007/help-page.test.tsx`, `CHANGELOG.md`, `agent_docs/SESSIONS/session_2026-11-27.md`
+diff --git a/src/__tests__/abm007/public-shell-fit.test.tsx b/src/__tests__/abm007/public-shell-fit.test.tsx
+new file mode 100644
+index 0000000..f9d01b6
+--- /dev/null
++++ b/src/__tests__/abm007/public-shell-fit.test.tsx
+@@ -0,0 +1,47 @@
++/**
++ * @jest-environment jsdom
++ */
++// RWO-01 R-08 (finding F27): on signed-out pages the header "Sign in" button stays on one line at its 15px text, and
++// the footer links stack one per line, centered, below the width where one row fits. Add-on A1-4: the signed-in
++// footer does the same.
++import { render, screen } from '@testing-library/react';
++import { PublicShell } from '@/components/portal/PublicShell';
++import { Footer } from '@/components/portal/Footer';
++
++jest.mock('next/navigation', () => ({ useRouter: () => ({ push: jest.fn() }), usePathname: () => '/login' }));
++
++const classes = (el: Element | null) => (el?.className ?? '').split(/\s+/);
++
++describe('signed-out header and footer fit (R-08)', () => {
++  it('Sign in and "Already subscribed?" never wrap or shrink; only the support line gives way, before its address', () => {
++    render(<PublicShell>content</PublicShell>);
++    const signIn = screen.getByTestId('public-sign-in');
++    for (const c of ['whitespace-nowrap', 'shrink-0', 'h-11', 'text-[15px]', 'rounded-md']) expect(classes(signIn)).toContain(c);
++    const already = screen.getByText('Already subscribed?');
++    for (const c of ['whitespace-nowrap', 'shrink-0']) expect(classes(already)).toContain(c);
++    const address = screen.getAllByText('support@pharmacybooks.com').find((e) => e.closest('header nav'))!;
++    expect(classes(address)).toContain('whitespace-nowrap');
++    expect(classes(address.parentElement)).toContain('min-w-0');
++    expect(classes(signIn.closest('nav'))).toContain('min-w-0');
++  });
++
++  it('the signed-out footer stacks its links one per line, centered, and returns to one row from lg', () => {
++    const { container } = render(<Footer tone="dark" />);
++    const links = container.querySelector('[data-testid="footer-links"]');
++    for (const c of ['flex-col', 'items-center', 'lg:flex-row', 'lg:whitespace-nowrap']) expect(classes(links)).toContain(c);
++    expect(classes(links)).not.toContain('flex-wrap');
++    for (const c of ['flex-col', 'items-center', 'text-center', 'lg:flex-row', 'lg:justify-between']) expect(classes(links!.parentElement)).toContain(c);
++    expect(links!.children).toHaveLength(3);
++  });
++
++  // RWO-01 add-on A1-4: the signed-in footer gets the same fix; only its colors differ.
++  it('the signed-in footer stacks the same way and keeps its own colors', () => {
++    const { container } = render(<Footer />);
++    const links = container.querySelector('[data-testid="footer-links"]');
++    for (const c of ['flex-col', 'items-center', 'lg:flex-row', 'lg:whitespace-nowrap']) expect(classes(links)).toContain(c);
++    expect(classes(links)).not.toContain('flex-wrap');
++    for (const c of ['flex-col', 'items-center', 'text-center', 'lg:flex-row', 'lg:justify-between', 'text-muted-foreground']) expect(classes(links!.parentElement)).toContain(c);
++    expect(classes(links!.parentElement)).not.toContain('sm:flex-row');
++    expect(container.querySelector('a')!.className).toContain('pb-link-on-page');
++  });
++});
+diff --git a/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/measure.mjs b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/measure.mjs
+new file mode 100644
+index 0000000..5fab2e1
+--- /dev/null
++++ b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/measure.mjs
+@@ -0,0 +1,246 @@
++#!/usr/bin/env node
++// ABM007_FINAL RWO-01 — engineering measurements for repair items R-01 to R-09 on the SCRATCH proof pair
++// (OwedBook 3100, Portal 3101). Claims for QA to test, never results.
++// Usage (Portal root): node measure.mjs <out_dir> <label> [--public-only]
++// Reuses ../../E2/tools/scratch_proof/auth.mjs unchanged: SCRATCH is verified from the listening server process before
++// any sign-in, fixtures come from the allowlist, and no credential, token, cookie or session state is written anywhere.
++// Only navigation and reading. No form is submitted except sign-in. No button that changes data is pressed.
++// Sign-in sessions per full run: 3 (OwedBook Owner A in Chromium and in WebKit; Portal Owner A in Chromium).
++process.env.PLAYWRIGHT_BROWSERS_PATH ||= '/home/moose/APBM007B_REPAIR_R2/browsers'; // existing WebKit build, read-only
++import { createRequire } from 'node:module'; import { mkdirSync, writeFileSync } from 'node:fs';
++const PORTAL = '/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1';
++const { chromium, webkit } = createRequire(`${PORTAL}/package.json`)('playwright');
++const A = await import(new URL('../../E2/tools/scratch_proof/auth.mjs', import.meta.url));
++const out = process.argv[2], label = process.argv[3]; const publicOnly = process.argv.includes('--public-only');
++if (!out || !label) { console.error('usage: measure.mjs <out_dir> <label> [--public-only]'); process.exit(2); }
++mkdirSync(`${out}/shots_${label}`, { recursive: true });
++const { ob: OB, pp: PP } = A.SITES;
++const ROLE = 'ENGINEERING_OWNER_A';
++const EMAIL = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;
++let PRIVATE = [];
++const clean = (s) => { let t = String(s ?? '').replace(EMAIL, (m) => (/pharmacybooks\.com$/.test(m) ? m : '[email]')); for (const p of PRIVATE) t = t.split(p).join('[name]'); return t; };
++const deepClean = (o) => JSON.parse(clean(JSON.stringify(o)));
++const mask = (page) => page.evaluate((priv) => {
++  const hide = (v) => { for (const p of priv) v = v.split(p).join('[name hidden]'); return v; };
++  const rx = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g; const keep = (m) => /pharmacybooks\.com$/.test(m);
++  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let t;
++  while ((t = w.nextNode())) { const v = hide(t.nodeValue.replace(rx, (m) => (keep(m) ? m : '[email hidden]'))); if (v !== t.nodeValue) t.nodeValue = v; }
++  for (const i of document.querySelectorAll('input')) { const v = hide((i.value || '').replace(rx, '[email hidden]')); if (v !== i.value) i.value = v; }
++  for (const e of document.querySelectorAll('[title]')) e.setAttribute('title', hide(e.getAttribute('title').replace(rx, '[email hidden]')));
++}, PRIVATE);
++
++// Helpers installed in every page (measurement only).
++const HELPERS = () => {
++  const lin = (c) => { c /= 255; return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; };
++  const lum = ([r, g, b]) => 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
++  const parse = (s) => { const m = (s || '').match(/[\d.]+/g) || []; return { rgb: m.slice(0, 3).map(Number), a: m.length > 3 ? Number(m[3]) : 1 }; };
++  const behind = (el) => { for (let p = el.parentElement; p; p = p.parentElement) { const c = parse(getComputedStyle(p).backgroundColor); if (c.a > 0 && c.rgb.length === 3) return c.rgb; } return [255, 255, 255]; };
++  const blend = (top, a, under) => top.map((v, i) => v * a + under[i] * (1 - a));
++  const r1 = (n) => Math.round(n * 100) / 100;
++  window.__m = {
++    overflow() {
++      const d = document.documentElement; window.scrollTo(300, 0); const x = window.scrollX; window.scrollTo(0, 0);
++      return { scrollWidth: d.scrollWidth, clientWidth: d.clientWidth, overflow_px: d.scrollWidth - d.clientWidth, page_scrolled_sideways_px: x };
++    },
++    lines(el) { const r = document.createRange(); r.selectNodeContents(el); const tops = new Set(); for (const c of r.getClientRects()) if (c.width > 0.5) tops.add(Math.round(c.top)); return tops.size; },
++    textRight(el) { const r = document.createRange(); r.selectNodeContents(el); let mx = -Infinity, mn = Infinity; for (const c of r.getClientRects()) { mx = Math.max(mx, c.right); mn = Math.min(mn, c.left); } return { text_left: r1(mn), text_right: r1(mx) }; },
++    box(el) {
++      if (!el) return null;
++      const r = el.getBoundingClientRect(), cs = getComputedStyle(el);
++      return { tag: el.tagName, text: (el.innerText || el.getAttribute('aria-label') || '').trim().replace(/\s+/g, ' ').slice(0, 60), left: r1(r.left), right: r1(r.right), top: r1(r.top),
++        width: r1(r.width), height: r1(r.height), radius: cs.borderTopLeftRadius, font_size: cs.fontSize, weight: cs.fontWeight, color: cs.color, background: cs.backgroundColor,
++        underline: cs.textDecorationLine, opacity: cs.opacity, lines: window.__m.lines(el), aria_busy: el.getAttribute('aria-busy'), disabled: el.disabled === true, visible: r.width > 0 && r.height > 0 };
++    },
++    // A faded field (opacity below 1) fades its text and its background together over whatever is behind it.
++    contrast(el) {
++      const cs = getComputedStyle(el), op = Number(cs.opacity), under = behind(el);
++      const bgc = parse(cs.backgroundColor); const bg0 = bgc.a > 0 ? blend(bgc.rgb, bgc.a, under) : under;
++      const bg = blend(bg0, op, under), fg = blend(parse(cs.color).rgb, op, under);
++      const [x, y] = [lum(fg), lum(bg)].sort((p, q) => q - p);
++      return { color: cs.color, background: cs.backgroundColor, opacity: cs.opacity, cursor: cs.cursor, ratio: r1((x + 0.05) / (y + 0.05)) };
++    },
++    offenders() {
++      const cw = document.documentElement.clientWidth, list = [];
++      for (const el of document.body.querySelectorAll('*')) { const r = el.getBoundingClientRect(); const cs = getComputedStyle(el);
++        if (r.width < 2 || r.height < 2 || cs.position === 'fixed' || cs.clip !== 'auto' || cs.visibility === 'hidden') continue;
++        if (r.right > cw + 0.5 || r.left < -0.5) list.push({ tag: el.tagName, cls: String(el.className).slice(0, 70), left: r1(r.left), right: r1(r.right) }); }
++      return { count: list.length, first: list.slice(0, 6) };
++    },
++  };
++};
++const ev = (page, fn, arg) => page.evaluate(fn, arg);
++const settle = async (page) => { await page.waitForLoadState('networkidle').catch(() => {}); await page.waitForTimeout(350); };
++const at = async (page, w, h = 900) => { await page.setViewportSize({ width: w, height: h }); await page.waitForTimeout(250); };
++const R = { label, started: new Date().toISOString(), engines: {}, items: {}, notes: [] };
++const shot = async (page, name, masked = false) => { if (masked) await mask(page); await page.screenshot({ path: `${out}/shots_${label}/${name}.png`, fullPage: false }); };
++
++// ---------- public pages (no session) ----------
++async function publicOb(browser, engine) {
++  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } }); await ctx.addInitScript(HELPERS); const page = await ctx.newPage();
++  const res = { widths: {}, free_trial_text: {} };
++  for (const w of [320, 375, 390, 430, 768, 1024, 1440]) {
++    await at(page, w); await page.goto(`${OB}/`, { waitUntil: 'networkidle' }); await settle(page);
++    res.widths[w] = await ev(page, () => {
++      const cta = [...document.querySelectorAll('section a')].filter((a) => /start free trial|subscribe now|^log in$/i.test(a.innerText.trim()));
++      const boxes = cta.map((a) => ({ ...window.__m.box(a), href: a.getAttribute('href') }));
++      const tops = new Set(boxes.map((b) => Math.round(b.top)));
++      return { ...window.__m.overflow(), buttons: boxes, arrangement: boxes.length < 2 ? 'single' : tops.size === 1 ? 'side by side' : 'stacked',
++        same_size: boxes.length === 2 ? Math.abs(boxes[0].width - boxes[1].width) < 0.6 && Math.abs(boxes[0].height - boxes[1].height) < 0.6 : null };
++    });
++    if (engine === 'chromium' && [375, 768, 1440].includes(w)) await shot(page, `R01_home_${w}`);
++    if (w === 375 || w === 1440) res.free_trial_text[w] = await ev(page, () => { const hits = []; const tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let t;
++      while ((t = tw.nextNode())) if (/free trial/i.test(t.nodeValue) && !t.parentElement.closest('script, style')) { const p = t.parentElement, r = p.getBoundingClientRect(); hits.push({ text: t.nodeValue.trim(), in: p.closest('header') ? 'header' : p.closest('section') ? 'page body' : 'other', shown: r.width > 0 && r.height > 0, href: p.closest('a')?.getAttribute('href') ?? null }); }
++      return hits; });
++  }
++  // hover and keyboard focus at 1440
++  await at(page, 1440); await page.goto(`${OB}/`, { waitUntil: 'networkidle' }); await settle(page);
++  res.hover_focus = {};
++  const names = await ev(page, () => [...document.querySelectorAll('section a')].filter((a) => /start free trial|subscribe now|^log in$/i.test(a.innerText.trim())).map((a, i) => { a.setAttribute('data-rwo', String(i)); return a.innerText.trim(); }));
++  for (let i = 0; i < names.length; i++) {
++    const sel = `section a[data-rwo="${i}"]`; const rest = await ev(page, (s) => getComputedStyle(document.querySelector(s)).backgroundColor, sel);
++    await page.hover(sel); await page.waitForTimeout(300); const hov = await ev(page, (s) => getComputedStyle(document.querySelector(s)).backgroundColor, sel);
++    await page.mouse.move(5, 5); await page.keyboard.press('Tab'); await page.focus(sel);
++    const foc = await ev(page, (s) => { const cs = getComputedStyle(document.querySelector(s)); return { is_active: document.activeElement === document.querySelector(s), outline: `${cs.outlineStyle} ${cs.outlineWidth} ${cs.outlineColor}`, offset: cs.outlineOffset }; }, sel);
++    res.hover_focus[names[i]] = { rest_background: rest, hover_background: hov, focus: foc };
++  }
++  // login page: password toggle
++  await page.goto(`${OB}/auth`, { waitUntil: 'networkidle' }); await settle(page);
++  res.login_toggle = await ev(page, () => window.__m.box(document.querySelector('button[aria-label="Show password"]')));
++  res.login_button_at_rest = await ev(page, () => window.__m.box(document.querySelector('form:has(input[type="password"]) button:not([type="button"])')));
++  await ctx.close(); return res;
++}
++
++const PP_PUBLIC = ['/login', '/register/plan', '/register/owner', '/register/pharmacy', '/register/review', '/register/activation', '/auth/signed-out', '/auth/link-expired', '/auth/sign-in-to-continue', '/auth/handoff-recovery', '/auth/switch', '/auth/confirm'];
++async function publicPp(browser, engine) {
++  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } }); await ctx.addInitScript(HELPERS); const page = await ctx.newPage();
++  const res = { pages: {} };
++  const widths = engine === 'chromium' ? [320, 375, 430, 767, 768, 769, 1023, 1024, 1440] : [767, 768, 769];
++  for (const path of engine === 'chromium' ? PP_PUBLIC : ['/login']) {
++    const per = {};
++    for (const w of widths) {
++      await at(page, w); await page.goto(`${PP}${path}`, { waitUntil: 'networkidle' }).catch(() => {}); await settle(page);
++      per[w] = await ev(page, () => {
++        const m = window.__m, cw = document.documentElement.clientWidth;
++        const sign = document.querySelector('[data-testid="public-sign-in"]'); const sb = m.box(sign);
++        const nav = document.querySelector('header nav'); const navItems = nav ? [...nav.children].map((c) => ({ text: c.innerText.trim().slice(0, 50), lines: m.lines(c), right: Math.round(c.getBoundingClientRect().right) })) : [];
++        const foot = document.querySelector('footer'); let footer = null;
++        if (foot) { const ps = [...foot.querySelectorAll('p')]; const links = ps[1] ? [...ps[1].children] : []; const items = [ps[0], ...links].filter(Boolean).map((c) => { const r = c.getBoundingClientRect(); return { text: c.innerText.trim().slice(0, 50), lines: m.lines(c), top: Math.round(r.top), center_x: Math.round(r.left + r.width / 2) }; });
++          const linkItems = items.slice(1); const tops = new Set(linkItems.map((i) => i.top));
++          footer = { items, any_item_breaks: items.some((i) => i.lines > 1), links_layout: tops.size === 1 ? 'one row' : tops.size === linkItems.length ? 'stacked one per line' : 'broken across lines',
++            centered: items.every((i) => Math.abs(i.center_x - cw / 2) <= 2) }; }
++        return { final_path: location.pathname, shares_public_header: !!document.querySelector('[data-testid="public-sign-in"], [data-testid="menu-trigger"]'), ...m.overflow(),
++          sign_in: sb && sb.visible ? { lines: sb.lines, height: sb.height, width: sb.width, font_size: sb.font_size, radius: sb.radius } : 'not shown at this width (Menu button instead)',
++          header_nav_items: sb && sb.visible ? navItems : [], footer };
++      });
++      if (engine === 'chromium' && path === '/login' && [375, 768, 1024].includes(w)) { await shot(page, `R08_login_${w}_top`); await ev(page, () => window.scrollTo(0, document.body.scrollHeight)); await page.waitForTimeout(200); await shot(page, `R08_login_${w}_footer`); }
++    }
++    res.pages[path] = per;
++  }
++  if (engine === 'chromium') { await at(page, 1440); await page.goto(`${PP}/login`, { waitUntil: 'networkidle' }); await settle(page);
++    res.login_toggle = await ev(page, () => window.__m.box(document.querySelector('button[aria-label="Show password"]'))); }
++  await ctx.close(); return res;
++}
++
++// ---------- signed-in pages ----------
++async function signedOb(browser, engine) {
++  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } }); await ctx.addInitScript(HELPERS); const page = await ctx.newPage();
++  const res = {};
++  // R-03: watch the Login button while the real sign-in is in progress (words, aria-busy, disabled, spinner).
++  const seen = []; await page.exposeFunction('__rwoRec', (s) => { const k = JSON.stringify(s); if (seen[seen.length - 1] !== k) seen.push(k); });
++  await page.addInitScript(() => { const t = () => { const b = document.querySelector('form:has(input[type="password"]) button:not([type="button"])'); if (!b || !window.__rwoRec) return;
++    window.__rwoRec({ words: b.textContent.trim(), aria_busy: b.getAttribute('aria-busy'), disabled: b.disabled, spinner_in_form: !!b.closest('form').querySelector('[role="status"], .animate-spin') }); };
++    new MutationObserver(t).observe(document, { subtree: true, childList: true, attributes: true, characterData: true }); });
++  res.session = await A.signIn(page, 'ob', ROLE); await settle(page);
++  res.login_button_states_during_sign_in = seen.map((s) => JSON.parse(s));
++
++  // R-04, R-05, R-06a: Profile
++  for (const w of engine === 'chromium' ? [1440, 375] : [1440]) {
++    await at(page, w); await page.goto(`${OB}/profile`, { waitUntil: 'networkidle' }); await settle(page);
++    (res.profile ??= {})[w] = await ev(page, () => ({ final_path: location.pathname, ...window.__m.overflow(),
++      disabled_fields: [...document.querySelectorAll('input:disabled')].map((i) => ({ label: i.closest('div')?.querySelector('label')?.innerText ?? '', ...window.__m.contrast(i) })),
++      support_link: (() => { const a = document.querySelector('main a[href^="mailto:"], a[href^="mailto:"]'); const b = window.__m.box(a); return b && { text: b.text, color: b.color, underline: b.underline, weight: b.weight }; })(),
++      password_toggles: [...document.querySelectorAll('button[aria-label="Show password"]')].map((b) => { const x = window.__m.box(b); return { width: x.width, height: x.height, radius: x.radius }; }) }));
++    if (engine === 'chromium' && w === 1440) await shot(page, 'R04_R05_profile_1440', true);
++  }
++  // R-06b, R-06c, R-07: dashboard
++  for (const w of [320, 375, 390, 430, 1024, 1440]) {
++    await at(page, w); await page.goto(`${OB}/owedbook`, { waitUntil: 'networkidle' }); await settle(page);
++    (res.owedbook ??= {})[w] = await ev(page, () => { const m = window.__m; const list = document.querySelector('[role="tablist"]');
++      const acct = document.querySelector('button[aria-label="Account menu"]'); const ab = m.box(acct);
++      return { final_path: location.pathname, ...m.overflow(), outside_viewport: m.offenders(),
++        tab_strip: list ? { height: m.box(list).height, left: m.box(list).left, right: m.box(list).right, scrolls_inside_its_own_box: list.scrollWidth > list.clientWidth, inner_scroll_px: list.scrollWidth - list.clientWidth } : 'not shown',
++        tabs: [...document.querySelectorAll('[role="tab"]')].map((t) => { const b = m.box(t); return { text: b.text, height: b.height, radius: b.radius, font_size: b.font_size, weight: b.weight }; }),
++        account_button: ab && ab.visible ? { width: ab.width, height: ab.height, radius: ab.radius } : 'not shown at this width' }; });
++    if (engine === 'chromium' && [375, 1024].includes(w)) await shot(page, `R06_owedbook_${w}`, true);
++  }
++  // R-07: Billing & subscription
++  for (const w of [320, 375, 390, 430]) {
++    await at(page, w); await page.goto(`${OB}/admin-portal/billing`, { waitUntil: 'networkidle' }); await settle(page);
++    (res.admin_billing ??= {})[w] = await ev(page, () => { const m = window.__m; const add = document.querySelector('[data-testid="add-store-handoff"]'); const help = add?.closest('div')?.querySelector('p');
++      const ab = m.box(add), hb = m.box(help); const cw = document.documentElement.clientWidth;
++      return { final_path: location.pathname, viewport: cw, ...m.overflow(), outside_viewport: m.offenders(),
++        add_control: ab ? { text: ab.text, left: ab.left, right: ab.right, height: ab.height, inside_screen: ab.left >= 0 && ab.right <= cw } : 'not shown for this role or state',
++        helper_text: hb ? { left: hb.left, right: hb.right, ...m.textRight(help), lines: hb.lines, inside_screen: hb.left >= 0 && hb.right <= cw && m.textRight(help).text_right <= cw } : 'not shown' }; });
++    if (engine === 'chromium' && [320, 375].includes(w)) await shot(page, `R07_admin_billing_${w}`, true);
++  }
++  // R-02: Help
++  if (engine === 'chromium') for (const w of [375, 768, 1024, 1440]) {
++    await at(page, w); await page.goto(`${OB}/help`, { waitUntil: 'networkidle' }); await settle(page);
++    const info = await ev(page, () => { const m = window.__m; const a = [...document.querySelectorAll('nav[aria-label="On this page"] a')].find((x) => /go to the top/i.test(x.innerText)); const nav = document.querySelector('nav[aria-label="On this page"]'); const first = document.querySelector('#getting-around');
++      const nb = nav.getBoundingClientRect(), fb = first.getBoundingClientRect(); const b = m.box(a);
++      return { final_path: location.pathname, ...m.overflow(), contents_menu: nb.right <= fb.left + 1 ? 'beside the text' : 'above the text', menu_is_sticky: getComputedStyle(nav).position === 'sticky',
++        link: b ? { text: b.text, font_size: b.font_size, color: b.color, underline: b.underline, height: b.height, is_last_in_menu: nav.querySelectorAll('a')[nav.querySelectorAll('a').length - 1] === a } : 'absent' }; });
++    if (info.link !== 'absent') {
++      const sel = '[data-testid="help-go-to-top"]';
++      await ev(page, () => window.scrollTo(0, document.body.scrollHeight)); await page.waitForTimeout(250);
++      const before = await ev(page, (s) => ({ scrollY: Math.round(window.scrollY), link_in_view: (() => { const r = document.querySelector(s).getBoundingClientRect(); return r.top >= 0 && r.bottom <= window.innerHeight; })() }), sel);
++      await page.locator(sel).scrollIntoViewIfNeeded(); await page.waitForTimeout(150); const from1 = await ev(page, () => Math.round(window.scrollY));
++      await page.click(sel); await page.waitForTimeout(700);
++      const mouse = await ev(page, () => ({ scrollY: Math.round(window.scrollY), header_in_view: (() => { const h = document.querySelector('body header'); const r = h?.getBoundingClientRect(); return !!r && r.top >= 0 && r.bottom > 0; })() }));
++      await page.goto(`${OB}/help`, { waitUntil: 'networkidle' }); await settle(page);
++      await page.focus(sel); await page.waitForTimeout(150); const from2 = await ev(page, () => Math.round(window.scrollY));
++      const focus = await ev(page, (s) => { const cs = getComputedStyle(document.querySelector(s)); return { outline: `${cs.outlineStyle} ${cs.outlineWidth} ${cs.outlineColor}`, offset: cs.outlineOffset }; }, sel);
++      await page.keyboard.press('Enter'); await page.waitForTimeout(700);
++      const key = await ev(page, () => ({ scrollY: Math.round(window.scrollY), hash: location.hash }));
++      info.behavior = { at_page_bottom: before, mouse: { from_scrollY: from1, ...mouse }, keyboard: { from_scrollY: from2, ...key, focus_outline: focus } };
++      if (w === 1440 || w === 375) { await page.goto(`${OB}/help`, { waitUntil: 'networkidle' }); await settle(page); await page.locator(sel).scrollIntoViewIfNeeded(); await shot(page, `R02_help_${w}`, true); }
++    }
++    (res.help ??= {})[w] = info;
++  }
++  await ctx.close(); return res;
++}
++
++async function signedPp(browser) {
++  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } }); await ctx.addInitScript(HELPERS); const page = await ctx.newPage();
++  const res = {}; res.session = await A.signIn(page, 'pp', ROLE); await settle(page);
++  for (const path of ['/dashboard', '/billing']) for (const w of [320, 375, 768, 1440]) {
++    await at(page, w); await page.goto(`${PP}${path}`, { waitUntil: 'networkidle' }); await settle(page);
++    ((res[path] ??= {}))[w] = await ev(page, () => { const m = window.__m; const ref = document.querySelector('[data-testid="refresh"]'); const rb = m.box(ref);
++      const fl = [...(document.querySelectorAll('footer p')[1]?.children ?? [])]; const ftops = new Set(fl.map((c) => Math.round(c.getBoundingClientRect().top)));
++      return { final_path: location.pathname, ...m.overflow(), signed_in_footer_links: fl.length ? (ftops.size === 1 ? 'one row' : ftops.size === fl.length ? 'stacked one per line' : 'broken across lines') : 'none',
++        row_buttons: [...document.querySelectorAll('[data-testid^="remove-store-"]:not([data-testid*="dialog"]), [data-testid^="undo-removal-"]')].filter((b) => b.tagName === 'BUTTON' && b.getBoundingClientRect().height > 0).map((b) => { const x = m.box(b); return { text: x.text, height: x.height, radius: x.radius, font_size: x.font_size, lines: x.lines }; }),
++        small_control: rb ? { element: rb.tag, words: rb.text, classes: ref.className, width: rb.width, height: rb.height, radius: rb.radius, font_size: rb.font_size, underline: rb.underline, background: rb.background, color: rb.color } : 'not found' }; });
++    if (w !== 768) await shot(page, `R09_pp${path.replace('/', '_')}_${w}`, true);
++  }
++  await ctx.close(); return res;
++}
++
++// ---------- run ----------
++const chrome = await chromium.launch({ channel: 'chrome' }); const wk = await webkit.launch();
++R.engines = { chromium: chrome.version(), webkit: wk.version() };
++try {
++  R.items.public_owedbook = { chromium: await publicOb(chrome, 'chromium'), webkit: await publicOb(wk, 'webkit') };
++  R.items.public_portal = { chromium: await publicPp(chrome, 'chromium'), webkit: await publicPp(wk, 'webkit') };
++  if (!publicOnly) {
++    PRIVATE = await A.privateStrings();
++    R.items.signed_owedbook = { chromium: await signedOb(chrome, 'chromium'), webkit: await signedOb(wk, 'webkit') };
++    R.items.signed_portal = { chromium: await signedPp(chrome) };
++    R.served = A.servedReport();
++  }
++} catch (e) { R.error = clean(String(e?.message ?? e).split('\n')[0]).slice(0, 300); }
++finally { await chrome.close(); await wk.close(); }
++R.sessions = { ...A.counters, total_sign_ins: A.counters.password_sign_ins + A.counters.token_sign_ins };
++R.finished = new Date().toISOString();
++writeFileSync(`${out}/measure_${label}.json`, JSON.stringify(deepClean(R), null, 1));
++console.log(JSON.stringify({ label, error: R.error ?? null, sessions: R.sessions, engines: R.engines }));
++process.exit(R.error ? 1 : 0);
+diff --git a/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/measure_a1.mjs b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/measure_a1.mjs
+new file mode 100644
+index 0000000..3509c40
+--- /dev/null
++++ b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/measure_a1.mjs
+@@ -0,0 +1,140 @@
++#!/usr/bin/env node
++// ABM007_FINAL RWO-01 add-on A1 — engineering measurements for A1-1 to A1-4 on the SCRATCH proof pair
++// (OwedBook 3100, Portal 3101). Claims for QA to test, never results.
++// Usage (Portal root): node measure_a1.mjs <out_dir> <label> [--webkit]
++// Reuses ../../E2/tools/scratch_proof/auth.mjs unchanged (SCRATCH verified from the listening server before any sign-in).
++// Only navigation and reading; no form is submitted except sign-in; no button that changes data is pressed.
++// Sessions per run: 2 (OwedBook and Portal Owner A in Chromium); with --webkit, 4 (the same two again in WebKit).
++// Portal page loads are kept to two per session (the landing dashboard and /billing); widths are changed by resizing.
++// Every request to /api/billing/overview (the page-load route that reads card details at the provider) is counted.
++process.env.PLAYWRIGHT_BROWSERS_PATH ||= '/home/moose/APBM007B_REPAIR_R2/browsers';
++import { createRequire } from 'node:module'; import { mkdirSync, writeFileSync } from 'node:fs';
++const PORTAL = '/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1';
++const { chromium, webkit } = createRequire(`${PORTAL}/package.json`)('playwright');
++const A = await import(new URL('../../E2/tools/scratch_proof/auth.mjs', import.meta.url));
++const out = process.argv[2], label = process.argv[3]; const withWebkit = process.argv.includes('--webkit');
++if (!out || !label) { console.error('usage: measure_a1.mjs <out_dir> <label> [--webkit]'); process.exit(2); }
++mkdirSync(`${out}/shots_${label}`, { recursive: true });
++const { ob: OB, pp: PP } = A.SITES; const ROLE = 'ENGINEERING_OWNER_A';
++const EMAIL = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g; let PRIVATE = [];
++const clean = (s) => { let t = String(s ?? '').replace(EMAIL, (m) => (/pharmacybooks\.com$/.test(m) ? m : '[email]')); for (const p of PRIVATE) t = t.split(p).join('[name]'); return t; };
++const mask = (page) => page.evaluate((priv) => {
++  const hide = (v) => { for (const p of priv) v = v.split(p).join('[name hidden]'); return v; };
++  const rx = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g; const keep = (m) => /pharmacybooks\.com$/.test(m);
++  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let t;
++  while ((t = w.nextNode())) { const v = hide(t.nodeValue.replace(rx, (m) => (keep(m) ? m : '[email hidden]'))); if (v !== t.nodeValue) t.nodeValue = v; }
++  for (const e of document.querySelectorAll('[title]')) e.setAttribute('title', hide(e.getAttribute('title').replace(rx, '[email hidden]')));
++}, PRIVATE);
++const settle = async (page) => { await page.waitForLoadState('networkidle').catch(() => {}); await page.waitForTimeout(350); };
++const at = async (page, w, h = 900) => { await page.setViewportSize({ width: w, height: h }); await page.waitForTimeout(300); };
++const R = { label, started: new Date().toISOString(), engines: {}, items: {}, portal_page_loads: {}, billing_overview_requests: {} };
++
++// A1-1: opening page header and phone menu, and the "free trial" scan of the whole served page.
++async function openingPage(browser, engine) {
++  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } }); const page = await ctx.newPage(); const res = {};
++  const scan = () => page.evaluate(() => { const hits = []; const tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let t;
++    while ((t = tw.nextNode())) if (/free trial/i.test(t.nodeValue) && !t.parentElement.closest('script, style')) { const p = t.parentElement, r = p.getBoundingClientRect(); hits.push({ text: t.nodeValue.trim(), in: p.closest('header') ? 'header' : 'page body', shown: r.width > 0 && r.height > 0 }); }
++    const attrs = [...document.querySelectorAll('[aria-label], [title], [alt], [placeholder]')].filter((e) => /free trial/i.test(['aria-label', 'title', 'alt', 'placeholder'].map((a) => e.getAttribute(a) || '').join(' '))).length;
++    return { visible_or_hidden_text_hits: hits, attribute_hits: attrs, whole_document_matches_including_scripts: (document.documentElement.outerHTML.match(/free trial/gi) || []).length,
++      title_or_description_matches: (document.title + ' ' + (document.querySelector('meta[name="description"]')?.content || '')).match(/free trial/gi)?.length ?? 0 }; });
++  const green = (root) => page.evaluate((sel) => { const all = [...document.querySelectorAll(`${sel} a`)].filter((x) => /start free trial|subscribe now/i.test(x.textContent)); const a = all.find((x) => x.getBoundingClientRect().width > 0) ?? all[0]; if (!a) return null; const r = a.getBoundingClientRect(), cs = getComputedStyle(a);
++    return { words: a.textContent.trim(), href: a.getAttribute('href'), width: Math.round(r.width * 100) / 100, height: Math.round(r.height * 100) / 100, radius: cs.borderTopLeftRadius, background: cs.backgroundColor, color: cs.color, font_size: cs.fontSize, shown: r.width > 0 && r.height > 0 }; }, root);
++  await page.goto(`${OB}/`, { waitUntil: 'networkidle' }); await settle(page);
++  res.desktop_1440 = { header_button: await green('header'), free_trial_scan: await scan() };
++  const sel = 'header a'; const hb = await page.evaluateHandle(() => [...document.querySelectorAll('header a')].find((x) => /start free trial|subscribe now/i.test(x.innerText)));
++  await hb.asElement().hover(); await page.waitForTimeout(300); res.desktop_1440.header_button_hover_background = await page.evaluate((el) => getComputedStyle(el).backgroundColor, hb);
++  await page.mouse.move(5, 300); await page.keyboard.press('Tab'); await hb.asElement().focus();
++  res.desktop_1440.header_button_focus = await page.evaluate((el) => { const cs = getComputedStyle(el); return `${cs.outlineStyle} ${cs.outlineWidth} ${cs.outlineColor}, offset ${cs.outlineOffset}`; }, hb);
++  if (engine === 'chromium') await page.screenshot({ path: `${out}/shots_${label}/A1-1_header_1440.png`, clip: { x: 0, y: 0, width: 1440, height: 80 } });
++  await at(page, 375); await page.goto(`${OB}/`, { waitUntil: 'networkidle' }); await settle(page);
++  res.phone_375_menu_closed = { free_trial_scan: await scan() };
++  await page.click('button[aria-label="Open menu"]'); await page.waitForTimeout(400);
++  res.phone_375_menu_open = { menu_button: await green('body'), free_trial_scan: await scan(), sideways_overflow_px: await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth) };
++  if (engine === 'chromium') await page.screenshot({ path: `${out}/shots_${label}/A1-1_phone_menu_375.png` });
++  await ctx.close(); return res; void sel;
++}
++
++// A1-2 and A1-3: Help.
++async function help(browser, engine) {
++  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } }); const page = await ctx.newPage(); const res = { views: {} };
++  res.session = await A.signIn(page, 'ob', ROLE); await settle(page);
++  const views = [[375, 900], [768, 900], [1023, 900], [1024, 900], [1024, 600], [1440, 650], [1440, 900]];
++  for (const [w, h] of views) {
++    await at(page, w, h); await page.goto(`${OB}/help`, { waitUntil: 'networkidle' }); await settle(page);
++    const v = await page.evaluate(() => { const nav = document.querySelector('nav[aria-label="On this page"]'); const first = document.querySelector('#getting-around'); const cs = getComputedStyle(nav);
++      const menuLink = [...nav.querySelectorAll('a')].find((x) => /go to the top/i.test(x.innerText)); const end = document.querySelector('[data-testid="help-go-to-top-end"]');
++      const er = end?.getBoundingClientRect(); const ecs = end && getComputedStyle(end);
++      return { window_height: window.innerHeight, sideways_overflow_px: document.documentElement.scrollWidth - document.documentElement.clientWidth,
++        contents_menu: { position: nav.getBoundingClientRect().right <= first.getBoundingClientRect().left + 1 ? 'beside the text' : 'above the text', sticky: cs.position === 'sticky', box_height: Math.round(nav.getBoundingClientRect().height), content_height: nav.scrollHeight, overflow_y: cs.overflowY,
++          taller_than_window: nav.scrollHeight + 16 > window.innerHeight, scrolls_inside_itself: nav.scrollHeight > nav.clientHeight + 1 && /auto|scroll/.test(cs.overflowY), has_go_to_top: !!menuLink },
++        end_of_text_link: end ? { shown: er.width > 0 && er.height > 0, font_size: ecs.fontSize, color: ecs.color, underline: ecs.textDecorationLine, height: Math.round(er.height) } : 'absent' }; });
++    // Is the menu's Go to the Top reachable by keyboard and mouse at this size?
++    if (v.contents_menu.has_go_to_top) {
++      const sel = '[data-testid="help-go-to-top"]';
++      await page.evaluate(() => window.scrollTo(0, 1500)); await page.waitForTimeout(250);
++      const start = await page.evaluate((s) => { const r = document.querySelector(s).getBoundingClientRect(); return { link_top: Math.round(r.top), link_bottom: Math.round(r.bottom), in_view_without_scrolling_the_menu: r.top >= 0 && r.bottom <= window.innerHeight }; }, sel);
++      await page.focus(sel); await page.waitForTimeout(300);
++      const focused = await page.evaluate((s) => { const el = document.querySelector(s), r = el.getBoundingClientRect(), nav = el.closest('nav'); const top = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
++        return { page_scrollY_after_focus: Math.round(window.scrollY), menu_scrolled_by_px: Math.round(nav.scrollTop), link_fully_in_view: r.top >= 0 && r.bottom <= window.innerHeight, link_is_topmost_at_its_position: !!top && (el.contains(top) || top.contains(el)) }; }, sel);
++      let mouse = 'not attempted: link not in view';
++      if (focused.link_fully_in_view && focused.link_is_topmost_at_its_position) { await page.click(sel); await page.waitForTimeout(700); mouse = await page.evaluate(() => ({ page_scrollY: Math.round(window.scrollY) })); }
++      await page.goto(`${OB}/help`, { waitUntil: 'networkidle' }); await settle(page); await page.evaluate(() => window.scrollTo(0, 1500)); await page.waitForTimeout(200);
++      await page.focus(sel); await page.keyboard.press('Enter'); await page.waitForTimeout(700);
++      v.menu_link_reach = { reader_scrolled_to: 1500, at_rest: start, after_keyboard_focus: focused, mouse_click: mouse, keyboard_enter: await page.evaluate(() => ({ page_scrollY: Math.round(window.scrollY) })) };
++      if (engine === 'chromium' && ((w === 1024 && h === 600) || (w === 1440 && h === 650))) { await page.goto(`${OB}/help`, { waitUntil: 'networkidle' }); await settle(page); await page.evaluate(() => window.scrollTo(0, 1500)); await page.focus(sel); await page.waitForTimeout(300); await mask(page); await page.screenshot({ path: `${out}/shots_${label}/A1-3_help_menu_${w}x${h}.png` }); }
++    }
++    if (v.end_of_text_link !== 'absent' && v.end_of_text_link.shown) {
++      const sel = '[data-testid="help-go-to-top-end"]';
++      await page.goto(`${OB}/help`, { waitUntil: 'networkidle' }); await settle(page);
++      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)); await page.waitForTimeout(300);
++      const bottom = await page.evaluate((s) => { const r = document.querySelector(s).getBoundingClientRect(); const last = [...document.querySelectorAll('main section')].pop().getBoundingClientRect(); return { page_scrollY_at_bottom: Math.round(window.scrollY), link_in_view_at_page_bottom: r.top >= 0 && r.bottom <= window.innerHeight, link_is_below_the_last_section: r.top >= last.bottom - 1 }; }, sel);
++      if (engine === 'chromium' && (w === 375 || w === 768)) { await mask(page); await page.screenshot({ path: `${out}/shots_${label}/A1-2_help_end_${w}.png` }); }
++      await page.click(sel); await page.waitForTimeout(700); const mouse = await page.evaluate(() => ({ page_scrollY: Math.round(window.scrollY), header_in_view: (() => { const r = document.querySelector('body header')?.getBoundingClientRect(); return !!r && r.top >= 0; })() }));
++      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)); await page.waitForTimeout(200); await page.focus(sel);
++      const focus = await page.evaluate((s) => { const cs = getComputedStyle(document.querySelector(s)); return `${cs.outlineStyle} ${cs.outlineWidth} ${cs.outlineColor}, offset ${cs.outlineOffset}`; }, sel);
++      await page.keyboard.press('Enter'); await page.waitForTimeout(700);
++      v.end_link_behavior = { ...bottom, mouse_click: mouse, keyboard_enter: await page.evaluate(() => ({ page_scrollY: Math.round(window.scrollY) })), focus_outline: focus };
++    }
++    res.views[`${w}x${h}`] = v;
++  }
++  await ctx.close(); return res;
++}
++
++// A1-4: signed-in Portal footer. Two page loads per session; widths by resizing.
++async function footer(browser, engine) {
++  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } }); const page = await ctx.newPage(); const res = {};
++  let overview = 0, loads = 0; page.on('request', (r) => { if (r.url().includes('/api/billing/overview')) overview++; });
++  page.on('framenavigated', (f) => { if (f === page.mainFrame() && /\/(dashboard|billing)$/.test(new URL(f.url()).pathname)) loads++; });
++  res.session = await A.signIn(page, 'pp', ROLE); await settle(page);
++  const measure = () => page.evaluate(() => { const cw = document.documentElement.clientWidth; const foot = document.querySelector('footer'); const ps = [...foot.querySelectorAll('p')]; const links = [...ps[1].children];
++    const lines = (el) => { const r = document.createRange(); r.selectNodeContents(el); const t = new Set(); for (const c of r.getClientRects()) if (c.width > 0.5) t.add(Math.round(c.top)); return t.size; };
++    const items = [ps[0], ...links].map((c) => { const r = c.getBoundingClientRect(); return { text: c.innerText.trim().slice(0, 40), lines: lines(c), top: Math.round(r.top), center_x: Math.round(r.left + r.width / 2) }; });
++    const tops = new Set(items.slice(1).map((i) => i.top));
++    return { path: location.pathname, sideways_overflow_px: document.documentElement.scrollWidth - cw, links_layout: tops.size === 1 ? 'one row' : tops.size === links.length ? 'stacked one per line' : 'broken across lines',
++      any_item_breaks_across_lines: items.some((i) => i.lines > 1), centered: items.every((i) => Math.abs(i.center_x - cw / 2) <= 2), text_color: getComputedStyle(ps[0]).color, items }; });
++  for (const path of ['/dashboard', '/billing']) {
++    if (new URL(page.url()).pathname !== path) { await page.goto(`${PP}${path}`, { waitUntil: 'networkidle' }); await settle(page); }
++    res[path] = {};
++    for (const w of [767, 768, 769, 1023, 1024]) { await at(page, w); res[path][w] = await measure();
++      if (engine === 'chromium' && (w === 768 || w === 1024)) { await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)); await page.waitForTimeout(200); await mask(page); await page.screenshot({ path: `${out}/shots_${label}/A1-4_footer${path.replace('/', '_')}_${w}.png` }); } }
++  }
++  await page.waitForTimeout(500);
++  R.portal_page_loads[engine] = loads; R.billing_overview_requests[engine] = overview;
++  await ctx.close(); return res;
++}
++
++const browsers = [['chromium', await chromium.launch({ channel: 'chrome' })]]; if (withWebkit) browsers.push(['webkit', await webkit.launch()]);
++try {
++  PRIVATE = await A.privateStrings();
++  for (const [engine, b] of browsers) { R.engines[engine] = b.version();
++    (R.items.opening_page ??= {})[engine] = await openingPage(b, engine);
++    (R.items.help ??= {})[engine] = await help(b, engine);
++    (R.items.signed_in_footer ??= {})[engine] = await footer(b, engine); }
++  R.served = A.servedReport();
++} catch (e) { R.error = clean(String(e?.message ?? e).split('\n')[0]).slice(0, 300); }
++finally { for (const [, b] of browsers) await b.close(); }
++R.sessions = { ...A.counters, total_sign_ins: A.counters.password_sign_ins + A.counters.token_sign_ins };
++R.finished = new Date().toISOString();
++writeFileSync(`${out}/measure_a1_${label}.json`, JSON.stringify(JSON.parse(clean(JSON.stringify(R))), null, 1));
++console.log(JSON.stringify({ label, error: R.error ?? null, sessions: R.sessions, portal_page_loads: R.portal_page_loads, billing_overview_requests: R.billing_overview_requests }));
++process.exit(R.error ? 1 : 0);
+diff --git a/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/measure_a2.mjs b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/measure_a2.mjs
+new file mode 100644
+index 0000000..9613a55
+--- /dev/null
++++ b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/measure_a2.mjs
+@@ -0,0 +1,252 @@
++#!/usr/bin/env node
++// ABM007_FINAL RWO-01 add-on A2 — engineering measurements for A2-1 and A2-2 on the SCRATCH proof pair
++// (OwedBook 3100; the Portal on 3101 is started by the serve tool but NO Portal page is loaded by this script).
++// Claims for QA to test, never results.
++// Usage (Portal root): node measure_a2.mjs <out_dir> <label> [--webkit]
++// Reuses ../../E2/tools/scratch_proof/auth.mjs unchanged (SCRATCH verified from the listening server before any sign-in).
++// Only navigation, focus and reading. No form is submitted except sign-in. The only things activated are the Help
++// in-page links ("Go to the Top"). The Add control and the password controls are focused, never pressed or typed in.
++// Sessions per run: 1 (OwedBook Owner A in Chromium); with --webkit, 2 (the same again in WebKit).
++//
++// How a focus outline is judged (A2-2): the control is focused with real key presses (Shift+Tab then Tab, or Tab from
++// its neighbour), scrolled to the middle of the window where the page allows it, and then
++//   (1) geometry: the outline box (control box grown by outline offset + width) is compared with the window and with
++//       every ancestor that clips (overflow other than visible); any cut is reported in px per side;
++//   (2) pixels: a screenshot of the focused control is read back, and along each of the four sides the share of the
++//       side's length that carries the outline color is reported (the corner 6px are left out because corners are round).
++// A side counts as whole when geometry shows no cut and at least 95% of its length carries the outline color.
++// Where a control draws its focus ring as a box shadow (the shared field and button style) the same check is made
++// on the ring: its color and size are read from the computed box shadow.
++// Contents menu: the reader is put at page scroll 1500, so the menu is stuck 16px from the top of the window and the
++// window edge is not near any link; the first link is reached with Shift+Tab from the second, the rest with Tab.
++process.env.PLAYWRIGHT_BROWSERS_PATH ||= '/home/moose/APBM007B_REPAIR_R2/browsers';
++import { createRequire } from 'node:module'; import { mkdirSync, writeFileSync } from 'node:fs';
++const PORTAL = '/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1';
++const { chromium, webkit } = createRequire(`${PORTAL}/package.json`)('playwright');
++const A = await import(new URL('../../E2/tools/scratch_proof/auth.mjs', import.meta.url));
++const out = process.argv[2], label = process.argv[3]; const withWebkit = process.argv.includes('--webkit');
++if (!out || !label) { console.error('usage: measure_a2.mjs <out_dir> <label> [--webkit]'); process.exit(2); }
++const SHOTS = `${out}/shots_a2_${label}`; mkdirSync(SHOTS, { recursive: true });
++const { ob: OB } = A.SITES; const ROLE = 'ENGINEERING_OWNER_A';
++const EMAIL = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g; let PRIVATE = [];
++const clean = (s) => { let t = String(s ?? '').replace(EMAIL, (m) => (/pharmacybooks\.com$/.test(m) ? m : '[email]')); for (const p of PRIVATE) t = t.split(p).join('[name]'); return t; };
++const mask = (page) => page.evaluate((priv) => {
++  const hide = (v) => { for (const p of priv) v = v.split(p).join('[name hidden]'); return v; };
++  const rx = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g; const keep = (m) => /pharmacybooks\.com$/.test(m);
++  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let t;
++  while ((t = w.nextNode())) { const v = hide(t.nodeValue.replace(rx, (m) => (keep(m) ? m : '[email hidden]'))); if (v !== t.nodeValue) t.nodeValue = v; }
++  for (const e of document.querySelectorAll('[title]')) e.setAttribute('title', hide(e.getAttribute('title').replace(rx, '[email hidden]')));
++}, PRIVATE);
++// Fields that could show a fixture person's details are covered in every screenshot.
++const coverFields = (page) => [page.locator('input:not([type="password"])'), page.locator('textarea')];
++const settle = async (page) => { await page.waitForLoadState('networkidle').catch(() => {}); await page.waitForTimeout(350); };
++const at = async (page, w, h = 900) => { await page.setViewportSize({ width: w, height: h }); await page.waitForTimeout(300); };
++const scrollInstant = (page, y) => page.evaluate((yy) => window.scrollTo({ top: yy === 'bottom' ? document.body.scrollHeight : yy, behavior: 'instant' }), y);
++const waitScrollStill = async (page) => { let last = -1; for (let i = 0; i < 40; i++) { const y = await page.evaluate(() => Math.round(window.scrollY)); if (y === last) return y; last = y; await page.waitForTimeout(120); } return last; };
++const R = { label, started: new Date().toISOString(), engines: {}, items: {}, portal_pages_loaded: 0 };
++
++// Real keyboard focus: land on the element with Tab, so :focus-visible is the browser's own decision.
++async function kbFocus(page, h) {
++  await page.mouse.move(2, 2);
++  await h.evaluate((el) => el.focus({ preventScroll: true }));
++  await page.keyboard.press('Shift+Tab'); await page.keyboard.press('Tab'); await page.waitForTimeout(150);
++  let how = 'keyboard (Shift+Tab, then Tab back onto the control)';
++  if (!(await h.evaluate((el) => document.activeElement === el))) { await h.evaluate((el) => el.focus({ preventScroll: true })); how = 'script focus after key presses (Tab did not return to the control in this engine)'; }
++  return { how, is_focused: await h.evaluate((el) => document.activeElement === el), focus_visible: await h.evaluate((el) => el.matches(':focus-visible')) };
++}
++
++// Reads two PNGs (focused, not focused) in a blank helper page and reports outline coverage per side.
++async function readRing(helper, focusedPng, plainPng, g) {
++  return helper.evaluate(async ({ a, b, g }) => {
++    const load = (b64) => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = `data:image/png;base64,${b64}`; });
++    const data = async (b64) => { const i = await load(b64); const c = document.createElement('canvas'); c.width = i.width; c.height = i.height; const x = c.getContext('2d'); x.drawImage(i, 0, 0); return x.getImageData(0, 0, i.width, i.height); };
++    const F = await data(a), P = await data(b); const W = F.width, H = F.height;
++    const px = (D, x, y) => { const k = (y * W + x) * 4; return [D.data[k], D.data[k + 1], D.data[k + 2]]; };
++    const near = (p, q, t) => Math.abs(p[0] - q[0]) + Math.abs(p[1] - q[1]) + Math.abs(p[2] - q[2]) <= t;
++    const hit = (x, y) => { if (x < 0 || y < 0 || x >= W || y >= H) return [false, false]; const f = px(F, x, y); return [near(f, g.color, 90), !near(f, px(P, x, y), 40)]; };
++    // band: the strip where the outline is drawn, one extra pixel each way for sub-pixel boxes
++    const lo = g.offset - 1, hi = g.offset + g.width + 1; const sides = {};
++    const run = (name, from, to, probe) => { let n = 0, color = 0, changed = 0; for (let i = Math.ceil(from) + 6; i <= Math.floor(to) - 6; i++) { n++; let c = false, d = false; for (let t = lo; t <= hi; t++) { const [cc, dd] = probe(i, t); c ||= cc; d ||= dd; } if (c) color++; if (d) changed++; }
++      sides[name] = { length_checked_px: n, with_outline_color_pct: n ? Math.round((color / n) * 1000) / 10 : 0, changed_by_focus_pct: n ? Math.round((changed / n) * 1000) / 10 : 0 }; };
++    run('top', g.left, g.right, (i, t) => hit(i, Math.round(g.top) - 1 - t));
++    run('bottom', g.left, g.right, (i, t) => hit(i, Math.round(g.bottom) + t));
++    run('left', g.top, g.bottom, (i, t) => hit(Math.round(g.left) - 1 - t, i));
++    run('right', g.top, g.bottom, (i, t) => hit(Math.round(g.right) + t, i));
++    return sides;
++  }, { a: focusedPng.toString('base64'), b: plainPng.toString('base64'), g });
++}
++
++// Focus outline on all four sides. `center`: scroll the control to the middle of the window first.
++async function ringCheck(page, helper, h, name, { center = true, shot = null, alreadyFocused = null } = {}) {
++  if (center) { await h.evaluate((el) => el.scrollIntoView({ block: 'center', inline: 'center', behavior: 'instant' })); await page.waitForTimeout(250); }
++  const focus = alreadyFocused ?? await kbFocus(page, h);
++  if (center) { await h.evaluate((el) => el.scrollIntoView({ block: 'center', inline: 'center', behavior: 'instant' })); await page.waitForTimeout(250); }
++  const geo = await h.evaluate((el) => {
++    const r = el.getBoundingClientRect(), cs = getComputedStyle(el); const ow = parseFloat(cs.outlineWidth) || 0, oo = parseFloat(cs.outlineOffset) || 0; const grow = ow + oo;
++    const O = { left: r.left - grow, right: r.right + grow, top: r.top - grow, bottom: r.bottom + grow };
++    let rgb = (cs.outlineColor.match(/[\d.]+/g) || []).map(Number); let drawn = 'outline'; let pw = ow, po = oo;
++    if (cs.outlineStyle === 'none' || ow === 0 || (rgb.length === 4 && rgb[3] === 0)) {   // focus ring drawn as a box shadow
++      const parts = cs.boxShadow.split(/,(?![^(]*\))/).map((t) => { const c = (t.match(/rgba?\(([^)]+)\)/) || [, ''])[1].split(',').map(Number); const n = t.replace(/rgba?\([^)]+\)/, '').trim().split(/\s+/).map(parseFloat); return { c, spread: n[3] || 0, inset: /inset/.test(t) }; })
++        .filter((x) => !x.inset && x.spread > 0 && (x.c.length === 3 || x.c[3] > 0)).sort((a, b) => b.spread - a.spread);
++      if (parts.length) { drawn = 'ring (box shadow)'; rgb = parts[0].c; po = parts[1]?.spread ?? 0; pw = parts[0].spread - po; O.left = r.left - parts[0].spread; O.right = r.right + parts[0].spread; O.top = r.top - parts[0].spread; O.bottom = r.bottom + parts[0].spread; }
++    }
++    rgb = rgb.slice(0, 3);
++    const cut = { top: 0, right: 0, bottom: 0, left: 0 }; const clippers = [];
++    const take = (box, who) => { const c = { top: Math.max(0, box.top - O.top), left: Math.max(0, box.left - O.left), bottom: Math.max(0, O.bottom - box.bottom), right: Math.max(0, O.right - box.right) };
++      if (c.top + c.left + c.bottom + c.right > 0.01) clippers.push({ who, cut_px: Object.fromEntries(Object.entries(c).map(([k, v]) => [k, Math.round(v * 100) / 100])) }); for (const k in c) cut[k] = Math.max(cut[k], Math.round(c[k] * 100) / 100); };
++    let n = 0; for (let p = el.parentElement; p && p !== document.documentElement && p !== document.body; p = p.parentElement) { const s = getComputedStyle(p); if (s.overflowX !== 'visible' || s.overflowY !== 'visible') { n++; const b = p.getBoundingClientRect();
++      take({ top: b.top + p.clientTop, left: b.left + p.clientLeft, bottom: b.top + p.clientTop + p.clientHeight, right: b.left + p.clientLeft + p.clientWidth }, `${p.tagName.toLowerCase()}${p.getAttribute('aria-label') ? `[${p.getAttribute('aria-label')}]` : ''} (overflow ${s.overflowX}/${s.overflowY})`); } }
++    take({ top: 0, left: 0, bottom: window.innerHeight, right: document.documentElement.clientWidth }, 'window');
++
++    return { control_box: { left: Math.round(r.left * 100) / 100, right: Math.round(r.right * 100) / 100, top: Math.round(r.top * 100) / 100, bottom: Math.round(r.bottom * 100) / 100, width: Math.round(r.width * 100) / 100, height: Math.round(r.height * 100) / 100 },
++      window: { width: document.documentElement.clientWidth, height: window.innerHeight }, control_center_offset_from_window_center_px: { x: Math.round(r.left + r.width / 2 - document.documentElement.clientWidth / 2), y: Math.round(r.top + r.height / 2 - window.innerHeight / 2) },
++      outline: drawn === 'outline' ? `${cs.outlineStyle} ${cs.outlineWidth} ${cs.outlineColor}, offset ${cs.outlineOffset}` : `ring drawn as a box shadow: ${pw}px rgb(${rgb.join(', ')}), offset ${po}px`, outline_px: { width: pw, offset: po, color: rgb }, clipping_ancestors_checked: n, cut_px: cut, clippers };
++  });
++  const pad = geo.outline_px.width + geo.outline_px.offset + 8; const b = geo.control_box;
++  const clip = { x: Math.max(0, Math.floor(b.left - pad)), y: Math.max(0, Math.floor(b.top - pad)) }; clip.width = Math.min(geo.window.width, Math.ceil(b.right + pad)) - clip.x; clip.height = Math.min(geo.window.height, Math.ceil(b.bottom + pad)) - clip.y;
++  let pixels = 'not read: control outside the window';
++  if (clip.width > 4 && clip.height > 4) {
++    const opt = { clip, mask: coverFields(page), animations: 'disabled', caret: 'hide' };
++    const focused = await page.screenshot(opt);
++    if (shot) await page.screenshot({ ...opt, path: `${SHOTS}/${shot}.png` });
++    await h.evaluate((el) => el.blur()); await page.waitForTimeout(150);
++    const plain = await page.screenshot(opt);
++    pixels = await readRing(helper, focused, plain, { left: b.left - clip.x, right: b.right - clip.x, top: b.top - clip.y, bottom: b.bottom - clip.y, width: geo.outline_px.width, offset: geo.outline_px.offset, color: geo.outline_px.color });
++  }
++  const whole = {}; for (const s of ['top', 'right', 'bottom', 'left']) whole[s] = typeof pixels === 'object' && geo.cut_px[s] === 0 && pixels[s].with_outline_color_pct >= 95;
++  delete geo.outline_px;
++  return { control: name, focus, ...geo, pixels, side_whole: whole, all_four_sides_whole: Object.values(whole).every(Boolean) };
++}
++
++// One screen pixel, read back from a 1x1 screenshot (to prove the surface color under a link).
++async function pixelAt(page, helper, x, y) {
++  const png = await page.screenshot({ clip: { x: Math.round(x), y: Math.round(y), width: 2, height: 2 } });
++  return helper.evaluate(async (b64) => { const i = await new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = `data:image/png;base64,${b64}`; }); const c = document.createElement('canvas'); c.width = 2; c.height = 2; const x = c.getContext('2d'); x.drawImage(i, 0, 0); const d = x.getImageData(0, 0, 1, 1).data; return `rgb(${d[0]}, ${d[1]}, ${d[2]})`; }, png.toString('base64'));
++}
++
++const TOPS = 'a[href="#top"]';
++// A2-1: every "Go to the Top" link on Help: where it is, how it looks, its contrast, and that it returns to the top.
++async function help(page, helper, engine) {
++  const res = { views: {} };
++  for (const [w, h] of [[375, 900], [768, 900], [1024, 600], [1440, 900]]) {
++    await at(page, w, h); await page.goto(`${OB}/help`, { waitUntil: 'networkidle' }); await settle(page); await mask(page);
++    const v = await page.evaluate((sel) => {
++      const lum = (c) => { const [r, g, b] = c.map((x) => { x /= 255; return x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4; }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
++      const nums = (s) => (s.match(/[\d.]+/g) || []).map(Number);
++      const surface = (el) => { for (let p = el; p; p = p.parentElement) { const c = nums(getComputedStyle(p).backgroundColor); if (c.length === 3 || (c.length === 4 && c[3] > 0)) return { color: c.slice(0, 3), el: p }; } return { color: [255, 255, 255], el: null }; };
++      const nav = document.querySelector('nav[aria-label="On this page"]'); const sections = [...document.querySelectorAll('section[id]')]; const ncs = getComputedStyle(nav);
++      const links = [...document.querySelectorAll(sel)].map((a) => { const r = a.getBoundingClientRect(), cs = getComputedStyle(a); const s = surface(a); const fg = nums(cs.color).slice(0, 3); const L1 = lum(fg), L2 = lum(s.color); const sec = a.closest('section[id]');
++        const where = a.closest('nav') ? 'contents menu' : sec ? `end of article ${sections.indexOf(sec) + 1} (${sec.id})` : 'after the last article, directly on the page';
++        return { where, last_thing_in_its_article: sec ? sec.lastElementChild === a.parentElement : null, words: a.innerText.trim(), shown: r.width > 0 && r.height > 0, target_height: Math.round(r.height * 100) / 100, target_width: Math.round(r.width * 100) / 100, font_size: cs.fontSize,
++          color: `rgb(${fg.join(', ')})`, underline: cs.textDecorationLine, surface: s.el ? (s.el.matches('section, nav') ? 'white card' : s.el === document.body ? 'the page' : s.el.tagName.toLowerCase()) : 'none found', surface_color: `rgb(${s.color.join(', ')})`,
++          contrast_ratio: Math.round(((Math.max(L1, L2) + 0.05) / (Math.min(L1, L2) + 0.05)) * 100) / 100 }; });
++      const shown = links.filter((l) => l.shown);
++      return { window: `${document.documentElement.clientWidth} x ${window.innerHeight}`, sideways_overflow_px: document.documentElement.scrollWidth - document.documentElement.clientWidth,
++        go_to_top_links: { total_in_page: links.length, shown: shown.length, shown_in_articles: shown.filter((l) => l.where.startsWith('end of article')).length, shown_in_contents_menu: shown.filter((l) => l.where === 'contents menu').length, shown_after_last_article: shown.filter((l) => l.where.startsWith('after')).length,
++          articles: sections.length, articles_ending_with_the_link: sections.filter((s) => s.lastElementChild?.querySelector(sel)).length,
++          lowest_contrast_of_shown: shown.length ? Math.min(...shown.map((l) => l.contrast_ratio)) : null, smallest_target_height_of_shown: shown.length ? Math.min(...shown.map((l) => l.target_height)) : null, each: links },
++        contents_menu: { links: nav.querySelectorAll('a').length, position: nav.getBoundingClientRect().right <= sections[0].getBoundingClientRect().left + 1 ? 'beside the text' : 'above the text', sticky: ncs.position === 'sticky', box_height: Math.round(nav.getBoundingClientRect().height), content_height: nav.scrollHeight, overflow_y: ncs.overflowY,
++          scrolls_inside_itself: nav.scrollHeight > nav.clientHeight + 1 && /auto|scroll/.test(ncs.overflowY) } }; }, TOPS);
++    // Behavior and outline for the first, a middle and the last shown link.
++    const all = await page.$$(TOPS); const shownIdx = []; for (let i = 0; i < all.length; i++) if (await all[i].evaluate((el) => { const r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0; })) shownIdx.push(i);
++    const pick = [...new Set([shownIdx[0], shownIdx[Math.floor(shownIdx.length / 2)], shownIdx[shownIdx.length - 1]])].filter((i) => i !== undefined);
++    v.checked_links = [];
++    for (const i of pick) { const hnd = all[i]; const c = { link: v.go_to_top_links.each[i].where };
++      const inMenu = c.link === 'contents menu';
++      if (inMenu) await scrollInstant(page, 1500); else await hnd.evaluate((el) => el.scrollIntoView({ block: 'center', behavior: 'instant' }));
++      await page.waitForTimeout(250);
++      const box = await hnd.evaluate((el) => { const r = el.getBoundingClientRect(); const top = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2); return { x: r.left + r.width / 2, y: r.top + r.height / 2, left: r.left, in_window: r.top >= 0 && r.bottom <= window.innerHeight, topmost: !!top && (el.contains(top) || top.contains(el)), scrollY: Math.round(window.scrollY) }; });
++      c.surface_pixel_beside_link = box.in_window ? await pixelAt(page, helper, Math.max(0, box.left - 6), box.y) : 'link not in the window';
++      if (box.in_window && box.topmost) { await page.mouse.click(box.x, box.y); const y = await waitScrollStill(page);
++        c.mouse_click = { reader_was_at_scrollY: box.scrollY, page_scrollY_after: y, header_in_view: await page.evaluate(() => { const r = document.querySelector('body header')?.getBoundingClientRect(); return !!r && r.top >= 0 && r.bottom > 0; }) }; }
++      else c.mouse_click = { not_possible: 'link not in the window or covered', reader_was_at_scrollY: box.scrollY };
++      await page.mouse.move(2, 2);
++      if (inMenu) await scrollInstant(page, 1500); else await hnd.evaluate((el) => el.scrollIntoView({ block: 'center', behavior: 'instant' }));
++      await page.waitForTimeout(250); const before = await page.evaluate(() => Math.round(window.scrollY));
++      const f = await kbFocus(page, hnd); await page.keyboard.press('Enter'); const y2 = await waitScrollStill(page);
++      c.keyboard_enter = { focus: f.how, reader_was_at_scrollY: before, page_scrollY_after: y2, header_in_view: await page.evaluate(() => { const r = document.querySelector('body header')?.getBoundingClientRect(); return !!r && r.top >= 0 && r.bottom > 0; }) };
++      if (inMenu) await scrollInstant(page, 1500);
++      c.focus_outline = await ringCheck(page, helper, hnd, `Go to the Top, ${c.link}`, { center: !inMenu, shot: engine === 'chromium' ? `A2-1_link_focus_${w}_${c.link.replace(/[^a-z0-9]+/gi, '_').slice(0, 30)}` : null });
++      v.checked_links.push(c); }
++    if (engine === 'chromium' && (w === 375 || w === 1440)) {
++      await page.goto(`${OB}/help`, { waitUntil: 'networkidle' }); await settle(page); await mask(page);
++      const t = (await page.$$(TOPS)); const first = t.find(Boolean); if (first) { await page.evaluate(() => document.querySelector('section[id]').scrollIntoView({ block: 'start', behavior: 'instant' })); await page.waitForTimeout(250); await page.screenshot({ path: `${SHOTS}/A2-1_help_first_article_${w}.png` }); }
++      await scrollInstant(page, 'bottom'); await page.waitForTimeout(300); await page.screenshot({ path: `${SHOTS}/A2-1_help_page_end_${w}.png` });
++    }
++    res.views[`${w}x${h}`] = v;
++  }
++  return res;
++}
++
++// A2-2 (a): contents menu links inside the scrolling menu box.
++async function menuFocus(page, helper, engine) {
++  const res = {};
++  for (const [w, h] of [[1440, 900], [1024, 600]]) {
++    await at(page, w, h); await page.goto(`${OB}/help`, { waitUntil: 'networkidle' }); await settle(page); await mask(page);
++    await scrollInstant(page, 1500); await page.waitForTimeout(300);
++    const navInfo = () => page.evaluate(() => { const n = document.querySelector('nav[aria-label="On this page"]'); const r = n.getBoundingClientRect(); return { top: Math.round(r.top), bottom: Math.round(r.bottom), box_height: n.clientHeight, content_height: n.scrollHeight, scrolled_by: Math.round(n.scrollTop) }; });
++    const v = { window: `${w} x ${h}`, reader_at_page_scrollY: 1500, menu_at_start: await navInfo(), links: [] };
++    const links = await page.$$('nav[aria-label="On this page"] a'); let first = null;
++    for (let i = 0; i < links.length; i++) { const hnd = links[i];
++      let focus;
++      if (i === 0) { await page.mouse.move(2, 2); await links[1].evaluate((el) => el.focus({ preventScroll: true })); await page.keyboard.press('Shift+Tab'); await page.waitForTimeout(250);
++        const ok = await hnd.evaluate((el) => document.activeElement === el); focus = { how: ok ? 'keyboard (Shift+Tab from the link below)' : 'Shift+Tab did not land on this link', is_focused: ok, focus_visible: await hnd.evaluate((el) => el.matches(':focus-visible')) }; first = focus; }
++      else { await links[i - 1].evaluate((el) => el.focus({ preventScroll: true })); await page.waitForTimeout(60); const pre = await navInfo();
++        await page.keyboard.press('Tab'); await page.waitForTimeout(250);
++        const ok = await hnd.evaluate((el) => document.activeElement === el);
++        focus = { how: ok ? 'keyboard (Tab from the link above)' : 'Tab did not land on this link', is_focused: ok, focus_visible: await hnd.evaluate((el) => el.matches(':focus-visible')), menu_scrolled_by_before_tab: pre.scrolled_by }; }
++      const afterTab = await hnd.evaluate((el) => { const n = el.closest('nav'), r = el.getBoundingClientRect(), b = n.getBoundingClientRect(); const top = b.top + n.clientTop, bottom = top + n.clientHeight;
++        return { menu_top: Math.round(b.top), menu_scrolled_by: Math.round(n.scrollTop), link_fully_inside_menu_box: r.top >= top - 0.5 && r.bottom <= bottom + 0.5, link_fully_in_window: r.top >= 0 && r.bottom <= window.innerHeight, page_scrollY: Math.round(window.scrollY) }; });
++      const words = (await hnd.evaluate((el) => el.innerText.trim())).slice(0, 40);
++      const ring = await ringCheck(page, helper, hnd, `contents menu link ${i + 1}`, { center: false, alreadyFocused: focus, shot: engine === 'chromium' && (i === 0 || i === links.length - 1) ? `A2-2_menu_link_${i + 1}_${w}x${h}` : null });
++      v.links.push({ n: i + 1, words, after_tab_before_any_scrolling_by_the_tool: afterTab, side_whole: ring.side_whole, all_four_sides_whole: ring.all_four_sides_whole, cut_px: ring.cut_px, clippers: ring.clippers, pixels: ring.pixels, control_box: ring.control_box, outline: ring.outline, focus: ring.focus }); }
++    v.first_link_focus = first; v.menu_at_end = await navInfo();
++    v.summary = { links: v.links.length, all_reached_by_tab: v.links.every((l) => l.focus.is_focused), all_focus_visible: v.links.every((l) => l.focus.focus_visible), all_scrolled_into_view_inside_menu: v.links.every((l) => l.after_tab_before_any_scrolling_by_the_tool.link_fully_inside_menu_box && l.after_tab_before_any_scrolling_by_the_tool.link_fully_in_window),
++      links_with_all_four_sides_whole: v.links.filter((l) => l.all_four_sides_whole).length, menu_scrolled_during_tabbing_px: v.menu_at_end.scrolled_by - v.menu_at_start.scrolled_by };
++    if (engine === 'chromium') { await links[links.length - 1].evaluate((el) => el.focus({ preventScroll: true })); await page.keyboard.press('Shift+Tab'); await page.keyboard.press('Tab'); await page.waitForTimeout(250); await page.screenshot({ path: `${SHOTS}/A2-2_help_menu_last_link_focused_${w}x${h}.png`, mask: coverFields(page) }); }
++    res[`${w}x${h}`] = v;
++  }
++  return res;
++}
++
++// A2-2 (b) and (c): the Add control on billing and a password field with its show-or-hide button on Profile, at 375.
++async function controls375(page, helper, engine) {
++  const res = {}; await at(page, 375, 900);
++  await page.goto(`${OB}/admin-portal/billing`, { waitUntil: 'networkidle' }); await settle(page); await mask(page);
++  const add = await page.$('[data-testid="add-store-handoff"]');
++  res.billing_375 = { path: await page.evaluate(() => location.pathname), sideways_overflow_px: await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth) };
++  if (add) { res.billing_375.add_control_words = (await add.evaluate((el) => el.innerText.trim())).slice(0, 40); res.billing_375.add_control = await ringCheck(page, helper, add, 'Add control', { shot: engine === 'chromium' ? 'A2-2_billing_add_375' : null });
++    if (engine === 'chromium') { await kbFocus(page, add); await add.evaluate((el) => el.scrollIntoView({ block: 'center', behavior: 'instant' })); await page.waitForTimeout(250); await page.screenshot({ path: `${SHOTS}/A2-2_billing_add_375_window.png`, mask: coverFields(page) }); await add.evaluate((el) => el.blur()); } }
++  else res.billing_375.add_control = 'not shown for this role or state';
++  await page.goto(`${OB}/profile`, { waitUntil: 'networkidle' }); await settle(page); await mask(page);
++  res.profile_375 = { path: await page.evaluate(() => location.pathname), sideways_overflow_px: await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth) };
++  const field = await page.$('input[type="password"]');
++  if (field) { const toggle = await field.evaluateHandle((el) => el.parentElement.querySelector('button'));
++    res.profile_375.password_field = await ringCheck(page, helper, field, 'password field (first)', { shot: engine === 'chromium' ? 'A2-2_profile_password_field_375' : null });
++    res.profile_375.show_or_hide_button_words = await toggle.evaluate((el) => el.getAttribute('aria-label'));
++    res.profile_375.show_or_hide_button = await ringCheck(page, helper, toggle.asElement(), 'show-or-hide button', { shot: engine === 'chromium' ? 'A2-2_profile_password_toggle_375' : null });
++    if (engine === 'chromium') { await kbFocus(page, toggle.asElement()); await toggle.asElement().evaluate((el) => el.scrollIntoView({ block: 'center', behavior: 'instant' })); await page.waitForTimeout(250); await page.screenshot({ path: `${SHOTS}/A2-2_profile_password_toggle_375_window.png`, mask: coverFields(page) }); await toggle.asElement().evaluate((el) => el.blur()); }
++    res.profile_375.password_fields_left_empty = await page.evaluate(() => [...document.querySelectorAll('input[type="password"]')].every((i) => i.value === '')); }
++  else res.profile_375.password_field = 'no password field found';
++  return res;
++}
++
++const browsers = [['chromium', await chromium.launch({ channel: 'chrome' })]]; if (withWebkit) browsers.push(['webkit', await webkit.launch()]);
++try {
++  PRIVATE = await A.privateStrings();
++  for (const [engine, b] of browsers) { R.engines[engine] = b.version();
++    const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } }); const page = await ctx.newPage(); const helper = await ctx.newPage(); await page.bringToFront();
++    page.on('framenavigated', (f) => { if (f === page.mainFrame() && f.url().startsWith(A.SITES.pp)) R.portal_pages_loaded++; });
++    (R.sessions_how ??= {})[engine] = await A.signIn(page, 'ob', ROLE); await settle(page);
++    (R.items.help_go_to_top ??= {})[engine] = await help(page, helper, engine);
++    (R.items.contents_menu_focus ??= {})[engine] = await menuFocus(page, helper, engine);
++    (R.items.controls_375 ??= {})[engine] = await controls375(page, helper, engine);
++    await ctx.close(); }
++  R.served = A.servedReport();
++} catch (e) { R.error = clean(String(e?.stack ?? e).split('\n').slice(0, 3).join(' | ')).replace(/https?:\/\/\S+/g, '[url]').slice(0, 500); }
++finally { for (const [, b] of browsers) await b.close(); }
++R.sessions = { ...A.counters, total_sign_ins: A.counters.password_sign_ins + A.counters.token_sign_ins };
++R.finished = new Date().toISOString();
++writeFileSync(`${out}/measure_a2_${label}.json`, JSON.stringify(JSON.parse(clean(JSON.stringify(R))), null, 1));
++console.log(JSON.stringify({ label, error: R.error ?? null, sessions: R.sessions, portal_pages_loaded: R.portal_pages_loaded }));
++process.exit(R.error ? 1 : 0);
+diff --git a/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/driver_a3.mjs b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/driver_a3.mjs
+new file mode 100644
+index 0000000..6b95c1a
+--- /dev/null
++++ b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/driver_a3.mjs
+@@ -0,0 +1,55 @@
++#!/usr/bin/env node
++// ABM007_FINAL RWO-01 add-on A3 — browser driver for the SCRATCH proof pair (OwedBook 3100 only; no Portal page).
++// Test tooling only. Claims for QA to test, never results.
++//
++// Why a driver: the add-on allows 6 sign-in sessions, and the work needs "before", cause-finding and "after" in three
++// engines. This process signs in ONCE per engine (Firefox, Chrome, WebKit) as the fixture Owner A through
++// ../../E2/tools/scratch_proof/auth.mjs (unchanged; SCRATCH verified from the listening server before each sign-in),
++// then keeps the three pages open and runs small step files against them. The signed-in pages stay valid when the
++// local build is stopped and a new build is started on the same port, so the same three sessions serve before and after.
++// Nothing is saved: no cookie, token or session state is written anywhere; closing this process ends the sessions.
++//
++// Usage (Portal root): node driver_a3.mjs <work_dir> [engines=firefox,chromium,webkit]
++//   step files:  <work_dir>/cmd/<name>.mjs   exporting  default async ({ pages, OB, log, verifyServed }) => result
++//   results:     <work_dir>/res/<name>.json  (emails and fixture names masked)
++//   stop:        create <work_dir>/cmd/quit
++// A request to the Portal origin is counted and reported in every result (expected: 0).
++process.env.PLAYWRIGHT_BROWSERS_PATH ||= '/home/moose/APBM007B_REPAIR_R2/browsers';
++import { createRequire } from 'node:module'; import { mkdirSync, writeFileSync, existsSync, readdirSync } from 'node:fs'; import { pathToFileURL } from 'node:url';
++const PORTAL = '/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1';
++const pw = createRequire(`${PORTAL}/package.json`)('playwright');
++const AUTH = new URL('../../E2/tools/scratch_proof/auth.mjs', import.meta.url).href;
++const A = await import(AUTH);
++const work = process.argv[2]; const engines = (process.argv[3] || 'firefox,chromium,webkit').split(',');
++if (!work) { console.error('usage: driver_a3.mjs <work_dir> [engines]'); process.exit(2); }
++mkdirSync(`${work}/cmd`, { recursive: true }); mkdirSync(`${work}/res`, { recursive: true });
++const { ob: OB, pp: PP } = A.SITES; const ROLE = 'ENGINEERING_OWNER_A';
++const EMAIL = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g; const PRIVATE = await A.privateStrings();
++const clean = (s) => { let t = String(s ?? '').replace(EMAIL, (m) => (/pharmacybooks\.com$/.test(m) ? m : '[email]')); for (const p of PRIVATE) t = t.split(p).join('[name]'); return t.replace(/https?:\/\/(?!localhost)\S+/g, '[url]'); };
++const pages = {}; const browsers = {}; const state = { started: new Date().toISOString(), engines: {}, sign_in: {}, portal_requests: 0 };
++for (const e of engines) {
++  const b = await pw[e].launch(e === 'chromium' ? { channel: 'chrome' } : {}); browsers[e] = b; state.engines[e] = b.version();
++  const ctx = await b.newContext({ viewport: { width: 1440, height: 900 } }); const page = await ctx.newPage();
++  page.on('request', (r) => { if (r.url().startsWith(PP)) state.portal_requests++; });
++  try { state.sign_in[e] = await A.signIn(page, 'ob', ROLE); } catch (err) { state.sign_in[e] = `FAILED: ${clean(String(err?.message ?? err).split('\n')[0]).slice(0, 200)}`; }
++  pages[e] = page;
++}
++state.sessions = { ...A.counters, total_sign_ins: A.counters.password_sign_ins + A.counters.token_sign_ins }; state.served_at_sign_in = A.servedReport();
++// Fresh check of the listening server (after a build swap): a new copy of the auth module, no sign-in.
++let n = 0; const verifyServed = async () => { const M = await import(`${AUTH}?v=${++n}`); await M.assertServedScratch('ob'); return M.servedReport(); };
++writeFileSync(`${work}/res/_ready.json`, JSON.stringify(JSON.parse(clean(JSON.stringify(state))), null, 1)); console.log('ready', JSON.stringify(state.sessions));
++const done = new Set();
++for (;;) {
++  if (existsSync(`${work}/cmd/quit`)) break;
++  for (const f of readdirSync(`${work}/cmd`).filter((x) => x.endsWith('.mjs') && !done.has(x)).sort()) {
++    done.add(f); const name = f.replace(/\.mjs$/, ''); const log = []; let result, error = null; const t0 = Date.now();
++    try { const mod = await import(`${pathToFileURL(`${work}/cmd/${f}`).href}?t=${t0}`); result = await mod.default({ pages, OB, log: (...a) => log.push(a.join(' ')), verifyServed, work }); }
++    catch (err) { error = String(err?.stack ?? err).split('\n').slice(0, 4).join(' | '); }
++    const outp = { step: name, engines: state.engines, sessions: state.sessions, portal_requests: state.portal_requests, took_ms: Date.now() - t0, error, log, result };
++    writeFileSync(`${work}/res/${name}.json`, JSON.stringify(JSON.parse(clean(JSON.stringify(outp))), null, 1));
++  }
++  await new Promise((r) => setTimeout(r, 400));
++}
++for (const b of Object.values(browsers)) await b.close();
++writeFileSync(`${work}/res/_closed.json`, JSON.stringify({ closed: new Date().toISOString(), sessions: state.sessions, portal_requests: state.portal_requests }, null, 1));
++process.exit(0);
+diff --git a/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/lib_a3.mjs b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/lib_a3.mjs
+new file mode 100644
+index 0000000..33e764e
+--- /dev/null
++++ b/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/lib_a3.mjs
+@@ -0,0 +1,52 @@
++// ABM007_FINAL RWO-01 add-on A3 — shared measuring steps for driver_a3.mjs. Test tooling only.
++// timeline(): open Help fresh, put one "Go to the Top" link where asked, activate it by mouse or by real key presses,
++// and read the page's scroll position at 0, 100, 300, 800 and 2,000 ms, with every scroll event in between.
++export const TOPS = 'a[href="#top"]';
++export const TIMES = [0, 100, 300, 800, 2000];
++export const SIZES = [[1024, 600], [1440, 900], [375, 900]];
++
++export async function kbFocus(page, h) {
++  await page.mouse.move(2, 2);
++  await h.evaluate((el) => el.focus({ preventScroll: true }));
++  await page.keyboard.press('Shift+Tab'); await page.keyboard.press('Tab'); await page.waitForTimeout(200);
++  if (await h.evaluate((el) => document.activeElement === el)) return 'keyboard (Shift+Tab, then Tab back onto the link)';
++  await h.evaluate((el) => el.focus({ preventScroll: true })); return 'script focus after key presses (Tab did not return to the link in this engine)';
++}
++
++const describeActive = () => { const a = document.activeElement; if (!a || a === document.body) return { what: 'nothing (the page body)', in_window: null };
++  const r = a.getBoundingClientRect(); const sec = a.closest('section[id]');
++  return { what: `${a.tagName.toLowerCase()}${a.id ? `#${a.id}` : ''} "${(a.innerText || a.getAttribute('aria-label') || '').trim().slice(0, 30)}"${sec ? ` in article ${sec.id}` : a.closest('nav') ? ' in the contents menu' : a.closest('body > div > header, header') ? ' in a header' : ''}`,
++    in_window: r.bottom > 0 && r.top < innerHeight, top: Math.round(r.top), focus_visible: a.matches(':focus-visible'), outline: (() => { const c = getComputedStyle(a); return `${c.outlineStyle} ${c.outlineWidth} ${c.outlineColor}`; })() }; };
++
++/** place: 'center' | 'bottom' (shortest distance from the top) | 'top' (longest distance for that link). */
++/** order: 'scroll-then-focus' (the link is placed, then focused by key presses) or 'focus-then-scroll' (the link is
++ *  focused by key presses, then a script calls scrollIntoView on it: the order in which Firefox showed the defect). */
++export async function timeline(page, OB, { w, h, art, how, place = 'center', order = 'scroll-then-focus', before = null }) {
++  await page.setViewportSize({ width: w, height: h });
++  await page.goto(`${OB}/help`, { waitUntil: 'networkidle' }); await page.waitForTimeout(400);
++  if (before) await before(page);
++  const link = (await page.$$(TOPS))[art - 1]; if (!link) return { w, h, art, how, place, error: 'link not found' };
++  const put = async () => { await link.evaluate((el, p) => el.scrollIntoView({ block: p === 'bottom' ? 'end' : p === 'top' ? 'start' : 'center', behavior: 'instant' }), place); await page.waitForTimeout(250); };
++  let focus = null;
++  if (how === 'keyboard' && order === 'focus-then-scroll') { await put(); focus = await kbFocus(page, link); await put(); }
++  else { await put(); if (how === 'keyboard') focus = await kbFocus(page, link); }
++  const start = await page.evaluate(() => Math.round(scrollY)); const afterFocus = start;
++  await page.evaluate(() => { window.__a3 = { t0: performance.now(), log: [] }; addEventListener('scroll', () => window.__a3.log.push([Math.round(performance.now() - window.__a3.t0), Math.round(scrollY)]), { passive: true }); });
++  if (how === 'keyboard') await page.keyboard.press('Enter'); else { const r = await link.boundingBox(); await page.mouse.click(r.x + r.width / 2, r.y + r.height / 2); }
++  const at = {}; let last = 0; for (const ms of TIMES) { if (ms > last) await page.waitForTimeout(ms - last); last = ms; at[ms] = await page.evaluate(() => Math.round(scrollY)); }
++  const end = await page.evaluate((fn) => ({ hash: location.hash, header_in_view: (() => { const r = document.querySelector('body header')?.getBoundingClientRect(); return !!r && r.top >= 0 && r.bottom > 0; })(), focus: (new Function(`return (${fn})()`))(), scroll_events: window.__a3.log.slice(0, 40), scroll_event_count: window.__a3.log.length }), describeActive.toString());
++  await page.keyboard.press('Tab'); await page.waitForTimeout(120);
++  end.next_tab_goes_to = await page.evaluate((fn) => (new Function(`return (${fn})()`))().what, describeActive.toString());
++  return { w, h, art, how, place, order: how === 'keyboard' ? order : 'not applicable (mouse)', key_focus: focus, start_scrollY: start, scrollY_after_focus: afterFocus, scrollY_at_ms: at, at_top_and_stays: TIMES.every((ms) => at[ms] === 0) && end.header_in_view, ...end };
++}
++
++export const line = (r) => `${r.w}x${r.h} art ${String(r.art).padStart(2)} ${r.how.padEnd(8)} ${r.place.padEnd(6)} ${String(r.order).slice(0, 17).padEnd(17)} start ${String(r.start_scrollY).padStart(5)} | ${TIMES.map((ms) => `${ms}:${r.scrollY_at_ms?.[ms]}`).join(' ')} | ${r.at_top_and_stays ? 'OK  ' : 'FAIL'} | focus: ${r.focus?.what} ${r.focus?.in_window === false ? '(out of view)' : ''} | ev ${JSON.stringify((r.scroll_events || []).slice(0, 8))}`;
++
++/** The full grid the work order asks for. Article 1 also from the shortest and the longest distance. */
++export async function grid(page, OB, log, opts = {}) {
++  const out = [];
++  for (const [w, h] of SIZES) for (const art of [1, 7, 13]) for (const how of ['keyboard', 'mouse']) for (const place of (art === 1 ? ['center', 'bottom', 'top'] : ['center']))
++    for (const order of (how === 'keyboard' ? ['scroll-then-focus', 'focus-then-scroll'] : ['scroll-then-focus'])) {
++      const r = await timeline(page, OB, { w, h, art, how, place, order, ...opts }); out.push(r); log(`${opts.tag ?? ''} ${line(r)}`); }
++  return out;
++}
