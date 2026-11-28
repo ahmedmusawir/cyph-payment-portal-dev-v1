@@ -1,0 +1,68 @@
+Rehearsal of GIT_HANDOFF_FOR_TONY.md, 28 November 2026 (Asia/Dhaka), by the Engineer.
+
+Where: throwaway clones of both repositories in the session scratch folder, with throwaway bare remotes.
+The real repositories and the real remotes were not touched: after the rehearsal both real HEADs, both real
+main branches and both origin/main references were unchanged, and nothing was staged.
+
+What ran: the four bash blocks, extracted from GIT_HANDOFF_FOR_TONY.md by script, with two substitutions:
+  1. /home/moose/NEXTJS/CYBER_PHARMA -> the rehearsal folder; the checks folder -> a rehearsal folder.
+  2. The match-check helper was a COPY with one line changed: its hardcoded Account & Billing path
+     (AUTOMATION/Q4/manifest.py, line 12) pointed at the rehearsal clone. The real helper is unchanged.
+     Without that, the helper reads the real repository, which does not hold the rehearsal commits.
+The Account & Billing clone was given the real uncommitted QAM working files, copied.
+The OwedBook pull request was simulated: a merge commit made in a separate clone and pushed to the throwaway remote.
+The closeout files rehearsed were the same paths; three of them were still empty at that time
+(REVIEW_START_HERE.md, the response copy, and this file).
+
+Every commit ID below belongs to the rehearsal only. The real ones will differ.
+
+First attempt, kept: block 1 stopped at the match check BEFORE the push, because the unmodified helper looked in
+the real repository for a rehearsal commit ("Not a valid commit name"). Block 2 then stopped on its own guard.
+That shows a failed check stops a block before its push. It is also how the hardcoded path was found.
+
+### block 1 (Account & Billing records)
+PRE-STAGE OK
+COMMITS OK
+{"app": "pp", "manifest": "bb27c2ee7515d9c2a2d9df5dd537fdd0d02313816b2e5c0798bf6ca38402ee98", "files": 2557, "commit": "b2168bb526ee3105885770fca59bc6e273926753", "mismatches": []}
+To <rehearsal>/remotes/pp.git
+   5b8e935..b2168bb  qa/abm007-final -> qa/abm007-final
+QA RECORDS COMMIT:       5a0c3a5619be1437b17fbce795599358a9f2cb15
+CLOSEOUT RECORDS COMMIT: b2168bb526ee3105885770fca59bc6e273926753
+RECORDS PUSHED
+exit 0
+### block 2 (Account & Billing merge)
+CANDIDATE OK: b2168bb526ee3105885770fca59bc6e273926753
+MERGE MADE LOCALLY, NOT PUSHED: f5a978fdba46beda7fe96b3507650fe7696ff9c2
+{"app": "pp", "manifest": "bb27c2ee7515d9c2a2d9df5dd537fdd0d02313816b2e5c0798bf6ca38402ee98", "files": 2557, "commit": "f5a978fdba46beda7fe96b3507650fe7696ff9c2", "mismatches": []}
+MATCH CHECK OK
+To <rehearsal>/remotes/pp.git
+   cb4decd..f5a978f  main -> main
+ACCOUNT & BILLING MAIN: f5a978fdba46beda7fe96b3507650fe7696ff9c2 (certified 5b8e935a58105897d53b7e4caeb3916bbfb99e23 is an ancestor)
+MAIN PUSHED
+exit 0
+### block 3a (OwedBook pre-check)
+{"app": "ob", "manifest": "38ebe196201fef9e52826a3d6ad6bb9ada254ac32ffc58a183bb2977e7c82603", "files": 2314, "commit": "025c578f7ab0879bede38384c8a2ad63de8ba3c4", "mismatches": []}
+OWEDBOOK CANDIDATE OK
+exit 0
+### simulated pull request merge (merge commit made in a separate throwaway clone and pushed to the throwaway remote)
+7069b1861e4f428d60cdd024b5af42d95d6fe4b8
+exit 0
+### block 3c (OwedBook after the merge)
+From <rehearsal>/remotes/ob
+   9597699..7069b18  main       -> origin/main
+From <rehearsal>/remotes/ob
+   9597699..7069b18  main       -> main
+{"app": "ob", "manifest": "38ebe196201fef9e52826a3d6ad6bb9ada254ac32ffc58a183bb2977e7c82603", "files": 2314, "commit": "7069b1861e4f428d60cdd024b5af42d95d6fe4b8", "mismatches": []}
+OWEDBOOK MAIN: 7069b1861e4f428d60cdd024b5af42d95d6fe4b8 (certified 025c578f7ab0879bede38384c8a2ad63de8ba3c4 is an ancestor)
+OWEDBOOK MAIN VERIFIED
+exit 0
+### end state
+cyph-payment-portal-dev-v1: branch qa/abm007-final, status lines 12, main f5a978fdba46beda7fe96b3507650fe7696ff9c2
+cyph-v1-dev: branch qa/abm007-final, status lines 0, main 7069b1861e4f428d60cdd024b5af42d95d6fe4b8
+ob_certified_precheck.json
+ob_main_merge.json
+ob_main_sha.txt
+pp_main_merge.json
+pp_main_sha.txt
+pp_records_commit.json
+pp_records_shas.txt
