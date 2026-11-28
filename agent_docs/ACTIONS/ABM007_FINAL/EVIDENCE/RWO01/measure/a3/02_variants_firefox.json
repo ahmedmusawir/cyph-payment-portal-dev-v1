@@ -1,0 +1,48 @@
+{
+ "step": "02_variants_firefox",
+ "engines": {
+  "firefox": "148.0.2",
+  "chromium": "158.0.8127.88",
+  "webkit": "26.4"
+ },
+ "sessions": {
+  "password_sign_ins": 3,
+  "token_sign_ins": 0,
+  "generate_link_calls": 0,
+  "total_sign_ins": 3
+ },
+ "portal_requests": 0,
+ "took_ms": 65133,
+ "error": null,
+ "log": [
+  "== 1024x600 A: same page, no reload between activations: mouse 1, keyboard 1, keyboard 7, keyboard 1, mouse 1, keyboard 13, keyboard 1",
+  "art 1 mouse hash-before \"\" start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[16,0]] | history.length 50",
+  "art 1 keyboard hash-before \"#top\" start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[4,0]] | history.length 50",
+  "art 7 keyboard hash-before \"#top\" start 4913 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[4,0]] | history.length 50",
+  "art 1 keyboard hash-before \"#top\" start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[4,0]] | history.length 50",
+  "art 1 mouse hash-before \"#top\" start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[19,0]] | history.length 50",
+  "art 13 keyboard hash-before \"#top\" start 7519 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[3,0]] | history.length 50",
+  "art 1 keyboard hash-before \"#top\" start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[2,0]] | history.length 50",
+  "== 1024x600 B: fresh load to domcontentloaded only, keyboard on article 1 at once",
+  "art 1 keyboard hash-before \"\" start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[22,0]] | history.length 50",
+  "== 1024x600 C: page opened with #top already in the address, keyboard on article 1, then 7",
+  "art 1 keyboard hash-before \"#top\" start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[2,0]] | history.length 50",
+  "art 7 keyboard hash-before \"#top\" start 4913 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[3,0]] | history.length 50",
+  "art 1 mouse hash-before \"#top\" start 306 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[29,0]] | history.length 50",
+  "== 1440x900 A: same page, no reload between activations: mouse 1, keyboard 1, keyboard 7, keyboard 1, mouse 1, keyboard 13, keyboard 1",
+  "art 1 mouse hash-before \"\" start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[34,0]] | history.length 50",
+  "art 1 keyboard hash-before \"#top\" start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[3,0]] | history.length 50",
+  "art 7 keyboard hash-before \"#top\" start 4471 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[3,0]] | history.length 50",
+  "art 1 keyboard hash-before \"#top\" start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[4,0]] | history.length 50",
+  "art 1 mouse hash-before \"#top\" start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[21,0]] | history.length 50",
+  "art 13 keyboard hash-before \"#top\" start 6878 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[6,0]] | history.length 50",
+  "art 1 keyboard hash-before \"#top\" start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[3,0]] | history.length 50",
+  "== 1440x900 B: fresh load to domcontentloaded only, keyboard on article 1 at once",
+  "art 1 keyboard hash-before \"\" start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[3,0]] | history.length 50",
+  "== 1440x900 C: page opened with #top already in the address, keyboard on article 1, then 7",
+  "art 1 keyboard hash-before \"#top\" start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[4,0]] | history.length 50",
+  "art 7 keyboard hash-before \"#top\" start 4471 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[4,0]] | history.length 50",
+  "art 1 mouse hash-before \"#top\" start 131 | 0:0 100:0 300:0 800:0 2000:0 | OK | ev [[41,0]] | history.length 50"
+ ],
+ "result": "see log"
+}

@@ -164,7 +164,7 @@ export const PasswordField = forwardRef<HTMLInputElement, Omit<InputProps, "type
             aria-pressed={visible}
             aria-controls={id}
             disabled={rest.disabled}
-            className="absolute inset-y-0 right-1.5 my-auto flex h-8 w-8 items-center justify-center rounded-sm text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
+            className="absolute inset-y-0 right-0 my-auto flex h-11 w-11 items-center justify-center rounded-md text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50"
           >
             {visible ? <EyeOff className="h-4 w-4" aria-hidden="true" /> : <Eye className="h-4 w-4" aria-hidden="true" />}
           </button>

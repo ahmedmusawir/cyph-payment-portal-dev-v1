@@ -86,6 +86,8 @@ describe('StoreRemovalControl confirmation', () => {
     serve({ '/api/stores/s2/removal': { state: 'completed' } });
     const changed = jest.fn();
     render(<StoreRemovalControl storeId="s2" storeName="Stark Test Pharmacy 02" periodEnd="2026-12-19T00:00:00Z" removalEffectiveAt={null} onChanged={changed} />);
+    // RWO-01 R-09 (b): the row button is at least 44px high and still grows when its words wrap.
+    for (const c of ['min-h-11', 'h-auto', 'rounded-md']) expect(screen.getByTestId('remove-store-s2').className.split(' ')).toContain(c);
     fireEvent.click(screen.getByTestId('remove-store-s2'));
     const dialog = await screen.findByRole('alertdialog');
     expect(within(dialog).getByText(/Remove Stark Test Pharmacy 02 on/)).toBeTruthy();

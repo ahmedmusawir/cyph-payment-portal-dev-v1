@@ -1,0 +1,130 @@
+diff -ruN '--exclude=node_modules' '--exclude=.next' '--exclude=*.log' '--exclude=next-env.d.ts' '--exclude=tsconfig.tsbuildinfo' '--exclude=session_*.md' '--exclude=CHANGELOG.md' '--exclude=pids_*' a1/ob/src/components/help/HelpPage.tsx a2/ob/src/components/help/HelpPage.tsx
+--- a1/ob/src/components/help/HelpPage.tsx	2026-11-26 13:33:27.447175865 +0600
++++ a2/ob/src/components/help/HelpPage.tsx	2026-11-27 11:08:16.608322983 +0600
+@@ -44,6 +44,12 @@
+         {n}. {title}
+       </h2>
+       <div className="mt-3 space-y-3 text-[15px] leading-relaxed">{children}</div>
++      {/* RWO-01 A2-1 (ruling AM-23): every article ends with its own way back to the top, at every width. "#top" is the
++          document top in every browser, so it works with mouse and keyboard and without script. The article is a white
++          card, so the link is the dark green underlined one. */}
++      <p className="mt-3 text-[13px]">
++        <a href="#top" className="pb-link inline-flex min-h-11 items-center" data-testid="help-go-to-top">Go to the Top</a>
++      </p>
+     </section>
+   );
+ }
+@@ -91,8 +97,9 @@
+       </header>
+ 
+       <div className="mt-6 grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)] lg:items-start">
+-        {/* RWO-01 A1-3: when the menu is taller than the window it scrolls inside itself, so its last link can be reached. */}
+-        <nav aria-label="On this page" className="pb-card p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
++        {/* RWO-01 A1-3: when the menu is taller than the window it scrolls inside itself, so its last link can be reached.
++            A2-2: the scroll padding keeps a keyboard-focused link 8px clear of the box edge, so its outline is not cut. */}
++        <nav aria-label="On this page" className="pb-card p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:scroll-py-2 lg:overflow-y-auto">
+           <h2 className="pb-eyebrow text-muted-foreground">On this page</h2>
+           <ol className="mt-2 space-y-0.5 text-[15px]">
+             {SECTIONS.map(([id, title], i) => (
+@@ -103,11 +110,6 @@
+               </li>
+             ))}
+           </ol>
+-          {/* RWO-01 R-02 (ruling AM-19): back to the top of the page. "#top" is the document top in every browser, so
+-              it works with mouse and keyboard and without script. */}
+-          <p className="mt-2 border-t border-border px-2 pt-1 text-[13px]">
+-            <a href="#top" className="pb-link inline-flex min-h-11 items-center" data-testid="help-go-to-top">Go to the Top</a>
+-          </p>
+         </nav>
+ 
+         <div className="grid gap-4">
+@@ -320,11 +322,6 @@
+               pharmacy name and what you were trying to do. Please do not include patient information in your message.
+             </p>
+           </Section>
+-          {/* RWO-01 A1-2 (ruling AM-22): below lg the contents menu sits above the text, so the same link also ends
+-              the text. From lg the menu link stays in view and this one is not shown. */}
+-          <p className="px-2 text-[13px] lg:hidden">
+-            <a href="#top" className="pb-link inline-flex min-h-11 items-center" data-testid="help-go-to-top-end">Go to the Top</a>
+-          </p>
+         </div>
+       </div>
+     </div>
+diff -ruN '--exclude=node_modules' '--exclude=.next' '--exclude=*.log' '--exclude=next-env.d.ts' '--exclude=tsconfig.tsbuildinfo' '--exclude=session_*.md' '--exclude=CHANGELOG.md' '--exclude=pids_*' a1/ob/src/__tests__/abm007/help-page.test.tsx a2/ob/src/__tests__/abm007/help-page.test.tsx
+--- a1/ob/src/__tests__/abm007/help-page.test.tsx	2026-11-26 13:33:27.448068220 +0600
++++ a2/ob/src/__tests__/abm007/help-page.test.tsx	2026-11-27 11:08:16.609599158 +0600
+@@ -23,8 +23,8 @@
+   it("has thirteen sections, each reachable from the contents list by its anchor", () => {
+     const { container } = render(<HelpPage />);
+     const toc = screen.getByRole("navigation", { name: "On this page" });
+-    // The contents list holds the thirteen section links; "Go to the Top" (RWO-01 R-02) sits after it.
+-    const links = within(toc).getAllByRole("link").filter((a) => a.getAttribute("href") !== "#top");
++    // The contents list holds the thirteen section links and nothing else (RWO-01 A2-1: no "Go to the Top" in it).
++    const links = within(toc).getAllByRole("link");
+     expect(links).toHaveLength(13);
+     for (const a of links) {
+       const id = a.getAttribute("href")!.replace(/^#/, "");
+@@ -81,33 +81,40 @@
+     expect(table.className).not.toMatch(/min-w-/);
+   });
+ 
+-  // RWO-01 R-02 (ruling AM-19): a small link at the bottom of the contents menu returns the reader to the top.
+-  it("ends the contents menu with a Go to the Top link that follows the link rules", () => {
+-    render(<HelpPage />);
+-    const toc = screen.getByRole("navigation", { name: "On this page" });
+-    const links = within(toc).getAllByRole("link");
+-    const top = links[links.length - 1];
+-    expect(top).toHaveTextContent("Go to the Top");
+-    expect(top).toHaveAttribute("href", "#top");
+-    expect(top).toHaveClass("pb-link", "min-h-11");
+-  });
+-
+-  // RWO-01 A1-2 (ruling AM-22): below lg the contents menu is above the text, so the same link also ends the text;
+-  // from lg it is hidden there because the menu link stays in view.
+-  it("repeats Go to the Top at the end of the Help text for narrow screens only", () => {
+-    const { container } = render(<HelpPage />);
+-    const end = screen.getByTestId("help-go-to-top-end");
+-    expect(end).toHaveTextContent("Go to the Top");
+-    expect(end).toHaveAttribute("href", "#top");
+-    expect(end).toHaveClass("pb-link", "min-h-11");
+-    expect(end.parentElement).toHaveClass("lg:hidden");
+-    const sections = container.querySelectorAll("section");
+-    expect(sections[sections.length - 1].compareDocumentPosition(end) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
++  // RWO-01 A2-1 (ruling AM-23, replacing AM-19 and AM-22 part 2): "Go to the Top" ends each of the thirteen articles,
++  // inside the article (a white card, so the dark green link), at every width.
++  it("ends every article with a Go to the Top link that follows the link rules", () => {
++    const { container } = render(<HelpPage />);
++    const sections = Array.from(container.querySelectorAll("section"));
++    expect(sections).toHaveLength(13);
++    for (const section of sections) {
++      const links = Array.from(section.querySelectorAll("a"));
++      const top = links[links.length - 1];
++      expect(top).toHaveTextContent("Go to the Top");
++      expect(top).toHaveAttribute("href", "#top");
++      expect(top).toHaveClass("pb-link", "min-h-11");
++      expect(section).toHaveClass("pb-card");
++      // Last thing in the article, and shown at every width (no breakpoint class hides it).
++      expect(section.lastElementChild).toBe(top.parentElement);
++      expect(top.parentElement!.className).not.toMatch(/hidden/);
++      expect(links.filter((a) => a.getAttribute("href") === "#top")).toHaveLength(1);
++    }
++  });
++
++  it("has no Go to the Top in the contents menu or after the last article", () => {
++    const { container } = render(<HelpPage />);
++    const tops = Array.from(container.querySelectorAll("a[href='#top']"));
++    expect(tops).toHaveLength(13);
++    for (const a of tops) expect(a.closest("section")).not.toBeNull();
++    expect(within(screen.getByRole("navigation", { name: "On this page" })).queryByText("Go to the Top")).toBeNull();
++    expect(screen.queryByTestId("help-go-to-top-end")).toBeNull();
+   });
+ 
+-  // RWO-01 A1-3: a contents menu taller than the window scrolls inside itself, so its last link can be reached.
++  // RWO-01 A1-3, kept by A2-1: a contents menu taller than the window scrolls inside itself, so its last link can be reached.
+   it("lets the contents menu scroll inside itself from lg", () => {
+     render(<HelpPage />);
+     expect(screen.getByRole("navigation", { name: "On this page" })).toHaveClass("lg:sticky", "lg:max-h-[calc(100vh-2rem)]", "lg:overflow-y-auto");
++    // RWO-01 A2-2: room for the focus outline when the menu scrolls a keyboard-focused link into view.
++    expect(screen.getByRole("navigation", { name: "On this page" })).toHaveClass("lg:scroll-py-2");
+   });
+ });

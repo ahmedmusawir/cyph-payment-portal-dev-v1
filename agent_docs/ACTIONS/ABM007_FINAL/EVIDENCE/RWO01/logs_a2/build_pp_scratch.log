@@ -1,0 +1,70 @@
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.js took 21ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 9.1s
+  Running TypeScript ...
+  Finished TypeScript in 12.1s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/17) ...
+  Generating static pages using 3 workers (4/17) 
+  Generating static pages using 3 workers (8/17) 
+  Generating static pages using 3 workers (12/17) 
+✓ Generating static pages using 3 workers (17/17) in 530ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ƒ /
+├ ○ /_not-found
+├ ƒ /api/auth/confirm
+├ ƒ /api/auth/link
+├ ƒ /api/auth/login
+├ ƒ /api/auth/logout
+├ ƒ /api/billing/overview
+├ ƒ /api/billing/portal
+├ ƒ /api/billing/undo-cancel
+├ ƒ /api/build-info
+├ ƒ /api/handoff/authorize
+├ ƒ /api/handoff/callback
+├ ƒ /api/handoff/start
+├ ƒ /api/handoff/switch
+├ ƒ /api/internal/jobs/run
+├ ƒ /api/operator/007b
+├ ƒ /api/operator/operations
+├ ƒ /api/registration/checkout
+├ ƒ /api/registration/draft
+├ ƒ /api/registration/quote
+├ ƒ /api/registration/status
+├ ƒ /api/stores/[id]/removal
+├ ƒ /api/stores/[id]/removal/undo
+├ ƒ /api/stores/add/abandon
+├ ƒ /api/stores/add/confirm
+├ ƒ /api/stores/add/quote
+├ ƒ /api/stores/add/status
+├ ƒ /api/stores/operations
+├ ƒ /api/webhooks/stripe
+├ ○ /apple-icon.png
+├ ƒ /auth/confirm
+├ ○ /auth/handoff-recovery
+├ ○ /auth/link-expired
+├ ○ /auth/sign-in-to-continue
+├ ○ /auth/signed-out
+├ ƒ /auth/switch
+├ ƒ /billing
+├ ƒ /dashboard
+├ ○ /icon.png
+├ ƒ /login
+├ ○ /register/activation
+├ ○ /register/owner
+├ ○ /register/pharmacy
+├ ○ /register/plan
+├ ○ /register/review
+└ ƒ /stores/add
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+

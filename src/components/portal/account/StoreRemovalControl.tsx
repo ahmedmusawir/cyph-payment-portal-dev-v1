@@ -38,11 +38,11 @@ export function StoreRemovalControl({ storeId, storeName, periodEnd, removalEffe
     <span className="flex min-w-0 max-w-full flex-col items-start gap-1">
       {removalEffectiveAt ? (<>
         <span className="text-xs text-muted-foreground">Leaves on {formatDate(removalEffectiveAt)}</span>
-        <Button type="button" size="sm" variant="outline" className="h-auto max-w-full whitespace-normal py-1 text-left" disabled={busy !== null} aria-busy={busy === "undo"} onClick={() => void act(true)} data-testid={`undo-removal-${storeId}`}>
+        <Button type="button" size="sm" variant="outline" className="h-auto min-h-11 max-w-full whitespace-normal py-1 text-left" disabled={busy !== null} aria-busy={busy === "undo"} onClick={() => void act(true)} data-testid={`undo-removal-${storeId}`}>
           <BusyLabel busy={busy === "undo"} busyText="Keeping store…">Keep this store</BusyLabel>
         </Button>
       </>) : (
-        <Button type="button" size="sm" variant="outline" className="h-auto max-w-full whitespace-normal py-1 text-left" disabled={busy !== null} onClick={() => setConfirming(true)} data-testid={`remove-store-${storeId}`}>Remove at period end</Button>
+        <Button type="button" size="sm" variant="outline" className="h-auto min-h-11 max-w-full whitespace-normal py-1 text-left" disabled={busy !== null} onClick={() => setConfirming(true)} data-testid={`remove-store-${storeId}`}>Remove at period end</Button>
       )}
       {message && <span role="status" className="text-xs text-foreground">{message}</span>}
       <AlertDialog open={confirming} onOpenChange={(o) => { if (!busy) setConfirming(o); }}>

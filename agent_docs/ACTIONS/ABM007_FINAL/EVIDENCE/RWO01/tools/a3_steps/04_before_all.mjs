@@ -1,0 +1,2 @@
+import { grid } from '/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/lib_a3.mjs?before';
+export default async ({ pages, OB, log, verifyServed }) => { const served = await verifyServed(); const r = {}; await Promise.all(Object.entries(pages).map(async ([e, p]) => { r[e] = await grid(p, OB, log, { tag: e.padEnd(8) }); })); return { served, grid: r }; };

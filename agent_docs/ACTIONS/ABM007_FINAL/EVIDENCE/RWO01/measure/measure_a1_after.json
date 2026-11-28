@@ -1,0 +1,1509 @@
+{
+ "label": "after",
+ "started": "2026-11-26T07:36:51.368Z",
+ "engines": {
+  "chromium": "158.0.8127.88",
+  "webkit": "26.4"
+ },
+ "items": {
+  "opening_page": {
+   "chromium": {
+    "desktop_1440": {
+     "header_button": {
+      "words": "Subscribe Now",
+      "href": "http://localhost:3101/",
+      "width": 148.05,
+      "height": 44,
+      "radius": "8px",
+      "background": "rgb(40, 132, 114)",
+      "color": "rgb(255, 255, 255)",
+      "font_size": "15px",
+      "shown": true
+     },
+     "free_trial_scan": {
+      "visible_or_hidden_text_hits": [],
+      "attribute_hits": 0,
+      "whole_document_matches_including_scripts": 0,
+      "title_or_description_matches": 0
+     },
+     "header_button_hover_background": "rgb(36, 119, 103)",
+     "header_button_focus": "solid 2px rgb(255, 255, 255), offset 2px"
+    },
+    "phone_375_menu_closed": {
+     "free_trial_scan": {
+      "visible_or_hidden_text_hits": [],
+      "attribute_hits": 0,
+      "whole_document_matches_including_scripts": 0,
+      "title_or_description_matches": 0
+     }
+    },
+    "phone_375_menu_open": {
+     "menu_button": {
+      "words": "Subscribe Now",
+      "href": "http://localhost:3101/",
+      "width": 343,
+      "height": 44,
+      "radius": "8px",
+      "background": "rgb(40, 132, 114)",
+      "color": "rgb(255, 255, 255)",
+      "font_size": "15px",
+      "shown": true
+     },
+     "free_trial_scan": {
+      "visible_or_hidden_text_hits": [],
+      "attribute_hits": 0,
+      "whole_document_matches_including_scripts": 0,
+      "title_or_description_matches": 0
+     },
+     "sideways_overflow_px": 0
+    }
+   },
+   "webkit": {
+    "desktop_1440": {
+     "header_button": {
+      "words": "Subscribe Now",
+      "href": "http://localhost:3101/",
+      "width": 148.05,
+      "height": 44,
+      "radius": "8px",
+      "background": "rgb(40, 132, 114)",
+      "color": "rgb(255, 255, 255)",
+      "font_size": "15px",
+      "shown": true
+     },
+     "free_trial_scan": {
+      "visible_or_hidden_text_hits": [],
+      "attribute_hits": 0,
+      "whole_document_matches_including_scripts": 0,
+      "title_or_description_matches": 0
+     },
+     "header_button_hover_background": "rgb(36, 119, 103)",
+     "header_button_focus": "solid 2px rgb(255, 255, 255), offset 2px"
+    },
+    "phone_375_menu_closed": {
+     "free_trial_scan": {
+      "visible_or_hidden_text_hits": [],
+      "attribute_hits": 0,
+      "whole_document_matches_including_scripts": 0,
+      "title_or_description_matches": 0
+     }
+    },
+    "phone_375_menu_open": {
+     "menu_button": {
+      "words": "Subscribe Now",
+      "href": "http://localhost:3101/",
+      "width": 343,
+      "height": 44,
+      "radius": "8px",
+      "background": "rgb(40, 132, 114)",
+      "color": "rgb(255, 255, 255)",
+      "font_size": "15px",
+      "shown": true
+     },
+     "free_trial_scan": {
+      "visible_or_hidden_text_hits": [],
+      "attribute_hits": 0,
+      "whole_document_matches_including_scripts": 0,
+      "title_or_description_matches": 0
+     },
+     "sideways_overflow_px": 0
+    }
+   }
+  },
+  "help": {
+   "chromium": {
+    "views": {
+     "375x900": {
+      "window_height": 900,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "above the text",
+       "sticky": false,
+       "box_height": 713,
+       "content_height": 711,
+       "overflow_y": "visible",
+       "taller_than_window": false,
+       "scrolls_inside_itself": false,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": true,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 44
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": -560,
+        "link_bottom": -516,
+        "in_view_without_scrolling_the_menu": false
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 512,
+        "menu_scrolled_by_px": 0,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      },
+      "end_link_behavior": {
+       "page_scrollY_at_bottom": 10892,
+       "link_in_view_at_page_bottom": true,
+       "link_is_below_the_last_section": true,
+       "mouse_click": {
+        "page_scrollY": 0,
+        "header_in_view": true
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       },
+       "focus_outline": "none 3px rgb(40, 132, 114), offset 0px"
+      }
+     },
+     "768x900": {
+      "window_height": 900,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "above the text",
+       "sticky": false,
+       "box_height": 713,
+       "content_height": 711,
+       "overflow_y": "visible",
+       "taller_than_window": false,
+       "scrolls_inside_itself": false,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": true,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 44
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": -576,
+        "link_bottom": -532,
+        "in_view_without_scrolling_the_menu": false
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 496,
+        "menu_scrolled_by_px": 0,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      },
+      "end_link_behavior": {
+       "page_scrollY_at_bottom": 7262,
+       "link_in_view_at_page_bottom": true,
+       "link_is_below_the_last_section": true,
+       "mouse_click": {
+        "page_scrollY": 0,
+        "header_in_view": true
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       },
+       "focus_outline": "none 3px rgb(40, 132, 114), offset 0px"
+      }
+     },
+     "1023x900": {
+      "window_height": 900,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "above the text",
+       "sticky": false,
+       "box_height": 713,
+       "content_height": 711,
+       "overflow_y": "visible",
+       "taller_than_window": false,
+       "scrolls_inside_itself": false,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": true,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 44
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": -576,
+        "link_bottom": -532,
+        "in_view_without_scrolling_the_menu": false
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 496,
+        "menu_scrolled_by_px": 0,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      },
+      "end_link_behavior": {
+       "page_scrollY_at_bottom": 6513,
+       "link_in_view_at_page_bottom": true,
+       "link_is_below_the_last_section": true,
+       "mouse_click": {
+        "page_scrollY": 0,
+        "header_in_view": true
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       },
+       "focus_outline": "none 3px rgb(40, 132, 114), offset 0px"
+      }
+     },
+     "1024x900": {
+      "window_height": 900,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 715,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "taller_than_window": false,
+       "scrolls_inside_itself": false,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": false,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 0
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": 670,
+        "link_bottom": 714,
+        "in_view_without_scrolling_the_menu": true
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 1500,
+        "menu_scrolled_by_px": 0,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      }
+     },
+     "1024x600": {
+      "window_height": 600,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 568,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "taller_than_window": true,
+       "scrolls_inside_itself": true,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": false,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 0
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": 670,
+        "link_bottom": 714,
+        "in_view_without_scrolling_the_menu": false
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 1500,
+        "menu_scrolled_by_px": 147,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      }
+     },
+     "1440x650": {
+      "window_height": 650,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 618,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "taller_than_window": true,
+       "scrolls_inside_itself": true,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": false,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 0
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": 670,
+        "link_bottom": 714,
+        "in_view_without_scrolling_the_menu": false
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 1500,
+        "menu_scrolled_by_px": 97,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      }
+     },
+     "1440x900": {
+      "window_height": 900,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 715,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "taller_than_window": false,
+       "scrolls_inside_itself": false,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": false,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 0
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": 670,
+        "link_bottom": 714,
+        "in_view_without_scrolling_the_menu": true
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 1500,
+        "menu_scrolled_by_px": 0,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      }
+     }
+    },
+    "session": "password (normal sign-in form)"
+   },
+   "webkit": {
+    "views": {
+     "375x900": {
+      "window_height": 900,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "above the text",
+       "sticky": false,
+       "box_height": 713,
+       "content_height": 711,
+       "overflow_y": "visible",
+       "taller_than_window": false,
+       "scrolls_inside_itself": false,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": true,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 44
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": -560,
+        "link_bottom": -516,
+        "in_view_without_scrolling_the_menu": false
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 512,
+        "menu_scrolled_by_px": 0,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      },
+      "end_link_behavior": {
+       "page_scrollY_at_bottom": 10892,
+       "link_in_view_at_page_bottom": true,
+       "link_is_below_the_last_section": true,
+       "mouse_click": {
+        "page_scrollY": 0,
+        "header_in_view": true
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       },
+       "focus_outline": "none 3px rgb(40, 132, 114), offset 0px"
+      }
+     },
+     "768x900": {
+      "window_height": 900,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "above the text",
+       "sticky": false,
+       "box_height": 713,
+       "content_height": 711,
+       "overflow_y": "visible",
+       "taller_than_window": false,
+       "scrolls_inside_itself": false,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": true,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 44
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": -576,
+        "link_bottom": -532,
+        "in_view_without_scrolling_the_menu": false
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 496,
+        "menu_scrolled_by_px": 0,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      },
+      "end_link_behavior": {
+       "page_scrollY_at_bottom": 7262,
+       "link_in_view_at_page_bottom": true,
+       "link_is_below_the_last_section": true,
+       "mouse_click": {
+        "page_scrollY": 0,
+        "header_in_view": true
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       },
+       "focus_outline": "none 3px rgb(40, 132, 114), offset 0px"
+      }
+     },
+     "1023x900": {
+      "window_height": 900,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "above the text",
+       "sticky": false,
+       "box_height": 713,
+       "content_height": 711,
+       "overflow_y": "visible",
+       "taller_than_window": false,
+       "scrolls_inside_itself": false,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": true,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 44
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": -576,
+        "link_bottom": -532,
+        "in_view_without_scrolling_the_menu": false
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 496,
+        "menu_scrolled_by_px": 0,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      },
+      "end_link_behavior": {
+       "page_scrollY_at_bottom": 6513,
+       "link_in_view_at_page_bottom": true,
+       "link_is_below_the_last_section": true,
+       "mouse_click": {
+        "page_scrollY": 0,
+        "header_in_view": true
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       },
+       "focus_outline": "none 3px rgb(40, 132, 114), offset 0px"
+      }
+     },
+     "1024x900": {
+      "window_height": 900,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 715,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "taller_than_window": false,
+       "scrolls_inside_itself": false,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": false,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 0
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": 670,
+        "link_bottom": 714,
+        "in_view_without_scrolling_the_menu": true
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 1500,
+        "menu_scrolled_by_px": 0,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      }
+     },
+     "1024x600": {
+      "window_height": 600,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 568,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "taller_than_window": true,
+       "scrolls_inside_itself": true,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": false,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 0
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": 670,
+        "link_bottom": 714,
+        "in_view_without_scrolling_the_menu": false
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 1500,
+        "menu_scrolled_by_px": 147,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      }
+     },
+     "1440x650": {
+      "window_height": 650,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 618,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "taller_than_window": true,
+       "scrolls_inside_itself": true,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": false,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 0
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": 670,
+        "link_bottom": 714,
+        "in_view_without_scrolling_the_menu": false
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 1500,
+        "menu_scrolled_by_px": 97,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      }
+     },
+     "1440x900": {
+      "window_height": 900,
+      "sideways_overflow_px": 0,
+      "contents_menu": {
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 715,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "taller_than_window": false,
+       "scrolls_inside_itself": false,
+       "has_go_to_top": true
+      },
+      "end_of_text_link": {
+       "shown": false,
+       "font_size": "13px",
+       "color": "rgb(40, 132, 114)",
+       "underline": "underline",
+       "height": 0
+      },
+      "menu_link_reach": {
+       "reader_scrolled_to": 1500,
+       "at_rest": {
+        "link_top": 670,
+        "link_bottom": 714,
+        "in_view_without_scrolling_the_menu": true
+       },
+       "after_keyboard_focus": {
+        "page_scrollY_after_focus": 1500,
+        "menu_scrolled_by_px": 0,
+        "link_fully_in_view": true,
+        "link_is_topmost_at_its_position": true
+       },
+       "mouse_click": {
+        "page_scrollY": 0
+       },
+       "keyboard_enter": {
+        "page_scrollY": 0
+       }
+      }
+     }
+    },
+    "session": "password (normal sign-in form)"
+   }
+  },
+  "signed_in_footer": {
+   "chromium": {
+    "session": "password (normal sign-in form)",
+    "/dashboard": {
+     "767": {
+      "path": "/dashboard",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 774,
+        "center_x": 383
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 802,
+        "center_x": 383
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 829,
+        "center_x": 383
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 857,
+        "center_x": 383
+       }
+      ]
+     },
+     "768": {
+      "path": "/dashboard",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 774,
+        "center_x": 384
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 802,
+        "center_x": 384
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 829,
+        "center_x": 384
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 857,
+        "center_x": 384
+       }
+      ]
+     },
+     "769": {
+      "path": "/dashboard",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 774,
+        "center_x": 384
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 802,
+        "center_x": 384
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 829,
+        "center_x": 384
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 857,
+        "center_x": 384
+       }
+      ]
+     },
+     "1023": {
+      "path": "/dashboard",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 774,
+        "center_x": 511
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 802,
+        "center_x": 511
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 829,
+        "center_x": 511
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 857,
+        "center_x": 511
+       }
+      ]
+     },
+     "1024": {
+      "path": "/dashboard",
+      "sideways_overflow_px": 0,
+      "links_layout": "one row",
+      "any_item_breaks_across_lines": false,
+      "centered": false,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 857,
+        "center_x": 129
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 857,
+        "center_x": 468
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 857,
+        "center_x": 704
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 857,
+        "center_x": 909
+       }
+      ]
+     }
+    },
+    "/billing": {
+     "767": {
+      "path": "/billing",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 1266,
+        "center_x": 383
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 1294,
+        "center_x": 383
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 1321,
+        "center_x": 383
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 1349,
+        "center_x": 383
+       }
+      ]
+     },
+     "768": {
+      "path": "/billing",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 1060,
+        "center_x": 384
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 1088,
+        "center_x": 384
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 1115,
+        "center_x": 384
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 1143,
+        "center_x": 384
+       }
+      ]
+     },
+     "769": {
+      "path": "/billing",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 774,
+        "center_x": 384
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 802,
+        "center_x": 384
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 829,
+        "center_x": 384
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 857,
+        "center_x": 384
+       }
+      ]
+     },
+     "1023": {
+      "path": "/billing",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 774,
+        "center_x": 511
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 802,
+        "center_x": 511
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 829,
+        "center_x": 511
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 857,
+        "center_x": 511
+       }
+      ]
+     },
+     "1024": {
+      "path": "/billing",
+      "sideways_overflow_px": 0,
+      "links_layout": "one row",
+      "any_item_breaks_across_lines": false,
+      "centered": false,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 856,
+        "center_x": 129
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 856,
+        "center_x": 468
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 856,
+        "center_x": 704
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 856,
+        "center_x": 909
+       }
+      ]
+     }
+    }
+   },
+   "webkit": {
+    "session": "password (normal sign-in form)",
+    "/dashboard": {
+     "767": {
+      "path": "/dashboard",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 774,
+        "center_x": 383
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 802,
+        "center_x": 384
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 829,
+        "center_x": 383
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 857,
+        "center_x": 383
+       }
+      ]
+     },
+     "768": {
+      "path": "/dashboard",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 774,
+        "center_x": 384
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 802,
+        "center_x": 384
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 829,
+        "center_x": 384
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 857,
+        "center_x": 384
+       }
+      ]
+     },
+     "769": {
+      "path": "/dashboard",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 774,
+        "center_x": 384
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 802,
+        "center_x": 385
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 829,
+        "center_x": 384
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 857,
+        "center_x": 384
+       }
+      ]
+     },
+     "1023": {
+      "path": "/dashboard",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 1068,
+        "center_x": 511
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 1095,
+        "center_x": 512
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 1123,
+        "center_x": 511
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 1150,
+        "center_x": 511
+       }
+      ]
+     },
+     "1024": {
+      "path": "/dashboard",
+      "sideways_overflow_px": 0,
+      "links_layout": "one row",
+      "any_item_breaks_across_lines": false,
+      "centered": false,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 914,
+        "center_x": 129
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 914,
+        "center_x": 468
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 914,
+        "center_x": 704
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 914,
+        "center_x": 909
+       }
+      ]
+     }
+    },
+    "/billing": {
+     "767": {
+      "path": "/billing",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 1265,
+        "center_x": 383
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 1293,
+        "center_x": 384
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 1320,
+        "center_x": 383
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 1348,
+        "center_x": 383
+       }
+      ]
+     },
+     "768": {
+      "path": "/billing",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 1060,
+        "center_x": 384
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 1087,
+        "center_x": 384
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 1115,
+        "center_x": 384
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 1142,
+        "center_x": 384
+       }
+      ]
+     },
+     "769": {
+      "path": "/billing",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 1060,
+        "center_x": 384
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 1087,
+        "center_x": 385
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 1115,
+        "center_x": 384
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 1142,
+        "center_x": 384
+       }
+      ]
+     },
+     "1023": {
+      "path": "/billing",
+      "sideways_overflow_px": 0,
+      "links_layout": "stacked one per line",
+      "any_item_breaks_across_lines": false,
+      "centered": true,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 1044,
+        "center_x": 511
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 1071,
+        "center_x": 512
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 1099,
+        "center_x": 511
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 1126,
+        "center_x": 511
+       }
+      ]
+     },
+     "1024": {
+      "path": "/billing",
+      "sideways_overflow_px": 0,
+      "links_layout": "one row",
+      "any_item_breaks_across_lines": false,
+      "centered": false,
+      "text_color": "rgb(81, 81, 81)",
+      "items": [
+       {
+        "text": "Pharmacy Books · Account & Billing",
+        "lines": 1,
+        "top": 906,
+        "center_x": 129
+       },
+       {
+        "text": "Support · support@pharmacybooks.com",
+        "lines": 1,
+        "top": 906,
+        "center_x": 468
+       },
+       {
+        "text": "Terms (link not yet published)",
+        "lines": 1,
+        "top": 906,
+        "center_x": 704
+       },
+       {
+        "text": "Privacy (link not yet published)",
+        "lines": 1,
+        "top": 906,
+        "center_x": 909
+       }
+      ]
+     }
+    }
+   }
+  }
+ },
+ "portal_page_loads": {
+  "chromium": 3,
+  "webkit": 3
+ },
+ "billing_overview_requests": {
+  "chromium": 2,
+  "webkit": 2
+ },
+ "served": {
+  "ob": {
+   "listener_pid": 2823157,
+   "cwd_is_verification_copy": true,
+   "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+   "app_env": "local-proof",
+   "client_bundle": {
+    "scripts": 13,
+    "scratch_refs": 0,
+    "dev_refs": 0
+   }
+  },
+  "pp": {
+   "listener_pid": 2823158,
+   "cwd_is_verification_copy": true,
+   "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+   "app_env": "local-proof",
+   "client_bundle": "not applicable (server-only Supabase use)"
+  }
+ },
+ "sessions": {
+  "password_sign_ins": 4,
+  "token_sign_ins": 0,
+  "generate_link_calls": 0,
+  "total_sign_ins": 4
+ },
+ "finished": "2026-11-26T07:39:27.884Z"
+}

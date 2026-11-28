@@ -87,6 +87,14 @@ describe('PasswordField (U-3)', () => {
     raf.mockRestore();
   });
 
+  // RWO-01 R-09 (a): the show-or-hide button is a 44 by 44 target with the 8px corner, inside the room the field reserves.
+  it('the show-or-hide button is 44 by 44 with the button corner', () => {
+    render(<Harness onSubmit={jest.fn()} />);
+    const toggle = screen.getByRole('button', { name: 'Show password' });
+    for (const c of ['h-11', 'w-11', 'rounded-md', 'right-0']) expect(toggle.className.split(' ')).toContain(c);
+    expect(screen.getByLabelText('Password').className.split(' ')).toContain('pr-12');
+  });
+
   it('is reachable by keyboard, shows a focus ring, and toggles with Space and Enter without submitting', async () => {
     const user = userEvent.setup();
     const onSubmit = jest.fn();

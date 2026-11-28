@@ -23,15 +23,19 @@ export function PublicShell({ children }: { children: React.ReactNode }) {
       <SkipLink />
       <header className="z-30">
         <div className="mx-auto flex min-h-16 max-w-6xl items-center justify-between gap-3 px-5 py-2">
-          <Brand href="/register/plan" />
-          <nav className="hidden items-center gap-1 md:flex" aria-label="Site">
-            <span className="px-3 text-sm text-brand-ice">
-              Questions? <span className="font-medium text-navbar-foreground">{BRAND.supportEmail}</span>
+          {/* RWO-01 R-08: from md up the brand keeps its width, "Already subscribed?" and Sign in stay on one line, and
+              only the support line gives way (it wraps before its address, which never breaks). Text sizes unchanged. */}
+          <div className="min-w-0 md:shrink-0">
+            <Brand href="/register/plan" />
+          </div>
+          <nav className="hidden min-w-0 items-center gap-1 md:flex" aria-label="Site">
+            <span className="min-w-0 px-3 text-sm text-brand-ice">
+              Questions? <span className="whitespace-nowrap font-medium text-navbar-foreground">{BRAND.supportEmail}</span>
             </span>
-            <span className="ml-2 text-sm text-brand-ice">Already subscribed?</span>
+            <span className="ml-2 shrink-0 whitespace-nowrap text-sm text-brand-ice">Already subscribed?</span>
             <Link
               href="/login"
-              className="ml-1 inline-flex h-11 items-center rounded-md border border-navbar-foreground/70 px-4 text-[15px] text-navbar-foreground hover:bg-navbar-foreground/10"
+              className="ml-1 inline-flex h-11 shrink-0 items-center whitespace-nowrap rounded-md border border-navbar-foreground/70 px-4 text-[15px] text-navbar-foreground hover:bg-navbar-foreground/10"
               data-testid="public-sign-in"
             >
               Sign in

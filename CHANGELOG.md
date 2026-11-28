@@ -1,5 +1,45 @@
 # CHANGELOG
 
+## 2026-11-27 07:18 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — add-on A3 note (`RWO01_A3_ENGINEERING_REPORT.md`), `tools/driver_a3.mjs`, `tools/lib_a3.mjs`, step and static-copy tools, measurements, `logs_a3/`, `binding_a3/`, regenerated diffs, lists, staging lists and commit messages.
+- **Updated:** `session_2026-11-27.md`; new response file `agent_docs/RESPONSES/response_2026-11-27_*_rwo01-a3-engineering-return.md`.
+- **Reason:** RWO-01 add-on A3 (QA Lead, released by the Director, 27 Nov). No ruling row and no label change.
+
+## 2026-11-27 05:20 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md` — row AM-23 appended after AM-22, as given by the QA Lead.
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md` — add-on A2: new place of "Go to the Top".
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — add-on A2 report, `tools/measure_a2.mjs`, measurements, `logs_a2/`, `binding_a2/`, regenerated diffs, lists, staging lists and commit messages.
+- **Updated:** `session_2026-11-27.md`; new response file `agent_docs/RESPONSES/response_2026-11-27_*_rwo01-a2-engineering-return.md`.
+- **Reason:** RWO-01 add-on A2 (QA Lead, released by the Director, 27 Nov).
+
+## 2026-11-27 02:24 UTC — [CC] Claude Code
+- **New:** `session_2026-11-27.md` — session log for 27 Nov, with the starting state of both repositories.
+- **Reason:** new working day; Director's request.
+
+## 2026-11-26 07:42 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md` — row AM-22 appended, as given by the QA Lead.
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md` — add-on A1 labels.
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — add-on report, updated lists, `tools/measure_a1.mjs`, measurements, logs, diffs, staging lists, commit messages.
+- **Updated:** `session_2026-11-26.md`; new response file `agent_docs/RESPONSES/response_2026-11-26_*_rwo01-a1-engineering-return.md`.
+- **Reason:** RWO-01 add-on A1 (QA Lead, 26 Nov).
+
+## 2026-11-26 07:16 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md` — rows AM-18 to AM-21 appended, verbatim from the QA Lead's release document.
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md` — RWO-01 section (Subscribe Now, Log in, Go to the Top, Logging in…).
+- **New:** `agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/` — engineering report, changed-file list, free-trial list, noticed list, measurements, logs, diffs, `tools/measure.mjs`.
+- **Updated:** `session_2026-11-26.md`; new response file `agent_docs/RESPONSES/response_2026-11-26_*_rwo01-engineering-return.md`.
+- **Reason:** repair work order RWO-01 (QA Lead, released by the Director, 26 Nov).
+
+## 2026-11-26 06:44 UTC — [CC] Claude Code
+- **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/ABM_STATE.md` — index refreshed to the current QA state (`Q2 COMPLETE — AWAITING ADJUDICATION`), committed candidate SHAs, one transition row.
+- **Updated:** `RECOVERY.md` — stale-record line removed from the 26 Nov block.
+- **Reason:** Director's request.
+
+## 2026-11-26 06:44 UTC — [CC] Claude Code
+- **New:** `session_2026-11-26.md` — session start.
+- **Updated:** `RECOVERY.md` — one block added at the top for ABM007_FINAL (with QA, awaiting adjudication); nothing else changed.
+- **Reason:** Director's request for a new session file and recovery update.
+
 ## 2026-11-24 09:55 UTC — [CC] Claude Code
 - **Updated:** `agent_docs/ACTIONS/ABM007_FINAL/QAM/`:
   - New `QAM_AMENDMENT_01.md` (QA Lead text, verbatim).

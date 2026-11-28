@@ -1,0 +1,102 @@
+## firefox 148.0.2 candidate: none
+1024x600 art  1 keyboard scroll-then-focus start   311 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1024x600 art  1 keyboard focus-then-scroll start   311 | 0:311 100:311 300:311 800:311 2000:311 | FAIL | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1024x600 art  1 mouse    scroll-then-focus start   311 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=false | next Tab: a "Go to the Top" (article roles)
+1024x600 art  7 keyboard scroll-then-focus start  4920 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1024x600 art  7 keyboard focus-then-scroll start  4920 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1024x600 art  7 mouse    scroll-then-focus start  4920 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article removing-pharmacy)
+1024x600 art 13 keyboard scroll-then-focus start  7526 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article support)
+1024x600 art 13 keyboard focus-then-scroll start  7526 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article support)
+1024x600 art 13 mouse    scroll-then-focus start  7526 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article support)
+1440x900 art  1 keyboard scroll-then-focus start   137 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1440x900 art  1 keyboard focus-then-scroll start   137 | 0:137 100:137 300:137 800:137 2000:137 | FAIL | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1440x900 art  1 mouse    scroll-then-focus start   137 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=false | next Tab: a "Go to the Top" (article roles)
+1440x900 art  7 keyboard scroll-then-focus start  4502 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1440x900 art  7 keyboard focus-then-scroll start  4502 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1440x900 art  7 mouse    scroll-then-focus start  4502 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article removing-pharmacy)
+1440x900 art 13 keyboard scroll-then-focus start  6909 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article support)
+1440x900 art 13 keyboard focus-then-scroll start  6909 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article support)
+1440x900 art 13 mouse    scroll-then-focus start  6909 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article support)
+375x900 art  1 keyboard scroll-then-focus start  1073 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article roles)
+375x900 art  1 keyboard focus-then-scroll start  1073 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article roles)
+375x900 art  1 mouse    scroll-then-focus start  1073 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article roles)
+375x900 art  7 keyboard scroll-then-focus start  8195 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+375x900 art  7 keyboard focus-then-scroll start  8195 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+375x900 art  7 mouse    scroll-then-focus start  8195 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article removing-pharmacy)
+375x900 art 13 keyboard scroll-then-focus start 11705 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article support)
+375x900 art 13 keyboard focus-then-scroll start 11705 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article support)
+375x900 art 13 mouse    scroll-then-focus start 11705 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article support)
+## chromium 158.0.8127.88 candidate: none
+1024x600 art  1 keyboard scroll-then-focus start   286 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1024x600 art  1 keyboard focus-then-scroll start   286 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1024x600 art  1 mouse    scroll-then-focus start   286 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=false | next Tab: a "Go to the Top" (article roles)
+1024x600 art  7 keyboard scroll-then-focus start  4697 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1024x600 art  7 keyboard focus-then-scroll start  4697 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1024x600 art  7 mouse    scroll-then-focus start  4697 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article removing-pharmacy)
+1024x600 art 13 keyboard scroll-then-focus start  7254 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+1024x600 art 13 keyboard focus-then-scroll start  7254 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+1024x600 art 13 mouse    scroll-then-focus start  7254 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: body "Pharmacy Books
+H"
+1440x900 art  1 keyboard scroll-then-focus start   111 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1440x900 art  1 keyboard focus-then-scroll start   111 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1440x900 art  1 mouse    scroll-then-focus start   111 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=false | next Tab: a "Go to the Top" (article roles)
+1440x900 art  7 keyboard scroll-then-focus start  4186 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1440x900 art  7 keyboard focus-then-scroll start  4186 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1440x900 art  7 mouse    scroll-then-focus start  4186 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article removing-pharmacy)
+1440x900 art 13 keyboard scroll-then-focus start  6448 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+1440x900 art 13 keyboard focus-then-scroll start  6448 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+1440x900 art 13 mouse    scroll-then-focus start  6448 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: body "Pharmacy Books
+H"
+375x900 art  1 keyboard scroll-then-focus start   998 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article roles)
+375x900 art  1 keyboard focus-then-scroll start   998 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article roles)
+375x900 art  1 mouse    scroll-then-focus start   998 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article roles)
+375x900 art  7 keyboard scroll-then-focus start  7482 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+375x900 art  7 keyboard focus-then-scroll start  7482 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+375x900 art  7 mouse    scroll-then-focus start  7482 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article removing-pharmacy)
+375x900 art 13 keyboard scroll-then-focus start 10673 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+375x900 art 13 keyboard focus-then-scroll start 10673 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+375x900 art 13 mouse    scroll-then-focus start 10673 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: body "Pharmacy Books
+H"
+## webkit 26.4 candidate: none
+1024x600 art  1 keyboard scroll-then-focus start   310 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1024x600 art  1 keyboard focus-then-scroll start   310 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1024x600 art  1 mouse    scroll-then-focus start   310 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=false | next Tab: a "Go to the Top" (article roles)
+1024x600 art  7 keyboard scroll-then-focus start  4917 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1024x600 art  7 keyboard focus-then-scroll start  4917 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1024x600 art  7 mouse    scroll-then-focus start  4917 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article removing-pharmacy)
+1024x600 art 13 keyboard scroll-then-focus start  7522 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+1024x600 art 13 keyboard focus-then-scroll start  7522 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+1024x600 art 13 mouse    scroll-then-focus start  7522 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: body "Pharmacy Books
+H"
+1440x900 art  1 keyboard scroll-then-focus start   136 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1440x900 art  1 keyboard focus-then-scroll start   136 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=true | next Tab: a "Go to the Top" (article roles)
+1440x900 art  1 mouse    scroll-then-focus start   136 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=true ring=false | next Tab: a "Go to the Top" (article roles)
+1440x900 art  7 keyboard scroll-then-focus start  4547 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1440x900 art  7 keyboard focus-then-scroll start  4547 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+1440x900 art  7 mouse    scroll-then-focus start  4547 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article removing-pharmacy)
+1440x900 art 13 keyboard scroll-then-focus start  6954 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+1440x900 art 13 keyboard focus-then-scroll start  6954 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+1440x900 art 13 mouse    scroll-then-focus start  6954 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: body "Pharmacy Books
+H"
+375x900 art  1 keyboard scroll-then-focus start  1071 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article roles)
+375x900 art  1 keyboard focus-then-scroll start  1071 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article roles)
+375x900 art  1 mouse    scroll-then-focus start  1071 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article roles)
+375x900 art  7 keyboard scroll-then-focus start  8117 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+375x900 art  7 keyboard focus-then-scroll start  8117 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: a "Go to the Top" (article removing-pharmacy)
+375x900 art  7 mouse    scroll-then-focus start  8117 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: a "Go to the Top" (article removing-pharmacy)
+375x900 art 13 keyboard scroll-then-focus start 11528 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+375x900 art 13 keyboard focus-then-scroll start 11528 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=true | next Tab: body "Pharmacy Books
+H"
+375x900 art 13 mouse    scroll-then-focus start 11528 | 0:0 100:0 300:0 800:0 2000:0 | OK   | focus a "Go to the Top" vis=false ring=false | next Tab: body "Pharmacy Books
+H"

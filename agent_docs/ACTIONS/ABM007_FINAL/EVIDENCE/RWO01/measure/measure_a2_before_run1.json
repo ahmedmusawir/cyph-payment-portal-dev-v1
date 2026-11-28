@@ -1,0 +1,5421 @@
+{
+ "label": "before",
+ "started": "2026-11-27T05:04:51.503Z",
+ "engines": {
+  "chromium": "158.0.8127.88",
+  "webkit": "26.4"
+ },
+ "items": {
+  "help_go_to_top": {
+   "chromium": {
+    "views": {
+     "375x900": {
+      "window": "375 x 900",
+      "sideways_overflow_px": 0,
+      "go_to_top_links": {
+       "total_in_page": 2,
+       "shown": 2,
+       "shown_in_articles": 0,
+       "shown_in_contents_menu": 1,
+       "shown_after_last_article": 1,
+       "articles": 13,
+       "articles_ending_with_the_link": 0,
+       "lowest_contrast_of_shown": 4.04,
+       "smallest_target_height_of_shown": 44,
+       "each": [
+        {
+         "where": "contents menu",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "white card",
+         "surface_color": "rgb(255, 255, 255)",
+         "contrast_ratio": 4.53
+        },
+        {
+         "where": "after the last article, directly on the page",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "the page",
+         "surface_color": "rgb(234, 243, 250)",
+         "contrast_ratio": 4.04
+        }
+       ]
+      },
+      "contents_menu": {
+       "links": 14,
+       "position": "above the text",
+       "sticky": false,
+       "box_height": 713,
+       "content_height": 711,
+       "overflow_y": "visible",
+       "scrolls_inside_itself": false
+      },
+      "checked_links": [
+       {
+        "link": "contents menu",
+        "surface_pixel_beside_link": "link not in the window",
+        "mouse_click": {
+         "not_possible": "link not in the window or covered",
+         "reader_was_at_scrollY": 1500
+        },
+        "keyboard_enter": {
+         "focus": "keyboard (Shift+Tab, then Tab back onto the control)",
+         "reader_was_at_scrollY": 1500,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, contents menu",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 41,
+          "right": 124.05,
+          "top": 484.77,
+          "bottom": 528.77,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 375,
+          "height": 900
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -105,
+          "y": 57
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 0,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       },
+       {
+        "link": "after the last article, directly on the page",
+        "surface_pixel_beside_link": "rgb(234, 243, 250)",
+        "mouse_click": {
+         "reader_was_at_scrollY": 10892,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "keyboard_enter": {
+         "focus": "keyboard (Shift+Tab, then Tab back onto the control)",
+         "reader_was_at_scrollY": 10892,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, after the last article, directly on the page",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 24,
+          "right": 107.05,
+          "top": 832.14,
+          "bottom": 876.14,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 375,
+          "height": 900
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -122,
+          "y": 404
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 0,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       }
+      ]
+     },
+     "768x900": {
+      "window": "768 x 900",
+      "sideways_overflow_px": 0,
+      "go_to_top_links": {
+       "total_in_page": 2,
+       "shown": 2,
+       "shown_in_articles": 0,
+       "shown_in_contents_menu": 1,
+       "shown_after_last_article": 1,
+       "articles": 13,
+       "articles_ending_with_the_link": 0,
+       "lowest_contrast_of_shown": 4.04,
+       "smallest_target_height_of_shown": 44,
+       "each": [
+        {
+         "where": "contents menu",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "white card",
+         "surface_color": "rgb(255, 255, 255)",
+         "contrast_ratio": 4.53
+        },
+        {
+         "where": "after the last article, directly on the page",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "the page",
+         "surface_color": "rgb(234, 243, 250)",
+         "contrast_ratio": 4.04
+        }
+       ]
+      },
+      "contents_menu": {
+       "links": 14,
+       "position": "above the text",
+       "sticky": false,
+       "box_height": 713,
+       "content_height": 711,
+       "overflow_y": "visible",
+       "scrolls_inside_itself": false
+      },
+      "checked_links": [
+       {
+        "link": "contents menu",
+        "surface_pixel_beside_link": "link not in the window",
+        "mouse_click": {
+         "not_possible": "link not in the window or covered",
+         "reader_was_at_scrollY": 1500
+        },
+        "keyboard_enter": {
+         "focus": "keyboard (Shift+Tab, then Tab back onto the control)",
+         "reader_was_at_scrollY": 1500,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, contents menu",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 49,
+          "right": 132.05,
+          "top": 484.77,
+          "bottom": 528.77,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 768,
+          "height": 900
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -293,
+          "y": 57
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 0,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       },
+       {
+        "link": "after the last article, directly on the page",
+        "surface_pixel_beside_link": "rgb(234, 243, 250)",
+        "mouse_click": {
+         "reader_was_at_scrollY": 7262,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "keyboard_enter": {
+         "focus": "keyboard (Shift+Tab, then Tab back onto the control)",
+         "reader_was_at_scrollY": 7262,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, after the last article, directly on the page",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 32,
+          "right": 115.05,
+          "top": 824.14,
+          "bottom": 868.14,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 768,
+          "height": 900
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -310,
+          "y": 396
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 0,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       }
+      ]
+     },
+     "1024x600": {
+      "window": "1024 x 600",
+      "sideways_overflow_px": 0,
+      "go_to_top_links": {
+       "total_in_page": 2,
+       "shown": 1,
+       "shown_in_articles": 0,
+       "shown_in_contents_menu": 1,
+       "shown_after_last_article": 0,
+       "articles": 13,
+       "articles_ending_with_the_link": 0,
+       "lowest_contrast_of_shown": 4.53,
+       "smallest_target_height_of_shown": 44,
+       "each": [
+        {
+         "where": "contents menu",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "white card",
+         "surface_color": "rgb(255, 255, 255)",
+         "contrast_ratio": 4.53
+        },
+        {
+         "where": "after the last article, directly on the page",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": false,
+         "target_height": 0,
+         "target_width": 0,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "the page",
+         "surface_color": "rgb(234, 243, 250)",
+         "contrast_ratio": 4.04
+        }
+       ]
+      },
+      "contents_menu": {
+       "links": 14,
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 568,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "scrolls_inside_itself": true
+      },
+      "checked_links": [
+       {
+        "link": "contents menu",
+        "surface_pixel_beside_link": "link not in the window",
+        "mouse_click": {
+         "not_possible": "link not in the window or covered",
+         "reader_was_at_scrollY": 1500
+        },
+        "keyboard_enter": {
+         "focus": "keyboard (Shift+Tab, then Tab back onto the control)",
+         "reader_was_at_scrollY": 1500,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, contents menu",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 49,
+          "right": 132.05,
+          "top": 523,
+          "bottom": 567,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 1024,
+          "height": 600
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -421,
+          "y": 245
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 1,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 33,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 33,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       }
+      ]
+     },
+     "1440x900": {
+      "window": "1440 x 900",
+      "sideways_overflow_px": 0,
+      "go_to_top_links": {
+       "total_in_page": 2,
+       "shown": 1,
+       "shown_in_articles": 0,
+       "shown_in_contents_menu": 1,
+       "shown_after_last_article": 0,
+       "articles": 13,
+       "articles_ending_with_the_link": 0,
+       "lowest_contrast_of_shown": 4.53,
+       "smallest_target_height_of_shown": 44,
+       "each": [
+        {
+         "where": "contents menu",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "white card",
+         "surface_color": "rgb(255, 255, 255)",
+         "contrast_ratio": 4.53
+        },
+        {
+         "where": "after the last article, directly on the page",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": false,
+         "target_height": 0,
+         "target_width": 0,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "the page",
+         "surface_color": "rgb(234, 243, 250)",
+         "contrast_ratio": 4.04
+        }
+       ]
+      },
+      "contents_menu": {
+       "links": 14,
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 715,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "scrolls_inside_itself": false
+      },
+      "checked_links": [
+       {
+        "link": "contents menu",
+        "surface_pixel_beside_link": "rgb(255, 255, 255)",
+        "mouse_click": {
+         "reader_was_at_scrollY": 1500,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "keyboard_enter": {
+         "focus": "keyboard (Shift+Tab, then Tab back onto the control)",
+         "reader_was_at_scrollY": 1500,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, contents menu",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 193,
+          "right": 276.05,
+          "top": 670,
+          "bottom": 714,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 1440,
+          "height": 900
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -485,
+          "y": 242
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 1,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 33,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 33,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       }
+      ]
+     }
+    }
+   },
+   "webkit": {
+    "views": {
+     "375x900": {
+      "window": "375 x 900",
+      "sideways_overflow_px": 0,
+      "go_to_top_links": {
+       "total_in_page": 2,
+       "shown": 2,
+       "shown_in_articles": 0,
+       "shown_in_contents_menu": 1,
+       "shown_after_last_article": 1,
+       "articles": 13,
+       "articles_ending_with_the_link": 0,
+       "lowest_contrast_of_shown": 4.04,
+       "smallest_target_height_of_shown": 44,
+       "each": [
+        {
+         "where": "contents menu",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "white card",
+         "surface_color": "rgb(255, 255, 255)",
+         "contrast_ratio": 4.53
+        },
+        {
+         "where": "after the last article, directly on the page",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "the page",
+         "surface_color": "rgb(234, 243, 250)",
+         "contrast_ratio": 4.04
+        }
+       ]
+      },
+      "contents_menu": {
+       "links": 14,
+       "position": "above the text",
+       "sticky": false,
+       "box_height": 713,
+       "content_height": 711,
+       "overflow_y": "visible",
+       "scrolls_inside_itself": false
+      },
+      "checked_links": [
+       {
+        "link": "contents menu",
+        "surface_pixel_beside_link": "link not in the window",
+        "mouse_click": {
+         "not_possible": "link not in the window or covered",
+         "reader_was_at_scrollY": 1500
+        },
+        "keyboard_enter": {
+         "focus": "keyboard (Shift+Tab, then Tab back onto the control)",
+         "reader_was_at_scrollY": 1500,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, contents menu",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 41,
+          "right": 124.05,
+          "top": 484.77,
+          "bottom": 528.77,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 375,
+          "height": 900
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -105,
+          "y": 57
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 0,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       },
+       {
+        "link": "after the last article, directly on the page",
+        "surface_pixel_beside_link": "rgb(234, 243, 250)",
+        "mouse_click": {
+         "reader_was_at_scrollY": 10892,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "keyboard_enter": {
+         "focus": "script focus after key presses (Tab did not return to the control in this engine)",
+         "reader_was_at_scrollY": 10892,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, after the last article, directly on the page",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 24,
+          "right": 107.05,
+          "top": 832.14,
+          "bottom": 876.14,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 375,
+          "height": 900
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -122,
+          "y": 404
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 0,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       }
+      ]
+     },
+     "768x900": {
+      "window": "768 x 900",
+      "sideways_overflow_px": 0,
+      "go_to_top_links": {
+       "total_in_page": 2,
+       "shown": 2,
+       "shown_in_articles": 0,
+       "shown_in_contents_menu": 1,
+       "shown_after_last_article": 1,
+       "articles": 13,
+       "articles_ending_with_the_link": 0,
+       "lowest_contrast_of_shown": 4.04,
+       "smallest_target_height_of_shown": 44,
+       "each": [
+        {
+         "where": "contents menu",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "white card",
+         "surface_color": "rgb(255, 255, 255)",
+         "contrast_ratio": 4.53
+        },
+        {
+         "where": "after the last article, directly on the page",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "the page",
+         "surface_color": "rgb(234, 243, 250)",
+         "contrast_ratio": 4.04
+        }
+       ]
+      },
+      "contents_menu": {
+       "links": 14,
+       "position": "above the text",
+       "sticky": false,
+       "box_height": 713,
+       "content_height": 711,
+       "overflow_y": "visible",
+       "scrolls_inside_itself": false
+      },
+      "checked_links": [
+       {
+        "link": "contents menu",
+        "surface_pixel_beside_link": "link not in the window",
+        "mouse_click": {
+         "not_possible": "link not in the window or covered",
+         "reader_was_at_scrollY": 1500
+        },
+        "keyboard_enter": {
+         "focus": "keyboard (Shift+Tab, then Tab back onto the control)",
+         "reader_was_at_scrollY": 1500,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, contents menu",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 49,
+          "right": 132.05,
+          "top": 484.77,
+          "bottom": 528.77,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 768,
+          "height": 900
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -293,
+          "y": 57
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 0,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       },
+       {
+        "link": "after the last article, directly on the page",
+        "surface_pixel_beside_link": "rgb(234, 243, 250)",
+        "mouse_click": {
+         "reader_was_at_scrollY": 7262,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "keyboard_enter": {
+         "focus": "script focus after key presses (Tab did not return to the control in this engine)",
+         "reader_was_at_scrollY": 7262,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, after the last article, directly on the page",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 32,
+          "right": 115.05,
+          "top": 824.14,
+          "bottom": 868.14,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 768,
+          "height": 900
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -310,
+          "y": 396
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 0,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 32,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       }
+      ]
+     },
+     "1024x600": {
+      "window": "1024 x 600",
+      "sideways_overflow_px": 0,
+      "go_to_top_links": {
+       "total_in_page": 2,
+       "shown": 1,
+       "shown_in_articles": 0,
+       "shown_in_contents_menu": 1,
+       "shown_after_last_article": 0,
+       "articles": 13,
+       "articles_ending_with_the_link": 0,
+       "lowest_contrast_of_shown": 4.53,
+       "smallest_target_height_of_shown": 44,
+       "each": [
+        {
+         "where": "contents menu",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "white card",
+         "surface_color": "rgb(255, 255, 255)",
+         "contrast_ratio": 4.53
+        },
+        {
+         "where": "after the last article, directly on the page",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": false,
+         "target_height": 0,
+         "target_width": 0,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "the page",
+         "surface_color": "rgb(234, 243, 250)",
+         "contrast_ratio": 4.04
+        }
+       ]
+      },
+      "contents_menu": {
+       "links": 14,
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 568,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "scrolls_inside_itself": true
+      },
+      "checked_links": [
+       {
+        "link": "contents menu",
+        "surface_pixel_beside_link": "link not in the window",
+        "mouse_click": {
+         "not_possible": "link not in the window or covered",
+         "reader_was_at_scrollY": 1500
+        },
+        "keyboard_enter": {
+         "focus": "keyboard (Shift+Tab, then Tab back onto the control)",
+         "reader_was_at_scrollY": 1500,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, contents menu",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 49,
+          "right": 132.05,
+          "top": 523,
+          "bottom": 567,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 1024,
+          "height": 600
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -421,
+          "y": 245
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 1,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 33,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 33,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       }
+      ]
+     },
+     "1440x900": {
+      "window": "1440 x 900",
+      "sideways_overflow_px": 0,
+      "go_to_top_links": {
+       "total_in_page": 2,
+       "shown": 1,
+       "shown_in_articles": 0,
+       "shown_in_contents_menu": 1,
+       "shown_after_last_article": 0,
+       "articles": 13,
+       "articles_ending_with_the_link": 0,
+       "lowest_contrast_of_shown": 4.53,
+       "smallest_target_height_of_shown": 44,
+       "each": [
+        {
+         "where": "contents menu",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": true,
+         "target_height": 44,
+         "target_width": 83.05,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "white card",
+         "surface_color": "rgb(255, 255, 255)",
+         "contrast_ratio": 4.53
+        },
+        {
+         "where": "after the last article, directly on the page",
+         "last_thing_in_its_article": null,
+         "words": "Go to the Top",
+         "shown": false,
+         "target_height": 0,
+         "target_width": 0,
+         "font_size": "13px",
+         "color": "rgb(40, 132, 114)",
+         "underline": "underline",
+         "surface": "the page",
+         "surface_color": "rgb(234, 243, 250)",
+         "contrast_ratio": 4.04
+        }
+       ]
+      },
+      "contents_menu": {
+       "links": 14,
+       "position": "beside the text",
+       "sticky": true,
+       "box_height": 715,
+       "content_height": 713,
+       "overflow_y": "auto",
+       "scrolls_inside_itself": false
+      },
+      "checked_links": [
+       {
+        "link": "contents menu",
+        "surface_pixel_beside_link": "rgb(255, 255, 255)",
+        "mouse_click": {
+         "reader_was_at_scrollY": 1500,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "keyboard_enter": {
+         "focus": "script focus after key presses (Tab did not return to the control in this engine)",
+         "reader_was_at_scrollY": 1500,
+         "page_scrollY_after": 0,
+         "header_in_view": true
+        },
+        "focus_outline": {
+         "control": "Go to the Top, contents menu",
+         "focus": {
+          "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+          "is_focused": true,
+          "focus_visible": true
+         },
+         "control_box": {
+          "left": 193,
+          "right": 276.05,
+          "top": 670,
+          "bottom": 714,
+          "width": 83.05,
+          "height": 44
+         },
+         "window": {
+          "width": 1440,
+          "height": 900
+         },
+         "control_center_offset_from_window_center_px": {
+          "x": -485,
+          "y": 242
+         },
+         "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+         "clipping_ancestors_checked": 1,
+         "cut_px": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+         },
+         "clippers": [],
+         "pixels": {
+          "top": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "bottom": {
+           "length_checked_px": 72,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "left": {
+           "length_checked_px": 33,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          },
+          "right": {
+           "length_checked_px": 33,
+           "with_outline_color_pct": 100,
+           "changed_by_focus_pct": 100
+          }
+         },
+         "side_whole": {
+          "top": true,
+          "right": true,
+          "bottom": true,
+          "left": true
+         },
+         "all_four_sides_whole": true
+        }
+       }
+      ]
+     }
+    }
+   }
+  },
+  "contents_menu_focus": {
+   "chromium": {
+    "1440x900": {
+     "window": "1440 x 900",
+     "reader_at_page_scrollY": 1500,
+     "menu_at_start": {
+      "top": 16,
+      "bottom": 731,
+      "box_height": 713,
+      "content_height": 713,
+      "scrolled_by": 0
+     },
+     "links": [
+      {
+       "n": 1,
+       "words": "1. Getting around",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 314.77,
+        "bottom": 358.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+        "is_focused": true,
+        "focus_visible": true
+       }
+      },
+      {
+       "n": 2,
+       "words": "2. Who can do what",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 360.77,
+        "bottom": 404.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 3,
+       "words": "3. My Stores",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 406.77,
+        "bottom": 450.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 4,
+       "words": "4. Inviting staff",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 452.77,
+        "bottom": 496.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 5,
+       "words": "5. Changing a store admin",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 498.77,
+        "bottom": 542.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 6,
+       "words": "6. Removing someone's access",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 544.77,
+        "bottom": 589.77,
+        "width": 226,
+        "height": 45
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 7,
+       "words": "7. Billing and adding a pharmacy",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 591.77,
+        "bottom": 636.77,
+        "width": 226,
+        "height": 45
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 8,
+       "words": "8. Removing a pharmacy",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 638.77,
+        "bottom": 682.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 9,
+       "words": "9. Pharmacy settings",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 684.77,
+        "bottom": 728.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 10,
+       "words": "10. Audit log",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 730.77,
+        "bottom": 774.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 11,
+       "words": "11. Your profile and signing in",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 776.77,
+        "bottom": 820.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 12,
+       "words": "12. Claims and uploads",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 822.77,
+        "bottom": 866.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 13,
+       "words": "13. Getting help",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 13
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": false,
+        "left": true
+       },
+       "all_four_sides_whole": false,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 3.77,
+        "left": 0
+       },
+       "clippers": [
+        {
+         "who": "window",
+         "cut_px": {
+          "top": 0,
+          "left": 0,
+          "bottom": 3.77,
+          "right": 0
+         }
+        }
+       ],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 0,
+         "changed_by_focus_pct": 0
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 855.77,
+        "bottom": 899.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 14,
+       "words": "Go to the Top",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 498
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 72,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 72,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 193,
+        "right": 276.05,
+        "top": 670,
+        "bottom": 714,
+        "width": 83.05,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      }
+     ],
+     "first_link_focus": {
+      "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+      "is_focused": true,
+      "focus_visible": true
+     },
+     "menu_at_end": {
+      "top": 16,
+      "bottom": 731,
+      "box_height": 713,
+      "content_height": 713,
+      "scrolled_by": 0
+     },
+     "summary": {
+      "links": 14,
+      "all_reached_by_tab": true,
+      "all_focus_visible": true,
+      "all_scrolled_into_view_inside_menu": true,
+      "links_with_all_four_sides_whole": 13,
+      "menu_scrolled_during_tabbing_px": 0
+     }
+    },
+    "1024x600": {
+     "window": "1024 x 600",
+     "reader_at_page_scrollY": 1500,
+     "menu_at_start": {
+      "top": 16,
+      "bottom": 584,
+      "box_height": 566,
+      "content_height": 713,
+      "scrolled_by": 0
+     },
+     "links": [
+      {
+       "n": 1,
+       "words": "1. Getting around",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 314.77,
+        "bottom": 358.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+        "is_focused": true,
+        "focus_visible": true
+       }
+      },
+      {
+       "n": 2,
+       "words": "2. Who can do what",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 360.77,
+        "bottom": 404.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 3,
+       "words": "3. My Stores",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 406.77,
+        "bottom": 450.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 4,
+       "words": "4. Inviting staff",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 452.77,
+        "bottom": 496.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 5,
+       "words": "5. Changing a store admin",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 498.77,
+        "bottom": 542.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 6,
+       "words": "6. Removing someone's access",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 544.77,
+        "bottom": 589.77,
+        "width": 226,
+        "height": 45
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 7,
+       "words": "7. Billing and adding a pharmacy",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 37
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": false,
+        "left": true
+       },
+       "all_four_sides_whole": false,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 3.77,
+        "left": 0
+       },
+       "clippers": [
+        {
+         "who": "window",
+         "cut_px": {
+          "top": 0,
+          "left": 0,
+          "bottom": 3.77,
+          "right": 0
+         }
+        }
+       ],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 0,
+         "changed_by_focus_pct": 0
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 554.77,
+        "bottom": 599.77,
+        "width": 226,
+        "height": 45
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 8,
+       "words": "8. Removing a pharmacy",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 383,
+        "bottom": 427,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 9,
+       "words": "9. Pharmacy settings",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 429,
+        "bottom": 473,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 10,
+       "words": "10. Audit log",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 475,
+        "bottom": 519,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 11,
+       "words": "11. Your profile and signing in",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 521,
+        "bottom": 565,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 12,
+       "words": "12. Claims and uploads",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 28,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": false,
+        "left": true
+       },
+       "all_four_sides_whole": false,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 4,
+        "left": 0
+       },
+       "clippers": [
+        {
+         "who": "nav[On this page] (overflow auto/auto)",
+         "cut_px": {
+          "top": 0,
+          "left": 0,
+          "bottom": 4,
+          "right": 0
+         }
+        }
+       ],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 0,
+         "changed_by_focus_pct": 0
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 539,
+        "bottom": 583,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 13,
+       "words": "13. Getting help",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 147,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 466,
+        "bottom": 510,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 28
+       }
+      },
+      {
+       "n": 14,
+       "words": "Go to the Top",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 147,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 72,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 72,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 49,
+        "right": 132.05,
+        "top": 523,
+        "bottom": 567,
+        "width": 83.05,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 147
+       }
+      }
+     ],
+     "first_link_focus": {
+      "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+      "is_focused": true,
+      "focus_visible": true
+     },
+     "menu_at_end": {
+      "top": 16,
+      "bottom": 584,
+      "box_height": 566,
+      "content_height": 713,
+      "scrolled_by": 147
+     },
+     "summary": {
+      "links": 14,
+      "all_reached_by_tab": true,
+      "all_focus_visible": true,
+      "all_scrolled_into_view_inside_menu": true,
+      "links_with_all_four_sides_whole": 12,
+      "menu_scrolled_during_tabbing_px": 147
+     }
+    }
+   },
+   "webkit": {
+    "1440x900": {
+     "window": "1440 x 900",
+     "reader_at_page_scrollY": 1500,
+     "menu_at_start": {
+      "top": 16,
+      "bottom": 731,
+      "box_height": 713,
+      "content_height": 713,
+      "scrolled_by": 0
+     },
+     "links": [
+      {
+       "n": 1,
+       "words": "1. Getting around",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 314.77,
+        "bottom": 358.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+        "is_focused": true,
+        "focus_visible": true
+       }
+      },
+      {
+       "n": 2,
+       "words": "2. Who can do what",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 360.77,
+        "bottom": 404.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 3,
+       "words": "3. My Stores",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 406.77,
+        "bottom": 450.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 4,
+       "words": "4. Inviting staff",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 452.77,
+        "bottom": 496.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 5,
+       "words": "5. Changing a store admin",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 498.77,
+        "bottom": 542.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 6,
+       "words": "6. Removing someone's access",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 544.77,
+        "bottom": 589.77,
+        "width": 226,
+        "height": 45
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 7,
+       "words": "7. Billing and adding a pharmacy",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 591.77,
+        "bottom": 636.77,
+        "width": 226,
+        "height": 45
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 8,
+       "words": "8. Removing a pharmacy",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 638.77,
+        "bottom": 682.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 9,
+       "words": "9. Pharmacy settings",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 684.77,
+        "bottom": 728.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 10,
+       "words": "10. Audit log",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 730.77,
+        "bottom": 774.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 11,
+       "words": "11. Your profile and signing in",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 776.77,
+        "bottom": 820.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 12,
+       "words": "12. Claims and uploads",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 822.77,
+        "bottom": 866.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 13,
+       "words": "13. Getting help",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 13
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": false,
+        "left": true
+       },
+       "all_four_sides_whole": false,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 3.77,
+        "left": 0
+       },
+       "clippers": [
+        {
+         "who": "window",
+         "cut_px": {
+          "top": 0,
+          "left": 0,
+          "bottom": 3.77,
+          "right": 0
+         }
+        }
+       ],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 0,
+         "changed_by_focus_pct": 0
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 185,
+        "right": 411,
+        "top": 855.77,
+        "bottom": 899.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 14,
+       "words": "Go to the Top",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 498
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 72,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 72,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 193,
+        "right": 276.05,
+        "top": 670,
+        "bottom": 714,
+        "width": 83.05,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      }
+     ],
+     "first_link_focus": {
+      "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+      "is_focused": true,
+      "focus_visible": true
+     },
+     "menu_at_end": {
+      "top": 16,
+      "bottom": 731,
+      "box_height": 713,
+      "content_height": 713,
+      "scrolled_by": 0
+     },
+     "summary": {
+      "links": 14,
+      "all_reached_by_tab": true,
+      "all_focus_visible": true,
+      "all_scrolled_into_view_inside_menu": true,
+      "links_with_all_four_sides_whole": 13,
+      "menu_scrolled_during_tabbing_px": 0
+     }
+    },
+    "1024x600": {
+     "window": "1024 x 600",
+     "reader_at_page_scrollY": 1500,
+     "menu_at_start": {
+      "top": 16,
+      "bottom": 584,
+      "box_height": 566,
+      "content_height": 713,
+      "scrolled_by": 0
+     },
+     "links": [
+      {
+       "n": 1,
+       "words": "1. Getting around",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 314.77,
+        "bottom": 358.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+        "is_focused": true,
+        "focus_visible": true
+       }
+      },
+      {
+       "n": 2,
+       "words": "2. Who can do what",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 360.77,
+        "bottom": 404.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 3,
+       "words": "3. My Stores",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 406.77,
+        "bottom": 450.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 4,
+       "words": "4. Inviting staff",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 452.77,
+        "bottom": 496.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 5,
+       "words": "5. Changing a store admin",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 32,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 498.77,
+        "bottom": 542.77,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 6,
+       "words": "6. Removing someone's access",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 0
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 544.77,
+        "bottom": 589.77,
+        "width": 226,
+        "height": 45
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 7,
+       "words": "7. Billing and adding a pharmacy",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 37
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": false,
+        "left": true
+       },
+       "all_four_sides_whole": false,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 3.77,
+        "left": 0
+       },
+       "clippers": [
+        {
+         "who": "window",
+         "cut_px": {
+          "top": 0,
+          "left": 0,
+          "bottom": 3.77,
+          "right": 0
+         }
+        }
+       ],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 0,
+         "changed_by_focus_pct": 0
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 554.77,
+        "bottom": 599.77,
+        "width": 226,
+        "height": 45
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 8,
+       "words": "8. Removing a pharmacy",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 383,
+        "bottom": 427,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 9,
+       "words": "9. Pharmacy settings",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 429,
+        "bottom": 473,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 10,
+       "words": "10. Audit log",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 475,
+        "bottom": 519,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 11,
+       "words": "11. Your profile and signing in",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 0,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 521,
+        "bottom": 565,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 12,
+       "words": "12. Claims and uploads",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 28,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": false,
+        "left": true
+       },
+       "all_four_sides_whole": false,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 4,
+        "left": 0
+       },
+       "clippers": [
+        {
+         "who": "nav[On this page] (overflow auto/auto)",
+         "cut_px": {
+          "top": 0,
+          "left": 0,
+          "bottom": 4,
+          "right": 0
+         }
+        }
+       ],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 0,
+         "changed_by_focus_pct": 0
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 539,
+        "bottom": 583,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 0
+       }
+      },
+      {
+       "n": 13,
+       "words": "13. Getting help",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 147,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 215,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 41,
+        "right": 267,
+        "top": 466,
+        "bottom": 510,
+        "width": 226,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 28
+       }
+      },
+      {
+       "n": 14,
+       "words": "Go to the Top",
+       "after_tab_before_any_scrolling_by_the_tool": {
+        "menu_scrolled_by": 147,
+        "link_fully_inside_menu_box": true,
+        "link_fully_in_window": true,
+        "page_scrollY": 361
+       },
+       "side_whole": {
+        "top": true,
+        "right": true,
+        "bottom": true,
+        "left": true
+       },
+       "all_four_sides_whole": true,
+       "cut_px": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+       },
+       "clippers": [],
+       "pixels": {
+        "top": {
+         "length_checked_px": 72,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "bottom": {
+         "length_checked_px": 72,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "left": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        },
+        "right": {
+         "length_checked_px": 33,
+         "with_outline_color_pct": 100,
+         "changed_by_focus_pct": 100
+        }
+       },
+       "control_box": {
+        "left": 49,
+        "right": 132.05,
+        "top": 523,
+        "bottom": 567,
+        "width": 83.05,
+        "height": 44
+       },
+       "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+       "focus": {
+        "how": "keyboard (Tab from the link above)",
+        "is_focused": true,
+        "focus_visible": true,
+        "menu_scrolled_by_before_tab": 147
+       }
+      }
+     ],
+     "first_link_focus": {
+      "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+      "is_focused": true,
+      "focus_visible": true
+     },
+     "menu_at_end": {
+      "top": 16,
+      "bottom": 584,
+      "box_height": 566,
+      "content_height": 713,
+      "scrolled_by": 147
+     },
+     "summary": {
+      "links": 14,
+      "all_reached_by_tab": true,
+      "all_focus_visible": true,
+      "all_scrolled_into_view_inside_menu": true,
+      "links_with_all_four_sides_whole": 12,
+      "menu_scrolled_during_tabbing_px": 147
+     }
+    }
+   }
+  },
+  "controls_375": {
+   "chromium": {
+    "billing_375": {
+     "path": "/admin-portal/billing",
+     "sideways_overflow_px": 0,
+     "add_control_words": "Add store",
+     "add_control": {
+      "control": "Add control",
+      "focus": {
+       "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+       "is_focused": true,
+       "focus_visible": true
+      },
+      "control_box": {
+       "left": 16,
+       "right": 336,
+       "top": 242.19,
+       "bottom": 286.19,
+       "width": 320,
+       "height": 44
+      },
+      "window": {
+       "width": 375,
+       "height": 900
+      },
+      "control_center_offset_from_window_center_px": {
+       "x": -11,
+       "y": -186
+      },
+      "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+      "clipping_ancestors_checked": 0,
+      "cut_px": {
+       "top": 0,
+       "right": 0,
+       "bottom": 0,
+       "left": 0
+      },
+      "clippers": [],
+      "pixels": {
+       "top": {
+        "length_checked_px": 309,
+        "with_outline_color_pct": 100,
+        "changed_by_focus_pct": 100
+       },
+       "bottom": {
+        "length_checked_px": 309,
+        "with_outline_color_pct": 100,
+        "changed_by_focus_pct": 100
+       },
+       "left": {
+        "length_checked_px": 32,
+        "with_outline_color_pct": 100,
+        "changed_by_focus_pct": 100
+       },
+       "right": {
+        "length_checked_px": 32,
+        "with_outline_color_pct": 100,
+        "changed_by_focus_pct": 100
+       }
+      },
+      "side_whole": {
+       "top": true,
+       "right": true,
+       "bottom": true,
+       "left": true
+      },
+      "all_four_sides_whole": true
+     }
+    },
+    "profile_375": {
+     "path": "/profile",
+     "sideways_overflow_px": 0,
+     "password_field": {
+      "control": "password field (first)",
+      "focus": {
+       "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+       "is_focused": true,
+       "focus_visible": true
+      },
+      "control_box": {
+       "left": 49,
+       "right": 326,
+       "top": 658.69,
+       "bottom": 700.69,
+       "width": 277,
+       "height": 42
+      },
+      "window": {
+       "width": 375,
+       "height": 900
+      },
+      "control_center_offset_from_window_center_px": {
+       "x": 0,
+       "y": 230
+      },
+      "outline": "solid 2px rgba(0, 0, 0, 0), offset 2px",
+      "clipping_ancestors_checked": 0,
+      "cut_px": {
+       "top": 0,
+       "right": 0,
+       "bottom": 0,
+       "left": 0
+      },
+      "clippers": [],
+      "pixels": {
+       "top": {
+        "length_checked_px": 266,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "bottom": {
+        "length_checked_px": 266,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "left": {
+        "length_checked_px": 30,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "right": {
+        "length_checked_px": 30,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       }
+      },
+      "side_whole": {
+       "top": false,
+       "right": false,
+       "bottom": false,
+       "left": false
+      },
+      "all_four_sides_whole": false
+     },
+     "show_or_hide_button_words": "Show password",
+     "show_or_hide_button": {
+      "control": "show-or-hide button",
+      "focus": {
+       "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+       "is_focused": true,
+       "focus_visible": true
+      },
+      "control_box": {
+       "left": 282,
+       "right": 326,
+       "top": 657.69,
+       "bottom": 701.69,
+       "width": 44,
+       "height": 44
+      },
+      "window": {
+       "width": 375,
+       "height": 900
+      },
+      "control_center_offset_from_window_center_px": {
+       "x": 117,
+       "y": 230
+      },
+      "outline": "solid 2px rgba(0, 0, 0, 0), offset 2px",
+      "clipping_ancestors_checked": 0,
+      "cut_px": {
+       "top": 0,
+       "right": 0,
+       "bottom": 0,
+       "left": 0
+      },
+      "clippers": [],
+      "pixels": {
+       "top": {
+        "length_checked_px": 33,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "bottom": {
+        "length_checked_px": 33,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "left": {
+        "length_checked_px": 32,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "right": {
+        "length_checked_px": 32,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       }
+      },
+      "side_whole": {
+       "top": false,
+       "right": false,
+       "bottom": false,
+       "left": false
+      },
+      "all_four_sides_whole": false
+     },
+     "password_fields_left_empty": true
+    }
+   },
+   "webkit": {
+    "billing_375": {
+     "path": "/admin-portal/billing",
+     "sideways_overflow_px": 0,
+     "add_control_words": "Add store",
+     "add_control": {
+      "control": "Add control",
+      "focus": {
+       "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+       "is_focused": true,
+       "focus_visible": true
+      },
+      "control_box": {
+       "left": 16,
+       "right": 336,
+       "top": 242.19,
+       "bottom": 286.19,
+       "width": 320,
+       "height": 44
+      },
+      "window": {
+       "width": 375,
+       "height": 900
+      },
+      "control_center_offset_from_window_center_px": {
+       "x": -11,
+       "y": -186
+      },
+      "outline": "solid 2px rgb(21, 68, 116), offset 2px",
+      "clipping_ancestors_checked": 0,
+      "cut_px": {
+       "top": 0,
+       "right": 0,
+       "bottom": 0,
+       "left": 0
+      },
+      "clippers": [],
+      "pixels": {
+       "top": {
+        "length_checked_px": 309,
+        "with_outline_color_pct": 100,
+        "changed_by_focus_pct": 100
+       },
+       "bottom": {
+        "length_checked_px": 309,
+        "with_outline_color_pct": 100,
+        "changed_by_focus_pct": 100
+       },
+       "left": {
+        "length_checked_px": 32,
+        "with_outline_color_pct": 100,
+        "changed_by_focus_pct": 100
+       },
+       "right": {
+        "length_checked_px": 32,
+        "with_outline_color_pct": 100,
+        "changed_by_focus_pct": 100
+       }
+      },
+      "side_whole": {
+       "top": true,
+       "right": true,
+       "bottom": true,
+       "left": true
+      },
+      "all_four_sides_whole": true
+     }
+    },
+    "profile_375": {
+     "path": "/profile",
+     "sideways_overflow_px": 0,
+     "password_field": {
+      "control": "password field (first)",
+      "focus": {
+       "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+       "is_focused": true,
+       "focus_visible": true
+      },
+      "control_box": {
+       "left": 49,
+       "right": 326,
+       "top": 658.69,
+       "bottom": 700.69,
+       "width": 277,
+       "height": 42
+      },
+      "window": {
+       "width": 375,
+       "height": 900
+      },
+      "control_center_offset_from_window_center_px": {
+       "x": 0,
+       "y": 230
+      },
+      "outline": "solid 2px rgba(0, 0, 0, 0), offset 2px",
+      "clipping_ancestors_checked": 0,
+      "cut_px": {
+       "top": 0,
+       "right": 0,
+       "bottom": 0,
+       "left": 0
+      },
+      "clippers": [],
+      "pixels": {
+       "top": {
+        "length_checked_px": 266,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "bottom": {
+        "length_checked_px": 266,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "left": {
+        "length_checked_px": 30,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "right": {
+        "length_checked_px": 30,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       }
+      },
+      "side_whole": {
+       "top": false,
+       "right": false,
+       "bottom": false,
+       "left": false
+      },
+      "all_four_sides_whole": false
+     },
+     "show_or_hide_button_words": "Show password",
+     "show_or_hide_button": {
+      "control": "show-or-hide button",
+      "focus": {
+       "how": "keyboard (Shift+Tab, then Tab back onto the control)",
+       "is_focused": true,
+       "focus_visible": true
+      },
+      "control_box": {
+       "left": 282,
+       "right": 326,
+       "top": 657.69,
+       "bottom": 701.69,
+       "width": 44,
+       "height": 44
+      },
+      "window": {
+       "width": 375,
+       "height": 900
+      },
+      "control_center_offset_from_window_center_px": {
+       "x": 117,
+       "y": 230
+      },
+      "outline": "solid 2px rgba(0, 0, 0, 0), offset 2px",
+      "clipping_ancestors_checked": 0,
+      "cut_px": {
+       "top": 0,
+       "right": 0,
+       "bottom": 0,
+       "left": 0
+      },
+      "clippers": [],
+      "pixels": {
+       "top": {
+        "length_checked_px": 33,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "bottom": {
+        "length_checked_px": 33,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "left": {
+        "length_checked_px": 32,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       },
+       "right": {
+        "length_checked_px": 32,
+        "with_outline_color_pct": 0,
+        "changed_by_focus_pct": 100
+       }
+      },
+      "side_whole": {
+       "top": false,
+       "right": false,
+       "bottom": false,
+       "left": false
+      },
+      "all_four_sides_whole": false
+     },
+     "password_fields_left_empty": true
+    }
+   }
+  }
+ },
+ "portal_pages_loaded": 0,
+ "sessions_how": {
+  "chromium": "password (normal sign-in form)",
+  "webkit": "password (normal sign-in form)"
+ },
+ "served": {
+  "ob": {
+   "listener_pid": 3203186,
+   "cwd_is_verification_copy": true,
+   "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+   "app_env": "local-proof",
+   "client_bundle": {
+    "scripts": 13,
+    "scratch_refs": 0,
+    "dev_refs": 0
+   }
+  }
+ },
+ "sessions": {
+  "password_sign_ins": 2,
+  "token_sign_ins": 0,
+  "generate_link_calls": 0,
+  "total_sign_ins": 2
+ },
+ "finished": "2026-11-27T05:07:07.563Z"
+}

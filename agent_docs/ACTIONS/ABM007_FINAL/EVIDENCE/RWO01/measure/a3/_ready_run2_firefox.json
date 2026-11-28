@@ -1,0 +1,29 @@
+{
+ "started": "2026-11-27T07:09:34.894Z",
+ "engines": {
+  "firefox": "148.0.2"
+ },
+ "sign_in": {
+  "firefox": "password (normal sign-in form)"
+ },
+ "portal_requests": 0,
+ "sessions": {
+  "password_sign_ins": 1,
+  "token_sign_ins": 0,
+  "generate_link_calls": 0,
+  "total_sign_ins": 1
+ },
+ "served_at_sign_in": {
+  "ob": {
+   "listener_pid": 3311114,
+   "cwd_is_verification_copy": true,
+   "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+   "app_env": "local-proof",
+   "client_bundle": {
+    "scripts": 13,
+    "scratch_refs": 0,
+    "dev_refs": 0
+   }
+  }
+ }
+}

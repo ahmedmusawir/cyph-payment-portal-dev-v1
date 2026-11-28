@@ -1,5 +1,15 @@
 # Recovery State — cyph-stripe-subscription-portal-v1
 
+## ▶ ABM007_FINAL — WITH QA, AWAITING ADJUDICATION (updated 2026-11-26 12:44, Asia/Dhaka) — read this first
+- **Last action:** Engineering finished ABM007_FINAL on 24 Nov (E2 complete, final handoff package 04). The Director committed both candidates and created `qa/abm007-final`. QA ran Q1 and Q2.
+- **Where we are:** `Q2 COMPLETE — AWAITING ADJUDICATION` (`agent_docs/ACTIONS/ABM007_FINAL/QAM/QAM_STATE.md`, the current truth). J-c, J-d and J-g are held and BLOCKED.
+- **Candidate pair:** OwedBook `2e91e90905b2d9907577a64985e643f7827019ac`, Portal `fc1fa6c2a90ebf59987287ad765e2e65cf635549`. Both repositories are on `qa/abm007-final`.
+- **Pending:** Friday (QA Lead) adjudicates. No repair or retest is released.
+- **Next step for Engineering:** wait. Act only on an accepted repair, in place on the QA branch, and never touch QAM files.
+- **Not done:** external settings (Supabase email template, Stripe branding) are prepared, not applied. No deployment of this candidate. Not Gate Q, not closeout.
+- **Session file:** `session_2026-11-26.md`. Earlier: `session_2026-11-24.md`.
+- **Note:** this file is protected until closeout (AM-06). This block was added on the Director's direct request; nothing below was changed.
+
 ## ▶ PAYMENT PORTAL ALPHA — DEPLOYED, DOMAIN LIVE (updated 2026-11-21, Asia/Dhaka) — read this first
 - **DEPLOYED 2026-11-21:** `cyph-v1-payment-alpha` revision `00001-mwh` from commit `6dd3de7` (build `ebbd4a02-3d79-4ce4-9a12-2b4afe5f6e48`), live at `https://cyph-v1-payment-alpha.cyberizedev.com` (mapping and certificate verified). Report `agent_docs/RESPONSES/response_2026-11-21_104910_payment-alpha-deployed.md`. NOT verified: sign-in, signed webhook delivery, mail, two-app flows. Next: Stripe test delivery, Supabase Auth settings, two-app testing, scheduler decision, commit the records. The lines below are the preparation history.
 - **Status:** branch `deploy/payment-alpha-prep` (base `883bc93`), everything UNCOMMITTED. New service `cyph-v1-payment-alpha` (prefix `cyph-payment-alpha`), `cyberize-nextjs-staging` / us-east1, final URL `https://cyph-v1-payment-alpha.cyberizedev.com`. No cloud resource created or changed; FFM service `cyph-sub-portal-prod` untouched.
