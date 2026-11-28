@@ -13,8 +13,8 @@ fixture was changed. Nothing is staged, committed, pushed, merged or deployed by
 
 | Item | State |
 |---|---|
-| QA records commit (Account & Billing) | **Not made yet.** Prepared for the Director |
-| Closeout records commit (Account & Billing) | Prepared for the Director |
+| QA records commit (Account & Billing) | **Made and pushed by the Director,** 28 November 13:00: `f4dd32982df047b63aa6f0ad9119546f06058024` |
+| Closeout records commit (Account & Billing) | **Made and pushed by the Director:** `4eee35c4e0ee1196744360d664c1ed3edc0d8afd`. Match check on it: mismatches none. A wrap-up records commit is still to make |
 | Merge to `main`, both repositories | **Not made.** Prepared for the Director |
 | Match check on the certified commits | Pass, zero mismatches (`BASELINE_AND_MANIFEST_EVIDENCE.md`) |
 | Match check on the resulting `main` commits | Not run: those commits do not exist yet |
@@ -23,7 +23,8 @@ fixture was changed. Nothing is staged, committed, pushed, merged or deployed by
 
 `ABM_STATE.md`, `RECOVERY.md` and `CHANGELOG.md` still show the state of 26 and 27 November. I left them alone on
 purpose: they are in the Gate Q manifests, and the work order says not to edit a historical record to make its status
-look current. **This file is the current engineering status** until the QA Lead rules on updating them.
+look current. **The Director decided on 28 November that they stay unchanged until module closure, and that
+`QAM/CLOSEOUT/` carries the current status** (`DIRECTOR_DECISIONS_2026-11-28.md`).
 
 ## 2. What was delivered
 

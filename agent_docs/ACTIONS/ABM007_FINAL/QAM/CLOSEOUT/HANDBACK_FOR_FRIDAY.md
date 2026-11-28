@@ -3,8 +3,11 @@
 **From:** the Engineer · **To:** the QA Lead · **Copied:** the Director, the Architect
 **Date:** 28 November 2026, Asia/Dhaka
 
-Engineering closeout is prepared. Nothing is committed or merged yet; the Director's steps are ready. Four rulings
-are requested.
+Engineering closeout is prepared. Nothing is committed or merged yet; the Director's steps are ready.
+
+**Update, 28 November 13:00:** the four housekeeping questions below are **resolved by the Director**
+(`DIRECTOR_DECISIONS_2026-11-28.md`). No ruling is requested from you now. Still yours: any match-check difference,
+and the revised Gate D plan.
 
 ## What I found
 
@@ -12,13 +15,22 @@ are requested.
 |---|---|
 | Match check, OwedBook `025c578f7ab0879bede38384c8a2ad63de8ba3c4` | Exit 0, manifest `38ebe196…`, 2,314 files, mismatches none |
 | Match check, Account & Billing `5b8e935a58105897d53b7e4caeb3916bbfb99e23` | Exit 0, manifest `bb27c2ee…`, 2,557 files, mismatches none |
-| The Director's QA-record commit | **Not present yet.** The QA records are uncommitted. All 8,413 uncommitted files are inside `QAM/` |
+| The Director's QA-record commit | Not present at 12:09. **Present since 13:00:** `f4dd32982df047b63aa6f0ad9119546f06058024`, exactly the QA Executor's 8,401 paths, all inside `QAM/`. Closeout records `4eee35c4e0ee1196744360d664c1ed3edc0d8afd`. Match check on it, run by the Director: mismatches none |
 | My closeout records | All new, all inside `QAM/CLOSEOUT/`. No file outside `QAM/` was touched in either repository |
 | Record-only differences to rule on | **None so far.** None expected on the resulting `main` commits; the real output will come from the Director's run |
 | The two `deploy.sh` scripts against the supplied snapshots | The same, apart from Windows line endings in the snapshots |
 | "OwedBook beta" | No beta target exists in either repository. Both targets are alpha |
 
-## Rulings requested
+## Housekeeping questions — all four RESOLVED by the Director, 28 November
+
+| # | Decision |
+|---|---|
+| 1 | Leave `ABM_STATE.md`, `RECOVERY.md` and `CHANGELOG.md` unchanged until module closure. `QAM/CLOSEOUT/` carries the current status |
+| 2 | Keep the 11 retained ZIP packages on disk, outside Git. Delete none |
+| 3 | Remove the one cache file. Done by the Engineer at 13:00, after verifying it was untracked |
+| 4 | The eventual `main` merge commit IDs and match-check outputs go into the Gate D record. None may be invented |
+
+The questions as first asked, kept for the record:
 
 1. **Status records left stale.** `ABM_STATE.md`, `RECOVERY.md` and `CHANGELOG.md` still describe 26 and 27
    November. They are in the manifests, so I did not update them, and this repository's own rules normally require

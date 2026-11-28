@@ -131,3 +131,41 @@ All located and read. Copies as received are in `SOURCES/`, hashes in `evidence/
 | `ABM_RULINGS.md` with AM-18 to AM-23 | the module folder, committed in `5b8e935` |
 
 No required file is missing.
+
+## 7. Update, 28 November 13:00
+
+Git state inspected again after `git fetch` in both repositories. **Nothing has changed since section 1:** both
+branches, both HEADs, both remote branches and both `main` branches are as recorded there; nothing is staged; the
+Director has run no step.
+
+| Change since the first check | Detail |
+|---|---|
+| One file removed, on the Director's decision 3 | `QAM/AUTOMATION/Q4_A2/__pycache__/reconcile.cpython-312.pyc`, SHA-256 `bc2add96ea97b16bdcb9e1286c55dcabac0960b0285ff6cf63b9b7730324b5c8`, 11,195 bytes. Verified untracked first (`git ls-files --error-unmatch` failed; status `??`). The empty `__pycache__` folder went with it. `reconcile.py` and every other helper are untouched: 143 files under `QAM/AUTOMATION/`, down from 144 |
+| Untracked paths outside both commit lists | Now 11, the retained ZIP packages. They stay on disk, outside Git (decision 2) |
+| Match check, both certified commits, rerun at 13:00 | See `evidence/manifest_*_rerun_1300.stdout.json` |
+
+## 8. Update, 28 November 13:02: the Director's records commits
+
+While the wrap-up was in progress the Director committed and pushed the records in Account & Billing. Section 7 was
+true at 13:00; this section is the state after.
+
+| | OwedBook | Account & Billing |
+|---|---|---|
+| Branch | `qa/abm007-final` | `qa/abm007-final` |
+| HEAD = remote branch | `025c578f7ab0879bede38384c8a2ad63de8ba3c4` (unchanged, certified) | `4eee35c4e0ee1196744360d664c1ed3edc0d8afd` |
+| `main` = `origin/main` | `9597699b404afdbcd792a9b4da61c21abb10cdf8` | `cb4decde9adc9ab75d0dcb15556c64a3bdbfe075` |
+| Working tree | Clean | The wrap-up records in `QAM/CLOSEOUT/` (`commit/portal-closeout-02-paths.txt`) and the 11 retained ZIP packages |
+
+**The Director's QA-record commit is now present and verified.**
+
+| Commit | Parent | Verified by reading the commit |
+|---|---|---|
+| `f4dd32982df047b63aa6f0ad9119546f06058024`, 13:00:45 | `5b8e935a…` (certified) | Its changed paths equal the QA Executor's staging list exactly: 8,401 paths, all inside `QAM/`. The QA Lead's statement "that commit changes files inside `QAM/` only" holds |
+| `4eee35c4e0ee1196744360d664c1ed3edc0d8afd`, 13:00:53 | `f4dd3298…` | 28 paths, all inside `QAM/CLOSEOUT/` |
+
+- Everything outside `QAM/` at `4eee35c…` is identical to the certified commit (`git diff --quiet` between them,
+  `QAM/` left out).
+- No ABM007_FINAL ZIP package and no `__pycache__` path is tracked.
+- **Match check on `4eee35c…`: run by the Director, not by me.** Output as supplied: manifest `bb27c2ee…`, 2,557
+  files, mismatches none. Kept in `evidence/director_records_commit_output_2026-11-28.txt`.
+- The Director used his own commands and commit messages, not block 1 of the handoff, so no checks folder was made.

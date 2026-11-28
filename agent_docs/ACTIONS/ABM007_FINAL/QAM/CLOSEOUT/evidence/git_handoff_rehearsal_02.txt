@@ -1,0 +1,60 @@
+Rehearsal 02 of GIT_HANDOFF_FOR_TONY.md (revision 02), 28 November 2026, about 13:10 Asia/Dhaka, by the Engineer.
+
+Starting point: fresh throwaway clones made from the real repositories as they stood after the Director's records
+commits (Account & Billing at 4eee35c4e0ee1196744360d664c1ed3edc0d8afd), with fresh throwaway bare remotes. The
+Account & Billing clone was given the uncommitted wrap-up records and the 11 retained ZIP packages, copied.
+The real repositories and remotes were not touched: afterwards both real HEADs, both real main branches and both
+origin/main references were unchanged and nothing was staged.
+
+What ran: the four bash blocks of revision 02 (1b, 2, 3a, 3c), extracted by script, with the same two substitutions
+as rehearsal 01: the base path and checks folder, and a COPY of the match-check helper with its one hardcoded path
+line pointed at the rehearsal clone. The OwedBook pull request was simulated by a merge commit made in a separate
+clone. Two files were still empty when rehearsed (this file and the wrap-up reply).
+
+Every commit ID below belongs to the rehearsal only. The real ones will differ.
+
+### block 1b (Account & Billing wrap-up records)
+PRE-STAGE OK
+COMMIT OK
+{"app": "pp", "manifest": "bb27c2ee7515d9c2a2d9df5dd537fdd0d02313816b2e5c0798bf6ca38402ee98", "files": 2557, "commit": "570bd6da29c152cc8608d321b63ffac5868bd1a5", "mismatches": []}
+To <rehearsal>/remotes/pp.git
+   4eee35c..570bd6d  qa/abm007-final -> qa/abm007-final
+WRAP-UP RECORDS COMMIT: 570bd6da29c152cc8608d321b63ffac5868bd1a5
+RECORDS PUSHED
+exit 0
+### block 2 (Account & Billing merge)
+CANDIDATE OK: 570bd6da29c152cc8608d321b63ffac5868bd1a5
+MERGE MADE LOCALLY, NOT PUSHED: 6c3efd90a8f01f023facbd14e5cfce862957bfa8
+{"app": "pp", "manifest": "bb27c2ee7515d9c2a2d9df5dd537fdd0d02313816b2e5c0798bf6ca38402ee98", "files": 2557, "commit": "6c3efd90a8f01f023facbd14e5cfce862957bfa8", "mismatches": []}
+MATCH CHECK OK
+To <rehearsal>/remotes/pp.git
+   cb4decd..6c3efd9  main -> main
+ACCOUNT & BILLING MAIN: 6c3efd90a8f01f023facbd14e5cfce862957bfa8 (certified 5b8e935a58105897d53b7e4caeb3916bbfb99e23 is an ancestor)
+MAIN PUSHED
+exit 0
+### block 3a (OwedBook pre-check)
+{"app": "ob", "manifest": "38ebe196201fef9e52826a3d6ad6bb9ada254ac32ffc58a183bb2977e7c82603", "files": 2314, "commit": "025c578f7ab0879bede38384c8a2ad63de8ba3c4", "mismatches": []}
+OWEDBOOK CANDIDATE OK
+exit 0
+### simulated pull request merge (separate throwaway clone, throwaway remote)
+6335d045b5cd98ea60ba888896545f2b2852afc3
+exit 0
+### block 3c (OwedBook after the merge)
+From <rehearsal>/remotes/ob
+   9597699..6335d04  main       -> origin/main
+From <rehearsal>/remotes/ob
+   9597699..6335d04  main       -> main
+{"app": "ob", "manifest": "38ebe196201fef9e52826a3d6ad6bb9ada254ac32ffc58a183bb2977e7c82603", "files": 2314, "commit": "6335d045b5cd98ea60ba888896545f2b2852afc3", "mismatches": []}
+OWEDBOOK MAIN: 6335d045b5cd98ea60ba888896545f2b2852afc3 (certified 025c578f7ab0879bede38384c8a2ad63de8ba3c4 is an ancestor)
+OWEDBOOK MAIN VERIFIED
+exit 0
+### end state
+cyph-payment-portal-dev-v1: branch qa/abm007-final, status lines 11, main 6c3efd90a8f01f023facbd14e5cfce862957bfa8
+cyph-v1-dev: branch qa/abm007-final, status lines 0, main 6335d045b5cd98ea60ba888896545f2b2852afc3
+ob_certified_precheck.json
+ob_main_merge.json
+ob_main_sha.txt
+pp_main_merge.json
+pp_main_sha.txt
+pp_wrapup_commit.json
+pp_wrapup_sha.txt

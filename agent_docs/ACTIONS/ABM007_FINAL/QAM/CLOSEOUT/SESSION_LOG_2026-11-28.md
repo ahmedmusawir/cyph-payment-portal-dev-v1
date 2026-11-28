@@ -38,7 +38,20 @@ merge, branch switch, deploy or cloud call.
 `evidence/git_handoff_rehearsal.txt`). No product QA was repeated.
 **Not done, by design:** `ABM_STATE.md`, `RECOVERY.md` and `CHANGELOG.md` were not updated (they are in the manifests).
 
+### 13:00 — Wrap-up on the Director's instruction: COMPLETE
+**Git state inspected first:** unchanged since 12:09. The Director has run no step.
+**Director's decisions recorded:** `DIRECTOR_DECISIONS_2026-11-28.md` (four housekeeping questions, all resolved).
+**Done:** removed the one untracked cache file (verified untracked first); left-untracked list is now the 11 ZIP
+packages; recovery instructions in `GIT_HANDOFF_FOR_TONY.md` replaced by the stop rule; `RESUME_NOTE.md` written;
+match checks rerun; Git steps rehearsed again; export 02 built with the QA paths list included. Export 01 preserved.
+
+### 13:02 — State changed during the wrap-up
+The Director committed and pushed the records at 13:00:45 and 13:00:53 (`f4dd329…`, `4eee35c…`) with his own
+commands. Verified by reading the commits. My wrap-up edits landed after that commit and are uncommitted. One read-only
+check of mine was declined by the Director, who supplied his own match-check output instead; I did not rerun it.
+Instructions refitted: section 1 marked done, new section 1b for the wrap-up records.
+
 ## End of session state
-- **Working:** closeout records prepared; nothing staged or committed; both HEADs unchanged.
-- **Waiting:** the Director's Git steps; the QA Lead's rulings in `HANDBACK_FOR_FRIDAY.md`.
+- **Working:** records committed and pushed by the Director up to `4eee35c…`; wrap-up records uncommitted; no merge.
+- **Waiting:** the Director's Git steps. The four housekeeping questions are resolved by the Director.
 - **Next:** Gate D plan approval, redeploy to alpha on release, Gate D on 3 December.
