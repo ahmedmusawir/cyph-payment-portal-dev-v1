@@ -1,0 +1,77 @@
+{
+  "ob": {
+    "sha": "2e91e90905b2d9907577a64985e643f7827019ac",
+    "files_scanned": 171,
+    "token_declarations_equal": true,
+    "color_candidates": [],
+    "font_candidates": [
+      {
+        "path": "src/app/layout.tsx",
+        "line": 9,
+        "source": "// ABM007_FINAL: Inter 400 to 700 via next/font (self-hosted at build), replacing Saira."
+      }
+    ],
+    "old_logo_candidates": [],
+    "logo_files": [
+      {
+        "path": "public/brand/logo-color.svg",
+        "sha256": "47a3927cd4cd85a7f0f1e17a4b12e549bba55c394ab1f1d2db5937c3fc275680"
+      },
+      {
+        "path": "public/brand/logo-lockup.svg",
+        "sha256": "822e8b867540fefe88ce6a21e7cce08293e1cdd3a46358a54a77aa7911c9117d"
+      },
+      {
+        "path": "public/brand/logo-mono.svg",
+        "sha256": "ccde3413c8c73afa664ea7d18212e17b03f013d9bba3eca5a65ec5cd5cb04363"
+      },
+      {
+        "path": "public/brand/pharmacy-books-logo-primary.png",
+        "sha256": "e7e5d3575c743f7c07defbaf907dc71a2a7f854aadaaad92d74e73f4d3293afd"
+      }
+    ],
+    "derived_icons": {
+      "icon.png": true,
+      "apple-icon.png": true,
+      "favicon.ico": true
+    },
+    "protected_changed": [
+      "RECOVERY.md"
+    ],
+    "candidate_to_head_diff": "",
+    "dependency_diff": "",
+    "source_limit": "Matches require semantic review; frozen dark token block excluded by D-01. No behavior inferred from names.",
+    "preserved_RECOVERY_engineering_diff": ""
+  },
+  "pp": {
+    "sha": "fc1fa6c2a90ebf59987287ad765e2e65cf635549",
+    "files_scanned": 175,
+    "token_declarations_equal": true,
+    "color_candidates": [],
+    "font_candidates": [
+      {
+        "path": "src/app/layout.tsx",
+        "line": 9,
+        "source": "// ABM007_FINAL: Inter 400 to 700 via next/font (self-hosted at build), replacing Saira."
+      }
+    ],
+    "old_logo_candidates": [],
+    "logo_files": [
+      {
+        "path": "public/brand/pharmacy-books-logo-primary.png",
+        "sha256": "e7e5d3575c743f7c07defbaf907dc71a2a7f854aadaaad92d74e73f4d3293afd"
+      }
+    ],
+    "derived_icons": {
+      "icon.png": true,
+      "apple-icon.png": true,
+      "favicon.ico": true
+    },
+    "protected_changed": [
+      "src/server/billingNotices.ts"
+    ],
+    "candidate_to_head_diff": "",
+    "dependency_diff": "",
+    "source_limit": "Matches require semantic review; frozen dark token block excluded by D-01. No behavior inferred from names."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "role": "ENGINEERING_OWNER_A",
+      "method": "password (normal sign-in form)",
+      "path": "/owedbook",
+      "signedIn": true,
+      "signoutStatus": 200
+    },
+    {
+      "role": "ENGINEERING_OWNER_B",
+      "method": "password (normal sign-in form)",
+      "path": "/owedbook",
+      "signedIn": true,
+      "signoutStatus": 200
+    },
+    {
+      "role": "ENGINEERING_ADMIN",
+      "method": "provider token via the app confirm page (AM-15)",
+      "path": "/owedbook",
+      "signedIn": true,
+      "signoutStatus": 200
+    },
+    {
+      "role": "ENGINEERING_MEMBER",
+      "method": "provider token via the app confirm page (AM-15)",
+      "path": "/owedbook",
+      "signedIn": true,
+      "signoutStatus": 200
+    }
+  ],
+  "counters": {
+    "password_sign_ins": 2,
+    "token_sign_ins": 2,
+    "generate_link_calls": 2
+  },
+  "served": {
+    "ob": {
+      "listener_pid": 1546857,
+      "cwd_is_verification_copy": true,
+      "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+      "app_env": "local-proof",
+      "client_bundle": {
+        "scripts": 13,
+        "scratch_refs": 0,
+        "dev_refs": 0
+      }
+    }
+  }
+}

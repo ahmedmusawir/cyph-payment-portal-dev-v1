@@ -1,0 +1,68 @@
+--- return02/QAM_RECON_REPORT.md
++++ amended03/QAM_RECON_REPORT.md
+@@ -51,13 +51,21 @@
+ |---|---|
+ | Which endpoints are registered in the sandbox, and which event types each receives | readiness.json: one enabled alpha /api/webhooks/stripe endpoint, checkout completed/expired, invoice paid/failed, subscription created/updated/deleted |
+ | Which listeners forward events, to which local address | listener-read.json: local inspection only; none started by Cody; remote forwarding cannot be inferred. Stripe CLI present |
+-| What alpha's handler does with an event for a customer, subscription or account it does not know (from source, with file and line) | Candidate webhook.ts:44–62 rejects signature/live/wrong account then inserts stripe_events BEFORE classification. 229–247: known DB mapping retries; no marker foreign; different apbm_db foreign_environment; ambiguous marker retries. Alpha deployment-source binding not freshly verified: GAP, no asserted deployed parity |
++| What alpha's handler does with an event for a customer, subscription or account it does not know (from source, with file and line) | Candidate webhook.ts:44–62 rejects signature/live/wrong account then inserts stripe_events BEFORE classification. 229–247: known DB mapping retries; no marker foreign; different apbm_db foreign_environment; ambiguous marker retries. A-9 below now binds these handler files to alpha reported deployed revision by empty diff |
+ | What the QA build's handler does with an alpha event | Same candidate code: durable receipt first (59–62); record updates at 87–108; subscription RPC at 300–305 before unknown classification; no local listener started |
+ | Can a QA event change DEV data? Proof | NOT PROVEN isolated. If deployed alpha matches reviewed handler, even foreign events write receipt/status rows; business mapping overlap also needs proof. Endpoint is enabled |
+ | Can an alpha event change the QA database? Proof | With a future forwarding listener, reviewed handler writes receipt/status rows before foreign classification. Currently no Cody listener; absence now is not a future paid-test proof |
+-| Verdict of this section: PROVEN ISOLATED, or NOT PROVEN with one concrete proposal for the Director | NOT PROVEN. Proposal: Director commissions an environment-routing filter before either database receipt, verified against exact deployed alpha code and isolated fixture metadata, under a separate approved change. No filter implemented, endpoint changed or new infrastructure assumed; paid rows BLOCKED pending ruling |
++| Verdict of this section: PROVEN ISOLATED, or NOT PROVEN with one concrete proposal for the Director | NOT PROVEN under the existing no-foreign-write condition. Friday does not adopt the routing-filter proposal. Only J-c/J-d/J-g are blocked by F02 pending Tony’s explicit decision; see A-9 facts below |
+ 
+ A list of running processes is not an answer to any row.
++
++### A-9 — two isolation facts, 24 November 2026
++
++1. Exactly one GET of each authorized alpha build-info address returned HTTP200 (evidence/Q1/03/alpha-build-info.json). OwedBook deployed revision: ef4cebccae68499bee7d4a53b230e31474a17f52. Portal deployed revision: 6dd3de737acacff9685c0c2027246bf396f10c1d. Git diff from that Portal revision to candidate fc1fa6c2a90ebf59987287ad765e2e65cf635549 is empty for src/app/api/webhooks/stripe/route.ts, src/server/webhook.ts and src/server/stripeMirror.ts (pp-alpha-candidate.diff and pp-diff-receipt.json). Thus the deployed revision reports the same handler source as the candidate for those files. OwedBook deployed-to-candidate diff is also empty for migration 0057 (ob-alpha-candidate.diff and ob-diff-receipt.json). This is source binding to reported build identity, not a new runtime webhook exercise or a live database-definition read.
++
++2. public.subscription_mirror_apply, OwedBook supabase/migrations/0057_operations_events.sql:122–144, updates only rows whose stripe_subscription_id equals the requested ID and origin is stripe (125–140). An unknown ID matches no row; FOUND is false; the existence check at 142 is false; line 143 returns unknown_subscription. It inserts nothing and changes no subscription row. The existing updated-at trigger (0006_subscriptions.sql:28–30) and audit trigger (0037_audit_stamp_subscriptions.sql:16–18) are FOR EACH ROW; no matching row means neither runs. No business row or audit row is written by this routine on the unknown-subscription branch. Source excerpt: evidence/Q1/03/subscription-routine-source.txt. The webhook still inserts/updates stripe_events receipts before/after classification (webhook.ts:59–62,87–108); this routine fact does not remove those foreign receipt writes.
++
++Disposition: ABM7F-F02 remains open, High, and blocks only J-c/J-d/J-g per Friday. The proposed routing-filter change is not adopted and is outside this module. Tony may decide the counted foreign-receipt exception after these facts; no exception or provider-event release is inferred here. No further alpha access or tests occurred.
+ 
+ ## 6. Instruments
+ 
+@@ -88,10 +96,23 @@
+ 
+ ## Amendment 01 additions (owner: QA Executor, Q1)
+ 
+-**A. Test and helper inventory.** One row per suite, spec, check set or helper found in either repository or in the retained APBM-007B QA lane.
++**A. Test and helper inventory.** Counts by repository/lane; complete per-asset rows and stated extraction limits: `evidence/Q1/02/REGRESSION_INVENTORY.md`. No further Q1 inventory work required by Friday.
+ 
+-| Asset | Repository or lane | Kind | Current, stale or retired, and why | What it covers | What it needs to run |
+-|---|---|---|---|---|---|
++| Repository | Lane | Current | Stale | Retired |
++|---|---|---|---|---|
++| Portal | product tests | 0 | 0 | 16 |
++| owedbook | historical evidence | 0 | 91 | 0 |
++| owedbook | product tests | 59 | 1 | 0 |
++| owedbook | scripts | 0 | 33 | 0 |
++| portal | historical evidence | 0 | 221 | 0 |
++| portal | product tests | 39 | 3 | 0 |
++| portal | retained APBM-007B QA | 0 | 170 | 0 |
++| portal | scripts | 0 | 32 | 0 |
++
++**B. Coverage map.**
++
++| CR or criterion | Existing coverage | Gap | Only testable by a person today? |
++|---|---|---|---|
+ | CR-01 | Role/access unit suites, actions, portal-owner, apbm007a-access | Actual per-role route and forbidden control matrix | No |
+ | CR-02 | apbm-tenant-scope, portal-boundaries, apbm007a-server | Cross-account direct requests and database assertions on candidate | No |
+ | CR-03 | abm007/store-selector, MyStoresScreen | Zero-store and removed-access fixtures unavailable in current allowlist | No |
+@@ -103,13 +124,7 @@
+ | CR-09 | owner-staff-settings, retained role scripts | Already-signed-in removal needs approved write | No |
+ | CR-10 | portal-dashboard, portal-account, portal regression | Hosted billing session/return needs provider-call authorization | No |
+ | CR-11 | abm007 token/focus/light/notice pins | Rendered composited contrast and customer-visible names | Human comparison supplements automation |
+-| CR-12 | Help, keyboard DataTable, drawer focus suites | Real-phone availability; Help usefulness | Yes for real device and wording | | |
+-
+-**B. Coverage map.**
+-
+-| CR or criterion | Existing coverage | Gap | Only testable by a person today? |
+-|---|---|---|---|
+-| NOT RUN — restricted Q1 probe list; validate before Q2 use | | | |
++| CR-12 | Help, keyboard DataTable, drawer focus suites | Real-phone availability; Help usefulness | Yes for real device and wording |
+ 
+ **C. Recommended layout for a durable regression pack.** Recommendation only: maintained unit, guarded integration, browser journeys, instrument controls, fixture specifications and candidate receipts in a QA pack. REG-001 remains separate; no implementation here.
+ 

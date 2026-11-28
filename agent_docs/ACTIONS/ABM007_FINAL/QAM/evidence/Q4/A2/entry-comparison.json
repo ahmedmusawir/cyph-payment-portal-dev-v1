@@ -1,0 +1,1737 @@
+{
+  "ob": {
+    "app": "ob",
+    "oldManifest": "f229d7a129138af7cc97e1fdb5acadf885c1907ad7cd3c140f4bad5334a4d22d",
+    "changedPaths": 23,
+    "unchangedProductOrTestCount": 233,
+    "unchangedProductOrTestPaths": [
+      "src/__tests__/abm007/focus-surface.test.ts",
+      "src/__tests__/abm007/forced-light.test.tsx",
+      "src/__tests__/abm007/home-cta.test.tsx",
+      "src/__tests__/abm007/store-selector.test.tsx",
+      "src/__tests__/abm007/token-pin.test.ts",
+      "src/__tests__/actions.test.ts",
+      "src/__tests__/admin-portal/AddStoreButton.test.tsx",
+      "src/__tests__/admin-portal/BillingDetails.test.tsx",
+      "src/__tests__/admin-portal/InviteMemberForm.test.tsx",
+      "src/__tests__/admin-portal/LiveStaffPanel.hydration.test.tsx",
+      "src/__tests__/admin-portal/MemberRow.test.tsx",
+      "src/__tests__/admin-portal/MyStoresScreen.test.tsx",
+      "src/__tests__/admin-portal/SettingsForm.test.tsx",
+      "src/__tests__/alpha-origins.test.ts",
+      "src/__tests__/apbm-admin-readonly.test.tsx",
+      "src/__tests__/apbm-read-states.test.tsx",
+      "src/__tests__/apbm-tenant-scope.test.ts",
+      "src/__tests__/apbm007a-access.test.tsx",
+      "src/__tests__/apbm007a-auth.test.ts",
+      "src/__tests__/apbm007a-boundaries.test.ts",
+      "src/__tests__/auth/AuthPage.test.tsx",
+      "src/__tests__/auth/LoginForm.hydration.test.tsx",
+      "src/__tests__/auth/PasswordToggle.test.tsx",
+      "src/__tests__/auth/hydration-forms.test.tsx",
+      "src/__tests__/common/DataTable.keyboard.test.tsx",
+      "src/__tests__/common/DataTable.render.test.tsx",
+      "src/__tests__/common/DataTable.test.tsx",
+      "src/__tests__/common/EmptyState.test.tsx",
+      "src/__tests__/common/MultiSelect.focus.test.tsx",
+      "src/__tests__/common/MultiSelect.test.tsx",
+      "src/__tests__/get-user-role.test.ts",
+      "src/__tests__/global/MobileNav.test.tsx",
+      "src/__tests__/global/Navbar.invariant.test.tsx",
+      "src/__tests__/global/Navbar.mobile.test.tsx",
+      "src/__tests__/global/Navbar.switcher.test.tsx",
+      "src/__tests__/global/UserMenu.test.tsx",
+      "src/__tests__/instrumentation.test.ts",
+      "src/__tests__/jest.setup.ts",
+      "src/__tests__/layout/AdminSidebar.test.tsx",
+      "src/__tests__/layout/AuthedShell.focus.test.tsx",
+      "src/__tests__/layout/AuthedShell.test.tsx",
+      "src/__tests__/mail-recipient-policy.test.ts",
+      "src/__tests__/manual-qa/audit-describe.test.ts",
+      "src/__tests__/manual-qa/final-batch-audit-identity.test.tsx",
+      "src/__tests__/manual-qa/invitation-mail-policy.test.ts",
+      "src/__tests__/manual-qa/owner-staff-settings.test.tsx",
+      "src/__tests__/member/ProfileForm.test.tsx",
+      "src/__tests__/mocks/adminDemo.seed.test.ts",
+      "src/__tests__/owedbook/FilterRail.test.tsx",
+      "src/__tests__/owedbook/KpiTiles.test.tsx",
+      "src/__tests__/owedbook/OwedBookScreen.disclosure.test.tsx",
+      "src/__tests__/owedbook/OwedBookScreen.test.tsx",
+      "src/__tests__/owedbook/ResultsToolbar.test.tsx",
+      "src/__tests__/owedbook/StatusChip.test.tsx",
+      "src/__tests__/owedbook/SummaryUnattributedNote.test.tsx",
+      "src/__tests__/owedbook/drawer-apply.integration.test.tsx",
+      "src/__tests__/proxy.test.ts",
+      "src/__tests__/services/adminDemo.test.ts",
+      "src/__tests__/services/owedbook.test.ts",
+      "src/__tests__/supabase-admin.test.ts",
+      "src/app/(admin)/admin-portal/audit/page.tsx",
+      "src/app/(admin)/admin-portal/billing/page.tsx",
+      "src/app/(admin)/admin-portal/loading.tsx",
+      "src/app/(admin)/admin-portal/page.tsx",
+      "src/app/(admin)/admin-portal/settings/page.tsx",
+      "src/app/(admin)/admin-portal/stores/[id]/invite/page.tsx",
+      "src/app/(admin)/admin-portal/stores/[id]/page.tsx",
+      "src/app/(admin)/error.tsx",
+      "src/app/(admin)/layout.tsx",
+      "src/app/(admin)/not-found.tsx",
+      "src/app/(auth)/auth/confirm/page.tsx",
+      "src/app/(auth)/auth/handoff-recovery/page.tsx",
+      "src/app/(auth)/auth/link-expired/page.tsx",
+      "src/app/(auth)/auth/page.tsx",
+      "src/app/(auth)/auth/sign-in-to-continue/page.tsx",
+      "src/app/(auth)/auth/signed-out/page.tsx",
+      "src/app/(auth)/auth/switch/page.tsx",
+      "src/app/(auth)/error.tsx",
+      "src/app/(auth)/layout.tsx",
+      "src/app/(public)/HomePageContent.tsx",
+      "src/app/(public)/access-denied/page.tsx",
+      "src/app/(public)/error.tsx",
+      "src/app/(public)/layout.tsx",
+      "src/app/(public)/loading.tsx",
+      "src/app/(public)/page.tsx",
+      "src/app/api/access-state/route.ts",
+      "src/app/api/auth/confirm/route.ts",
+      "src/app/api/auth/link/route.ts",
+      "src/app/api/auth/login/route.ts",
+      "src/app/api/auth/logout/route.ts",
+      "src/app/api/build-info/route.ts",
+      "src/app/api/handoff/authorize/route.ts",
+      "src/app/api/handoff/callback/route.ts",
+      "src/app/api/handoff/start/route.ts",
+      "src/app/api/handoff/switch/route.ts",
+      "src/app/api/invitations/[id]/accept/route.ts",
+      "src/app/api/invitations/[id]/decline/route.ts",
+      "src/app/api/invitations/[id]/resend/route.ts",
+      "src/app/api/invitations/[id]/revoke/route.ts",
+      "src/app/api/invitations/mine/route.ts",
+      "src/app/api/stores/[id]/history/route.ts",
+      "src/app/api/stores/[id]/invitations/route.ts",
+      "src/app/api/stores/[id]/members/[uid]/remove/route.ts",
+      "src/app/api/stores/history/route.ts",
+      "src/app/apple-icon.png",
+      "src/app/error/page.tsx",
+      "src/app/favicon.ico",
+      "src/app/globals.css",
+      "src/app/help/layout.tsx",
+      "src/app/help/loading.tsx",
+      "src/app/help/page.tsx",
+      "src/app/icon.png",
+      "src/app/invitations/page.tsx",
+      "src/app/layout.tsx",
+      "src/app/not-found.tsx",
+      "src/app/owedbook/layout.tsx",
+      "src/app/owedbook/loading.tsx",
+      "src/app/owedbook/page.tsx",
+      "src/app/profile/ProfileForm.tsx",
+      "src/app/profile/layout.tsx",
+      "src/app/profile/loading.tsx",
+      "src/app/profile/page.tsx",
+      "src/app/providers/ThemeProvider.tsx",
+      "src/components/admin-portal/AccessDenied.tsx",
+      "src/components/admin-portal/AddStoreButton.tsx",
+      "src/components/admin-portal/AuditScreen.tsx",
+      "src/components/admin-portal/BillingRow.tsx",
+      "src/components/admin-portal/BillingScreen.tsx",
+      "src/components/admin-portal/Breadcrumb.tsx",
+      "src/components/admin-portal/DemoMarker.tsx",
+      "src/components/admin-portal/InviteMemberForm.tsx",
+      "src/components/admin-portal/InviteScreen.tsx",
+      "src/components/admin-portal/LiveAuditLog.tsx",
+      "src/components/admin-portal/LiveStaffPanel.tsx",
+      "src/components/admin-portal/MemberRoster.tsx",
+      "src/components/admin-portal/MemberRow.tsx",
+      "src/components/admin-portal/MyStoresScreen.tsx",
+      "src/components/admin-portal/PharmacyDetails.tsx",
+      "src/components/admin-portal/ScreenHeader.tsx",
+      "src/components/admin-portal/SettingsForm.tsx",
+      "src/components/admin-portal/SettingsScreen.tsx",
+      "src/components/admin-portal/StatusPill.tsx",
+      "src/components/admin-portal/StoreCard.tsx",
+      "src/components/admin-portal/StoreDetailScreen.tsx",
+      "src/components/admin-portal/auditDescribe.ts",
+      "src/components/admin-portal/format.ts",
+      "src/components/admin-portal/roleLabel.ts",
+      "src/components/admin-portal/statusPresentation.ts",
+      "src/components/auth/AuthPages.tsx",
+      "src/components/auth/AuthShell.tsx",
+      "src/components/auth/LinkRequestForm.tsx",
+      "src/components/auth/LoginForm.tsx",
+      "src/components/auth/Logout.tsx",
+      "src/components/common/DataTable.tsx",
+      "src/components/common/EmptyState.tsx",
+      "src/components/common/Main.tsx",
+      "src/components/common/MultiSelect.tsx",
+      "src/components/common/Spinner.tsx",
+      "src/components/common/SpinnerLarge.tsx",
+      "src/components/global/BrandMark.tsx",
+      "src/components/global/MobileNav.tsx",
+      "src/components/global/NavAuthRefresh.tsx",
+      "src/components/global/Navbar.tsx",
+      "src/components/global/NavbarHome.tsx",
+      "src/components/global/NavbarLoginReg.tsx",
+      "src/components/global/ThemeToggler.tsx",
+      "src/components/global/UserMenu.tsx",
+      "src/components/global/brand.ts",
+      "src/components/global/identity.ts",
+      "src/components/invitations/InvitationsScreen.tsx",
+      "src/components/layout/AdminSidebar.tsx",
+      "src/components/layout/AuthedShell.tsx",
+      "src/components/owedbook/AccessBanner.tsx",
+      "src/components/owedbook/FilterRail.tsx",
+      "src/components/owedbook/KpiTiles.tsx",
+      "src/components/owedbook/OwedBookContext.tsx",
+      "src/components/owedbook/OwedBookScreen.tsx",
+      "src/components/owedbook/ResultsToolbar.tsx",
+      "src/components/owedbook/StatusChip.tsx",
+      "src/components/owedbook/StoreSelector.tsx",
+      "src/components/owedbook/SummaryUnattributedNote.tsx",
+      "src/components/owedbook/columns.tsx",
+      "src/components/owedbook/format.ts",
+      "src/components/ui/avatar.tsx",
+      "src/components/ui/badge.tsx",
+      "src/components/ui/button.tsx",
+      "src/components/ui/card.tsx",
+      "src/components/ui/command.tsx",
+      "src/components/ui/dialog.tsx",
+      "src/components/ui/dropdown-menu.tsx",
+      "src/components/ui/form.tsx",
+      "src/components/ui/input.tsx",
+      "src/components/ui/label.tsx",
+      "src/components/ui/password-input.tsx",
+      "src/components/ui/select.tsx",
+      "src/components/ui/tabs.tsx",
+      "src/components/ui/textarea.tsx",
+      "src/components/ui/toast.tsx",
+      "src/components/ui/toaster.tsx",
+      "src/components/ui/use-toast.ts",
+      "src/instrumentation.ts",
+      "src/lib/appIdentity.ts",
+      "src/lib/support.ts",
+      "src/lib/utils.ts",
+      "src/mocks/adminDemo.ts",
+      "src/mocks/owedbook.ts",
+      "src/proxy.ts",
+      "src/server/accessState.ts",
+      "src/server/afterSignIn.ts",
+      "src/server/db.ts",
+      "src/server/emailLink.ts",
+      "src/server/handoff.ts",
+      "src/server/invitationMail.ts",
+      "src/server/mailGuard.ts",
+      "src/server/staff.ts",
+      "src/services/adminDemo.ts",
+      "src/services/auditLog.ts",
+      "src/services/owedbook.ts",
+      "src/services/storeProfile.ts",
+      "src/services/tenantScope.ts",
+      "src/store/useAdminDemoStore.ts",
+      "src/store/useAuthStore.ts",
+      "src/types/OwedBook.ts",
+      "src/types/adminDemo.ts",
+      "src/types/supabase.ts",
+      "src/types/tailwind-merge.d.ts",
+      "src/utils/app-role.ts",
+      "src/utils/get-user-role.ts",
+      "src/utils/supabase/actions.ts",
+      "src/utils/supabase/admin.ts",
+      "src/utils/supabase/client.ts",
+      "src/utils/supabase/middleware.ts",
+      "src/utils/supabase/server.ts"
+    ],
+    "delta": [
+      {
+        "path": "CHANGELOG.md",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "81410ae858b2f799f05252bcc0c44a2e81df205a11bea7044dfd09df57fadda1",
+          "size": 58829
+        },
+        "after": {
+          "sha256": "5b88f9b7ae14205ade363e56e890b783863807cb3c39613828cbfa62541d35a5",
+          "size": 59065,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/SESSIONS/session_2026-11-27.md",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d9c28afb0428e05c05a1c3c150658d13e082c3f148762f1751a29770330bd38b",
+          "size": 2197,
+          "executable": false
+        }
+      },
+      {
+        "path": "src/__tests__/abm007/help-page.test.tsx",
+        "kind": "product/test",
+        "before": {
+          "executable": false,
+          "sha256": "cf36a42eec859168ded87ab631de63a4e463a4ef93b9b281819e123d5ffae11c",
+          "size": 6057
+        },
+        "after": {
+          "sha256": "4b3fcb5cf0e2b38813f50a4e21b46fca5715d2d0c38b6fb277600b76a4918fe2",
+          "size": 6526,
+          "executable": false
+        }
+      },
+      {
+        "path": "src/components/help/HelpPage.tsx",
+        "kind": "product/test",
+        "before": {
+          "executable": false,
+          "sha256": "ce77a11f91730ddd9ea17dcf71d6957ea9b34f834f0af782115a0388b22d120e",
+          "size": 21681
+        },
+        "after": {
+          "sha256": "ce60a03ac372a71483ca65394c5edb915d8ae2c1298fbe0ffee1f95b767d4119",
+          "size": 21481,
+          "executable": false
+        }
+      }
+    ],
+    "protectedDelta": [],
+    "recovery": "unchanged from Q4, including the existing AM-22 (3) Portal record insertion",
+    "newManifest": "cdecd74b3c9e26ab9987122b0c55c0d3ddf9486f00ca32061e56367268bb8742",
+    "fileCount": 2314
+  },
+  "pp": {
+    "app": "pp",
+    "oldManifest": "ba726f5ea3f5bf2cdd8156a16360e7674be2da500be48c81cacac19ba682c4b9",
+    "changedPaths": 235,
+    "unchangedProductOrTestCount": 216,
+    "unchangedProductOrTestPaths": [
+      "src/__tests__/abm007/billing-notice-wording.test.ts",
+      "src/__tests__/abm007/focus-surface.test.ts",
+      "src/__tests__/abm007/forced-light.test.tsx",
+      "src/__tests__/abm007/public-shell-fit.test.tsx",
+      "src/__tests__/abm007/token-pin.test.ts",
+      "src/__tests__/alpha-origins.test.ts",
+      "src/__tests__/apbm007a-auth.test.ts",
+      "src/__tests__/apbm007a-checkout-recovery.test.ts",
+      "src/__tests__/apbm007a-mail-guard.test.ts",
+      "src/__tests__/apbm007a-provisioning-concurrency.test.ts",
+      "src/__tests__/apbm007a-server.test.ts",
+      "src/__tests__/apbm007a-webhook-recovery.test.ts",
+      "src/__tests__/apbm007b-consent-deadline.test.ts",
+      "src/__tests__/apbm007b-hydration-forms.test.tsx",
+      "src/__tests__/apbm007b-store.test.ts",
+      "src/__tests__/get-user-role.test.ts",
+      "src/__tests__/jest.setup.ts",
+      "src/__tests__/login-form.test.tsx",
+      "src/__tests__/mail-recipient-policy.test.ts",
+      "src/__tests__/manual-qa-add-store-authz.test.ts",
+      "src/__tests__/manual-qa-add-store-states.test.ts",
+      "src/__tests__/manual-qa-portal-ui.test.tsx",
+      "src/__tests__/password-field.test.tsx",
+      "src/__tests__/portal-access.test.tsx",
+      "src/__tests__/portal-account.test.ts",
+      "src/__tests__/portal-activation.test.tsx",
+      "src/__tests__/portal-api.test.ts",
+      "src/__tests__/portal-boundaries.test.ts",
+      "src/__tests__/portal-components.test.tsx",
+      "src/__tests__/portal-dashboard.test.tsx",
+      "src/__tests__/portal-owner.test.tsx",
+      "src/__tests__/portal-registration-journey.test.tsx",
+      "src/__tests__/portal-registration.test.ts",
+      "src/__tests__/portal-review.test.tsx",
+      "src/__tests__/portal-shell.test.tsx",
+      "src/__tests__/portal-storage.test.ts",
+      "src/__tests__/portal-stripe-route.test.tsx",
+      "src/__tests__/proxy.test.ts",
+      "src/app/(account)/billing/page.tsx",
+      "src/app/(account)/dashboard/page.tsx",
+      "src/app/(account)/layout.tsx",
+      "src/app/(account)/loading.tsx",
+      "src/app/(account)/stores/add/page.tsx",
+      "src/app/(public)/layout.tsx",
+      "src/app/(public)/register/activation/page.tsx",
+      "src/app/(public)/register/owner/page.tsx",
+      "src/app/(public)/register/pharmacy/page.tsx",
+      "src/app/(public)/register/plan/page.tsx",
+      "src/app/(public)/register/review/page.tsx",
+      "src/app/api/auth/confirm/route.ts",
+      "src/app/api/auth/link/route.ts",
+      "src/app/api/auth/login/route.ts",
+      "src/app/api/auth/logout/route.ts",
+      "src/app/api/billing/overview/route.ts",
+      "src/app/api/billing/portal/route.ts",
+      "src/app/api/billing/undo-cancel/route.ts",
+      "src/app/api/build-info/route.ts",
+      "src/app/api/handoff/authorize/route.ts",
+      "src/app/api/handoff/callback/route.ts",
+      "src/app/api/handoff/start/route.ts",
+      "src/app/api/handoff/switch/route.ts",
+      "src/app/api/internal/jobs/run/route.ts",
+      "src/app/api/operator/007b/route.ts",
+      "src/app/api/operator/operations/route.ts",
+      "src/app/api/registration/checkout/route.ts",
+      "src/app/api/registration/draft/route.ts",
+      "src/app/api/registration/quote/route.ts",
+      "src/app/api/registration/status/route.ts",
+      "src/app/api/stores/[id]/removal/route.ts",
+      "src/app/api/stores/[id]/removal/undo/route.ts",
+      "src/app/api/stores/add/abandon/route.ts",
+      "src/app/api/stores/add/confirm/route.ts",
+      "src/app/api/stores/add/quote/route.ts",
+      "src/app/api/stores/add/status/route.ts",
+      "src/app/api/stores/operations/route.ts",
+      "src/app/api/webhooks/stripe/route.ts",
+      "src/app/apple-icon.png",
+      "src/app/auth/confirm/page.tsx",
+      "src/app/auth/handoff-recovery/page.tsx",
+      "src/app/auth/link-expired/page.tsx",
+      "src/app/auth/sign-in-to-continue/page.tsx",
+      "src/app/auth/signed-out/page.tsx",
+      "src/app/auth/switch/page.tsx",
+      "src/app/favicon.ico",
+      "src/app/globals.scss",
+      "src/app/icon.png",
+      "src/app/layout.tsx",
+      "src/app/login/LoginPageContent.tsx",
+      "src/app/login/page.tsx",
+      "src/app/not-found.tsx",
+      "src/app/page.tsx",
+      "src/app/providers/ThemeProvider.tsx",
+      "src/components/auth/AuthPages.tsx",
+      "src/components/auth/LinkRequestForm.tsx",
+      "src/components/common/SpinnerLarge.tsx",
+      "src/components/global/ThemeToggler.tsx",
+      "src/components/portal/Alert.tsx",
+      "src/components/portal/Brand.tsx",
+      "src/components/portal/BusyLabel.tsx",
+      "src/components/portal/Counter.tsx",
+      "src/components/portal/DataTable.tsx",
+      "src/components/portal/EmptyState.tsx",
+      "src/components/portal/ErrorSummary.tsx",
+      "src/components/portal/ExternalHandoffPanel.tsx",
+      "src/components/portal/Footer.tsx",
+      "src/components/portal/FormField.tsx",
+      "src/components/portal/HandoffShell.tsx",
+      "src/components/portal/Loading.tsx",
+      "src/components/portal/PageHeader.tsx",
+      "src/components/portal/PharmacyFields.tsx",
+      "src/components/portal/Pill.tsx",
+      "src/components/portal/PublicShell.tsx",
+      "src/components/portal/RadioCard.tsx",
+      "src/components/portal/Shell.tsx",
+      "src/components/portal/Stepper.tsx",
+      "src/components/portal/account/AccountGate.tsx",
+      "src/components/portal/account/AddStoreFlow.tsx",
+      "src/components/portal/account/AddStoreView.tsx",
+      "src/components/portal/account/ConfirmStoreView.tsx",
+      "src/components/portal/account/DashboardView.tsx",
+      "src/components/portal/account/OwedBookReferenceView.tsx",
+      "src/components/portal/account/OwnerOnlyNotice.tsx",
+      "src/components/portal/account/StoreRemovalControl.tsx",
+      "src/components/portal/account/StoreResultView.tsx",
+      "src/components/portal/account/status.tsx",
+      "src/components/portal/activation/AccessLinkView.tsx",
+      "src/components/portal/activation/ActivationView.tsx",
+      "src/components/portal/activation/CheckoutIncompleteView.tsx",
+      "src/components/portal/brand.ts",
+      "src/components/portal/hooks.ts",
+      "src/components/portal/layoutMode.tsx",
+      "src/components/portal/references/EmailPreview.tsx",
+      "src/components/portal/references/EmailReferenceView.tsx",
+      "src/components/portal/register/MissingContext.tsx",
+      "src/components/portal/register/OwnerView.tsx",
+      "src/components/portal/register/PharmacyStepView.tsx",
+      "src/components/portal/register/PlanView.tsx",
+      "src/components/portal/register/ReviewView.tsx",
+      "src/components/portal/register/useRegistrationDraft.ts",
+      "src/components/ui/alert-dialog.tsx",
+      "src/components/ui/breadcrumb.tsx",
+      "src/components/ui/button.tsx",
+      "src/components/ui/dialog.tsx",
+      "src/components/ui/dropdown-menu.tsx",
+      "src/components/ui/input.tsx",
+      "src/components/ui/label.tsx",
+      "src/components/ui/separator.tsx",
+      "src/components/ui/sheet.tsx",
+      "src/components/ui/skeleton.tsx",
+      "src/components/ui/table.tsx",
+      "src/components/ui/textarea.tsx",
+      "src/components/ui/toast.tsx",
+      "src/components/ui/toaster.tsx",
+      "src/components/ui/use-toast.ts",
+      "src/integration/apbm007a-scratch.itest.ts",
+      "src/integration/apbm007b-deadline.localdb.itest.ts",
+      "src/integration/apbm007b-ledger.ts",
+      "src/integration/apbm007b-store.itest.ts",
+      "src/lib/appIdentity.ts",
+      "src/lib/utils.ts",
+      "src/lib/viewerRole.ts",
+      "src/mocks/portal/fixtures.ts",
+      "src/proxy.ts",
+      "src/server/accessEmail.ts",
+      "src/server/afterSignIn.ts",
+      "src/server/billing.ts",
+      "src/server/billingNotices.ts",
+      "src/server/checkout.ts",
+      "src/server/db.ts",
+      "src/server/emailLink.ts",
+      "src/server/errors.ts",
+      "src/server/handoff.ts",
+      "src/server/http.ts",
+      "src/server/mailGuard.ts",
+      "src/server/operator.ts",
+      "src/server/operator007b.ts",
+      "src/server/pricing.ts",
+      "src/server/provisioning.ts",
+      "src/server/registration.ts",
+      "src/server/registrationStatus.ts",
+      "src/server/storeOperations.ts",
+      "src/server/storePricing.ts",
+      "src/server/stripeClient.ts",
+      "src/server/stripeMirror.ts",
+      "src/server/webhook.ts",
+      "src/services/auth/access.ts",
+      "src/services/auth/session.ts",
+      "src/services/portal/account.ts",
+      "src/services/portal/accountService.tsx",
+      "src/services/portal/catalog.ts",
+      "src/services/portal/ffm.ts",
+      "src/services/portal/format.ts",
+      "src/services/portal/index.ts",
+      "src/services/portal/latency.ts",
+      "src/services/portal/navigate.ts",
+      "src/services/portal/npi.ts",
+      "src/services/portal/portalApi.ts",
+      "src/services/portal/pricing.ts",
+      "src/services/portal/reference.ts",
+      "src/services/portal/registration.ts",
+      "src/services/portal/registrationForm.ts",
+      "src/services/portal/registrationService.ts",
+      "src/services/portal/registrationSession.ts",
+      "src/services/portal/storage.ts",
+      "src/services/portal/stripeRoute.ts",
+      "src/services/portal/validation.ts",
+      "src/types/auth.ts",
+      "src/types/portal/api.ts",
+      "src/types/portal/contract.ts",
+      "src/types/portal/state.ts",
+      "src/types/tailwind-merge.d.ts",
+      "src/utils/get-user-role.ts",
+      "src/utils/supabase/admin.ts",
+      "src/utils/supabase/client.ts",
+      "src/utils/supabase/middleware.ts",
+      "src/utils/supabase/server.ts"
+    ],
+    "delta": [
+      {
+        "path": "CHANGELOG.md",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "4956413f87e74cf943a8bb84f5eb49ecec0db5bd8dc087d59cc04e0b4eeb0491",
+          "size": 24884
+        },
+        "after": {
+          "sha256": "becee1e0e690ed7e5bf0d8397e052494a3c3c3e9df8d9c6e3ea31b087b2f0816",
+          "size": 25809,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/ABM_RULINGS.md",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "c533c4da10be50599c40fe6fa1245e5fb4ef569f5c8fa464cd2f412e5c405a43",
+          "size": 31208
+        },
+        "after": {
+          "sha256": "0959bb4feffa576d7bd26e871a9ccd733cf928deae66851818d3764eb8e4b07c",
+          "size": 31844,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/E2/CHANGED_LABELS.md",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "cf03a071ef8a3cb02da707290fea73347684e7e44579f6ac7b095c468e45211b",
+          "size": 6112
+        },
+        "after": {
+          "sha256": "37fddfafdf9d42b9192aa07cc67963cca2a49f0ce88adc91785acdb9a2566398",
+          "size": 6734,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/ABM007_FINAL_RWO01_ENGINEERING_RETURN_03.zip",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "93bdc0df02305d318d017b007af30949c5b965540e9f69c7389c040823d80743",
+          "size": 8537992,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/ABM007_FINAL_RWO01_ENGINEERING_RETURN_03.zip.sha256",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "e6f57e26de695912cfc0aef1931a3c237f68b028f72b79b972812c23e1680bb5",
+          "size": 111,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/CHANGED_FILES.md",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "3bb6aec8674405f987d5098f8575159a22f0fb571094c218f66624f012187a2b",
+          "size": 4439
+        },
+        "after": {
+          "sha256": "9f3737d4a3b97873bb7092d47eebb4e3fb768487d5d5619193ccbfcdda7ec9c6",
+          "size": 5411,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/COMMIT_MESSAGES.md",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "05fe922bc6dc94ba4d509c690621c605a63c471cdb2cbc8bd84b9eb5314dece4",
+          "size": 1781
+        },
+        "after": {
+          "sha256": "1e6ad5710b78248f0167e5fd6f177270ab98a7c36b8a77fc60ca55691684891c",
+          "size": 2581,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/NOTICED_NOT_FIXED.md",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "ad975ed408ca80c17819945e62ea68ac5e84f8ecbe9f12a75eb76bbf093b06e6",
+          "size": 4006
+        },
+        "after": {
+          "sha256": "5b398461613b9bbab44cd0692979a3f4f1faae7574e2635aace9749680262036",
+          "size": 6100,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/REVIEW_START_HERE.md",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "ab8aedd51dab70d9e30067af95405c5824ea5707565f759ed6f0c112dcd6ee43",
+          "size": 1315
+        },
+        "after": {
+          "sha256": "84b24bd5d31ca530497152c91291c62cbcb594d4f18bb8d6ce29cf3b22850c0e",
+          "size": 1649,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/RWO01_A2_ENGINEERING_REPORT.md",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "17d0cc2bd9c8a2d5476ce9c5b471a59ab6c710d61a0d3a809bed4f6eacff26d5",
+          "size": 10419,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/STAGING_LIST_owedbook.txt",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "c4755d3a385f6295d5958e4ffec9c17ed9a9c2a08a37b621b33eebacddf34afe",
+          "size": 830
+        },
+        "after": {
+          "sha256": "21e44fc44413fd2a980580380a46c030d49b605bd911ae5b163cac2d0d99fe9f",
+          "size": 872,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/STAGING_LIST_portal.txt",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "382b5b7c20b9ddc9d9b995cc1207deb065c8292e83df3b268f8049a73984e451",
+          "size": 10367
+        },
+        "after": {
+          "sha256": "df5b08254545b4aebd9bd86830e0db272d0b2975c96e7ce2b983da5d40bea844",
+          "size": 20177,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/STAGING_LIST_portal_optional.txt",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "f00989d6c76bc03c703c006a6c13dcb50d38f57e05e094cdd1fc7cf970c556f6",
+          "size": 382
+        },
+        "after": {
+          "sha256": "86a088edcdac4d32c4614702c7da4a20efb20ce63458de059fb30233c72b0654",
+          "size": 573,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/binding_a2/cyph-payment-portal-dev-v1_inventory.txt",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "eb70689e183bf86e8625ce80c16afbec4285d2c54dc9289e6d24e370cea44606",
+          "size": 9531,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/binding_a2/cyph-payment-portal-dev-v1_source.sha256",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "06e3f3c642ca46a94ffbd9b29dbbec74a3056151c7c99d82dbb749c2149b3175",
+          "size": 28803,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/binding_a2/cyph-payment-portal-dev-v1_status.txt",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "bc8cff8cbf7a2569dc7386284136bb1dd0497603016bf5a797cd69ddd8c90251",
+          "size": 618541,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/binding_a2/cyph-v1-dev_inventory.txt",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "fde05a23e34d8f311d22de98906f5698127dc5ece3439ec859c1f86bb088491f",
+          "size": 14762,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/binding_a2/cyph-v1-dev_source.sha256",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "ce717cd6b7ad0c911219d0dfc39fe3aed4eef153ee505ced78dbbe98cb505f33",
+          "size": 41756,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/binding_a2/cyph-v1-dev_status.txt",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "e09e13f594fea555cb5102b96659fb91bbe25b940009c0c8fc777890c3c13a64",
+          "size": 985,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/diff/addon_A1_only.diff",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "af800f785c763417de0f83dba7ee8840886ccd64e118fd6ca5d43a2101cc5e4c",
+          "size": 15135
+        },
+        "after": null
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/diff/addon_A2_only.diff",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "e8a8a1bbfd00d88e9ec34e839e8e7f46793239405f36f018dcb151e0bbf51fa9",
+          "size": 8226,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/diff/owedbook_full.diff",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "0da07009c543062231dd73098646c57b22afe6aae0847ccc9575a87499dd0090",
+          "size": 34156
+        },
+        "after": {
+          "sha256": "bc8316839f3b45c17a77369fc1dfa0b290652055a3d4f6050eb07c39779afc80",
+          "size": 36682,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/diff/owedbook_status.txt",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "aaca381e07276546bc64adfbda2585000dae0791798b26ec9c8823054304035c",
+          "size": 896
+        },
+        "after": {
+          "sha256": "264405a316704a470ee026f82b7728a84a8b71256c5ea1c58d8ab4baf0960eaf",
+          "size": 1030,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/diff/portal_full.diff",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "cf56c1b6deb8e31463209cbd7e1a7db575a9b16e7945027dff41d1c030e27cde",
+          "size": 85739
+        },
+        "after": {
+          "sha256": "1928b0a033cca7f76b55fcf1ab857acb8258061278cc158b6a96117e9ea2d633",
+          "size": 127070,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/diff/portal_status_without_QAM.txt",
+        "kind": "record",
+        "before": {
+          "executable": false,
+          "sha256": "621c9faa52e7fa080203756e03273122dd56511e786a35c35bb155bf11defc49",
+          "size": 772
+        },
+        "after": {
+          "sha256": "cd03e91d16f9dba84206c9b4ebe78a9bee0342a681eb9b08b5b6f576e53b804b",
+          "size": 21319,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/diff/return02/addon_A1_only.diff",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "af800f785c763417de0f83dba7ee8840886ccd64e118fd6ca5d43a2101cc5e4c",
+          "size": 15135,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/diff/return02/owedbook_full.diff",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0da07009c543062231dd73098646c57b22afe6aae0847ccc9575a87499dd0090",
+          "size": 34156,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/diff/return02/owedbook_status.txt",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "aaca381e07276546bc64adfbda2585000dae0791798b26ec9c8823054304035c",
+          "size": 896,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/diff/return02/portal_full.diff",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "cf56c1b6deb8e31463209cbd7e1a7db575a9b16e7945027dff41d1c030e27cde",
+          "size": 85739,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/diff/return02/portal_status_without_QAM.txt",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "621c9faa52e7fa080203756e03273122dd56511e786a35c35bb155bf11defc49",
+          "size": 772,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/logs_a2/build_ob_scratch.log",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0209feeea9ee91265f9bf0a2602d00792b4e1bfade06281c021ff469dcaa53cd",
+          "size": 1776,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/logs_a2/build_pp_scratch.log",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "611d91d98dd1b149f1dd2acc27926a45ff59d3a202851f12f373d85cc6d634ec",
+          "size": 1886,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/logs_a2/ob_lint.log",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "8643ef09476587e68764eeb32ad64521cdc44abd57d6acee4344b6da4dc15ec8",
+          "size": 24217,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/logs_a2/ob_test.log",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "84450718f2d43a15066be7c3fa25a40b42ec407a8c26092a35dcb9a5e2a499ab",
+          "size": 132,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/logs_a2/ob_typecheck.log",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/logs_a2/pp_lint.log",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d2072430a26d33de69034b2554333f609296d48ac008457b3ee02b5f5dad3c9d",
+          "size": 15824,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/logs_a2/pp_test.log",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "7aff8174da98cebf5e1b74c5fbc09ccbd641bbcc0d72b947bfeacbb5282c7bdf",
+          "size": 132,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/logs_a2/pp_typecheck.log",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size": 0,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/logs_a2/scratch_build_check_a2.txt",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "fab69de397cfbe9810176c1d5718444b66e797ace02bc37ab686e91895e41d10",
+          "size": 413,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/logs_a2/summary.txt",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0721de58f6ea674dd2ec452a813a829024045378e33b781652c91ae60b749661",
+          "size": 147,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/measure_a2_after.json",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "f8b75fa0a66cb7926139b506da9fc1084aa96d2c7c03ac1503fb736653cc19a1",
+          "size": 202235,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/measure_a2_before.json",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "733561c757c4adc3606be0e77ed5502620189db8a2d85a6dbeb9113f32a54fa6",
+          "size": 71399,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/measure_a2_before_run1.json",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d48de90de50312e52a857095e7e34c6b6514ac888665170a8166944a2c43803f",
+          "size": 141685,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_help_first_article_1440.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "bb4135e442264def0d1c7447d302f473303fae3cbe3ce15ce68baa8488340389",
+          "size": 184906,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_help_first_article_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "9a03ab021096225187b49558ef71e92dca61e4abdbc4d74810632c23d2d07fa7",
+          "size": 67043,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_help_page_end_1440.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d6a5124aedd15534dad7a83a80a2f38eb25aa0ced918684e2c56c546db922a22",
+          "size": 139487,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_help_page_end_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "1b2f5f614139207be194aa6fb8f3a784810e4850154afb7b230687ffb4e17c38",
+          "size": 70563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_1024_end_of_article_13_support_.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "9094e988c88c36aba20cdb46a82d205b72de9f1392ddfd64d3ed2b8e1bb51693",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_1024_end_of_article_1_getting_aroun.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "9094e988c88c36aba20cdb46a82d205b72de9f1392ddfd64d3ed2b8e1bb51693",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_1024_end_of_article_7_billing_.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0352221d3ad492be4514b8da6cb0dc847f71c0487f20588ca3b8b7f5acfd46b6",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_1440_end_of_article_13_support_.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0352221d3ad492be4514b8da6cb0dc847f71c0487f20588ca3b8b7f5acfd46b6",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_1440_end_of_article_1_getting_aroun.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0352221d3ad492be4514b8da6cb0dc847f71c0487f20588ca3b8b7f5acfd46b6",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_1440_end_of_article_7_billing_.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "9094e988c88c36aba20cdb46a82d205b72de9f1392ddfd64d3ed2b8e1bb51693",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_375_end_of_article_13_support_.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "45ba508f18c5d2679df83a0957e9d1433107e16f6482e6aa8cbb5a5451efbb58",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_375_end_of_article_1_getting_aroun.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "45ba508f18c5d2679df83a0957e9d1433107e16f6482e6aa8cbb5a5451efbb58",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_375_end_of_article_7_billing_.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0352221d3ad492be4514b8da6cb0dc847f71c0487f20588ca3b8b7f5acfd46b6",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_768_end_of_article_13_support_.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "45ba508f18c5d2679df83a0957e9d1433107e16f6482e6aa8cbb5a5451efbb58",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_768_end_of_article_1_getting_aroun.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "9094e988c88c36aba20cdb46a82d205b72de9f1392ddfd64d3ed2b8e1bb51693",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-1_link_focus_768_end_of_article_7_billing_.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "9094e988c88c36aba20cdb46a82d205b72de9f1392ddfd64d3ed2b8e1bb51693",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-2_billing_add_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "658ab9587933bf0a5ab198d471786136562678f919772ccdba4e381ecbd7b587",
+          "size": 5413,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-2_billing_add_375_window.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d0a4d9796067ab4a99dfaeeac215c1e9f92b8d51bafa6ba5fdcea742e25f85eb",
+          "size": 78924,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-2_help_menu_last_link_focused_1024x600.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "a2fce4dc41e9336b1d4f585ded6c87dd0775572d2e29abca5b7276cf5de77a12",
+          "size": 107779,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-2_help_menu_last_link_focused_1440x900.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "aec340998eb68cc4ecda27e86d00b36a274cf544d8d17c93cded1b29143e288e",
+          "size": 130014,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-2_menu_link_13_1024x600.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "9e067c41ea7158eb06e99f36ef365cedf354d0ac060914b3edb85276e29e9724",
+          "size": 2944,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-2_menu_link_13_1440x900.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "97af86bdef7d1df18d1dc092c5a65991b13541c6b1688a732a6398b1c0696dc0",
+          "size": 2765,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-2_menu_link_1_1024x600.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "542a4d71079960ae4669ddb72c152122067f4d230c3abd89841b9bca2a4502f5",
+          "size": 2889,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-2_menu_link_1_1440x900.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "000f9a262dc02d99f90149e124b3249c5938c668b12f6bfeb59f1ba2833ceffd",
+          "size": 2745,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-2_profile_password_field_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "52fdb717360d34ae06ea1a1701c605bca68e4569b112c39a2fb8f7ad1acc1640",
+          "size": 3863,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-2_profile_password_toggle_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "f2961b5c4c42782f26fbb04a909d376f58160d529ab843d59d855eb4c08e9e8c",
+          "size": 1407,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_after/A2-2_profile_password_toggle_375_window.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "5a45577eb48144c6754de5f3bd7f3f1a556768d9c23953415144c2ce2f3c00bf",
+          "size": 48520,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-1_help_first_article_1440.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "e561bb99dcfc02366a16a6b5e67502de540ad770078a354e29cd6ca4191770bb",
+          "size": 186539,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-1_help_first_article_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d160bf3b270213bcecbc7670771e57b63aca2cb6f282a58c36e2e414cb885181",
+          "size": 70307,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-1_help_page_end_1440.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "be3e49d9e811791fd6cab8e002171e421d4bc99adb6f6ce4b3d47d78ddd4f3ba",
+          "size": 155462,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-1_help_page_end_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d888437772d3279892e3ec0c32fcdbf7e07e76543442e90afc73e3f4deee2bb0",
+          "size": 80722,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-1_link_focus_1024_contents_menu.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "1ad38fdc08e87be60fc961bd6139d0e3f0dd2475c29bfc6657c6e64416069e57",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-1_link_focus_1440_contents_menu.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "ccf430532aecd2cc357046ea13b27d4b7731aa960a506c277d29e091d489d4c1",
+          "size": 1489,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-1_link_focus_375_after_the_last_article_directl.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0410630ea049797847b796ce84804624a6e22066a4e221e33ec46225e23c274c",
+          "size": 1737,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-1_link_focus_375_contents_menu.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d667ad2ed6530a14dd06e913413443d09e400c6469037d1febfd0b517219b2dc",
+          "size": 1566,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-1_link_focus_768_after_the_last_article_directl.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0410630ea049797847b796ce84804624a6e22066a4e221e33ec46225e23c274c",
+          "size": 1737,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-1_link_focus_768_contents_menu.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d667ad2ed6530a14dd06e913413443d09e400c6469037d1febfd0b517219b2dc",
+          "size": 1566,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-2_billing_add_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "658ab9587933bf0a5ab198d471786136562678f919772ccdba4e381ecbd7b587",
+          "size": 5413,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-2_billing_add_375_window.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "46db176af2239730113e4fce371510440f68e46a4f57c650e3f25ea4c15236d8",
+          "size": 78898,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-2_help_menu_last_link_focused_1024x600.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "9e1f2c6583e70351621779fc8a8d14b71833aa0b228e88133dca6423acf86820",
+          "size": 105121,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-2_help_menu_last_link_focused_1440x900.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "ace330bc6dc9bce452fd6fbfc564be111507a9e32315d82745ccb4d328a0444c",
+          "size": 151934,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-2_menu_link_14_1024x600.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "1ad38fdc08e87be60fc961bd6139d0e3f0dd2475c29bfc6657c6e64416069e57",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-2_menu_link_14_1440x900.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "ccf430532aecd2cc357046ea13b27d4b7731aa960a506c277d29e091d489d4c1",
+          "size": 1489,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-2_menu_link_1_1024x600.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "542a4d71079960ae4669ddb72c152122067f4d230c3abd89841b9bca2a4502f5",
+          "size": 2889,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-2_menu_link_1_1440x900.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "000f9a262dc02d99f90149e124b3249c5938c668b12f6bfeb59f1ba2833ceffd",
+          "size": 2745,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-2_profile_password_field_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "52fdb717360d34ae06ea1a1701c605bca68e4569b112c39a2fb8f7ad1acc1640",
+          "size": 3863,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-2_profile_password_toggle_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "f2961b5c4c42782f26fbb04a909d376f58160d529ab843d59d855eb4c08e9e8c",
+          "size": 1407,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before/A2-2_profile_password_toggle_375_window.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "de5ae7509e639ae46801ab5ce527f9d3fab42baf3f49d9668c6e36229dc5e09f",
+          "size": 48714,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-1_help_first_article_1440.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "e561bb99dcfc02366a16a6b5e67502de540ad770078a354e29cd6ca4191770bb",
+          "size": 186539,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-1_help_first_article_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d160bf3b270213bcecbc7670771e57b63aca2cb6f282a58c36e2e414cb885181",
+          "size": 70307,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-1_help_page_end_1440.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "be3e49d9e811791fd6cab8e002171e421d4bc99adb6f6ce4b3d47d78ddd4f3ba",
+          "size": 155462,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-1_help_page_end_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d888437772d3279892e3ec0c32fcdbf7e07e76543442e90afc73e3f4deee2bb0",
+          "size": 80722,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-1_link_focus_1024_contents_menu.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "1ad38fdc08e87be60fc961bd6139d0e3f0dd2475c29bfc6657c6e64416069e57",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-1_link_focus_1440_contents_menu.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "ccf430532aecd2cc357046ea13b27d4b7731aa960a506c277d29e091d489d4c1",
+          "size": 1489,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-1_link_focus_375_after_the_last_article_directl.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0410630ea049797847b796ce84804624a6e22066a4e221e33ec46225e23c274c",
+          "size": 1737,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-1_link_focus_375_contents_menu.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d667ad2ed6530a14dd06e913413443d09e400c6469037d1febfd0b517219b2dc",
+          "size": 1566,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-1_link_focus_768_after_the_last_article_directl.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0410630ea049797847b796ce84804624a6e22066a4e221e33ec46225e23c274c",
+          "size": 1737,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-1_link_focus_768_contents_menu.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "d667ad2ed6530a14dd06e913413443d09e400c6469037d1febfd0b517219b2dc",
+          "size": 1566,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-2_billing_add_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "658ab9587933bf0a5ab198d471786136562678f919772ccdba4e381ecbd7b587",
+          "size": 5413,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-2_billing_add_375_window.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "46db176af2239730113e4fce371510440f68e46a4f57c650e3f25ea4c15236d8",
+          "size": 78898,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-2_help_menu_last_link_focused_1024x600.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "1c45c0a8adb498cb6a1dd8d6d72082ae18aa0f17bff09c4c9559700cbaa20752",
+          "size": 112050,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-2_help_menu_last_link_focused_1440x900.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "2921f8832d13b667ea89714412aec6dbfcdf7418c976262fe56519c6582f6910",
+          "size": 158896,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-2_menu_link_14_1024x600.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "1ad38fdc08e87be60fc961bd6139d0e3f0dd2475c29bfc6657c6e64416069e57",
+          "size": 1563,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-2_menu_link_14_1440x900.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "ccf430532aecd2cc357046ea13b27d4b7731aa960a506c277d29e091d489d4c1",
+          "size": 1489,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-2_menu_link_1_1024x600.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "05dfcfd694755e5465ac8c1f6f2deb00374ac2e2f919b0a93c6990a88fe74f11",
+          "size": 2893,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-2_menu_link_1_1440x900.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "85821b0909ee890e4975fa9892773be9405e58b8a1c1fab7232afb00003cf9d3",
+          "size": 2749,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-2_profile_password_field_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "52fdb717360d34ae06ea1a1701c605bca68e4569b112c39a2fb8f7ad1acc1640",
+          "size": 3863,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-2_profile_password_toggle_375.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "0ad9eb3b428db0de3186e956ccc41f23103bf7ef05058e5555083d2e43550a44",
+          "size": 1418,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/measure/shots_a2_before_run1/A2-2_profile_password_toggle_375_window.png",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "de5ae7509e639ae46801ab5ce527f9d3fab42baf3f49d9668c6e36229dc5e09f",
+          "size": 48714,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/ACTIONS/ABM007_FINAL/EVIDENCE/RWO01/tools/measure_a2.mjs",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "947fba6fa81d1528364d909bca35b25354f1f32fb785e306eab0569e34154373",
+          "size": 29391,
+          "executable": false
+        }
+      },
+      {
+        "path": "agent_docs/RESPONSES/response_2026-11-27_111722_rwo01-a2-engineering-return.md",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "55e0a0784bcd91caf1e222b1a8fcdd8534d78e425413db590411130643e2dc31",
+          "size": 4282,
+          "executable": false
+        }
+      },
+      {
+        "path": "session_2026-11-27.md",
+        "kind": "record",
+        "before": null,
+        "after": {
+          "sha256": "de68f792e3fb9938faac0b2a6b5b78cc7030b47310e42fc15d198cb6c9706850",
+          "size": 9188,
+          "executable": false
+        }
+      }
+    ],
+    "protectedDelta": [],
+    "recovery": "unchanged from Q4, including the existing AM-22 (3) Portal record insertion",
+    "newManifest": "80d5d7285238cdb6fe3d23745f28d7ab984afeba8960c5d1ad1e5da45fbcd527",
+    "fileCount": 2469
+  }
+}

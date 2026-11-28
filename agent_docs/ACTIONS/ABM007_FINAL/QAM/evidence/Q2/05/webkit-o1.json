@@ -1,0 +1,367 @@
+{
+  "rows": [
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "run": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "time": "2026-11-24T13:25:09.337Z",
+      "steps": [
+        {
+          "expected": "/owedbook",
+          "path": "/owedbook",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal",
+          "path": "/admin-portal",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal/billing",
+          "path": "/admin-portal/billing",
+          "origin": "http://localhost:3100"
+        }
+      ],
+      "result": "INCOMPLETE",
+      "blockedStep": "Manage billing handoff",
+      "ownerOnlyMessage": true,
+      "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "run": 2,
+      "method": "provider token via the app confirm page (AM-15)",
+      "time": "2026-11-24T13:25:24.858Z",
+      "steps": [
+        {
+          "expected": "/owedbook",
+          "path": "/owedbook",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal",
+          "path": "/admin-portal",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal/billing",
+          "path": "/admin-portal/billing",
+          "origin": "http://localhost:3100"
+        }
+      ],
+      "result": "INCOMPLETE",
+      "blockedStep": "Manage billing handoff",
+      "ownerOnlyMessage": true,
+      "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "run": 3,
+      "method": "provider token via the app confirm page (AM-15)",
+      "time": "2026-11-24T13:25:34.981Z",
+      "steps": [
+        {
+          "expected": "/owedbook",
+          "path": "/owedbook",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal",
+          "path": "/admin-portal",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal/billing",
+          "path": "/admin-portal/billing",
+          "origin": "http://localhost:3100"
+        }
+      ],
+      "result": "INCOMPLETE",
+      "blockedStep": "Manage billing handoff",
+      "ownerOnlyMessage": true,
+      "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "run": 4,
+      "method": "provider token via the app confirm page (AM-15)",
+      "time": "2026-11-24T13:25:44.994Z",
+      "steps": [
+        {
+          "expected": "/owedbook",
+          "path": "/owedbook",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal",
+          "path": "/admin-portal",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal/billing",
+          "path": "/admin-portal/billing",
+          "origin": "http://localhost:3100"
+        }
+      ],
+      "result": "INCOMPLETE",
+      "blockedStep": "Manage billing handoff",
+      "ownerOnlyMessage": true,
+      "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "run": 5,
+      "method": "provider token via the app confirm page (AM-15)",
+      "time": "2026-11-24T13:26:01.179Z",
+      "steps": [
+        {
+          "expected": "/owedbook",
+          "path": "/owedbook",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal",
+          "path": "/admin-portal",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal/billing",
+          "path": "/admin-portal/billing",
+          "origin": "http://localhost:3100"
+        }
+      ],
+      "result": "INCOMPLETE",
+      "blockedStep": "Manage billing handoff",
+      "ownerOnlyMessage": true,
+      "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "warm",
+      "run": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "time": "2026-11-24T13:26:12.442Z",
+      "steps": [
+        {
+          "expected": "/owedbook",
+          "path": "/owedbook",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal",
+          "path": "/admin-portal",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal/billing",
+          "path": "/admin-portal/billing",
+          "origin": "http://localhost:3100"
+        }
+      ],
+      "result": "INCOMPLETE",
+      "blockedStep": "Manage billing handoff",
+      "ownerOnlyMessage": true,
+      "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "warm",
+      "run": 2,
+      "method": "provider token via the app confirm page (AM-15)",
+      "time": "2026-11-24T13:26:21.986Z",
+      "steps": [
+        {
+          "expected": "/owedbook",
+          "path": "/owedbook",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal",
+          "path": "/admin-portal",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal/billing",
+          "path": "/admin-portal/billing",
+          "origin": "http://localhost:3100"
+        }
+      ],
+      "result": "INCOMPLETE",
+      "blockedStep": "Manage billing handoff",
+      "ownerOnlyMessage": true,
+      "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "warm",
+      "run": 3,
+      "method": "provider token via the app confirm page (AM-15)",
+      "time": "2026-11-24T13:26:36.246Z",
+      "steps": [
+        {
+          "expected": "/owedbook",
+          "path": "/owedbook",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal",
+          "path": "/admin-portal",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal/billing",
+          "path": "/admin-portal/billing",
+          "origin": "http://localhost:3100"
+        }
+      ],
+      "result": "INCOMPLETE",
+      "blockedStep": "Manage billing handoff",
+      "ownerOnlyMessage": true,
+      "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "warm",
+      "run": 4,
+      "method": "provider token via the app confirm page (AM-15)",
+      "time": "2026-11-24T13:26:40.964Z",
+      "steps": [
+        {
+          "expected": "/owedbook",
+          "path": "/owedbook",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal",
+          "path": "/admin-portal",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal/billing",
+          "path": "/admin-portal/billing",
+          "origin": "http://localhost:3100"
+        }
+      ],
+      "result": "INCOMPLETE",
+      "blockedStep": "Manage billing handoff",
+      "ownerOnlyMessage": true,
+      "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "warm",
+      "run": 5,
+      "method": "provider token via the app confirm page (AM-15)",
+      "time": "2026-11-24T13:26:45.785Z",
+      "steps": [
+        {
+          "expected": "/owedbook",
+          "path": "/owedbook",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal",
+          "path": "/admin-portal",
+          "origin": "http://localhost:3100"
+        },
+        {
+          "expected": "/admin-portal/billing",
+          "path": "/admin-portal/billing",
+          "origin": "http://localhost:3100"
+        }
+      ],
+      "result": "INCOMPLETE",
+      "blockedStep": "Manage billing handoff",
+      "ownerOnlyMessage": true,
+      "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+    }
+  ],
+  "sessions": [
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "index": 1,
+      "role": "ENGINEERING_ADMIN",
+      "attempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "signout": 200
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "index": 2,
+      "role": "ENGINEERING_ADMIN",
+      "attempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "signout": 200
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "index": 3,
+      "role": "ENGINEERING_ADMIN",
+      "attempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "signout": 200
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "index": 4,
+      "role": "ENGINEERING_ADMIN",
+      "attempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "signout": 200
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "fresh",
+      "index": 5,
+      "role": "ENGINEERING_ADMIN",
+      "attempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "signout": 200
+    },
+    {
+      "engine": "webkit",
+      "version": "26.4",
+      "kind": "warm",
+      "index": 1,
+      "role": "ENGINEERING_ADMIN",
+      "attempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "signout": 200
+    }
+  ],
+  "counters": {
+    "password_sign_ins": 0,
+    "token_sign_ins": 6,
+    "generate_link_calls": 6
+  }
+}

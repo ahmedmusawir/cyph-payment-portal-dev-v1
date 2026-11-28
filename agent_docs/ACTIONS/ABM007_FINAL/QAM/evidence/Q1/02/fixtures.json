@@ -1,0 +1,108 @@
+{
+  "ENGINEERING_OWNER_A": {
+    "exists": true,
+    "ownedStores": 3,
+    "storeStatuses": [
+      "active",
+      "active",
+      "active"
+    ],
+    "memberships": [
+      {
+        "role": "admin",
+        "count": 2
+      },
+      {
+        "role": "member",
+        "count": 1
+      }
+    ],
+    "auditCount": 567,
+    "invitations": [
+      {
+        "status": "revoked",
+        "count": 3
+      },
+      {
+        "status": "accepted",
+        "count": 3
+      }
+    ],
+    "passwordAvailable": true,
+    "inboxKnownAccessible": false,
+    "emailUsesInvalidDomain": false
+  },
+  "ENGINEERING_OWNER_B": {
+    "exists": true,
+    "ownedStores": 2,
+    "storeStatuses": [
+      "active",
+      "active"
+    ],
+    "memberships": [
+      {
+        "role": "admin",
+        "count": 2
+      },
+      {
+        "role": "member",
+        "count": 1
+      }
+    ],
+    "auditCount": 7,
+    "invitations": [],
+    "passwordAvailable": true,
+    "inboxKnownAccessible": false,
+    "emailUsesInvalidDomain": false
+  },
+  "ENGINEERING_ADMIN": {
+    "exists": true,
+    "ownedStores": 0,
+    "storeStatuses": [],
+    "memberships": [
+      {
+        "role": "admin",
+        "count": 1
+      }
+    ],
+    "auditCount": 0,
+    "invitations": [],
+    "passwordAvailable": false,
+    "inboxKnownAccessible": false,
+    "emailUsesInvalidDomain": false
+  },
+  "ENGINEERING_MEMBER": {
+    "exists": true,
+    "ownedStores": 0,
+    "storeStatuses": [],
+    "memberships": [
+      {
+        "role": "member",
+        "count": 1
+      }
+    ],
+    "auditCount": 0,
+    "invitations": [],
+    "passwordAvailable": false,
+    "inboxKnownAccessible": false,
+    "emailUsesInvalidDomain": false
+  },
+  "ENGINEERING_INVITEE": {
+    "exists": true,
+    "ownedStores": 1,
+    "storeStatuses": [
+      "active"
+    ],
+    "memberships": [
+      {
+        "role": "admin",
+        "count": 1
+      }
+    ],
+    "auditCount": 7,
+    "invitations": [],
+    "passwordAvailable": false,
+    "inboxKnownAccessible": false,
+    "emailUsesInvalidDomain": false
+  }
+}

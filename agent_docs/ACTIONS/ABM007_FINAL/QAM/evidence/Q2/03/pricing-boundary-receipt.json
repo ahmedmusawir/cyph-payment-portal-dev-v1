@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/tmp/abm007-final-cody-q2/pp/node_modules/.bin/jest",
+    "--runInBand",
+    "--config",
+    "{\"rootDir\": \"/tmp/abm007-final-cody-q2/pp\", \"roots\": [\"/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/AUTOMATION/Q2\"], \"testMatch\": [\"**/pricing-boundary.test.ts\"], \"moduleNameMapper\": {\"^@/(.*)$\": \"/tmp/abm007-final-cody-q2/pp/src/$1\"}, \"moduleDirectories\": [\"node_modules\", \"/tmp/abm007-final-cody-q2/pp/node_modules\"], \"transform\": {\"^.+\\\\.tsx?$\": [\"/tmp/abm007-final-cody-q2/pp/node_modules/ts-jest\", {\"tsconfig\": \"/tmp/abm007-final-cody-q2/pp/tsconfig.json\"}]}, \"testEnvironment\": \"node\"}"
+  ],
+  "cwd": "/tmp/abm007-final-cody-q2/pp",
+  "exit": 0,
+  "level": "source/unit only; quote provider fully mocked; no backend session or request"
+}

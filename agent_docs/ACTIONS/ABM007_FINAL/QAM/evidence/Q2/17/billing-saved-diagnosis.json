@@ -1,0 +1,22 @@
+{
+  "finding": "ABM7F-F15",
+  "journey": "J-b (Stripe billing return); prior J-f label corrected",
+  "basis": "Saved evidence and candidate/helper source only. No new HTTP/provider request.",
+  "observedAppPostCount": 1,
+  "observedResponseStatus": "NOT RECORDED",
+  "observedResponseBodyShape": "NOT RECORDED",
+  "observedStripeSessionCreation": "UNKNOWN",
+  "redirectSource": {
+    "file": "src/services/portal/navigate.ts",
+    "line": 3,
+    "operation": "window.location.assign(url)",
+    "meaning": "same tab, only on successful response; execution of this branch was not captured"
+  },
+  "testWait": "page.waitForURL on the same page, hostname billing.stripe.com, timeout30000ms",
+  "savedServerLog": "NONE: QA serve.mjs starts children with stdout/stderr ignored; the retained billing-once.log is the QA receipt, not an application response or server log",
+  "whyTimedOut": "UNKNOWN. Only failure to observe the expected destination within30seconds is established.",
+  "classification": "INCOMPLETE; neither product failure nor wrong-tab instrument fault established",
+  "conditionalSecondOpening": "NOT AUTHORIZED BY THE CONDITION: saved evidence does not establish test fault. No second attempt.",
+  "cleanupSignout": 200,
+  "sourceLimits": "Candidate success/error JSON shapes can be inspected in source but are not substituted for the missing observed response."
+}

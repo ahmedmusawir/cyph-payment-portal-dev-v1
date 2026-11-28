@@ -1,0 +1,35 @@
+diff --git a/src/server/billingNotices.ts b/src/server/billingNotices.ts
+index a6ca6fe..d1815ea 100644
+--- a/src/server/billingNotices.ts
++++ b/src/server/billingNotices.ts
+@@ -9,7 +9,7 @@ import { logServer } from '@/server/errors';
+ import { ownOrigin } from '@/lib/appIdentity';
+ import { guardDecision } from '@/server/mailGuard';
+ 
+-export const BILLING_EMAIL_FROM_DEFAULT = 'Cyber Pharma <no-reply@cyberizedev.com>';
++export const BILLING_EMAIL_FROM_DEFAULT = 'Pharmacy Books <no-reply@cyberizedev.com>';
+ const RESEND_URL = 'https://api.resend.com/emails';
+ 
+ interface Claim { id: string; epoch: number; kind: 'renewal_payment_failed' | 'renewal_read_only_warning'; invoice_id: string; to: string; grace_ends_at: string; amount_due_cents: number | null; attempt: number; account_id: string }
+@@ -23,17 +23,17 @@ export function noticePayload(c: Pick<Claim, 'kind' | 'grace_ends_at' | 'amount_
+   const amount = money(c.amount_due_cents);
+   if (c.kind === 'renewal_payment_failed') {
+     return {
+-      subject: 'Payment failed for your Cyber Pharma subscription',
++      subject: 'Payment failed for your Pharmacy Books subscription',
+       text: [`We couldn't collect your subscription renewal${amount ? ` of ${amount}` : ''}.`,
+         `Your stores keep working normally until ${date(c.grace_ends_at)}. After that, your account becomes read-only until payment succeeds.`,
+-        `Update your payment method: ${link}`, '', 'You are receiving this because you own this Cyber Pharma account.'].join('\n'),
++        `Update your payment method: ${link}`, '', 'You are receiving this because you own this Pharmacy Books account.'].join('\n'),
+     };
+   }
+   return {
+-    subject: 'Your Cyber Pharma account becomes read-only in 48 hours',
++    subject: 'Your Pharmacy Books account becomes read-only in 48 hours',
+     text: [`Your subscription renewal${amount ? ` of ${amount}` : ''} is still unpaid.`,
+       `On ${date(c.grace_ends_at)} your account becomes read-only until payment succeeds.`,
+-      `Update your payment method: ${link}`, '', 'You are receiving this because you own this Cyber Pharma account.'].join('\n'),
++      `Update your payment method: ${link}`, '', 'You are receiving this because you own this Pharmacy Books account.'].join('\n'),
+   };
+ }
+ export const fingerprint = (p: { subject: string; text: string }) => createHash('sha256').update(`${p.subject}\n${p.text}`).digest('hex');

@@ -1,0 +1,632 @@
+[
+  {
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "expect": "PASS",
+    "measurement": {
+      "kind": "focus",
+      "result": "PASS",
+      "minimumSideSampleContrast": 9.9482,
+      "sides": [
+        {
+          "side": "top",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "bottom",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "left",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        }
+      ],
+      "style": {
+        "tag": "INPUT",
+        "type": "radio",
+        "outline": "rgb(16, 16, 16) auto 1px",
+        "offset": "2px",
+        "shadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "borderWidth": "0px",
+        "focusVisible": true,
+        "height": 1
+      },
+      "method": "Actual viewport pixels: three positions per edge; border vs adjacent background, or focus image vs same pre-focus pixels. Strongest changed pixel in narrow edge strip, minimum across all12 edge samples. Images never retained."
+    },
+    "pass": true
+  },
+  {
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "expect": "FAIL",
+    "measurement": {
+      "kind": "focus",
+      "result": "FAIL",
+      "minimumSideSampleContrast": 1.1602,
+      "sides": [
+        {
+          "side": "top",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "bottom",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "left",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        }
+      ],
+      "style": {
+        "tag": "INPUT",
+        "type": "radio",
+        "outline": "rgb(16, 16, 16) auto 1px",
+        "offset": "2px",
+        "shadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "borderWidth": "0px",
+        "focusVisible": true,
+        "height": 1
+      },
+      "method": "Actual viewport pixels: three positions per edge; border vs adjacent background, or focus image vs same pre-focus pixels. Strongest changed pixel in narrow edge strip, minimum across all12 edge samples. Images never retained."
+    },
+    "pass": true
+  },
+  {
+    "engine": "firefox",
+    "version": "148.0.2",
+    "expect": "PASS",
+    "measurement": {
+      "kind": "focus",
+      "result": "PASS",
+      "minimumSideSampleContrast": 9.9482,
+      "sides": [
+        {
+          "side": "top",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "bottom",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "left",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        }
+      ],
+      "style": {
+        "tag": "INPUT",
+        "type": "radio",
+        "outline": "rgb(0, 0, 0) auto 1px",
+        "offset": "0px",
+        "shadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "borderWidth": "0px",
+        "focusVisible": true,
+        "height": 1
+      },
+      "method": "Actual viewport pixels: three positions per edge; border vs adjacent background, or focus image vs same pre-focus pixels. Strongest changed pixel in narrow edge strip, minimum across all12 edge samples. Images never retained."
+    },
+    "pass": true
+  },
+  {
+    "engine": "firefox",
+    "version": "148.0.2",
+    "expect": "FAIL",
+    "measurement": {
+      "kind": "focus",
+      "result": "FAIL",
+      "minimumSideSampleContrast": 1.1602,
+      "sides": [
+        {
+          "side": "top",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "bottom",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "left",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        }
+      ],
+      "style": {
+        "tag": "INPUT",
+        "type": "radio",
+        "outline": "rgb(0, 0, 0) auto 1px",
+        "offset": "0px",
+        "shadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "borderWidth": "0px",
+        "focusVisible": true,
+        "height": 1
+      },
+      "method": "Actual viewport pixels: three positions per edge; border vs adjacent background, or focus image vs same pre-focus pixels. Strongest changed pixel in narrow edge strip, minimum across all12 edge samples. Images never retained."
+    },
+    "pass": true
+  },
+  {
+    "engine": "webkit",
+    "version": "26.4",
+    "expect": "PASS",
+    "measurement": {
+      "kind": "focus",
+      "result": "PASS",
+      "minimumSideSampleContrast": 9.9482,
+      "sides": [
+        {
+          "side": "top",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "bottom",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "left",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 9.9482,
+              "changedPixels": 2
+            }
+          ]
+        }
+      ],
+      "style": {
+        "tag": "INPUT",
+        "type": "radio",
+        "outline": "5px auto rgba(52, 132, 228, 0.8)",
+        "offset": "0px",
+        "shadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "borderWidth": "0px",
+        "focusVisible": true,
+        "height": 1
+      },
+      "method": "Actual viewport pixels: three positions per edge; border vs adjacent background, or focus image vs same pre-focus pixels. Strongest changed pixel in narrow edge strip, minimum across all12 edge samples. Images never retained."
+    },
+    "pass": true
+  },
+  {
+    "engine": "webkit",
+    "version": "26.4",
+    "expect": "FAIL",
+    "measurement": {
+      "kind": "focus",
+      "result": "FAIL",
+      "minimumSideSampleContrast": 1.1602,
+      "sides": [
+        {
+          "side": "top",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "bottom",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "left",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "samples": [
+            {
+              "fraction": 0.25,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.5,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            },
+            {
+              "fraction": 0.75,
+              "maxPixelContrast": 1.1602,
+              "changedPixels": 2
+            }
+          ]
+        }
+      ],
+      "style": {
+        "tag": "INPUT",
+        "type": "radio",
+        "outline": "5px auto rgba(52, 132, 228, 0.8)",
+        "offset": "0px",
+        "shadow": "none",
+        "border": "rgb(0, 0, 0)",
+        "borderWidth": "0px",
+        "focusVisible": true,
+        "height": 1
+      },
+      "method": "Actual viewport pixels: three positions per edge; border vs adjacent background, or focus image vs same pre-focus pixels. Strongest changed pixel in narrow edge strip, minimum across all12 edge samples. Images never retained."
+    },
+    "pass": true
+  }
+]

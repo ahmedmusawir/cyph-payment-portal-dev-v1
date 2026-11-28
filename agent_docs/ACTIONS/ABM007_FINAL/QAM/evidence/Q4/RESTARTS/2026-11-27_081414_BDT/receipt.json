@@ -1,0 +1,65 @@
+{
+  "status": "READY",
+  "evidence": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/RESTARTS/2026-11-27_081414_BDT",
+  "branch": "qa/abm007-final",
+  "buildExitCodes": {
+    "ob": 0,
+    "pp": 0
+  },
+  "apps": [
+    {
+      "app": "ob",
+      "port": 3100,
+      "listenerPid": 3090197,
+      "launcherPid": 3090063,
+      "restartStartedBdt": "2026-11-27T08:15:04+06:00",
+      "verifiedReadyBdt": "2026-11-27T08:15:05+06:00",
+      "manifestSha256": "f229d7a129138af7cc97e1fdb5acadf885c1907ad7cd3c140f4bad5334a4d22d",
+      "revision": "f229d7a129138af7cc97e1fdb5acadf885c1907ad7cd3c140f4bad5334a4d22d",
+      "artifactId": "q4-ob-f229d7a129138af7-restart-2026-11-27_081414_BDT",
+      "nextBuildId": "qwu0ceUJsC51jVYLsC2_J",
+      "buildExit": 0,
+      "buildInfoHttp": 200,
+      "scratch": "ihgcsrypblqkwommrkgj",
+      "productionRealLoopback": true,
+      "oldPid": 2913907
+    },
+    {
+      "app": "pp",
+      "port": 3101,
+      "listenerPid": 3090210,
+      "launcherPid": 3090064,
+      "restartStartedBdt": "2026-11-27T08:15:04+06:00",
+      "verifiedReadyBdt": "2026-11-27T08:15:06+06:00",
+      "manifestSha256": "ba726f5ea3f5bf2cdd8156a16360e7674be2da500be48c81cacac19ba682c4b9",
+      "revision": "ba726f5ea3f5bf2cdd8156a16360e7674be2da500be48c81cacac19ba682c4b9",
+      "artifactId": "q4-pp-ba726f5ea3f5bf2c-restart-2026-11-27_081414_BDT",
+      "nextBuildId": "bqMVdfzVgbkcz-Jq0jWFV",
+      "buildExit": 0,
+      "buildInfoHttp": 200,
+      "scratch": "ihgcsrypblqkwommrkgj",
+      "productionRealLoopback": true,
+      "oldPid": 2871419
+    }
+  ],
+  "postBuildManifestChecks": [
+    {
+      "app": "ob",
+      "manifest": "f229d7a129138af7cc97e1fdb5acadf885c1907ad7cd3c140f4bad5334a4d22d",
+      "files": 2313,
+      "commit": null,
+      "mismatches": []
+    },
+    {
+      "app": "pp",
+      "manifest": "ba726f5ea3f5bf2cdd8156a16360e7674be2da500be48c81cacac19ba682c4b9",
+      "files": 2370,
+      "commit": null,
+      "mismatches": []
+    }
+  ],
+  "walkthroughPreparation": {
+    "providedTimeBdt": "2026-11-27T08:09:00+06:00",
+    "browser": "Chrome 157.0.8103.78 (Official Build), x86_64 on Ubuntu VM"
+  }
+}

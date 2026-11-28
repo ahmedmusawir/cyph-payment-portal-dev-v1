@@ -1,0 +1,44 @@
+{
+  "engine": "firefox",
+  "version": "148.0.2",
+  "app": "ob",
+  "role": "ENGINEERING_MEMBER",
+  "method": "provider token via the app confirm page (AM-15)",
+  "width": 375,
+  "requested": "/profile",
+  "landed": "/profile",
+  "control": 7,
+  "state": "hover",
+  "time": "2026-11-24T15:32:52.569Z",
+  "raster": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "INPUT",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 0.5,
+        "threshold": 4.5,
+        "rect": {
+          "left": 61,
+          "top": 499.95001220703125,
+          "right": 314,
+          "bottom": 521.9500122070312
+        },
+        "unsupported": [],
+        "worstRatio": 2.4196,
+        "samples": 325,
+        "unstablePixels": 0,
+        "result": "FAIL"
+      }
+    ],
+    "counts": {
+      "pass": 0,
+      "fail": 1,
+      "notRun": 0
+    }
+  },
+  "completed": true
+}

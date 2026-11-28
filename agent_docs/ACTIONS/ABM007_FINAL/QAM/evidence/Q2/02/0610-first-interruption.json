@@ -1,0 +1,12 @@
+{
+  "engine": "firefox",
+  "version": "148.0.2",
+  "app": "ob",
+  "requested": "/auth",
+  "session": "signed out",
+  "scripts": false,
+  "result": "INCOMPLETE",
+  "firstError": "Unbounded document.fonts.ready wait; last completed checkpoint 18:50:52 BDT, instrument stopped 18:53 BDT; no session active",
+  "classification": "instrument issue",
+  "rerun": "Diagnostic with bounded font readiness wait; no side effect"
+}

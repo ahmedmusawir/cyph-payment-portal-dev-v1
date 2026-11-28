@@ -58,3 +58,15 @@ Requires: accepted Gate Q verdict, accepted cleanup, durable records committed b
 | No fixture-session evidence is counted as proof of real sign-in, email delivery or handoff | |
 | The keep-list was approved before cleanup | |
 | Deployment-only checks are named and left to Gate D | |
+
+## Gate Q certificate recorded · 28 November 2026
+
+Friday issued **PASS WITH KNOWN RISK**. The Director supplied the certificate in chat. The UTF-8 Markdown transcription at HANDOFFS/QAM_CERTIFICATION_ABM007_FINAL_GATE_Q_2026-11-28.md has SHA-256 `d3928bc403f758901ac1dede5a7da5f6d0b20638850771ea8d721c29117c6b33`. Both repositories are on qa/abm007-final. The repair commits and their local origin branch references agreed at verification. Push reported by Tony.
+
+| App | Full repair commit | Files checked | Tony's mismatches | Cody's mismatches |
+|---|---|---:|---:|---:|
+| OwedBook | `025c578f7ab0879bede38384c8a2ad63de8ba3c4` | 2,314 | 0 | 0 |
+| Account & Billing | `5b8e935a58105897d53b7e4caeb3916bbfb99e23` | 2,557 | 0 | 0 |
+
+Under AM-21, Gate D must cover J-c registration through Checkout, J-d purchase of an additional pharmacy, J-g scheduling and undoing a removal, the hosted Stripe billing return of J-b, and the AC-R05 review-screen price. These checks block module closure. Independent command outputs and the Director’s comparison are in evidence/CLEANUP/.
+

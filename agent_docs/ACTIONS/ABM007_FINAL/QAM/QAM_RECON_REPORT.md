@@ -1,6 +1,6 @@
 # QAM_RECON_REPORT — `ABM007_FINAL`
 
-**Owner:** QA Executor · **Written:** Q1 · **Status: NOT YET EXECUTED.** Every result, approval and verdict field below is empty on purpose. This file is complete as a structure: its fields, their owners and their rules are defined here and depend on no other template. Every repository-specific item is recorded for both OwedBook and the Portal.
+**Owner:** QA Executor · **Written:** Q1 · **Status: Q1 recon performed; readiness gaps remain.** Every result, approval and verdict field below is empty on purpose. This file is complete as a structure: its fields, their owners and their rules are defined here and depend on no other template. Every repository-specific item is recorded for both OwedBook and the Portal.
 
 Independent observations only. Labels used: EVIDENCE (seen, with a path), INFERENCE (reasoned, marked as such), CLAIM (someone else's statement, untested), GAP, QUESTION, BLOCKED. Each GAP, QUESTION or BLOCKED names its owner and the exact resolution needed.
 
@@ -8,100 +8,148 @@ Independent observations only. Labels used: EVIDENCE (seen, with a path), INFERE
 
 | Field | Value |
 |---|---|
-| Executor seat, runtime | NOT RECORDED |
-| Start and end time (Asia/Dhaka) | NOT RECORDED |
-| Director touches during Q1, with purpose | NOT RECORDED |
+| Executor seat, runtime | Cody, independent QA Executor; Node v22.17.0; installed Chrome via Playwright |
+| Start and end time (Asia/Dhaka) | 24 November 2026; commands and package receipt carry execution timestamps; no invented exact start time |
+| Director touches during Q1, with purpose | Kickoff assignment/receipt; R-1 private configuration acceptance; R-2 factual state reconciliation and bounded readiness release |
 
 ## 2. Identity (both repositories)
 
 | Field | OwedBook | Portal |
 |---|---|---|
-| Branch | NOT RECORDED | NOT RECORDED |
-| Full HEAD | NOT RECORDED | NOT RECORDED |
-| Candidate commit from the Director's receipt | NOT RECORDED | NOT RECORDED |
-| Candidate is an ancestor of HEAD; candidate-to-HEAD diff is records only (full diff reviewed) | NOT RECORDED | NOT RECORDED |
-| Tracked changes, untracked files, stashes | NOT RECORDED | NOT RECORDED |
-| Baseline-to-candidate changed paths, complete, against the manifest inventory | NOT RECORDED | NOT RECORDED |
+| Branch | qa/abm007-final | qa/abm007-final |
+| Full HEAD | 2e91e90905b2d9907577a64985e643f7827019ac | fc1fa6c2a90ebf59987287ad765e2e65cf635549 |
+| Candidate commit from the Director's receipt | 2e91e90905b2d9907577a64985e643f7827019ac | fc1fa6c2a90ebf59987287ad765e2e65cf635549 |
+| Candidate is an ancestor of HEAD; candidate-to-HEAD diff is records only (full diff reviewed) | HEAD equals candidate; commit diff empty | HEAD equals candidate; commit diff empty |
+| Tracked changes, untracked files, stashes | Initially clean; only Portal QAM writes by Cody; stashes not changed | Initially clean; only Portal QAM writes by Cody; stashes not changed |
+| Baseline-to-candidate changed paths, complete, against the manifest inventory | evidence/Q1/01 changed-paths.txt; evidence/Q1/02/path-review.json; snapshot 142-source comparison | evidence/Q1/01 changed-paths.txt; evidence/Q1/02/path-review.json; snapshot 142-source comparison |
 
 ## 3. Contract and handoff
 
 | Check | Observation |
 |---|---|
-| Contract identity matches `QAM_STATE.md` | NOT RECORDED |
-| Every P-nn has a ruling or is listed as open | NOT RECORDED |
-| Gate V record, and which renders it covers | NOT RECORDED |
-| Manifest and handoff complete for both repositories | NOT RECORDED |
-| Contradictions between the Engineer's claims and what was observed | NOT RECORDED |
-| Protected-path review of both diffs, path by path | NOT RECORDED |
+| Contract identity matches `QAM_STATE.md` | EVIDENCE: freeze hashes now recorded in state; contract-hashes.json distinguishes current append/fill bytes from frozen bytes |
+| Every P-nn has a ruling or is listed as open | AM-08 settles P-01–18,21–22 scope split; P-19 effects and P-20 deployment remain Director release matters. R-1/R-2 settle credential mechanism and QA assignment only |
+| Gate V record, and which renders it covers | AM-08(2): corrected REVIEW_02 look reconfirmed; full-canvas logo, no trimming |
+| Manifest and handoff complete for both repositories | Handoff section 13 supersedes earlier interim claims; candidate PENDING fields replaced by Director receipt in QA state, not by editing Engineer-owned manifest |
+| Contradictions between the Engineer's claims and what was observed | Two whitespace-only snapshot changes; O-1 is 18 complete +2 interrupted per attempt; serve logging/port/cache defects adapted; prior passes remain claims |
+| Protected-path review of both diffs, path by path | 570 paths inventoried in path-review.json. No protected product-code change except five approved notice strings. RECOVERY.md changed in preserved c335671, not engineering candidate commit; Friday must reconcile literal AC-R03 with AM-08(3). This path-permission inventory is not a claim that every changed behavior passes; Q2 covers rendered/functional consequences |
 
 ## 4. Environment as actually resolved
 
 | Check | Observation |
 |---|---|
-| Database project each QA build points at (identifier ending only) | NOT RECORDED |
-| Stripe account each QA build points at (identifier ending only) | NOT RECORDED |
-| Configuration precedence | NOT RECORDED |
-| Service readiness for the required operations (not only reachability) | NOT RECORDED |
-| Roles and fixtures available; what the plan must create | NOT RECORDED |
-| Mock mode: does it ship, where, and how the plan covers it | NOT RECORDED |
+| Database project each QA build points at (identifier ending only) | ...rkgj (SCRATCH); API/SQL config checked; live read reached target; built JS checked for SCRATCH and absence of DEV backend |
+| Stripe account each QA build points at (identifier ending only) | Stripe GET /v1/account HTTP200, ending u3RR, matches configured expected account; fixture-final.json |
+| Configuration precedence | Named existing .env.local keys read in memory by protected resolver; isolated copies exclude .env; child env is explicit allowlist. R-1 supersedes .env.qa.local requirement. Private cast stays outside repos |
+| Service readiness for the required operations (not only reachability) | Both production builds exit 0. Four fixture sessions and signouts pass on OwedBook only; no claim of Q2 journey readiness. First Chromium launch failure retained; installed Chrome diagnostic launch succeeded |
+| Roles and fixtures available; what the plan must create | fixtures.json: Owners 3/2 stores; Invitee 1 store but outside auth allowlist; Admin/Member each one membership. Zero-store Owner, second Member, removed-access identity not established. Create nothing; effects proposal requests specific needs |
+| Mock mode: does it ship, where, and how the plan covers it | OwedBook mock services ship; Q1 builds use real. Q2 separate mock build/route boundary checks planned, never relabel mocked data as live |
 
 ## 5. Shared-Stripe event isolation (required before any paid test)
 
 | Question | Answer, with evidence path |
 |---|---|
-| Which endpoints are registered in the sandbox, and which event types each receives | NOT RECORDED |
-| Which listeners forward events, to which local address | NOT RECORDED |
-| What alpha's handler does with an event for a customer, subscription or account it does not know (from source, with file and line) | NOT RECORDED |
-| What the QA build's handler does with an alpha event | NOT RECORDED |
-| Can a QA event change DEV data? Proof | NOT RECORDED |
-| Can an alpha event change the QA database? Proof | NOT RECORDED |
-| Verdict of this section: PROVEN ISOLATED, or NOT PROVEN with one concrete proposal for the Director | NOT RECORDED |
+| Which endpoints are registered in the sandbox, and which event types each receives | readiness.json: one enabled alpha /api/webhooks/stripe endpoint, checkout completed/expired, invoice paid/failed, subscription created/updated/deleted |
+| Which listeners forward events, to which local address | listener-read.json: local inspection only; none started by Cody; remote forwarding cannot be inferred. Stripe CLI present |
+| What alpha's handler does with an event for a customer, subscription or account it does not know (from source, with file and line) | Candidate webhook.ts:44–62 rejects signature/live/wrong account then inserts stripe_events BEFORE classification. 229–247: known DB mapping retries; no marker foreign; different apbm_db foreign_environment; ambiguous marker retries. A-9 below now binds these handler files to alpha reported deployed revision by empty diff |
+| What the QA build's handler does with an alpha event | Same candidate code: durable receipt first (59–62); record updates at 87–108; subscription RPC at 300–305 before unknown classification; no local listener started |
+| Can a QA event change DEV data? Proof | NOT PROVEN isolated. If deployed alpha matches reviewed handler, even foreign events write receipt/status rows; business mapping overlap also needs proof. Endpoint is enabled |
+| Can an alpha event change the QA database? Proof | With a future forwarding listener, reviewed handler writes receipt/status rows before foreign classification. Currently no Cody listener; absence now is not a future paid-test proof |
+| Verdict of this section: PROVEN ISOLATED, or NOT PROVEN with one concrete proposal for the Director | NOT PROVEN under the existing no-foreign-write condition. Friday does not adopt the routing-filter proposal. Only J-c/J-d/J-g are blocked by F02 pending Tony’s explicit decision; see A-9 facts below |
 
 A list of running processes is not an answer to any row.
+
+### A-9 — two isolation facts, 24 November 2026
+
+1. Exactly one GET of each authorized alpha build-info address returned HTTP200 (evidence/Q1/03/alpha-build-info.json). OwedBook deployed revision: ef4cebccae68499bee7d4a53b230e31474a17f52. Portal deployed revision: 6dd3de737acacff9685c0c2027246bf396f10c1d. Git diff from that Portal revision to candidate fc1fa6c2a90ebf59987287ad765e2e65cf635549 is empty for src/app/api/webhooks/stripe/route.ts, src/server/webhook.ts and src/server/stripeMirror.ts (pp-alpha-candidate.diff and pp-diff-receipt.json). Thus the deployed revision reports the same handler source as the candidate for those files. OwedBook deployed-to-candidate diff is also empty for migration 0057 (ob-alpha-candidate.diff and ob-diff-receipt.json). This is source binding to reported build identity, not a new runtime webhook exercise or a live database-definition read.
+
+2. public.subscription_mirror_apply, OwedBook supabase/migrations/0057_operations_events.sql:122–144, updates only rows whose stripe_subscription_id equals the requested ID and origin is stripe (125–140). An unknown ID matches no row; FOUND is false; the existence check at 142 is false; line 143 returns unknown_subscription. It inserts nothing and changes no subscription row. The existing updated-at trigger (0006_subscriptions.sql:28–30) and audit trigger (0037_audit_stamp_subscriptions.sql:16–18) are FOR EACH ROW; no matching row means neither runs. No business row or audit row is written by this routine on the unknown-subscription branch. Source excerpt: evidence/Q1/03/subscription-routine-source.txt. The webhook still inserts/updates stripe_events receipts before/after classification (webhook.ts:59–62,87–108); this routine fact does not remove those foreign receipt writes.
+
+Disposition: ABM7F-F02 remains open, High, and blocks only J-c/J-d/J-g per Friday. The proposed routing-filter change is not adopted and is outside this module. Tony may decide the counted foreign-receipt exception after these facts; no exception or provider-event release is inferred here. No further alpha access or tests occurred.
 
 ## 6. Instruments
 
 | Instrument | Passing control | Failing control | Trusted? |
 |---|---|---|---|
-| Browser drivers (Chromium, Firefox, WebKit) | NOT RECORDED | n/a | |
+| Browser drivers (Chromium, Firefox, WebKit) | NOT RUN — restricted Q1 probe list; validate before Q2 use | n/a | |
 | Token-resolution check (AC-B01) | exact anchors | a hand-rounded triplet must be reported as a mismatch | |
-| Rendered-contrast probe (AC-B08) | NOT RECORDED | NOT RECORDED | |
-| Overflow and target-size probes | NOT RECORDED | NOT RECORDED | |
-| Old-name and forbidden-term scanners | NOT RECORDED | seeded positive | |
+| Rendered-contrast probe (AC-B08) | NOT RUN — restricted Q1 probe list; validate before Q2 use | NOT RUN — restricted Q1 probe list; validate before Q2 use | |
+| Overflow and target-size probes | NOT RUN — restricted Q1 probe list; validate before Q2 use | NOT RUN — restricted Q1 probe list; validate before Q2 use | |
+| Old-name and forbidden-term scanners | NOT RUN — restricted Q1 probe list; validate before Q2 use | seeded positive | |
 | Privacy scanner | clean control | synthetic leak | |
 
 ## 7. Fixture planning
 
 | Need | Plan | Effects it uses |
 |---|---|---|
-| Owner with at least two pharmacies on SCRATCH | NOT RECORDED | |
-| Audit history long enough to need a second page (AC-R04 i). If it cannot be built: BLOCKED, with the reason, for the QA Lead and the Director | NOT RECORDED | |
-| Removed-user identity | NOT RECORDED | |
+| Owner with at least two pharmacies on SCRATCH | Use existing ENGINEERING_OWNER_A (3) or B (2); read-only state evidence; session/audit only until release | |
+| Audit history long enough to need a second page (AC-R04 i). If it cannot be built: BLOCKED, with the reason, for the QA Lead and the Director | Owner A 567 initial aggregate, 42 non-read rows; page size 50 at services/auditLog.ts:8. Plan Include reads ON for older-page test and OFF for short-history boundary. Existing designated synthetic cast only; zero seeding. Runtime pagination result remains Q2, not inferred from count | |
+| Removed-user identity | Not established in allowlisted cast; request existing designation or one explicit member-removal effect, not creation/reset | |
 
 ## 8. Readiness verdict (the Executor's observation, not an approval)
 
 | Field | Value |
 |---|---|
-| READY FOR Q2, READY WITH LISTED GAPS, or NOT READY | NOT RECORDED |
-| Blockers, each with owner and exact resolution | NOT RECORDED |
-| What cannot be tested yet, and why | NOT RECORDED |
+| READY FOR Q2, READY WITH LISTED GAPS, or NOT READY | NOT READY for Q2 release; Q1 plan submitted with named gaps |
+| Blockers, each with owner and exact resolution | Tony: effects, inbox control, phone, fixture designation, isolation solution. Friday: selection and AC-R03 disposition, path inventory and carried-history interpretation. Cody: remaining instrument controls before reuse |
+| What cannot be tested yet, and why | Paid/provider-mutating journeys, invitations/removal and real email require Q2 approval; missing role/state fixtures block corresponding cases; no Firefox/WebKit installed validation in this restricted Q1 |
 
 ## Amendment 01 additions (owner: QA Executor, Q1)
 
-**A. Test and helper inventory.** One row per suite, spec, check set or helper found in either repository or in the retained APBM-007B QA lane.
+**A. Test and helper inventory.** Counts by repository/lane; complete per-asset rows and stated extraction limits: `evidence/Q1/02/REGRESSION_INVENTORY.md`. No further Q1 inventory work required by Friday.
 
-| Asset | Repository or lane | Kind | Current, stale or retired, and why | What it covers | What it needs to run |
-|---|---|---|---|---|---|
-| NOT RECORDED | | | | | |
+| Repository | Lane | Current | Stale | Retired |
+|---|---|---|---|---|
+| Portal | product tests | 0 | 0 | 16 |
+| owedbook | historical evidence | 0 | 91 | 0 |
+| owedbook | product tests | 59 | 1 | 0 |
+| owedbook | scripts | 0 | 33 | 0 |
+| portal | historical evidence | 0 | 221 | 0 |
+| portal | product tests | 39 | 3 | 0 |
+| portal | retained APBM-007B QA | 0 | 170 | 0 |
+| portal | scripts | 0 | 32 | 0 |
 
 **B. Coverage map.**
 
 | CR or criterion | Existing coverage | Gap | Only testable by a person today? |
 |---|---|---|---|
-| NOT RECORDED | | | |
+| CR-01 | Role/access unit suites, actions, portal-owner, apbm007a-access | Actual per-role route and forbidden control matrix | No |
+| CR-02 | apbm-tenant-scope, portal-boundaries, apbm007a-server | Cross-account direct requests and database assertions on candidate | No |
+| CR-03 | abm007/store-selector, MyStoresScreen | Zero-store and removed-access fixtures unavailable in current allowlist | No |
+| CR-04 | apbm-read-states, hydration tests, loading-probe | Current rendered slow/error/stale states | No |
+| CR-05 | apbm007a-auth, alpha-origins, regression spec | Real bidirectional handoff; O-1 interruptions | Human real-login journey plus automation |
+| CR-06 | apbm007a-auth, proxy; Q1 helper logout only | Both-app refusal and used/fresh emailed-link lifecycle | Human inbox for link lifecycle |
+| CR-07 | server/pricing tests and unchanged source | Rendered 99/49/148/197 and manipulated-client negative | No |
+| CR-08 | staff/invitation tests, retained invite helpers | Send/accept current journey needs approved email effect | Human inbox acceptance |
+| CR-09 | owner-staff-settings, retained role scripts | Already-signed-in removal needs approved write | No |
+| CR-10 | portal-dashboard, portal-account, portal regression | Hosted billing session/return needs provider-call authorization | No |
+| CR-11 | abm007 token/focus/light/notice pins | Rendered composited contrast and customer-visible names | Human comparison supplements automation |
+| CR-12 | Help, keyboard DataTable, drawer focus suites | Real-phone availability; Help usefulness | Yes for real device and wording |
 
-**C. Recommended layout for a durable regression pack.** A recommendation only. Nothing is implemented in Q1. NOT RECORDED.
+**C. Recommended layout for a durable regression pack.** Recommendation only: maintained unit, guarded integration, browser journeys, instrument controls, fixture specifications and candidate receipts in a QA pack. REG-001 remains separate; no implementation here.
 
-**D. Fixture state as found**, and any need the existing cast cannot meet. NOT RECORDED.
+**D. Fixture state as found:** evidence/Q1/02/fixtures.json and fixture-details.json; gaps and minimum effects in Q2_EFFECTS_PROPOSAL.md. No inbox accessibility is known; no credential was changed.
 
-**E. Sign-in method available for routine automated runs** without the Director's inbox, and the authorization it rests on. NOT RECORDED.
+**E. Sign-in method:** Owner A/B password; Admin/Member fixture token, AM-14/15 and R-1/R-2. Four sessions, four signout HTTP 200, no email. Session-probes.json. Token proves only authenticated behavior.
+
+### Fixture suitability and smallest proposed missing effects
+
+| Need | Found | Blocks | Minimum proposal, not performed |
+|---|---|---|---|
+| Several pharmacies | Owner A 3, B 2 active | none for basic read coverage | reuse |
+| Exactly one | Invitee owns 1; outside auth allowlist | F01 one-store Owner runtime | Tony designate existing Invitee for QA auth scope, no data change |
+| Zero-store Owner | Not in current allowlist | F01 zero-store Owner; R04(c) | designate existing zero-store Owner; otherwise separate one-account registration exception |
+| Admin / Member | One each, validated sessions | none for read-only roles | reuse |
+| Second Member | Not designated | independent isolation/removal-neighbor check | designate existing second Member; otherwise one explicit membership grant, no new account |
+| Removed-access user | Not designated | F01 removed state / R04(h) consequence | approved one removal of designated Member, no reset |
+| Invited person | Existing Invitee, no pending invitation | R04(e) | one approved invitation and acceptance |
+| Pending invitation | Owner A has accepted/revoked only | pending invitation state | observe between approved send and accept |
+| Scheduled removal | A and B scheduled=0 | R04(g) | one approved schedule then undo |
+| Paging | Owner A 42 non-read plus read history, total initially 567 | none if Include reads scope qualifies; default history is short | use existing history with Include reads ON; no seeding. Friday confirms synthetic history applicability |
+| Human inbox | No accessibility evidence for any cast identity | R04(a,j), invitation acceptance | Tony names existing controlled inbox; no credential change or email sent in Q1 |
+
+## Q2 factual correction — Owner A audit scope, 24 November 2026
+
+Q1's 42 non-read audit entries covered business IDs only. The running owner audit routine also includes account/subscription rows with null business_id (OwedBook supabase/migrations/0071_007b_owner_settings_audit.sql:151–155). A read-only Q2 reconciliation finds 59 non-read entries, including 17 account-level entries. The Q1 count was incomplete for the effective owner scope; this corrects that inference without rewriting the historical evidence.
+
+Evidence: evidence/Q2/06/audit-scope-reconciliation.json; chromium-readonly-journeys-v2.json (Include reads OFF returns 50 records and still offers Load older; ON grows from 50 to 100 with distinct response IDs). The existing fixture proves paging. It cannot prove Friday's extra short-history OFF boundary as described in Q1 return02 §3.2. No seeding/reset or substitute Owner B audit access is authorized by the scope1 audit-effects row (Owner A). Friday's disposition is required for that extra boundary; no silent waiver.

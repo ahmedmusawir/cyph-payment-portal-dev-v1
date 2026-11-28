@@ -1,0 +1,1281 @@
+{
+  "plannedActivations": 468,
+  "passingPostInputActivations": 468,
+  "nonpassingOrMissingActivations": [],
+  "counts": {
+    "firefox-results.json / A2-1 structure and dimensions": {
+      "PASS": 6
+    },
+    "firefox-results.json / A2-1 F36 rendered contrast": {
+      "PASS": 12
+    },
+    "firefox-results.json / Article activation": {
+      "FAIL": 156
+    },
+    "firefox-results.json / Article 1 distance": {
+      "FAIL": 24
+    },
+    "firefox-results.json / A2-2 menu geometry": {
+      "PASS": 2
+    },
+    "firefox-results.json / A2-2 menu keyboard outline": {
+      "PASS": 26
+    },
+    "firefox-results.json / Help regression menu destinations": {
+      "PASS": 2
+    },
+    "firefox-results.json / Help forbidden terms and changed labels": {
+      "PASS": 2
+    },
+    "firefox-post-input-clock.json / Heading outside sequential Tab order": {
+      "PASS": 6
+    },
+    "firefox-post-input-clock.json / Article activation": {
+      "PASS": 156
+    },
+    "firefox-post-input-clock.json / Article 1 distance": {
+      "PASS": 14,
+      "FAIL": 10
+    },
+    "chromium-results.json / A2-1 structure and dimensions": {
+      "PASS": 6
+    },
+    "chromium-results.json / A2-1 F36 rendered contrast": {
+      "PASS": 12
+    },
+    "chromium-results.json / Heading outside sequential Tab order": {
+      "PASS": 6
+    },
+    "chromium-results.json / Article activation": {
+      "PASS": 156
+    },
+    "chromium-results.json / Article 1 distance": {
+      "PASS": 14,
+      "FAIL": 10
+    },
+    "chromium-results.json / A2-2 menu geometry": {
+      "PASS": 2
+    },
+    "chromium-results.json / A2-2 menu keyboard outline": {
+      "PASS": 26
+    },
+    "chromium-results.json / Help regression menu destinations": {
+      "PASS": 2
+    },
+    "chromium-results.json / Help forbidden terms and changed labels": {
+      "PASS": 2
+    },
+    "chromium-results.json / Scripts disabled native return": {
+      "INCOMPLETE": 1
+    },
+    "webkit-results.json / A2-1 structure and dimensions": {
+      "PASS": 6
+    },
+    "webkit-results.json / A2-1 F36 rendered contrast": {
+      "PASS": 12
+    },
+    "webkit-results.json / Heading outside sequential Tab order": {
+      "PASS": 6
+    },
+    "webkit-results.json / Article activation": {
+      "PASS": 156
+    },
+    "webkit-results.json / Article 1 distance": {
+      "PASS": 14,
+      "FAIL": 10
+    },
+    "webkit-results.json / A2-2 menu geometry": {
+      "PASS": 2
+    },
+    "webkit-results.json / A2-2 menu keyboard outline": {
+      "PASS": 26
+    },
+    "webkit-results.json / Help regression menu destinations": {
+      "PASS": 2
+    },
+    "webkit-results.json / Help forbidden terms and changed labels": {
+      "PASS": 2
+    },
+    "chromium-no-script-native.json / Scripts disabled browser protocol": {
+      "INCOMPLETE": 1
+    }
+  },
+  "pixelSamples": 36,
+  "worstRenderedRatio": 4.5285,
+  "headingAppearanceByInput": {
+    "firefox / mouse": [
+      {
+        "outline": "rgb(255, 255, 255) 3px",
+        "offset": "0px",
+        "focusVisible": false,
+        "count": 78
+      }
+    ],
+    "firefox / Enter": [
+      {
+        "outline": "rgb(255, 255, 255) solid 2px",
+        "offset": "2px",
+        "focusVisible": true,
+        "count": 78
+      }
+    ],
+    "chromium / mouse": [
+      {
+        "outline": "rgb(255, 255, 255) none 3px",
+        "offset": "0px",
+        "focusVisible": false,
+        "count": 78
+      }
+    ],
+    "chromium / Enter": [
+      {
+        "outline": "rgb(255, 255, 255) solid 2px",
+        "offset": "2px",
+        "focusVisible": true,
+        "count": 78
+      }
+    ],
+    "webkit / mouse": [
+      {
+        "outline": "2px solid rgb(255, 255, 255)",
+        "offset": "2px",
+        "focusVisible": true,
+        "count": 78
+      }
+    ],
+    "webkit / Enter": [
+      {
+        "outline": "2px solid rgb(255, 255, 255)",
+        "offset": "2px",
+        "focusVisible": true,
+        "count": 78
+      }
+    ]
+  },
+  "A2ExactProcedure": [
+    {
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "before": {
+        "y": 306,
+        "hash": ""
+      },
+      "timeline": [
+        {
+          "delayAfterPriorSample": 0,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 100,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 300,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 800,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "before": {
+        "y": 131,
+        "hash": ""
+      },
+      "timeline": [
+        {
+          "delayAfterPriorSample": 0,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 100,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 300,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 800,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "role": "ENGINEERING_ADMIN",
+      "width": 1024,
+      "height": 600,
+      "before": {
+        "y": 306,
+        "hash": ""
+      },
+      "timeline": [
+        {
+          "delayAfterPriorSample": 0,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 100,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 300,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 800,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "role": "ENGINEERING_ADMIN",
+      "width": 1440,
+      "height": 900,
+      "before": {
+        "y": 131,
+        "hash": ""
+      },
+      "timeline": [
+        {
+          "delayAfterPriorSample": 0,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 100,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 300,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 800,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        }
+      ],
+      "result": "PASS"
+    }
+  ],
+  "sessionAttempts": 11,
+  "signoutStatuses": {
+    "200": 11
+  },
+  "portalDocumentResponses": 0,
+  "sessionCeiling": 15,
+  "distanceReturnByRoleSizeMethod": [
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 1067,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1495,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 639,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 1067,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1495,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 639,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_ADMIN",
+      "width": 375,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 1067,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1495,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 639,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_ADMIN",
+      "width": 375,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 1067,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1495,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 639,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1024,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1024,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1440,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1440,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 1043,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1471,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 615,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 1043,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1471,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 615,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_ADMIN",
+      "width": 375,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 1043,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1471,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 615,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_ADMIN",
+      "width": 375,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 1043,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1471,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 615,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1024,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1024,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1440,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1440,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 1067,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1495,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 639,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 1067,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1495,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 639,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_ADMIN",
+      "width": 375,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 1067,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1495,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 639,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_ADMIN",
+      "width": 375,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 1067,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 1495,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 639,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1024,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1024,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 306,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 584,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 28,
+          "placement": "end",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1440,
+      "method": "mouse",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    },
+    {
+      "engine": "webkit",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1440,
+      "method": "Enter",
+      "samples": [
+        {
+          "startY": 131,
+          "placement": "center",
+          "rawResult": "PASS",
+          "returnPassed": true
+        },
+        {
+          "startY": 559,
+          "placement": "start",
+          "rawResult": "FAIL",
+          "returnPassed": true
+        },
+        {
+          "startY": 0,
+          "placement": "end",
+          "rawResult": "PASS",
+          "returnPassed": true
+        }
+      ],
+      "twoDistinctNonzeroDistancesPassed": true
+    }
+  ]
+}

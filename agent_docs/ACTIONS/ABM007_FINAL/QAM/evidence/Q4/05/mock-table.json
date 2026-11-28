@@ -1,0 +1,57 @@
+{
+  "engine": "chromium",
+  "version": "147.0.7727.15",
+  "scope": "Same bound candidate, mock OwedBook only. Expected table geometry and responsive stacked rows.",
+  "rows": [
+    {
+      "width": 990,
+      "containerWidth": 992,
+      "tableVisible": true,
+      "rows": 25,
+      "stacked": 0,
+      "responsiveCards": 0,
+      "overflow": 0,
+      "result": "PASS"
+    },
+    {
+      "width": 0,
+      "containerWidth": 0,
+      "tableVisible": false,
+      "rows": 25,
+      "stacked": 0,
+      "responsiveCards": 25,
+      "overflow": 0,
+      "result": "PASS"
+    }
+  ],
+  "session": {
+    "fixture": "ENGINEERING_OWNER_A",
+    "method": "password (normal sign-in form)",
+    "app": "ob",
+    "signout": 200,
+    "diagnostics": [
+      {
+        "app": "ob",
+        "role": "ENGINEERING_OWNER_A",
+        "stage": "password-session-established"
+      }
+    ],
+    "network": {
+      "loads": [],
+      "blocked": [],
+      "console": [],
+      "documentResponses": [
+        {
+          "origin": "http://localhost:3100",
+          "path": "/auth",
+          "status": 200
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/owedbook",
+          "status": 200
+        }
+      ]
+    }
+  }
+}

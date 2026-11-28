@@ -1,0 +1,211 @@
+{
+  "app": "pp",
+  "role": "PUBLIC",
+  "scripts": true,
+  "width": 768,
+  "requested": "/qa-missing-page",
+  "baseline": "evidence/Q2/02/0113.json",
+  "baselineLanded": "/qa-missing-page",
+  "seen": {
+    "status": 404,
+    "path": "/qa-missing-page"
+  },
+  "dom": {
+    "path": "/qa-missing-page",
+    "tokens": {
+      "brand-navy": "#154474",
+      "brand-green": "#32a38d",
+      "brand-green-dark": "#288472",
+      "brand-ice": "#eaf3fa",
+      "brand-charcoal": "#393b38",
+      "brand-gray": "#515151"
+    },
+    "overflow": 0,
+    "width": 768,
+    "bodyBackground": "rgb(234, 243, 250)",
+    "darkClass": false,
+    "colorScheme": "light",
+    "themeControls": 0,
+    "text": [
+      {
+        "where": "body>div:nth-child(3)>div:nth-child(1)>h1:nth-child(1)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 28,
+        "weight": 700,
+        "contrast": 9.9482,
+        "threshold": 3,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>div:nth-child(1)>p:nth-child(2)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>div:nth-child(1)>a:nth-child(3)",
+        "color": "rgb(40, 132, 114)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 4.532,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      }
+    ],
+    "controls": [],
+    "links": [
+      {
+        "where": "body>div:nth-child(3)>div:nth-child(1)>a:nth-child(3)",
+        "href": "/",
+        "color": "#288472",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "underline": "underline"
+      }
+    ],
+    "pills": [],
+    "anchors": [],
+    "oldNames": {
+      "text": false,
+      "title": false,
+      "alt": false,
+      "accessible": false
+    },
+    "tables": [],
+    "noStores": false,
+    "ownerBillingMessage": false,
+    "backToStores": false,
+    "errors": false
+  },
+  "candidate": {
+    "controls": [
+      {
+        "tag": "A",
+        "role": null,
+        "kind": null,
+        "test": null,
+        "radius": "0px",
+        "height": 44,
+        "width": 135,
+        "left": 316.5,
+        "right": 451.5,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(40, 132, 114)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "outline": "rgb(40, 132, 114) none 3px",
+        "ariaBusy": null,
+        "disabled": false,
+        "anchor": true,
+        "variant": "rgba(0, 0, 0, 0)",
+        "linkRecipe": "on-white",
+        "underline": "underline",
+        "bodyLink": false
+      }
+    ],
+    "cards": [
+      {
+        "surface": "card",
+        "radius": "14px",
+        "border": "1px",
+        "shadow": "rgba(12, 38, 65, 0.05) 0px 8px 20px 0px"
+      }
+    ],
+    "nontext": []
+  },
+  "visual": {
+    "badCorner": [],
+    "badSurface": [],
+    "badTarget": [],
+    "navControl": null,
+    "badLinks": [],
+    "buttonNavy": []
+  },
+  "pixel": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 28,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 277.40625,
+          "top": 378.90625,
+          "right": 490.578125,
+          "bottom": 412.90625
+        },
+        "unsupported": [],
+        "worstRatio": 9.9379,
+        "samples": 1516,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 191.5,
+          "top": 430.09375,
+          "right": 576.5,
+          "bottom": 450.09375
+        },
+        "unsupported": [],
+        "worstRatio": 11.2254,
+        "samples": 441,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 2,
+        "tag": "A",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 316.5,
+          "top": 488.09375,
+          "right": 451.5,
+          "bottom": 508.09375
+        },
+        "unsupported": [],
+        "worstRatio": 4.5299,
+        "samples": 279,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 3,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "time": "2026-11-26T09:06:08.679Z"
+}

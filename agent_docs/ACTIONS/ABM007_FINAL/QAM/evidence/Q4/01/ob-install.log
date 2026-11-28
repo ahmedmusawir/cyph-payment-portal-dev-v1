@@ -1,0 +1,44 @@
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: react-remove-scroll@2.5.7
+npm warn Found: react@19.2.4
+npm warn node_modules/react
+npm warn   react@"^19.2.4" from the root project
+npm warn   86 more (@floating-ui/react-dom, @heroicons/react, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^16.8.0 || ^17.0.0 || ^18.0.0" from react-remove-scroll@2.5.7
+npm warn node_modules/@radix-ui/react-menu/node_modules/react-remove-scroll
+npm warn   react-remove-scroll@"2.5.7" from @radix-ui/react-menu@2.1.1
+npm warn   node_modules/@radix-ui/react-menu
+npm warn
+npm warn Conflicting peer dependency: react@18.3.1
+npm warn node_modules/react
+npm warn   peer react@"^16.8.0 || ^17.0.0 || ^18.0.0" from react-remove-scroll@2.5.7
+npm warn   node_modules/@radix-ui/react-menu/node_modules/react-remove-scroll
+npm warn     react-remove-scroll@"2.5.7" from @radix-ui/react-menu@2.1.1
+npm warn     node_modules/@radix-ui/react-menu
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: use-sync-external-store@1.2.0
+npm warn Found: react@19.2.4
+npm warn node_modules/react
+npm warn   react@"^19.2.4" from the root project
+npm warn   86 more (@floating-ui/react-dom, @heroicons/react, ...)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peer react@"^16.8.0 || ^17.0.0 || ^18.0.0" from use-sync-external-store@1.2.0
+npm warn node_modules/zustand/node_modules/use-sync-external-store
+npm warn   use-sync-external-store@"1.2.0" from zustand@4.5.4
+npm warn   node_modules/zustand
+npm warn
+npm warn Conflicting peer dependency: react@18.3.1
+npm warn node_modules/react
+npm warn   peer react@"^16.8.0 || ^17.0.0 || ^18.0.0" from use-sync-external-store@1.2.0
+npm warn   node_modules/zustand/node_modules/use-sync-external-store
+npm warn     use-sync-external-store@"1.2.0" from zustand@4.5.4
+npm warn     node_modules/zustand
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 851 packages in 29s

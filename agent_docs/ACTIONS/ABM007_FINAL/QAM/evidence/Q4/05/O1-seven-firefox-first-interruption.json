@@ -1,0 +1,809 @@
+{
+  "browser": "firefox",
+  "rows": [
+    {
+      "kind": "fresh",
+      "run": 2,
+      "engine": "firefox",
+      "version": "148.0.2",
+      "time": "2026-11-26T09:28:29.580Z",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        }
+      ],
+      "identitySame": true,
+      "result": "COMPLETE"
+    },
+    {
+      "kind": "fresh",
+      "run": 3,
+      "engine": "firefox",
+      "version": "148.0.2",
+      "time": "2026-11-26T09:29:04.630Z",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        }
+      ],
+      "identitySame": true,
+      "result": "COMPLETE"
+    },
+    {
+      "kind": "warm",
+      "run": 1,
+      "engine": "firefox",
+      "version": "148.0.2",
+      "time": "2026-11-26T09:29:35.042Z",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        }
+      ],
+      "identitySame": true,
+      "result": "COMPLETE"
+    },
+    {
+      "kind": "warm",
+      "run": 2,
+      "engine": "firefox",
+      "version": "148.0.2",
+      "time": "2026-11-26T09:30:04.108Z",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        }
+      ],
+      "identitySame": true,
+      "result": "COMPLETE"
+    },
+    {
+      "kind": "warm",
+      "run": 3,
+      "engine": "firefox",
+      "version": "148.0.2",
+      "time": "2026-11-26T09:30:37.843Z",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        }
+      ],
+      "identitySame": true,
+      "result": "COMPLETE"
+    },
+    {
+      "kind": "warm",
+      "run": 4,
+      "engine": "firefox",
+      "version": "148.0.2",
+      "time": "2026-11-26T09:30:55.683Z",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "status": 200,
+          "requiredContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "status": 200,
+          "requiredContent": true
+        }
+      ],
+      "identitySame": true,
+      "result": "COMPLETE"
+    }
+  ],
+  "sessions": [
+    {
+      "fixture": "ENGINEERING_ADMIN",
+      "method": "provider token via the app confirm page (AM-15)",
+      "app": "pp",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "pp",
+          "role": "ENGINEERING_ADMIN",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [
+          {
+            "time": "2026-11-26T09:28:41.331Z",
+            "path": "/dashboard",
+            "resource": "document"
+          },
+          {
+            "time": "2026-11-26T09:28:42.745Z",
+            "path": "/billing",
+            "resource": "document"
+          },
+          {
+            "time": "2026-11-26T09:28:43.215Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:28:43.320Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:28:52.440Z",
+            "path": "/dashboard",
+            "resource": "document"
+          }
+        ],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/handoff/start",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/handoff/authorize",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/handoff/callback",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/billing",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/billing",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/settings",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/audit",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/profile",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/handoff/start",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/handoff/authorize",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/handoff/callback",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_ADMIN",
+      "method": "provider token via the app confirm page (AM-15)",
+      "app": "pp",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "pp",
+          "role": "ENGINEERING_ADMIN",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [
+          {
+            "time": "2026-11-26T09:29:09.534Z",
+            "path": "/dashboard",
+            "resource": "document"
+          },
+          {
+            "time": "2026-11-26T09:29:10.816Z",
+            "path": "/billing",
+            "resource": "document"
+          },
+          {
+            "time": "2026-11-26T09:29:11.242Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:29:11.328Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:29:22.635Z",
+            "path": "/dashboard",
+            "resource": "document"
+          }
+        ],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/handoff/start",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/handoff/authorize",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/handoff/callback",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/billing",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/billing",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/settings",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/audit",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/profile",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/handoff/start",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/handoff/authorize",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/handoff/callback",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          }
+        ]
+      }
+    }
+  ]
+}

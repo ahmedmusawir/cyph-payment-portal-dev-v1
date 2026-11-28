@@ -1,0 +1,35 @@
+{
+  "time": "2026-11-27T07:46:10.872Z",
+  "apps": [
+    {
+      "listener_pid": 3347581,
+      "cwd_is_verification_copy": true,
+      "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+      "app_env": "local-proof",
+      "client_bundle": {
+        "scripts": 13,
+        "scratch_refs": 0,
+        "dev_refs": 0
+      },
+      "app": "ob",
+      "port": 3100,
+      "manifest": "38ebe196201fef9e52826a3d6ad6bb9ada254ac32ffc58a183bb2977e7c82603",
+      "artifactId": "q4-a3-ob-38ebe196201fef9e",
+      "buildId": "HhV1FUcZaHH6YmiWDXKkK",
+      "launcher": 3347438
+    },
+    {
+      "listener_pid": 3347594,
+      "cwd_is_verification_copy": true,
+      "runtime_backend_ref": "ihgcsrypblqkwommrkgj",
+      "app_env": "local-proof",
+      "client_bundle": "not applicable (server-only Supabase use)",
+      "app": "pp",
+      "port": 3101,
+      "manifest": "bb27c2ee7515d9c2a2d9df5dd537fdd0d02313816b2e5c0798bf6ca38402ee98",
+      "artifactId": "q4-a3-pp-bb27c2ee7515d9c2",
+      "buildId": "ELV-PEBCS7OQJuavBy3cQ",
+      "launcher": 3347439
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+/home/moose/NEXTJS/CYBER_PHARMA/cyph-v1-dev/supabase/migrations/0057_operations_events.sql
+120: -- Mirror the authoritative subscription object the server just read from Stripe. p_verified_at is the time of that
+121: -- read; an older read can never overwrite a newer one, and an ended subscription is never revived.
+122: create function public.subscription_mirror_apply(p_stripe_subscription_id text, p jsonb, p_verified_at timestamptz)
+123: returns text language plpgsql security definer set search_path = '' as $$
+124: begin
+125:  update public.subscriptions s set
+126:    raw_status = p->>'raw_status',
+127:    status = p->>'status',
+128:    quantity = (p->>'quantity')::integer,
+129:    stripe_price_id = p->>'price_id',
+130:    stripe_subscription_item_id = p->>'item_id',
+131:    current_period_start = (p->>'current_period_start')::timestamptz,
+132:    current_period_end = (p->>'current_period_end')::timestamptz,
+133:    cancel_at_period_end = coalesce((p->>'cancel_at_period_end')::boolean, false),
+134:    cancel_at = (p->>'cancel_at')::timestamptz,
+135:    latest_invoice_id = p->>'latest_invoice_id',
+136:    latest_invoice_status = p->>'latest_invoice_status',
+137:    verified_at = p_verified_at
+138:   where s.stripe_subscription_id = p_stripe_subscription_id and s.origin = 'stripe'
+139:     and (s.verified_at is null or s.verified_at <= p_verified_at)
+140:     and (s.status is distinct from 'canceled' or p->>'status' = 'canceled');
+141:  if found then return 'applied'; end if;
+142:  if exists (select 1 from public.subscriptions s where s.stripe_subscription_id = p_stripe_subscription_id) then return 'stale'; end if;
+143:  return 'unknown_subscription';
+144: end $$;

@@ -1,0 +1,338 @@
+{
+  "engine": "firefox",
+  "version": "148.0.2",
+  "rows": [
+    {
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 1,
+      "firstDiagnosticAt": "2026-11-27T05:41:21.847Z",
+      "tabSteps": 20,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 333,
+          "right": 416.0500030517578,
+          "top": 277.83331298828125,
+          "bottom": 321.83331298828125,
+          "width": 83.05000305175781,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1024,
+          "bottom": 600
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "before": {
+        "y": 306,
+        "hash": ""
+      },
+      "timeline": [
+        {
+          "delayAfterPriorSample": 0,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 100,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 300,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 800,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        }
+      ],
+      "result": "FAIL"
+    },
+    {
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 1,
+      "firstDiagnosticAt": "2026-11-27T05:41:26.260Z",
+      "tabSteps": 19,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.0500030517578,
+          "top": 428.45001220703125,
+          "bottom": 472.45001220703125,
+          "width": 83.05000305175781,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "before": {
+        "y": 131,
+        "hash": ""
+      },
+      "timeline": [
+        {
+          "delayAfterPriorSample": 0,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 100,
+          "y": 131,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 300,
+          "y": 131,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 800,
+          "y": 131,
+          "hash": "#top",
+          "headerInView": false
+        }
+      ],
+      "result": "FAIL"
+    },
+    {
+      "role": "ENGINEERING_ADMIN",
+      "result": "INCOMPLETE",
+      "scope": "fixture setup no retry",
+      "name": "Error"
+    }
+  ],
+  "sessions": [
+    {
+      "fixture": "ENGINEERING_OWNER_A",
+      "method": "password (normal sign-in form)",
+      "app": "ob",
+      "signout": null,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_OWNER_A",
+          "stage": "password-session-established"
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [
+          {
+            "type": "warning",
+            "message": "[JavaScript Warning: \"Loading failed for the <script> with source “[url] {file: \"[url] line: 1}]"
+          },
+          {
+            "type": "warning",
+            "message": "[JavaScript Warning: \"Loading failed for the <script> with source “[url] {file: \"[url] line: 1}]"
+          },
+          {
+            "type": "warning",
+            "message": "[JavaScript Warning: \"Loading failed for the <script> with source “[url] {file: \"[url] line: 1}]"
+          },
+          {
+            "type": "warning",
+            "message": "[JavaScript Warning: \"Loading failed for the <script> with source “[url] {file: \"[url] line: 1}]"
+          },
+          {
+            "type": "warning",
+            "message": "[JavaScript Warning: \"Loading failed for the <script> with source “[url] {file: \"[url] line: 1}]"
+          },
+          {
+            "type": "warning",
+            "message": "[JavaScript Warning: \"Loading failed for the <script> with source “[url] {file: \"[url] line: 1}]"
+          },
+          {
+            "type": "warning",
+            "message": "[JavaScript Warning: \"Loading failed for the <script> with source “[url] {file: \"[url] line: 1}]"
+          },
+          {
+            "type": "warning",
+            "message": "[JavaScript Warning: \"Loading failed for the <script> with source “[url] {file: \"[url] line: 1}]"
+          },
+          {
+            "type": "warning",
+            "message": "[JavaScript Warning: \"Loading failed for the <script> with source “[url] {file: \"[url] line: 1}]"
+          },
+          {
+            "type": "warning",
+            "message": "[JavaScript Warning: \"Loading failed for the <script> with source “[url] {file: \"[url] line: 1}]"
+          },
+          {
+            "type": "warning",
+            "message": "[JavaScript Warning: \"The resource at “[url] preloaded with link preload was not used within a few seconds. Make sure all attributes of the preload tag are set correctly.\" {file: \"[url] line: 0}]"
+          }
+        ],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_ADMIN",
+      "app": "ob",
+      "signout": null,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_ADMIN",
+          "stage": "confirmation-click",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ],
+          "failed": true,
+          "finalPath": "/auth/confirm",
+          "safeHeading": [
+            "Finish signing in"
+          ]
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          }
+        ]
+      }
+    }
+  ],
+  "reason": "Investigate delayed browser state for the article-1 desktop Enter observations only. First and diagnostic outcomes retained."
+}

@@ -1,0 +1,586 @@
+{
+  "engine": "chromium",
+  "version": "147.0.7727.15",
+  "session": "signed out",
+  "width": 1440,
+  "app": "pp",
+  "requested": "/",
+  "status": 200,
+  "measurement": {
+    "path": "/register/plan",
+    "tokens": {
+      "brand-navy": "#154474",
+      "brand-green": "#32a38d",
+      "brand-green-dark": "#288472",
+      "brand-ice": "#eaf3fa",
+      "brand-charcoal": "#393b38",
+      "brand-gray": "#515151"
+    },
+    "overflow": 0,
+    "width": 1440,
+    "bodyBackground": "rgb(234, 243, 250)",
+    "darkClass": false,
+    "colorScheme": "light",
+    "themeControls": 0,
+    "text": [
+      {
+        "where": "body>div:nth-child(3)>a:nth-child(1)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 10.0714,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>a:nth-child(1)>span:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 600,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>a:nth-child(1)>span:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 1,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 1,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>span:nth-child(1)>span:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 500,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 1,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>a:nth-child(3)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 15,
+        "weight": 400,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>nav:nth-child(1)>ol:nth-child(1)>li:nth-child(1)>span:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(21, 68, 116)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 700,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>nav:nth-child(1)>ol:nth-child(1)>li:nth-child(1)>span:nth-child(2)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 500,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>nav:nth-child(1)>ol:nth-child(1)>li:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgb(255, 255, 255)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 700,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>nav:nth-child(1)>ol:nth-child(1)>li:nth-child(2)>span:nth-child(3)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>nav:nth-child(1)>ol:nth-child(1)>li:nth-child(3)>span:nth-child(2)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgb(255, 255, 255)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 700,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>nav:nth-child(1)>ol:nth-child(1)>li:nth-child(3)>span:nth-child(3)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>nav:nth-child(1)>ol:nth-child(1)>li:nth-child(4)>span:nth-child(2)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgb(255, 255, 255)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 700,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>nav:nth-child(1)>ol:nth-child(1)>li:nth-child(4)>span:nth-child(3)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>span:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)>h1:nth-child(2)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 36,
+        "weight": 700,
+        "contrast": 1,
+        "threshold": 3,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>p:nth-child(3)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>fieldset:nth-child(1)>legend:nth-child(1)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 500,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>fieldset:nth-child(1)>label:nth-child(2)>span:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 18,
+        "weight": 500,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>fieldset:nth-child(1)>label:nth-child(2)>span:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgb(255, 255, 255)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>fieldset:nth-child(1)>label:nth-child(2)>span:nth-child(3)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 28,
+        "weight": 700,
+        "contrast": 9.9482,
+        "threshold": 3,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>fieldset:nth-child(1)>label:nth-child(2)>span:nth-child(3)>span:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>fieldset:nth-child(1)>label:nth-child(2)>span:nth-child(4)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>p:nth-child(1)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 500,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>p:nth-child(2)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>div:nth-child(2)>div:nth-child(1)>span:nth-child(2)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgb(255, 255, 255)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>div:nth-child(3)>p:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>div:nth-child(3)>p:nth-child(1)>a:nth-child(1)",
+        "color": "rgb(40, 132, 114)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 500,
+        "contrast": 4.532,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>div:nth-child(3)>button:nth-child(2)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(40, 132, 114)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 4.532,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>p:nth-child(4)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 400,
+        "contrast": 1,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 400,
+        "contrast": 1,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(2)>span:nth-child(1)>a:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 400,
+        "contrast": 1,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 400,
+        "contrast": 1,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(2)>span:nth-child(3)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 400,
+        "contrast": 1,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      }
+    ],
+    "controls": [
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>fieldset:nth-child(1)>label:nth-child(2)>input:nth-child(1)",
+        "tag": "INPUT",
+        "type": "radio",
+        "height": 1,
+        "width": 1,
+        "radius": "0px",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "outline": "rgb(57, 59, 56) none 3px",
+        "offset": "0px",
+        "border": "rgb(57, 59, 56)",
+        "borderWidth": "0px",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>div:nth-child(3)>button:nth-child(2)",
+        "tag": "BUTTON",
+        "type": "submit",
+        "height": 44,
+        "width": 192,
+        "radius": "8px",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "outline": "rgb(255, 255, 255) none 3px",
+        "offset": "0px",
+        "border": "rgb(211, 226, 238)",
+        "borderWidth": "0px",
+        "background": "rgb(40, 132, 114)"
+      }
+    ],
+    "links": [
+      {
+        "where": "body>div:nth-child(3)>a:nth-child(1)",
+        "href": "#main",
+        "color": "#393b38",
+        "background": [
+          234,
+          243,
+          250
+        ],
+        "underline": "none"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>a:nth-child(1)",
+        "href": "/register/plan",
+        "color": "#393b38",
+        "background": [
+          234,
+          243,
+          250
+        ],
+        "underline": "none"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(2)>div:nth-child(1)>nav:nth-child(2)>a:nth-child(3)",
+        "href": "/login",
+        "color": "#ffffff",
+        "background": [
+          234,
+          243,
+          250
+        ],
+        "underline": "none"
+      },
+      {
+        "where": "body>div:nth-child(3)>main:nth-child(3)>div:nth-child(1)>form:nth-child(3)>div:nth-child(3)>p:nth-child(1)>a:nth-child(1)",
+        "href": "/login",
+        "color": "#288472",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "underline": "underline"
+      },
+      {
+        "where": "body>div:nth-child(3)>footer:nth-child(4)>div:nth-child(1)>p:nth-child(2)>span:nth-child(1)>a:nth-child(1)",
+        "href": "mailto:[email]",
+        "color": "#eaf3fa",
+        "background": [
+          234,
+          243,
+          250
+        ],
+        "underline": "underline"
+      }
+    ],
+    "pills": [],
+    "anchors": [
+      {
+        "href": "#main",
+        "exists": true
+      }
+    ],
+    "oldNames": {
+      "text": false,
+      "title": false,
+      "alt": false,
+      "accessible": false
+    },
+    "tables": [],
+    "noStores": false,
+    "ownerBillingMessage": false,
+    "backToStores": false,
+    "errors": false
+  },
+  "time": "2026-11-24T12:39:04.578Z"
+}

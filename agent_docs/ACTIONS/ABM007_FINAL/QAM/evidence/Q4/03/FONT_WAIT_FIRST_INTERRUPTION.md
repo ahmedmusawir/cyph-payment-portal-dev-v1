@@ -1,0 +1,7 @@
+# Q4 matrix — scripts-disabled font wait interruption
+
+The first full-matrix process stopped making progress immediately after each browser's regular public OwedBook group, before its scripts-disabled /auth position recorded a result. The case used a timeout created inside the browser context. As with F07 in Q2, this provided no reliable deadline in a scripts-disabled context. Chromium had 90 saved observations, Firefox two, WebKit two. No Q4 matrix sign-in was active or attempted. The 21 attempts belong to the completed repair and diagnostic phases. The stalled QA process group alone was stopped and both real builds stayed up.
+
+The first checkpoints, source and command log are retained separately. The corrected instrument uses a Node-side deadline for font settling, turns off Playwright's duplicate screenshot font wait and resumes only unrecorded positions. A restarted scripts-disabled public observation is diagnostic and does not overwrite the first interruption. No authenticated or effectful request is retried.
+
+The corrected public rerun completed the first scripts-disabled positions and progressed on Chromium. It then stalled at the second scripts-disabled group for Firefox and WebKit before sign-in. The second checkpoint and source are preserved. The remaining scripts-disabled positions are blocked for the original screenshot instrument, with reason, while the ordinary matrix resumes from its saved positions. No earlier observation or authenticated case was repeated.

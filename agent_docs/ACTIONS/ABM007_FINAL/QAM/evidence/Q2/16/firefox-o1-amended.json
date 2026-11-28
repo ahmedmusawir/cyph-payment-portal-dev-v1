@@ -1,0 +1,233 @@
+{
+  "engine": "firefox",
+  "version": "148.0.2",
+  "planHash": "6a1abc2ae4187874e6c755d195d5ab6fc060c4f26d92520b6df6bc8cf9c73c7d",
+  "setup": "One fixture sign-in to Portal, then actual Open OwedBook handoff establishes both app cookies before route attempts; no second helper sign-in. Engineering reproduction uses Portal-first setup. No real-login proof claimed.",
+  "extraRoutesSource": "EVIDENCE/E2/REDIRECT_REPRODUCTION.md:28-29; settings, audit, profile, Help and dashboard Open OwedBook handoff each included once as extension per attempt.",
+  "rows": [
+    {
+      "engine": "firefox",
+      "version": "148.0.2",
+      "kind": "fresh",
+      "run": 1,
+      "time": "2026-11-24T16:10:33.202Z",
+      "method": "fixture-token sign-in to Portal plus actual app handoff",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/settings",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/audit",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/profile",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/help",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "via": "Portal dashboard Open OwedBook",
+          "expectedContent": true
+        }
+      ],
+      "result": "COMPLETE",
+      "identitySame": true
+    },
+    {
+      "engine": "firefox",
+      "version": "148.0.2",
+      "kind": "fresh",
+      "run": 2,
+      "time": "2026-11-24T16:11:28.330Z",
+      "method": "fixture-token sign-in to Portal plus actual app handoff",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "expectedContent": true
+        }
+      ],
+      "result": "INCOMPLETE",
+      "firstError": "page.goto: Timeout 15000ms exceeded."
+    },
+    {
+      "engine": "firefox",
+      "version": "148.0.2",
+      "kind": "fresh",
+      "run": 3,
+      "time": "2026-11-24T16:13:01.677Z",
+      "method": "fixture-token sign-in to Portal plus actual app handoff",
+      "steps": [
+        {
+          "app": "ob",
+          "path": "/owedbook",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal",
+          "expectedContent": true
+        },
+        {
+          "app": "ob",
+          "path": "/admin-portal/billing",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/dashboard",
+          "expectedContent": true
+        },
+        {
+          "app": "pp",
+          "path": "/billing",
+          "expectedContent": true
+        }
+      ],
+      "result": "INCOMPLETE",
+      "firstError": "page.goto: Timeout 15000ms exceeded."
+    }
+  ],
+  "sessions": [
+    {
+      "kind": "fresh",
+      "index": 1,
+      "role": "ENGINEERING_ADMIN",
+      "signInAttempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "setupSameIdentity": true,
+      "signout": 200
+    },
+    {
+      "kind": "fresh",
+      "index": 2,
+      "role": "ENGINEERING_ADMIN",
+      "signInAttempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "setupSameIdentity": true,
+      "signout": 200
+    },
+    {
+      "kind": "fresh",
+      "index": 3,
+      "role": "ENGINEERING_ADMIN",
+      "signInAttempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "signin": "PASS",
+      "setupSameIdentity": true,
+      "signout": 200
+    },
+    {
+      "kind": "warm",
+      "index": 1,
+      "role": "ENGINEERING_ADMIN",
+      "signInAttempts": 1,
+      "signin": "FAIL",
+      "firstError": "page.click: Timeout 15000ms exceeded.",
+      "signout": 200
+    }
+  ],
+  "counters": {
+    "password_sign_ins": 0,
+    "token_sign_ins": 3,
+    "generate_link_calls": 4
+  },
+  "sessionDiagnostics": [
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "stage": "fixture-session-established",
+      "entryStatus": 200,
+      "landedPath": "/auth/confirm",
+      "confirmControlCount": 1
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "stage": "fixture-session-established",
+      "entryStatus": 200,
+      "landedPath": "/auth/confirm",
+      "confirmControlCount": 1
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "stage": "fixture-session-established",
+      "entryStatus": 200,
+      "landedPath": "/auth/confirm",
+      "confirmControlCount": 1
+    },
+    {
+      "app": "pp",
+      "role": "ENGINEERING_ADMIN",
+      "stage": "confirmation-click",
+      "entryStatus": 200,
+      "landedPath": "/auth/confirm",
+      "confirmControlCount": 1,
+      "failed": true,
+      "finalPath": "/auth/confirm"
+    }
+  ]
+}

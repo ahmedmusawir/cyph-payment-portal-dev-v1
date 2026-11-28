@@ -1,0 +1,64 @@
+{
+  "engine": "webkit",
+  "version": "26.4",
+  "app": "pp",
+  "role": "PUBLIC",
+  "method": "none",
+  "width": 1440,
+  "requested": "/auth/switch",
+  "landed": "/auth/handoff-recovery",
+  "control": 1,
+  "state": "hover",
+  "time": "2026-11-24T15:49:56.499Z",
+  "raster": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 16,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 239,
+          "top": 14,
+          "right": 368.8096923828125,
+          "bottom": 34
+        },
+        "unsupported": [],
+        "worstRatio": 11.6974,
+        "samples": 481,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 239,
+          "top": 36.5,
+          "right": 334.701171875,
+          "bottom": 51.5
+        },
+        "unsupported": [],
+        "worstRatio": 10.397,
+        "samples": 139,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 2,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "completed": true
+}

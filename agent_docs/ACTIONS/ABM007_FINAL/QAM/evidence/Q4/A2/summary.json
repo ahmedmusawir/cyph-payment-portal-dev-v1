@@ -1,0 +1,7234 @@
+{
+  "totals": {
+    "structure": {
+      "PASS": 30
+    },
+    "mouse": {
+      "PASS": 90
+    },
+    "articleFocusEnter": {
+      "PASS": 386,
+      "FAIL": 4
+    },
+    "F36": {
+      "PASS": 36
+    },
+    "menuGeometry": {
+      "PASS": 12
+    },
+    "menuFocus": {
+      "PASS": 156
+    },
+    "addFocus": {
+      "PASS": 3
+    },
+    "profileFocus": {
+      "PASS": 3
+    },
+    "menuRegression": {
+      "PASS": 6
+    },
+    "forbiddenAndLabels": {
+      "PASS": 6
+    },
+    "appLinks": {
+      "PASS": 12
+    }
+  },
+  "positions": {
+    "structure": [
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:00.154Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:03.655Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:08.011Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:11.761Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:15.572Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:49.102Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:52.007Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:55.542Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:58.591Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:01.726Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:00.780Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:11.279Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:16.443Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:20.793Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:25.205Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:59.379Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:34.205Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:02.614Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:06.914Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:12.130Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:00.030Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:08.937Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:21.422Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:34.197Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:18.456Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:32.244Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:38.365Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:46.234Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:55.100Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:04.684Z",
+        "stage": "first"
+      }
+    ],
+    "mouse": [
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:00.178Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:00.439Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:00.590Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:03.665Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:03.773Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:03.875Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:08.022Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:08.158Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:08.255Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:11.798Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:11.960Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:12.074Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:15.591Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:15.764Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:15.879Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:49.116Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:49.249Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:49.350Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:52.015Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:52.128Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:52.265Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:55.560Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:55.696Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:55.802Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:58.613Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:58.709Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:58.876Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:01.746Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:01.858Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:01.958Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:00.822Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:01.162Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:01.404Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:11.292Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:11.472Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:11.627Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:16.454Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:16.607Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:16.739Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:20.806Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:20.948Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:21.093Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:25.216Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:25.389Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:25.549Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:59.389Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:59.660Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:59.797Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:34.256Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:34.479Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:34.680Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:02.627Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:02.795Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:02.947Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:06.930Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:07.103Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:07.233Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:12.152Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:12.325Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:12.444Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:00.046Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:00.952Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:01.478Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:08.988Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:09.572Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:10.038Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:21.434Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:22.322Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:23.030Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:34.207Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:34.973Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:35.607Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:18.511Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:19.100Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:19.585Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:32.266Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:32.701Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:33.210Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:38.423Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:38.602Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:38.875Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:46.255Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:46.753Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:47.212Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:55.123Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:55.874Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:56.388Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:04.698Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:05.345Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:05.930Z",
+        "stage": "first"
+      }
+    ],
+    "articleFocusEnter": [
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:00.754Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:01.271Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:01.416Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:01.592Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:01.779Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:01.908Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:02.086Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:02.271Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:02.412Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:02.554Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:02.710Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:02.826Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:02.953Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:03.995Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:04.515Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:04.667Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:04.818Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:04.958Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:05.137Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:05.278Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:05.525Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:05.722Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:05.923Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:06.074Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:06.209Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:06.350Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:08.358Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:08.929Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:09.183Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:09.366Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:09.528Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:09.689Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:09.871Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:10.091Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:10.271Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:10.466Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:10.659Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:10.860Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:11.058Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:12.191Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:12.855Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:13.044Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:13.270Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:13.435Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:13.597Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:13.764Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:13.993Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:14.187Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:14.309Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:14.456Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:14.637Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:14.806Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:15.997Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:16.647Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:16.852Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:17.090Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:17.303Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:17.535Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:17.760Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:18.075Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:18.287Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:18.502Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:18.754Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:18.954Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:19.180Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:49.457Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:49.754Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:49.960Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:50.193Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:50.364Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:50.490Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:50.619Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:50.820Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:50.932Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:51.043Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:51.138Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:51.267Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:51.444Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:52.374Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:52.779Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:52.898Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:53.060Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:53.171Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:53.286Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:53.416Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:53.618Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:53.716Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:53.881Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:53.987Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:54.088Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:54.218Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:55.941Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:56.290Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:56.400Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:56.584Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:56.712Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:56.848Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:56.995Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:57.249Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:57.400Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:57.543Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:57.702Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:57.860Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:58.010Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:59.003Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:59.663Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:59.788Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:59.915Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:00.061Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:00.202Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:00.318Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:00.491Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:00.611Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:00.719Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:00.861Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:00.980Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:01.139Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:02.063Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:02.593Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:02.747Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:02.925Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:03.070Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:03.239Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:03.365Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:03.618Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:03.759Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:03.945Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:04.106Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:04.450Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:04.644Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:08.390Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:08.994Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:09.130Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:09.286Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:09.450Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:09.575Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:09.731Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:09.935Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:10.073Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:10.182Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:10.320Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:10.427Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:10.538Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:12.337Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:12.932Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:13.058Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:13.229Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:13.360Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:13.448Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:13.580Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:13.788Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:13.911Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:14.080Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:14.231Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:14.387Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:14.516Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:17.630Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:18.134Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:18.252Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:18.415Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:18.558Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:18.718Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:19.019Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:19.253Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:19.404Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:19.560Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:19.676Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:19.803Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:19.944Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 1,
+        "result": "FAIL",
+        "at": "2026-11-27T05:41:21.847Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:22.511Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:22.679Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:22.900Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:23.125Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:23.260Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:23.393Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:23.627Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:23.735Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:23.917Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:24.083Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:24.252Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:24.379Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "FAIL",
+        "at": "2026-11-27T05:41:26.260Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:26.977Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:27.160Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:27.386Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:27.538Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:27.719Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:27.911Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:28.145Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:28.296Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:28.430Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:28.578Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:28.770Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:28.989Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:56.141Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:56.675Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:56.846Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:57.034Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:57.157Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:57.252Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:57.343Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:57.561Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:57.735Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:57.853Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:57.998Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:58.129Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:58.293Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:59.640Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:00.205Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:00.328Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:00.515Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:00.618Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:00.713Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:00.867Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:01.059Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:01.201Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:01.357Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:01.490Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:01.642Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:01.854Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:03.660Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:04.215Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:04.361Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:04.546Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:04.710Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:04.814Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:04.954Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:05.187Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:05.331Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:05.518Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:05.653Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:05.781Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:05.922Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 1,
+        "result": "FAIL",
+        "at": "2026-11-27T05:42:07.930Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:08.645Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:08.802Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:09.028Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:09.188Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:09.361Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:09.500Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:09.770Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:09.924Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:10.090Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:10.242Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:10.475Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:10.626Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "FAIL",
+        "at": "2026-11-27T05:42:13.320Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:14.130Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:14.267Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:14.501Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:14.822Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:15.005Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:15.224Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:15.523Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:15.689Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:15.883Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:16.069Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:16.218Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:16.384Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:01.948Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:02.692Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:03.031Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:03.516Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:04.058Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:04.466Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:04.912Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:05.649Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:05.963Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:06.414Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:06.841Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:07.329Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:07.782Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:10.395Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:11.382Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:11.860Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:12.374Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:12.837Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:13.265Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:13.720Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:14.412Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:14.759Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:15.281Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:15.962Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:16.445Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:16.930Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:23.597Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:24.545Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:25.044Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:25.963Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:26.790Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:27.590Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:28.301Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:29.472Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:29.912Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:30.675Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:31.455Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:32.152Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:32.692Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:36.392Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:37.641Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:38.095Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:38.729Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:39.485Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:40.297Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:40.982Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:41.752Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:42.230Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:42.901Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:43.376Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:43.808Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:44.114Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:28.032Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:28.938Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:29.399Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:30.027Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:30.642Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:31.239Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:31.883Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:32.699Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:33.101Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:33.672Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:34.217Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:34.822Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:35.253Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:33.544Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:34.205Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:34.464Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:34.750Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:35.057Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:35.355Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:35.672Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:35.991Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:36.179Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:36.482Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:36.776Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:37.036Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 320,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:37.333Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:39.051Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:39.688Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:39.906Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:40.233Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:40.716Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:41.046Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:41.423Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:41.883Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:42.063Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:42.311Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:42.550Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:42.851Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:43.145Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:47.798Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:48.583Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:48.937Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:49.465Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:49.999Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:50.584Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:51.110Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:51.677Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:52.003Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:52.509Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:53.057Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:53.442Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 768,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:53.879Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:56.945Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:57.833Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:58.158Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:58.794Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:59.501Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:00.145Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:00.716Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:01.376Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:01.726Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:02.177Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:02.678Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:03.104Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:03.545Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:06.388Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:07.567Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:08.066Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:08.862Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:09.649Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:10.346Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:11.085Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:12.221Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:12.667Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:13.261Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:13.936Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:14.596Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:15.162Z",
+        "stage": "first"
+      }
+    ],
+    "F36": [
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:06.603Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:06.955Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:07.245Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:19.509Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:20.183Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:20.794Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:54.376Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:54.634Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:54.858Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:04.894Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:05.489Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:05.910Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:14.866Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:15.214Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:15.548Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:29.304Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:29.773Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:30.261Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:56.521Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:56.866Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:57.153Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:16.629Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:17.077Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:17.512Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:17.590Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:18.324Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:19.515Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:35.953Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:36.893Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:38.152Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:43.525Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:44.167Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 375,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:44.966Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:16.108Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:17.072Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:18.353Z",
+        "stage": "first"
+      }
+    ],
+    "menuGeometry": [
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:21.844Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:24.923Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:06.834Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:09.133Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:31.195Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:34.118Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:19.683Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:25.863Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:43.341Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:50.552Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:20.416Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:26.509Z",
+        "stage": "first"
+      }
+    ],
+    "menuFocus": [
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:21.920Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:22.363Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:22.473Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:22.656Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:22.844Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:23.047Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:23.197Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:23.360Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:23.527Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:23.710Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:23.841Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:24.026Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:24.173Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:25.045Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:25.506Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:25.712Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:25.943Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:26.143Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:26.287Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:26.481Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:26.694Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:26.861Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:27.049Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:27.244Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:27.447Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:27.631Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:06.916Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:07.238Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:07.358Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:07.491Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:07.613Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:07.750Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:07.888Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:08.035Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:08.155Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:08.247Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:08.358Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:08.545Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:08.648Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:09.228Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:09.486Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:09.608Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:09.767Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:09.916Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:10.084Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:10.236Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:10.380Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:10.500Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:10.647Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:10.802Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:10.892Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:38:11.042Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:31.284Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:31.830Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:31.965Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:32.111Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:32.273Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:32.425Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:32.592Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:32.742Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:32.835Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:33.005Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:33.169Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:33.315Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:33.460Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:34.202Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:34.588Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:34.801Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:35.010Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:35.144Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:35.274Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:35.445Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:35.671Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:35.861Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:36.067Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:36.228Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:36.432Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:36.667Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:19.757Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:20.099Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:20.281Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:20.451Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:20.646Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:20.796Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:20.931Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:21.045Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:21.228Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:21.363Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:21.531Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:21.690Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:21.855Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:25.955Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:26.309Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:26.502Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:26.715Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:26.937Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:27.147Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:27.351Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:27.600Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:27.804Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:28.062Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:28.221Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:28.419Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:42:28.613Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:43.578Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:43.996Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:44.330Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:44.605Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:44.963Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:45.308Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:45.641Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:45.979Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:46.324Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:46.685Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:47.062Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:47.417Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:47.697Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:50.906Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:51.444Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:51.851Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:52.207Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:52.627Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:52.935Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:53.417Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:53.906Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:54.431Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:54.896Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:55.316Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:55.730Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:56.115Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:20.667Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:21.142Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:21.525Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:21.995Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:22.395Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:22.791Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:23.176Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:23.549Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:23.956Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:24.371Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:24.750Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:25.167Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1024,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:25.592Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 1,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:26.909Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 2,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:27.657Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 3,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:28.210Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 4,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:28.857Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 5,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:29.311Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 6,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:29.803Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 7,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:30.281Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 8,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:30.678Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 9,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:31.165Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 10,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:31.727Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 11,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:32.310Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 12,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:32.810Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "width": 1440,
+        "article": 13,
+        "result": "PASS",
+        "at": "2026-11-27T05:39:33.388Z",
+        "stage": "first"
+      }
+    ],
+    "addFocus": [
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:37:27.843Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:36.851Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:43:56.580Z",
+        "stage": "diagnostic"
+      }
+    ],
+    "profileFocus": [
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:40:54.244Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:41:38.510Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "width": 375,
+        "result": "PASS",
+        "at": "2026-11-27T05:44:04.050Z",
+        "stage": "diagnostic"
+      }
+    ],
+    "menuRegression": [
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "result": "PASS",
+        "at": "2026-11-27T05:37:37.206Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "result": "PASS",
+        "at": "2026-11-27T05:38:11.559Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "result": "PASS",
+        "at": "2026-11-27T05:41:44.926Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "result": "PASS",
+        "at": "2026-11-27T05:42:47.855Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "result": "PASS",
+        "at": "2026-11-27T05:44:05.737Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "result": "PASS",
+        "at": "2026-11-27T05:39:34.477Z",
+        "stage": "first"
+      }
+    ],
+    "forbiddenAndLabels": [
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "result": "PASS",
+        "at": "2026-11-27T05:37:38.394Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "result": "PASS",
+        "at": "2026-11-27T05:38:12.690Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "result": "PASS",
+        "at": "2026-11-27T05:41:46.347Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "result": "PASS",
+        "at": "2026-11-27T05:42:49.237Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "result": "PASS",
+        "at": "2026-11-27T05:44:08.149Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "result": "PASS",
+        "at": "2026-11-27T05:39:37.343Z",
+        "stage": "first"
+      }
+    ],
+    "appLinks": [
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "label": "open My Stores",
+        "result": "PASS",
+        "at": "2026-11-27T05:37:38.411Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_OWNER_A",
+        "label": "open Billing",
+        "result": "PASS",
+        "at": "2026-11-27T05:37:39.502Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "label": "open My Stores",
+        "result": "PASS",
+        "at": "2026-11-27T05:38:12.699Z",
+        "stage": "first"
+      },
+      {
+        "engine": "chromium",
+        "role": "ENGINEERING_ADMIN",
+        "label": "open Billing",
+        "result": "PASS",
+        "at": "2026-11-27T05:38:13.605Z",
+        "stage": "first"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "label": "open My Stores",
+        "result": "PASS",
+        "at": "2026-11-27T05:41:46.379Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_OWNER_A",
+        "label": "open Billing",
+        "result": "PASS",
+        "at": "2026-11-27T05:41:47.511Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "label": "open My Stores",
+        "result": "PASS",
+        "at": "2026-11-27T05:42:49.249Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "firefox",
+        "role": "ENGINEERING_ADMIN",
+        "label": "open Billing",
+        "result": "PASS",
+        "at": "2026-11-27T05:42:51.150Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "label": "open My Stores",
+        "result": "PASS",
+        "at": "2026-11-27T05:44:08.162Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_OWNER_A",
+        "label": "open Billing",
+        "result": "PASS",
+        "at": "2026-11-27T05:44:15.552Z",
+        "stage": "diagnostic"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "label": "open My Stores",
+        "result": "PASS",
+        "at": "2026-11-27T05:39:37.357Z",
+        "stage": "first"
+      },
+      {
+        "engine": "webkit",
+        "role": "ENGINEERING_ADMIN",
+        "label": "open Billing",
+        "result": "PASS",
+        "at": "2026-11-27T05:39:38.549Z",
+        "stage": "first"
+      }
+    ]
+  },
+  "F36LowestMeasured": 4.5285,
+  "F36SurfaceCounts": {
+    "255,255,255": 5210
+  },
+  "keyboardEnterReturns": {
+    "PASS": 86,
+    "FAIL": 4
+  },
+  "firefoxSettledEnter": [
+    {
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 1,
+      "firstDiagnosticAt": "2026-11-27T05:41:21.847Z",
+      "tabSteps": 20,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 333,
+          "right": 416.0500030517578,
+          "top": 277.83331298828125,
+          "bottom": 321.83331298828125,
+          "width": 83.05000305175781,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1024,
+          "bottom": 600
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "before": {
+        "y": 306,
+        "hash": ""
+      },
+      "timeline": [
+        {
+          "delayAfterPriorSample": 0,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 100,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 300,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 800,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        }
+      ],
+      "result": "FAIL"
+    },
+    {
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 1,
+      "firstDiagnosticAt": "2026-11-27T05:41:26.260Z",
+      "tabSteps": 19,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.0500030517578,
+          "top": 428.45001220703125,
+          "bottom": 472.45001220703125,
+          "width": 83.05000305175781,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "before": {
+        "y": 131,
+        "hash": ""
+      },
+      "timeline": [
+        {
+          "delayAfterPriorSample": 0,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 100,
+          "y": 131,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 300,
+          "y": 131,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 800,
+          "y": 131,
+          "hash": "#top",
+          "headerInView": false
+        }
+      ],
+      "result": "FAIL"
+    },
+    {
+      "role": "ENGINEERING_ADMIN",
+      "result": "INCOMPLETE",
+      "scope": "fixture setup no retry",
+      "name": "Error"
+    }
+  ],
+  "settledRemeasures": [
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "route": "/invitations",
+      "result": "PASS",
+      "registeredTextRangeCount": 4,
+      "counts": {
+        "pass": 4,
+        "fail": 0,
+        "notRun": 0
+      },
+      "at": "2026-11-27T05:37:31.921Z",
+      "area": "main text",
+      "unmeasured": []
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "route": "/admin-portal/stores/[store]/invite",
+      "result": "PARTIAL",
+      "registeredTextRangeCount": 33,
+      "counts": {
+        "pass": 29,
+        "fail": 0,
+        "notRun": 4
+      },
+      "at": "2026-11-27T05:40:57.762Z",
+      "area": "main text",
+      "unmeasured": [
+        {
+          "index": 21,
+          "tag": "SPAN",
+          "pseudo": null,
+          "size": 14,
+          "weight": 400,
+          "opacity": 1,
+          "threshold": 4.5,
+          "rect": {
+            "left": 182,
+            "top": 704.1875,
+            "right": 193,
+            "bottom": 721.1875
+          },
+          "unsupported": [],
+          "worstRatio": null,
+          "samples": 0,
+          "unstablePixels": 0,
+          "result": "NOT RUN",
+          "reason": "No stable glyph pixels; cannot measure this text range"
+        },
+        {
+          "index": 23,
+          "tag": "SPAN",
+          "pseudo": null,
+          "size": 14,
+          "weight": 400,
+          "opacity": 1,
+          "threshold": 4.5,
+          "rect": {
+            "left": 248,
+            "top": 704.1875,
+            "right": 259,
+            "bottom": 721.1875
+          },
+          "unsupported": [],
+          "worstRatio": null,
+          "samples": 0,
+          "unstablePixels": 0,
+          "result": "NOT RUN",
+          "reason": "No stable glyph pixels; cannot measure this text range"
+        },
+        {
+          "index": 27,
+          "tag": "SPAN",
+          "pseudo": null,
+          "size": 14,
+          "weight": 400,
+          "opacity": 1,
+          "threshold": 4.5,
+          "rect": {
+            "left": 173,
+            "top": 841.1875,
+            "right": 184,
+            "bottom": 858.1875
+          },
+          "unsupported": [],
+          "worstRatio": null,
+          "samples": 0,
+          "unstablePixels": 0,
+          "result": "NOT RUN",
+          "reason": "No stable glyph pixels; cannot measure this text range"
+        },
+        {
+          "index": 30,
+          "tag": "SPAN",
+          "pseudo": null,
+          "size": 14,
+          "weight": 400,
+          "opacity": 1,
+          "threshold": 4.5,
+          "rect": {
+            "left": 155,
+            "top": 878.1875,
+            "right": 166,
+            "bottom": 895.1875
+          },
+          "unsupported": [],
+          "worstRatio": null,
+          "samples": 0,
+          "unstablePixels": 0,
+          "result": "NOT RUN",
+          "reason": "No stable glyph pixels; cannot measure this text range"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "route": "/invitations",
+      "result": "PASS",
+      "registeredTextRangeCount": 3,
+      "counts": {
+        "pass": 3,
+        "fail": 0,
+        "notRun": 0
+      },
+      "at": "2026-11-27T05:37:32.924Z",
+      "area": "main text",
+      "unmeasured": []
+    },
+    {
+      "engine": "chromium",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "route": "/admin-portal/stores/[store]/invite",
+      "result": "PARTIAL",
+      "registeredTextRangeCount": 41,
+      "counts": {
+        "pass": 37,
+        "fail": 0,
+        "notRun": 4
+      },
+      "at": "2026-11-27T05:40:58.884Z",
+      "area": "main text",
+      "unmeasured": [
+        {
+          "index": 29,
+          "tag": "SPAN",
+          "pseudo": null,
+          "size": 14,
+          "weight": 400,
+          "opacity": 1,
+          "threshold": 4.5,
+          "rect": {
+            "left": 989,
+            "top": 613.6875,
+            "right": 1000,
+            "bottom": 630.6875
+          },
+          "unsupported": [],
+          "worstRatio": null,
+          "samples": 0,
+          "unstablePixels": 0,
+          "result": "NOT RUN",
+          "reason": "No stable glyph pixels; cannot measure this text range"
+        },
+        {
+          "index": 31,
+          "tag": "SPAN",
+          "pseudo": null,
+          "size": 14,
+          "weight": 400,
+          "opacity": 1,
+          "threshold": 4.5,
+          "rect": {
+            "left": 1055,
+            "top": 613.6875,
+            "right": 1066,
+            "bottom": 630.6875
+          },
+          "unsupported": [],
+          "worstRatio": null,
+          "samples": 0,
+          "unstablePixels": 0,
+          "result": "NOT RUN",
+          "reason": "No stable glyph pixels; cannot measure this text range"
+        },
+        {
+          "index": 35,
+          "tag": "SPAN",
+          "pseudo": null,
+          "size": 14,
+          "weight": 400,
+          "opacity": 1,
+          "threshold": 4.5,
+          "rect": {
+            "left": 797,
+            "top": 750.6875,
+            "right": 808,
+            "bottom": 767.6875
+          },
+          "unsupported": [],
+          "worstRatio": null,
+          "samples": 0,
+          "unstablePixels": 0,
+          "result": "NOT RUN",
+          "reason": "No stable glyph pixels; cannot measure this text range"
+        },
+        {
+          "index": 38,
+          "tag": "SPAN",
+          "pseudo": null,
+          "size": 14,
+          "weight": 400,
+          "opacity": 1,
+          "threshold": 4.5,
+          "rect": {
+            "left": 779,
+            "top": 799.6875,
+            "right": 790,
+            "bottom": 816.6875
+          },
+          "unsupported": [],
+          "worstRatio": null,
+          "samples": 0,
+          "unstablePixels": 0,
+          "result": "NOT RUN",
+          "reason": "No stable glyph pixels; cannot measure this text range"
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "route": "/invitations",
+      "result": "PASS",
+      "registeredTextRangeCount": 4,
+      "counts": {
+        "pass": 4,
+        "fail": 0,
+        "notRun": 0
+      },
+      "at": "2026-11-27T05:41:40.245Z",
+      "area": "main text",
+      "unmeasured": []
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "route": "/admin-portal/stores/[store]/invite",
+      "result": "PASS",
+      "registeredTextRangeCount": 33,
+      "counts": {
+        "pass": 33,
+        "fail": 0,
+        "notRun": 0
+      },
+      "at": "2026-11-27T05:41:41.791Z",
+      "area": "main text",
+      "unmeasured": []
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "route": "/invitations",
+      "result": "PASS",
+      "registeredTextRangeCount": 3,
+      "counts": {
+        "pass": 3,
+        "fail": 0,
+        "notRun": 0
+      },
+      "at": "2026-11-27T05:41:40.930Z",
+      "area": "main text",
+      "unmeasured": []
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "route": "/admin-portal/stores/[store]/invite",
+      "result": "PASS",
+      "registeredTextRangeCount": 41,
+      "counts": {
+        "pass": 41,
+        "fail": 0,
+        "notRun": 0
+      },
+      "at": "2026-11-27T05:41:43.029Z",
+      "area": "main text",
+      "unmeasured": []
+    },
+    {
+      "engine": "firefox",
+      "role": "ENGINEERING_ADMIN",
+      "width": 1440,
+      "route": "/admin-portal/stores/[store]/invite",
+      "result": "PASS",
+      "registeredTextRangeCount": 4,
+      "counts": {
+        "pass": 4,
+        "fail": 0,
+        "notRun": 0
+      },
+      "at": "2026-11-27T05:42:40.741Z",
+      "area": "header primary navigation",
+      "unmeasured": []
+    }
+  ],
+  "portalAvatar": {
+    "result": "IDENTIFIED",
+    "element": "Header account avatar, Initials in src/components/portal/PageHeader.tsx:60\u201372, used by Shell.tsx",
+    "visibleEvidence": [
+      {
+        "tag": "SPAN",
+        "ariaHidden": "true",
+        "className": "grid shrink-0 place-items-center rounded-full pb-card font-bold text-heading h-7 w-7 text-[11px]",
+        "measuredWidth": 28,
+        "measuredHeight": 28,
+        "radius": "9999px",
+        "shadow": "rgba(12, 38, 65, 0.05) 0px 8px 20px 0px",
+        "shown": true,
+        "initialsOnly": true
+      }
+    ],
+    "documentResponses": [
+      {
+        "origin": "http://localhost:3101",
+        "path": "/dashboard",
+        "status": 200
+      }
+    ],
+    "initialRouteCounter": 0,
+    "reconciliation": "One redirected Dashboard document in the Playwright response log. Redirect follow-ups are not separately routed in the initial request hook."
+  },
+  "firstAttemptRowsPreserved": {
+    "PASS": 458,
+    "FAIL": 5,
+    "PARTIAL": 2,
+    "INCOMPLETE": 59
+  },
+  "sessionAttempts": 14,
+  "signouts": {
+    "200": 11,
+    "None": 3
+  },
+  "activeMember": "Unavailable. Friday accepted this limit in Q4 section 5. No substitute fixture used."
+}

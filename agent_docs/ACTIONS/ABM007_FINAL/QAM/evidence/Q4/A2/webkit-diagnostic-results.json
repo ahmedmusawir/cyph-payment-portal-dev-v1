@@ -1,0 +1,3398 @@
+{
+  "engine": "webkit",
+  "version": "26.4",
+  "rows": [
+    {
+      "section": "A2-1 structure and dimensions",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "at": "2026-11-27T05:43:18.456Z",
+      "articles": 13,
+      "count": 13,
+      "menuLinks": [
+        "#getting-around",
+        "#roles",
+        "#my-stores",
+        "#inviting",
+        "#store-admin",
+        "#removing-access",
+        "#billing",
+        "#removing-pharmacy",
+        "#settings",
+        "#audit",
+        "#profile",
+        "#claims",
+        "#support"
+      ],
+      "ids": [
+        "getting-around",
+        "roles",
+        "my-stores",
+        "inviting",
+        "store-admin",
+        "removing-access",
+        "billing",
+        "removing-pharmacy",
+        "settings",
+        "audit",
+        "profile",
+        "claims",
+        "support"
+      ],
+      "allTopByExactText": 13,
+      "topInMenu": 0,
+      "lastInside": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "heights": [
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44,
+        44
+      ],
+      "overflow": 0,
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 mouse returns to top",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 1,
+      "at": "2026-11-27T05:43:18.511Z",
+      "from": 131,
+      "after": {
+        "y": 0,
+        "headerInView": true,
+        "helpTitleInView": true
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 mouse returns to top",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 7,
+      "at": "2026-11-27T05:43:19.100Z",
+      "from": 4543,
+      "after": {
+        "y": 0,
+        "headerInView": true,
+        "helpTitleInView": true
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 mouse returns to top",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 13,
+      "at": "2026-11-27T05:43:19.585Z",
+      "from": 6949,
+      "after": {
+        "y": 0,
+        "headerInView": true,
+        "helpTitleInView": true
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 1,
+      "enterExpected": true,
+      "at": "2026-11-27T05:43:28.032Z",
+      "steps": 18,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 428.390625,
+          "bottom": 472.390625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "activation": {
+        "from": 131,
+        "y": 0,
+        "headerInView": true,
+        "helpTitleInView": true
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 2,
+      "enterExpected": false,
+      "at": "2026-11-27T05:43:28.938Z",
+      "steps": 1,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 427.890625,
+          "bottom": 471.890625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 3,
+      "enterExpected": false,
+      "at": "2026-11-27T05:43:29.399Z",
+      "steps": 2,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 428.265625,
+          "bottom": 472.265625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 4,
+      "enterExpected": false,
+      "at": "2026-11-27T05:43:30.027Z",
+      "steps": 1,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 427.890625,
+          "bottom": 471.890625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 5,
+      "enterExpected": false,
+      "at": "2026-11-27T05:43:30.642Z",
+      "steps": 1,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 427.640625,
+          "bottom": 471.640625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 6,
+      "enterExpected": false,
+      "at": "2026-11-27T05:43:31.239Z",
+      "steps": 1,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 427.765625,
+          "bottom": 471.765625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 7,
+      "enterExpected": true,
+      "at": "2026-11-27T05:43:31.883Z",
+      "steps": 2,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 427.890625,
+          "bottom": 471.890625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "activation": {
+        "from": 4543,
+        "y": 0,
+        "headerInView": true,
+        "helpTitleInView": true
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 8,
+      "enterExpected": false,
+      "at": "2026-11-27T05:43:32.699Z",
+      "steps": 1,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 428.140625,
+          "bottom": 472.140625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 9,
+      "enterExpected": false,
+      "at": "2026-11-27T05:43:33.101Z",
+      "steps": 1,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 428.140625,
+          "bottom": 472.140625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 10,
+      "enterExpected": false,
+      "at": "2026-11-27T05:43:33.672Z",
+      "steps": 1,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 428.265625,
+          "bottom": 472.265625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 11,
+      "enterExpected": false,
+      "at": "2026-11-27T05:43:34.217Z",
+      "steps": 1,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 428.265625,
+          "bottom": 472.265625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 12,
+      "enterExpected": false,
+      "at": "2026-11-27T05:43:34.822Z",
+      "steps": 1,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 588.640625,
+          "bottom": 632.640625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 article focus / Enter",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 13,
+      "enterExpected": true,
+      "at": "2026-11-27T05:43:35.253Z",
+      "steps": 2,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.046875,
+          "top": 799.390625,
+          "bottom": 843.390625,
+          "width": 83.046875,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "activation": {
+        "from": 6949,
+        "y": 0,
+        "headerInView": true,
+        "helpTitleInView": true
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 F36 rendered contrast",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 1,
+      "at": "2026-11-27T05:43:35.953Z",
+      "style": {
+        "color": "rgb(40, 132, 114)",
+        "underline": true,
+        "articleSurface": "rgb(255, 255, 255)"
+      },
+      "articleId": "getting-around",
+      "pixels": {
+        "method": "Viewport-aligned rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "A",
+            "pseudo": null,
+            "size": 13,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 477,
+              "top": 442.390625,
+              "right": 560.03369140625,
+              "bottom": 458.390625
+            },
+            "unsupported": [],
+            "worstRatio": 4.5285,
+            "samples": 221,
+            "unstablePixels": 0,
+            "paintedBackgroundRgbCounts": {
+              "255,255,255": 221
+            },
+            "result": "PASS"
+          }
+        ],
+        "counts": {
+          "pass": 1,
+          "fail": 0,
+          "notRun": 0
+        }
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 F36 rendered contrast",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 7,
+      "at": "2026-11-27T05:43:36.893Z",
+      "style": {
+        "color": "rgb(40, 132, 114)",
+        "underline": true,
+        "articleSurface": "rgb(255, 255, 255)"
+      },
+      "articleId": "billing",
+      "pixels": {
+        "method": "Viewport-aligned rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "A",
+            "pseudo": null,
+            "size": 13,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 477,
+              "top": 441.890625,
+              "right": 560.03369140625,
+              "bottom": 457.890625
+            },
+            "unsupported": [],
+            "worstRatio": 4.5285,
+            "samples": 138,
+            "unstablePixels": 0,
+            "paintedBackgroundRgbCounts": {
+              "255,255,255": 138
+            },
+            "result": "PASS"
+          }
+        ],
+        "counts": {
+          "pass": 1,
+          "fail": 0,
+          "notRun": 0
+        }
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-1 F36 rendered contrast",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 13,
+      "at": "2026-11-27T05:43:38.152Z",
+      "style": {
+        "color": "rgb(40, 132, 114)",
+        "underline": true,
+        "articleSurface": "rgb(255, 255, 255)"
+      },
+      "articleId": "support",
+      "pixels": {
+        "method": "Viewport-aligned rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "A",
+            "pseudo": null,
+            "size": 13,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 477,
+              "top": 813.390625,
+              "right": 560.03369140625,
+              "bottom": 829.390625
+            },
+            "unsupported": [],
+            "worstRatio": 4.5285,
+            "samples": 221,
+            "unstablePixels": 0,
+            "paintedBackgroundRgbCounts": {
+              "255,255,255": 221
+            },
+            "result": "PASS"
+          }
+        ],
+        "counts": {
+          "pass": 1,
+          "fail": 0,
+          "notRun": 0
+        }
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu geometry",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "at": "2026-11-27T05:43:43.341Z",
+      "box": {
+        "height": 566,
+        "content": 656,
+        "start": 0,
+        "stick": 16,
+        "scrollPadding": "8px"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 1,
+      "at": "2026-11-27T05:43:43.578Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 59,
+          "bottom": 103,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 2,
+      "at": "2026-11-27T05:43:43.996Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 105,
+          "bottom": 149,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 3,
+      "at": "2026-11-27T05:43:44.330Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 151,
+          "bottom": 195,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 4,
+      "at": "2026-11-27T05:43:44.605Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 197,
+          "bottom": 241,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 5,
+      "at": "2026-11-27T05:43:44.963Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 243,
+          "bottom": 287,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 6,
+      "at": "2026-11-27T05:43:45.308Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 289,
+          "bottom": 334,
+          "width": 226,
+          "height": 45
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 25
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 25
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 7,
+      "at": "2026-11-27T05:43:45.641Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 336,
+          "bottom": 381,
+          "width": 226,
+          "height": 45
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 25
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 25
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 8,
+      "at": "2026-11-27T05:43:45.979Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 383,
+          "bottom": 427,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 9,
+      "at": "2026-11-27T05:43:46.324Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 429,
+          "bottom": 473,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 10,
+      "at": "2026-11-27T05:43:46.685Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 475,
+          "bottom": 519,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 11,
+      "at": "2026-11-27T05:43:47.062Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 521,
+          "bottom": 565,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 12,
+      "at": "2026-11-27T05:43:47.417Z",
+      "active": true,
+      "scrollTop": 36,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 531,
+          "bottom": 575,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 13,
+      "at": "2026-11-27T05:43:47.697Z",
+      "active": true,
+      "scrollTop": 82,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 41,
+          "right": 267,
+          "top": 531,
+          "bottom": 575,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 25,
+          "top": 17,
+          "right": 283,
+          "bottom": 583
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu geometry",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "at": "2026-11-27T05:43:50.552Z",
+      "box": {
+        "height": 656,
+        "content": 656,
+        "start": 0,
+        "stick": 16,
+        "scrollPadding": "8px"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 1,
+      "at": "2026-11-27T05:43:50.906Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 59,
+          "bottom": 103,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 2,
+      "at": "2026-11-27T05:43:51.444Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 105,
+          "bottom": 149,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 3,
+      "at": "2026-11-27T05:43:51.851Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 151,
+          "bottom": 195,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 4,
+      "at": "2026-11-27T05:43:52.207Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 197,
+          "bottom": 241,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 5,
+      "at": "2026-11-27T05:43:52.627Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 243,
+          "bottom": 287,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 6,
+      "at": "2026-11-27T05:43:52.935Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 289,
+          "bottom": 334,
+          "width": 226,
+          "height": 45
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 25
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 25
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 7,
+      "at": "2026-11-27T05:43:53.417Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 336,
+          "bottom": 381,
+          "width": 226,
+          "height": 45
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 25
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 25
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 8,
+      "at": "2026-11-27T05:43:53.906Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 383,
+          "bottom": 427,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 9,
+      "at": "2026-11-27T05:43:54.431Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 429,
+          "bottom": 473,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 10,
+      "at": "2026-11-27T05:43:54.896Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 475,
+          "bottom": 519,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 11,
+      "at": "2026-11-27T05:43:55.316Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 521,
+          "bottom": 565,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 12,
+      "at": "2026-11-27T05:43:55.730Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 567,
+          "bottom": 611,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 menu keyboard outline",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 13,
+      "at": "2026-11-27T05:43:56.115Z",
+      "active": true,
+      "scrollTop": 0,
+      "pageY": 1200,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 185,
+          "right": 411,
+          "top": 613,
+          "bottom": 657,
+          "width": 226,
+          "height": 44
+        },
+        "clip": {
+          "left": 169,
+          "top": 17,
+          "right": 427,
+          "bottom": 673
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 206
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 OwedBook Billing Add control",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "height": 900,
+      "at": "2026-11-27T05:43:56.580Z",
+      "steps": 4,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 8,
+        "rect": {
+          "left": 16,
+          "right": 336,
+          "top": 242.1875,
+          "bottom": 286.1875,
+          "width": 320,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 375,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 300
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 300
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 24
+          }
+        },
+        "result": "PASS"
+      },
+      "result": "PASS"
+    },
+    {
+      "section": "A2-2 Profile password field and reveal",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 375,
+      "height": 900,
+      "at": "2026-11-27T05:44:04.050Z",
+      "results": [
+        {
+          "name": "New Password",
+          "steps": 4,
+          "outline": {
+            "role": null,
+            "tag": "INPUT",
+            "keyFocus": true,
+            "focusVisible": true,
+            "outlineWidth": 2,
+            "outlineOffset": 2,
+            "outlineStyle": "solid",
+            "outlineColor": "rgba(0, 0, 0, 0)",
+            "shadow": "rgb(234, 243, 250) 0px 0px 0px 2px, rgb(21, 68, 116) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+            "radius": 8,
+            "rect": {
+              "left": 49,
+              "right": 326,
+              "top": 658.6875,
+              "bottom": 700.6875,
+              "width": 277,
+              "height": 42
+            },
+            "clip": {
+              "left": 0,
+              "top": 0,
+              "right": 375,
+              "bottom": 900
+            },
+            "width": 2,
+            "offset": 2,
+            "color": [
+              21,
+              68,
+              116
+            ],
+            "sides": {
+              "top": {
+                "fraction": 1,
+                "geometricallyClipped": false,
+                "samples": 257
+              },
+              "bottom": {
+                "fraction": 1,
+                "geometricallyClipped": false,
+                "samples": 257
+              },
+              "left": {
+                "fraction": 1,
+                "geometricallyClipped": false,
+                "samples": 22
+              },
+              "right": {
+                "fraction": 1,
+                "geometricallyClipped": false,
+                "samples": 22
+              }
+            },
+            "result": "PASS"
+          }
+        },
+        {
+          "name": "Show password",
+          "steps": 1,
+          "outline": {
+            "role": null,
+            "tag": "BUTTON",
+            "keyFocus": true,
+            "focusVisible": true,
+            "outlineWidth": 2,
+            "outlineOffset": 2,
+            "outlineStyle": "solid",
+            "outlineColor": "rgba(0, 0, 0, 0)",
+            "shadow": "rgb(255, 255, 255) 0px 0px 0px 0px, rgb(21, 68, 116) 0px 0px 0px 2px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+            "radius": 8,
+            "rect": {
+              "left": 282,
+              "right": 326,
+              "top": 657.6875,
+              "bottom": 701.6875,
+              "width": 44,
+              "height": 44
+            },
+            "clip": {
+              "left": 0,
+              "top": 0,
+              "right": 375,
+              "bottom": 900
+            },
+            "width": 2,
+            "offset": 0,
+            "color": [
+              21,
+              68,
+              116
+            ],
+            "sides": {
+              "top": {
+                "fraction": 1,
+                "geometricallyClipped": false,
+                "samples": 24
+              },
+              "bottom": {
+                "fraction": 1,
+                "geometricallyClipped": false,
+                "samples": 24
+              },
+              "left": {
+                "fraction": 1,
+                "geometricallyClipped": false,
+                "samples": 24
+              },
+              "right": {
+                "fraction": 1,
+                "geometricallyClipped": false,
+                "samples": 24
+              }
+            },
+            "result": "PASS"
+          }
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "section": "Help regression menu destinations",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "at": "2026-11-27T05:44:05.737Z",
+      "links": [
+        {
+          "href": "#getting-around",
+          "hash": "#getting-around",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#roles",
+          "hash": "#roles",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#my-stores",
+          "hash": "#my-stores",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#inviting",
+          "hash": "#inviting",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#store-admin",
+          "hash": "#store-admin",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#removing-access",
+          "hash": "#removing-access",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#billing",
+          "hash": "#billing",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#removing-pharmacy",
+          "hash": "#removing-pharmacy",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#settings",
+          "hash": "#settings",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#audit",
+          "hash": "#audit",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#profile",
+          "hash": "#profile",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#claims",
+          "hash": "#claims",
+          "articleInView": true,
+          "result": "PASS"
+        },
+        {
+          "href": "#support",
+          "hash": "#support",
+          "articleInView": true,
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "section": "Help forbidden terms and changed labels",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "at": "2026-11-27T05:44:08.149Z",
+      "forbidden": false,
+      "matching": true,
+      "result": "PASS"
+    },
+    {
+      "section": "Help app links by role",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "label": "open My Stores",
+      "at": "2026-11-27T05:44:08.162Z",
+      "href": "/admin-portal",
+      "path": "/admin-portal",
+      "loadedRoleSurface": true,
+      "result": "PASS"
+    },
+    {
+      "section": "Help app links by role",
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "label": "open Billing",
+      "at": "2026-11-27T05:44:15.552Z",
+      "href": "/admin-portal/billing",
+      "path": "/admin-portal/billing",
+      "loadedRoleSurface": true,
+      "result": "PASS"
+    }
+  ],
+  "sessions": [
+    {
+      "fixture": "ENGINEERING_OWNER_A",
+      "method": "password (normal sign-in form)",
+      "app": "ob",
+      "signout": null,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_OWNER_A",
+          "stage": "password-session-established"
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/billing",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/profile",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_ADMIN",
+      "method": "provider token via the app confirm page (AM-15)",
+      "app": "ob",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_ADMIN",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          }
+        ]
+      }
+    }
+  ]
+}

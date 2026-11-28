@@ -1,0 +1,6 @@
+{
+  "firstFailure": "Bundled Chromium executable absent. Original attempt stopped at browser launch before a browser context, sign-in or invitation POST.",
+  "diagnosis": "Separate browser-launch-only check reproduced missing bundled executable. Installed Google Chrome launched, version 157.0.8103.78.",
+  "effects": {"signIn": 0, "invitationPost": 0, "email": 0},
+  "recovery": "Start the one authorized send using installed Chrome. Require unchanged runtime and fixture baseline, first-attempt zero counters and exclusive effect receipt."
+}

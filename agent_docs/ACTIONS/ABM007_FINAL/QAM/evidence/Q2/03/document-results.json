@@ -1,0 +1,29 @@
+{
+  "AC-V01": {
+    "record": "ABM_RULINGS.md AM-08(2), line 69",
+    "observed": "Director reconfirmed corrected look and P01\u2013P04; no independent approval invented"
+  },
+  "AC-E01": {
+    "all_links_equal": true,
+    "only_brand_heading_change": true,
+    "diff_exit": 1,
+    "deployment": "NOT RUN; Gate D"
+  },
+  "AC-E03_source": {
+    "observed": "Only sender display name, two subjects and two closing strings change in protected billingNotices.ts; link, arithmetic and dispatch logic unchanged",
+    "evidence": "billing-notices.diff",
+    "deployment": "NOT RUN; Gate D"
+  },
+  "AC-P01": {
+    "record": "EVIDENCE/E2/CHANGED_LABELS.md",
+    "read_in_full": true,
+    "rendered_spot_checks": "Pending completion of Q2 route matrix"
+  },
+  "AC-R03": {
+    "RECOVERY_exception": "AM-08(3), Friday Q1 return02 \u00a73.1; c335671..candidate RECOVERY diff empty",
+    "Portal_exception": "billingNotices brand strings only",
+    "dependencies": "both diffs empty",
+    "migration_changes": "none in complete changed-path inventories"
+  },
+  "limits": "Source checks are not live email delivery, payment outcome or deployment proof."
+}

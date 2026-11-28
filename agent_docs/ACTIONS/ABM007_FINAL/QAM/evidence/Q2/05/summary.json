@@ -1,0 +1,41 @@
+{
+  "rows": [
+    {
+      "engine": "chromium",
+      "attempts": 10,
+      "complete": 0,
+      "missingOwnerOnlyControl": 10,
+      "otherIncomplete": [],
+      "sessions": 6,
+      "signinsPassed": true,
+      "signouts200": true
+    },
+    {
+      "engine": "firefox",
+      "attempts": 10,
+      "complete": 0,
+      "missingOwnerOnlyControl": 9,
+      "otherIncomplete": [
+        {
+          "kind": "fresh",
+          "run": 5,
+          "firstError": "page.goto: Timeout 15000ms exceeded."
+        }
+      ],
+      "sessions": 6,
+      "signinsPassed": true,
+      "signouts200": true
+    },
+    {
+      "engine": "webkit",
+      "attempts": 10,
+      "complete": 0,
+      "missingOwnerOnlyControl": 10,
+      "otherIncomplete": [],
+      "sessions": 6,
+      "signinsPassed": true,
+      "signouts200": true
+    }
+  ],
+  "classification": "29 routes stopped by the incompatible Store-admin/Manage billing step; one Firefox navigation timeout. Zero complete routes. Friday adjudicates; no alternative route substituted."
+}

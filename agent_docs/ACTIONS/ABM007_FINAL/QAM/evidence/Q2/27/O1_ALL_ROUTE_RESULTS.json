@@ -1,0 +1,2227 @@
+[
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/chromium-o1.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "fresh",
+    "run": 1,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:20:25.575Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/chromium-o1.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "fresh",
+    "run": 2,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:20:38.662Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/chromium-o1.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "fresh",
+    "run": 3,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:20:55.429Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/chromium-o1.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "fresh",
+    "run": 4,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:21:08.277Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/chromium-o1.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "fresh",
+    "run": 5,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:21:25.204Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/chromium-o1.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "warm",
+    "run": 1,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:21:38.877Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/chromium-o1.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "warm",
+    "run": 2,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:21:44.722Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/chromium-o1.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "warm",
+    "run": 3,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:21:48.394Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/chromium-o1.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "warm",
+    "run": 4,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:21:52.276Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/chromium-o1.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "warm",
+    "run": 5,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:21:55.893Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/firefox-o1.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "fresh",
+    "run": 1,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:22:29.835Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/firefox-o1.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "fresh",
+    "run": 2,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:22:44.489Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/firefox-o1.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "fresh",
+    "run": 3,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:22:53.858Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/firefox-o1.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "fresh",
+    "run": 4,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:23:07.360Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/firefox-o1.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "fresh",
+    "run": 5,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:23:23.285Z",
+    "steps": [],
+    "result": "INCOMPLETE",
+    "firstError": "page.goto: Timeout 15000ms exceeded."
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/firefox-o1.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "warm",
+    "run": 1,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:23:53.277Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/firefox-o1.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "warm",
+    "run": 2,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:24:09.119Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/firefox-o1.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "warm",
+    "run": 3,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:24:16.277Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/firefox-o1.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "warm",
+    "run": 4,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:24:26.827Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/firefox-o1.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "warm",
+    "run": 5,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:24:33.142Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/webkit-o1.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "fresh",
+    "run": 1,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:25:09.337Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/webkit-o1.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "fresh",
+    "run": 2,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:25:24.858Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/webkit-o1.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "fresh",
+    "run": 3,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:25:34.981Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/webkit-o1.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "fresh",
+    "run": 4,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:25:44.994Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/webkit-o1.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "fresh",
+    "run": 5,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:26:01.179Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/webkit-o1.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "warm",
+    "run": 1,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:26:12.442Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/webkit-o1.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "warm",
+    "run": 2,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:26:21.986Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/webkit-o1.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "warm",
+    "run": 3,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:26:36.246Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/webkit-o1.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "warm",
+    "run": 4,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:26:40.964Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Original",
+    "evidence": "evidence/Q2/05/webkit-o1.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "warm",
+    "run": 5,
+    "method": "provider token via the app confirm page (AM-15)",
+    "time": "2026-11-24T13:26:45.785Z",
+    "steps": [
+      {
+        "expected": "/owedbook",
+        "path": "/owedbook",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal",
+        "path": "/admin-portal",
+        "origin": "http://localhost:3100"
+      },
+      {
+        "expected": "/admin-portal/billing",
+        "path": "/admin-portal/billing",
+        "origin": "http://localhost:3100"
+      }
+    ],
+    "result": "INCOMPLETE",
+    "blockedStep": "Manage billing handoff",
+    "ownerOnlyMessage": true,
+    "firstError": "Required Manage billing control absent for Store admin; ruled owner-only view shown"
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/chromium-o1-amended.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "fresh",
+    "run": 1,
+    "time": "2026-11-24T16:05:28.745Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/chromium-o1-amended.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "fresh",
+    "run": 2,
+    "time": "2026-11-24T16:06:09.944Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/chromium-o1-amended.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "fresh",
+    "run": 3,
+    "time": "2026-11-24T16:06:53.579Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/chromium-o1-amended.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "warm",
+    "run": 1,
+    "time": "2026-11-24T16:07:35.920Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/chromium-o1-amended.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "warm",
+    "run": 2,
+    "time": "2026-11-24T16:08:06.578Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/chromium-o1-amended.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "warm",
+    "run": 3,
+    "time": "2026-11-24T16:08:36.726Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/chromium-o1-amended.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "warm",
+    "run": 4,
+    "time": "2026-11-24T16:09:03.679Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/chromium-o1-amended.json",
+    "engine": "chromium",
+    "version": "147.0.7727.15",
+    "kind": "warm",
+    "run": 5,
+    "time": "2026-11-24T16:09:30.886Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/firefox-o1-amended.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "fresh",
+    "run": 1,
+    "time": "2026-11-24T16:10:33.202Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/firefox-o1-amended.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "fresh",
+    "run": 2,
+    "time": "2026-11-24T16:11:28.330Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      }
+    ],
+    "result": "INCOMPLETE",
+    "firstError": "page.goto: Timeout 15000ms exceeded."
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/firefox-o1-amended.json",
+    "engine": "firefox",
+    "version": "148.0.2",
+    "kind": "fresh",
+    "run": 3,
+    "time": "2026-11-24T16:13:01.677Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      }
+    ],
+    "result": "INCOMPLETE",
+    "firstError": "page.goto: Timeout 15000ms exceeded."
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/webkit-o1-amended.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "fresh",
+    "run": 1,
+    "time": "2026-11-24T16:16:35.925Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/webkit-o1-amended.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "fresh",
+    "run": 2,
+    "time": "2026-11-24T16:17:08.224Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/webkit-o1-amended.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "fresh",
+    "run": 3,
+    "time": "2026-11-24T16:17:45.311Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/webkit-o1-amended.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "warm",
+    "run": 1,
+    "time": "2026-11-24T16:18:29.852Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/webkit-o1-amended.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "warm",
+    "run": 2,
+    "time": "2026-11-24T16:18:53.046Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/webkit-o1-amended.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "warm",
+    "run": 3,
+    "time": "2026-11-24T16:19:13.185Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/webkit-o1-amended.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "warm",
+    "run": 4,
+    "time": "2026-11-24T16:19:37.087Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "evidence": "evidence/Q2/16/webkit-o1-amended.json",
+    "engine": "webkit",
+    "version": "26.4",
+    "kind": "warm",
+    "run": 5,
+    "time": "2026-11-24T16:20:04.359Z",
+    "method": "fixture-token sign-in to Portal plus actual app handoff",
+    "steps": [
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/dashboard",
+        "expectedContent": true
+      },
+      {
+        "app": "pp",
+        "path": "/billing",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/settings",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/admin-portal/audit",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/profile",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/help",
+        "expectedContent": true
+      },
+      {
+        "app": "ob",
+        "path": "/owedbook",
+        "via": "Portal dashboard Open OwedBook",
+        "expectedContent": true
+      }
+    ],
+    "result": "COMPLETE",
+    "identitySame": true
+  },
+  {
+    "phase": "Q2-A1",
+    "engine": "firefox",
+    "kind": "warm",
+    "evidence": "evidence/Q2/16/firefox-unstarted-warm-routes.json",
+    "run": 1,
+    "result": "NOT RUN",
+    "reason": "Warm fixture sign-in failed; no automatic sign-in retry; original attempt count not padded"
+  },
+  {
+    "phase": "Q2-A1",
+    "engine": "firefox",
+    "kind": "warm",
+    "evidence": "evidence/Q2/16/firefox-unstarted-warm-routes.json",
+    "run": 2,
+    "result": "NOT RUN",
+    "reason": "Warm fixture sign-in failed; no automatic sign-in retry; original attempt count not padded"
+  },
+  {
+    "phase": "Q2-A1",
+    "engine": "firefox",
+    "kind": "warm",
+    "evidence": "evidence/Q2/16/firefox-unstarted-warm-routes.json",
+    "run": 3,
+    "result": "NOT RUN",
+    "reason": "Warm fixture sign-in failed; no automatic sign-in retry; original attempt count not padded"
+  },
+  {
+    "phase": "Q2-A1",
+    "engine": "firefox",
+    "kind": "warm",
+    "evidence": "evidence/Q2/16/firefox-unstarted-warm-routes.json",
+    "run": 4,
+    "result": "NOT RUN",
+    "reason": "Warm fixture sign-in failed; no automatic sign-in retry; original attempt count not padded"
+  },
+  {
+    "phase": "Q2-A1",
+    "engine": "firefox",
+    "kind": "warm",
+    "evidence": "evidence/Q2/16/firefox-unstarted-warm-routes.json",
+    "run": 5,
+    "result": "NOT RUN",
+    "reason": "Warm fixture sign-in failed; no automatic sign-in retry; original attempt count not padded"
+  }
+]

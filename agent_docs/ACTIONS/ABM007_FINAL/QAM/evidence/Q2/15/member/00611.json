@@ -1,0 +1,84 @@
+{
+  "engine": "firefox",
+  "version": "148.0.2",
+  "app": "ob",
+  "role": "ENGINEERING_MEMBER",
+  "method": "provider token via the app confirm page (AM-15)",
+  "width": 375,
+  "requested": "/help",
+  "landed": "/help",
+  "control": 6,
+  "state": "hover",
+  "time": "2026-11-24T15:31:48.773Z",
+  "raster": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "A",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 41,
+          "top": 343.26666259765625,
+          "right": 47.100006103515625,
+          "bottom": 362.26666259765625
+        },
+        "unsupported": [],
+        "worstRatio": 8.8222,
+        "samples": 15,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "A",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 47.100006103515625,
+          "top": 343.26666259765625,
+          "right": 55.633331298828125,
+          "bottom": 362.26666259765625
+        },
+        "unsupported": [],
+        "worstRatio": 8.8222,
+        "samples": 2,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 2,
+        "tag": "A",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 55.633331298828125,
+          "top": 343.26666259765625,
+          "right": 161.01666259765625,
+          "bottom": 362.26666259765625
+        },
+        "unsupported": [],
+        "worstRatio": 8.783,
+        "samples": 214,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 3,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "completed": true
+}

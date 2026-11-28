@@ -1,0 +1,11 @@
+{
+  "originalResult": "FAIL retained unchanged in mock-runtime.json",
+  "classification": "QA expectation/fixture prerequisite mismatch; no product regression inferred",
+  "facts": [
+    "All designated global user_roles are member (read-only query)",
+    "Mock AdminLayout requires global admin; real mode separately checks tenant administration",
+    "Guard, getUserRole and next.config baseline-to-candidate diffs empty",
+    "OwedBook mock view rendered25 rows; no browser business RPC or mutation observed; signout200"
+  ],
+  "qualifiedResult": "Mock OwedBook bounded behavior observed; mock Admin coverage BLOCKED for lack of designated global-admin fixture. No role/credential/fixture change authorized or performed. No rerun."
+}

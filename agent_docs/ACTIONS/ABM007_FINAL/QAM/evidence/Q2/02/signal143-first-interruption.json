@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-24 18:59 Asia/Dhaka",
+  "exit": 143,
+  "cause": "NOT ESTABLISHED",
+  "lastCompleted": {
+    "engine": "webkit",
+    "version": "26.4",
+    "role": "ENGINEERING_OWNER_A",
+    "session": "password (normal sign-in form)",
+    "width": 1440,
+    "app": "ob",
+    "requested": "/admin-portal/billing",
+    "landed": "/admin-portal/billing",
+    "http": 200,
+    "fontReady": true,
+    "overflow": 0,
+    "contrastFlags": 0,
+    "smallControls": 1,
+    "oldName": false,
+    "evidence": "0769.json"
+  },
+  "unfinished": "WebKit Owner A OwedBook next route; Portal Owner A not started",
+  "activeSessionAtExit": "Owner A OwedBook password sign-in succeeded; sign-out not recorded",
+  "accounting": "Add one successful password session to the last completed-session counter snapshot; subsequent explicit diagnostic sign-out will be recorded",
+  "retryPolicy": "No failed sign-in is retried; only unfinished route coverage resumes"
+}

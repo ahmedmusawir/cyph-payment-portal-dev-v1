@@ -1,0 +1,1302 @@
+{
+  "browser": "chromium",
+  "version": "147.0.7727.15",
+  "rows": [
+    {
+      "section": "CR-01/03 AC-F01",
+      "role": "ENGINEERING_OWNER_A",
+      "time": "2026-11-26T09:27:07.979Z",
+      "expected": 3,
+      "actual": 3,
+      "noStores": false,
+      "disabled": false,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "AC-H01/H02/H03 Help",
+      "role": "ENGINEERING_OWNER_A",
+      "time": "2026-11-26T09:27:09.107Z",
+      "seen": {
+        "status": 200,
+        "path": "/help"
+      },
+      "anchors": 14,
+      "dead": [],
+      "forbidden": false,
+      "localTargets": [
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/admin-portal"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/admin-portal/billing"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        }
+      ],
+      "navBillingLinkCount": 2,
+      "capability": {
+        "role": "ENGINEERING_OWNER_A",
+        "ownerStoreCount": 3,
+        "memberOnlyStoreCount": 0,
+        "adminStoreCount": 0,
+        "storeCount": 3
+      },
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "AC-H03 Help app links",
+      "role": "ENGINEERING_OWNER_A",
+      "time": "2026-11-26T09:27:09.488Z",
+      "checks": [
+        {
+          "label": "open My Stores",
+          "hrefExpected": true,
+          "observed": "/admin-portal",
+          "expected": "/admin-portal",
+          "adminBillingOK": true
+        },
+        {
+          "label": "open Billing",
+          "hrefExpected": true,
+          "observed": "/admin-portal/billing",
+          "expected": "/admin-portal/billing",
+          "adminBillingOK": true
+        }
+      ],
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "CR-01 / Admin role surface",
+      "role": "ENGINEERING_OWNER_A",
+      "time": "2026-11-26T09:27:10.991Z",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal"
+      },
+      "actual": 0,
+      "pass": false,
+      "_authorizedStoreCount": 0,
+      "result": "FAIL"
+    },
+    {
+      "section": "CR-04 truthful deliberate OwedBook data failure",
+      "role": "ENGINEERING_OWNER_A",
+      "time": "2026-11-26T09:27:11.492Z",
+      "stubbedReadOnly": true,
+      "errorVisible": true,
+      "zeroEmptyVisible": false,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "CR-05/06 password handoff and logout",
+      "role": "ENGINEERING_OWNER_A",
+      "time": "2026-11-26T09:27:12.075Z",
+      "forward": true,
+      "back": true,
+      "signout": 200,
+      "refusals": [
+        {
+          "app": "ob",
+          "status": 200,
+          "path": "/auth",
+          "refused": true
+        },
+        {
+          "app": "pp",
+          "status": 200,
+          "path": "/login",
+          "refused": true
+        }
+      ],
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "CR-01/03 AC-F01",
+      "role": "ENGINEERING_ADMIN",
+      "time": "2026-11-26T09:27:27.907Z",
+      "expected": 1,
+      "actual": 1,
+      "noStores": false,
+      "disabled": false,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "AC-H01/H02/H03 Help",
+      "role": "ENGINEERING_ADMIN",
+      "time": "2026-11-26T09:27:28.454Z",
+      "seen": {
+        "status": 200,
+        "path": "/help"
+      },
+      "anchors": 14,
+      "dead": [],
+      "forbidden": false,
+      "localTargets": [
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/admin-portal"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/admin-portal/billing"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        }
+      ],
+      "navBillingLinkCount": 2,
+      "capability": {
+        "role": "ENGINEERING_ADMIN",
+        "ownerStoreCount": 0,
+        "memberOnlyStoreCount": 0,
+        "adminStoreCount": 1,
+        "storeCount": 1
+      },
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "AC-H03 Help app links",
+      "role": "ENGINEERING_ADMIN",
+      "time": "2026-11-26T09:27:28.923Z",
+      "checks": [
+        {
+          "label": "open My Stores",
+          "hrefExpected": true,
+          "observed": "/admin-portal",
+          "expected": "/admin-portal",
+          "adminBillingOK": true
+        },
+        {
+          "label": "open Billing",
+          "hrefExpected": true,
+          "observed": "/admin-portal/billing",
+          "expected": "/admin-portal/billing",
+          "adminBillingOK": true
+        }
+      ],
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "CR-01 / Admin role surface",
+      "role": "ENGINEERING_ADMIN",
+      "time": "2026-11-26T09:27:30.739Z",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal"
+      },
+      "actual": 0,
+      "pass": false,
+      "_authorizedStoreCount": 0,
+      "result": "FAIL"
+    },
+    {
+      "section": "CR-02 Store admin wrong-store denial",
+      "role": "ENGINEERING_ADMIN",
+      "time": "2026-11-26T09:27:31.182Z",
+      "result": "BLOCKED",
+      "reason": "No witnessed out-of-scope valid fixture route"
+    },
+    {
+      "section": "CR-01 / Owner billing restriction",
+      "role": "ENGINEERING_ADMIN",
+      "time": "2026-11-26T09:27:31.839Z",
+      "ownerMessage": true,
+      "manageVisible": false,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "CR-01/03 AC-F01",
+      "role": "ENGINEERING_INVITEE",
+      "time": "2026-11-26T09:27:39.622Z",
+      "expected": 2,
+      "actual": 2,
+      "noStores": false,
+      "disabled": false,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "AC-H01/H02/H03 Help",
+      "role": "ENGINEERING_INVITEE",
+      "time": "2026-11-26T09:27:40.273Z",
+      "seen": {
+        "status": 200,
+        "path": "/help"
+      },
+      "anchors": 14,
+      "dead": [],
+      "forbidden": false,
+      "localTargets": [
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/admin-portal"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/admin-portal/billing"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        }
+      ],
+      "navBillingLinkCount": 2,
+      "capability": {
+        "role": "ENGINEERING_INVITEE",
+        "ownerStoreCount": 1,
+        "memberOnlyStoreCount": 1,
+        "adminStoreCount": 0,
+        "storeCount": 2
+      },
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "AC-H03 Help app links",
+      "role": "ENGINEERING_INVITEE",
+      "time": "2026-11-26T09:27:40.680Z",
+      "checks": [
+        {
+          "label": "open My Stores",
+          "hrefExpected": true,
+          "observed": "/admin-portal",
+          "expected": "/admin-portal",
+          "adminBillingOK": true
+        },
+        {
+          "label": "open Billing",
+          "hrefExpected": true,
+          "observed": "/admin-portal/billing",
+          "expected": "/admin-portal/billing",
+          "adminBillingOK": true
+        }
+      ],
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "CR-01 / Admin role surface",
+      "role": "ENGINEERING_INVITEE",
+      "time": "2026-11-26T09:27:42.262Z",
+      "seen": {
+        "status": 200,
+        "path": "/admin-portal"
+      },
+      "actual": 0,
+      "pass": false,
+      "_authorizedStoreCount": 0,
+      "result": "FAIL"
+    },
+    {
+      "section": "CR-01/03 AC-F01",
+      "role": "ENGINEERING_MEMBER",
+      "time": "2026-11-26T09:27:47.515Z",
+      "expected": 0,
+      "actual": 0,
+      "noStores": true,
+      "disabled": true,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "AC-H01/H02/H03 Help",
+      "role": "ENGINEERING_MEMBER",
+      "time": "2026-11-26T09:27:48.003Z",
+      "seen": {
+        "status": 200,
+        "path": "/help"
+      },
+      "anchors": 14,
+      "dead": [],
+      "forbidden": false,
+      "localTargets": [
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/admin-portal"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/admin-portal/billing"
+        },
+        {
+          "origin": "http://localhost:3100",
+          "path": "/help"
+        }
+      ],
+      "navBillingLinkCount": 2,
+      "capability": {
+        "role": "ENGINEERING_MEMBER",
+        "ownerStoreCount": 0,
+        "memberOnlyStoreCount": 0,
+        "adminStoreCount": 0,
+        "storeCount": 0
+      },
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "AC-H03 Help app links",
+      "role": "ENGINEERING_MEMBER",
+      "time": "2026-11-26T09:27:48.433Z",
+      "checks": [
+        {
+          "label": "open My Stores",
+          "hrefExpected": true,
+          "observed": "/owedbook",
+          "expected": "/owedbook",
+          "adminBillingOK": true
+        },
+        {
+          "label": "open Billing",
+          "hrefExpected": true,
+          "observed": "/owedbook",
+          "expected": "/owedbook",
+          "adminBillingOK": true
+        }
+      ],
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "CR-01/H03 removed role navigation",
+      "role": "ENGINEERING_MEMBER",
+      "time": "2026-11-26T09:27:50.304Z",
+      "name": "TimeoutError",
+      "result": "INCOMPLETE"
+    },
+    {
+      "section": "CR-02 Portal no Owner payload",
+      "role": "ENGINEERING_ADMIN",
+      "time": "2026-11-26T09:28:05.033Z",
+      "status": 403,
+      "ownerData": false,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "CR-02 Portal no Owner payload",
+      "role": "ENGINEERING_MEMBER",
+      "time": "2026-11-26T09:28:12.288Z",
+      "status": 403,
+      "ownerData": false,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "AC-N02 master logo hashes",
+      "time": "2026-11-26T09:28:12.824Z",
+      "expected": "e7e5d3575c743f7c07defbaf907dc71a2a7f854aadaaad92d74e73f4d3293afd",
+      "sources": [
+        {
+          "app": "ob",
+          "sha256": "e7e5d3575c743f7c07defbaf907dc71a2a7f854aadaaad92d74e73f4d3293afd"
+        },
+        {
+          "app": "pp",
+          "sha256": "e7e5d3575c743f7c07defbaf907dc71a2a7f854aadaaad92d74e73f4d3293afd"
+        }
+      ],
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "AC-P01 repaired labels against saved screen probes",
+      "time": "2026-11-26T09:28:12.826Z",
+      "labels": [
+        {
+          "label": "Subscribe Now",
+          "listed": true,
+          "observed": true
+        },
+        {
+          "label": "Log in",
+          "listed": true,
+          "observed": true
+        },
+        {
+          "label": "Go to the Top",
+          "listed": true,
+          "observed": true
+        },
+        {
+          "label": "Logging in…",
+          "listed": true,
+          "observed": true
+        }
+      ],
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "CR-01/02/03 Help and access",
+      "role": "Active Member-only",
+      "result": "BLOCKED",
+      "reason": "Only active Member-per-store identity has its own Owner account. Removed Member assessed separately."
+    },
+    {
+      "section": "Brand, markup and link walk",
+      "app": "ob",
+      "path": "/",
+      "time": "2026-11-26T09:28:12.896Z",
+      "seen": {
+        "status": 200,
+        "path": "/"
+      },
+      "oldName": false,
+      "missingAnchors": 0,
+      "logo": true,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "Brand, markup and link walk",
+      "app": "ob",
+      "path": "/auth",
+      "time": "2026-11-26T09:28:13.169Z",
+      "seen": {
+        "status": 200,
+        "path": "/auth"
+      },
+      "oldName": false,
+      "missingAnchors": 0,
+      "logo": true,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "Brand, markup and link walk",
+      "app": "ob",
+      "path": "/qa-missing-page",
+      "time": "2026-11-26T09:28:13.387Z",
+      "seen": {
+        "status": 404,
+        "path": "/qa-missing-page"
+      },
+      "oldName": false,
+      "missingAnchors": 0,
+      "logo": false,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "Brand, markup and link walk",
+      "app": "pp",
+      "path": "/login",
+      "time": "2026-11-26T09:28:13.510Z",
+      "seen": {
+        "status": 200,
+        "path": "/login"
+      },
+      "oldName": false,
+      "missingAnchors": 0,
+      "logo": true,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "Brand, markup and link walk",
+      "app": "pp",
+      "path": "/register/plan",
+      "time": "2026-11-26T09:28:13.767Z",
+      "seen": {
+        "status": 200,
+        "path": "/register/plan"
+      },
+      "oldName": false,
+      "missingAnchors": 0,
+      "logo": true,
+      "pass": true,
+      "result": "PASS"
+    },
+    {
+      "section": "Brand, markup and link walk",
+      "app": "pp",
+      "path": "/qa-missing-page",
+      "time": "2026-11-26T09:28:13.945Z",
+      "seen": {
+        "status": 404,
+        "path": "/qa-missing-page"
+      },
+      "oldName": false,
+      "missingAnchors": 0,
+      "logo": false,
+      "pass": true,
+      "result": "PASS"
+    }
+  ],
+  "sessions": [
+    {
+      "fixture": "ENGINEERING_OWNER_A",
+      "method": "password (normal sign-in form)",
+      "app": null,
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_OWNER_A",
+          "stage": "password-session-established"
+        }
+      ],
+      "network": {
+        "loads": [
+          {
+            "time": "2026-11-26T09:27:21.864Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:27:22.012Z",
+            "path": "/dashboard",
+            "resource": "fetch"
+          },
+          {
+            "time": "2026-11-26T09:27:25.452Z",
+            "path": "/billing",
+            "resource": "document"
+          }
+        ],
+        "blocked": [],
+        "console": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+          }
+        ],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/billing",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/handoff/start",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/handoff/authorize",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/handoff/callback",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/billing",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/handoff/start",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/handoff/authorize",
+            "status": 302
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/handoff/callback",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 307
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/billing",
+            "status": 307
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_ADMIN",
+      "method": "provider token via the app confirm page (AM-15)",
+      "app": "ob",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_ADMIN",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/billing",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_INVITEE",
+      "method": "provider token via the app confirm page (AM-15)",
+      "app": "ob",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_INVITEE",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_MEMBER",
+      "method": "provider token via the app confirm page (AM-15)",
+      "app": "ob",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "ob",
+          "role": "ENGINEERING_MEMBER",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/help",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/admin-portal/billing",
+            "status": 307
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/owedbook",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_ADMIN",
+      "method": "provider token via the app confirm page (AM-15)",
+      "app": "pp",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "pp",
+          "role": "ENGINEERING_ADMIN",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+          }
+        ],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "ENGINEERING_MEMBER",
+      "method": "provider token via the app confirm page (AM-15)",
+      "app": "pp",
+      "signout": 200,
+      "diagnostics": [
+        {
+          "app": "pp",
+          "role": "ENGINEERING_MEMBER",
+          "stage": "fixture-session-established",
+          "entryStatus": 200,
+          "landedPath": "/auth/confirm",
+          "confirmControlCount": 1,
+          "confirmVisible": true,
+          "confirmEnabled": true,
+          "confirmPosts": 1,
+          "confirmResponseStatuses": [
+            303
+          ]
+        }
+      ],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: the server responded with a status of 403 (Forbidden)"
+          }
+        ],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/auth/confirm",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/api/auth/confirm",
+            "status": 303
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/dashboard",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "diagnostics": [],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [
+          {
+            "type": "error",
+            "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          },
+          {
+            "type": "error",
+            "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          }
+        ],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/qa-missing-page",
+            "status": 404
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/register/plan",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/qa-missing-page",
+            "status": 404
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "rows": [
+    {
+      "engine": "chromium",
+      "version": "147.0.7727.15",
+      "role": "ENGINEERING_MEMBER",
+      "time": "2026-11-24T13:11:57.233Z",
+      "kind": "explicit content-stable diagnostic; earlier failures retained",
+      "links": [
+        {
+          "requested": "/admin-portal",
+          "landed": "/owedbook",
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "ownerMessage": 0,
+          "ownerDataControl": 0
+        },
+        {
+          "requested": "/admin-portal/billing",
+          "landed": "/owedbook",
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "ownerMessage": 0,
+          "ownerDataControl": 0
+        }
+      ],
+      "method": "provider token via the app confirm page (AM-15)",
+      "phase": "wait required content /owedbook",
+      "completed": true,
+      "signout": 200
+    },
+    {
+      "engine": "chromium",
+      "version": "147.0.7727.15",
+      "role": "ENGINEERING_ADMIN",
+      "time": "2026-11-24T13:12:11.318Z",
+      "kind": "explicit content-stable diagnostic; earlier failures retained",
+      "links": [
+        {
+          "requested": "/admin-portal",
+          "landed": "/admin-portal",
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "ownerMessage": 0,
+          "ownerDataControl": 0
+        },
+        {
+          "requested": "/admin-portal/billing",
+          "landed": "/admin-portal/billing",
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "ownerMessage": 1,
+          "ownerDataControl": 0
+        }
+      ],
+      "method": "provider token via the app confirm page (AM-15)",
+      "phase": "wait required content /admin-portal/billing",
+      "completed": true,
+      "signout": 200
+    },
+    {
+      "engine": "chromium",
+      "version": "147.0.7727.15",
+      "role": "ENGINEERING_OWNER_A",
+      "time": "2026-11-24T13:12:21.796Z",
+      "kind": "explicit content-stable diagnostic; earlier failures retained",
+      "links": [
+        {
+          "requested": "/admin-portal",
+          "landed": "/admin-portal",
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "ownerMessage": 0,
+          "ownerDataControl": 0
+        },
+        {
+          "requested": "/admin-portal/billing",
+          "landed": "/admin-portal/billing",
+          "stableMs": 500,
+          "requiredContentVisible": true,
+          "ownerMessage": 0,
+          "ownerDataControl": 1
+        }
+      ],
+      "method": "password (normal sign-in form)",
+      "phase": "wait required content /admin-portal/billing",
+      "completed": true,
+      "signout": 200
+    }
+  ],
+  "counters": {
+    "password_sign_ins": 1,
+    "token_sign_ins": 2,
+    "generate_link_calls": 2
+  }
+}

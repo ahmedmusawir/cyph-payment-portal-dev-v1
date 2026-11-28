@@ -1,0 +1,116 @@
+{
+  "engine": "chromium",
+  "version": "147.0.7727.15",
+  "app": "ob",
+  "role": "PUBLIC",
+  "method": "none",
+  "width": 1281,
+  "requested": "/auth/signed-out",
+  "landed": "/auth/signed-out",
+  "measurement": {
+    "path": "/auth/signed-out",
+    "tokens": {
+      "brand-navy": "#154474",
+      "brand-green": "#32a38d",
+      "brand-green-dark": "#288472",
+      "brand-ice": "#eaf3fa",
+      "brand-charcoal": "#393b38",
+      "brand-gray": "#515151"
+    },
+    "overflow": 0,
+    "width": 1281,
+    "bodyBackground": "rgb(234, 243, 250)",
+    "darkClass": false,
+    "colorScheme": "light",
+    "themeControls": 0,
+    "text": [
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(1)>span:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(1)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>div:nth-child(2)>h1:nth-child(2)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 36,
+        "weight": 700,
+        "contrast": 1,
+        "threshold": 3,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(3)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>a:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(40, 132, 114)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 4.532,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      }
+    ],
+    "controls": [],
+    "links": [
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>a:nth-child(1)",
+        "href": "/auth",
+        "color": "#ffffff",
+        "background": [
+          40,
+          132,
+          114
+        ],
+        "underline": "none"
+      }
+    ],
+    "pills": [],
+    "anchors": [],
+    "oldNames": {
+      "text": false,
+      "title": false,
+      "alt": false,
+      "accessible": false
+    },
+    "tables": [],
+    "noStores": false,
+    "ownerBillingMessage": false,
+    "backToStores": false,
+    "errors": false
+  }
+}

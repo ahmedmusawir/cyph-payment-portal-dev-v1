@@ -1,0 +1,30 @@
+--- A2/src/__tests__/abm007/help-page.test.tsx
++++ A3/src/__tests__/abm007/help-page.test.tsx
+@@ -110,6 +110,27 @@
+     expect(screen.queryByTestId("help-go-to-top-end")).toBeNull();
+   });
+ 
++  // RWO-01 A3: "#top" is a real element, the Help heading, and it can take focus. With no element behind "#top" the
++  // link kept keyboard focus after activation and Firefox brought the page back down to it. The scroll margin of one
++  // window height makes the browser scroll to the very top. (jsdom does not scroll or move focus on a fragment
++  // navigation, so the movement itself is measured in the three browser engines, not here.)
++  it("gives every Go to the Top link one real, focusable target: the Help heading", () => {
++    const { container } = render(<HelpPage />);
++    const targets = container.querySelectorAll("#top");
++    expect(targets).toHaveLength(1);
++    const heading = screen.getByRole("heading", { level: 1, name: "Help" });
++    expect(targets[0]).toBe(heading);
++    expect(heading).toHaveAttribute("tabindex", "-1");
++    expect(heading).toHaveClass("scroll-mt-[100vh]");
++    // It precedes the contents menu and every article, so focus lands above all of them.
++    const toc = screen.getByRole("navigation", { name: "On this page" });
++    expect(heading.compareDocumentPosition(toc) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
++    // Focusable by script and by the browser, but not a Tab stop of its own.
++    heading.focus();
++    expect(document.activeElement).toBe(heading);
++    for (const a of Array.from(container.querySelectorAll("section a[href='#top']"))) expect(a.getAttribute("href")).toBe(`#${heading.id}`);
++  });
++
+   // RWO-01 A1-3, kept by A2-1: a contents menu taller than the window scrolls inside itself, so its last link can be reached.
+   it("lets the contents menu scroll inside itself from lg", () => {
+     render(<HelpPage />);

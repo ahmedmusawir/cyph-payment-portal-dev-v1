@@ -1,0 +1,36 @@
+{
+  "time": "2026-11-24T15:39:02.293Z",
+  "target": "ihgcsrypblqkwommrkgj",
+  "rows": [
+    {
+      "app": "ob",
+      "port": 3100,
+      "appEnv": "local-proof",
+      "siteIsExpected": true,
+      "supabasePublishableKeyPresent": true,
+      "invitationAllowlistEntryCount": 0,
+      "signInMailUsesInvitationAllowlist": false,
+      "signInSource": "src/server/emailLink.ts requestSignInLink; shouldCreateUser false; ownOrigin()/api/auth/confirm",
+      "sends": 0
+    },
+    {
+      "app": "pp",
+      "port": 3101,
+      "appEnv": "local-proof",
+      "siteIsExpected": true,
+      "supabasePublishableKeyPresent": true,
+      "invitationAllowlistEntryCount": 0,
+      "signInMailUsesInvitationAllowlist": false,
+      "signInSource": "src/server/emailLink.ts requestSignInLink; shouldCreateUser false; ownOrigin()/api/auth/confirm",
+      "sends": 0
+    }
+  ],
+  "authPublicSettings": {
+    "status": 200,
+    "emailEnabled": true,
+    "mailerAutoconfirm": true,
+    "disableSignup": false
+  },
+  "mailSent": 0,
+  "conclusion": "App runtime has SCRATCH mail-request configuration; normal sign-in mail is not blocked by invitation allowlist. Public Auth settings do not prove upstream SMTP delivery or redirect allowlist. Actual delivery remains the Director human check. No SMTP management credentials or dashboard access used."
+}

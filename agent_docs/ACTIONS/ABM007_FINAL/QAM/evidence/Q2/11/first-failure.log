@@ -1,0 +1,36 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+locator.hover: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('button,input,a').nth(5)[22m
+[2m    - locator resolved to <button disabled type="submit" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-base font-normal transition-colors disabled:pointer-events-none disabled:cursor-not-allowed disabled:border-transparent disabled:bg-disabled disabled:text-disabled-foreground border border-input bg-card text-heading hover:bg-accent hover:text-accent-foreground h-11 px-4 py-2.5 w-full">Email me a sign-in link</button>[22m
+[2m  - attempting hover action[22m
+[2m    2 × waiting for element to be visible and stable[22m
+[2m      - element is visible and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <form novalidate="" class="space-y-3" data-testid="link-request-form">…</form> intercepts pointer events[22m
+[2m    - retrying hover action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible and stable[22m
+[2m      - element is visible and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <form novalidate="" class="space-y-3" data-testid="link-request-form">…</form> intercepts pointer events[22m
+[2m    - retrying hover action[22m
+[2m      - waiting 100ms[22m
+[2m    56 × waiting for element to be visible and stable[22m
+[2m       - element is visible and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <form novalidate="" class="space-y-3" data-testid="link-request-form">…</form> intercepts pointer events[22m
+[2m     - retrying hover action[22m
+[2m       - waiting 500ms[22m
+
+    at /home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/AUTOMATION/Q2/public-interaction-styles.mjs:3:732 {
+  name: 'TimeoutError'
+}
+
+Node.js v22.17.0

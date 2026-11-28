@@ -1,0 +1,515 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 539045a..6c0754b 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -3,6 +3,14 @@
+ > Documentation/playbook change log per CLAUDE.md Changelog Protocol.
+ > `[CC]` = Claude Code · `[TS]` = Tony Stark manual edits.
+ 
++## 2026-11-26 07:42 UTC — [CC] Claude Code
++- **Updated:** `agent_docs/SESSIONS/session_2026-11-26.md` (RWO-01 add-on A1 entry).
++- **Reason:** RWO-01 add-on A1; the report and evidence are in the Portal module folder (`EVIDENCE/RWO01/`).
++
++## 2026-11-26 07:15 UTC — [CC] Claude Code
++- **New:** `agent_docs/SESSIONS/session_2026-11-26.md` (RWO-01 repair entry).
++- **Reason:** ABM007_FINAL repair work order RWO-01, items R-01 to R-07; the report and evidence are in the Portal module folder (`EVIDENCE/RWO01/`).
++
+ ## 2026-11-24 09:55 UTC — [CC] Claude Code
+ - **Updated:** `agent_docs/SESSIONS/session_2026-11-24.md` (final handoff preparation entry).
+ - **Reason:** ABM007_FINAL final documentation-only handoff preparation; no OwedBook product change.
+diff --git a/src/__tests__/abm007/help-page.test.tsx b/src/__tests__/abm007/help-page.test.tsx
+index 161c482..002d949 100644
+--- a/src/__tests__/abm007/help-page.test.tsx
++++ b/src/__tests__/abm007/help-page.test.tsx
+@@ -23,7 +23,8 @@ describe("ABM007_FINAL Help page", () => {
+   it("has thirteen sections, each reachable from the contents list by its anchor", () => {
+     const { container } = render(<HelpPage />);
+     const toc = screen.getByRole("navigation", { name: "On this page" });
+-    const links = within(toc).getAllByRole("link");
++    // The contents list holds the thirteen section links; "Go to the Top" (RWO-01 R-02) sits after it.
++    const links = within(toc).getAllByRole("link").filter((a) => a.getAttribute("href") !== "#top");
+     expect(links).toHaveLength(13);
+     for (const a of links) {
+       const id = a.getAttribute("href")!.replace(/^#/, "");
+@@ -79,4 +80,34 @@ describe("ABM007_FINAL Help page", () => {
+     expect(list.className).toMatch(/\bmd:hidden\b/);
+     expect(table.className).not.toMatch(/min-w-/);
+   });
++
++  // RWO-01 R-02 (ruling AM-19): a small link at the bottom of the contents menu returns the reader to the top.
++  it("ends the contents menu with a Go to the Top link that follows the link rules", () => {
++    render(<HelpPage />);
++    const toc = screen.getByRole("navigation", { name: "On this page" });
++    const links = within(toc).getAllByRole("link");
++    const top = links[links.length - 1];
++    expect(top).toHaveTextContent("Go to the Top");
++    expect(top).toHaveAttribute("href", "#top");
++    expect(top).toHaveClass("pb-link", "min-h-11");
++  });
++
++  // RWO-01 A1-2 (ruling AM-22): below lg the contents menu is above the text, so the same link also ends the text;
++  // from lg it is hidden there because the menu link stays in view.
++  it("repeats Go to the Top at the end of the Help text for narrow screens only", () => {
++    const { container } = render(<HelpPage />);
++    const end = screen.getByTestId("help-go-to-top-end");
++    expect(end).toHaveTextContent("Go to the Top");
++    expect(end).toHaveAttribute("href", "#top");
++    expect(end).toHaveClass("pb-link", "min-h-11");
++    expect(end.parentElement).toHaveClass("lg:hidden");
++    const sections = container.querySelectorAll("section");
++    expect(sections[sections.length - 1].compareDocumentPosition(end) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
++  });
++
++  // RWO-01 A1-3: a contents menu taller than the window scrolls inside itself, so its last link can be reached.
++  it("lets the contents menu scroll inside itself from lg", () => {
++    render(<HelpPage />);
++    expect(screen.getByRole("navigation", { name: "On this page" })).toHaveClass("lg:sticky", "lg:max-h-[calc(100vh-2rem)]", "lg:overflow-y-auto");
++  });
+ });
+diff --git a/src/__tests__/auth/LoginForm.hydration.test.tsx b/src/__tests__/auth/LoginForm.hydration.test.tsx
+index c38fc09..39a3481 100644
+--- a/src/__tests__/auth/LoginForm.hydration.test.tsx
++++ b/src/__tests__/auth/LoginForm.hydration.test.tsx
+@@ -44,3 +44,23 @@ it("credentials typed while hydrating survive and are the ones submitted", async
+   expect(screen.queryByText("Email is required")).toBeNull();
+   act(() => root.unmount());
+ });
++
++// RWO-01 R-03 (finding F04): while Login is in progress the button says so in words, carries aria-busy, keeps the
++// spinner and still blocks a second press.
++it("while signing in, Login shows progress words, is aria-busy, keeps the spinner and cannot be pressed again", async () => {
++  let finish: (v: string) => void = () => {};
++  mockLogin.mockImplementationOnce(() => new Promise<string>((r) => { finish = r; }));
++  const { container, root } = await serverRenderThenHydrate({ email: "owner@x.invalid", password: "typed-early" });
++  const resting = screen.getByRole("button", { name: "Login" });
++  expect(resting.getAttribute("aria-busy")).toBe("false");
++  await act(async () => { fireEvent.submit(container.querySelector("form") as HTMLFormElement); });
++  const busy = await screen.findByRole("button", { name: "Logging in…" }) as HTMLButtonElement;
++  expect(busy.getAttribute("aria-busy")).toBe("true");
++  expect(busy.disabled).toBe(true);
++  expect(container.querySelector("form [role=status]")).not.toBeNull();
++  // The guard is the disabled button (unchanged by R-03): a second press reaches nothing.
++  await act(async () => { fireEvent.click(busy); });
++  expect(mockLogin).toHaveBeenCalledTimes(1);
++  await act(async () => { finish("/admin-portal"); });
++  act(() => root.unmount());
++});
+diff --git a/src/__tests__/auth/PasswordToggle.test.tsx b/src/__tests__/auth/PasswordToggle.test.tsx
+index 5ff3c00..7303019 100644
+--- a/src/__tests__/auth/PasswordToggle.test.tsx
++++ b/src/__tests__/auth/PasswordToggle.test.tsx
+@@ -100,6 +100,13 @@ describe("PasswordInput (U-3)", () => {
+     raf.mockRestore();
+   });
+ 
++  // RWO-01 R-06 (a): the show-or-hide button is a 44 by 44 target with the 8px corner, inside the room the field reserves.
++  it("the show-or-hide button is 44 by 44 with the button corner", () => {
++    render(<PasswordInput aria-label="pw" />);
++    expect(screen.getByRole("button", { name: "Show password" })).toHaveClass("h-11", "w-11", "rounded-md", "right-0");
++    expect(screen.getByLabelText("pw")).toHaveClass("pr-12");
++  });
++
+   it("keeps a caller's padding but reserves room for the button", () => {
+     render(<PasswordInput aria-label="pw" className="p-6 bg-muted" />);
+     expect(screen.getByLabelText("pw")).toHaveClass("p-6", "pr-12", "bg-muted");
+diff --git a/src/__tests__/global/MobileNav.test.tsx b/src/__tests__/global/MobileNav.test.tsx
+index affefe8..1762cb7 100644
+--- a/src/__tests__/global/MobileNav.test.tsx
++++ b/src/__tests__/global/MobileNav.test.tsx
+@@ -15,6 +15,7 @@ jest.mock("@/store/useAuthStore", () => ({
+ 
+ import MobileNav from "@/components/global/MobileNav";
+ import { AppRole } from "@/utils/app-role";
++import { peerOrigin } from "@/lib/appIdentity";
+ 
+ const tony = { email: "tony@stark.com" } as SupabaseUser;
+ 
+@@ -25,11 +26,14 @@ describe("MobileNav (props-resolved identity)", () => {
+   const openMenu = () =>
+     fireEvent.click(screen.getByRole("button", { name: "Open menu" }));
+ 
+-  it("logged-out visitor gets Log in / Start free trial, no account rows", () => {
++  it("logged-out visitor gets Log in / Subscribe Now, no account rows", () => {
+     render(<MobileNav user={null} role={null} />);
+     openMenu();
+     expect(screen.getByText("Log in")).toBeInTheDocument();
+-    expect(screen.getByText("Start free trial")).toBeInTheDocument();
++    // RWO-01 A1-1 (ruling AM-22): the green menu button opens the configured Account & Billing home page.
++    expect(screen.getByText("Subscribe Now")).toHaveAttribute("href", `${peerOrigin()}/`);
++    expect(screen.getByText("Subscribe Now")).toHaveClass("bg-primary", "hover:bg-primary-hover", "min-h-11");
++    expect(screen.queryByText(/free trial/i)).not.toBeInTheDocument();
+     expect(screen.queryByText("Log out")).not.toBeInTheDocument();
+     expect(screen.queryByText("Admin portal")).not.toBeInTheDocument();
+   });
+diff --git a/src/__tests__/global/Navbar.mobile.test.tsx b/src/__tests__/global/Navbar.mobile.test.tsx
+index 4ba4483..54fd16f 100644
+--- a/src/__tests__/global/Navbar.mobile.test.tsx
++++ b/src/__tests__/global/Navbar.mobile.test.tsx
+@@ -124,4 +124,21 @@ describe("Navbar mobile menu", () => {
+       expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+     });
+   });
++
++  // RWO-01 R-06 (c): the round account button in the signed-in header is at least 44 by 44 and stays round.
++  it("the header account button is a 44px round target", () => {
++    render(<Navbar user={tony} role={AppRole.ADMIN} />);
++    const trigger = screen.getByRole("button", { name: "Account menu" });
++    expect(trigger).toHaveClass("rounded-full");
++    expect(trigger.firstElementChild).toHaveClass("h-11", "w-11", "rounded-full");
++  });
++
++  // RWO-01 R-07: below lg the brand can shrink so the Menu button stays on a 320px screen; from lg up it cannot.
++  it("the brand gives way before the Menu button on a narrow screen", () => {
++    render(<Navbar user={tony} role={AppRole.ADMIN} />);
++    const brand = screen.getAllByRole("link").find((a) => /Home$/.test(a.getAttribute("aria-label") ?? ""))!;
++    expect(brand).toHaveClass("min-w-0", "lg:shrink-0");
++    expect(brand).not.toHaveClass("shrink-0");
++    expect(screen.getByRole("button", { name: "Open menu" })).toHaveClass("shrink-0");
++  });
+ });
+diff --git a/src/__tests__/global/UserMenu.test.tsx b/src/__tests__/global/UserMenu.test.tsx
+index 1a726ac..f7528d6 100644
+--- a/src/__tests__/global/UserMenu.test.tsx
++++ b/src/__tests__/global/UserMenu.test.tsx
+@@ -14,6 +14,7 @@ jest.mock("@/store/useAuthStore", () => ({
+ 
+ import UserMenu from "@/components/global/UserMenu";
+ import { AppRole } from "@/utils/app-role";
++import { peerOrigin } from "@/lib/appIdentity";
+ 
+ const tony = { email: "tony@stark.com" } as SupabaseUser;
+ 
+@@ -21,10 +22,13 @@ const tony = { email: "tony@stark.com" } as SupabaseUser;
+ // logged-out links) must be correct on the FIRST synchronous render, with no
+ // client fetch, no loading null-window, and no persisted-store role read.
+ describe("UserMenu (props-resolved identity)", () => {
+-  it("logged-out visitor gets Log in / Start free trial, no avatar", () => {
++  it("logged-out visitor gets Log in / Subscribe Now, no avatar", () => {
+     render(<UserMenu user={null} role={null} />);
+     expect(screen.getByText("Log in")).toHaveAttribute("href", "/auth");
+-    expect(screen.getByText("Start free trial")).toBeInTheDocument();
++    // RWO-01 A1-1 (ruling AM-22): the green header button opens the configured Account & Billing home page.
++    expect(screen.getByText("Subscribe Now")).toHaveAttribute("href", `${peerOrigin()}/`);
++    expect(screen.getByText("Subscribe Now")).toHaveClass("bg-primary", "hover:bg-primary-hover", "min-h-11");
++    expect(screen.queryByText(/free trial/i)).not.toBeInTheDocument();
+     expect(screen.queryByText("T")).not.toBeInTheDocument();
+   });
+ 
+@@ -32,7 +36,7 @@ describe("UserMenu (props-resolved identity)", () => {
+     render(<UserMenu user={tony} role={AppRole.MEMBER} />);
+     expect(screen.getByText("T")).toBeInTheDocument(); // avatar fallback
+     expect(screen.queryByText("Log in")).not.toBeInTheDocument();
+-    expect(screen.queryByText("Start free trial")).not.toBeInTheDocument();
++    expect(screen.queryByText("Subscribe Now")).not.toBeInTheDocument();
+   });
+ 
+   // jsdom has no real pointer events; Radix triggers open reliably on keyboard.
+@@ -55,4 +59,12 @@ describe("UserMenu (props-resolved identity)", () => {
+     expect(screen.getByText("OwedBook")).toHaveAttribute("href", "/owedbook");
+     expect(screen.queryByText("Admin portal")).not.toBeInTheDocument();
+   });
++
++  // RWO-01 R-06 (c): the round account button is at least 44 by 44 and stays round.
++  it("the account button is a 44px round target", () => {
++    render(<UserMenu user={tony} role={AppRole.MEMBER} />);
++    const trigger = screen.getByRole("button", { name: "T" });
++    expect(trigger).toHaveClass("rounded-full");
++    expect(trigger.firstElementChild).toHaveClass("h-11", "w-11", "rounded-full");
++  });
+ });
+diff --git a/src/__tests__/member/ProfileForm.test.tsx b/src/__tests__/member/ProfileForm.test.tsx
+index c3b0dbd..3096a3f 100644
+--- a/src/__tests__/member/ProfileForm.test.tsx
++++ b/src/__tests__/member/ProfileForm.test.tsx
+@@ -201,4 +201,21 @@ describe('Member ProfileForm', () => {
+     expect(screen.getByText('Admin')).toBeInTheDocument();
+     expect(screen.queryByText('Member')).not.toBeInTheDocument();
+   });
++
++  // RWO-01 R-04 (finding F18): read-only fields use the disabled tokens and are never half-faded.
++  it('shows name and email as inactive fields with readable text', () => {
++    render(<ProfileForm user={mockUser} role={AppRole.MEMBER} />);
++    const email = screen.getByDisplayValue('member@example.com');
++    expect(email).toBeDisabled();
++    expect(email).toHaveClass('disabled:bg-disabled', 'disabled:text-disabled-foreground', 'disabled:opacity-100', 'cursor-not-allowed');
++    expect(email.className).not.toMatch(/opacity-50/);
++  });
++
++  // RWO-01 R-05 (finding F21): the support link under the email field follows the link rule (dark green, underlined).
++  it('shows the support address as a link in the link style', () => {
++    render(<ProfileForm user={mockUser} role={AppRole.MEMBER} />);
++    const link = screen.getByRole('link', { name: 'support@pharmacybooks.com' });
++    expect(link).toHaveAttribute('href', 'mailto:support@pharmacybooks.com');
++    expect(link).toHaveClass('pb-link');
++  });
+ });
+diff --git a/src/__tests__/owedbook/OwedBookScreen.test.tsx b/src/__tests__/owedbook/OwedBookScreen.test.tsx
+index 32a9eb0..c9b6d37 100644
+--- a/src/__tests__/owedbook/OwedBookScreen.test.tsx
++++ b/src/__tests__/owedbook/OwedBookScreen.test.tsx
+@@ -44,6 +44,8 @@ describe("OwedBookScreen", () => {
+     expect(screen.getByRole("tab", { name: "Updated Payments" })).toBeInTheDocument();
+     expect(screen.getByRole("tab", { name: "Federal Dollars" })).toBeInTheDocument();
+     expect(screen.getByRole("tab", { name: "Summary" })).toBeInTheDocument();
++    // RWO-01 R-06 (b): each data-view tab is at least 44px high with the 8px corner; its text style is unchanged.
++    for (const tab of screen.getAllByRole("tab")) expect(tab).toHaveClass("min-h-11", "rounded-md", "text-sm", "font-medium");
+ 
+     // After the async load resolves with zero rows, EmptyState shows.
+     expect(await screen.findByText("No results")).toBeInTheDocument();
+diff --git a/src/app/(public)/HomePageContent.tsx b/src/app/(public)/HomePageContent.tsx
+index 0d45b4f..5b5a77d 100644
+--- a/src/app/(public)/HomePageContent.tsx
++++ b/src/app/(public)/HomePageContent.tsx
+@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
+ import { Badge } from "@/components/ui/badge";
+ import { ArrowRight, Shield } from "lucide-react";
+ import { BRAND } from "@/components/global/brand";
++import { peerOrigin } from "@/lib/appIdentity";
+ 
+ const HomePageContent = () => {
+   return (
+@@ -30,16 +31,23 @@ const HomePageContent = () => {
+           they&apos;re owed.
+         </p>
+ 
+-        {/* CTAs */}
+-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 mb-12">
++        {/* CTAs (RWO-01 R-01, ruling AM-18). Two equal buttons: each takes half the row where both fit and the full
++            row where they do not, so they are the same size side by side or stacked. "Subscribe Now" keeps the green
++            look and opens the Account & Billing home page at its configured address (appIdentity, never typed in).
++            "Log in" is navy by the Director's exception for this one button only; navy is not a Button variant. */}
++        <div className="mb-12 flex max-w-[34rem] flex-wrap gap-4" data-testid="home-cta">
++          <Button asChild size="lg" className="flex-1 basis-64">
++            <a href={`${peerOrigin()}/`} data-testid="home-subscribe">
++              Subscribe Now
++              <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
++            </a>
++          </Button>
+           <Button
+             asChild
+             size="lg"
++            className="flex-1 basis-64 bg-brand-navy text-primary-foreground hover:bg-brand-navy-deep"
+           >
+-            <Link href="/auth">
+-              Start free trial
+-              <ArrowRight className="ml-2 h-4 w-4" />
+-            </Link>
++            <Link href="/auth" data-testid="home-log-in">Log in</Link>
+           </Button>
+         </div>
+ 
+diff --git a/src/app/profile/ProfileForm.tsx b/src/app/profile/ProfileForm.tsx
+index b6239be..6192eb1 100644
+--- a/src/app/profile/ProfileForm.tsx
++++ b/src/app/profile/ProfileForm.tsx
+@@ -149,7 +149,7 @@ const ProfileForm = ({ user, role, accountRole = null }: Props) => {
+             />
+             <p className="text-sm text-muted-foreground mt-1">
+               Name and email changes aren&apos;t self-service yet. To change them, contact support at{" "}
+-              <a className="font-semibold underline underline-offset-2" href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
++              <a className="pb-link font-semibold" href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
+             </p>
+           </div>
+         </CardContent>
+diff --git a/src/components/admin-portal/ScreenHeader.tsx b/src/components/admin-portal/ScreenHeader.tsx
+index 2492a57..4e33da1 100644
+--- a/src/components/admin-portal/ScreenHeader.tsx
++++ b/src/components/admin-portal/ScreenHeader.tsx
+@@ -34,7 +34,8 @@ const ScreenHeader = ({
+             <p className="mt-1 text-[15px] text-muted-foreground">{subtitle}</p>
+           )}
+         </div>
+-        {action && <div className="shrink-0">{action}</div>}
++        {/* RWO-01 R-07: never wider than the row, so the Add control and its helper text stay on screen at 320 px. */}
++        {action && <div className="max-w-full shrink-0">{action}</div>}
+       </div>
+     </header>
+   );
+diff --git a/src/components/auth/LoginForm.tsx b/src/components/auth/LoginForm.tsx
+index b75ddd1..1b8f27b 100644
+--- a/src/components/auth/LoginForm.tsx
++++ b/src/components/auth/LoginForm.tsx
+@@ -149,9 +149,10 @@ const LoginForm = () => {
+                   the typed credentials in the address bar). */}
+               <Button
+                 disabled={isLoading || !hydrated}
++                aria-busy={isLoading}
+                 className="w-full"
+               >
+-                Login
++                {isLoading ? "Logging in…" : "Login"}
+               </Button>
+             </form>
+           </Form>
+diff --git a/src/components/global/MobileNav.tsx b/src/components/global/MobileNav.tsx
+index 5f31b0c..bdc22a4 100644
+--- a/src/components/global/MobileNav.tsx
++++ b/src/components/global/MobileNav.tsx
+@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
+ import { User as SupabaseUser } from "@supabase/auth-js";
+ import { useAuthStore } from "@/store/useAuthStore";
+ import { AppRole } from "@/utils/app-role";
++import { peerOrigin } from "@/lib/appIdentity";
+ 
+ // Identity is SERVER-RESOLVED and passed as props (Navbar Law — KIP-2 kill):
+ // no client auth fetch, no persisted-store role read, no loading window. The
+@@ -95,13 +96,14 @@ const MobileNav = ({ user, role }: MobileNavProps) => {
+                 >
+                   Log in
+                 </Link>
+-                <Link
+-                  href="/auth"
++                {/* RWO-01 A1-1 (ruling AM-22): opens the Account & Billing home page at its configured address. */}
++                <a
++                  href={`${peerOrigin()}/`}
+                   onClick={close}
+                   className="mt-1 flex min-h-11 items-center justify-center rounded-md bg-primary px-3 py-2.5 text-[15px] text-primary-foreground hover:bg-primary-hover"
+                 >
+-                  Start free trial
+-                </Link>
++                  Subscribe Now
++                </a>
+               </>
+             )}
+           </nav>
+diff --git a/src/components/global/Navbar.tsx b/src/components/global/Navbar.tsx
+index d99f294..dad9331 100644
+--- a/src/components/global/Navbar.tsx
++++ b/src/components/global/Navbar.tsx
+@@ -150,7 +150,9 @@ const Navbar = ({ user, role }: NavbarProps) => {
+           href="/"
+           aria-label={`${BRAND.name} — Home`}
+           onClick={closeMenu}
+-          className="shrink-0 rounded-md"
++          // RWO-01 R-07: below lg the brand may shrink (its wordmark truncates, as in Account & Billing), so the Menu
++          // button stays on screen at 320 px. From lg up it keeps its full width, as before.
++          className="min-w-0 rounded-md lg:shrink-0"
+         >
+           <BrandMark />
+         </Link>
+@@ -177,7 +179,7 @@ const Navbar = ({ user, role }: NavbarProps) => {
+           </span>
+           <DropdownMenu>
+             <DropdownMenuTrigger className="cursor-pointer rounded-full" aria-label="Account menu">
+-              <Avatar>
++              <Avatar className="h-11 w-11">
+                 <AvatarFallback>{avatarLetter(name, user.email)}</AvatarFallback>
+               </Avatar>
+             </DropdownMenuTrigger>
+diff --git a/src/components/global/UserMenu.tsx b/src/components/global/UserMenu.tsx
+index 026227d..27de9a2 100644
+--- a/src/components/global/UserMenu.tsx
++++ b/src/components/global/UserMenu.tsx
+@@ -15,6 +15,7 @@ import {
+ import Logout from "../auth/Logout";
+ import { User as SupabaseUser } from "@supabase/auth-js";
+ import { AppRole } from "@/utils/app-role";
++import { peerOrigin } from "@/lib/appIdentity";
+ 
+ // Identity is SERVER-RESOLVED and passed as props (Navbar Law — KIP-2 kill):
+ // no client auth fetch, no persisted-store role read, no loading window.
+@@ -42,7 +43,7 @@ const UserMenu = ({ user, role }: UserMenuProps) => {
+       <div className="flex items-center px-3">
+         <DropdownMenu>
+           <DropdownMenuTrigger className="cursor-pointer rounded-full">
+-            <Avatar>
++            <Avatar className="h-11 w-11">
+               <AvatarFallback>{user.email?.[0]?.toUpperCase() ?? "U"}</AvatarFallback>
+             </Avatar>
+           </DropdownMenuTrigger>
+@@ -74,12 +75,14 @@ const UserMenu = ({ user, role }: UserMenuProps) => {
+       >
+         Log in
+       </Link>
+-      <Link
+-        href="/auth"
++      {/* RWO-01 A1-1 (ruling AM-22): opens the Account & Billing home page at its configured address, like the
++          opening page's own Subscribe Now button. */}
++      <a
++        href={`${peerOrigin()}/`}
+         className="inline-flex min-h-11 items-center rounded-md bg-primary px-5 text-primary-foreground hover:bg-primary-hover"
+       >
+-        Start free trial
+-      </Link>
++        Subscribe Now
++      </a>
+     </>
+   );
+ };
+diff --git a/src/components/help/HelpPage.tsx b/src/components/help/HelpPage.tsx
+index 442d380..450bae2 100644
+--- a/src/components/help/HelpPage.tsx
++++ b/src/components/help/HelpPage.tsx
+@@ -91,7 +91,8 @@ export default function HelpPage() {
+       </header>
+ 
+       <div className="mt-6 grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)] lg:items-start">
+-        <nav aria-label="On this page" className="pb-card p-4 lg:sticky lg:top-4">
++        {/* RWO-01 A1-3: when the menu is taller than the window it scrolls inside itself, so its last link can be reached. */}
++        <nav aria-label="On this page" className="pb-card p-4 lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
+           <h2 className="pb-eyebrow text-muted-foreground">On this page</h2>
+           <ol className="mt-2 space-y-0.5 text-[15px]">
+             {SECTIONS.map(([id, title], i) => (
+@@ -102,6 +103,11 @@ export default function HelpPage() {
+               </li>
+             ))}
+           </ol>
++          {/* RWO-01 R-02 (ruling AM-19): back to the top of the page. "#top" is the document top in every browser, so
++              it works with mouse and keyboard and without script. */}
++          <p className="mt-2 border-t border-border px-2 pt-1 text-[13px]">
++            <a href="#top" className="pb-link inline-flex min-h-11 items-center" data-testid="help-go-to-top">Go to the Top</a>
++          </p>
+         </nav>
+ 
+         <div className="grid gap-4">
+@@ -314,6 +320,11 @@ export default function HelpPage() {
+               pharmacy name and what you were trying to do. Please do not include patient information in your message.
+             </p>
+           </Section>
++          {/* RWO-01 A1-2 (ruling AM-22): below lg the contents menu sits above the text, so the same link also ends
++              the text. From lg the menu link stays in view and this one is not shown. */}
++          <p className="px-2 text-[13px] lg:hidden">
++            <a href="#top" className="pb-link inline-flex min-h-11 items-center" data-testid="help-go-to-top-end">Go to the Top</a>
++          </p>
+         </div>
+       </div>
+     </div>
+diff --git a/src/components/owedbook/OwedBookScreen.tsx b/src/components/owedbook/OwedBookScreen.tsx
+index df41caf..3062c7f 100644
+--- a/src/components/owedbook/OwedBookScreen.tsx
++++ b/src/components/owedbook/OwedBookScreen.tsx
+@@ -209,7 +209,7 @@ const OwedBookScreen = () => {
+       >
+         <TabsList className="max-w-full justify-start overflow-x-auto">
+           {TABS.map((t) => (
+-            <TabsTrigger key={t.value} value={t.value} className="shrink-0">
++            <TabsTrigger key={t.value} value={t.value} className="min-h-11 shrink-0 rounded-md">
+               {t.label}
+             </TabsTrigger>
+           ))}
+diff --git a/src/components/ui/input.tsx b/src/components/ui/input.tsx
+index b2f332d..a31821a 100644
+--- a/src/components/ui/input.tsx
++++ b/src/components/ui/input.tsx
+@@ -10,7 +10,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
+       <input
+         type={type}
+         className={cn(
+-          "flex min-h-[42px] w-full rounded-md border border-input bg-card px-2.5 py-2 text-[15px] text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
++          "flex min-h-[42px] w-full rounded-md border border-input bg-card px-2.5 py-2 text-[15px] text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-disabled disabled:text-disabled-foreground disabled:opacity-100",
+           className
+         )}
+         ref={ref}
+diff --git a/src/components/ui/password-input.tsx b/src/components/ui/password-input.tsx
+index fdc6830..f527233 100644
+--- a/src/components/ui/password-input.tsx
++++ b/src/components/ui/password-input.tsx
+@@ -68,7 +68,7 @@ const PasswordInput = React.forwardRef<HTMLInputElement, Omit<InputProps, "type"
+         aria-pressed={visible}
+         aria-controls={props.id}
+         disabled={props.disabled}
+-        className="absolute inset-y-0 right-2 my-auto flex h-8 w-8 items-center justify-center rounded-sm text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
++        className="absolute inset-y-0 right-0 my-auto flex h-11 w-11 items-center justify-center rounded-md text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+       >
+         {visible ? <EyeOff className="h-4 w-4" aria-hidden="true" /> : <Eye className="h-4 w-4" aria-hidden="true" />}
+       </button>

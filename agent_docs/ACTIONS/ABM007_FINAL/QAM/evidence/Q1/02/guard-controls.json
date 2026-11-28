@@ -1,0 +1,25 @@
+{
+  "negative": [
+    {
+      "name": "DEV",
+      "rejected": true
+    },
+    {
+      "name": "unknown",
+      "rejected": true
+    },
+    {
+      "name": "SQL mismatch",
+      "rejected": true
+    },
+    {
+      "name": "outside allowlist",
+      "rejected": true
+    },
+    {
+      "name": "outside root",
+      "rejected": true
+    }
+  ],
+  "positive": true
+}

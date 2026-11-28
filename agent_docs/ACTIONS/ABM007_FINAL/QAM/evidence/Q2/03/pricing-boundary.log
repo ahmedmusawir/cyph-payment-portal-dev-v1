@@ -1,0 +1,73 @@
+  console.error
+    [portal:store quote] invalid_input (unsupported field)
+
+      57 | export function logServer(scope: string, e: unknown): void {
+      58 |   const code = e instanceof PortalError ? `${e.code}${e.detail ? ` (${e.detail})` : ''}` : (e as { code?: string })?.code || (e as Error)?.name || 'error';
+    > 59 |   console.error(`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`);
+         |           ^
+      60 | }
+      61 |
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/quote/route.ts:27:28)
+      at ../../../home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/AUTOMATION/Q2/pricing-boundary.test.ts:11:151
+
+  console.error
+    [portal:store quote] invalid_input (unsupported field)
+
+      57 | export function logServer(scope: string, e: unknown): void {
+      58 |   const code = e instanceof PortalError ? `${e.code}${e.detail ? ` (${e.detail})` : ''}` : (e as { code?: string })?.code || (e as Error)?.name || 'error';
+    > 59 |   console.error(`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`);
+         |           ^
+      60 | }
+      61 |
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/quote/route.ts:27:28)
+      at ../../../home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/AUTOMATION/Q2/pricing-boundary.test.ts:11:151
+
+  console.error
+    [portal:store quote] invalid_input (unsupported field)
+
+      57 | export function logServer(scope: string, e: unknown): void {
+      58 |   const code = e instanceof PortalError ? `${e.code}${e.detail ? ` (${e.detail})` : ''}` : (e as { code?: string })?.code || (e as Error)?.name || 'error';
+    > 59 |   console.error(`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`);
+         |           ^
+      60 | }
+      61 |
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/quote/route.ts:27:28)
+      at ../../../home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/AUTOMATION/Q2/pricing-boundary.test.ts:11:151
+
+  console.error
+    [portal:store quote] invalid_input (unsupported field)
+
+      57 | export function logServer(scope: string, e: unknown): void {
+      58 |   const code = e instanceof PortalError ? `${e.code}${e.detail ? ` (${e.detail})` : ''}` : (e as { code?: string })?.code || (e as Error)?.name || 'error';
+    > 59 |   console.error(`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`);
+         |           ^
+      60 | }
+      61 |
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/quote/route.ts:27:28)
+      at ../../../home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/AUTOMATION/Q2/pricing-boundary.test.ts:11:151
+
+PASS ../../../home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/AUTOMATION/Q2/pricing-boundary.test.ts
+  ✓ passing control: valid shape reaches the mocked quote boundary (8 ms)
+  ✓ tampered browser amount rejected before quote/provider (25 ms)
+  ✓ tampered browser amountCents rejected before quote/provider (2 ms)
+  ✓ tampered browser price rejected before quote/provider (2 ms)
+  ✓ tampered browser totalCents rejected before quote/provider (3 ms)
+  ✓ actual server pricing remains 9900 then 4900 per additional pharmacy (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.924 s
+Ran all test suites.

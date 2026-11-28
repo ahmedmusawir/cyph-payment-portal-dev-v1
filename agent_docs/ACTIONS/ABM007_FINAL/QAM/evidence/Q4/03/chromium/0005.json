@@ -1,0 +1,347 @@
+{
+  "app": "ob",
+  "role": "PUBLIC",
+  "scripts": true,
+  "width": 375,
+  "requested": "/auth/signed-out",
+  "baseline": "evidence/Q2/02/0005.json",
+  "baselineLanded": "/auth/signed-out",
+  "seen": {
+    "status": 200,
+    "path": "/auth/signed-out"
+  },
+  "dom": {
+    "path": "/auth/signed-out",
+    "tokens": {
+      "brand-navy": "#154474",
+      "brand-green": "#32a38d",
+      "brand-green-dark": "#288472",
+      "brand-ice": "#eaf3fa",
+      "brand-charcoal": "#393b38",
+      "brand-gray": "#515151"
+    },
+    "overflow": 0,
+    "width": 375,
+    "bodyBackground": "rgb(234, 243, 250)",
+    "darkClass": false,
+    "colorScheme": "light",
+    "themeControls": 0,
+    "text": [
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(1)>span:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(1)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>div:nth-child(2)>h1:nth-child(2)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 28,
+        "weight": 700,
+        "contrast": 1,
+        "threshold": 3,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(3)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>a:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(40, 132, 114)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 4.532,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      }
+    ],
+    "controls": [],
+    "links": [
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>a:nth-child(1)",
+        "href": "/auth",
+        "color": "#ffffff",
+        "background": [
+          40,
+          132,
+          114
+        ],
+        "underline": "none"
+      }
+    ],
+    "pills": [],
+    "anchors": [],
+    "oldNames": {
+      "text": false,
+      "title": false,
+      "alt": false,
+      "accessible": false
+    },
+    "tables": [],
+    "noStores": false,
+    "ownerBillingMessage": false,
+    "backToStores": false,
+    "errors": false
+  },
+  "candidate": {
+    "controls": [
+      {
+        "tag": "A",
+        "role": null,
+        "kind": null,
+        "test": null,
+        "radius": "8px",
+        "height": 44,
+        "width": 281,
+        "left": 47,
+        "right": 328,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(40, 132, 114)",
+        "border": "0px",
+        "outline": "rgb(255, 255, 255) none 3px",
+        "ariaBusy": null,
+        "disabled": false,
+        "anchor": true,
+        "variant": "rgb(40, 132, 114)",
+        "linkRecipe": null,
+        "underline": "none",
+        "bodyLink": false
+      }
+    ],
+    "cards": [
+      {
+        "surface": "shell",
+        "radius": "16px",
+        "border": "0px",
+        "shadow": "rgba(12, 38, 65, 0.18) 0px 18px 48px 0px, rgba(255, 255, 255, 0.6) 0px 1px 0px 0px inset"
+      },
+      {
+        "surface": "masthead",
+        "radius": "16px",
+        "border": "0px",
+        "shadow": "rgba(12, 38, 65, 0.18) 0px 12px 28px 0px"
+      },
+      {
+        "surface": "card",
+        "radius": "14px",
+        "border": "1px",
+        "shadow": "rgba(12, 38, 65, 0.05) 0px 8px 20px 0px"
+      }
+    ],
+    "nontext": []
+  },
+  "visual": {
+    "badCorner": [],
+    "badSurface": [],
+    "badTarget": [],
+    "navControl": null,
+    "badLinks": [],
+    "buttonNavy": []
+  },
+  "pixel": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 46,
+          "top": 51,
+          "right": 189.53125,
+          "bottom": 66
+        },
+        "unsupported": [],
+        "worstRatio": 8.9716,
+        "samples": 250,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 240.546875,
+          "top": 51,
+          "right": 329,
+          "bottom": 66
+        },
+        "unsupported": [],
+        "worstRatio": 10.1123,
+        "samples": 165,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 2,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 28,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 153,
+          "top": 80,
+          "right": 237.96875,
+          "bottom": 114
+        },
+        "unsupported": [],
+        "worstRatio": 10.9334,
+        "samples": 538,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 3,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 28,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 153,
+          "top": 110.796875,
+          "right": 291.609375,
+          "bottom": 144.796875
+        },
+        "unsupported": [],
+        "worstRatio": 11.2505,
+        "samples": 1005,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 4,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 46,
+          "top": 155.59375,
+          "right": 273,
+          "bottom": 175.59375
+        },
+        "unsupported": [],
+        "worstRatio": 9.5441,
+        "samples": 287,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 5,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 46,
+          "top": 179.59375,
+          "right": 311,
+          "bottom": 199.59375
+        },
+        "unsupported": [],
+        "worstRatio": 9.7933,
+        "samples": 299,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 6,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 46,
+          "top": 203.59375,
+          "right": 116,
+          "bottom": 223.59375
+        },
+        "unsupported": [],
+        "worstRatio": 9.8879,
+        "samples": 87,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 7,
+        "tag": "A",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 164.5,
+          "top": 294.59375,
+          "right": 210.5,
+          "bottom": 314.59375
+        },
+        "unsupported": [],
+        "worstRatio": 4.528,
+        "samples": 51,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 8,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "time": "2026-11-26T09:02:25.841Z"
+}

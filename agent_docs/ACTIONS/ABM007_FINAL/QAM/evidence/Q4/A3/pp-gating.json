@@ -1,0 +1,73 @@
+{
+  "app": "pp",
+  "manifest": "bb27c2ee7515d9c2a2d9df5dd537fdd0d02313816b2e5c0798bf6ca38402ee98",
+  "label": "q4-a3-pp-bb27c2ee7515d9c2",
+  "rows": [
+    {
+      "name": "install",
+      "cmd": [
+        "npm",
+        "ci",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "cwd": "/tmp/abm007-final-cody-q4-a3/pp",
+      "exit": 0,
+      "started": "2026-11-27T07:44:19.818Z",
+      "finished": "2026-11-27T07:44:43.044Z",
+      "evidence": "agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/A3/pp-install.log"
+    },
+    {
+      "name": "unit",
+      "cmd": [
+        "npm",
+        "test",
+        "--",
+        "--runInBand"
+      ],
+      "cwd": "/tmp/abm007-final-cody-q4-a3/pp",
+      "exit": 0,
+      "started": "2026-11-27T07:44:43.045Z",
+      "finished": "2026-11-27T07:45:00.279Z",
+      "evidence": "agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/A3/pp-unit.log"
+    },
+    {
+      "name": "typecheck",
+      "cmd": [
+        "node_modules/.bin/tsc",
+        "--noEmit"
+      ],
+      "cwd": "/tmp/abm007-final-cody-q4-a3/pp",
+      "exit": 0,
+      "started": "2026-11-27T07:45:00.280Z",
+      "finished": "2026-11-27T07:45:12.511Z",
+      "evidence": "agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/A3/pp-typecheck.log"
+    },
+    {
+      "name": "lint",
+      "cmd": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "cwd": "/tmp/abm007-final-cody-q4-a3/pp",
+      "exit": 0,
+      "started": "2026-11-27T07:45:12.511Z",
+      "finished": "2026-11-27T07:45:26.770Z",
+      "evidence": "agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/A3/pp-lint.log"
+    },
+    {
+      "name": "build",
+      "cmd": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/tmp/abm007-final-cody-q4-a3/pp",
+      "exit": 0,
+      "started": "2026-11-27T07:45:26.770Z",
+      "finished": "2026-11-27T07:45:59.094Z",
+      "evidence": "agent_docs/ACTIONS/ABM007_FINAL/QAM/evidence/Q4/A3/pp-build.log"
+    }
+  ]
+}

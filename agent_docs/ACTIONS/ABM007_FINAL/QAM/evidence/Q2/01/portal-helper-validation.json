@@ -1,0 +1,69 @@
+{
+  "report": [
+    {
+      "role": "ENGINEERING_OWNER_A",
+      "app": "pp",
+      "browser": "chromium",
+      "version": "147.0.7727.15",
+      "time": "2026-11-24T12:34:37.876Z",
+      "attempts": 1,
+      "method": "password (normal sign-in form)",
+      "path": "/dashboard",
+      "signin": "PASS",
+      "signout_status": 200
+    },
+    {
+      "role": "ENGINEERING_OWNER_B",
+      "app": "pp",
+      "browser": "chromium",
+      "version": "147.0.7727.15",
+      "time": "2026-11-24T12:34:46.151Z",
+      "attempts": 1,
+      "method": "password (normal sign-in form)",
+      "path": "/dashboard",
+      "signin": "PASS",
+      "signout_status": 200
+    },
+    {
+      "role": "ENGINEERING_ADMIN",
+      "app": "pp",
+      "browser": "chromium",
+      "version": "147.0.7727.15",
+      "time": "2026-11-24T12:34:48.386Z",
+      "attempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "path": "/dashboard",
+      "signin": "PASS",
+      "signout_status": 200
+    },
+    {
+      "role": "ENGINEERING_MEMBER",
+      "app": "pp",
+      "browser": "chromium",
+      "version": "147.0.7727.15",
+      "time": "2026-11-24T12:34:53.282Z",
+      "attempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "path": "/dashboard",
+      "signin": "PASS",
+      "signout_status": 200
+    },
+    {
+      "role": "ENGINEERING_INVITEE",
+      "app": "pp",
+      "browser": "chromium",
+      "version": "147.0.7727.15",
+      "time": "2026-11-24T12:34:55.702Z",
+      "attempts": 1,
+      "method": "provider token via the app confirm page (AM-15)",
+      "path": "/dashboard",
+      "signin": "PASS",
+      "signout_status": 200
+    }
+  ],
+  "counters": {
+    "password_sign_ins": 2,
+    "token_sign_ins": 3,
+    "generate_link_calls": 3
+  }
+}

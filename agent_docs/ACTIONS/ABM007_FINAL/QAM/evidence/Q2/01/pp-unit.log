@@ -1,0 +1,796 @@
+
+> cyph-stripe-subscription-portal-v1@0.1.0 test
+> jest --runInBand
+
+PASS src/__tests__/portal-registration.test.ts
+PASS src/__tests__/apbm007a-webhook-recovery.test.ts
+  ● Console
+
+    console.error
+      [portal:event recovery] audit_failed
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at recoverEvent (src/server/webhook.ts:282:14)
+      at Object.<anonymous> (src/__tests__/apbm007a-webhook-recovery.test.ts:336:5)
+
+PASS src/__tests__/apbm007a-checkout-recovery.test.ts
+PASS src/__tests__/apbm007a-auth.test.ts
+  ● Console
+
+    console.error
+      [email-link:pp:confirm] refused: origin, context or CSRF check failed
+
+    [0m [90m 19 |[39m [36mconst[39m to [33m=[39m (path[33m:[39m string)[33m:[39m [33mNextResponse[39m [33m=>[39m [33mNextResponse[39m[33m.[39mredirect([32m`${ownOrigin()}${path}`[39m[33m,[39m { status[33m:[39m [35m303[39m[33m,[39m headers[33m:[39m [33mHEADERS[39m })[33m;[39m
+     [90m 20 |[39m [36mconst[39m equal [33m=[39m (a[33m:[39m string[33m,[39m b[33m:[39m string)[33m:[39m boolean [33m=>[39m a[33m.[39mlength [33m===[39m b[33m.[39mlength [33m&&[39m timingSafeEqual([33mBuffer[39m[33m.[39m[36mfrom[39m(a)[33m,[39m [33mBuffer[39m[33m.[39m[36mfrom[39m(b))[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[email-link:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// never the token or the address[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 22 |[39m
+     [90m 23 |[39m [36mfunction[39m parse(raw[33m:[39m string [33m|[39m undefined)[33m:[39m [33mContext[39m [33m|[39m [36mnull[39m {
+     [90m 24 |[39m   [36mtry[39m {[0m
+
+      at log (src/server/emailLink.ts:21:61)
+      at confirmSubmit (src/server/emailLink.ts:54:5)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:111:7)
+
+    console.error
+      [email-link:pp:confirm] refused: origin, context or CSRF check failed
+
+    [0m [90m 19 |[39m [36mconst[39m to [33m=[39m (path[33m:[39m string)[33m:[39m [33mNextResponse[39m [33m=>[39m [33mNextResponse[39m[33m.[39mredirect([32m`${ownOrigin()}${path}`[39m[33m,[39m { status[33m:[39m [35m303[39m[33m,[39m headers[33m:[39m [33mHEADERS[39m })[33m;[39m
+     [90m 20 |[39m [36mconst[39m equal [33m=[39m (a[33m:[39m string[33m,[39m b[33m:[39m string)[33m:[39m boolean [33m=>[39m a[33m.[39mlength [33m===[39m b[33m.[39mlength [33m&&[39m timingSafeEqual([33mBuffer[39m[33m.[39m[36mfrom[39m(a)[33m,[39m [33mBuffer[39m[33m.[39m[36mfrom[39m(b))[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[email-link:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// never the token or the address[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 22 |[39m
+     [90m 23 |[39m [36mfunction[39m parse(raw[33m:[39m string [33m|[39m undefined)[33m:[39m [33mContext[39m [33m|[39m [36mnull[39m {
+     [90m 24 |[39m   [36mtry[39m {[0m
+
+      at log (src/server/emailLink.ts:21:61)
+      at confirmSubmit (src/server/emailLink.ts:54:5)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:112:7)
+
+    console.error
+      [email-link:pp:confirm] refused: origin, context or CSRF check failed
+
+    [0m [90m 19 |[39m [36mconst[39m to [33m=[39m (path[33m:[39m string)[33m:[39m [33mNextResponse[39m [33m=>[39m [33mNextResponse[39m[33m.[39mredirect([32m`${ownOrigin()}${path}`[39m[33m,[39m { status[33m:[39m [35m303[39m[33m,[39m headers[33m:[39m [33mHEADERS[39m })[33m;[39m
+     [90m 20 |[39m [36mconst[39m equal [33m=[39m (a[33m:[39m string[33m,[39m b[33m:[39m string)[33m:[39m boolean [33m=>[39m a[33m.[39mlength [33m===[39m b[33m.[39mlength [33m&&[39m timingSafeEqual([33mBuffer[39m[33m.[39m[36mfrom[39m(a)[33m,[39m [33mBuffer[39m[33m.[39m[36mfrom[39m(b))[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[email-link:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// never the token or the address[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 22 |[39m
+     [90m 23 |[39m [36mfunction[39m parse(raw[33m:[39m string [33m|[39m undefined)[33m:[39m [33mContext[39m [33m|[39m [36mnull[39m {
+     [90m 24 |[39m   [36mtry[39m {[0m
+
+      at log (src/server/emailLink.ts:21:61)
+      at confirmSubmit (src/server/emailLink.ts:54:5)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:113:7)
+
+    console.error
+      [email-link:pp:confirm] refused: origin, context or CSRF check failed
+
+    [0m [90m 19 |[39m [36mconst[39m to [33m=[39m (path[33m:[39m string)[33m:[39m [33mNextResponse[39m [33m=>[39m [33mNextResponse[39m[33m.[39mredirect([32m`${ownOrigin()}${path}`[39m[33m,[39m { status[33m:[39m [35m303[39m[33m,[39m headers[33m:[39m [33mHEADERS[39m })[33m;[39m
+     [90m 20 |[39m [36mconst[39m equal [33m=[39m (a[33m:[39m string[33m,[39m b[33m:[39m string)[33m:[39m boolean [33m=>[39m a[33m.[39mlength [33m===[39m b[33m.[39mlength [33m&&[39m timingSafeEqual([33mBuffer[39m[33m.[39m[36mfrom[39m(a)[33m,[39m [33mBuffer[39m[33m.[39m[36mfrom[39m(b))[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[email-link:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// never the token or the address[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 22 |[39m
+     [90m 23 |[39m [36mfunction[39m parse(raw[33m:[39m string [33m|[39m undefined)[33m:[39m [33mContext[39m [33m|[39m [36mnull[39m {
+     [90m 24 |[39m   [36mtry[39m {[0m
+
+      at log (src/server/emailLink.ts:21:61)
+      at confirmSubmit (src/server/emailLink.ts:54:5)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:114:7)
+
+    console.error
+      [email-link:pp:confirm] verification refused otp_expired
+
+    [0m [90m 19 |[39m [36mconst[39m to [33m=[39m (path[33m:[39m string)[33m:[39m [33mNextResponse[39m [33m=>[39m [33mNextResponse[39m[33m.[39mredirect([32m`${ownOrigin()}${path}`[39m[33m,[39m { status[33m:[39m [35m303[39m[33m,[39m headers[33m:[39m [33mHEADERS[39m })[33m;[39m
+     [90m 20 |[39m [36mconst[39m equal [33m=[39m (a[33m:[39m string[33m,[39m b[33m:[39m string)[33m:[39m boolean [33m=>[39m a[33m.[39mlength [33m===[39m b[33m.[39mlength [33m&&[39m timingSafeEqual([33mBuffer[39m[33m.[39m[36mfrom[39m(a)[33m,[39m [33mBuffer[39m[33m.[39m[36mfrom[39m(b))[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[email-link:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// never the token or the address[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 22 |[39m
+     [90m 23 |[39m [36mfunction[39m parse(raw[33m:[39m string [33m|[39m undefined)[33m:[39m [33mContext[39m [33m|[39m [36mnull[39m {
+     [90m 24 |[39m   [36mtry[39m {[0m
+
+      at log (src/server/emailLink.ts:21:61)
+      at confirmSubmit (src/server/emailLink.ts:59:30)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:132:15)
+
+    console.error
+      [email-link:pp:link] provider answered 429
+
+    [0m [90m 19 |[39m [36mconst[39m to [33m=[39m (path[33m:[39m string)[33m:[39m [33mNextResponse[39m [33m=>[39m [33mNextResponse[39m[33m.[39mredirect([32m`${ownOrigin()}${path}`[39m[33m,[39m { status[33m:[39m [35m303[39m[33m,[39m headers[33m:[39m [33mHEADERS[39m })[33m;[39m
+     [90m 20 |[39m [36mconst[39m equal [33m=[39m (a[33m:[39m string[33m,[39m b[33m:[39m string)[33m:[39m boolean [33m=>[39m a[33m.[39mlength [33m===[39m b[33m.[39mlength [33m&&[39m timingSafeEqual([33mBuffer[39m[33m.[39m[36mfrom[39m(a)[33m,[39m [33mBuffer[39m[33m.[39m[36mfrom[39m(b))[33m;[39m
+    [31m[1m>[22m[39m[90m 21 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[email-link:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// never the token or the address[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 22 |[39m
+     [90m 23 |[39m [36mfunction[39m parse(raw[33m:[39m string [33m|[39m undefined)[33m:[39m [33mContext[39m [33m|[39m [36mnull[39m {
+     [90m 24 |[39m   [36mtry[39m {[0m
+
+      at log (src/server/emailLink.ts:21:61)
+      at requestSignInLink (src/server/emailLink.ts:86:19)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:147:19)
+
+    console.error
+      [handoff:pp:callback] state does not match this browser
+
+    [0m [90m 22 |[39m }
+     [90m 23 |[39m [36mconst[39m page [33m=[39m (path[33m:[39m string[33m,[39m status[33m:[39m [35m302[39m [33m|[39m [35m303[39m [33m=[39m [35m303[39m)[33m:[39m [33mNextResponse[39m [33m=>[39m redirect([32m`${ownOrigin()}${path}`[39m[33m,[39m status)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[handoff:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// no query values, ever[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 25 |[39m
+     [90m 26 |[39m [36minterface[39m [33mTransient[39m { s[33m:[39m string[33m;[39m v[33m:[39m string[33m;[39m a[33m:[39m [35m1[39m [33m|[39m [35m2[39m[33m;[39m r[33m:[39m string[33m;[39m restart[33m?[39m[33m:[39m boolean }
+     [90m 27 |[39m [36mconst[39m cookieBase [33m=[39m { httpOnly[33m:[39m [36mtrue[39m[33m,[39m sameSite[33m:[39m [32m'lax'[39m [36mas[39m [36mconst[39m[33m,[39m secure[33m:[39m isSecureOrigin()[33m,[39m path[33m:[39m [32m'/api/handoff'[39m[33m,[39m maxAge[33m:[39m [35m300[39m }[33m;[39m[0m
+
+      at log (src/server/handoff.ts:24:61)
+      at recovery (src/server/handoff.ts:117:56)
+      at callbackHandoff (src/server/handoff.ts:122:60)
+      at cb (src/__tests__/apbm007a-auth.test.ts:230:107)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:242:19)
+
+    console.error
+      [handoff:pp:callback] state does not match this browser
+
+    [0m [90m 22 |[39m }
+     [90m 23 |[39m [36mconst[39m page [33m=[39m (path[33m:[39m string[33m,[39m status[33m:[39m [35m302[39m [33m|[39m [35m303[39m [33m=[39m [35m303[39m)[33m:[39m [33mNextResponse[39m [33m=>[39m redirect([32m`${ownOrigin()}${path}`[39m[33m,[39m status)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[handoff:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// no query values, ever[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 25 |[39m
+     [90m 26 |[39m [36minterface[39m [33mTransient[39m { s[33m:[39m string[33m;[39m v[33m:[39m string[33m;[39m a[33m:[39m [35m1[39m [33m|[39m [35m2[39m[33m;[39m r[33m:[39m string[33m;[39m restart[33m?[39m[33m:[39m boolean }
+     [90m 27 |[39m [36mconst[39m cookieBase [33m=[39m { httpOnly[33m:[39m [36mtrue[39m[33m,[39m sameSite[33m:[39m [32m'lax'[39m [36mas[39m [36mconst[39m[33m,[39m secure[33m:[39m isSecureOrigin()[33m,[39m path[33m:[39m [32m'/api/handoff'[39m[33m,[39m maxAge[33m:[39m [35m300[39m }[33m;[39m[0m
+
+      at log (src/server/handoff.ts:24:61)
+      at recovery (src/server/handoff.ts:117:56)
+      at callbackHandoff (src/server/handoff.ts:122:60)
+      at cb (src/__tests__/apbm007a-auth.test.ts:230:107)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:243:19)
+
+    console.error
+      [handoff:pp:callback] claim rejected
+
+    [0m [90m 22 |[39m }
+     [90m 23 |[39m [36mconst[39m page [33m=[39m (path[33m:[39m string[33m,[39m status[33m:[39m [35m302[39m [33m|[39m [35m303[39m [33m=[39m [35m303[39m)[33m:[39m [33mNextResponse[39m [33m=>[39m redirect([32m`${ownOrigin()}${path}`[39m[33m,[39m status)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[handoff:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// no query values, ever[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 25 |[39m
+     [90m 26 |[39m [36minterface[39m [33mTransient[39m { s[33m:[39m string[33m;[39m v[33m:[39m string[33m;[39m a[33m:[39m [35m1[39m [33m|[39m [35m2[39m[33m;[39m r[33m:[39m string[33m;[39m restart[33m?[39m[33m:[39m boolean }
+     [90m 27 |[39m [36mconst[39m cookieBase [33m=[39m { httpOnly[33m:[39m [36mtrue[39m[33m,[39m sameSite[33m:[39m [32m'lax'[39m [36mas[39m [36mconst[39m[33m,[39m secure[33m:[39m isSecureOrigin()[33m,[39m path[33m:[39m [32m'/api/handoff'[39m[33m,[39m maxAge[33m:[39m [35m300[39m }[33m;[39m[0m
+
+      at log (src/server/handoff.ts:24:61)
+      at recovery (src/server/handoff.ts:117:56)
+      at callbackHandoff (src/server/handoff.ts:133:70)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:248:13)
+
+    console.error
+      [handoff:pp:callback] completion revoked; the minted session was signed out
+
+    [0m [90m 22 |[39m }
+     [90m 23 |[39m [36mconst[39m page [33m=[39m (path[33m:[39m string[33m,[39m status[33m:[39m [35m302[39m [33m|[39m [35m303[39m [33m=[39m [35m303[39m)[33m:[39m [33mNextResponse[39m [33m=>[39m redirect([32m`${ownOrigin()}${path}`[39m[33m,[39m status)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[handoff:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// no query values, ever[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 25 |[39m
+     [90m 26 |[39m [36minterface[39m [33mTransient[39m { s[33m:[39m string[33m;[39m v[33m:[39m string[33m;[39m a[33m:[39m [35m1[39m [33m|[39m [35m2[39m[33m;[39m r[33m:[39m string[33m;[39m restart[33m?[39m[33m:[39m boolean }
+     [90m 27 |[39m [36mconst[39m cookieBase [33m=[39m { httpOnly[33m:[39m [36mtrue[39m[33m,[39m sameSite[33m:[39m [32m'lax'[39m [36mas[39m [36mconst[39m[33m,[39m secure[33m:[39m isSecureOrigin()[33m,[39m path[33m:[39m [32m'/api/handoff'[39m[33m,[39m maxAge[33m:[39m [35m300[39m }[33m;[39m[0m
+
+      at log (src/server/handoff.ts:24:61)
+      at callbackHandoff (src/server/handoff.ts:167:5)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:268:15)
+
+    console.error
+      [handoff:pp:callback] minted session is for another subject
+
+    [0m [90m 22 |[39m }
+     [90m 23 |[39m [36mconst[39m page [33m=[39m (path[33m:[39m string[33m,[39m status[33m:[39m [35m302[39m [33m|[39m [35m303[39m [33m=[39m [35m303[39m)[33m:[39m [33mNextResponse[39m [33m=>[39m redirect([32m`${ownOrigin()}${path}`[39m[33m,[39m status)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[handoff:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// no query values, ever[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 25 |[39m
+     [90m 26 |[39m [36minterface[39m [33mTransient[39m { s[33m:[39m string[33m;[39m v[33m:[39m string[33m;[39m a[33m:[39m [35m1[39m [33m|[39m [35m2[39m[33m;[39m r[33m:[39m string[33m;[39m restart[33m?[39m[33m:[39m boolean }
+     [90m 27 |[39m [36mconst[39m cookieBase [33m=[39m { httpOnly[33m:[39m [36mtrue[39m[33m,[39m sameSite[33m:[39m [32m'lax'[39m [36mas[39m [36mconst[39m[33m,[39m secure[33m:[39m isSecureOrigin()[33m,[39m path[33m:[39m [32m'/api/handoff'[39m[33m,[39m maxAge[33m:[39m [35m300[39m }[33m;[39m[0m
+
+      at log (src/server/handoff.ts:24:61)
+      at recovery (src/server/handoff.ts:117:56)
+      at callbackHandoff (src/server/handoff.ts:161:79)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:277:15)
+
+    console.error
+      [handoff:pp:callback] mint failed on the final attempt
+
+    [0m [90m 22 |[39m }
+     [90m 23 |[39m [36mconst[39m page [33m=[39m (path[33m:[39m string[33m,[39m status[33m:[39m [35m302[39m [33m|[39m [35m303[39m [33m=[39m [35m303[39m)[33m:[39m [33mNextResponse[39m [33m=>[39m redirect([32m`${ownOrigin()}${path}`[39m[33m,[39m status)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[handoff:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// no query values, ever[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 25 |[39m
+     [90m 26 |[39m [36minterface[39m [33mTransient[39m { s[33m:[39m string[33m;[39m v[33m:[39m string[33m;[39m a[33m:[39m [35m1[39m [33m|[39m [35m2[39m[33m;[39m r[33m:[39m string[33m;[39m restart[33m?[39m[33m:[39m boolean }
+     [90m 27 |[39m [36mconst[39m cookieBase [33m=[39m { httpOnly[33m:[39m [36mtrue[39m[33m,[39m sameSite[33m:[39m [32m'lax'[39m [36mas[39m [36mconst[39m[33m,[39m secure[33m:[39m isSecureOrigin()[33m,[39m path[33m:[39m [32m'/api/handoff'[39m[33m,[39m maxAge[33m:[39m [35m300[39m }[33m;[39m[0m
+
+      at log (src/server/handoff.ts:24:61)
+      at recovery (src/server/handoff.ts:117:56)
+      at callbackHandoff (src/server/handoff.ts:159:12)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:285:5)
+
+    console.error
+      [handoff:pp:callback] mint failed on attempt 1; restarting once
+
+    [0m [90m 22 |[39m }
+     [90m 23 |[39m [36mconst[39m page [33m=[39m (path[33m:[39m string[33m,[39m status[33m:[39m [35m302[39m [33m|[39m [35m303[39m [33m=[39m [35m303[39m)[33m:[39m [33mNextResponse[39m [33m=>[39m redirect([32m`${ownOrigin()}${path}`[39m[33m,[39m status)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[handoff:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// no query values, ever[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 25 |[39m
+     [90m 26 |[39m [36minterface[39m [33mTransient[39m { s[33m:[39m string[33m;[39m v[33m:[39m string[33m;[39m a[33m:[39m [35m1[39m [33m|[39m [35m2[39m[33m;[39m r[33m:[39m string[33m;[39m restart[33m?[39m[33m:[39m boolean }
+     [90m 27 |[39m [36mconst[39m cookieBase [33m=[39m { httpOnly[33m:[39m [36mtrue[39m[33m,[39m sameSite[33m:[39m [32m'lax'[39m [36mas[39m [36mconst[39m[33m,[39m secure[33m:[39m isSecureOrigin()[33m,[39m path[33m:[39m [32m'/api/handoff'[39m[33m,[39m maxAge[33m:[39m [35m300[39m }[33m;[39m[0m
+
+      at log (src/server/handoff.ts:24:61)
+      at callbackHandoff (src/server/handoff.ts:156:7)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:294:19)
+
+    console.error
+      [handoff:pp:callback] mint failed on the final attempt
+
+    [0m [90m 22 |[39m }
+     [90m 23 |[39m [36mconst[39m page [33m=[39m (path[33m:[39m string[33m,[39m status[33m:[39m [35m302[39m [33m|[39m [35m303[39m [33m=[39m [35m303[39m)[33m:[39m [33mNextResponse[39m [33m=>[39m redirect([32m`${ownOrigin()}${path}`[39m[33m,[39m status)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[handoff:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// no query values, ever[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 25 |[39m
+     [90m 26 |[39m [36minterface[39m [33mTransient[39m { s[33m:[39m string[33m;[39m v[33m:[39m string[33m;[39m a[33m:[39m [35m1[39m [33m|[39m [35m2[39m[33m;[39m r[33m:[39m string[33m;[39m restart[33m?[39m[33m:[39m boolean }
+     [90m 27 |[39m [36mconst[39m cookieBase [33m=[39m { httpOnly[33m:[39m [36mtrue[39m[33m,[39m sameSite[33m:[39m [32m'lax'[39m [36mas[39m [36mconst[39m[33m,[39m secure[33m:[39m isSecureOrigin()[33m,[39m path[33m:[39m [32m'/api/handoff'[39m[33m,[39m maxAge[33m:[39m [35m300[39m }[33m;[39m[0m
+
+      at log (src/server/handoff.ts:24:61)
+      at recovery (src/server/handoff.ts:117:56)
+      at callbackHandoff (src/server/handoff.ts:159:12)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:302:20)
+
+    console.error
+      [handoff:pp:callback] same_user without a session here
+
+    [0m [90m 22 |[39m }
+     [90m 23 |[39m [36mconst[39m page [33m=[39m (path[33m:[39m string[33m,[39m status[33m:[39m [35m302[39m [33m|[39m [35m303[39m [33m=[39m [35m303[39m)[33m:[39m [33mNextResponse[39m [33m=>[39m redirect([32m`${ownOrigin()}${path}`[39m[33m,[39m status)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[handoff:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// no query values, ever[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 25 |[39m
+     [90m 26 |[39m [36minterface[39m [33mTransient[39m { s[33m:[39m string[33m;[39m v[33m:[39m string[33m;[39m a[33m:[39m [35m1[39m [33m|[39m [35m2[39m[33m;[39m r[33m:[39m string[33m;[39m restart[33m?[39m[33m:[39m boolean }
+     [90m 27 |[39m [36mconst[39m cookieBase [33m=[39m { httpOnly[33m:[39m [36mtrue[39m[33m,[39m sameSite[33m:[39m [32m'lax'[39m [36mas[39m [36mconst[39m[33m,[39m secure[33m:[39m isSecureOrigin()[33m,[39m path[33m:[39m [32m'/api/handoff'[39m[33m,[39m maxAge[33m:[39m [35m300[39m }[33m;[39m[0m
+
+      at log (src/server/handoff.ts:24:61)
+      at recovery (src/server/handoff.ts:117:56)
+      at callbackHandoff (src/server/handoff.ts:126:73)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:322:13)
+
+    console.error
+      [handoff:pp:logout] provider sign-out failed
+
+    [0m [90m 22 |[39m }
+     [90m 23 |[39m [36mconst[39m page [33m=[39m (path[33m:[39m string[33m,[39m status[33m:[39m [35m302[39m [33m|[39m [35m303[39m [33m=[39m [35m303[39m)[33m:[39m [33mNextResponse[39m [33m=>[39m redirect([32m`${ownOrigin()}${path}`[39m[33m,[39m status)[33m;[39m
+    [31m[1m>[22m[39m[90m 24 |[39m [36mconst[39m log [33m=[39m (step[33m:[39m string[33m,[39m reason[33m:[39m string)[33m:[39m [36mvoid[39m [33m=>[39m console[33m.[39merror([32m`[handoff:${APP_ID}:${step}] ${reason}`[39m)[33m;[39m   [90m// no query values, ever[39m
+     [90m    |[39m                                                             [31m[1m^[22m[39m
+     [90m 25 |[39m
+     [90m 26 |[39m [36minterface[39m [33mTransient[39m { s[33m:[39m string[33m;[39m v[33m:[39m string[33m;[39m a[33m:[39m [35m1[39m [33m|[39m [35m2[39m[33m;[39m r[33m:[39m string[33m;[39m restart[33m?[39m[33m:[39m boolean }
+     [90m 27 |[39m [36mconst[39m cookieBase [33m=[39m { httpOnly[33m:[39m [36mtrue[39m[33m,[39m sameSite[33m:[39m [32m'lax'[39m [36mas[39m [36mconst[39m[33m,[39m secure[33m:[39m isSecureOrigin()[33m,[39m path[33m:[39m [32m'/api/handoff'[39m[33m,[39m maxAge[33m:[39m [35m300[39m }[33m;[39m[0m
+
+      at log (src/server/handoff.ts:24:61)
+      at logoutEverywhere (src/server/handoff.ts:227:5)
+      at Object.<anonymous> (src/__tests__/apbm007a-auth.test.ts:353:12)
+
+PASS src/__tests__/apbm007a-server.test.ts
+  ● Console
+
+    console.error
+      [portal:webhook checkout.session.completed] provider_unavailable
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at handleStripeWebhook (src/server/webhook.ts:78:14)
+      at Object.<anonymous> (src/__tests__/apbm007a-server.test.ts:165:13)
+
+PASS src/__tests__/apbm007a-provisioning-concurrency.test.ts
+  ● Console
+
+    console.error
+      [portal:advance] Error
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at advanceOperation (src/server/provisioning.ts:104:14)
+      at Object.<anonymous> (src/__tests__/apbm007a-provisioning-concurrency.test.ts:179:5)
+
+    console.error
+      [portal:advance] Error
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at advanceOperation (src/server/provisioning.ts:104:14)
+      at Object.<anonymous> (src/__tests__/apbm007a-provisioning-concurrency.test.ts:207:5)
+
+PASS src/__tests__/apbm007b-consent-deadline.test.ts
+PASS src/__tests__/portal-dashboard.test.tsx
+PASS src/__tests__/portal-account.test.ts
+PASS src/__tests__/portal-registration-journey.test.tsx
+PASS src/__tests__/portal-activation.test.tsx
+PASS src/__tests__/portal-review.test.tsx
+PASS src/__tests__/portal-owner.test.tsx
+PASS src/__tests__/manual-qa-add-store-authz.test.ts
+  ● Console
+
+    console.error
+      [portal:store quote] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/quote/route.ts:27:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store quote] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/quote/route.ts:27:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store confirm] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/confirm/route.ts:24:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store confirm] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/confirm/route.ts:24:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store status] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/status/route.ts:19:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store status] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/status/route.ts:19:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store abandon] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/abandon/route.ts:19:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store abandon] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/abandon/route.ts:19:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store operations] not_owner
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at GET (src/app/api/stores/operations/route.ts:16:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store operations] not_owner
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at GET (src/app/api/stores/operations/route.ts:16:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store removal] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/[id]/removal/route.ts:20:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store removal] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/[id]/removal/route.ts:20:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store removal undo] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/[id]/removal/undo/route.ts:20:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store removal undo] not_owner (overview denied)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/[id]/removal/undo/route.ts:20:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:91:15
+
+    console.error
+      [portal:store quote] sign_in_required
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/quote/route.ts:27:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:99:15
+
+    console.error
+      [portal:store confirm] sign_in_required
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/confirm/route.ts:24:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:99:15
+
+    console.error
+      [portal:store status] sign_in_required
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/status/route.ts:19:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:99:15
+
+    console.error
+      [portal:store abandon] sign_in_required
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/abandon/route.ts:19:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:99:15
+
+    console.error
+      [portal:store operations] sign_in_required
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at GET (src/app/api/stores/operations/route.ts:16:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:99:15
+
+    console.error
+      [portal:store removal] sign_in_required
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/[id]/removal/route.ts:20:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:99:15
+
+    console.error
+      [portal:store removal undo] sign_in_required
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/[id]/removal/undo/route.ts:20:28)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:99:15
+
+    console.error
+      [portal:store status] not_found (operation)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/status/route.ts:19:28)
+      at Object.<anonymous> (src/__tests__/manual-qa-add-store-authz.test.ts:109:22)
+
+    console.error
+      [portal:store abandon] not_found (operation)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/abandon/route.ts:19:28)
+      at Object.<anonymous> (src/__tests__/manual-qa-add-store-authz.test.ts:109:44)
+
+    console.error
+      [portal:store confirm] not_owner (not_owner)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/confirm/route.ts:24:28)
+      at Object.<anonymous> (src/__tests__/manual-qa-add-store-authz.test.ts:119:15)
+
+    console.error
+      [portal:store confirm] not_owner (operation account)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at fail (src/server/http.ts:13:12)
+      at POST (src/app/api/stores/add/confirm/route.ts:24:28)
+      at Object.<anonymous> (src/__tests__/manual-qa-add-store-authz.test.ts:127:15)
+
+    console.error
+      [portal:owner access] provider_unavailable (overview 08006)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at ownerAccess (src/server/billing.ts:54:14)
+      at Object.<anonymous> (src/__tests__/manual-qa-add-store-authz.test.ts:150:12)
+
+    console.error
+      [portal:owner access] provider_unavailable (overview 08006)
+
+    [0m [90m 57 |[39m [36mexport[39m [36mfunction[39m logServer(scope[33m:[39m string[33m,[39m e[33m:[39m unknown)[33m:[39m [36mvoid[39m {
+     [90m 58 |[39m   [36mconst[39m code [33m=[39m e [36minstanceof[39m [33mPortalError[39m [33m?[39m [32m`${e.code}${e.detail ? ` (${e.detail})` : ''}`[39m [33m:[39m (e [36mas[39m { code[33m?[39m[33m:[39m string })[33m?[39m[33m.[39mcode [33m||[39m (e [36mas[39m [33mError[39m)[33m?[39m[33m.[39mname [33m||[39m [32m'error'[39m[33m;[39m
+    [31m[1m>[22m[39m[90m 59 |[39m   console[33m.[39merror([32m`[portal:${scope}] ${String(code).replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+/g, '<address>').slice(0, 200)}`[39m)[33m;[39m
+     [90m    |[39m           [31m[1m^[22m[39m
+     [90m 60 |[39m }
+     [90m 61 |[39m[0m
+
+      at logServer (src/server/errors.ts:59:11)
+      at ownerAccess (src/server/billing.ts:54:14)
+      at AddStorePage (/tmp/abm007-final-cody-q2/pp/src/app/(account)../../../stores/add/page.tsx:21:18)
+      at src/__tests__/manual-qa-add-store-authz.test.ts:154:17
+
+PASS src/__tests__/apbm007b-store.test.ts
+PASS src/__tests__/portal-boundaries.test.ts
+PASS src/__tests__/portal-api.test.ts
+PASS src/__tests__/manual-qa-portal-ui.test.tsx
+PASS src/__tests__/portal-access.test.tsx
+PASS src/__tests__/password-field.test.tsx
+PASS src/__tests__/apbm007b-hydration-forms.test.tsx
+PASS src/__tests__/apbm007a-mail-guard.test.ts
+  ● Console
+
+    console.error
+      Error: TRIPWIRE: a test tried to send mail
+          at /tmp/abm007-final-cody-q2/pp/src/__tests__/apbm007a-mail-guard.test.ts:13:39
+          at /tmp/abm007-final-cody-q2/pp/node_modules/jest-mock/build/index.js:305:39
+          at /tmp/abm007-final-cody-q2/pp/node_modules/jest-mock/build/index.js:312:13
+          at mockConstructor (/tmp/abm007-final-cody-q2/pp/node_modules/jest-mock/build/index.js:57:19)
+          at /tmp/abm007-final-cody-q2/pp/node_modules/@supabase/auth-js/src/lib/helpers.ts:109:23
+          at _handleRequest (/tmp/abm007-final-cody-q2/pp/node_modules/@supabase/auth-js/src/lib/fetch.ts:221:20)
+          at _request (/tmp/abm007-final-cody-q2/pp/node_modules/@supabase/auth-js/src/lib/fetch.ts:194:22)
+          at SupabaseAuthClient.signInWithOtp (/tmp/abm007-final-cody-q2/pp/node_modules/@supabase/auth-js/src/GoTrueClient.ts:2102:41)
+          at sendSignInLink (/tmp/abm007-final-cody-q2/pp/src/server/accessEmail.ts:7:32)
+          at ensureAccessNotification (/tmp/abm007-final-cody-q2/pp/src/server/provisioning.ts:232:36)
+          at Object.<anonymous> (/tmp/abm007-final-cody-q2/pp/src/__tests__/apbm007a-mail-guard.test.ts:44:20)
+
+    [0m [90m  5 |[39m [36mexport[39m [36masync[39m [36mfunction[39m sendSignInLink(email[33m:[39m string[33m,[39m redirectTo[33m:[39m string)[33m:[39m [33mPromise[39m[33m<[39m{ ok[33m:[39m boolean[33m;[39m code[33m?[39m[33m:[39m string }[33m>[39m {
+     [90m  6 |[39m   [36mconst[39m anon [33m=[39m createClient(process[33m.[39menv[33m.[39m[33mNEXT_PUBLIC_SUPABASE_URL[39m[33m![39m[33m,[39m process[33m.[39menv[33m.[39m[33mNEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY[39m[33m![39m[33m,[39m { auth[33m:[39m { autoRefreshToken[33m:[39m [36mfalse[39m[33m,[39m persistSession[33m:[39m [36mfalse[39m } })[33m;[39m
+    [31m[1m>[22m[39m[90m  7 |[39m   [36mconst[39m sent [33m=[39m [36mawait[39m anon[33m.[39mauth[33m.[39msignInWithOtp({ email[33m,[39m options[33m:[39m { shouldCreateUser[33m:[39m [36mfalse[39m[33m,[39m emailRedirectTo[33m:[39m redirectTo } })[33m;[39m
+     [90m    |[39m                [31m[1m^[22m[39m
+     [90m  8 |[39m   [36mif[39m ([33m![39msent[33m.[39merror) [36mreturn[39m { ok[33m:[39m [36mtrue[39m }[33m;[39m
+     [90m  9 |[39m   [90m// Keep Auth's error code with the status (for example 429:over_email_send_rate_limit), so a failure can be traced to[39m
+     [90m 10 |[39m   [90m// the limit that produced it. Codes are fixed identifiers, never an address or a token.[39m[0m
+
+      at _handleRequest (node_modules/@supabase/auth-js/src/lib/fetch.ts:225:13)
+      at _request (node_modules/@supabase/auth-js/src/lib/fetch.ts:194:16)
+      at SupabaseAuthClient.signInWithOtp (node_modules/@supabase/auth-js/src/GoTrueClient.ts:2102:27)
+      at sendSignInLink (src/server/accessEmail.ts:7:16)
+      at ensureAccessNotification (src/server/provisioning.ts:232:16)
+      at Object.<anonymous> (src/__tests__/apbm007a-mail-guard.test.ts:44:20)
+
+PASS src/__tests__/portal-shell.test.tsx
+PASS src/__tests__/abm007/token-pin.test.ts
+PASS src/__tests__/login-form.test.tsx
+PASS src/__tests__/alpha-origins.test.ts
+PASS src/__tests__/mail-recipient-policy.test.ts
+PASS src/__tests__/get-user-role.test.ts
+PASS src/__tests__/abm007/forced-light.test.tsx
+PASS src/__tests__/portal-stripe-route.test.tsx
+PASS src/__tests__/portal-components.test.tsx
+PASS src/__tests__/manual-qa-add-store-states.test.ts
+PASS src/__tests__/abm007/focus-surface.test.ts
+PASS src/__tests__/abm007/billing-notice-wording.test.ts
+PASS src/__tests__/portal-storage.test.ts
+PASS src/__tests__/proxy.test.ts
+
+Test Suites: 36 passed, 36 total
+Tests:       584 passed, 584 total
+Snapshots:   0 total
+Time:        23.354 s
+Ran all test suites.

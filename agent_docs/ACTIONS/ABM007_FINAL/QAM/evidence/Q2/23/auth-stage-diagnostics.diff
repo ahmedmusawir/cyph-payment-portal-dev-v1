@@ -1,0 +1,48 @@
+--- auth-before
++++ auth-with-safe-stage-diagnostics
+@@ -45,6 +45,10 @@
+ const fail = (m) => { throw new Error(`FAIL-CLOSED: ${m}`); };
+ const CAST_FILE = `${homedir()}/.apbm007b/engineering_cast.json`;
+ let cast = null, sc = null; const servedOk = {};
++export const sessionDiagnostics = [];
++const pathOnly = u => new URL(u).pathname;
++export const diagnosticControls = {queryRemoved:pathOnly('http://localhost:3101/auth/confirm?token_hash=QA_SYNTHETIC_SECRET')==='/auth/confirm',loginPathPreserved:pathOnly('http://localhost:3101/login')==='/login'};
++if(!Object.values(diagnosticControls).every(Boolean))throw Error('Safe diagnostic controls failed');
+ export const counters = { password_sign_ins: 0, token_sign_ins: 0, generate_link_calls: 0 };
+ 
+ function init() {
+@@ -100,26 +104,29 @@
+   const who = cast[role]; if (!who?.email) fail('role missing from the private cast');
+   await assertServedScratch(app);
+   const site = SITES[app];
++  const diagnostic={app,role,stage:'entry'}; sessionDiagnostics.push(diagnostic);
+   try {
+     if (who.password) {
+-      await page.goto(`${site}${LOGIN[app]}`, { waitUntil: 'networkidle' });
++      diagnostic.stage='password-form'; await page.goto(`${site}${LOGIN[app]}`, { waitUntil: 'networkidle' });
+       if (app === 'ob') { await page.fill('input[name="email"]', who.email); await page.fill('input[name="password"]', who.password); }
+       else { await page.fill('#email', who.email); await page.fill('#password', who.password); }
+       await Promise.all([page.waitForURL((u) => !u.pathname.startsWith(LOGIN[app]), { timeout: 30000 }),
+         page.locator('form:has(input[type="password"]) button:not([type="button"])').first().click()]);
+-      counters.password_sign_ins++; return 'password (normal sign-in form)';
++      diagnostic.stage='password-session-established'; counters.password_sign_ins++; return 'password (normal sign-in form)';
+     }
+     if (!(await userExistsOnScratch(who.email))) fail('fixture user not found on SCRATCH; refusing (generateLink would create one)');
+     const { createClient } = req('@supabase/supabase-js');
+     const admin = createClient(sc.url, sc.secretKey, { auth: { persistSession: false, autoRefreshToken: false } });
+     counters.generate_link_calls++;
+-    const { data, error } = await admin.auth.admin.generateLink({ type: 'magiclink', email: who.email });
++    diagnostic.stage='generate-fixture-token'; const { data, error } = await admin.auth.admin.generateLink({ type: 'magiclink', email: who.email });
+     if (error || !data?.properties?.hashed_token) fail(`provider token unavailable (${error?.status ?? 'no token'})`);
+     const q = new URLSearchParams({ token_hash: data.properties.hashed_token, type: 'email' }); if (next) q.set('next', next);
+-    await page.goto(`${site}/api/auth/confirm?${q}`, { waitUntil: 'networkidle' });
++    diagnostic.stage='confirmation-entry'; const entryResponse=await page.goto(`${site}/api/auth/confirm?${q}`, { waitUntil: 'networkidle' });
++    diagnostic.entryStatus=entryResponse?.status(); diagnostic.landedPath=pathOnly(page.url()); diagnostic.confirmControlCount=await page.locator('[data-testid="confirm-sign-in"]').count(); diagnostic.stage='confirmation-click';
+     await Promise.all([page.waitForURL((u) => !u.pathname.startsWith('/auth/confirm'), { timeout: 30000 }), page.click('[data-testid="confirm-sign-in"]')]);
+-    counters.token_sign_ins++; return 'provider token via the app confirm page (AM-15)';
++    diagnostic.stage='fixture-session-established'; counters.token_sign_ins++; return 'provider token via the app confirm page (AM-15)';
+   } catch (e) {
++    diagnostic.failed=true; try{diagnostic.finalPath=pathOnly(page.url());diagnostic.confirmControlCount=await page.locator('[data-testid="confirm-sign-in"]').count();}catch{}
+     throw new Error(String(e?.message ?? e).split('\n')[0].replace(/https?:\/\/\S+/g, '[url]').replace(/token_hash=\S+/g, 'token_hash=[redacted]').slice(0, 200));
+   }
+ }

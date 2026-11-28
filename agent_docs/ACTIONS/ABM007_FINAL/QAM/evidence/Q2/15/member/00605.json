@@ -1,0 +1,663 @@
+{
+  "engine": "firefox",
+  "version": "148.0.2",
+  "app": "ob",
+  "role": "ENGINEERING_MEMBER",
+  "method": "provider token via the app confirm page (AM-15)",
+  "width": 375,
+  "requested": "/owedbook",
+  "landed": "/owedbook",
+  "state": "navigation-menu-open",
+  "time": "2026-11-24T15:31:33.596Z",
+  "raster": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 16,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 91,
+          "top": 12,
+          "right": 220.81666564941406,
+          "bottom": 32
+        },
+        "unsupported": [],
+        "worstRatio": 9.8707,
+        "samples": 478,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 91,
+          "top": 34.5,
+          "right": 152.96665954589844,
+          "bottom": 49.5
+        },
+        "unsupported": [],
+        "worstRatio": 8.7348,
+        "samples": 107,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 2,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 305.75,
+          "top": 20.5,
+          "right": 346,
+          "bottom": 39.5
+        },
+        "unsupported": [],
+        "worstRatio": 7.4714,
+        "samples": 85,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 3,
+        "tag": "A",
+        "pseudo": null,
+        "size": 15,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 28,
+          "top": 84.5,
+          "right": 106.13333129882812,
+          "bottom": 103.5
+        },
+        "unsupported": [],
+        "worstRatio": 8.7849,
+        "samples": 218,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 4,
+        "tag": "A",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 28,
+          "top": 132.5,
+          "right": 73.55000305175781,
+          "bottom": 151.5
+        },
+        "unsupported": [],
+        "worstRatio": 11.3106,
+        "samples": 89,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 5,
+        "tag": "A",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 28,
+          "top": 180.5,
+          "right": 60.71665954589844,
+          "bottom": 199.5
+        },
+        "unsupported": [],
+        "worstRatio": 11.3106,
+        "samples": 74,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 6,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 14,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 28,
+          "top": 235.5,
+          "right": 116.69999694824219,
+          "bottom": 252.5
+        },
+        "unsupported": [],
+        "worstRatio": 11.3106,
+        "samples": 205,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 7,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 133.6999969482422,
+          "top": 236.5,
+          "right": 183.4166717529297,
+          "bottom": 251.5
+        },
+        "unsupported": [],
+        "worstRatio": 9.9482,
+        "samples": 131,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 8,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 28,
+          "top": 255.5,
+          "right": 159.39999389648438,
+          "bottom": 270.5
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 222,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 9,
+        "tag": "BUTTON",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 28,
+          "top": 295.5,
+          "right": 81.66667175292969,
+          "bottom": 314.5
+        },
+        "unsupported": [],
+        "worstRatio": 9.9482,
+        "samples": 86,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 10,
+        "tag": "BUTTON",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 57,
+          "top": 364.5,
+          "right": 100.41667175292969,
+          "bottom": 383.5
+        },
+        "unsupported": [],
+        "worstRatio": 9.9482,
+        "samples": 93,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 11,
+        "tag": "P",
+        "pseudo": null,
+        "size": 12,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 16,
+          "top": 413.5,
+          "right": 106.60000610351562,
+          "bottom": 428.5
+        },
+        "unsupported": [],
+        "worstRatio": 7.014,
+        "samples": 230,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 12,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 28,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 16,
+          "top": 433.1000061035156,
+          "right": 159.89999389648438,
+          "bottom": 467.1000061035156
+        },
+        "unsupported": [],
+        "worstRatio": 8.783,
+        "samples": 1274,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 13,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 16,
+          "top": 472.20001220703125,
+          "right": 331.1499938964844,
+          "bottom": 492.20001220703125
+        },
+        "unsupported": [],
+        "worstRatio": 7.014,
+        "samples": 689,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 14,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 16,
+          "top": 496.20001220703125,
+          "right": 61.850006103515625,
+          "bottom": 516.2000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 7.014,
+        "samples": 106,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 15,
+        "tag": "LABEL",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 16,
+          "top": 543.9500122070312,
+          "right": 48.96665954589844,
+          "bottom": 559.9500122070312
+        },
+        "unsupported": [],
+        "worstRatio": 7.014,
+        "samples": 72,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 16,
+        "tag": "DIV",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 652.4500122070312,
+          "right": 175.98333740234375,
+          "bottom": 668.4500122070312
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 307,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 17,
+        "tag": "DIV",
+        "pseudo": null,
+        "size": 24,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 33,
+          "top": 675.7000122070312,
+          "right": 101.71665954589844,
+          "bottom": 704.7000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 9.9482,
+        "samples": 466,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 18,
+        "tag": "DIV",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 755.9500122070312,
+          "right": 154.46665954589844,
+          "bottom": 771.9500122070312
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 245,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 19,
+        "tag": "DIV",
+        "pseudo": null,
+        "size": 24,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 33,
+          "top": 779.2000122070312,
+          "right": 48.51666259765625,
+          "bottom": 808.2000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 9.9482,
+        "samples": 117,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 20,
+        "tag": "DIV",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 859.4500122070312,
+          "right": 154.1666717529297,
+          "bottom": 875.4500122070312
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 287,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 21,
+        "tag": "DIV",
+        "pseudo": null,
+        "size": 24,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 33,
+          "top": 882.7000122070312,
+          "right": 101.71665954589844,
+          "bottom": 911.7000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 9.9482,
+        "samples": 466,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 22,
+        "tag": "DIV",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 962.9500122070312,
+          "right": 69.19999694824219,
+          "bottom": 978.9500122070312
+        },
+        "unsupported": [],
+        "worstRatio": 7.9375,
+        "samples": 78,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 23,
+        "tag": "DIV",
+        "pseudo": null,
+        "size": 24,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 33,
+          "top": 986.2000122070312,
+          "right": 101.71665954589844,
+          "bottom": 1015.2000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 9.9482,
+        "samples": 466,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 24,
+        "tag": "BUTTON",
+        "pseudo": null,
+        "size": 14,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 16,
+          "top": 1069.199951171875,
+          "right": 130.0833282470703,
+          "bottom": 1086.199951171875
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 300,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 25,
+        "tag": "BUTTON",
+        "pseudo": null,
+        "size": 14,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 154.0833282470703,
+          "top": 1069.199951171875,
+          "right": 254,
+          "bottom": 1086.199951171875
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 253,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 26,
+        "tag": "BUTTON",
+        "pseudo": null,
+        "size": 14,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 278,
+          "top": 1069.199951171875,
+          "right": 341.96665954589844,
+          "bottom": 1086.199951171875
+        },
+        "unsupported": [],
+        "worstRatio": 8.7924,
+        "samples": 146,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 27,
+        "tag": "H3",
+        "pseudo": null,
+        "size": 18,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 143.76666259765625,
+          "top": 1227.199951171875,
+          "right": 231.23333740234375,
+          "bottom": 1248.199951171875
+        },
+        "unsupported": [],
+        "worstRatio": 8.783,
+        "samples": 288,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 28,
+        "tag": "P",
+        "pseudo": null,
+        "size": 14,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 44.899993896484375,
+          "top": 1265.199951171875,
+          "right": 330.1000061035156,
+          "bottom": 1282.199951171875
+        },
+        "unsupported": [],
+        "worstRatio": 7.014,
+        "samples": 525,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 29,
+        "tag": "P",
+        "pseudo": null,
+        "size": 14,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 111.80000305175781,
+          "top": 1285.199951171875,
+          "right": 263.1999969482422,
+          "bottom": 1302.199951171875
+        },
+        "unsupported": [],
+        "worstRatio": 7.014,
+        "samples": 275,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 30,
+        "tag": "BUTTON",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 143.81666564941406,
+          "top": 1335.699951171875,
+          "right": 231.1666717529297,
+          "bottom": 1355.699951171875
+        },
+        "unsupported": [],
+        "worstRatio": 4.5069,
+        "samples": 202,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 31,
+        "tag": "SELECT",
+        "pseudo": null,
+        "size": 15,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 28,
+          "top": 575.7000122070312,
+          "right": 347,
+          "bottom": 599.7000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 11.3106,
+        "samples": 207,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 32,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "completed": true
+}

@@ -1,0 +1,327 @@
+{
+  "rows": [
+    {
+      "engine": "firefox",
+      "version": "148.0.2",
+      "role": "ENGINEERING_MEMBER",
+      "time": "2026-11-24T13:08:39.053Z",
+      "app": "ob",
+      "method": "provider token via the app confirm page (AM-15)",
+      "selector": {
+        "options": 1,
+        "noPermitted": false,
+        "nonempty": 1
+      },
+      "helpLinks": [
+        {
+          "anchor": "#getting-around",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#roles",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#my-stores",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#inviting",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#store-admin",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-access",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#billing",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-pharmacy",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#settings",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#audit",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#profile",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#claims",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#support",
+          "hash": true,
+          "present": true,
+          "inView": true
+        }
+      ],
+      "helpForbidden": false,
+      "helpDestinations": [
+        {
+          "requested": "/admin-portal",
+          "landed": "/owedbook",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        }
+      ],
+      "completed": false,
+      "errorCurrentPath": "/owedbook",
+      "firstError": "page.goto: NS_BINDING_ABORTED",
+      "signout": 200
+    },
+    {
+      "engine": "firefox",
+      "version": "148.0.2",
+      "role": "ENGINEERING_ADMIN",
+      "time": "2026-11-24T13:08:54.573Z",
+      "app": "ob",
+      "method": "provider token via the app confirm page (AM-15)",
+      "selector": {
+        "options": 1,
+        "noPermitted": false,
+        "nonempty": 1
+      },
+      "helpLinks": [
+        {
+          "anchor": "#getting-around",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#roles",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#my-stores",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#inviting",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#store-admin",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-access",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#billing",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-pharmacy",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#settings",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#audit",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#profile",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#claims",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#support",
+          "hash": true,
+          "present": true,
+          "inView": true
+        }
+      ],
+      "helpForbidden": false,
+      "helpDestinations": [
+        {
+          "requested": "/admin-portal",
+          "landed": "/admin-portal",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        }
+      ],
+      "completed": false,
+      "errorCurrentPath": "/admin-portal",
+      "firstError": "page.goto: NS_BINDING_ABORTED",
+      "signout": 200
+    },
+    {
+      "engine": "firefox",
+      "version": "148.0.2",
+      "role": "ENGINEERING_OWNER_A",
+      "time": "2026-11-24T13:09:12.875Z",
+      "app": "ob",
+      "method": "password (normal sign-in form)",
+      "selector": {
+        "options": 3,
+        "noPermitted": false,
+        "nonempty": 3
+      },
+      "helpLinks": [
+        {
+          "anchor": "#getting-around",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#roles",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#my-stores",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#inviting",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#store-admin",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-access",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#billing",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#removing-pharmacy",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#settings",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#audit",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#profile",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#claims",
+          "hash": true,
+          "present": true,
+          "inView": true
+        },
+        {
+          "anchor": "#support",
+          "hash": true,
+          "present": true,
+          "inView": true
+        }
+      ],
+      "helpForbidden": false,
+      "helpDestinations": [
+        {
+          "requested": "/admin-portal",
+          "landed": "/admin-portal",
+          "ownerMessage": 0,
+          "ownerDataVisible": 0
+        }
+      ],
+      "completed": false,
+      "errorCurrentPath": "/admin-portal",
+      "firstError": "page.goto: NS_BINDING_ABORTED",
+      "signout": 200
+    }
+  ],
+  "counters": {
+    "password_sign_ins": 1,
+    "token_sign_ins": 2,
+    "generate_link_calls": 2
+  }
+}

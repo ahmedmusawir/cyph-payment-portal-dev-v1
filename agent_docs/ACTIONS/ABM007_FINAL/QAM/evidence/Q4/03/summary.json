@@ -1,0 +1,29 @@
+{
+  "sourcePositions": 762,
+  "aggregate": [
+    {
+      "engine": "chromium",
+      "rows": {
+        "OBSERVED": 453,
+        "INCOMPLETE": 18,
+        "BLOCKED": 131
+      }
+    },
+    {
+      "engine": "firefox",
+      "rows": {
+        "OBSERVED": 52,
+        "INCOMPLETE": 6,
+        "BLOCKED": 22
+      }
+    },
+    {
+      "engine": "webkit",
+      "rows": {
+        "OBSERVED": 31,
+        "INCOMPLETE": 7,
+        "BLOCKED": 42
+      }
+    }
+  ]
+}

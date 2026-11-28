@@ -1,0 +1,194 @@
+{
+  "engine": "firefox",
+  "version": "148.0.2",
+  "rows": [
+    {
+      "app": "ob",
+      "role": "PUBLIC",
+      "scripts": true,
+      "width": 375,
+      "requested": "/auth",
+      "baseline": "evidence/Q2/02/0608.json",
+      "baselineLanded": "/auth",
+      "seen": {
+        "status": 200,
+        "path": "/auth"
+      },
+      "result": "OBSERVED",
+      "evidence": "firefox/0000.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 14,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "PUBLIC",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/auth",
+      "baseline": "evidence/Q2/02/0609.json",
+      "baselineLanded": "/auth",
+      "seen": {
+        "status": 200,
+        "path": "/auth"
+      },
+      "result": "OBSERVED",
+      "evidence": "firefox/0001.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 14,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "ob",
+      "role": "PUBLIC",
+      "scripts": false,
+      "width": 1280,
+      "requested": "/auth",
+      "baseline": "evidence/Q2/02/0612.json",
+      "baselineLanded": "/auth",
+      "result": "INCOMPLETE",
+      "name": "Error"
+    },
+    {
+      "app": "pp",
+      "role": "PUBLIC",
+      "scripts": true,
+      "width": 375,
+      "requested": "/login",
+      "baseline": "evidence/Q2/02/0613.json",
+      "baselineLanded": "/login",
+      "seen": {
+        "status": 200,
+        "path": "/login"
+      },
+      "result": "OBSERVED",
+      "evidence": "firefox/0003.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 26,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    },
+    {
+      "app": "pp",
+      "role": "PUBLIC",
+      "scripts": true,
+      "width": 1440,
+      "requested": "/login",
+      "baseline": "evidence/Q2/02/0614.json",
+      "baselineLanded": "/login",
+      "seen": {
+        "status": 200,
+        "path": "/login"
+      },
+      "result": "OBSERVED",
+      "evidence": "firefox/0004.json",
+      "overflow": 0,
+      "visualFlags": {
+        "badCorner": 0,
+        "badSurface": 0,
+        "badTarget": 0,
+        "navControl": 0,
+        "badLinks": 0,
+        "buttonNavy": 0
+      },
+      "rasterCounts": {
+        "pass": 27,
+        "fail": 0,
+        "notRun": 0
+      },
+      "redirected": false
+    }
+  ],
+  "sessions": [
+    {
+      "diagnostics": [],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "diagnostics": [],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3100",
+            "path": "/auth",
+            "status": 200
+          }
+        ]
+      }
+    },
+    {
+      "diagnostics": [],
+      "network": {
+        "loads": [],
+        "blocked": [],
+        "console": [],
+        "documentResponses": [
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          },
+          {
+            "origin": "http://localhost:3101",
+            "path": "/login",
+            "status": 200
+          }
+        ]
+      }
+    }
+  ]
+}

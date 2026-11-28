@@ -1,0 +1,184 @@
+{
+  "engine": "chromium",
+  "version": "147.0.7727.15",
+  "app": "ob",
+  "role": "PUBLIC",
+  "method": "none",
+  "width": 769,
+  "requested": "/auth/link-expired",
+  "landed": "/auth/link-expired",
+  "measurement": {
+    "path": "/auth/link-expired",
+    "tokens": {
+      "brand-navy": "#154474",
+      "brand-green": "#32a38d",
+      "brand-green-dark": "#288472",
+      "brand-ice": "#eaf3fa",
+      "brand-charcoal": "#393b38",
+      "brand-gray": "#515151"
+    },
+    "overflow": 0,
+    "width": 769,
+    "bodyBackground": "rgb(234, 243, 250)",
+    "darkClass": false,
+    "colorScheme": "light",
+    "themeControls": 0,
+    "text": [
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(1)>span:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(1)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>div:nth-child(2)>h1:nth-child(2)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 36,
+        "weight": 700,
+        "contrast": 1,
+        "threshold": 3,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(3)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>form:nth-child(1)>label:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>form:nth-child(1)>button:nth-child(3)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgb(223, 230, 236)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 6.3,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>a:nth-child(2)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgb(255, 255, 255)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      }
+    ],
+    "controls": [
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>form:nth-child(1)>input:nth-child(2)",
+        "tag": "INPUT",
+        "type": "email",
+        "height": 42,
+        "width": 462,
+        "radius": "8px",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "outline": "rgb(57, 59, 56) none 3px",
+        "offset": "0px",
+        "border": "rgb(81, 81, 81)",
+        "borderWidth": "1px",
+        "background": "rgb(255, 255, 255)"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>form:nth-child(1)>button:nth-child(3)",
+        "tag": "BUTTON",
+        "type": "submit",
+        "height": 44,
+        "width": 462,
+        "radius": "8px",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": "16px",
+        "weight": "400",
+        "disabled": true,
+        "busy": null,
+        "outline": "rgb(81, 81, 81) none 3px",
+        "offset": "0px",
+        "border": "rgba(0, 0, 0, 0)",
+        "borderWidth": "1px",
+        "background": "rgb(223, 230, 236)"
+      }
+    ],
+    "links": [
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>a:nth-child(2)",
+        "href": "/auth",
+        "color": "#154474",
+        "background": [
+          255,
+          255,
+          255
+        ],
+        "underline": "none"
+      }
+    ],
+    "pills": [
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>form:nth-child(1)>p:nth-child(4)",
+        "color": "#515151",
+        "background": "#000000",
+        "border": "rgb(211, 226, 238)"
+      }
+    ],
+    "anchors": [],
+    "oldNames": {
+      "text": false,
+      "title": false,
+      "alt": false,
+      "accessible": false
+    },
+    "tables": [],
+    "noStores": false,
+    "ownerBillingMessage": false,
+    "backToStores": false,
+    "errors": false
+  }
+}

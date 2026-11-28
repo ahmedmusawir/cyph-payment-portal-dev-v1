@@ -1,0 +1,70 @@
+{
+  "checkedAtBdt": "2026-11-27T10:24:17+06:00",
+  "branch": "qa/abm007-final",
+  "apps": [
+    {
+      "app": "ob",
+      "port": 3100,
+      "listenerPid": 3090197,
+      "launcherPid": 3090063,
+      "nextBuildId": "qwu0ceUJsC51jVYLsC2_J",
+      "buildInfoStatus": 200,
+      "target": "ihgcsrypblqkwommrkgj",
+      "manifest": "f229d7a129138af7cc97e1fdb5acadf885c1907ad7cd3c140f4bad5334a4d22d",
+      "servedRevision": "f229d7a129138af7cc97e1fdb5acadf885c1907ad7cd3c140f4bad5334a4d22d",
+      "artifactId": "q4-ob-f229d7a129138af7-restart-2026-11-27_081414_BDT",
+      "manifestFiles": 2313,
+      "manifestMismatches": [],
+      "launcherStartTicks": "40550602"
+    },
+    {
+      "app": "pp",
+      "port": 3101,
+      "listenerPid": 3090210,
+      "launcherPid": 3090064,
+      "nextBuildId": "bqMVdfzVgbkcz-Jq0jWFV",
+      "buildInfoStatus": 200,
+      "target": "ihgcsrypblqkwommrkgj",
+      "manifest": "ba726f5ea3f5bf2cdd8156a16360e7674be2da500be48c81cacac19ba682c4b9",
+      "servedRevision": "ba726f5ea3f5bf2cdd8156a16360e7674be2da500be48c81cacac19ba682c4b9",
+      "artifactId": "q4-pp-ba726f5ea3f5bf2c-restart-2026-11-27_081414_BDT",
+      "manifestFiles": 2370,
+      "manifestMismatches": [],
+      "launcherStartTicks": "40550602"
+    }
+  ],
+  "workingTreePathChecks": [
+    {
+      "app": "ob",
+      "exactWorkingTreeCheckExit": 0,
+      "newWorkingTreePaths": [],
+      "missingRepairPaths": [],
+      "workingTreePinnedFileMismatches": [],
+      "isolatedPinnedFileMismatches": [],
+      "recordsDiff": null,
+      "firstCheckOutput": "{\"app\": \"ob\", \"manifest\": \"f229d7a129138af7cc97e1fdb5acadf885c1907ad7cd3c140f4bad5334a4d22d\", \"files\": 2313, \"commit\": null, \"mismatches\": []}\n"
+    },
+    {
+      "app": "pp",
+      "exactWorkingTreeCheckExit": 1,
+      "newWorkingTreePaths": [
+        "session_2026-11-27.md"
+      ],
+      "missingRepairPaths": [],
+      "workingTreePinnedFileMismatches": [
+        "CHANGELOG.md"
+      ],
+      "isolatedPinnedFileMismatches": [],
+      "recordsDiff": {
+        "path": "CHANGELOG.md",
+        "pinnedSha256": "4956413f87e74cf943a8bb84f5eb49ecec0db5bd8dc087d59cc04e0b4eeb0491",
+        "workingTreeSha256": "54abecbb600e208bbec783bff7a47b3124738a20c911be9192c0483149e75cbd",
+        "additionsAndDeletions": [
+          "4",
+          "0"
+        ]
+      },
+      "firstCheckOutput": "Traceback (most recent call last):\n  File \"/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/AUTOMATION/Q4/manifest.py\", line 167, in <module>\n    compare(args.app,args.copy,args.commit if args.action=='post-commit' else None)\n  File \"/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/AUTOMATION/Q4/manifest.py\", line 143, in compare\n    assert repair_set(app,repo)==set(doc['changedPaths'])\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/AUTOMATION/Q4/manifest.py\", line 45, in repair_set\n    assert actual == expected, {'app':app,'unexpected': sorted(actual-expected),'missing':sorted(expected-actual)}\n           ^^^^^^^^^^^^^^^^^^\nAssertionError: {'app': 'pp', 'unexpected': ['session_2026-11-27.md'], 'missing': []}\n"
+    }
+  ]
+}

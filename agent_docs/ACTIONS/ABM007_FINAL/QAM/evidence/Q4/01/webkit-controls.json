@@ -1,0 +1,196 @@
+{
+  "engine": "webkit",
+  "version": "26.4",
+  "tests": [
+    {
+      "name": "clean",
+      "expected": "PASS",
+      "observed": "PASS",
+      "pass": true,
+      "measurement": {
+        "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 20,
+              "top": 20.5,
+              "right": 477.6171875,
+              "bottom": 37.5
+            },
+            "unsupported": [],
+            "worstRatio": 11.3106,
+            "samples": 1266,
+            "unstablePixels": 0,
+            "result": "PASS"
+          }
+        ],
+        "counts": {
+          "pass": 1,
+          "fail": 0,
+          "notRun": 0
+        }
+      }
+    },
+    {
+      "name": "known-below-threshold",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "measurement": {
+        "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 20,
+              "top": 20.5,
+              "right": 477.6171875,
+              "bottom": 37.5
+            },
+            "unsupported": [],
+            "worstRatio": 4.4528,
+            "samples": 1266,
+            "unstablePixels": 0,
+            "result": "FAIL"
+          }
+        ],
+        "counts": {
+          "pass": 0,
+          "fail": 1,
+          "notRun": 0
+        }
+      }
+    },
+    {
+      "name": "half-opacity",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "measurement": {
+        "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 0.5,
+            "threshold": 4.5,
+            "rect": {
+              "left": 20,
+              "top": 20.5,
+              "right": 477.6171875,
+              "bottom": 37.5
+            },
+            "unsupported": [],
+            "worstRatio": 1.9692,
+            "samples": 1266,
+            "unstablePixels": 0,
+            "result": "FAIL"
+          }
+        ],
+        "counts": {
+          "pass": 0,
+          "fail": 1,
+          "notRun": 0
+        }
+      }
+    },
+    {
+      "name": "gradient-fail",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "pass": true,
+      "measurement": {
+        "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 20,
+              "top": 20.5,
+              "right": 477.6171875,
+              "bottom": 37.5
+            },
+            "unsupported": [],
+            "worstRatio": 1.4419,
+            "samples": 1266,
+            "unstablePixels": 0,
+            "result": "FAIL"
+          }
+        ],
+        "counts": {
+          "pass": 0,
+          "fail": 1,
+          "notRun": 0
+        }
+      }
+    },
+    {
+      "name": "gradient-pass",
+      "expected": "PASS",
+      "observed": "PASS",
+      "pass": true,
+      "measurement": {
+        "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 20,
+              "top": 20.5,
+              "right": 477.6171875,
+              "bottom": 37.5
+            },
+            "unsupported": [],
+            "worstRatio": 10.0128,
+            "samples": 1266,
+            "unstablePixels": 0,
+            "result": "PASS"
+          }
+        ],
+        "counts": {
+          "pass": 1,
+          "fail": 0,
+          "notRun": 0
+        }
+      }
+    }
+  ],
+  "dimensions": {
+    "radiusNegative": true,
+    "heightNegative": true,
+    "overflowNegative": true,
+    "radiusPositive": true,
+    "heightPositive": true,
+    "overflowPositive": true
+  },
+  "pixelReady": true,
+  "dimensionsReady": true
+}

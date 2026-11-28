@@ -1,0 +1,185 @@
+{
+  "browser": "147.0.7727.15",
+  "rows": [
+    {
+      "name": "clean",
+      "expect": "PASS",
+      "observed": "FAIL",
+      "controlPass": false,
+      "measurement": {
+        "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; ±0.03 rounding tolerance. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 20,
+              "top": 20,
+              "right": 477.625,
+              "bottom": 37
+            },
+            "unsupported": [],
+            "worstRatio": 2.0778,
+            "samples": 2761,
+            "unstablePixels": 0,
+            "result": "FAIL"
+          }
+        ],
+        "counts": {
+          "pass": 0,
+          "fail": 1,
+          "notRun": 0
+        }
+      }
+    },
+    {
+      "name": "rounded-white",
+      "expect": "FAIL",
+      "observed": "FAIL",
+      "controlPass": true,
+      "measurement": {
+        "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; ±0.03 rounding tolerance. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 20,
+              "top": 20,
+              "right": 477.625,
+              "bottom": 37
+            },
+            "unsupported": [],
+            "worstRatio": 2.2167,
+            "samples": 2809,
+            "unstablePixels": 8,
+            "result": "FAIL"
+          }
+        ],
+        "counts": {
+          "pass": 0,
+          "fail": 1,
+          "notRun": 0
+        }
+      }
+    },
+    {
+      "name": "half-opacity",
+      "expect": "FAIL",
+      "observed": "FAIL",
+      "controlPass": true,
+      "measurement": {
+        "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; ±0.03 rounding tolerance. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 0.5,
+            "threshold": 4.5,
+            "rect": {
+              "left": 20,
+              "top": 20,
+              "right": 477.625,
+              "bottom": 37
+            },
+            "unsupported": [],
+            "worstRatio": 1.3843,
+            "samples": 2817,
+            "unstablePixels": 0,
+            "result": "FAIL"
+          }
+        ],
+        "counts": {
+          "pass": 0,
+          "fail": 1,
+          "notRun": 0
+        }
+      }
+    },
+    {
+      "name": "gradient-fail",
+      "expect": "FAIL",
+      "observed": "FAIL",
+      "controlPass": true,
+      "measurement": {
+        "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; ±0.03 rounding tolerance. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 20,
+              "top": 20,
+              "right": 477.625,
+              "bottom": 37
+            },
+            "unsupported": [],
+            "worstRatio": 1.198,
+            "samples": 2792,
+            "unstablePixels": 3,
+            "result": "FAIL"
+          }
+        ],
+        "counts": {
+          "pass": 0,
+          "fail": 1,
+          "notRun": 0
+        }
+      }
+    },
+    {
+      "name": "gradient-pass",
+      "expect": "PASS",
+      "observed": "FAIL",
+      "controlPass": false,
+      "measurement": {
+        "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; ±0.03 rounding tolerance. All screenshots memory-only. Gradients sampled rather than excluded.",
+        "rows": [
+          {
+            "index": 0,
+            "tag": "P",
+            "pseudo": null,
+            "size": 16,
+            "weight": 400,
+            "opacity": 1,
+            "threshold": 4.5,
+            "rect": {
+              "left": 20,
+              "top": 20,
+              "right": 477.625,
+              "bottom": 37
+            },
+            "unsupported": [],
+            "worstRatio": 3.6147,
+            "samples": 2878,
+            "unstablePixels": 6,
+            "result": "FAIL"
+          }
+        ],
+        "counts": {
+          "pass": 0,
+          "fail": 1,
+          "notRun": 0
+        }
+      }
+    }
+  ]
+}

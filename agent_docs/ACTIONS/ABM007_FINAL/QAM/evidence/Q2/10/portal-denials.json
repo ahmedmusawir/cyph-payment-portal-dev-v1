@@ -1,0 +1,31 @@
+{
+  "rows": [
+    {
+      "role": "ENGINEERING_MEMBER",
+      "engine": "chromium",
+      "version": "147.0.7727.15",
+      "time": "2026-11-24T13:27:14.402Z",
+      "method": "provider token via the app confirm page (AM-15)",
+      "status": 403,
+      "ownerPayloadPresent": false,
+      "result": "PASS",
+      "signout": 200
+    },
+    {
+      "role": "ENGINEERING_ADMIN",
+      "engine": "chromium",
+      "version": "147.0.7727.15",
+      "time": "2026-11-24T13:27:26.697Z",
+      "method": "provider token via the app confirm page (AM-15)",
+      "status": 403,
+      "ownerPayloadPresent": false,
+      "result": "PASS",
+      "signout": 200
+    }
+  ],
+  "counters": {
+    "password_sign_ins": 0,
+    "token_sign_ins": 2,
+    "generate_link_calls": 2
+  }
+}

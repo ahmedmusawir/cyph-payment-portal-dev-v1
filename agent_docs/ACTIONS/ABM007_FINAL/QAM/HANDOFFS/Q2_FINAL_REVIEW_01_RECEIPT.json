@@ -1,0 +1,28 @@
+{
+  "state": "Q2 COMPLETE \u2014 AWAITING ADJUDICATION",
+  "created": "2026-11-26T12:07:56.370184+06:00",
+  "canonical": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/HANDOFFS/ABM007_FINAL_Q2_REVIEW_01.zip",
+  "downloads": "/home/moose/Downloads/ABM007_FINAL_Q2_REVIEW_01_2026-11-26_120756_BDT.zip",
+  "sha256": "024fe6bc52b6bda160b8e98d3f0d67f23526361d72757ee6f9cb5f0abb61b9fd",
+  "sizeBytes": 18836057,
+  "members": 7555,
+  "indexedPayloads": 7554,
+  "stagingPaths": 7517,
+  "criteria": 36,
+  "AC_R04_journeys": 10,
+  "O1_plannedPositions": 54,
+  "registeredFindings": 32,
+  "integrity": "PASS",
+  "indexMembershipSizesHashes": "PASS",
+  "pathsDuplicates": "PASS",
+  "privacy": "PASS",
+  "decisionRequested": "Friday adjudicates the closed Q2 record, qualifications, rework and retention. Tony retains the held scope. See HANDOFFS/Q2_FINAL_DECISIONS.md.",
+  "afterExportShutdown": {
+    "time": "2026-11-26T12:08:34.111401+06:00",
+    "portsVerifiedFree": [
+      3100,
+      3101
+    ],
+    "method": "Guarded stop for the two owned QA process groups after archive verification"
+  }
+}

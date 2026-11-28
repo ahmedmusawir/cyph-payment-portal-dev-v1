@@ -1,0 +1,27 @@
+{
+  "targetEnding": "rkgj",
+  "castMode": "0600",
+  "mapping": {
+    "ENGINEERING_OWNER_A": {
+      "sameMailbox": false,
+      "exists": true
+    },
+    "ENGINEERING_OWNER_B": {
+      "sameMailbox": true,
+      "exists": true
+    },
+    "ENGINEERING_ADMIN": {
+      "sameMailbox": false,
+      "exists": true
+    },
+    "ENGINEERING_MEMBER": {
+      "sameMailbox": false,
+      "exists": true
+    },
+    "ENGINEERING_INVITEE": {
+      "sameMailbox": true,
+      "exists": true
+    }
+  },
+  "normalization": "Gmail exact or dot/plus alias; mailbox itself not retained"
+}

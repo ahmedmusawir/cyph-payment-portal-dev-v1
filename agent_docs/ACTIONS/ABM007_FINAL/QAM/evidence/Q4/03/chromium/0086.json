@@ -1,0 +1,307 @@
+{
+  "app": "ob",
+  "role": "PUBLIC",
+  "scripts": true,
+  "width": 1281,
+  "requested": "/auth/signed-out",
+  "baseline": "evidence/Q2/02/0086.json",
+  "baselineLanded": "/auth/signed-out",
+  "seen": {
+    "status": 200,
+    "path": "/auth/signed-out"
+  },
+  "dom": {
+    "path": "/auth/signed-out",
+    "tokens": {
+      "brand-navy": "#154474",
+      "brand-green": "#32a38d",
+      "brand-green-dark": "#288472",
+      "brand-ice": "#eaf3fa",
+      "brand-charcoal": "#393b38",
+      "brand-gray": "#515151"
+    },
+    "overflow": 0,
+    "width": 1281,
+    "bodyBackground": "rgb(234, 243, 250)",
+    "darkClass": false,
+    "colorScheme": "light",
+    "themeControls": 0,
+    "text": [
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(1)>span:nth-child(1)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(1)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>div:nth-child(2)>h1:nth-child(2)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 36,
+        "weight": 700,
+        "contrast": 1,
+        "threshold": 3,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>header:nth-child(1)>p:nth-child(3)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 1.123,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>a:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(40, 132, 114)",
+        "font": "Inter, \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 400,
+        "contrast": 4.532,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      }
+    ],
+    "controls": [],
+    "links": [
+      {
+        "where": "body>main:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>a:nth-child(1)",
+        "href": "/auth",
+        "color": "#ffffff",
+        "background": [
+          40,
+          132,
+          114
+        ],
+        "underline": "none"
+      }
+    ],
+    "pills": [],
+    "anchors": [],
+    "oldNames": {
+      "text": false,
+      "title": false,
+      "alt": false,
+      "accessible": false
+    },
+    "tables": [],
+    "noStores": false,
+    "ownerBillingMessage": false,
+    "backToStores": false,
+    "errors": false
+  },
+  "candidate": {
+    "controls": [
+      {
+        "tag": "A",
+        "role": null,
+        "kind": null,
+        "test": null,
+        "radius": "8px",
+        "height": 44,
+        "width": 462,
+        "left": 409.5,
+        "right": 871.5,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(40, 132, 114)",
+        "border": "0px",
+        "outline": "rgb(255, 255, 255) none 3px",
+        "ariaBusy": null,
+        "disabled": false,
+        "anchor": true,
+        "variant": "rgb(40, 132, 114)",
+        "linkRecipe": null,
+        "underline": "none",
+        "bodyLink": false
+      }
+    ],
+    "cards": [
+      {
+        "surface": "shell",
+        "radius": "16px",
+        "border": "0px",
+        "shadow": "rgba(12, 38, 65, 0.18) 0px 18px 48px 0px, rgba(255, 255, 255, 0.6) 0px 1px 0px 0px inset"
+      },
+      {
+        "surface": "masthead",
+        "radius": "16px",
+        "border": "0px",
+        "shadow": "rgba(12, 38, 65, 0.18) 0px 12px 28px 0px"
+      },
+      {
+        "surface": "card",
+        "radius": "14px",
+        "border": "1px",
+        "shadow": "rgba(12, 38, 65, 0.05) 0px 8px 20px 0px"
+      }
+    ],
+    "nontext": []
+  },
+  "visual": {
+    "badCorner": [],
+    "badSurface": [],
+    "badTarget": [],
+    "navControl": null,
+    "badLinks": [],
+    "buttonNavy": []
+  },
+  "pixel": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 408.5,
+          "top": 87,
+          "right": 552.03125,
+          "bottom": 102
+        },
+        "unsupported": [],
+        "worstRatio": 8.9716,
+        "samples": 250,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 784.046875,
+          "top": 87,
+          "right": 872.5,
+          "bottom": 102
+        },
+        "unsupported": [],
+        "worstRatio": 10.6336,
+        "samples": 165,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 2,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 36,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 515.5,
+          "top": 121.078125,
+          "right": 803.140625,
+          "bottom": 165.078125
+        },
+        "unsupported": [],
+        "worstRatio": 10.7524,
+        "samples": 2649,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 3,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 408.5,
+          "top": 181.765625,
+          "right": 840.5,
+          "bottom": 201.765625
+        },
+        "unsupported": [],
+        "worstRatio": 9.4179,
+        "samples": 508,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 4,
+        "tag": "P",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 408.5,
+          "top": 205.765625,
+          "right": 543.5,
+          "bottom": 225.765625
+        },
+        "unsupported": [],
+        "worstRatio": 9.4531,
+        "samples": 165,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 5,
+        "tag": "A",
+        "pseudo": null,
+        "size": 16,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 617.5,
+          "top": 296.765625,
+          "right": 663.5,
+          "bottom": 316.765625
+        },
+        "unsupported": [],
+        "worstRatio": 4.528,
+        "samples": 51,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 6,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "time": "2026-11-26T09:03:33.928Z"
+}

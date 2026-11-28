@@ -1,0 +1,17 @@
+{
+  "command": "node QAM/AUTOMATION/Q1/serve.mjs build --copies /tmp/abm007-final-cody-q1",
+  "exit": 0,
+  "ob": {
+    "build": 0,
+    "client_scratch": 1,
+    "server_scratch": 13,
+    "dev": 0
+  },
+  "pp": {
+    "build": 0,
+    "client_scratch": 0,
+    "server_scratch": 15,
+    "dev": 0
+  },
+  "source": "exact HEAD blobs; build-copy-index.json; installed node_modules copied, not a fresh npm ci"
+}

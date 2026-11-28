@@ -1,0 +1,30 @@
+{
+  "role": "ENGINEERING_OWNER_B",
+  "time": "2026-11-24T16:21:10.233Z",
+  "target": "ihgcsrypblqkwommrkgj",
+  "transaction": "READ ONLY; rollback",
+  "countWithoutReads": 14,
+  "pageSize": 50,
+  "authority": "Friday in-run ruling01 section2; Tony continuation step5",
+  "scope": "Owner accounts plus administered live stores; includes account/subscription rows, excludes member-only stores",
+  "browser": "chromium",
+  "version": "147.0.7727.15",
+  "method": "password (normal sign-in form)",
+  "includeReadsChecked": false,
+  "renderedRows": 8,
+  "olderControlCount": 0,
+  "result": "PASS",
+  "signout": 200,
+  "counters": {
+    "password_sign_ins": 1,
+    "token_sign_ins": 0,
+    "generate_link_calls": 0
+  },
+  "sessionDiagnostics": [
+    {
+      "app": "ob",
+      "role": "ENGINEERING_OWNER_B",
+      "stage": "password-session-established"
+    }
+  ]
+}

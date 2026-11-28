@@ -1,0 +1,1 @@
+First run exit 1: Playwright hover actionability rejects a disabled pointer-events:none button. No form was submitted and no session was created. First source, partial JSON and failure log retained. Diagnostic moves the mouse to actual control coordinates without force-enabling it; disabled state stays intact. No product change.

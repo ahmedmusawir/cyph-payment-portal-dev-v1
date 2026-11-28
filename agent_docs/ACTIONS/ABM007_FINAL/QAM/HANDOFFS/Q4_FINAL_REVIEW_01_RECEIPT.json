@@ -1,0 +1,34 @@
+{
+  "status": "Q4 COMPLETE \u2014 AWAITING ADJUDICATION",
+  "canonical": "/home/moose/NEXTJS/CYBER_PHARMA/cyph-payment-portal-dev-v1/agent_docs/ACTIONS/ABM007_FINAL/QAM/HANDOFFS/ABM007_FINAL_Q4_REVIEW_01.zip",
+  "absoluteZip": "/home/moose/Downloads/ABM007_FINAL_Q4_REVIEW_01_2026-11-27_102756_BDT.zip",
+  "members": 8255,
+  "sha256": "a0a5b1f73553b574bf15726e5d993ecf1bf23bb0daec505fc44c3d29017a7d25",
+  "verified": true,
+  "indexedPayloadMembers": 8254,
+  "recordsStagingPaths": 8203,
+  "requestedDecision": "Friday adjudicates the retained Q4 evidence. Tony reconciles later Portal records, then verifies and reports the exact repair commit pair.",
+  "shutdown": {
+    "timeBdt": "2026-11-27T10:28:45+06:00",
+    "afterVerifiedZip": "/home/moose/Downloads/ABM007_FINAL_Q4_REVIEW_01_2026-11-27_102756_BDT.zip",
+    "zipSha256": "a0a5b1f73553b574bf15726e5d993ecf1bf23bb0daec505fc44c3d29017a7d25",
+    "stopped": [
+      {
+        "app": "ob",
+        "launcherPid": 3090063,
+        "listenerPid": 3090197,
+        "port": 3100
+      },
+      {
+        "app": "pp",
+        "launcherPid": 3090064,
+        "listenerPid": 3090210,
+        "port": 3101
+      }
+    ],
+    "portsClear": [
+      3100,
+      3101
+    ]
+  }
+}

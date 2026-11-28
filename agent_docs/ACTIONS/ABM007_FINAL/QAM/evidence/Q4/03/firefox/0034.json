@@ -1,0 +1,991 @@
+{
+  "app": "ob",
+  "role": "ENGINEERING_ADMIN",
+  "scripts": true,
+  "width": 375,
+  "requested": "/admin-portal/settings",
+  "baseline": "evidence/Q2/02/0646.json",
+  "baselineLanded": "/admin-portal/settings",
+  "seen": {
+    "status": 200,
+    "path": "/admin-portal/settings"
+  },
+  "dom": {
+    "path": "/admin-portal/settings",
+    "tokens": {
+      "brand-navy": "#154474",
+      "brand-green": "#32a38d",
+      "brand-green-dark": "#288472",
+      "brand-ice": "#eaf3fa",
+      "brand-charcoal": "#393b38",
+      "brand-gray": "#515151"
+    },
+    "overflow": 0,
+    "width": 375,
+    "bodyBackground": "rgb(234, 243, 250)",
+    "darkClass": false,
+    "colorScheme": "light",
+    "themeControls": 0,
+    "text": [
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>div:nth-child(1)>a:nth-child(1)>span:nth-child(1)>span:nth-child(2)>span:nth-child(1)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 16,
+        "weight": 600,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>div:nth-child(1)>a:nth-child(1)>span:nth-child(1)>span:nth-child(2)>span:nth-child(2)",
+        "color": "rgb(234, 243, 250)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 8.8583,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>div:nth-child(1)>button:nth-child(4)>span:nth-child(2)",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 15,
+        "weight": 400,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>div:nth-child(2)>button:nth-child(1)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgb(255, 255, 255)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 15,
+        "weight": 400,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>header:nth-child(1)>div:nth-child(1)>span:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 600,
+        "contrast": 7.0679,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>header:nth-child(1)>div:nth-child(1)>span:nth-child(2)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgb(255, 255, 255)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": true,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>header:nth-child(1)>div:nth-child(2)>div:nth-child(1)>h1:nth-child(1)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 28,
+        "weight": 700,
+        "contrast": 8.8583,
+        "threshold": 3,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>header:nth-child(1)>div:nth-child(2)>div:nth-child(1)>p:nth-child(2)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 15,
+        "weight": 400,
+        "contrast": 7.0679,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>h2:nth-child(1)",
+        "color": "rgb(21, 68, 116)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 18,
+        "weight": 500,
+        "contrast": 9.9482,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(1)>dt:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(1)>dd:nth-child(2)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(2)>dt:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(2)>dd:nth-child(2)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(2)>p:nth-child(3)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(3)>dt:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(3)>dd:nth-child(2)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(4)>dt:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(4)>dd:nth-child(2)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(5)>dt:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(5)>dd:nth-child(2)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(6)>dt:nth-child(1)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 13,
+        "weight": 500,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>dl:nth-child(2)>div:nth-child(6)>dd:nth-child(2)",
+        "color": "rgb(57, 59, 56)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 14,
+        "weight": 400,
+        "contrast": 11.3106,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      },
+      {
+        "where": "body>div:nth-child(3)>section:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>section:nth-child(1)>p:nth-child(3)",
+        "color": "rgb(81, 81, 81)",
+        "background": "rgba(0, 0, 0, 0)",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": 12,
+        "weight": 400,
+        "contrast": 7.9375,
+        "threshold": 4.5,
+        "unsupported": false,
+        "opacity": "1"
+      }
+    ],
+    "controls": [
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>div:nth-child(1)>button:nth-child(4)",
+        "tag": "BUTTON",
+        "type": "button",
+        "height": 44,
+        "width": 94.03334045410156,
+        "radius": "8px",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "outline": "rgb(255, 255, 255) 3px",
+        "offset": "0px",
+        "border": "rgba(255, 255, 255, 0.7)",
+        "borderWidth": "1px",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "where": "body>div:nth-child(3)>div:nth-child(2)>button:nth-child(1)",
+        "tag": "BUTTON",
+        "type": "button",
+        "height": 44,
+        "width": 94.03334045410156,
+        "radius": "8px",
+        "font": "\"Inter\", \"Inter Fallback\", system-ui, sans-serif",
+        "size": "15px",
+        "weight": "400",
+        "disabled": false,
+        "busy": null,
+        "outline": "rgb(21, 68, 116) 3px",
+        "offset": "0px",
+        "border": "rgb(81, 81, 81)",
+        "borderWidth": "1px",
+        "background": "rgb(255, 255, 255)"
+      }
+    ],
+    "links": [
+      {
+        "where": "body>div:nth-child(3)>header:nth-child(1)>div:nth-child(1)>a:nth-child(1)",
+        "href": "/",
+        "color": "#ffffff",
+        "background": [
+          21,
+          68,
+          116
+        ],
+        "underline": "none"
+      }
+    ],
+    "pills": [],
+    "anchors": [],
+    "oldNames": {
+      "text": false,
+      "title": false,
+      "alt": false,
+      "accessible": false
+    },
+    "tables": [],
+    "noStores": false,
+    "ownerBillingMessage": false,
+    "backToStores": false,
+    "errors": false
+  },
+  "candidate": {
+    "controls": [
+      {
+        "tag": "A",
+        "role": null,
+        "kind": null,
+        "test": null,
+        "radius": "8px",
+        "height": 40,
+        "width": 204.81666564941406,
+        "left": 16,
+        "right": 220.81666564941406,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "outline": "rgb(255, 255, 255) 3px",
+        "ariaBusy": null,
+        "disabled": false,
+        "anchor": true,
+        "variant": "rgba(0, 0, 0, 0)",
+        "linkRecipe": null,
+        "underline": "none",
+        "bodyLink": false
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "kind": "button",
+        "test": null,
+        "radius": "8px",
+        "height": 44,
+        "width": 94.03334045410156,
+        "left": 264.9666748046875,
+        "right": 359.00001525878906,
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "1px",
+        "outline": "rgb(255, 255, 255) 3px",
+        "ariaBusy": null,
+        "disabled": false,
+        "anchor": false,
+        "variant": "rgba(0, 0, 0, 0)",
+        "linkRecipe": null,
+        "underline": "none",
+        "bodyLink": false
+      },
+      {
+        "tag": "BUTTON",
+        "role": null,
+        "kind": "button",
+        "test": null,
+        "radius": "8px",
+        "height": 44,
+        "width": 94.03334045410156,
+        "left": 16,
+        "right": 110.03334045410156,
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "color": "rgb(21, 68, 116)",
+        "bg": "rgb(255, 255, 255)",
+        "border": "1px",
+        "outline": "rgb(21, 68, 116) 3px",
+        "ariaBusy": null,
+        "disabled": false,
+        "anchor": false,
+        "variant": "rgb(255, 255, 255)",
+        "linkRecipe": null,
+        "underline": "none",
+        "bodyLink": false
+      }
+    ],
+    "cards": [
+      {
+        "surface": "card",
+        "radius": "14px",
+        "border": "1px",
+        "shadow": "rgba(12, 38, 65, 0.05) 0px 8px 20px 0px"
+      }
+    ],
+    "nontext": [
+      {
+        "tag": "BUTTON",
+        "border": "rgba(255, 255, 255, 0.7)",
+        "background": "rgba(0, 0, 0, 0)",
+        "disabled": false,
+        "focus": "rgb(255, 255, 255) 3px"
+      },
+      {
+        "tag": "BUTTON",
+        "border": "rgb(81, 81, 81)",
+        "background": "rgb(255, 255, 255)",
+        "disabled": false,
+        "focus": "rgb(21, 68, 116) 3px"
+      }
+    ]
+  },
+  "visual": {
+    "badCorner": [],
+    "badSurface": [],
+    "badTarget": [],
+    "navControl": null,
+    "badLinks": [],
+    "buttonNavy": []
+  },
+  "pixel": {
+    "method": "Rendered-pixel paired capture: original, transparent text background, black/white calibration. Per-channel LCD glyph coverage inferred from black/white delta and ancestor opacity; full-coverage rendered foreground reconstructed from original/background. Worst sampled pixel ratio per text range; no pass tolerance below the criterion. All screenshots memory-only. Gradients sampled rather than excluded.",
+    "rows": [
+      {
+        "index": 0,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 16,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 91,
+          "top": 12,
+          "right": 220.81666564941406,
+          "bottom": 32
+        },
+        "unsupported": [],
+        "worstRatio": 9.8707,
+        "samples": 478,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 1,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 91,
+          "top": 34.5,
+          "right": 152.96665954589844,
+          "bottom": 49.5
+        },
+        "unsupported": [],
+        "worstRatio": 8.7348,
+        "samples": 107,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 2,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 305.9666748046875,
+          "top": 20.5,
+          "right": 346.00001525878906,
+          "bottom": 39.5
+        },
+        "unsupported": [],
+        "worstRatio": 9.8812,
+        "samples": 72,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 3,
+        "tag": "BUTTON",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 57,
+          "top": 84.5,
+          "right": 97.03334045410156,
+          "bottom": 103.5
+        },
+        "unsupported": [],
+        "worstRatio": 9.9482,
+        "samples": 72,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 4,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 12,
+        "weight": 600,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 16,
+          "top": 139.25,
+          "right": 127.28334045410156,
+          "bottom": 154.25
+        },
+        "unsupported": [],
+        "worstRatio": 7.014,
+        "samples": 244,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 5,
+        "tag": "SPAN",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 150.28334045410156,
+          "top": 138.75,
+          "right": 330.75,
+          "bottom": 154.75
+        },
+        "unsupported": [],
+        "worstRatio": 9.8536,
+        "samples": 296,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 6,
+        "tag": "H1",
+        "pseudo": null,
+        "size": 28,
+        "weight": 700,
+        "opacity": 1,
+        "threshold": 3,
+        "rect": {
+          "left": 16,
+          "top": 166.60000610351562,
+          "right": 262.01666259765625,
+          "bottom": 200.60000610351562
+        },
+        "unsupported": [],
+        "worstRatio": 8.783,
+        "samples": 2020,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 7,
+        "tag": "P",
+        "pseudo": null,
+        "size": 15,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 16,
+          "top": 205.4499969482422,
+          "right": 294.41668701171875,
+          "bottom": 224.4499969482422
+        },
+        "unsupported": [],
+        "worstRatio": 7.0141,
+        "samples": 506,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 8,
+        "tag": "H2",
+        "pseudo": null,
+        "size": 18,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 270.70001220703125,
+          "right": 139.31666564941406,
+          "bottom": 291.70001220703125
+        },
+        "unsupported": [],
+        "worstRatio": 9.9482,
+        "samples": 320,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 9,
+        "tag": "DT",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 312.95001220703125,
+          "right": 133.25,
+          "bottom": 328.95001220703125
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 204,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 10,
+        "tag": "DD",
+        "pseudo": null,
+        "size": 14,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 332.20001220703125,
+          "right": 114.94999694824219,
+          "bottom": 349.20001220703125
+        },
+        "unsupported": [],
+        "worstRatio": 11.3106,
+        "samples": 133,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 11,
+        "tag": "DT",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 368.45001220703125,
+          "right": 54.71665954589844,
+          "bottom": 384.45001220703125
+        },
+        "unsupported": [],
+        "worstRatio": 7.9341,
+        "samples": 59,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 12,
+        "tag": "DD",
+        "pseudo": null,
+        "size": 14,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 387.70001220703125,
+          "right": 108.46665954589844,
+          "bottom": 404.70001220703125
+        },
+        "unsupported": [],
+        "worstRatio": 11.3106,
+        "samples": 158,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 13,
+        "tag": "P",
+        "pseudo": null,
+        "size": 12,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 406.70001220703125,
+          "right": 144.6666717529297,
+          "bottom": 421.70001220703125
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 201,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 14,
+        "tag": "DT",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 439.95001220703125,
+          "right": 78.41667175292969,
+          "bottom": 455.95001220703125
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 111,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 15,
+        "tag": "DD",
+        "pseudo": null,
+        "size": 14,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 459.20001220703125,
+          "right": 118.73333740234375,
+          "bottom": 476.20001220703125
+        },
+        "unsupported": [],
+        "worstRatio": 11.3106,
+        "samples": 194,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 16,
+        "tag": "DT",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 495.45001220703125,
+          "right": 84.60000610351562,
+          "bottom": 511.45001220703125
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 121,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 17,
+        "tag": "DD",
+        "pseudo": null,
+        "size": 14,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 514.7000122070312,
+          "right": 53.05000305175781,
+          "bottom": 531.7000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 11.3106,
+        "samples": 53,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 18,
+        "tag": "DT",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 550.9500122070312,
+          "right": 72.44999694824219,
+          "bottom": 566.9500122070312
+        },
+        "unsupported": [],
+        "worstRatio": 7.9341,
+        "samples": 90,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 19,
+        "tag": "DD",
+        "pseudo": null,
+        "size": 14,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 570.2000122070312,
+          "right": 118.73333740234375,
+          "bottom": 587.2000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 11.3106,
+        "samples": 194,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 20,
+        "tag": "DT",
+        "pseudo": null,
+        "size": 13,
+        "weight": 500,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 606.4500122070312,
+          "right": 153.38333129882812,
+          "bottom": 622.4500122070312
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 249,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 21,
+        "tag": "DD",
+        "pseudo": null,
+        "size": 14,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 625.7000122070312,
+          "right": 118.73333740234375,
+          "bottom": 642.7000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 11.3106,
+        "samples": 194,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 22,
+        "tag": "P",
+        "pseudo": null,
+        "size": 12,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 660.7000122070312,
+          "right": 322.8833312988281,
+          "bottom": 675.7000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 456,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 23,
+        "tag": "P",
+        "pseudo": null,
+        "size": 12,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 676.7000122070312,
+          "right": 339.6499938964844,
+          "bottom": 691.7000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 477,
+        "unstablePixels": 0,
+        "result": "PASS"
+      },
+      {
+        "index": 24,
+        "tag": "P",
+        "pseudo": null,
+        "size": 12,
+        "weight": 400,
+        "opacity": 1,
+        "threshold": 4.5,
+        "rect": {
+          "left": 33,
+          "top": 692.7000122070312,
+          "right": 126.43333435058594,
+          "bottom": 707.7000122070312
+        },
+        "unsupported": [],
+        "worstRatio": 7.928,
+        "samples": 145,
+        "unstablePixels": 0,
+        "result": "PASS"
+      }
+    ],
+    "counts": {
+      "pass": 25,
+      "fail": 0,
+      "notRun": 0
+    }
+  },
+  "time": "2026-11-26T09:07:52.979Z"
+}

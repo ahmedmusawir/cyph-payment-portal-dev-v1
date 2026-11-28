@@ -1,0 +1,115 @@
+{
+  "time": "2026-11-25T02:59:23.425Z",
+  "transaction": "REPEATABLE READ READ ONLY; rollback",
+  "invitationStatus": "accepted",
+  "dispatchAttempts": 1,
+  "scope": {
+    "sameInvitationAcceptedByDesignatedInvitee": true,
+    "sentOnce": true,
+    "existingPharmacyAndRoleUnchanged": true,
+    "exactlyInvitedStoreAddedAsMember": true,
+    "otherCastVisibilityUnchanged": true
+  },
+  "roles": {
+    "ENGINEERING_OWNER_A": [
+      {
+        "key": "1fe8784355f107c03d1b91f89b3024e615f8f9d629a0dc6a9bbe173e800bf15e",
+        "name": "O-1 A-mid o1r03",
+        "owned": true,
+        "capability": "owner",
+        "membership": "admin",
+        "primary_membership": false,
+        "status": "active"
+      },
+      {
+        "key": "2e536eeefb3fc2c44574458f84867cda004f5d66892af1c0794f836e081a42e8",
+        "name": "O-1 A1 o1r03",
+        "owned": true,
+        "capability": "owner",
+        "membership": "member",
+        "primary_membership": true,
+        "status": "active"
+      },
+      {
+        "key": "251937fa6c255adf6d5a4ea561e09e787fd888d6fbbb16e4df802f4536c607aa",
+        "name": "O-1 A2 o1r03",
+        "owned": true,
+        "capability": "owner",
+        "membership": "admin",
+        "primary_membership": false,
+        "status": "active"
+      }
+    ],
+    "ENGINEERING_OWNER_B": [
+      {
+        "key": "2e536eeefb3fc2c44574458f84867cda004f5d66892af1c0794f836e081a42e8",
+        "name": "O-1 A1 o1r03",
+        "owned": false,
+        "capability": "member",
+        "membership": "member",
+        "primary_membership": false,
+        "status": "active"
+      },
+      {
+        "key": "6cc19f1438fe4db0aaab0b0e894e6100fa81504009df78b826a994f720fb6ee0",
+        "name": "O-1 B-mid o1r03",
+        "owned": true,
+        "capability": "owner",
+        "membership": "admin",
+        "primary_membership": false,
+        "status": "active"
+      },
+      {
+        "key": "580f1b87f442630a038c646acdbdbda537e44037f2da101ed40d130919d32c49",
+        "name": "O-1 B1 o1r03",
+        "owned": true,
+        "capability": "owner",
+        "membership": "admin",
+        "primary_membership": true,
+        "status": "active"
+      }
+    ],
+    "ENGINEERING_ADMIN": [
+      {
+        "key": "2e536eeefb3fc2c44574458f84867cda004f5d66892af1c0794f836e081a42e8",
+        "name": "O-1 A1 o1r03",
+        "owned": false,
+        "capability": "admin",
+        "membership": "admin",
+        "primary_membership": false,
+        "status": "active"
+      }
+    ],
+    "ENGINEERING_MEMBER": [
+      {
+        "key": "2e536eeefb3fc2c44574458f84867cda004f5d66892af1c0794f836e081a42e8",
+        "name": "O-1 A1 o1r03",
+        "owned": false,
+        "capability": "member",
+        "membership": "member",
+        "primary_membership": false,
+        "status": "active"
+      }
+    ],
+    "ENGINEERING_INVITEE": [
+      {
+        "key": "9e755786e488b532696f6430a3818468fc376f45714d407494296c864055d2ba",
+        "name": "E Buyer e-r03",
+        "owned": true,
+        "capability": "owner",
+        "membership": "admin",
+        "primary_membership": true,
+        "status": "active"
+      },
+      {
+        "key": "1fe8784355f107c03d1b91f89b3024e615f8f9d629a0dc6a9bbe173e800bf15e",
+        "name": "O-1 A-mid o1r03",
+        "owned": false,
+        "capability": "member",
+        "membership": "member",
+        "primary_membership": false,
+        "status": "active"
+      }
+    ]
+  }
+}

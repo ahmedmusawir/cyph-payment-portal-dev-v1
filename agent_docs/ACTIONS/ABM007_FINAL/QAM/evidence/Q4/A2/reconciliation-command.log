@@ -1,0 +1,282 @@
+{
+  "totals": {
+    "structure": {
+      "PASS": 30
+    },
+    "mouse": {
+      "PASS": 90
+    },
+    "articleFocusEnter": {
+      "PASS": 386,
+      "FAIL": 4
+    },
+    "F36": {
+      "PASS": 36
+    },
+    "menuGeometry": {
+      "PASS": 12
+    },
+    "menuFocus": {
+      "PASS": 156
+    },
+    "addFocus": {
+      "PASS": 3
+    },
+    "profileFocus": {
+      "PASS": 3
+    },
+    "menuRegression": {
+      "PASS": 6
+    },
+    "forbiddenAndLabels": {
+      "PASS": 6
+    },
+    "appLinks": {
+      "PASS": 12
+    }
+  },
+  "F36LowestMeasured": 4.5285,
+  "F36SurfaceCounts": {
+    "255,255,255": 5210
+  },
+  "keyboardEnterReturns": {
+    "PASS": 86,
+    "FAIL": 4
+  },
+  "firefoxSettledEnter": [
+    {
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1024,
+      "height": 600,
+      "article": 1,
+      "firstDiagnosticAt": "2026-11-27T05:41:21.847Z",
+      "tabSteps": 20,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 333,
+          "right": 416.0500030517578,
+          "top": 277.83331298828125,
+          "bottom": 321.83331298828125,
+          "width": 83.05000305175781,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1024,
+          "bottom": 600
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "before": {
+        "y": 306,
+        "hash": ""
+      },
+      "timeline": [
+        {
+          "delayAfterPriorSample": 0,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 100,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 300,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 800,
+          "y": 306,
+          "hash": "#top",
+          "headerInView": false
+        }
+      ],
+      "result": "FAIL"
+    },
+    {
+      "role": "ENGINEERING_OWNER_A",
+      "width": 1440,
+      "height": 900,
+      "article": 1,
+      "firstDiagnosticAt": "2026-11-27T05:41:26.260Z",
+      "tabSteps": 19,
+      "outline": {
+        "role": null,
+        "tag": "A",
+        "keyFocus": true,
+        "focusVisible": true,
+        "outlineWidth": 2,
+        "outlineOffset": 2,
+        "outlineStyle": "solid",
+        "outlineColor": "rgb(21, 68, 116)",
+        "shadow": "none",
+        "radius": 0,
+        "rect": {
+          "left": 477,
+          "right": 560.0500030517578,
+          "top": 428.45001220703125,
+          "bottom": 472.45001220703125,
+          "width": 83.05000305175781,
+          "height": 44
+        },
+        "clip": {
+          "left": 0,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900
+        },
+        "width": 2,
+        "offset": 2,
+        "color": [
+          21,
+          68,
+          116
+        ],
+        "sides": {
+          "top": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "bottom": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 75
+          },
+          "left": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          },
+          "right": {
+            "fraction": 1,
+            "geometricallyClipped": false,
+            "samples": 36
+          }
+        },
+        "result": "PASS"
+      },
+      "before": {
+        "y": 131,
+        "hash": ""
+      },
+      "timeline": [
+        {
+          "delayAfterPriorSample": 0,
+          "y": 0,
+          "hash": "#top",
+          "headerInView": true
+        },
+        {
+          "delayAfterPriorSample": 100,
+          "y": 131,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 300,
+          "y": 131,
+          "hash": "#top",
+          "headerInView": false
+        },
+        {
+          "delayAfterPriorSample": 800,
+          "y": 131,
+          "hash": "#top",
+          "headerInView": false
+        }
+      ],
+      "result": "FAIL"
+    },
+    {
+      "role": "ENGINEERING_ADMIN",
+      "result": "INCOMPLETE",
+      "scope": "fixture setup no retry",
+      "name": "Error"
+    }
+  ],
+  "portalAvatar": {
+    "result": "IDENTIFIED",
+    "element": "Header account avatar, Initials in src/components/portal/PageHeader.tsx:60\u201372, used by Shell.tsx",
+    "visibleEvidence": [
+      {
+        "tag": "SPAN",
+        "ariaHidden": "true",
+        "className": "grid shrink-0 place-items-center rounded-full pb-card font-bold text-heading h-7 w-7 text-[11px]",
+        "measuredWidth": 28,
+        "measuredHeight": 28,
+        "radius": "9999px",
+        "shadow": "rgba(12, 38, 65, 0.05) 0px 8px 20px 0px",
+        "shown": true,
+        "initialsOnly": true
+      }
+    ],
+    "documentResponses": [
+      {
+        "origin": "http://localhost:3101",
+        "path": "/dashboard",
+        "status": 200
+      }
+    ],
+    "initialRouteCounter": 0,
+    "reconciliation": "One redirected Dashboard document in the Playwright response log. Redirect follow-ups are not separately routed in the initial request hook."
+  },
+  "firstAttemptRowsPreserved": {
+    "PASS": 458,
+    "FAIL": 5,
+    "PARTIAL": 2,
+    "INCOMPLETE": 59
+  },
+  "sessionAttempts": 14,
+  "signouts": {
+    "200": 11,
+    "None": 3
+  },
+  "activeMember": "Unavailable. Friday accepted this limit in Q4 section 5. No substitute fixture used."
+}
